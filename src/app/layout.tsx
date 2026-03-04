@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n/context";
+
+const dmSans = DM_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "SHIFT Observatory — Saudi Jobs Exposed to AI",
@@ -56,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth`}>
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen">
         <LangProvider>{children}</LangProvider>
       </body>

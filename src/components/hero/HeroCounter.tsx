@@ -76,6 +76,7 @@ export default function HeroCounter() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-neon/5 blur-[120px]" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-blue-500/3 blur-[100px] animate-pulse" />
 
       <div className="relative z-10 text-center max-w-4xl">
         {/* Logo */}
@@ -142,7 +143,7 @@ export default function HeroCounter() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.1, duration: 0.4 }}
-              className="bg-bg-card/60 backdrop-blur rounded-md p-3 border border-white/5 hover:bg-white/5 hover:border-white/10 transition-all duration-200 cursor-default"
+              className="bg-bg-card/60 backdrop-blur rounded-md p-3 border border-white/5 hover:bg-white/5 hover:border-white/10 transition-all duration-200 cursor-default card-hover-lift"
             >
               <div className={`text-xl md:text-2xl font-mono font-bold ${kpi.color}`}>
                 {kpi.noAnimate ? (

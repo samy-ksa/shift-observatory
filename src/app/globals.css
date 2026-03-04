@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 .font-arabic {
@@ -23,7 +22,17 @@
 body {
   background: #0A0E17;
   color: #F9FAFB;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans), 'Inter', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 ::-webkit-scrollbar {
@@ -40,10 +49,6 @@ body {
 }
 
 @layer utilities {
-  .text-glow-neon {
-    text-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
-  }
-
   .card-glow {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
   }
@@ -53,15 +58,70 @@ body {
   }
 }
 
+/* Fade-up entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out both;
+}
+
+.animate-fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.1s both; }
+.animate-fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.2s both; }
+.animate-fade-up-delay-3 { animation: fadeUp 0.5s ease-out 0.3s both; }
+.animate-fade-up-delay-4 { animation: fadeUp 0.5s ease-out 0.4s both; }
+.animate-fade-up-delay-5 { animation: fadeUp 0.5s ease-out 0.5s both; }
+
+/* Section separator with glow */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.15), transparent);
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* Enhanced card hover */
+.card-hover-lift {
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.card-hover-lift:hover {
+  transform: translateY(-1px) scale(1.005);
+}
+
+/* Hero number pulse glow */
+@keyframes heroGlow {
+  0%, 100% {
+    text-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(34, 211, 238, 0.6), 0 0 80px rgba(34, 211, 238, 0.3), 0 0 120px rgba(34, 211, 238, 0.1);
+  }
+}
+
+.text-glow-neon {
+  text-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
+  animation: heroGlow 3s ease-in-out infinite;
+}
+
+/* Ticker animation (refined slower speed) */
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-ticker {
-  animation: ticker 30s linear infinite;
+  animation: ticker 45s linear infinite;
 }
 
+/* Pulse glow */
 @keyframes pulse-glow {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.6; }
@@ -69,4 +129,23 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Risk gauge gradient bar */
+.risk-gauge-track {
+  height: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #10B981, #FBBF24, #F97316, #EF4444);
+  overflow: visible;
+}
+
+.risk-gauge-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }

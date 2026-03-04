@@ -242,7 +242,7 @@ export default function RiskCalculator() {
     <button
       key={occ.name_en}
       onClick={() => handleSelect(occ)}
-      className="w-full text-left px-4 py-3 hover:bg-bg-card-hover transition-colors flex items-center justify-between"
+      className="w-full text-left px-4 py-3 hover:bg-bg-card-hover transition-all duration-200 ease-out flex items-center justify-between"
     >
       <span className="text-text-primary">{occName(occ)}</span>
       <div className="flex items-center gap-2">
@@ -385,7 +385,7 @@ export default function RiskCalculator() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="bg-bg-card rounded-2xl card-glow overflow-hidden border border-white/5"
+              className="bg-bg-card rounded-xl card-glow overflow-hidden border border-white/5"
             >
               {/* HEADER with score gauge */}
               <div className="p-6 border-b border-white/5">
@@ -414,12 +414,15 @@ export default function RiskCalculator() {
                     </span>
                     <span>{t.common.veryHigh}</span>
                   </div>
-                  <div className="h-4 bg-bg-secondary rounded-full overflow-hidden">
+                  <div className="relative risk-gauge-track">
                     <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${selected.composite}%` }}
+                      initial={{ left: "0%" }}
+                      animate={{ left: `${selected.composite}%` }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-green-500 via-yellow-500 to-red-500"
+                      className="risk-gauge-marker"
+                      style={{
+                        backgroundColor: selected.composite > 70 ? '#EF4444' : selected.composite > 45 ? '#F97316' : selected.composite > 25 ? '#FBBF24' : '#10B981'
+                      }}
                     />
                   </div>
                 </div>
