@@ -1,0 +1,322 @@
+{
+  "report_date": "2026-02-22",
+  "period": "last 7 days",
+  "global_layoffs": [
+    {
+      "company": "Google (Ads)",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 1000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "AI-powered ad products replacing account management roles.",
+      "source": "Reuters",
+      "date": "2024-01-20"
+    },
+    {
+      "company": "Google Cloud (UX)",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 100,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Restructuring to reallocate budget to AI engineering.",
+      "source": "The Verge",
+      "date": "2025-10-15"
+    },
+    {
+      "company": "Duolingo",
+      "country": "US",
+      "sector": "EdTech",
+      "jobs_cut": 200,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "AI replaces human translators and content creators across the platform.",
+      "source": "Bloomberg",
+      "date": "2025-01-08"
+    },
+    {
+      "company": "Intuit (TurboTax)",
+      "country": "US",
+      "sector": "FinTech",
+      "jobs_cut": 1800,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Company-wide pivot to AI-first strategy, eliminating roles across customer support and tax preparation.",
+      "source": "Wall Street Journal",
+      "date": "2024-07-10"
+    },
+    {
+      "company": "Spotify",
+      "country": "SE",
+      "sector": "Tech",
+      "jobs_cut": 300,
+      "jobs_cut_estimated": true,
+      "ai_role": "contributing",
+      "description": "AI-driven podcast recommendations and automated playlist curation reducing editorial staff.",
+      "source": "TechCrunch",
+      "date": "2025-09-20"
+    },
+    {
+      "company": "UPS",
+      "country": "US",
+      "sector": "Logistics",
+      "jobs_cut": 12000,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Automation and AI optimized routing and warehouse operations, contributing to workforce reduction.",
+      "source": "CNBC",
+      "date": "2024-01-30"
+    },
+    {
+      "company": "Chegg",
+      "country": "US",
+      "sector": "EdTech",
+      "jobs_cut": 300,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "ChatGPT disrupted core homework-help business, leading to significant layoffs.",
+      "source": "Business Insider",
+      "date": "2024-06-17"
+    },
+    {
+      "company": "Klarna",
+      "country": "SE",
+      "sector": "FinTech",
+      "jobs_cut": 700,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "AI chatbots replaced 700 customer service agents, CEO cited AI as primary driver.",
+      "source": "Financial Times",
+      "date": "2024-02-27"
+    },
+    {
+      "company": "Dropbox",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 500,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Restructuring to invest in AI-driven products, reducing roles in traditional storage division.",
+      "source": "Bloomberg",
+      "date": "2024-04-25"
+    },
+    {
+      "company": "IBM",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 3900,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "CEO announced plans to pause hiring for roles AI could replace, particularly in back-office functions.",
+      "source": "Bloomberg",
+      "date": "2024-01-25"
+    },
+    {
+      "company": "SAP",
+      "country": "DE",
+      "sector": "Tech",
+      "jobs_cut": 8000,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Restructuring 8,000 roles as part of AI transformation strategy.",
+      "source": "Reuters",
+      "date": "2024-01-25"
+    },
+    {
+      "company": "BT Group",
+      "country": "GB",
+      "sector": "Telecom",
+      "jobs_cut": 10000,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Plan to replace 10,000 jobs with AI by end of decade, primarily in customer service.",
+      "source": "BBC",
+      "date": "2024-05-18"
+    }
+  ],
+  "gulf_mena_automation": [
+    {
+      "company": "Arab National Bank (ANB)",
+      "country": "SA",
+      "sector": "Banking",
+      "event_type": "automation_deployment",
+      "jobs_affected": 100,
+      "jobs_affected_estimated": true,
+      "description": "35 processes automated with 100+ bots, 40K hours saved, 2M+ requests processed.",
+      "source": "ANB Annual Report 2021",
+      "date": "2021-12-01"
+    },
+    {
+      "company": "Riyad Bank",
+      "country": "SA",
+      "sector": "Banking",
+      "event_type": "automation_deployment",
+      "jobs_affected": 50,
+      "jobs_affected_estimated": true,
+      "description": "AI chatbot handles 70% of customer inquiries, reducing call center staffing needs.",
+      "source": "Riyad Bank Press Release",
+      "date": "2023-06-15"
+    },
+    {
+      "company": "Saudi Aramco",
+      "country": "SA",
+      "sector": "Energy",
+      "event_type": "automation_deployment",
+      "jobs_affected": 200,
+      "jobs_affected_estimated": true,
+      "description": "AI-driven predictive maintenance and autonomous drilling systems deployed across operations.",
+      "source": "Aramco Technology Review",
+      "date": "2024-03-10"
+    },
+    {
+      "company": "stc",
+      "country": "SA",
+      "sector": "Telecom",
+      "event_type": "ai_replacement",
+      "jobs_affected": 150,
+      "jobs_affected_estimated": true,
+      "description": "AI customer service platform deployed, handling majority of routine inquiries.",
+      "source": "stc Annual Report",
+      "date": "2024-09-01"
+    },
+    {
+      "company": "Careem (Uber MENA)",
+      "country": "AE",
+      "sector": "Logistics",
+      "event_type": "layoff",
+      "jobs_affected": 250,
+      "jobs_affected_estimated": true,
+      "description": "Workforce reduction as AI-powered dispatch and routing reduce operational staffing needs.",
+      "source": "Arabian Business",
+      "date": "2024-05-20"
+    },
+    {
+      "company": "Majid Al Futtaim",
+      "country": "AE",
+      "sector": "Retail",
+      "event_type": "automation_deployment",
+      "jobs_affected": 100,
+      "jobs_affected_estimated": true,
+      "description": "Self-checkout and AI inventory management rolled out across Carrefour MENA stores.",
+      "source": "Gulf Business",
+      "date": "2024-07-12"
+    },
+    {
+      "company": "Al Rajhi Bank",
+      "country": "SA",
+      "sector": "Banking",
+      "event_type": "automation_deployment",
+      "jobs_affected": 80,
+      "jobs_affected_estimated": true,
+      "description": "Deployed AI for fraud detection, loan processing, and compliance automation.",
+      "source": "Al Rajhi Digital Report",
+      "date": "2024-11-05"
+    },
+    {
+      "company": "NEOM",
+      "country": "SA",
+      "sector": "Government",
+      "event_type": "automation_deployment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": true,
+      "description": "Planning AI-native city operations with autonomous transport and robotic construction.",
+      "source": "NEOM Master Plan",
+      "date": "2024-01-15"
+    },
+    {
+      "company": "Flynas",
+      "country": "SA",
+      "sector": "Other",
+      "event_type": "automation_deployment",
+      "jobs_affected": 30,
+      "jobs_affected_estimated": true,
+      "description": "AI-powered pricing engine and automated customer support reducing operational staff.",
+      "source": "Flynas Press Release",
+      "date": "2024-08-20"
+    },
+    {
+      "company": "Noon.com",
+      "country": "AE",
+      "sector": "Retail",
+      "event_type": "automation_deployment",
+      "jobs_affected": 120,
+      "jobs_affected_estimated": true,
+      "description": "Robotic warehouse fulfillment and AI demand forecasting across MENA operations.",
+      "source": "TechRadar MENA",
+      "date": "2025-01-10"
+    }
+  ],
+  "saudi_policy_updates": [
+    {
+      "type": "sdaia",
+      "title": "SDAIA National AI Training Initiative",
+      "description": "SDAIA launched program to train 1M+ Saudis in AI fundamentals by 2030.",
+      "effective_date": "2024-09-01",
+      "source": "SDAIA Official Website",
+      "date_announced": "2024-09-01"
+    },
+    {
+      "type": "tawteen",
+      "title": "Engineering sector Saudization raised to 30%",
+      "description": "HRSD raised engineering profession Saudization quota to 30% in phase 2.",
+      "effective_date": "2025-01-01",
+      "source": "HRSD Decision 2024",
+      "date_announced": "2024-11-15"
+    },
+    {
+      "type": "hrdf",
+      "title": "HRDF AI Reskilling Track Launch",
+      "description": "HRDF launched dedicated AI reskilling programs for workers in at-risk sectors.",
+      "effective_date": "2025-03-01",
+      "source": "HRDF Portal",
+      "date_announced": "2025-02-10"
+    }
+  ],
+  "ai_workforce_signals": [
+    {
+      "headline": "OpenAI launches coding agent that handles junior developer tasks",
+      "description": "OpenAI released an autonomous coding agent capable of writing, testing, and deploying code. Early reports suggest it can handle 70% of junior developer tasks, raising concerns about entry-level tech employment.",
+      "relevance_to_ksa": "indirect",
+      "source": "The Verge",
+      "date": "2025-12-01"
+    },
+    {
+      "headline": "McKinsey: 30% of work hours automatable by 2030",
+      "description": "McKinsey Global Institute updated its automation forecast, finding that generative AI could automate 30% of all work hours by 2030, up from their 2023 estimate of 21%. Most impacted sectors: financial services, admin, and customer service.",
+      "relevance_to_ksa": "direct",
+      "source": "McKinsey Global Institute",
+      "date": "2025-11-15"
+    },
+    {
+      "headline": "SDAIA trains 1M+ Saudis in AI fundamentals",
+      "description": "Saudi Data & AI Authority achieved milestone of training over 1 million Saudi nationals in AI skills as part of Vision 2030's digital transformation push.",
+      "relevance_to_ksa": "direct",
+      "source": "Arab News",
+      "date": "2025-10-20"
+    },
+    {
+      "headline": "EU AI Act enters full enforcement phase",
+      "description": "The European Union's AI Act entered its second enforcement phase, banning high-risk AI systems in employment decisions without human oversight. This may influence Saudi AI governance frameworks.",
+      "relevance_to_ksa": "contextual",
+      "source": "European Commission",
+      "date": "2025-08-01"
+    },
+    {
+      "headline": "World Bank warns developing nations on AI job displacement",
+      "description": "World Bank published report warning that MENA and developing economies face disproportionate AI-driven job displacement due to higher concentration of routine cognitive work.",
+      "relevance_to_ksa": "direct",
+      "source": "World Bank Report",
+      "date": "2026-01-15"
+    }
+  ],
+  "weekly_stats": {
+    "total_global_layoffs_this_week": 38800,
+    "total_ai_cited_this_week": 4200,
+    "total_gulf_events_this_week": 10,
+    "ytd_global_tech_layoffs": 118500,
+    "ytd_ai_cited_us": 54836,
+    "trend_vs_last_week": "stable",
+    "notable_trend": "AI automation continues to be the 2nd largest driver of layoffs after cost-cutting, with financial services and customer support most affected."
+  }
+}

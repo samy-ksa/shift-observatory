@@ -1,0 +1,2453 @@
+{
+  "metadata": {
+    "project": "SHIFT Observatory",
+    "version": "1.0",
+    "generated": "2026-02-27T18:43:59.735154",
+    "description": "Master dataset for SHIFT AI Employment Impact Dashboard - Saudi Arabia",
+    "sources": {
+      "labor_market": "GASTAT Register-based LMS (GOSI) Q3 2025 + Q1 2025 (regions)",
+      "ai_exposure": "Frey-Osborne 2017, Eloundou/OpenAI 2023, Felten/Raj/Seamans AIOE, Brynjolfsson SML, McKinsey 2024, WEF Future of Jobs 2025",
+      "layoffs": "Layoffs.fyi via TechCrunch, Challenger Gray & Christmas",
+      "vision_2030": "Official V2030 programs, sector authorities, PwC, OBG",
+      "ecosystem": "SDAIA, Stanford AI Index 2025, Tortoise GARI, company reports"
+    },
+    "methodology_note": "AI risk scores are composite indices (0-100) calculated from academic studies. They represent EXPOSURE, not predicted job loss. Augmentation (AI as co-pilot) vs substitution (AI replaces worker) distinction is critical."
+  },
+  "hero": {
+    "total_workforce_lfs": 18540000,
+    "total_workforce_gosi": 12420050,
+    "total_saudi_gosi": 2975359,
+    "total_nonsaudi_gosi": 9444691,
+    "pct_saudi_gosi": 24,
+    "jobs_ai_exposure_weighted": 4450778,
+    "jobs_ai_exposure_saudi": 1137184,
+    "jobs_ai_exposure_nonsaudi": 3313594,
+    "jobs_in_high_risk_sectors": 3646195,
+    "headline_number": 4450778,
+    "headline_label": "jobs with significant AI exposure (risk-weighted)",
+    "methodology_note": "Calculated as SUM(sector_employees × sector_ai_risk_score/100). This represents AI-weighted exposure, not predicted job losses. Actual displacement will be lower (augmentation > substitution for many roles).",
+    "v2030_jobs_target_net": 2304400,
+    "layoffs_global_2024": 151000,
+    "layoffs_global_2025": 118500,
+    "layoffs_ai_cited_us_2025": 54836,
+    "unemployment_saudi": 7.5,
+    "unemployment_saudi_women": 12.1,
+    "ai_gdp_impact_2030_usd": 135200000000,
+    "ai_gdp_pct": 12.4
+  },
+  "sectors": [
+    {
+      "id": "agriculture",
+      "name_en": "Agriculture, Forestry & Fishing",
+      "name_fr": "Agriculture, sylviculture & pêche",
+      "isic": "A",
+      "total": 253180,
+      "saudi": 20824,
+      "non_saudi": 232356,
+      "pct_saudi": 8.2,
+      "ai_risk_score": 18,
+      "ai_risk_category": "low",
+      "ai_risk_rationale": "Physical outdoor work, non-structured environments. Precision agriculture emerging but low GenAI impact. Robotics limited by terrain variability.",
+      "mckinsey_automatable_pct": 15,
+      "genai_exposure": "very_low",
+      "v2030_outlook": "stable",
+      "nitaqat_pressure": "low",
+      "name_ar": "الزراعة والحراجة وصيد الأسماك",
+      "salary_saudi_avg": 7200,
+      "salary_nonsaudi_avg": 2800
+    },
+    {
+      "id": "mining_oil_gas",
+      "name_en": "Mining & Quarrying (incl. Oil & Gas)",
+      "name_fr": "Industries extractives (incl. pétrole & gaz)",
+      "isic": "B",
+      "total": 203902,
+      "saudi": 115280,
+      "non_saudi": 88622,
+      "pct_saudi": 56.5,
+      "ai_risk_score": 35,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "AI augments exploration, predictive maintenance, process optimization. But physical extraction, safety, on-site ops remain human. Aramco already heavy AI adopter for efficiency, not headcount reduction.",
+      "mckinsey_automatable_pct": 30,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "stable_to_growing",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "التعدين واستغلال المحاجر (بما فيها النفط والغاز)",
+      "salary_saudi_avg": 16500,
+      "salary_nonsaudi_avg": 8500
+    },
+    {
+      "id": "manufacturing",
+      "name_en": "Manufacturing",
+      "name_fr": "Industrie manufacturière",
+      "isic": "C",
+      "total": 1482452,
+      "saudi": 347264,
+      "non_saudi": 1135188,
+      "pct_saudi": 23.4,
+      "ai_risk_score": 42,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "Robotics and automation in assembly lines. But KSA manufacturing still scaling up (NIDLP). Net job creation expected despite automation of routine tasks. Quality control AI high impact.",
+      "mckinsey_automatable_pct": 38,
+      "genai_exposure": "low",
+      "v2030_outlook": "strong_growth",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "الصناعات التحويلية",
+      "salary_saudi_avg": 9000,
+      "salary_nonsaudi_avg": 4200
+    },
+    {
+      "id": "electricity_gas",
+      "name_en": "Electricity, Gas, Steam & AC",
+      "name_fr": "Électricité, gaz, vapeur & climatisation",
+      "isic": "D",
+      "total": 42568,
+      "saudi": 33325,
+      "non_saudi": 9243,
+      "pct_saudi": 78.3,
+      "ai_risk_score": 30,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "Smart grid management, predictive maintenance. But small sector, high Saudisation already. Renewables expansion will ADD jobs.",
+      "mckinsey_automatable_pct": 25,
+      "genai_exposure": "low",
+      "v2030_outlook": "strong_growth",
+      "nitaqat_pressure": "high",
+      "name_ar": "الكهرباء والغاز والبخار وتكييف الهواء",
+      "salary_saudi_avg": 14000,
+      "salary_nonsaudi_avg": 7000
+    },
+    {
+      "id": "water_waste",
+      "name_en": "Water Supply, Sewerage, Waste",
+      "name_fr": "Eau, assainissement, déchets",
+      "isic": "E",
+      "total": 96453,
+      "saudi": 22395,
+      "non_saudi": 74058,
+      "pct_saudi": 23.2,
+      "ai_risk_score": 22,
+      "ai_risk_category": "low",
+      "ai_risk_rationale": "Physical infrastructure work. IoT monitoring augments but doesn't replace. Desalination expansion = more jobs.",
+      "mckinsey_automatable_pct": 20,
+      "genai_exposure": "very_low",
+      "v2030_outlook": "growing",
+      "nitaqat_pressure": "low",
+      "name_ar": "إمدادات المياه والصرف الصحي والنفايات",
+      "salary_saudi_avg": 8500,
+      "salary_nonsaudi_avg": 3500
+    },
+    {
+      "id": "construction",
+      "name_en": "Construction",
+      "name_fr": "Construction",
+      "isic": "F",
+      "total": 3412388,
+      "saudi": 419541,
+      "non_saudi": 2992847,
+      "pct_saudi": 12.3,
+      "ai_risk_score": 12,
+      "ai_risk_category": "very_low",
+      "ai_risk_rationale": "Largest sector. Physical, non-structured environments. Robotics decades away from replacing manual labor on chaotic construction sites. NEOM, Red Sea, Qiddiya, Diriyah = massive ongoing demand. WEF confirms BTP workers among fastest growing.",
+      "mckinsey_automatable_pct": 10,
+      "genai_exposure": "very_low",
+      "v2030_outlook": "very_strong_growth",
+      "nitaqat_pressure": "very_low",
+      "name_ar": "التشييد والبناء",
+      "salary_saudi_avg": 7500,
+      "salary_nonsaudi_avg": 2500
+    },
+    {
+      "id": "wholesale_retail",
+      "name_en": "Wholesale & Retail Trade",
+      "name_fr": "Commerce de gros et de détail",
+      "isic": "G",
+      "total": 1827205,
+      "saudi": 406914,
+      "non_saudi": 1420291,
+      "pct_saudi": 22.3,
+      "ai_risk_score": 55,
+      "ai_risk_category": "high",
+      "ai_risk_rationale": "Self-checkout (Frey-Osborne 97% cashier), e-commerce replacing physical stores, automated inventory. But WEF still shows shop salespeople growing. Mixed: substitution for cashiers, augmentation for sales advisors.",
+      "mckinsey_automatable_pct": 50,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "restructuring",
+      "nitaqat_pressure": "high",
+      "name_ar": "تجارة الجملة والتجزئة",
+      "salary_saudi_avg": 7800,
+      "salary_nonsaudi_avg": 3200
+    },
+    {
+      "id": "transport_storage",
+      "name_en": "Transportation & Storage",
+      "name_fr": "Transport et entreposage",
+      "isic": "H",
+      "total": 827919,
+      "saudi": 165341,
+      "non_saudi": 662578,
+      "pct_saudi": 20,
+      "ai_risk_score": 38,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "Autonomous vehicles Level 5 still distant. SPL deploying 200 sorting robots. Warehouse automation rising. But delivery drivers in strong GROWTH (WEF). Long-term risk medium, short-term growth.",
+      "mckinsey_automatable_pct": 35,
+      "genai_exposure": "low",
+      "v2030_outlook": "growing",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "النقل والتخزين",
+      "salary_saudi_avg": 8500,
+      "salary_nonsaudi_avg": 3800
+    },
+    {
+      "id": "accommodation_food",
+      "name_en": "Accommodation & Food Service",
+      "name_fr": "Hébergement et restauration",
+      "isic": "I",
+      "total": 730292,
+      "saudi": 141903,
+      "non_saudi": 588389,
+      "pct_saudi": 19.4,
+      "ai_risk_score": 28,
+      "ai_risk_category": "low",
+      "ai_risk_rationale": "Hospitality requires human warmth, physical service. Self-ordering kiosks reduce some roles. But tourism boom (150M visitors target) = massive NET job creation. Foodics optimizes staffing but doesn't eliminate it.",
+      "mckinsey_automatable_pct": 25,
+      "genai_exposure": "low",
+      "v2030_outlook": "very_strong_growth",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "خدمات الإقامة والطعام",
+      "salary_saudi_avg": 6500,
+      "salary_nonsaudi_avg": 2800
+    },
+    {
+      "id": "ict",
+      "name_en": "Information & Communication (ICT)",
+      "name_fr": "Technologies de l'information et communication",
+      "isic": "J",
+      "total": 176619,
+      "saudi": 99766,
+      "non_saudi": 76853,
+      "pct_saudi": 56.5,
+      "ai_risk_score": 45,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "PARADOX SECTOR. AI transforms ICT jobs (GitHub Copilot for coders) but also creates massive new roles (AI/ML specialists, data engineers). Net effect: strong growth with internal restructuring. Eloundou score 1.0 for programmers but category = augmentation, not substitution.",
+      "mckinsey_automatable_pct": 35,
+      "genai_exposure": "very_high",
+      "v2030_outlook": "very_strong_growth",
+      "nitaqat_pressure": "high",
+      "name_ar": "المعلومات والاتصالات (تقنية المعلومات)",
+      "salary_saudi_avg": 15000,
+      "salary_nonsaudi_avg": 10000
+    },
+    {
+      "id": "finance_insurance",
+      "name_en": "Financial & Insurance Activities",
+      "name_fr": "Activités financières et d'assurance",
+      "isic": "K",
+      "total": 106727,
+      "saudi": 88018,
+      "non_saudi": 18709,
+      "pct_saudi": 82.5,
+      "ai_risk_score": 62,
+      "ai_risk_category": "high",
+      "ai_risk_rationale": "HIGHEST GenAI exposure. ANB automated 35 processes, 40K hours saved. Bank tellers -35% (WEF). Accounting 94% Frey-Osborne. But advisory/relationship roles grow. Small sector with very high Saudisation = mainly Saudi jobs at risk of transformation.",
+      "mckinsey_automatable_pct": 55,
+      "genai_exposure": "very_high",
+      "v2030_outlook": "restructuring",
+      "nitaqat_pressure": "very_high",
+      "name_ar": "الأنشطة المالية والتأمين",
+      "salary_saudi_avg": 16000,
+      "salary_nonsaudi_avg": 12000
+    },
+    {
+      "id": "real_estate",
+      "name_en": "Real Estate Activities",
+      "name_fr": "Activités immobilières",
+      "isic": "L",
+      "total": 75887,
+      "saudi": 29011,
+      "non_saudi": 46876,
+      "pct_saudi": 38.2,
+      "ai_risk_score": 40,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "PropTech, AI valuation models, automated listings. But transaction complexity and trust require humans. Small sector.",
+      "mckinsey_automatable_pct": 35,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "strong_growth",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "الأنشطة العقارية",
+      "salary_saudi_avg": 10000,
+      "salary_nonsaudi_avg": 5500
+    },
+    {
+      "id": "professional_scientific",
+      "name_en": "Professional, Scientific & Technical",
+      "name_fr": "Activités spécialisées, scientifiques et techniques",
+      "isic": "M",
+      "total": 291530,
+      "saudi": 137664,
+      "non_saudi": 153866,
+      "pct_saudi": 47.2,
+      "ai_risk_score": 52,
+      "ai_risk_category": "high",
+      "ai_risk_rationale": "Lawyers, consultants, accountants, architects - all heavily exposed to GenAI. But overwhelmingly augmentation not substitution. The accountant who uses AI replaces the one who doesn't. High-skill sector with transformation, not destruction.",
+      "mckinsey_automatable_pct": 45,
+      "genai_exposure": "very_high",
+      "v2030_outlook": "growing",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "الأنشطة المهنية والعلمية والتقنية",
+      "salary_saudi_avg": 13000,
+      "salary_nonsaudi_avg": 8000
+    },
+    {
+      "id": "admin_support",
+      "name_en": "Administrative & Support Services",
+      "name_fr": "Activités de services administratifs et de soutien",
+      "isic": "N",
+      "total": 1420733,
+      "saudi": 246605,
+      "non_saudi": 1174128,
+      "pct_saudi": 17.4,
+      "ai_risk_score": 72,
+      "ai_risk_category": "very_high",
+      "ai_risk_rationale": "HIGHEST RISK SECTOR BY VOLUME. Data entry (99% Frey-Osborne), admin assistants (90%+), back-office processing. 1.4M workers, 83% expat. This is where AI hits hardest: repetitive cognitive tasks at scale. BPO, facilities mgmt partially protected but office admin decimated.",
+      "mckinsey_automatable_pct": 65,
+      "genai_exposure": "very_high",
+      "v2030_outlook": "declining",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "الخدمات الإدارية وخدمات الدعم",
+      "salary_saudi_avg": 7000,
+      "salary_nonsaudi_avg": 2800
+    },
+    {
+      "id": "public_admin",
+      "name_en": "Public Administration & Defense",
+      "name_fr": "Administration publique et défense",
+      "isic": "O",
+      "total": 300829,
+      "saudi": 241538,
+      "non_saudi": 59291,
+      "pct_saudi": 80.3,
+      "ai_risk_score": 45,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "Absher automated 12M+ operations. ZATCA 50% customs automated. Digital Government saving billions. But no DOGE-style mass layoffs - gradual non-replacement and upskilling. Protected by political will.",
+      "mckinsey_automatable_pct": 40,
+      "genai_exposure": "high",
+      "v2030_outlook": "stable",
+      "nitaqat_pressure": "very_high",
+      "name_ar": "الإدارة العامة والدفاع",
+      "salary_saudi_avg": 12000,
+      "salary_nonsaudi_avg": 7000
+    },
+    {
+      "id": "education",
+      "name_en": "Education",
+      "name_fr": "Enseignement",
+      "isic": "P",
+      "total": 321900,
+      "saudi": 140402,
+      "non_saudi": 181498,
+      "pct_saudi": 43.6,
+      "ai_risk_score": 20,
+      "ai_risk_category": "low",
+      "ai_risk_rationale": "Teachers among most protected (0.74% Frey-Osborne). Emotional intelligence, character formation irreplaceable. AI augments (adaptive learning) but demand GROWS (WEF: higher education teachers top 15). Admin roles within education at risk though.",
+      "mckinsey_automatable_pct": 15,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "growing",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "التعليم",
+      "salary_saudi_avg": 11000,
+      "salary_nonsaudi_avg": 7500
+    },
+    {
+      "id": "health",
+      "name_en": "Human Health & Social Work",
+      "name_fr": "Santé humaine et action sociale",
+      "isic": "Q",
+      "total": 495426,
+      "saudi": 256974,
+      "non_saudi": 238452,
+      "pct_saudi": 51.9,
+      "ai_risk_score": 15,
+      "ai_risk_category": "very_low",
+      "ai_risk_rationale": "Fortress of human employment. Doctors 0.42%, nurses 0.90% Frey-Osborne. Legal liability, empathy, physical care = irreplaceable. AI as diagnostic co-pilot only. 175K additional professionals NEEDED by 2030. KFSHRC shows augmentation model.",
+      "mckinsey_automatable_pct": 12,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "very_strong_growth",
+      "nitaqat_pressure": "moderate",
+      "name_ar": "الصحة والعمل الاجتماعي",
+      "salary_saudi_avg": 13500,
+      "salary_nonsaudi_avg": 8000
+    },
+    {
+      "id": "arts_entertainment",
+      "name_en": "Arts, Entertainment & Recreation",
+      "name_fr": "Arts, spectacles et activités récréatives",
+      "isic": "R",
+      "total": 47940,
+      "saudi": 18194,
+      "non_saudi": 29746,
+      "pct_saudi": 38,
+      "ai_risk_score": 25,
+      "ai_risk_category": "low",
+      "ai_risk_rationale": "Physical performance, live events, theme parks = human-centric. AI generative for content creation but live entertainment booming. GEA + Qiddiya + Seasons = massive growth. Graphic designers at risk but performers protected.",
+      "mckinsey_automatable_pct": 20,
+      "genai_exposure": "moderate",
+      "v2030_outlook": "very_strong_growth",
+      "nitaqat_pressure": "low",
+      "name_ar": "الفنون والترفيه والتسلية",
+      "salary_saudi_avg": 8500,
+      "salary_nonsaudi_avg": 4500
+    },
+    {
+      "id": "other_services",
+      "name_en": "Other Service Activities",
+      "name_fr": "Autres activités de services",
+      "isic": "S",
+      "total": 305985,
+      "saudi": 44348,
+      "non_saudi": 261637,
+      "pct_saudi": 14.5,
+      "ai_risk_score": 35,
+      "ai_risk_category": "moderate",
+      "ai_risk_rationale": "Mixed bag: personal services, repair, laundry. Many physical/manual tasks protected. Some admin functions at risk.",
+      "mckinsey_automatable_pct": 30,
+      "genai_exposure": "low",
+      "v2030_outlook": "stable",
+      "nitaqat_pressure": "low",
+      "name_ar": "أنشطة الخدمات الأخرى",
+      "salary_saudi_avg": 7500,
+      "salary_nonsaudi_avg": 3000
+    },
+    {
+      "id": "households_extraterritorial",
+      "name_en": "Households & Extraterritorial",
+      "name_fr": "Ménages employeurs et organismes extraterritoriaux",
+      "isic": "T-U",
+      "total": 115,
+      "saudi": 52,
+      "non_saudi": 63,
+      "pct_saudi": 45.2,
+      "ai_risk_score": 5,
+      "ai_risk_category": "very_low",
+      "ai_risk_rationale": "Negligible sector in GOSI data. Domestic workers largely outside GOSI coverage.",
+      "mckinsey_automatable_pct": 5,
+      "genai_exposure": "very_low",
+      "v2030_outlook": "stable",
+      "nitaqat_pressure": "low",
+      "name_ar": "الأسر المعيشية والمنظمات خارج الإقليم",
+      "salary_saudi_avg": 6000,
+      "salary_nonsaudi_avg": 2200
+    }
+  ],
+  "regions": [
+    {
+      "name_en": "Riyadh",
+      "name_ar": "الرياض",
+      "total": 6096447,
+      "saudi": 1385207,
+      "non_saudi": 4711240,
+      "pct_saudi": 22.7,
+      "top3_sectors": [
+        "Construction",
+        "Admin & support",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 42,
+      "pib_share": 22,
+      "giga_projects": [
+        "Qiddiya",
+        "Diriyah",
+        "New Murabba",
+        "King Salman Park"
+      ]
+    },
+    {
+      "name_en": "Makkah",
+      "name_ar": "مكة المكرمة",
+      "total": 2188375,
+      "saudi": 525816,
+      "non_saudi": 1662559,
+      "pct_saudi": 24,
+      "top3_sectors": [
+        "Construction",
+        "Wholesale/retail",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 38,
+      "pib_share": 16,
+      "giga_projects": [
+        "Jeddah Central"
+      ]
+    },
+    {
+      "name_en": "Eastern Province",
+      "name_ar": "المنطقة الشرقية",
+      "total": 2401120,
+      "saudi": 625550,
+      "non_saudi": 1775570,
+      "pct_saudi": 26,
+      "top3_sectors": [
+        "Construction",
+        "Manufacturing",
+        "Wholesale/retail"
+      ],
+      "ai_risk_score": 36,
+      "pib_share": 22.5,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Madinah",
+      "name_ar": "المدينة المنورة",
+      "total": 412236,
+      "saudi": 94330,
+      "non_saudi": 317906,
+      "pct_saudi": 22.9,
+      "top3_sectors": [
+        "Construction",
+        "Wholesale/retail",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 35,
+      "pib_share": null,
+      "giga_projects": [
+        "AMAALA"
+      ]
+    },
+    {
+      "name_en": "Asir",
+      "name_ar": "عسير",
+      "total": 379687,
+      "saudi": 71501,
+      "non_saudi": 308186,
+      "pct_saudi": 18.8,
+      "top3_sectors": [
+        "Wholesale/retail",
+        "Construction",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 37,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Al Qassim",
+      "name_ar": "القصيم",
+      "total": 467777,
+      "saudi": 69199,
+      "non_saudi": 398578,
+      "pct_saudi": 14.8,
+      "top3_sectors": [
+        "Construction",
+        "Manufacturing",
+        "Wholesale/retail"
+      ],
+      "ai_risk_score": 34,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Tabuk",
+      "name_ar": "تبوك",
+      "total": 147937,
+      "saudi": 29114,
+      "non_saudi": 118823,
+      "pct_saudi": 19.7,
+      "top3_sectors": [
+        "Wholesale/retail",
+        "Construction",
+        "Accommodation/food"
+      ],
+      "ai_risk_score": 30,
+      "pib_share": null,
+      "giga_projects": [
+        "NEOM",
+        "Red Sea (partial)"
+      ]
+    },
+    {
+      "name_en": "Ha'il",
+      "name_ar": "حائل",
+      "total": 173102,
+      "saudi": 23380,
+      "non_saudi": 149722,
+      "pct_saudi": 13.5,
+      "top3_sectors": [
+        "Construction",
+        "Wholesale/retail",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 33,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Jazan",
+      "name_ar": "جازان",
+      "total": 190523,
+      "saudi": 32954,
+      "non_saudi": 157569,
+      "pct_saudi": 17.3,
+      "top3_sectors": [
+        "Wholesale/retail",
+        "Construction",
+        "Accommodation/food"
+      ],
+      "ai_risk_score": 35,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Najran",
+      "name_ar": "نجران",
+      "total": 163306,
+      "saudi": 25014,
+      "non_saudi": 138292,
+      "pct_saudi": 15.3,
+      "top3_sectors": [
+        "Construction",
+        "Wholesale/retail",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 33,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Al Baha",
+      "name_ar": "الباحة",
+      "total": 45992,
+      "saudi": 9242,
+      "non_saudi": 36750,
+      "pct_saudi": 20.1,
+      "top3_sectors": [
+        "Wholesale/retail",
+        "Construction",
+        "Accommodation/food"
+      ],
+      "ai_risk_score": 36,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Northern Borders",
+      "name_ar": "الحدود الشمالية",
+      "total": 58169,
+      "saudi": 9758,
+      "non_saudi": 48411,
+      "pct_saudi": 16.8,
+      "top3_sectors": [
+        "Construction",
+        "Wholesale/retail",
+        "Accommodation/food"
+      ],
+      "ai_risk_score": 32,
+      "pib_share": null,
+      "giga_projects": []
+    },
+    {
+      "name_en": "Al Jouf",
+      "name_ar": "الجوف",
+      "total": 74116,
+      "saudi": 14835,
+      "non_saudi": 59281,
+      "pct_saudi": 20,
+      "top3_sectors": [
+        "Wholesale/retail",
+        "Construction",
+        "Manufacturing"
+      ],
+      "ai_risk_score": 34,
+      "pib_share": null,
+      "giga_projects": []
+    }
+  ],
+  "occupations": {
+    "high_risk": [
+      {
+        "rank": 1,
+        "name_en": "Data Entry Keyers",
+        "name_fr": "Opérateur de saisie",
+        "eloundou": 0.95,
+        "frey_osborne": 99,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 94.9,
+        "wef_trend": "decline_brutal",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "مدخلو بيانات",
+        "salary_median_sar": 5000,
+        "salary_entry_sar": 3500,
+        "salary_senior_sar": 7000,
+        "salary_source": "PayScale/Talent.com 2025"
+      },
+      {
+        "rank": 2,
+        "name_en": "Telemarketers",
+        "name_fr": "Télévendeur",
+        "eloundou": 0.88,
+        "frey_osborne": 99,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 92.4,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "name_ar": "المسوقون عبر الهاتف",
+        "salary_median_sar": 5500,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 8000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 3,
+        "name_en": "Tax Preparers",
+        "name_fr": "Préparateur fiscal",
+        "eloundou": 0.9,
+        "frey_osborne": 99,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 93.1,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "معدو الضرائب",
+        "salary_median_sar": 12000,
+        "salary_entry_sar": 7000,
+        "salary_senior_sar": 19000,
+        "salary_source": "Astr 2026 (Zakat & Tax)"
+      },
+      {
+        "rank": 4,
+        "name_en": "Accountants & Auditors",
+        "name_fr": "Comptable et auditeur",
+        "eloundou": 1,
+        "frey_osborne": 94,
+        "felten": "high",
+        "category": "substitution_partial",
+        "composite": 88.2,
+        "wef_trend": "decline",
+        "nitaqat_risk": "very_high",
+        "ksa_relevance": "very_high",
+        "name_ar": "المحاسبون والمراجعون",
+        "salary_median_sar": 10000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 16000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 5,
+        "name_en": "Cashiers",
+        "name_fr": "Caissier",
+        "eloundou": 0.05,
+        "frey_osborne": 97,
+        "felten": "low",
+        "category": "substitution",
+        "composite": 53.7,
+        "wef_trend": "decline_brutal",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "name_ar": "أمناء الصندوق",
+        "salary_median_sar": 4500,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 6000,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      },
+      {
+        "rank": 6,
+        "name_en": "Proofreaders",
+        "name_fr": "Correcteur d'épreuves",
+        "eloundou": 1,
+        "frey_osborne": 84,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 91.4,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "low",
+        "name_ar": "المدققون اللغويون",
+        "salary_median_sar": 6500,
+        "salary_entry_sar": 4500,
+        "salary_senior_sar": 10000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 7,
+        "name_en": "Legal Secretaries",
+        "name_fr": "Secrétaire juridique",
+        "eloundou": 0.95,
+        "frey_osborne": 98,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 91.5,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "name_ar": "السكرتارية القانونية",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 5500,
+        "salary_senior_sar": 13000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 8,
+        "name_en": "Administrative Assistants",
+        "name_fr": "Agent administratif",
+        "eloundou": 0.85,
+        "frey_osborne": 90,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 85.2,
+        "wef_trend": "decline_brutal",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "name_ar": "المساعدون الإداريون",
+        "salary_median_sar": 7500,
+        "salary_entry_sar": 4500,
+        "salary_senior_sar": 12000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 9,
+        "name_en": "Receptionists",
+        "name_fr": "Réceptionniste",
+        "eloundou": 0.65,
+        "frey_osborne": 96,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 80.3,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "موظفو الاستقبال",
+        "salary_median_sar": 5500,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 8000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 10,
+        "name_en": "Payroll Clerks",
+        "name_fr": "Gestionnaire de paie",
+        "eloundou": 0.85,
+        "frey_osborne": 97,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 87.7,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "موظفو الرواتب",
+        "salary_median_sar": 7000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 11000,
+        "salary_source": "PayScale/Talent.com 2025"
+      },
+      {
+        "rank": 11,
+        "name_en": "Bank Tellers",
+        "name_fr": "Guichetier de banque",
+        "eloundou": 0.5,
+        "frey_osborne": 98,
+        "felten": "moderate",
+        "category": "substitution",
+        "composite": 72.8,
+        "wef_trend": "decline_brutal",
+        "nitaqat_risk": "very_high",
+        "ksa_relevance": "very_high",
+        "name_ar": "صرافو البنوك",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 12,
+        "name_en": "Postal Service Clerks",
+        "name_fr": "Guichetier postal",
+        "eloundou": 0.4,
+        "frey_osborne": 95,
+        "felten": "moderate",
+        "category": "substitution",
+        "composite": 68.2,
+        "wef_trend": "decline_brutal",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "name_ar": "موظفو البريد",
+        "salary_median_sar": 5000,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 7000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 13,
+        "name_en": "Translators",
+        "name_fr": "Traducteur",
+        "eloundou": 0.95,
+        "frey_osborne": 38,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 73.5,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "name_ar": "المترجمون",
+        "salary_median_sar": 9000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 15000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 14,
+        "name_en": "Customer Service Reps",
+        "name_fr": "Agent service client",
+        "eloundou": 0.8,
+        "frey_osborne": 55,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 71.2,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "name_ar": "ممثلو خدمة العملاء",
+        "salary_median_sar": 6000,
+        "salary_entry_sar": 4500,
+        "salary_senior_sar": 9000,
+        "salary_source": "Talent.com/PayScale 2025"
+      },
+      {
+        "rank": 15,
+        "name_en": "Actuaries",
+        "name_fr": "Actuaire",
+        "eloundou": 0.9,
+        "frey_osborne": 21,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 54.6,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "name_ar": "الاكتواريون",
+        "salary_median_sar": 18000,
+        "salary_entry_sar": 12000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale SA/GulfTalent 2025"
+      },
+      {
+        "rank": 16,
+        "name_en": "Budget Analysts",
+        "name_fr": "Analyste budgétaire",
+        "eloundou": 0.85,
+        "frey_osborne": 94,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 78.4,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "محللو الميزانية",
+        "salary_median_sar": 12000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 17,
+        "name_en": "Financial Examiners",
+        "name_fr": "Examinateur financier",
+        "eloundou": 0.8,
+        "frey_osborne": 85,
+        "felten": "high",
+        "category": "substitution_partial",
+        "composite": 78,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "المفتشون الماليون",
+        "salary_median_sar": 14000,
+        "salary_entry_sar": 9000,
+        "salary_senior_sar": 22000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 18,
+        "name_en": "Paralegals & Legal Assistants",
+        "name_fr": "Assistant juridique",
+        "eloundou": 0.85,
+        "frey_osborne": 94,
+        "felten": "high",
+        "category": "substitution_partial",
+        "composite": 82.9,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "name_ar": "المساعدون القانونيون",
+        "salary_median_sar": 8500,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 14000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 19,
+        "name_en": "Computer Programmers",
+        "name_fr": "Programmeur",
+        "eloundou": 1,
+        "frey_osborne": 48,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 67.5,
+        "wef_trend": "growth",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "name_ar": "المبرمجون",
+        "salary_median_sar": 13000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 20000,
+        "salary_source": "Astr 2026 (IT)"
+      },
+      {
+        "rank": 20,
+        "name_en": "Web Developers",
+        "name_fr": "Développeur web",
+        "eloundou": 0.95,
+        "frey_osborne": 21,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 56.4,
+        "wef_trend": "growth",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "مطورو الويب",
+        "salary_median_sar": 13000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 21000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 21,
+        "name_en": "Financial Analysts",
+        "name_fr": "Analyste financier",
+        "eloundou": 0.85,
+        "frey_osborne": 23,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 53.5,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "name_ar": "المحللون الماليون",
+        "salary_median_sar": 13000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 21000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 22,
+        "name_en": "Market Research Analysts",
+        "name_fr": "Analyste de marché",
+        "eloundou": 0.88,
+        "frey_osborne": 61,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 67.9,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "محللو أبحاث السوق",
+        "salary_median_sar": 12000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale/Astr 2026"
+      },
+      {
+        "rank": 23,
+        "name_en": "Writers & Authors",
+        "name_fr": "Rédacteur / auteur",
+        "eloundou": 1,
+        "frey_osborne": 3.8,
+        "felten": "very_high",
+        "category": "substitution_partial",
+        "composite": 59.6,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "name_ar": "الكتّاب والمؤلفون",
+        "salary_median_sar": 9000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 14000,
+        "salary_source": "Astr 2026 (Content Writer)"
+      },
+      {
+        "rank": 24,
+        "name_en": "Insurance Underwriters",
+        "name_fr": "Souscripteur d'assurances",
+        "eloundou": 0.7,
+        "frey_osborne": 99,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 83.2,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "name_ar": "مكتتبو التأمين",
+        "salary_median_sar": 11000,
+        "salary_entry_sar": 7500,
+        "salary_senior_sar": 17000,
+        "salary_source": "PayScale/GulfTalent 2025"
+      },
+      {
+        "rank": 25,
+        "name_en": "Technical Writers",
+        "name_fr": "Rédacteur technique",
+        "eloundou": 1,
+        "frey_osborne": 89,
+        "felten": "very_high",
+        "category": "substitution",
+        "composite": 93.2,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "name_ar": "الكتاب التقنيون",
+        "salary_median_sar": 10000,
+        "salary_entry_sar": 7000,
+        "salary_senior_sar": 16000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 26,
+        "name_en": "Graphic Designers",
+        "name_fr": "Designer graphique",
+        "eloundou": 0.85,
+        "frey_osborne": 4.3,
+        "felten": "high",
+        "category": "substitution_partial",
+        "composite": 51.5,
+        "wef_trend": "decline",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "name_ar": "مصممو الجرافيك",
+        "salary_median_sar": 9000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 15000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 27,
+        "name_en": "Travel Agents",
+        "name_fr": "Agent de voyage",
+        "eloundou": 0.6,
+        "frey_osborne": 99,
+        "felten": "moderate",
+        "category": "substitution",
+        "composite": 76.7,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "وكلاء السفر",
+        "salary_median_sar": 7000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 11000,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      },
+      {
+        "rank": 28,
+        "name_en": "Marketing Specialists",
+        "name_fr": "Spécialiste marketing",
+        "eloundou": 0.8,
+        "frey_osborne": 61,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 65.1,
+        "wef_trend": "growth",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "أخصائيو التسويق",
+        "salary_median_sar": 10000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 17000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 29,
+        "name_en": "HR Specialists",
+        "name_fr": "Spécialiste RH",
+        "eloundou": 0.6,
+        "frey_osborne": 3.1,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 34.8,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "أخصائيو الموارد البشرية",
+        "salary_median_sar": 10000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 16000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 30,
+        "name_en": "Lawyers",
+        "name_fr": "Avocat",
+        "eloundou": 0.85,
+        "frey_osborne": 3.5,
+        "felten": "high",
+        "category": "augmentation",
+        "composite": 46.7,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "name_ar": "المحامون",
+        "salary_median_sar": 13000,
+        "salary_entry_sar": 7000,
+        "salary_senior_sar": 23000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 31,
+        "name_en": "Real Estate Agents",
+        "name_fr": "Agent immobilier",
+        "eloundou": 0.5,
+        "frey_osborne": 86,
+        "felten": "moderate",
+        "category": "substitution_partial",
+        "composite": 64.8,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "name_ar": "وكلاء العقارات",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 15000,
+        "salary_source": "Talent.com 2025 (+ commission)"
+      },
+      {
+        "rank": 32,
+        "name_en": "Sales Representatives",
+        "name_fr": "Commercial",
+        "eloundou": 0.55,
+        "frey_osborne": 85,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 61.8,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "name_ar": "مندوبو المبيعات",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 5000,
+        "salary_senior_sar": 13000,
+        "salary_source": "Astr 2026 (+ commission)"
+      },
+      {
+        "rank": 33,
+        "name_en": "Claims Adjusters",
+        "name_fr": "Expert en sinistres",
+        "eloundou": 0.65,
+        "frey_osborne": 98,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 81,
+        "wef_trend": "decline",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "name_ar": "مقيمو المطالبات",
+        "salary_median_sar": 9000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 14000,
+        "salary_source": "PayScale/GulfTalent 2025"
+      },
+      {
+        "rank": 34,
+        "name_en": "Logistics Clerks",
+        "name_fr": "Agent logistique",
+        "eloundou": 0.75,
+        "frey_osborne": 98,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 84.5,
+        "wef_trend": "decline",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "name_ar": "موظفو الخدمات اللوجستية",
+        "salary_median_sar": 6500,
+        "salary_entry_sar": 4500,
+        "salary_senior_sar": 10000,
+        "salary_source": "GulfTalent/Talent.com 2025"
+      },
+      {
+        "rank": 35,
+        "name_en": "Retail Salespersons",
+        "name_fr": "Vendeur au détail",
+        "eloundou": 0.3,
+        "frey_osborne": 92,
+        "felten": "low",
+        "category": "substitution_partial",
+        "composite": 56.9,
+        "wef_trend": "growth",
+        "nitaqat_risk": "very_high",
+        "ksa_relevance": "very_high",
+        "name_ar": "بائعو التجزئة",
+        "salary_median_sar": 5000,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 7500,
+        "salary_source": "Talent.com 2025"
+      }
+    ],
+    "low_risk": [
+      {
+        "rank": 1,
+        "name_en": "Civil/Mechanical Engineers",
+        "name_fr": "Ingénieur civil/mécanique",
+        "eloundou": 0.4,
+        "frey_osborne": 1.9,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 24.4,
+        "ksa_relevance": "very_high",
+        "name_ar": "مهندسون مدنيون/ميكانيكيون",
+        "salary_median_sar": 12000,
+        "salary_entry_sar": 7000,
+        "salary_senior_sar": 19000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 2,
+        "name_en": "Pharmacists",
+        "name_fr": "Pharmacien",
+        "eloundou": 0.2,
+        "frey_osborne": 12,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 20.9,
+        "ksa_relevance": "very_high",
+        "name_ar": "الصيادلة",
+        "salary_median_sar": 13000,
+        "salary_entry_sar": 8000,
+        "salary_senior_sar": 19000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 3,
+        "name_en": "Maintenance Technicians",
+        "name_fr": "Technicien de maintenance",
+        "eloundou": 0.1,
+        "frey_osborne": 15,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 18.5,
+        "ksa_relevance": "very_high",
+        "name_ar": "فنيو الصيانة",
+        "salary_median_sar": 6000,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 9000,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      },
+      {
+        "rank": 4,
+        "name_en": "Teachers (Preschool/Primary)",
+        "name_fr": "Enseignant maternelle/primaire",
+        "eloundou": 0.1,
+        "frey_osborne": 0.74,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 13.5,
+        "ksa_relevance": "very_high",
+        "name_ar": "معلمو رياض الأطفال/الابتدائي",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 5500,
+        "salary_senior_sar": 12000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 5,
+        "name_en": "Heavy Truck Drivers",
+        "name_fr": "Chauffeur poids lourd",
+        "eloundou": 0,
+        "frey_osborne": 79,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 54.9,
+        "ksa_relevance": "very_high",
+        "name_ar": "سائقو الشاحنات الثقيلة",
+        "salary_median_sar": 5500,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 8000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 6,
+        "name_en": "Registered Nurses",
+        "name_fr": "Infirmier",
+        "eloundou": 0.1,
+        "frey_osborne": 0.9,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 13.6,
+        "ksa_relevance": "very_high",
+        "name_ar": "ممرضون مسجلون",
+        "salary_median_sar": 10000,
+        "salary_entry_sar": 6000,
+        "salary_senior_sar": 15000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 7,
+        "name_en": "Surgeons & Physicians",
+        "name_fr": "Médecin / chirurgien",
+        "eloundou": 0.15,
+        "frey_osborne": 0.42,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 15.1,
+        "ksa_relevance": "very_high",
+        "name_ar": "الجراحون والأطباء",
+        "salary_median_sar": 22000,
+        "salary_entry_sar": 12000,
+        "salary_senior_sar": 38000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 8,
+        "name_en": "Dentists",
+        "name_fr": "Dentiste",
+        "eloundou": 0.1,
+        "frey_osborne": 0.44,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 13.4,
+        "ksa_relevance": "very_high",
+        "name_ar": "أطباء الأسنان",
+        "salary_median_sar": 18000,
+        "salary_entry_sar": 12000,
+        "salary_senior_sar": 27000,
+        "salary_source": "Astr 2026"
+      },
+      {
+        "rank": 9,
+        "name_en": "Social Workers",
+        "name_fr": "Travailleur social",
+        "eloundou": 0.05,
+        "frey_osborne": 0.9,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 11.8,
+        "ksa_relevance": "moderate",
+        "name_ar": "الأخصائيون الاجتماعيون",
+        "salary_median_sar": 8000,
+        "salary_entry_sar": 5500,
+        "salary_senior_sar": 13000,
+        "salary_source": "PayScale SA 2025"
+      },
+      {
+        "rank": 10,
+        "name_en": "Plumbers & Pipefitters",
+        "name_fr": "Plombier",
+        "eloundou": 0,
+        "frey_osborne": 5,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 29,
+        "ksa_relevance": "high",
+        "name_ar": "سباكون وعمال الأنابيب",
+        "salary_median_sar": 5500,
+        "salary_entry_sar": 3500,
+        "salary_senior_sar": 8000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 11,
+        "name_en": "Electricians",
+        "name_fr": "Électricien",
+        "eloundou": 0,
+        "frey_osborne": 5,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 29,
+        "ksa_relevance": "high",
+        "name_ar": "كهربائيون",
+        "salary_median_sar": 6000,
+        "salary_entry_sar": 4000,
+        "salary_senior_sar": 9000,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      },
+      {
+        "rank": 12,
+        "name_en": "Construction Workers",
+        "name_fr": "Ouvrier BTP",
+        "eloundou": 0,
+        "frey_osborne": 5,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 26.8,
+        "ksa_relevance": "very_high",
+        "name_ar": "عمال البناء",
+        "salary_median_sar": 4000,
+        "salary_entry_sar": 3000,
+        "salary_senior_sar": 6000,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      },
+      {
+        "rank": 13,
+        "name_en": "Fitness Trainers",
+        "name_fr": "Entraîneur sportif",
+        "eloundou": 0,
+        "frey_osborne": 8.5,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 28,
+        "ksa_relevance": "moderate",
+        "name_ar": "مدربو اللياقة البدنية",
+        "salary_median_sar": 7000,
+        "salary_entry_sar": 4500,
+        "salary_senior_sar": 12000,
+        "salary_source": "Talent.com 2025"
+      },
+      {
+        "rank": 14,
+        "name_en": "Landscaping Workers",
+        "name_fr": "Paysagiste",
+        "eloundou": 0,
+        "frey_osborne": 5,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 26.8,
+        "ksa_relevance": "moderate",
+        "name_ar": "عمال تنسيق الحدائق",
+        "salary_median_sar": 3500,
+        "salary_entry_sar": 2500,
+        "salary_senior_sar": 5500,
+        "salary_source": "Talent.com/GulfTalent 2025"
+      }
+    ]
+  },
+  "wef": {
+    "growth": [
+      {
+        "rank": 1,
+        "name": "Big Data Specialists",
+        "trend": "Very Rapid Growth",
+        "name_ar": "أخصائيو البيانات الضخمة"
+      },
+      {
+        "rank": 2,
+        "name": "FinTech Engineers",
+        "trend": "Very Rapid Growth",
+        "name_ar": "مهندسو التقنية المالية"
+      },
+      {
+        "rank": 3,
+        "name": "AI & ML Specialists",
+        "trend": "Very Rapid Growth",
+        "name_ar": "أخصائيو الذكاء الاصطناعي والتعلم الآلي"
+      },
+      {
+        "rank": 4,
+        "name": "Renewable Energy Engineers",
+        "trend": "Rapid Growth",
+        "name_ar": "مهندسو الطاقة المتجددة"
+      },
+      {
+        "rank": 5,
+        "name": "Delivery Drivers",
+        "trend": "Rapid Growth",
+        "name_ar": "سائقو التوصيل"
+      },
+      {
+        "rank": 6,
+        "name": "Nursing Professionals",
+        "trend": "Rapid Growth",
+        "name_ar": "مهنيو التمريض"
+      },
+      {
+        "rank": 7,
+        "name": "Agricultural Workers",
+        "trend": "Rapid Growth",
+        "name_ar": "العمال الزراعيون"
+      },
+      {
+        "rank": 8,
+        "name": "Environmental Engineers",
+        "trend": "Rapid Growth",
+        "name_ar": "المهندسون البيئيون"
+      },
+      {
+        "rank": 9,
+        "name": "Software Developers",
+        "trend": "Rapid Growth",
+        "name_ar": "مطورو البرمجيات"
+      },
+      {
+        "rank": 10,
+        "name": "EV Specialists",
+        "trend": "Rapid Growth",
+        "name_ar": "أخصائيو المركبات الكهربائية"
+      },
+      {
+        "rank": 11,
+        "name": "Construction Workers",
+        "trend": "Rapid Growth",
+        "name_ar": "عمال البناء"
+      },
+      {
+        "rank": 12,
+        "name": "Shop Salespeople",
+        "trend": "Rapid Growth",
+        "name_ar": "بائعو المتاجر"
+      },
+      {
+        "rank": 13,
+        "name": "Food Processing Workers",
+        "trend": "Rapid Growth",
+        "name_ar": "عمال تصنيع الأغذية"
+      },
+      {
+        "rank": 14,
+        "name": "Cybersecurity Specialists",
+        "trend": "Rapid Growth",
+        "name_ar": "أخصائيو الأمن السيبراني"
+      },
+      {
+        "rank": 15,
+        "name": "Higher Education Teachers",
+        "trend": "Rapid Growth",
+        "name_ar": "أساتذة التعليم العالي"
+      }
+    ],
+    "decline": [
+      {
+        "rank": 1,
+        "name": "Postal Service Clerks",
+        "decline_pct": -40,
+        "name_ar": "موظفو البريد"
+      },
+      {
+        "rank": 2,
+        "name": "Bank Tellers",
+        "decline_pct": -35,
+        "name_ar": "صرافو البنوك"
+      },
+      {
+        "rank": 3,
+        "name": "Data Entry Clerks",
+        "decline_pct": -34,
+        "name_ar": "مدخلو البيانات"
+      },
+      {
+        "rank": 4,
+        "name": "Cashiers & Ticket Clerks",
+        "decline_pct": -30,
+        "name_ar": "أمناء الصندوق وموظفو التذاكر"
+      },
+      {
+        "rank": 5,
+        "name": "Administrative Assistants",
+        "decline_pct": -28,
+        "name_ar": "المساعدون الإداريون"
+      },
+      {
+        "rank": 6,
+        "name": "Printing Workers",
+        "decline_pct": -26,
+        "name_ar": "عمال الطباعة"
+      },
+      {
+        "rank": 7,
+        "name": "Accounting Clerks",
+        "decline_pct": -24,
+        "name_ar": "موظفو المحاسبة"
+      },
+      {
+        "rank": 8,
+        "name": "Material Recording Clerks",
+        "decline_pct": -22,
+        "name_ar": "موظفو تسجيل المواد"
+      },
+      {
+        "rank": 9,
+        "name": "Transport Attendants",
+        "decline_pct": -21,
+        "name_ar": "مرافقو النقل"
+      },
+      {
+        "rank": 10,
+        "name": "Door-to-Door Salespeople",
+        "decline_pct": -20,
+        "name_ar": "الباعة المتجولون"
+      }
+    ],
+    "headline": "22% of all jobs structurally disrupted by 2030. Net +78M globally (170M created - 92M destroyed)."
+  },
+  "top_employers": [
+    {
+      "rank": 1,
+      "name": "Saudi Binladin Group",
+      "sector": "Construction",
+      "employees": 100000,
+      "estimate": true,
+      "tadawul": false,
+      "saudisation": null,
+      "sector_ar": "التشييد والبناء"
+    },
+    {
+      "rank": 2,
+      "name": "Saudi Aramco",
+      "sector": "Oil & Gas",
+      "employees": 73311,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "النفط والغاز"
+    },
+    {
+      "rank": 3,
+      "name": "Almarai",
+      "sector": "FMCG",
+      "employees": 43918,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": 23,
+      "sector_ar": "السلع الاستهلاكية"
+    },
+    {
+      "rank": 4,
+      "name": "SABIC",
+      "sector": "Petrochemicals",
+      "employees": 35000,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "البتروكيماويات"
+    },
+    {
+      "rank": 5,
+      "name": "Nesma Holding",
+      "sector": "Construction",
+      "employees": 35000,
+      "estimate": true,
+      "tadawul": false,
+      "saudisation": null,
+      "sector_ar": "التشييد والبناء"
+    },
+    {
+      "rank": 6,
+      "name": "SEC",
+      "sector": "Utilities",
+      "employees": 33000,
+      "estimate": true,
+      "tadawul": true,
+      "saudisation": 92,
+      "sector_ar": "المرافق"
+    },
+    {
+      "rank": 7,
+      "name": "Saudia Airlines",
+      "sector": "Aviation",
+      "employees": 24855,
+      "estimate": true,
+      "tadawul": false,
+      "saudisation": null,
+      "sector_ar": "الطيران"
+    },
+    {
+      "rank": 8,
+      "name": "stc",
+      "sector": "Telecom",
+      "employees": 22751,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": 89,
+      "sector_ar": "الاتصالات"
+    },
+    {
+      "rank": 9,
+      "name": "Al Rajhi Bank",
+      "sector": "Banking",
+      "employees": 21700,
+      "estimate": true,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "الخدمات المصرفية"
+    },
+    {
+      "rank": 10,
+      "name": "Al Othaim Markets",
+      "sector": "Retail",
+      "employees": 16286,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "التجزئة"
+    },
+    {
+      "rank": 11,
+      "name": "SNB",
+      "sector": "Banking",
+      "employees": 16000,
+      "estimate": true,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "الخدمات المصرفية"
+    },
+    {
+      "rank": 12,
+      "name": "Savola/Panda",
+      "sector": "FMCG/Retail",
+      "employees": 15299,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "استهلاكية/تجزئة"
+    },
+    {
+      "rank": 13,
+      "name": "Olayan Group",
+      "sector": "Conglomerate",
+      "employees": 14500,
+      "estimate": true,
+      "tadawul": false,
+      "saudisation": null,
+      "sector_ar": "تكتل"
+    },
+    {
+      "rank": 14,
+      "name": "SMEH",
+      "sector": "Medical Equipment",
+      "employees": 13977,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "المعدات الطبية"
+    },
+    {
+      "rank": 15,
+      "name": "Aldrees",
+      "sector": "Fuel/Transport",
+      "employees": 12640,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "الوقود/النقل"
+    },
+    {
+      "rank": 16,
+      "name": "Saudi Ground Services",
+      "sector": "Airport Services",
+      "employees": 12358,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "خدمات المطارات"
+    },
+    {
+      "rank": 17,
+      "name": "Zamil Industrial",
+      "sector": "Manufacturing",
+      "employees": 12294,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "الصناعات التحويلية"
+    },
+    {
+      "rank": 18,
+      "name": "Abdul Latif Jameel",
+      "sector": "Conglomerate",
+      "employees": 11000,
+      "estimate": false,
+      "tadawul": false,
+      "saudisation": null,
+      "sector_ar": "تكتل"
+    },
+    {
+      "rank": 19,
+      "name": "BinDawood",
+      "sector": "Retail",
+      "employees": 10000,
+      "estimate": true,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "التجزئة"
+    },
+    {
+      "rank": 20,
+      "name": "Dr. Sulaiman Al Habib",
+      "sector": "Healthcare",
+      "employees": 10475,
+      "estimate": false,
+      "tadawul": true,
+      "saudisation": null,
+      "sector_ar": "الرعاية الصحية"
+    }
+  ],
+  "layoffs": {
+    "monthly": {
+      "2024": [
+        {
+          "month": "Jan",
+          "total": 34107,
+          "top3": "SAP (8K), Xerox (3K), PayPal (2.5K)"
+        },
+        {
+          "month": "Feb",
+          "total": 15639,
+          "top3": "Cisco (4.25K), Farfetch (2K), Expedia (1.5K)"
+        },
+        {
+          "month": "Mar",
+          "total": 7403,
+          "top3": "Dell (6K), ShopBack (195), Project Ronin (150)"
+        },
+        {
+          "month": "Apr",
+          "total": 22423,
+          "top3": "Tesla (14K), Apple (614), Take-Two (579)"
+        },
+        {
+          "month": "May",
+          "total": 11011,
+          "top3": "ND"
+        },
+        {
+          "month": "Jun",
+          "total": 10083,
+          "top3": "ND"
+        },
+        {
+          "month": "Jul",
+          "total": 9051,
+          "top3": "ND"
+        },
+        {
+          "month": "Aug",
+          "total": 26024,
+          "top3": "ND"
+        },
+        {
+          "month": "Sep",
+          "total": 3765,
+          "top3": "ND"
+        },
+        {
+          "month": "Oct",
+          "total": 3659,
+          "top3": "ND"
+        },
+        {
+          "month": "Nov",
+          "total": 5925,
+          "top3": "ND"
+        },
+        {
+          "month": "Dec",
+          "total": 2268,
+          "top3": "ND"
+        }
+      ],
+      "2025": [
+        {
+          "month": "Jan",
+          "total": 2403,
+          "top3": "ND"
+        },
+        {
+          "month": "Feb",
+          "total": 16234,
+          "top3": "ND"
+        },
+        {
+          "month": "Mar",
+          "total": 8834,
+          "top3": "ND"
+        },
+        {
+          "month": "Apr",
+          "total": 24500,
+          "top3": "ND"
+        },
+        {
+          "month": "May",
+          "total": 10397,
+          "top3": "ND"
+        },
+        {
+          "month": "Jun",
+          "total": 1606,
+          "top3": "ND"
+        },
+        {
+          "month": "Jul",
+          "total": 16327,
+          "top3": "ND"
+        },
+        {
+          "month": "Aug",
+          "total": 6302,
+          "top3": "ND"
+        },
+        {
+          "month": "Sep",
+          "total": 4152,
+          "top3": "ND"
+        },
+        {
+          "month": "Oct",
+          "total": 18510,
+          "top3": "ND"
+        },
+        {
+          "month": "Nov",
+          "total": 8932,
+          "top3": "ND"
+        },
+        {
+          "month": "Dec",
+          "total": 300,
+          "top3": "ND"
+        }
+      ]
+    },
+    "ai_cases_global": [
+      {
+        "company": "Google (Ads)",
+        "jobs": 1000,
+        "reason": "AI-powered ad products replacing account management",
+        "date": "Jan 2024",
+        "type": "confirmed"
+      },
+      {
+        "company": "Google Cloud (UX)",
+        "jobs": 100,
+        "reason": "Restructuring to reallocate budget to AI engineering",
+        "date": "Oct 2025",
+        "type": "confirmed"
+      },
+      {
+        "company": "Chegg",
+        "jobs": 468,
+        "reason": "ChatGPT destroying homework help demand, 45% workforce cut",
+        "date": "Jun 2023 + Oct 2025",
+        "type": "confirmed"
+      },
+      {
+        "company": "Stack Overflow",
+        "jobs": 150,
+        "reason": "Developers switching to AI coding assistants",
+        "date": "Oct 2023",
+        "type": "confirmed"
+      },
+      {
+        "company": "Duolingo",
+        "jobs": null,
+        "reason": "10% contractors replaced by GPT-4 for translation",
+        "date": "Jan 2024",
+        "type": "confirmed"
+      },
+      {
+        "company": "Klarna",
+        "jobs": 700,
+        "reason": "AI assistant replaced 700 FTE equivalent in customer service",
+        "date": "Feb 2024",
+        "type": "confirmed"
+      },
+      {
+        "company": "BT Group",
+        "jobs": 10000,
+        "reason": "10K of 55K total cuts explicitly AI/automation by 2030",
+        "date": "May 2023 plan",
+        "type": "announced_plan"
+      },
+      {
+        "company": "IBM",
+        "jobs": 7800,
+        "reason": "Hiring freeze on AI-replaceable back-office roles over 5 years",
+        "date": "May 2023 plan",
+        "type": "announced_plan"
+      },
+      {
+        "company": "Paycom",
+        "jobs": 500,
+        "reason": "Back-office automation, 8% workforce",
+        "date": "Oct 2025",
+        "type": "confirmed"
+      },
+      {
+        "company": "Deepwatch",
+        "jobs": 70,
+        "reason": "Realignment to AI platform NEXA, 24-32% of staff",
+        "date": "Nov 2025",
+        "type": "confirmed"
+      },
+      {
+        "company": "Just Eat Takeaway",
+        "jobs": 450,
+        "reason": "Customer service and sales admin automated",
+        "date": "Sep 2025",
+        "type": "confirmed"
+      },
+      {
+        "company": "Indeed/Glassdoor",
+        "jobs": 1300,
+        "reason": "AI-powered job matching replacing manual R&D",
+        "date": "Jul 2025",
+        "type": "confirmed"
+      }
+    ],
+    "challenger": {
+      "2025_total_us_layoffs": 1200000,
+      "2025_ai_cited": 54836,
+      "2025_ai_pct": 4.6,
+      "cumulative_2023_2026_ai": 79449,
+      "peak_month": {
+        "month": "Oct 2025",
+        "total": 153074,
+        "ai_cited": 31039,
+        "ai_pct": 20.3
+      },
+      "note": "AI is 2nd cause after cost-cutting in Oct 2025. Strong upward trend."
+    },
+    "totals": {
+      "tech_global_2024": 151000,
+      "tech_global_2025": 118500,
+      "ai_cited_us_2025": 54836,
+      "ai_cited_cumulative_2023_2026": 79449
+    }
+  },
+  "ksa_ai_cases": [
+    {
+      "entity": "Arab National Bank (ANB)",
+      "type": "RPA/AI",
+      "impact": "35 processes automated, 100+ bots, 40K hours saved, 2M+ requests processed",
+      "jobs_impact": "Back-office data entry and compliance partially replaced",
+      "year": 2021,
+      "country": "KSA"
+    },
+    {
+      "entity": "Saudi Post (SPL)",
+      "type": "Robotics",
+      "impact": "200 sorting robots deployed, largest robotic sorting center in Middle East",
+      "jobs_impact": "Manual sorting positions reduced",
+      "year": 2024,
+      "country": "KSA"
+    },
+    {
+      "entity": "BinDawood (Danube)",
+      "type": "Automation",
+      "impact": "Fully automated dark stores for e-commerce fulfillment",
+      "jobs_impact": "Warehouse picking/packing jobs automated",
+      "year": 2024,
+      "country": "KSA"
+    },
+    {
+      "entity": "Absher Platform",
+      "type": "Digital Gov",
+      "impact": "12M+ operations in H1 2023, 17B SAR annual savings",
+      "jobs_impact": "Government counter staff demand reduced via non-replacement",
+      "year": 2023,
+      "country": "KSA"
+    },
+    {
+      "entity": "ZATCA Customs",
+      "type": "AI Risk Engine",
+      "impact": "50% customs operations automated, clearance time 24h→5h",
+      "jobs_impact": "Document processing clerks replaced by AI workflows",
+      "year": 2024,
+      "country": "KSA"
+    },
+    {
+      "entity": "KFSHRC Hospital",
+      "type": "AI Diagnostics",
+      "impact": "20+ AI applications, 170K automated interventions, 25% diagnostic accuracy improvement",
+      "jobs_impact": "Augmentation: radiologists freed from routine, no reported layoffs",
+      "year": 2024,
+      "country": "KSA"
+    },
+    {
+      "entity": "NEOM (The Line)",
+      "type": "Smart City Design",
+      "impact": "Native autonomous transport, predictive maintenance, AI-first urban management",
+      "jobs_impact": "Traditional urban jobs (drivers, counter staff) structurally absent from design",
+      "year": "2025+",
+      "country": "KSA"
+    },
+    {
+      "entity": "Carrefour City+ Dubai",
+      "type": "Computer Vision",
+      "impact": "Fully cashierless store using AI vision and auto-payment",
+      "jobs_impact": "All cashier positions eliminated in pilot store",
+      "year": 2023,
+      "country": "UAE"
+    },
+    {
+      "entity": "Emirates NBD",
+      "type": "Digital Banking",
+      "impact": "800 positions cut (~10% workforce), accelerated by Covid + digitalization",
+      "jobs_impact": "Branch staff, back-office processing reduced",
+      "year": 2020,
+      "country": "UAE"
+    },
+    {
+      "entity": "Dubai/Abu Dhabi Autonomous Taxis",
+      "type": "Autonomous Vehicles",
+      "impact": "Cruise and TXAI pilot programs for autonomous taxis",
+      "jobs_impact": "Strategic direction: progressive replacement of human drivers by 2030",
+      "year": "2024+",
+      "country": "UAE"
+    }
+  ],
+  "v2030": {
+    "targets": [
+      {
+        "sector": "Tourism",
+        "target_jobs": 1100000,
+        "horizon": 2030,
+        "confidence": "high",
+        "source": "V2030/WTTC",
+        "sector_ar": "السياحة"
+      },
+      {
+        "sector": "Entertainment",
+        "target_jobs": 450000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "GEA",
+        "sector_ar": "الترفيه"
+      },
+      {
+        "sector": "Sports (incl. esports)",
+        "target_jobs": 139000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "Min Sports + Gaming Strategy",
+        "sector_ar": "الرياضة (بما فيها الرياضات الإلكترونية)"
+      },
+      {
+        "sector": "Healthcare (additional)",
+        "target_jobs": 175000,
+        "horizon": 2030,
+        "confidence": "high",
+        "source": "HSTP/Colliers",
+        "sector_ar": "الرعاية الصحية (إضافي)"
+      },
+      {
+        "sector": "Fintech",
+        "target_jobs": 18000,
+        "horizon": 2030,
+        "confidence": "high",
+        "source": "Fintech Saudi",
+        "sector_ar": "التقنية المالية"
+      },
+      {
+        "sector": "ICT + Digital + Data Centers",
+        "target_jobs": 90000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "MCIT/DGA/SDAIA",
+        "sector_ar": "تقنية المعلومات + الرقمنة + مراكز البيانات"
+      },
+      {
+        "sector": "Mining & Minerals",
+        "target_jobs": 200000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "NIDLP/Min Industry",
+        "sector_ar": "التعدين والمعادن"
+      },
+      {
+        "sector": "Renewables & Hydrogen",
+        "target_jobs": 380000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "Saudi Green Initiative",
+        "sector_ar": "الطاقة المتجددة والهيدروجين"
+      },
+      {
+        "sector": "Defense Industries",
+        "target_jobs": 107000,
+        "horizon": 2030,
+        "confidence": "high",
+        "source": "SAMI/GAMI",
+        "sector_ar": "الصناعات الدفاعية"
+      },
+      {
+        "sector": "Culture & Creative",
+        "target_jobs": 100000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "Min Culture",
+        "sector_ar": "الثقافة والإبداع"
+      },
+      {
+        "sector": "Space",
+        "target_jobs": 33000,
+        "horizon": 2030,
+        "confidence": "low",
+        "source": "SSA",
+        "sector_ar": "الفضاء"
+      },
+      {
+        "sector": "Giga-Projects (construction + operations)",
+        "target_jobs": 500000,
+        "horizon": 2030,
+        "confidence": "medium",
+        "source": "NEOM/RSG/Qiddiya/Diriyah estimates",
+        "sector_ar": "المشاريع العملاقة (بناء + تشغيل)"
+      }
+    ],
+    "summary": {
+      "total_gross": 3292000,
+      "deduplication_factor": 0.7,
+      "total_net_estimate": 2304400,
+      "note": "Gross total has significant overlap (NIDLP includes mining+manufacturing+logistics, giga-projects overlap with tourism/construction). 30% deduplication applied = conservative net estimate."
+    }
+  },
+  "nitaqat": {
+    "overview": "Nitaqat mandates minimum Saudization rates by sector and company size. Rates are increasing aggressively to 2028.",
+    "key_professions": [
+      {
+        "profession": "Accounting",
+        "current_rate": 40,
+        "target_2028": 70,
+        "source": "HRSD"
+      },
+      {
+        "profession": "Engineering",
+        "current_rate": 25,
+        "target_2028": 30,
+        "source": "HRSD"
+      },
+      {
+        "profession": "Pharmacy (retail)",
+        "current_rate": 65,
+        "target_2028": 65,
+        "source": "HRSD"
+      },
+      {
+        "profession": "IT/Telecom",
+        "current_rate": 50,
+        "target_2028": 60,
+        "source": "HRSD estimate"
+      },
+      {
+        "profession": "Finance/Banking",
+        "current_rate": 82,
+        "target_2028": 85,
+        "source": "SAMA/HRSD"
+      }
+    ],
+    "closed_to_expats": [
+      "Jewelry retail",
+      "Optical shops",
+      "Pharmacy retail (sales)",
+      "Hotel reception",
+      "Gold shops",
+      "Watch repair",
+      "Car rental counters",
+      "Tourism offices"
+    ],
+    "expat_double_risk_note": "Expat workers face DOUBLE risk: AI automation score + Saudization pressure. Example: expat accountant = high AI risk (94% Frey-Osborne) + high Nitaqat risk (40%→70% by 2028)."
+  },
+  "ecosystem": {
+    "sdaia": {
+      "employees": "5,001-10,000",
+      "programs": [
+        "ALLaM (LLM arabe, 500B tokens)",
+        "Tawakkalna (8.5M users)",
+        "Nafath (SSO national)",
+        "Ehsan (dons)"
+      ],
+      "training": "45,000+ professionals formed in AI",
+      "ai_specialists_growth": "+54%/year"
+    },
+    "humain": {
+      "investment": "$100B",
+      "infrastructure": "1.8 GW computing capacity target",
+      "entity_type": "PIF sovereign AI company"
+    },
+    "data_centers": {
+      "current_capacity_mw": 222,
+      "planned_addition_mw": 760,
+      "humain_target_mw": 1800,
+      "market_value_2025": "$1.61B",
+      "market_value_2031": "$8.11B",
+      "jobs_direct_2030": 6875,
+      "jobs_indirect_gov_digital": 26000,
+      "cagr": "31%"
+    },
+    "startups_ai": {
+      "total_ksa": 110,
+      "pct_mena": 34,
+      "funding_deep_tech": "$987M",
+      "target_2030": 300,
+      "notable": [
+        {
+          "name": "Lucidya",
+          "specialty": "Arabic NLP/CXM",
+          "employees": 252
+        },
+        {
+          "name": "Mozn",
+          "specialty": "AI RegTech (FOCAL/OSOS)",
+          "employees": null
+        },
+        {
+          "name": "Lean Technologies",
+          "specialty": "Open Banking APIs",
+          "employees": "133-200"
+        },
+        {
+          "name": "Foodics",
+          "specialty": "F&B predictive analytics",
+          "employees": null
+        },
+        {
+          "name": "Tamara",
+          "specialty": "BNPL AI credit scoring",
+          "employees": "430-1176"
+        }
+      ]
+    },
+    "stanford_ai_index_2025": {
+      "women_men_ratio_ai_publications": "#1 worldwide",
+      "ai_job_growth": "#3 worldwide",
+      "advanced_model_development": "#3-4 worldwide",
+      "talent_attractiveness": "#7-8 worldwide"
+    },
+    "ai_readiness": {
+      "tortoise_gari_2024": {
+        "rank": 31,
+        "score": 46.42
+      },
+      "oxford_insights_2024": {
+        "rank": 31,
+        "score": 68.54
+      },
+      "stanford_vibrancy_2024": {
+        "rank": 18,
+        "note": "in implementation sub-index"
+      }
+    },
+    "patents_ai": {
+      "2019": 39,
+      "2023": 195,
+      "growth": "5x in 4 years"
+    },
+    "publications_ai": {
+      "2023_count": 2000,
+      "cagr": "45%/year (2019-2023)",
+      "target": "Top 20 worldwide by 2030"
+    },
+    "digital_workforce": {
+      "total": 389000,
+      "pct_women": 35,
+      "vs_2018_women": 7,
+      "target_specialists_2030": 20000,
+      "target_workforce_trained_2030": "40% of workforce"
+    }
+  },
+  "salary_context": {
+    "saudi_avg_monthly": 10159,
+    "nonsaudi_avg_monthly": 4376,
+    "overall_avg_monthly": 5740,
+    "minimum_wage_saudi": 4000,
+    "source": "GASTAT Q3 2025 / Expatica 2024"
+  }
+}
