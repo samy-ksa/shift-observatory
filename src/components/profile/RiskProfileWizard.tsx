@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang, formatNumber } from "@/lib/i18n/context";
 import { scoreToCategory, riskBg, riskColor } from "@/lib/utils";
@@ -133,7 +133,7 @@ export default function RiskProfileWizard() {
 
   // Occupation search
   const [query, setQuery] = useState("");
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [showBrowseAll, setShowBrowseAll] = useState(false);
 
   // Email
   const [email, setEmail] = useState("");
@@ -142,17 +142,36 @@ export default function RiskProfileWizard() {
   // PDF
   const [pdfLoading, setPdfLoading] = useState(false);
 
-  const filteredOccupations = useMemo(() => {
+  /* ── Fuzzy matching: split input into words, score by matching word count ── */
+  const fuzzyMatches = useMemo(() => {
     if (!query.trim()) return [];
-    const q = query.toLowerCase();
-    return allOccupations
-      .filter(
-        (o) =>
-          o.name_en.toLowerCase().includes(q) ||
-          o.name_ar.includes(query)
-      )
-      .slice(0, 10);
+    const words = query.toLowerCase().split(/\s+/).filter((w) => w.length > 1);
+    if (words.length === 0) return [];
+
+    const scored = allOccupations.map((occ) => {
+      const nameEn = occ.name_en.toLowerCase();
+      const nameAr = occ.name_ar;
+      let matchCount = 0;
+      for (const word of words) {
+        if (nameEn.includes(word) || nameAr.includes(word)) {
+          matchCount++;
+        }
+      }
+      return { occ, matchCount };
+    });
+
+    return scored
+      .filter((s) => s.matchCount > 0)
+      .sort((a, b) => b.matchCount - a.matchCount || b.occ.composite - a.occ.composite)
+      .slice(0, 5)
+      .map((s) => s.occ);
   }, [query]);
+
+  const handleSelectOcc = useCallback((occ: Occupation) => {
+    setSelectedOcc(occ);
+    setQuery("");
+    setShowBrowseAll(false);
+  }, []);
 
   // Score computation
   const score = useMemo(() => {
@@ -415,7 +434,7 @@ export default function RiskProfileWizard() {
         )}
 
         <AnimatePresence mode="wait">
-          {/* ── Step 1: Occupation ── */}
+          {/* ── Step 1: Occupation (fuzzy free-text search) ── */}
           {step === 1 && (
             <motion.div
               key="step1"
@@ -426,68 +445,180 @@ export default function RiskProfileWizard() {
             >
               <h2 className="text-xl font-semibold text-white text-center">{p.step1}</h2>
 
-              <div className="relative">
-                <input
-                  type="text"
-                  value={query}
-                  onChange={(e) => {
-                    setQuery(e.target.value);
-                    setShowDropdown(true);
-                  }}
-                  onFocus={() => setShowDropdown(true)}
-                  placeholder={t.riskTool.placeholder}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-accent-primary focus:outline-none"
-                />
-
-                {showDropdown && filteredOccupations.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-1 bg-bg-card border border-white/10 rounded-xl max-h-60 overflow-y-auto z-30">
-                    {filteredOccupations.map((occ) => (
-                      <button
-                        key={occ.rank}
-                        onClick={() => {
-                          setSelectedOcc(occ);
-                          setQuery(lang === "ar" ? occ.name_ar : occ.name_en);
-                          setShowDropdown(false);
-                        }}
-                        className="w-full text-left px-4 py-3 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-                      >
-                        <div className="flex justify-between items-center">
-                          <span className="text-white text-sm">
-                            {lang === "ar" ? occ.name_ar : occ.name_en}
-                          </span>
-                          <span className={`text-xs font-mono ${riskBg(scoreToCategory(occ.composite))} px-2 py-0.5 rounded-full`}>
-                            {occ.composite}
-                          </span>
-                        </div>
-                        {lang !== "ar" && (
-                          <span className="text-xs text-text-muted">{occ.name_ar}</span>
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {selectedOcc && (
+              {/* ── Confirmed selection ── */}
+              {selectedOcc ? (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-bg-card border border-white/5 rounded-xl p-4"
+                  className="space-y-4"
                 >
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="text-white font-medium">
-                        {lang === "ar" ? selectedOcc.name_ar : selectedOcc.name_en}
+                  <div className="bg-bg-card border border-accent-primary/30 rounded-xl p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs text-accent-primary font-medium mb-1">
+                          {lang === "ar" ? "تم المطابقة مع:" : "Matched to:"}
+                        </p>
+                        <p className="text-white font-semibold text-lg leading-tight">
+                          {lang === "ar" ? selectedOcc.name_ar : selectedOcc.name_en}
+                        </p>
+                        <p className="text-text-muted text-sm mt-0.5">
+                          {lang === "ar" ? selectedOcc.name_en : selectedOcc.name_ar}
+                        </p>
                       </div>
-                      <div className="text-xs text-text-muted mt-1">
-                        {lang === "ar" ? selectedOcc.name_en : selectedOcc.name_ar}
+                      <div className="flex flex-col items-end gap-2 flex-shrink-0">
+                        <div className={`text-2xl font-mono font-bold ${riskBg(scoreToCategory(selectedOcc.composite))} px-3 py-1 rounded-lg`}>
+                          {selectedOcc.composite}
+                        </div>
+                        <button
+                          onClick={() => {
+                            setSelectedOcc(null);
+                            setQuery("");
+                          }}
+                          className="text-accent-primary text-xs hover:underline underline-offset-2"
+                        >
+                          {lang === "ar" ? "تغيير" : "Change"}
+                        </button>
                       </div>
-                    </div>
-                    <div className={`text-2xl font-mono font-bold ${riskBg(scoreToCategory(selectedOcc.composite))} px-3 py-1 rounded-lg`}>
-                      {selectedOcc.composite}
                     </div>
                   </div>
                 </motion.div>
+              ) : (
+                /* ── Search input + results ── */
+                <div className="space-y-4">
+                  {/* Search field */}
+                  <div>
+                    <div className="relative">
+                      <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <input
+                        type="text"
+                        value={query}
+                        onChange={(e) => {
+                          setQuery(e.target.value);
+                          setShowBrowseAll(false);
+                        }}
+                        placeholder={t.riskTool.placeholder}
+                        autoFocus
+                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-white placeholder-gray-500 focus:border-accent-primary focus:outline-none text-base"
+                      />
+                    </div>
+                    <p className="text-text-muted text-xs mt-2 text-center">
+                      {lang === "ar"
+                        ? "اكتب مسمى وظيفتك — سنجد أقرب تطابق من 146 مهنة مسجّلة"
+                        : "Type your job title — we'll find the closest match from 146 scored occupations"}
+                    </p>
+                  </div>
+
+                  {/* Fuzzy match results as clickable cards */}
+                  {query.trim().length > 1 && fuzzyMatches.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="space-y-2"
+                    >
+                      {fuzzyMatches.map((occ) => {
+                        const cat = scoreToCategory(occ.composite);
+                        return (
+                          <button
+                            key={occ.rank}
+                            onClick={() => handleSelectOcc(occ)}
+                            className="w-full text-left bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 hover:border-accent-primary/40 rounded-xl px-4 py-3 transition-all group"
+                          >
+                            <div className="flex items-center justify-between gap-3">
+                              <div className="flex-1 min-w-0">
+                                <p className="text-white text-sm font-medium truncate group-hover:text-accent-primary transition-colors">
+                                  {lang === "ar" ? occ.name_ar : occ.name_en}
+                                </p>
+                                <p className="text-text-muted text-xs truncate mt-0.5">
+                                  {lang === "ar" ? occ.name_en : occ.name_ar}
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2 flex-shrink-0">
+                                <span className={`text-sm font-mono font-bold ${riskBg(cat)} px-2.5 py-1 rounded-lg`}>
+                                  {occ.composite}
+                                </span>
+                                <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${riskBg(cat)}`}>
+                                  {(() => {
+                                    const m: Record<string, string> = lang === "ar"
+                                      ? { very_low: "منخفض جداً", low: "منخفض", moderate: "متوسط", high: "مرتفع", very_high: "مرتفع جداً" }
+                                      : { very_low: "Very Low", low: "Low", moderate: "Moderate", high: "High", very_high: "Very High" };
+                                    return m[cat] || cat;
+                                  })()}
+                                </span>
+                              </div>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+
+                  {/* No matches found */}
+                  {query.trim().length > 2 && fuzzyMatches.length === 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-white/[0.03] border border-white/10 rounded-xl p-5 text-center space-y-3"
+                    >
+                      <p className="text-text-secondary text-sm">
+                        {lang === "ar"
+                          ? "لم يتم العثور على تطابق. جرّب مصطلحات أوسع مثل \"تسويق\" أو \"مهندس\" أو \"سائق\" أو \"محاسبة\"."
+                          : 'No exact match found. Try broader terms like "marketing", "engineer", "driver", or "accounting".'}
+                      </p>
+                      <button
+                        onClick={() => setShowBrowseAll(true)}
+                        className="text-accent-primary text-sm font-medium hover:underline underline-offset-2"
+                      >
+                        {lang === "ar"
+                          ? "تصفح جميع المهن الـ 146 ←"
+                          : "Browse all 146 occupations →"}
+                      </button>
+                    </motion.div>
+                  )}
+
+                  {/* Browse all panel */}
+                  {showBrowseAll && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      className="bg-bg-card border border-white/10 rounded-xl overflow-hidden"
+                    >
+                      <div className="px-4 py-2.5 border-b border-white/5 flex justify-between items-center">
+                        <span className="text-xs text-text-muted font-medium">
+                          {lang === "ar" ? "جميع المهن (146)" : "All occupations (146)"}
+                        </span>
+                        <button
+                          onClick={() => setShowBrowseAll(false)}
+                          className="text-text-muted hover:text-white text-xs"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                      <div className="max-h-72 overflow-y-auto divide-y divide-white/5">
+                        {allOccupations.map((occ) => (
+                          <button
+                            key={occ.rank}
+                            onClick={() => handleSelectOcc(occ)}
+                            className="w-full text-left px-4 py-2.5 hover:bg-white/5 transition-colors flex items-center justify-between gap-2"
+                          >
+                            <div className="min-w-0 flex-1">
+                              <span className="text-white text-sm truncate block">
+                                {lang === "ar" ? occ.name_ar : occ.name_en}
+                              </span>
+                              <span className="text-text-muted text-xs truncate block">
+                                {lang === "ar" ? occ.name_en : occ.name_ar}
+                              </span>
+                            </div>
+                            <span className={`text-xs font-mono font-bold flex-shrink-0 ${riskBg(scoreToCategory(occ.composite))} px-2 py-0.5 rounded-md`}>
+                              {occ.composite}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
               )}
             </motion.div>
           )}
@@ -755,25 +886,45 @@ export default function RiskProfileWizard() {
               <div className="bg-bg-card border border-white/5 rounded-xl p-4">
                 <h3 className="text-sm font-semibold text-white mb-3">{p.emailCta}</h3>
                 {emailStatus === "success" ? (
-                  <div className="text-emerald-400 text-sm py-2">{t.email.success}</div>
-                ) : (
-                  <div className="flex gap-2">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder={t.email.placeholder}
-                      className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:border-accent-primary focus:outline-none"
-                      onKeyDown={(e) => e.key === "Enter" && handleEmailSubmit()}
-                    />
-                    <button
-                      onClick={handleEmailSubmit}
-                      disabled={emailStatus === "loading"}
-                      className="bg-accent-primary hover:bg-accent-primary/80 text-black font-semibold px-4 py-2 rounded-lg text-sm transition-colors disabled:opacity-50"
-                    >
-                      {emailStatus === "loading" ? "..." : p.send}
-                    </button>
+                  <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm py-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {t.email.success}
                   </div>
+                ) : (
+                  <>
+                    <div className="flex gap-2">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (emailStatus === "error") setEmailStatus("idle");
+                        }}
+                        placeholder={t.email.placeholder}
+                        className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:border-accent-primary focus:outline-none"
+                        onKeyDown={(e) => e.key === "Enter" && handleEmailSubmit()}
+                      />
+                      <button
+                        onClick={handleEmailSubmit}
+                        disabled={emailStatus === "loading"}
+                        className="bg-accent-primary hover:bg-accent-primary/80 text-black font-semibold px-4 py-2 rounded-lg text-sm transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
+                      >
+                        {emailStatus === "loading" ? (
+                          <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                          </svg>
+                        ) : (
+                          p.send
+                        )}
+                      </button>
+                    </div>
+                    {emailStatus === "error" && (
+                      <p className="text-red-400 text-xs mt-2">{t.email.error}</p>
+                    )}
+                  </>
                 )}
               </div>
 

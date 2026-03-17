@@ -253,7 +253,7 @@ export default function ShiftPulse() {
                         </span>
                         <span className="text-text-muted text-xs">{t.pulse.jobs}</span>
                         {item.jobs_cut_estimated && (
-                          <span className="text-xs text-text-muted">*est.</span>
+                          <span className="text-xs text-text-muted">{t.pulse.estimated}</span>
                         )}
                         <span className="text-xs bg-bg-secondary px-2 py-0.5 rounded text-text-muted">
                           {item.sector}
@@ -304,7 +304,15 @@ export default function ShiftPulse() {
                           </h4>
                         </div>
                         <span className="text-xs bg-accent-gold/20 text-accent-gold px-2 py-0.5 rounded-full font-medium">
-                          {item.event_type.replace(/_/g, " ")}
+                          {(() => {
+                            const eventMap: Record<string, string> = {
+                              layoff: t.pulse.eventLayoff,
+                              automation_deployment: t.pulse.eventAutomation,
+                              ai_replacement: t.pulse.eventAiReplacement,
+                              restructuring: t.pulse.eventRestructuring,
+                            };
+                            return eventMap[item.event_type] || item.event_type.replace(/_/g, " ");
+                          })()}
                         </span>
                       </div>
                       {item.jobs_affected > 0 && (
@@ -357,7 +365,7 @@ export default function ShiftPulse() {
                         <h4 className="font-semibold text-text-primary flex-1">
                           {item.title}
                         </h4>
-                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ml-2 ${policyTypeColor(item.type)}`}>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${lang === "ar" ? "mr-2" : "ml-2"} ${policyTypeColor(item.type)}`}>
                           {item.type.toUpperCase()}
                         </span>
                       </div>
@@ -368,7 +376,7 @@ export default function ShiftPulse() {
                         <span>{item.source}</span>
                         <span>
                           {item.effective_date
-                            ? `Effective: ${item.effective_date}`
+                            ? `${t.pulse.effectiveDate}: ${item.effective_date}`
                             : item.date_announced}
                         </span>
                       </div>
@@ -404,12 +412,12 @@ export default function ShiftPulse() {
                         <h4 className="font-semibold text-text-primary flex-1">
                           {item.headline}
                         </h4>
-                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ml-2 whitespace-nowrap ${relevanceColor(item.relevance_to_ksa)}`}>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${lang === "ar" ? "mr-2" : "ml-2"} whitespace-nowrap ${relevanceColor(item.relevance_to_ksa)}`}>
                           {item.relevance_to_ksa === "direct"
-                            ? "KSA Direct"
+                            ? t.pulse.relevanceDirect
                             : item.relevance_to_ksa === "indirect"
-                              ? "Indirect"
-                              : "Contextual"}
+                              ? t.pulse.relevanceIndirect
+                              : t.pulse.relevanceContextual}
                         </span>
                       </div>
                       <p className="text-sm text-text-secondary mb-3">

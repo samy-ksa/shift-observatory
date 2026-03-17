@@ -180,6 +180,9 @@ export interface LayoffStrings {
   };
   confirmed: string;
   probable: string;
+  suspected: string;
+  jobsLabel: string;
+  postHolidayLull: string;
   stats: {
     total: string;
     biggest: string;
@@ -258,6 +261,7 @@ export interface EmailStrings {
   placeholder: string;
   button: string;
   success: string;
+  error: string;
   privacy: string;
 }
 
@@ -291,6 +295,15 @@ export interface PulseStrings {
   contributing: string;
   suspected: string;
   jobs: string;
+  estimated: string;
+  effectiveDate: string;
+  relevanceDirect: string;
+  relevanceIndirect: string;
+  relevanceContextual: string;
+  eventLayoff: string;
+  eventAutomation: string;
+  eventAiReplacement: string;
+  eventRestructuring: string;
   trendUp: string;
   trendDown: string;
   trendStable: string;
@@ -367,6 +380,28 @@ export interface CareerStrings {
   skillsRequired: string;
 }
 
+export interface TreemapStrings {
+  title: string;
+  subtitle: string;
+  totalWorkforce: string;
+  avgExposure: string;
+  byExposureTier: string;
+  byPayBand: string;
+  byEducation: string;
+  wagesExposed: string;
+  workers: string;
+  salary: string;
+  education: string;
+  saudiPct: string;
+  lowExposure: string;
+  highExposure: string;
+  everyone: string;
+  saudiOnly: string;
+  expatOnly: string;
+  mapView: string;
+  listView: string;
+}
+
 export interface Dictionary {
   nav: NavStrings;
   hero: HeroStrings;
@@ -387,4 +422,5 @@ export interface Dictionary {
   footer: FooterStrings;
   profile: ProfileStrings;
   career: CareerStrings;
+  treemap: TreemapStrings;
 }

@@ -1,7 +1,7 @@
 import CareerCTA from "@/components/career/CareerCTA";
 import HeroCounter from "@/components/hero/HeroCounter";
 import KSAMapSection from "@/components/risk-map/KSAMapSection";
-import SectorGrid from "@/components/sectors/SectorGrid";
+import AIExposureTreemap from "@/components/treemap/AIExposureTreemap";
 import RiskCalculator from "@/components/occupations/RiskCalculator";
 import EmployerTable from "@/components/employers/EmployerTable";
 import LayoffsTicker from "@/components/layoffs/LayoffsTicker";
@@ -16,6 +16,7 @@ import StickyNav from "@/components/nav/StickyNav";
 import EmailCapture from "@/components/EmailCapture";
 import LangToggle from "@/components/ui/LangToggle";
 import Footer from "@/components/footer/Footer";
+import AboutAuthor from "@/components/footer/AboutAuthor";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
       <KSAMapSection />
 
       {/* Section 4: Sector Analysis */}
-      <SectorGrid />
+      <AIExposureTreemap />
       <div className="section-divider" />
 
       {/* Section 5: Nitaqat & Saudization */}
@@ -74,6 +75,9 @@ export default function Home() {
 
       {/* Section 10: Methodology & About */}
       <MethodologyAccordion />
+
+      {/* About the Author */}
+      <AboutAuthor />
 
       {/* Footer */}
       <Footer />

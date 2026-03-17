@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n/context";
+import CookieConsent from "@/components/legal/CookieConsent";
 
 const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
@@ -73,7 +74,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth`}>
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen">
-        <LangProvider>{children}</LangProvider>
+        <LangProvider>
+          {children}
+          <CookieConsent />
+        </LangProvider>
       </body>
     </html>
   );

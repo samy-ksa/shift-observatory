@@ -142,20 +142,20 @@ function AiRoleBadge({ role, t }: { role: "direct" | "contributing" | "suspected
   const config = {
     direct: { label: t.layoffs.confirmed, className: "bg-red-500/20 text-red-400 border border-red-800/30" },
     contributing: { label: t.layoffs.probable, className: "bg-amber-500/20 text-amber-400 border border-amber-800/30" },
-    suspected: { label: "Suspected", className: "bg-gray-500/20 text-gray-400 border border-gray-800/30" },
+    suspected: { label: t.layoffs.suspected, className: "bg-gray-500/20 text-gray-400 border border-gray-800/30" },
   };
   const c = config[role];
   return <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${c.className}`}>{c.label}</span>;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label, lang, jobsLabel }: any) => {
   if (!active || !payload?.length) return null;
   return (
     <div className="bg-bg-card border border-white/10 rounded-lg p-3 shadow-xl">
       <p className="text-sm font-semibold text-text-primary mb-1">{label}</p>
       <p className="text-sm font-mono text-text-secondary">
-        {payload[0].value.toLocaleString("en-US")} layoffs
+        {payload[0].value.toLocaleString(lang === "ar" ? "ar-SA" : "en-US")} {jobsLabel}
       </p>
     </div>
   );
@@ -296,13 +296,13 @@ export default function LayoffsSection() {
                     v >= 1000 ? (v / 1000).toFixed(0) + "K" : v
                   }
                 />
-                <Tooltip content={<CustomTooltip />} />
+                <Tooltip content={<CustomTooltip lang={lang} jobsLabel={t.layoffs.jobsLabel} />} />
                 <ReferenceLine
                   x="Jan '25"
                   stroke="#374151"
                   strokeDasharray="3 3"
                   label={{
-                    value: "Post-holiday lull",
+                    value: t.layoffs.postHolidayLull,
                     position: "bottom",
                     fill: "#6B7280",
                     fontSize: 10,
@@ -350,7 +350,7 @@ export default function LayoffsSection() {
                 onClick={() => setCaseTab(tab)}
               >
                 {tabLabels[tab]}
-                <span className="ml-2 text-xs text-text-muted/50">
+                <span className={`${lang === "ar" ? "mr-2" : "ml-2"} text-xs text-text-muted/50`}>
                   ({tabCounts[tab]})
                 </span>
               </button>

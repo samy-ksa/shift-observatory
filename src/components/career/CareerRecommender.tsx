@@ -138,7 +138,7 @@ function OccupationPicker({
                       {lang === "ar" ? occ.name_ar : occ.name_en}
                     </span>
                     {occ.emerging && (
-                      <span className="ml-2 text-[10px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded-full font-semibold">
+                      <span className={`${lang === "ar" ? "mr-2" : "ml-2"} text-[10px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded-full font-semibold`}>
                         NEW
                       </span>
                     )}
@@ -242,6 +242,8 @@ export default function CareerRecommender() {
   const [sortBy, setSortBy] = useState<SortMode>("best_match");
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
   const [pdfLoading, setPdfLoading] = useState(false);
+  const [careerEmail, setCareerEmail] = useState("");
+  const [careerEmailStatus, setCareerEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   // Initialize from URL params
   useEffect(() => {
@@ -626,36 +628,85 @@ export default function CareerRecommender() {
                   {/* Email CTA */}
                   <div className="bg-bg-card border border-accent-primary/20 rounded-xl p-4 text-center">
                     <p className="text-sm text-text-secondary mb-3">{c.emailCta}</p>
-                    <form
-                      onSubmit={async (e) => {
-                        e.preventDefault();
-                        const form = e.target as HTMLFormElement;
-                        const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-                        try {
-                          await fetch("/api/subscribe", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ email, source: "career_transition" }),
-                          });
-                          form.reset();
-                        } catch {}
-                      }}
-                      className="flex gap-2 max-w-md mx-auto"
-                    >
-                      <input
-                        name="email"
-                        type="email"
-                        required
-                        placeholder={t.email.placeholder}
-                        className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-primary"
-                      />
-                      <button
-                        type="submit"
-                        className="bg-accent-primary text-bg-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-accent-primary/90 transition-colors"
-                      >
-                        {c.sendPlan}
-                      </button>
-                    </form>
+                    {careerEmailStatus === "success" ? (
+                      <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm py-2">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {t.email.success}
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex gap-2 max-w-md mx-auto">
+                          <input
+                            type="email"
+                            value={careerEmail}
+                            onChange={(e) => {
+                              setCareerEmail(e.target.value);
+                              if (careerEmailStatus === "error") setCareerEmailStatus("idle");
+                            }}
+                            placeholder={t.email.placeholder}
+                            className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-primary"
+                            onKeyDown={async (e) => {
+                              if (e.key === "Enter") {
+                                e.preventDefault();
+                                if (!careerEmail || !careerEmail.includes("@")) return;
+                                setCareerEmailStatus("loading");
+                                try {
+                                  const res = await fetch("/api/subscribe", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({
+                                      email: careerEmail,
+                                      occupation: selected?.name_en || "",
+                                      score: selected?.composite || 0,
+                                      source: "career",
+                                    }),
+                                  });
+                                  if (res.ok) { setCareerEmailStatus("success"); setCareerEmail(""); }
+                                  else setCareerEmailStatus("error");
+                                } catch { setCareerEmailStatus("error"); }
+                              }
+                            }}
+                          />
+                          <button
+                            type="button"
+                            disabled={careerEmailStatus === "loading"}
+                            onClick={async () => {
+                              if (!careerEmail || !careerEmail.includes("@")) return;
+                              setCareerEmailStatus("loading");
+                              try {
+                                const res = await fetch("/api/subscribe", {
+                                  method: "POST",
+                                  headers: { "Content-Type": "application/json" },
+                                  body: JSON.stringify({
+                                    email: careerEmail,
+                                    occupation: selected?.name_en || "",
+                                    score: selected?.composite || 0,
+                                    source: "career",
+                                  }),
+                                });
+                                if (res.ok) { setCareerEmailStatus("success"); setCareerEmail(""); }
+                                else setCareerEmailStatus("error");
+                              } catch { setCareerEmailStatus("error"); }
+                            }}
+                            className="bg-accent-primary text-bg-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-accent-primary/90 transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
+                          >
+                            {careerEmailStatus === "loading" ? (
+                              <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                              </svg>
+                            ) : (
+                              c.sendPlan
+                            )}
+                          </button>
+                        </div>
+                        {careerEmailStatus === "error" && (
+                          <p className="text-red-400 text-xs mt-2">{t.email.error}</p>
+                        )}
+                      </>
+                    )}
                   </div>
 
                   {/* Share + PDF */}

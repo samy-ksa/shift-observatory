@@ -84,7 +84,7 @@ export default function ParadoxChart() {
       <div className="bg-bg-card border border-white/10 rounded-lg p-3 shadow-xl">
         <p className="text-sm font-semibold text-text-primary mb-1">{label}</p>
         <p className="text-sm font-mono text-accent-gold">
-          +{formatNumber(payload[0].value, lang)} jobs
+          +{formatNumber(payload[0].value, lang)} {t.pulse.jobs}
         </p>
         {item && (
           <p className="text-xs text-text-muted mt-1">

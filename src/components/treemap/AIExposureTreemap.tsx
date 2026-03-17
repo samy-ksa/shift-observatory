@@ -37,7 +37,7 @@ export default function AIExposureTreemap() {
   );
 
   return (
-    <section id="sectors" className="py-16 px-4 md:px-8 max-w-[1800px] mx-auto">
+    <section id="sectors" className="pt-16 pb-20 px-4 md:px-8 max-w-[1800px] mx-auto" dir={lang === "ar" ? "rtl" : "ltr"}>
       <SectionHeader
         title={t.treemap.title}
         subtitle={t.treemap.subtitle}
@@ -81,7 +81,7 @@ export default function AIExposureTreemap() {
           </div>
 
           {/* Desktop: always treemap. Mobile: toggle */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block overflow-hidden">
             <motion.div
               key={filter}
               initial={{ opacity: 0.6 }}
@@ -93,7 +93,7 @@ export default function AIExposureTreemap() {
           </div>
 
           {/* Mobile view */}
-          <div className="lg:hidden">
+          <div className="lg:hidden overflow-hidden">
             {mobileView === "map" ? (
               <motion.div
                 key={`mobile-map-${filter}`}

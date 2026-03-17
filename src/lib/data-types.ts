@@ -35,6 +35,10 @@ export interface Occupation {
   skills_required?: string[];
   description_en?: string;
   description_ar?: string;
+  /* Treemap employment data (GASTAT/GOSI estimates) */
+  employment_est?: number;
+  sector_id?: string;
+  employment_saudi_pct?: number;
 }
 
 export interface TaweenDecision {

@@ -231,7 +231,7 @@ export default function EmployerTable() {
 
   const SortIcon = ({ active, asc }: { active: boolean; asc: boolean }) => (
     <span
-      className={`ml-1 ${active ? "text-accent-primary" : "text-text-muted/30"}`}
+      className={`${lang === "ar" ? "mr-1" : "ml-1"} ${active ? "text-accent-primary" : "text-text-muted/30"}`}
     >
       {active ? (asc ? "\u25B2" : "\u25BC") : "\u25B4"}
     </span>
@@ -298,7 +298,7 @@ export default function EmployerTable() {
                   ].map((col, i) => (
                     <th
                       key={i}
-                      className={`text-left px-4 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider cursor-pointer hover:text-text-secondary transition-colors ${col.width}`}
+                      className={`${lang === "ar" ? "text-right" : "text-left"} px-4 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider cursor-pointer hover:text-text-secondary transition-colors ${col.width}`}
                       onClick={() =>
                         i !== 2 ? handleSort(col.key) : undefined
                       }
