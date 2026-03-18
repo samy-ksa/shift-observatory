@@ -86,6 +86,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    other: {
+      "msvalidate.01": ["D019A5F91131CCB7B436CFF1C9BF1A32"],
+    },
+  },
 };
 
 const jsonLd = {

@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
-
 Disallow: /api/
 Allow: /api/og
 Allow: /api/v1/
+Allow: /api/sitemap
 
 User-agent: GPTBot
 Allow: /
