@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@page {
+    size: A4;
+    margin: 25mm 20mm;
+    @bottom-center {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 7pt;
+        color: #9CA3AF;
+        content: "SHIFT Observatory  |  Q1 2026  |  Page " counter(page) " of 12";
+    }
+}
+
+@page :first {
+    @bottom-center { content: none; }
+    margin: 0;
+}
+
+@page cover {
+    margin: 0;
+    @bottom-center { content: none; }
+}
+
+@page dark {
+    background: #0A0E17;
+    @bottom-center {
+        color: #4B5563;
+        content: "SHIFT Observatory  |  Q1 2026  |  Page " counter(page) " of 12";
+    }
+}
+
+@page back {
+    margin: 0;
+    @bottom-center { content: none; }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ── Page containers ── */
+.page {
+    page-break-before: always;
+    min-height: 100%;
+    padding: 0;
+}
+.page:first-child { page-break-before: avoid; }
+
+.page-dark {
+    page: dark;
+    background: #0A0E17;
+    color: #FFFFFF;
+    padding: 25mm 20mm;
+}
+
+.page-white {
+    background: #FFFFFF;
+    color: #111827;
+}
+
+.page-cover {
+    page: cover;
+    background: #0A0E17;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 297mm;
+    padding: 40mm 30mm;
+    text-align: center;
+}
+
+.page-back {
+    page: back;
+    background: #0A0E17;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 297mm;
+    padding: 40mm 30mm;
+    text-align: center;
+}
+
+/* ── Typography ── */
+.section-title {
+    font-size: 14pt;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 4pt;
+}
+
+.section-subtitle {
+    font-size: 9pt;
+    color: #6B7280;
+    margin-bottom: 20pt;
+}
+
+.section-subtitle-dark {
+    font-size: 9pt;
+    color: #9CA3AF;
+    margin-bottom: 20pt;
+}
+
+.cyan { color: #22D3EE; }
+.gray-400 { color: #9CA3AF; }
+.gray-500 { color: #6B7280; }
+.gray-600 { color: #4B5563; }
+
+/* ── KPI Grid ── */
+.kpi-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16pt;
+    margin-top: 24pt;
+}
+.kpi-box {
+    flex: 1 1 30%;
+    min-width: 140pt;
+    border: 1px solid #1F2937;
+    border-radius: 6pt;
+    padding: 16pt;
+}
+.kpi-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 6pt;
+}
+.kpi-label {
+    font-size: 8pt;
+    color: #9CA3AF;
+    line-height: 1.3;
+}
+
+/* ── Tables ── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+    margin-top: 10pt;
+}
+table th {
+    background: #0A0E17;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8pt 10pt;
+    text-align: left;
+    font-size: 7.5pt;
+}
+table td {
+    padding: 7pt 10pt;
+    border-bottom: 1px solid #E5E7EB;
+    vertical-align: middle;
+}
+table tr:nth-child(even) td { background: #F9FAFB; }
+table tr:nth-child(odd) td { background: #FFFFFF; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+/* Dark table variant */
+.table-dark th {
+    background: #111827;
+    border-bottom: 1px solid #374151;
+}
+.table-dark td {
+    border-bottom: 1px solid #1F2937;
+    color: #E5E7EB;
+}
+.table-dark tr:nth-child(even) td { background: #0F1629; }
+.table-dark tr:nth-child(odd) td { background: #0A0E17; }
+
+/* ── Score dot ── */
+.score-dot {
+    display: inline-block;
+    width: 8pt;
+    height: 8pt;
+    border-radius: 50%;
+    margin-right: 5pt;
+    vertical-align: middle;
+}
+
+/* ── Bars ── */
+.bar-container {
+    margin-bottom: 8pt;
+}
+.bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5pt;
+}
+.bar-label {
+    width: 200pt;
+    font-size: 8pt;
+    color: #374151;
+    text-align: right;
+    padding-right: 10pt;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.bar-track {
+    flex: 1;
+    height: 16pt;
+    background: #F3F4F6;
+    border-radius: 3pt;
+    position: relative;
+}
+.bar-fill {
+    height: 100%;
+    border-radius: 3pt;
+    min-width: 2pt;
+}
+.bar-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8pt;
+    font-weight: 600;
+    width: 36pt;
+    text-align: right;
+    padding-left: 6pt;
+}
+
+/* ── Callout ── */
+.callout {
+    border-left: 3pt solid #22D3EE;
+    background: #F0FDFA;
+    padding: 12pt 16pt;
+    margin-top: 16pt;
+    font-size: 8.5pt;
+    line-height: 1.5;
+}
+.callout-dark {
+    border-left: 3pt solid #22D3EE;
+    background: #0F1629;
+    padding: 12pt 16pt;
+    margin-top: 16pt;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: #D1D5DB;
+}
+.callout strong { color: #22D3EE; }
+
+/* ── Badge ── */
+.badge {
+    display: inline-block;
+    font-size: 7pt;
+    font-weight: 600;
+    padding: 2pt 6pt;
+    border-radius: 3pt;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.badge-red { color: #DC2626; border: 1px solid #DC2626; }
+.badge-orange { color: #D97706; border: 1px solid #D97706; }
+.badge-gray { color: #6B7280; border: 1px solid #6B7280; }
+
+/* ── Two-column ── */
+.two-col {
+    display: flex;
+    gap: 20pt;
+}
+.two-col > div { flex: 1; }
+
+/* ── Transition card ── */
+.transition-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 6pt;
+    padding: 14pt;
+    margin-bottom: 12pt;
+}
+.transition-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    color: #22D3EE;
+    font-size: 14pt;
+    margin: 0 8pt;
+}
+.transition-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 10pt;
+    padding: 2pt 6pt;
+    border-radius: 3pt;
+    color: #fff;
+}
+
+/* ── VS block ── */
+.vs-grid {
+    display: flex;
+    gap: 0;
+    margin-top: 16pt;
+}
+.vs-col {
+    flex: 1;
+    padding: 14pt;
+}
+.vs-col:first-child { border-right: 2pt solid #374151; }
+.vs-col h4 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10pt;
+}
+.vs-col ul {
+    list-style: none;
+    padding: 0;
+}
+.vs-col li {
+    font-size: 8.5pt;
+    padding: 4pt 0;
+    border-bottom: 1px solid #E5E7EB;
+    color: #374151;
+}
+.vs-col li::before {
+    content: "\2022 ";
+    margin-right: 4pt;
+}
+
+/* ── Methodology table ── */
+.meth-table td:first-child {
+    font-weight: 600;
+    width: 140pt;
+    white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 1 — COVER
+     ════════════════════════════════════════════════════════ -->
+<div class="page-cover">
+    <div style="margin-bottom:80pt">
+        <div style="font-size:16pt;letter-spacing:0.3em;font-weight:700">
+            <span class="cyan">SHIFT</span>
+            <span class="gray-500" style="margin-left:8pt">OBSERVATORY</span>
+        </div>
+    </div>
+    <div style="margin-bottom:24pt">
+        <div style="font-size:32pt;font-weight:700;letter-spacing:0.02em;line-height:1.15">
+            THE AI DISRUPTION<br>INDEX
+        </div>
+    </div>
+    <div style="font-size:11pt;color:#9CA3AF;margin-bottom:16pt">
+        Saudi Arabia Labor Market Intelligence Report
+    </div>
+    <div style="font-size:10pt;color:#22D3EE;letter-spacing:0.1em;margin-bottom:60pt">
+        Q1 2026 &mdash; January to March
+    </div>
+    <div style="font-size:8pt;color:#6B7280;line-height:1.6;max-width:350pt">
+        Based on GOSI, WEF, HRSD, McKinsey, and academic research
+    </div>
+    <div style="position:absolute;bottom:30mm;font-size:7.5pt;color:#4B5563;letter-spacing:0.08em">
+        ksashiftobservatory.online
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 2 — AT A GLANCE (dark)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-dark">
+    <div class="section-title cyan">AT A GLANCE</div>
+    <div class="section-subtitle-dark">Key figures shaping Saudi Arabia's AI workforce landscape</div>
+
+    <div class="kpi-grid">
+        <div class="kpi-box">
+            <div class="kpi-number">9,444,691</div>
+            <div class="kpi-label">Expat workers in Saudi Arabia<br>(GOSI Q4-2024)</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-number">146</div>
+            <div class="kpi-label">Occupations scored on AI<br>automation risk</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-number">118,500</div>
+            <div class="kpi-label">Global tech layoffs in 2025<br>(layoffs.fyi)</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-number">54,836</div>
+            <div class="kpi-label">AI-cited job cuts in the US<br>(Challenger 2025)</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-number">34,650</div>
+            <div class="kpi-label">Tech layoffs 2026 YTD<br>(48 companies)</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-number">100</div>
+            <div class="kpi-label">Professions reserved<br>exclusively for Saudis</div>
+        </div>
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 3 — EXECUTIVE SUMMARY (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">EXECUTIVE SUMMARY</div>
+    <div class="section-subtitle">Q1 2026 &mdash; Saudi Arabia AI Labor Market Intelligence</div>
+
+    <p style="margin-bottom:10pt;text-align:justify">
+        Saudi Arabia's labor market sits at the intersection of two powerful and potentially contradictory forces. On one side, Vision 2030 drives aggressive nationalization of the workforce through Saudization quotas, Nitaqat band enforcement, and an expanding list of reserved professions. On the other, the Kingdom has positioned itself as the #1 country globally in AI adoption (Kiteworks Global AI Adoption Index, 2025), with sovereign AI investments exceeding $40 billion through PIF, HUMAIN, and partnerships with Qualcomm, NVIDIA, and others.
+    </p>
+    <p style="margin-bottom:10pt;text-align:justify">
+        This creates what we call the <strong>V2030 Paradox</strong>: the same technologies the Kingdom is championing will automate significant portions of the jobs it is simultaneously trying to nationalize. Our analysis of 146 occupations reveals that 60 face high or very high automation risk (composite score &gt;45/100), representing approximately 1,421,315 expat positions and an estimated 1,432,885 Saudi positions.
+    </p>
+    <p style="margin-bottom:10pt;text-align:justify">
+        Globally, the pace of AI-driven workforce disruption accelerated dramatically in Q1 2026. Block Inc. became the first S&amp;P 500 company to explicitly halve its workforce citing AI, with CEO Jack Dorsey stating that &ldquo;intelligence tools have changed what it means to build a company.&rdquo; This follows 118,500 tech layoffs in 2025, of which 54,836 were explicitly AI-cited in the US alone.
+    </p>
+    <p style="margin-bottom:10pt;text-align:justify">
+        For professionals working in Saudi Arabia &mdash; both Saudi nationals navigating Saudization requirements and expatriates facing dual pressure from AI and regulatory displacement &mdash; the question is no longer whether disruption is coming, but how fast and in which sectors first.
+    </p>
+
+    <div class="callout">
+        <strong>KEY INSIGHT:</strong> 60 of 146 occupations scored above our high-risk threshold (45/100). The sectors most exposed are Administrative & Support Services (72/100), Financial & Insurance Activities (62/100), and Wholesale & Retail Trade (55/100).
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 4 — TOP 10 HIGHEST RISK (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">HIGHEST AI AUTOMATION RISK</div>
+    <div class="section-subtitle">Top 10 occupations by composite risk score &mdash; Q1 2026</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="text-center" style="width:36pt">RANK</th>
+                <th>OCCUPATION</th>
+                <th class="text-right" style="width:60pt">SCORE</th>
+                <th class="text-right" style="width:72pt">WORKFORCE</th>
+                <th style="width:90pt">CATEGORY</th>
+                <th style="width:80pt">WEF TREND</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td class="text-center mono" style="font-weight:600">1</td>
+            <td style="font-weight:500">Data Entry Keyers</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>94.9</td>
+            <td class="text-right mono">65,000</td>
+            <td>Substitution</td>
+            <td>Rapid Decline</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">2</td>
+            <td style="font-weight:500">Technical Writers</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>93.2</td>
+            <td class="text-right mono">3,800</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">3</td>
+            <td style="font-weight:500">Tax Preparers</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>93.1</td>
+            <td class="text-right mono">9,200</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">4</td>
+            <td style="font-weight:500">Telemarketers</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>92.4</td>
+            <td class="text-right mono">14,500</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">5</td>
+            <td style="font-weight:500">Legal Secretaries</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>91.5</td>
+            <td class="text-right mono">5,800</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">6</td>
+            <td style="font-weight:500">Proofreaders</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>91.4</td>
+            <td class="text-right mono">2,400</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">7</td>
+            <td style="font-weight:500">Accountants & Auditors</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>88.2</td>
+            <td class="text-right mono">95,000</td>
+            <td>Substitution Partial</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">8</td>
+            <td style="font-weight:500">Payroll Clerks</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>87.7</td>
+            <td class="text-right mono">28,000</td>
+            <td>Substitution</td>
+            <td>Declining</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">9</td>
+            <td style="font-weight:500">Administrative Assistants</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>85.2</td>
+            <td class="text-right mono">145,000</td>
+            <td>Substitution</td>
+            <td>Rapid Decline</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">10</td>
+            <td style="font-weight:500">Call Center Agent</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#DC2626"></span>85.0</td>
+            <td class="text-right mono">42,000</td>
+            <td>Substitution</td>
+            <td>Rapid Decline</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p style="margin-top:14pt;font-size:8.5pt;color:#374151;line-height:1.5">
+        Data Entry Keyers lead with 94.9/100, representing approximately 65,000 workers in Saudi Arabia. The top 10 most exposed roles collectively employ over 410,700 workers, predominantly expats in administrative and financial services.
+    </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 5 — TOP 10 SAFEST (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">LOWEST AI AUTOMATION RISK</div>
+    <div class="section-subtitle">Top 10 occupations by composite risk score (ascending) &mdash; Q1 2026</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="text-center" style="width:36pt">RANK</th>
+                <th>OCCUPATION</th>
+                <th class="text-right" style="width:60pt">SCORE</th>
+                <th class="text-right" style="width:72pt">WORKFORCE</th>
+                <th style="width:90pt">CATEGORY</th>
+                <th style="width:80pt">WEF TREND</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td class="text-center mono" style="font-weight:600">1</td>
+            <td style="font-weight:500">Imam/Religious Leader</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>5.0</td>
+            <td class="text-right mono">42,000</td>
+            <td>Augmentation</td>
+            <td>Stable</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">2</td>
+            <td style="font-weight:500">Social Workers</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>11.8</td>
+            <td class="text-right mono">26,500</td>
+            <td>Augmentation</td>
+            <td>—</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">3</td>
+            <td style="font-weight:500">Personal Trainer (Gym)</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>12.0</td>
+            <td class="text-right mono">22,000</td>
+            <td>Augmentation</td>
+            <td>Rapid Growth</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">4</td>
+            <td style="font-weight:500">AI Ethics & Governance Specialist</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>12.0</td>
+            <td class="text-right mono">450</td>
+            <td>Augmentation</td>
+            <td>Rapid Growth</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">5</td>
+            <td style="font-weight:500">Renewable Energy Technician</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>12.0</td>
+            <td class="text-right mono">6,500</td>
+            <td>Augmentation</td>
+            <td>Rapid Growth</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">6</td>
+            <td style="font-weight:500">Dentists</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>13.4</td>
+            <td class="text-right mono">33,751</td>
+            <td>Augmentation</td>
+            <td>—</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">7</td>
+            <td style="font-weight:500">Teachers (Preschool/Primary)</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>13.5</td>
+            <td class="text-right mono">244,652</td>
+            <td>Augmentation</td>
+            <td>—</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">8</td>
+            <td style="font-weight:500">Registered Nurses</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>13.6</td>
+            <td class="text-right mono">243,336</td>
+            <td>Augmentation</td>
+            <td>—</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">9</td>
+            <td style="font-weight:500">Cybersecurity Analyst</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>14.0</td>
+            <td class="text-right mono">12,500</td>
+            <td>Augmentation</td>
+            <td>Rapid Growth</td>
+        </tr><tr>
+            <td class="text-center mono" style="font-weight:600">10</td>
+            <td style="font-weight:500">Driving Instructor</td>
+            <td class="text-right mono"><span class="score-dot" style="background:#22C55E"></span>15.0</td>
+            <td class="text-right mono">14,000</td>
+            <td>Augmentation</td>
+            <td>Stable</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p style="margin-top:14pt;font-size:8.5pt;color:#374151;line-height:1.5">
+        Imam/Religious Leader, despite cultural significance, score only 5.0/100 &mdash; roles requiring deep human judgment, physical presence, and emotional intelligence remain the strongest defense against AI automation. Healthcare roles (Dentists, Registered Nurses) consistently score below 15/100.
+    </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 6 — SECTOR ANALYSIS (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">SECTOR AI EXPOSURE MAP</div>
+    <div class="section-subtitle">20 ISIC sectors ranked by AI risk score &mdash; bar width proportional to exposure</div>
+
+    <div style="margin-top:10pt">
+        <div class="bar-row">
+            <div class="bar-label">Administrative & Support Services</div>
+            <div class="bar-track"><div class="bar-fill" style="width:100.0%;background:#DC2626"></div></div>
+            <div class="bar-score" style="color:#DC2626">72</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Financial & Insurance Activities</div>
+            <div class="bar-track"><div class="bar-fill" style="width:86.11111111111111%;background:#EA580C"></div></div>
+            <div class="bar-score" style="color:#EA580C">62</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Wholesale & Retail Trade</div>
+            <div class="bar-track"><div class="bar-fill" style="width:76.38888888888889%;background:#EA580C"></div></div>
+            <div class="bar-score" style="color:#EA580C">55</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Professional, Scientific & Technical</div>
+            <div class="bar-track"><div class="bar-fill" style="width:72.22222222222221%;background:#EA580C"></div></div>
+            <div class="bar-score" style="color:#EA580C">52</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Information & Communication (ICT)</div>
+            <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">45</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Public Administration & Defense</div>
+            <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">45</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Manufacturing</div>
+            <div class="bar-track"><div class="bar-fill" style="width:58.333333333333336%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">42</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Real Estate Activities</div>
+            <div class="bar-track"><div class="bar-fill" style="width:55.55555555555556%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">40</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Transportation & Storage</div>
+            <div class="bar-track"><div class="bar-fill" style="width:52.77777777777778%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">38</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Mining & Quarrying (incl. Oil & Gas)</div>
+            <div class="bar-track"><div class="bar-fill" style="width:48.61111111111111%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">35</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Other Service Activities</div>
+            <div class="bar-track"><div class="bar-fill" style="width:48.61111111111111%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">35</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Electricity, Gas, Steam & AC</div>
+            <div class="bar-track"><div class="bar-fill" style="width:41.66666666666667%;background:#D97706"></div></div>
+            <div class="bar-score" style="color:#D97706">30</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Accommodation & Food Service</div>
+            <div class="bar-track"><div class="bar-fill" style="width:38.88888888888889%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">28</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Arts, Entertainment & Recreation</div>
+            <div class="bar-track"><div class="bar-fill" style="width:34.72222222222222%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">25</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Water Supply, Sewerage, Waste</div>
+            <div class="bar-track"><div class="bar-fill" style="width:30.555555555555557%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">22</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Education</div>
+            <div class="bar-track"><div class="bar-fill" style="width:27.77777777777778%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">20</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Agriculture, Forestry & Fishing</div>
+            <div class="bar-track"><div class="bar-fill" style="width:25.0%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">18</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Human Health & Social Work</div>
+            <div class="bar-track"><div class="bar-fill" style="width:20.833333333333336%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">15</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Construction</div>
+            <div class="bar-track"><div class="bar-fill" style="width:16.666666666666664%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">12</div>
+        </div><div class="bar-row">
+            <div class="bar-label">Households & Extraterritorial</div>
+            <div class="bar-track"><div class="bar-fill" style="width:6.944444444444445%;background:#22C55E"></div></div>
+            <div class="bar-score" style="color:#22C55E">5</div>
+        </div>
+    </div>
+
+    <p style="margin-top:14pt;font-size:8.5pt;color:#374151;line-height:1.5">
+        Administrative & Support Services leads sector exposure at 72/100, driven by the high automation potential of administrative support, document processing, and data management roles. Construction (12/100) and Healthcare (15/100) remain the most resilient.
+    </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 7 — GLOBAL AI LAYOFFS (dark)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-dark">
+    <div class="section-title cyan">GLOBAL AI-DRIVEN LAYOFFS</div>
+    <div class="section-subtitle-dark">Major workforce reductions citing AI &mdash; 2024 to Q1 2026</div>
+
+    <table class="table-dark">
+        <thead>
+            <tr>
+                <th>COMPANY</th>
+                <th class="text-right" style="width:72pt">JOBS CUT</th>
+                <th style="width:80pt">AI ROLE</th>
+                <th style="width:72pt">DATE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>BT Group</td>
+            <td class="text-right mono">10,000</td>
+            <td><span class="badge badge-gray">SUSPECTED</span></td>
+            <td>May 2023 plan</td>
+        </tr><tr>
+            <td>IBM</td>
+            <td class="text-right mono">7,800</td>
+            <td><span class="badge badge-gray">SUSPECTED</span></td>
+            <td>May 2023 plan</td>
+        </tr><tr>
+            <td>Indeed/Glassdoor</td>
+            <td class="text-right mono">1,300</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Jul 2025</td>
+        </tr><tr>
+            <td>Google (Ads)</td>
+            <td class="text-right mono">1,000</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Jan 2024</td>
+        </tr><tr>
+            <td>Klarna</td>
+            <td class="text-right mono">700</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Feb 2024</td>
+        </tr><tr>
+            <td>Paycom</td>
+            <td class="text-right mono">500</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Oct 2025</td>
+        </tr><tr>
+            <td>Chegg</td>
+            <td class="text-right mono">468</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Jun 2023 + Oct 2025</td>
+        </tr><tr>
+            <td>Just Eat Takeaway</td>
+            <td class="text-right mono">450</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Sep 2025</td>
+        </tr><tr>
+            <td>Stack Overflow</td>
+            <td class="text-right mono">150</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Oct 2023</td>
+        </tr><tr>
+            <td>Google Cloud (UX)</td>
+            <td class="text-right mono">100</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Oct 2025</td>
+        </tr><tr>
+            <td>Deepwatch</td>
+            <td class="text-right mono">70</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Nov 2025</td>
+        </tr><tr>
+            <td>Duolingo</td>
+            <td class="text-right mono">None</td>
+            <td><span class="badge badge-red">AI CITED</span></td>
+            <td>Jan 2024</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="callout-dark">
+        <strong>SIGNAL:</strong> Block Inc. (Feb 2026) marks a turning point &mdash; the first major public company to frame AI replacement not as cost-cutting but as strategic architecture. CEO Dorsey described AI as changing the fundamental meaning of building a company.
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 8 — SAUDIZATION & NITAQAT (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">SAUDIZATION LANDSCAPE &mdash; Q1 2026</div>
+    <div class="section-subtitle">Tawteen decisions and Nitaqat band structure</div>
+
+    <div style="margin-bottom:16pt">
+        <h3 style="font-size:10pt;font-weight:700;margin-bottom:8pt;letter-spacing:0.05em">KEY TAWTEEN DECISIONS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>PROFESSION</th>
+                    <th class="text-center" style="width:60pt">QUOTA</th>
+                    <th style="width:100pt">EFFECTIVE</th>
+                    <th style="width:72pt">PHASE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+            <td style="font-weight:500">Consulting professions</td>
+            <td class="text-center mono">40%</td>
+            <td>25 March 2024</td>
+            <td>Phase 2</td>
+        </tr><tr>
+            <td style="font-weight:500">Project management professions</td>
+            <td class="text-center mono">40%</td>
+            <td>12 December 2024</td>
+            <td>Phase 2</td>
+        </tr><tr>
+            <td style="font-weight:500">Procurement professions</td>
+            <td class="text-center mono">50%</td>
+            <td>2023</td>
+            <td>Current</td>
+        </tr><tr>
+            <td style="font-weight:500">Sales professions</td>
+            <td class="text-center mono">15%</td>
+            <td>24 December 2023</td>
+            <td>Phase 1</td>
+        </tr><tr>
+            <td style="font-weight:500">Engineering professions</td>
+            <td class="text-center mono">25%</td>
+            <td>21 July 2024</td>
+            <td>Phase 1</td>
+        </tr><tr>
+            <td style="font-weight:500">Dentistry (private sector)</td>
+            <td class="text-center mono">35%</td>
+            <td>10 March 2024</td>
+            <td>Phase 1</td>
+        </tr><tr>
+            <td style="font-weight:500">Radiology (private healthcare)</td>
+            <td class="text-center mono">65%</td>
+            <td>17 April 2025</td>
+            <td>Phase 1-2</td>
+        </tr><tr>
+            <td style="font-weight:500">Medical laboratories</td>
+            <td class="text-center mono">70%</td>
+            <td>17 April 2025</td>
+            <td>Phase 1-2</td>
+        </tr><tr>
+            <td style="font-weight:500">Clinical nutrition</td>
+            <td class="text-center mono">80%</td>
+            <td>17 April 2025</td>
+            <td>Phase 1-2</td>
+        </tr><tr>
+            <td style="font-weight:500">Physiotherapy</td>
+            <td class="text-center mono">80%</td>
+            <td>17 April 2025</td>
+            <td>Phase 1-2</td>
+        </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top:16pt">
+        <h3 style="font-size:10pt;font-weight:700;margin-bottom:8pt;letter-spacing:0.05em">NITAQAT BAND PRIVILEGES</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>BAND</th>
+                    <th class="text-center">NEW VISAS</th>
+                    <th class="text-center">CHANGE OCC.</th>
+                    <th class="text-center">RENEW PERMITS</th>
+                    <th class="text-center">TRANSFER IN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+            <td style="font-weight:600;color:#22D3EE">Platinum</td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+        </tr><tr>
+            <td style="font-weight:600;color:#22C55E">High Green</td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+        </tr><tr>
+            <td style="font-weight:600;color:#4ADE80">Medium Green</td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+        </tr><tr>
+            <td style="font-weight:600;color:#86EFAC">Low Green</td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+            <td class="text-center"><span style="color:#22C55E">&#10003;</span></td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+        </tr><tr>
+            <td style="font-weight:600;color:#DC2626">Red</td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+            <td class="text-center"><span style="color:#DC2626">&#10007;</span></td>
+        </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p style="margin-top:12pt;font-size:8.5pt;color:#374151;line-height:1.5">
+        Engineering professions reached 25% Saudization quota in July 2024, with Phase 2 expected to push to 30%+. Consulting professions hit 40% in March 2024. The trend is clear: every quarter, new professions are added to the tawteen pipeline, systematically reducing the share of roles available to expatriate workers.
+    </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 9 — V2030 PARADOX (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">THE VISION 2030 PARADOX</div>
+    <div class="section-subtitle">When AI ambitions meet employment targets</div>
+
+    <div class="vs-grid" style="border:1px solid #E5E7EB;border-radius:6pt;overflow:hidden">
+        <div class="vs-col" style="background:#F0FDFA">
+            <h4 class="cyan">AI ACCELERATION</h4>
+            <ul>
+                <li>KSA #1 in global AI adoption index (Kiteworks 2025)</li>
+                <li>PIF $40B+ AI investment through HUMAIN</li>
+                <li>HUMAIN + Qualcomm MOU for sovereign AI</li>
+                <li>SAMAI 2: 1.1M Saudis trained in AI skills</li>
+                <li>stc: 80%+ customer queries handled by AI</li>
+                <li>Aramco: AI expansion across all operations</li>
+            </ul>
+        </div>
+        <div class="vs-col" style="background:#FFF7ED">
+            <h4 style="color:#D97706">EMPLOYMENT PROTECTION</h4>
+            <ul>
+                <li>100 professions reserved for Saudis only</li>
+                <li>20 recent tawteen decisions (2024-2025)</li>
+                <li>Nitaqat quotas tightening quarterly</li>
+                <li>HRDF reskilling programs scaling rapidly</li>
+                <li>7% unemployment target (currently met)</li>
+                <li>30% female workforce participation target</li>
+            </ul>
+        </div>
+    </div>
+
+    <p style="margin-top:16pt;font-size:8.5pt;color:#374151;line-height:1.5;text-align:justify">
+        This is the central tension of Saudi Arabia's economic transformation. The Kingdom is simultaneously the most aggressive AI adopter in the Middle East and the most aggressive labor market regulator. These forces will eventually collide &mdash; the question is which occupations, sectors, and worker populations will be caught in the crossfire. Vision 2030 programs aim to create an estimated 2,304,400 net new jobs, yet our analysis identifies 4,450,778 positions with meaningful AI exposure risk.
+    </p>
+
+    <div class="callout">
+        <strong>THE PARADOX IN NUMBERS:</strong> V2030 targets ~2,304,400 net new jobs. AI threatens ~4,450,778 existing positions. The gap is not a prediction of job loss &mdash; it is a measure of the policy tension that Saudi planners must navigate.
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 10 — CAREER TRANSITIONS (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">RECOMMENDED TRANSITION PATHWAYS</div>
+    <div class="section-subtitle">Example career transitions from high-risk to lower-risk occupations</div>
+
+    <div class="transition-card">
+        <div style="display:flex;align-items:center;margin-bottom:8pt">
+            <span style="font-weight:600">Data Entry Keyers</span>
+            <span class="transition-score" style="background:#DC2626;margin-left:8pt">94.9</span>
+            <span class="transition-arrow">&rarr;</span>
+            <span style="font-weight:600">RPA Developer</span>
+            <span class="transition-score" style="background:#22C55E;margin-left:8pt">35.0</span>
+        </div>
+        <div style="font-size:8pt;color:#6B7280">
+            <strong style="color:#22D3EE">Easy transition</strong> &mdash; Leverage existing data familiarity. Doroob digital skills track + UiPath Academy certification. HRDF-supported via Tamheer program.
+        </div>
+    </div>
+
+    <div class="transition-card">
+        <div style="display:flex;align-items:center;margin-bottom:8pt">
+            <span style="font-weight:600">Accountants &amp; Auditors</span>
+            <span class="transition-score" style="background:#DC2626;margin-left:8pt">88.2</span>
+            <span class="transition-arrow">&rarr;</span>
+            <span style="font-weight:600">Financial Analyst</span>
+            <span class="transition-score" style="background:#D97706;margin-left:8pt">52.0</span>
+        </div>
+        <div style="font-size:8pt;color:#6B7280">
+            <strong style="color:#D97706">Moderate transition</strong> &mdash; Leverage existing finance expertise. CFA pathway or data analytics certification. Move from compliance to strategic advisory.
+        </div>
+    </div>
+
+    <div class="transition-card">
+        <div style="display:flex;align-items:center;margin-bottom:8pt">
+            <span style="font-weight:600">Administrative Assistants</span>
+            <span class="transition-score" style="background:#DC2626;margin-left:8pt">85.2</span>
+            <span class="transition-arrow">&rarr;</span>
+            <span style="font-weight:600">Social Media Manager</span>
+            <span class="transition-score" style="background:#D97706;margin-left:8pt">42.0</span>
+        </div>
+        <div style="font-size:8pt;color:#6B7280">
+            <strong style="color:#22C55E">Easy transition</strong> &mdash; Transferable communication and organizational skills. Google Digital Marketing certification. Growing demand from Saudi brands and government entities.
+        </div>
+    </div>
+
+    <div class="callout">
+        <strong>HRDF SUPPORT:</strong> The Human Resources Development Fund offers 8 major programs (Tamheer, Doroob, Cooperative Training, Professional Certificates Support) covering on-the-job training, wage subsidies, and certification support for Saudi nationals transitioning careers.
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 11 — METHODOLOGY (white)
+     ════════════════════════════════════════════════════════ -->
+<div class="page page-white">
+    <div class="section-title">METHODOLOGY &amp; DATA SOURCES</div>
+    <div class="section-subtitle">Scoring framework, data provenance, and limitations</div>
+
+    <h3 style="font-size:9pt;font-weight:700;margin-bottom:8pt;letter-spacing:0.05em">COMPOSITE SCORE FORMULA</h3>
+    <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:4pt;padding:10pt 14pt;margin-bottom:16pt;font-family:'JetBrains Mono',monospace;font-size:8.5pt">
+        Score = Automation Probability (40%) + Salary Impact (20%) + Regulatory Pressure (20%) + Demand Signal (20%)
+    </div>
+
+    <h3 style="font-size:9pt;font-weight:700;margin-bottom:8pt;letter-spacing:0.05em">DATA SOURCES</h3>
+    <table class="meth-table">
+        <thead>
+            <tr>
+                <th>SOURCE</th>
+                <th>DATA</th>
+                <th style="width:72pt">PERIOD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>GOSI / GASTAT</td><td>Employment statistics, 13 regions, 20 sectors</td><td>Q4 2024</td></tr>
+            <tr><td>WEF</td><td>Future of Jobs 2025, occupation trend classifications</td><td>2025</td></tr>
+            <tr><td>HRSD</td><td>Nitaqat rules, tawteen decisions, reserved professions</td><td>Current</td></tr>
+            <tr><td>McKinsey</td><td>AI adoption surveys, automation potential estimates</td><td>2023-2025</td></tr>
+            <tr><td>Frey &amp; Osborne</td><td>Occupation automation probabilities (Oxford)</td><td>Updated 2024</td></tr>
+            <tr><td>Eloundou et al.</td><td>GPT exposure scores by occupation (OpenAI)</td><td>2023</td></tr>
+            <tr><td>layoffs.fyi</td><td>Global tech layoff tracker</td><td>Real-time</td></tr>
+            <tr><td>Challenger</td><td>AI-cited job cut reports (US)</td><td>Monthly</td></tr>
+            <tr><td>Kiteworks</td><td>Global AI Adoption Index (KSA #1)</td><td>2025</td></tr>
+            <tr><td>Stanford HAI</td><td>AI Index Report (citations, patents, investment)</td><td>2025</td></tr>
+        </tbody>
+    </table>
+
+    <h3 style="font-size:9pt;font-weight:700;margin-top:16pt;margin-bottom:6pt;letter-spacing:0.05em">LIMITATIONS</h3>
+    <p style="font-size:8pt;color:#6B7280;line-height:1.5">
+        This report provides risk indicators, not predictions. Composite scores combine multiple academic models with local regulatory data. Actual job displacement depends on employer adoption speed, government intervention, global AI capability trajectories, and individual worker adaptability. Employment estimates are approximations derived from GOSI sectoral data and occupation-level surveys. Saudi Arabia-specific automation data remains limited; global models are adapted with local weighting. This report should be used as a strategic planning input, not a definitive forecast.
+    </p>
+    <p style="font-size:7pt;color:#9CA3AF;margin-top:10pt">
+        &copy; 2026 Samy Aloulou. Data sourced from public databases and published research. Licensed under CC BY-SA 4.0.
+    </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE 12 — BACK COVER (dark)
+     ════════════════════════════════════════════════════════ -->
+<div class="page-back">
+    <div style="margin-bottom:60pt">
+        <div style="font-size:28pt;letter-spacing:0.3em;font-weight:700">
+            <span class="cyan">SHIFT</span>
+            <span class="gray-500" style="margin-left:10pt">OBSERVATORY</span>
+        </div>
+    </div>
+    <div style="font-size:11pt;color:#9CA3AF;margin-bottom:30pt">
+        AI Labor Market Intelligence for Saudi Arabia
+    </div>
+    <div style="font-size:9pt;color:#6B7280;line-height:2.2">
+        ksashiftobservatory.online<br>
+        github.com/samy-ksa/shift-observatory<br>
+        samy@monitoringforcegulf.com
+    </div>
+    <div style="font-size:9pt;color:#22D3EE;margin-top:30pt;letter-spacing:0.08em">
+        Q1 2026 Edition &mdash; Published March 2026
+    </div>
+    <div style="position:absolute;bottom:25mm;font-size:7pt;color:#4B5563;text-align:center;line-height:1.6">
+        &copy; 2026 Samy Aloulou. Data sourced from public databases. CC BY-SA 4.0.
+    </div>
+</div>
+
+</body>
+</html>

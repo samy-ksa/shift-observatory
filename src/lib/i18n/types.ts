@@ -261,8 +261,18 @@ export interface EmailStrings {
   placeholder: string;
   button: string;
   success: string;
+  downloadBtn: string;
   error: string;
   privacy: string;
+}
+
+export interface PopupStrings {
+  title: string;
+  body: string;
+  button: string;
+  footer: string;
+  success: string;
+  downloadBtn: string;
 }
 
 export interface CommonStrings {
@@ -402,6 +412,121 @@ export interface TreemapStrings {
   listView: string;
 }
 
+export interface FindJobStrings {
+  tabLabel: string;
+  requirements: string;
+  degree: string;
+  certifications: string;
+  certBody: string;
+  certTimeline: string;
+  skills: string;
+  edge: string;
+  gccAdvantage: string;
+  market: string;
+  demandHigh: string;
+  demandGrowing: string;
+  demandStable: string;
+  demandDeclining: string;
+  topDemand: string;
+  salaryPackage: string;
+  packageNote: string;
+  visa: string;
+  visaReserved: string;
+  visaReservedNote: string;
+  visaOpen: string;
+  visaOpenSteps: string[];
+  visaTimeline: string;
+  employers: string;
+  jobBoards: string;
+  employees: string;
+}
+
+export interface JobPageStrings {
+  backToDashboard: string;
+  breadcrumbJobs: string;
+  tabs: {
+    aiRisk: string;
+    salary: string;
+    nitaqat: string;
+    reskilling: string;
+    findJob: string;
+  };
+  score: string;
+  outOf: string;
+  category: string;
+  substitution: string;
+  augmentation: string;
+  wefTrend: string;
+  workforce: string;
+  saudiPct: string;
+  sector: string;
+  aiRiskAnalysis: string;
+  automationProb: string;
+  gptExposure: string;
+  feltenScore: string;
+  verdictVeryHigh: string;
+  verdictHigh: string;
+  verdictModerate: string;
+  verdictLow: string;
+  salaryRange: string;
+  entry: string;
+  median: string;
+  senior: string;
+  perMonth: string;
+  salarySource: string;
+  nitaqatStatus: string;
+  reservedSaudiOnly: string;
+  sectorQuota: string;
+  openToExpats: string;
+  reservedWarning: string;
+  relevantTawteen: string;
+  noTawteen: string;
+  quota: string;
+  effective: string;
+  phase: string;
+  reskillingTitle: string;
+  hrdfPrograms: string;
+  programType: string;
+  programRelevance: string;
+  noPrograms: string;
+  shareTitle: string;
+  shareText: string;
+  copyLink: string;
+  copied: string;
+  relatedTitle: string;
+  compareCta: string;
+  viewFullAnalysis: string;
+  notFound: string;
+  notFoundSub: string;
+}
+
+export interface ExploreStrings {
+  title: string;
+  searchPlaceholder: string;
+  popular: string;
+  showAll: string;
+  showLess: string;
+  noResults: string;
+  clearSearch: string;
+  filterAll: string;
+  filterHighRisk: string;
+  filterModerate: string;
+  filterLowRisk: string;
+  filterReserved: string;
+  workers: string;
+}
+
+export interface JobsDropdownStrings {
+  nav: string;
+  searchPlaceholder: string;
+  browseAll: string;
+  filterAll: string;
+  filterHigh: string;
+  filterModerate: string;
+  filterLow: string;
+  noResults: string;
+}
+
 export interface Dictionary {
   nav: NavStrings;
   hero: HeroStrings;
@@ -418,9 +543,14 @@ export interface Dictionary {
   gigaProjects: GigaProjectStrings;
   methodology: MethodologyStrings;
   email: EmailStrings;
+  popup: PopupStrings;
   common: CommonStrings;
   footer: FooterStrings;
   profile: ProfileStrings;
   career: CareerStrings;
   treemap: TreemapStrings;
+  jobPage: JobPageStrings;
+  explore: ExploreStrings;
+  jobsDropdown: JobsDropdownStrings;
+  findJob: FindJobStrings;
 }

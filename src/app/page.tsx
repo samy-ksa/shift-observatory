@@ -17,6 +17,7 @@ import EmailCapture from "@/components/EmailCapture";
 import LangToggle from "@/components/ui/LangToggle";
 import Footer from "@/components/footer/Footer";
 import AboutAuthor from "@/components/footer/AboutAuthor";
+import SmartPopup from "@/components/SmartPopup";
 
 export default function Home() {
   return (
@@ -84,6 +85,9 @@ export default function Home() {
 
       {/* Fixed bottom ticker - always visible while scrolling */}
       <LayoffsTicker />
+
+      {/* Smart email popup — triggers after 45s + 50% scroll */}
+      <SmartPopup />
     </main>
   );
 }

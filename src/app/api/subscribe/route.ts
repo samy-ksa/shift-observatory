@@ -57,6 +57,7 @@ export async function POST(req: Request) {
           method: "PATCH",
           headers: airtableHeaders(),
           body: JSON.stringify({
+            typecast: true,
             records: [{ id: existingId, fields }],
           }),
         });
@@ -78,6 +79,7 @@ export async function POST(req: Request) {
         method: "POST",
         headers: airtableHeaders(),
         body: JSON.stringify({
+          typecast: true,
           records: [{ fields }],
         }),
       });

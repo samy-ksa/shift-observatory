@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeader from "@/components/shared/SectionHeader";
 import RiskBadge from "@/components/shared/RiskBadge";
 import { riskLabel, scoreToCategory } from "@/lib/utils";
 import InfoTooltip from "@/components/shared/InfoTooltip";
 import { useLang, formatNumber } from "@/lib/i18n/context";
+import { toSlug } from "@/lib/occupations";
 import data from "@/data/master.json";
 import type { Occupation, SalaryContext, TaweenDecision } from "@/lib/data-types";
 
@@ -900,7 +902,13 @@ export default function RiskCalculator() {
               )}
 
               {/* FOOTER */}
-              <div className="p-4 border-t border-white/5 flex justify-end items-center">
+              <div className="p-4 border-t border-white/5 flex justify-between items-center">
+                <Link
+                  href={`/job/${toSlug(selected.name_en)}`}
+                  className="text-xs text-accent-neon hover:text-cyan-300 transition-colors font-medium"
+                >
+                  {t.jobPage.viewFullAnalysis}
+                </Link>
                 <span className="text-xs text-text-muted">
                   Rank #{selected.rank} {t.riskTool.rankOf} {allOccupations.length} {t.riskTool.occupationsCount}
                 </span>

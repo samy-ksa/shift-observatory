@@ -3,6 +3,7 @@
 import { useLang } from "@/lib/i18n/context";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import JobsDropdown from "@/components/nav/JobsDropdown";
 
 export default function LangToggle() {
   const { lang, setLang, t } = useLang();
@@ -58,6 +59,7 @@ export default function LangToggle() {
                 {page.label}
               </Link>
             ))}
+            <JobsDropdown />
           </div>
           <button
             onClick={() => setLang(lang === "en" ? "ar" : "en")}

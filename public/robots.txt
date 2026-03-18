@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Allow: /api/og
+
+Sitemap: https://www.ksashiftobservatory.online/sitemap.xml
+Sitemap: https://www.ksashiftobservatory.online/api/sitemap

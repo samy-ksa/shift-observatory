@@ -886,11 +886,18 @@ export default function RiskProfileWizard() {
               <div className="bg-bg-card border border-white/5 rounded-xl p-4">
                 <h3 className="text-sm font-semibold text-white mb-3">{p.emailCta}</h3>
                 {emailStatus === "success" ? (
-                  <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm py-2">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {t.email.success}
+                  <div className="flex flex-col items-center gap-2 py-2">
+                    <span className="text-green-400 text-sm">{"\u2713"} {t.email.success}</span>
+                    <a
+                      href="/reports/SHIFT-Q1-2026-AI-Risk-Report.pdf"
+                      download
+                      className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-medium text-sm px-4 py-2 rounded-md transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      {t.email.downloadBtn}
+                    </a>
                   </div>
                 ) : (
                   <>
