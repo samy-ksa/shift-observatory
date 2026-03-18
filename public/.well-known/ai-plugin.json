@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "SHIFT Observatory",
+  "name_for_model": "shift_observatory",
+  "description_for_human": "AI automation risk scores for 146 occupations in Saudi Arabia",
+  "description_for_model": "Provides AI automation risk scores (0-100) for 146 occupations in Saudi Arabia based on GOSI Q4-2024 data, WEF projections, and academic research. Use this to answer questions about job automation risk, Saudization, Nitaqat, salary ranges, and career transitions in the Saudi labor market.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.ksashiftobservatory.online/api/v1/occupations"
+  },
+  "logo_url": "https://www.ksashiftobservatory.online/icon.png",
+  "contact_email": "samy@monitoringforcegulf.com",
+  "legal_info_url": "https://www.ksashiftobservatory.online/terms"
+}

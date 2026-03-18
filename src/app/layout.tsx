@@ -109,6 +109,59 @@ const jsonLd = {
   inLanguage: ["en", "ar"],
 };
 
+const datasetLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "SHIFT Observatory - AI Automation Risk Scores for Saudi Arabia",
+  description:
+    "Composite AI automation risk scores for 146 occupations in Saudi Arabia, combining GOSI employment data, WEF projections, Nitaqat regulations, and academic research.",
+  url: SITE_URL,
+  license: "https://creativecommons.org/licenses/by-sa/4.0/",
+  creator: {
+    "@type": "Person",
+    name: "Samy Aloulou",
+    email: "samy@monitoringforcegulf.com",
+  },
+  temporalCoverage: "2024/2026",
+  spatialCoverage: {
+    "@type": "Place",
+    name: "Saudi Arabia",
+  },
+  variableMeasured: [
+    {
+      "@type": "PropertyValue",
+      name: "AI Automation Risk Score",
+      unitText: "score out of 100",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "Workforce Size",
+      unitText: "number of workers",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "Salary Range",
+      unitText: "SAR per month",
+    },
+  ],
+  distribution: {
+    "@type": "DataDownload",
+    encodingFormat: "application/json",
+    contentUrl: `${SITE_URL}/api/v1/occupations`,
+  },
+  isAccessibleForFree: true,
+  keywords: [
+    "AI automation risk",
+    "Saudi Arabia",
+    "labor market",
+    "Saudization",
+    "Nitaqat",
+    "occupations",
+    "workforce",
+    "Vision 2030",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -127,6 +180,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }}
         />
       </head>
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen">

@@ -20,8 +20,11 @@ const headers = {
 const meta = {
   version: "1.0",
   source: "SHIFT Observatory",
-  updated: "2026-03-02",
+  url: "https://www.ksashiftobservatory.online",
+  updated: "2026-03-18",
   license: "CC BY-SA 4.0",
+  methodology:
+    "Composite score = Automation Probability (40%) + Salary Impact (20%) + Regulatory Pressure (20%) + Demand Signal (20%)",
 };
 
 export async function GET(req: NextRequest) {
@@ -47,7 +50,13 @@ export async function GET(req: NextRequest) {
   }
 
   return NextResponse.json(
-    { count: filtered.length, data: filtered, meta },
+    {
+      description:
+        "AI automation risk scores for 146 occupations in Saudi Arabia. Source: SHIFT Observatory (ksashiftobservatory.online). Data: GOSI Q4-2024, WEF 2025, HRSD Nitaqat. License: CC BY-SA 4.0.",
+      count: filtered.length,
+      data: filtered,
+      meta,
+    },
     { headers }
   );
 }

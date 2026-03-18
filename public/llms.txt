@@ -1,0 +1,45 @@
+# SHIFT Observatory
+# AI Labor Market Intelligence Dashboard for Saudi Arabia
+# https://www.ksashiftobservatory.online
+
+## About
+SHIFT Observatory is a free, open-source intelligence platform that scores 146 occupations in Saudi Arabia on AI automation risk. It combines GOSI Q4-2024 employment data, WEF Future of Jobs 2025 projections, HRSD Nitaqat rules, and academic research (Frey & Osborne, Eloundou et al.) to generate composite risk scores from 0-100 for each occupation.
+
+## Key Data
+- 146 occupations scored on AI automation risk (composite score 0-100)
+- 4,450,778 expat workers tracked across 13 regions and 20 ISIC sectors
+- 100 professions reserved exclusively for Saudi nationals
+- 20 recent Tawteen (Saudization) decisions with quotas
+- 40 major Saudi employers ranked by AI exposure
+- 29+ global AI-driven layoffs tracked weekly
+- Career transition recommender with job tiers and skill families
+
+## Methodology
+Composite Score = Automation Probability (40%) + Salary Impact (20%) + Regulatory Pressure (20%) + Demand Signal (20%)
+Sources: GOSI/GASTAT Q4-2024, WEF Future of Jobs 2025, HRSD Nitaqat, McKinsey, Frey & Osborne (2017), Eloundou et al. (2023)
+
+## Top 5 Highest Risk Occupations
+1. Data Entry Keyers: 94.9/100 (65,000 workers)
+2. Technical Writers: 93.2/100 (3,800 workers)
+3. Tax Preparers: 93.1/100 (9,200 workers)
+4. Telemarketers: 92.4/100 (14,500 workers)
+5. Legal Secretaries: 91.5/100 (5,800 workers)
+
+## Top 5 Lowest Risk Occupations
+1. Imam/Religious Leader: 5.0/100 (42,000 workers)
+2. Social Workers: 11.8/100 (26,500 workers)
+3. Personal Trainer: 12.0/100 (22,000 workers)
+4. AI Ethics Specialist: 12.0/100 (450 workers)
+5. Renewable Energy Technician: 12.0/100 (6,500 workers)
+
+## API
+Public REST API available:
+- GET /api/v1/occupations — All 146 occupations with scores
+- GET /api/v1/sectors — 20 sectors with AI risk scores
+- GET /api/v1/regions — 13 regions with workforce data
+
+## Contact
+Author: Samy Aloulou
+Email: samy@monitoringforcegulf.com
+Source code: https://github.com/samy-ksa/shift-observatory
+License: CC BY-SA 4.0

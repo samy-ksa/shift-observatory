@@ -1,39 +1,72 @@
 {
-  "report_date": "2026-03-04",
+  "report_date": "2026-03-18",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Block (Square/Cash App)",
+      "company": "Meta",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 15800,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Planning sweeping layoffs affecting 20% of 79,000 workforce to offset AI infrastructure spending. CEO Zuckerberg says projects that used to require big teams now accomplished by a single person.",
+      "source": "Reuters / CNBC",
+      "date": "2026-03-14"
+    },
+    {
+      "company": "Amazon",
+      "country": "US",
+      "sector": "E-commerce / Cloud",
+      "jobs_cut": 16000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Confirmed 16,000 job cuts, nearly 10% of workforce, flattening management layers and bolstering AI infrastructure.",
+      "source": "Reuters",
+      "date": "2026-01-15"
+    },
+    {
+      "company": "Block (Square)",
       "country": "US",
       "sector": "FinTech",
       "jobs_cut": 4000,
       "jobs_cut_estimated": false,
       "ai_role": "direct",
-      "description": "CEO Jack Dorsey cut nearly half the workforce citing AI efficiency gains, predicting most companies will follow within a year.",
-      "source": "Fortune / CNBC",
-      "date": "2026-02-26"
+      "description": "CEO Dorsey cut company from 10,000 to under 6,000. First S&P 500 company to explicitly halve workforce for AI: 'Intelligence tools have changed what it means to build a company.'",
+      "source": "Bloomberg",
+      "date": "2026-02-10"
     },
     {
-      "company": "Amazon",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 16000,
+      "company": "WiseTech Global",
+      "country": "AU",
+      "sector": "Logistics Software",
+      "jobs_cut": 2000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "AI-driven restructuring of logistics platforms. Executives stated traditional approaches to writing code are becoming obsolete.",
+      "source": "RationalFX",
+      "date": "2026-03-01"
+    },
+    {
+      "company": "Ericsson",
+      "country": "SE",
+      "sector": "Telecom",
+      "jobs_cut": 1900,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Corporate restructuring to flatten management and redirect resources toward AI and agentic systems. Part of 30K cuts since October 2025.",
-      "source": "CNN / Bloomberg",
-      "date": "2026-01-28"
+      "description": "Restructuring across European operations as AI reshapes telecom equipment sector.",
+      "source": "RationalFX",
+      "date": "2026-02-15"
     },
     {
-      "company": "Salesforce",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 1000,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Cuts across marketing, product, data analytics, and Agentforce AI teams. Previously cut ~4,000 customer support roles after deploying AI systems.",
-      "source": "Metaintro / LinkedIn reports",
-      "date": "2026-02-10"
+      "company": "ASML",
+      "country": "NL",
+      "sector": "Semiconductors",
+      "jobs_cut": 1700,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Workforce reduction at semiconductor equipment leader amid industry restructuring.",
+      "source": "RationalFX",
+      "date": "2026-02-20"
     },
     {
       "company": "Meta (Reality Labs)",
@@ -41,287 +74,276 @@
       "sector": "Tech",
       "jobs_cut": 1500,
       "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "10% of Reality Labs division cut as Meta pivots from Metaverse to phones and AI after $60B in losses.",
-      "source": "Storyboard18",
+      "ai_role": "direct",
+      "description": "1,500 Reality Labs jobs cut as Meta pivots from metaverse to AI research. CTO Bosworth calls it initiative to simplify operations.",
+      "source": "Programs.com",
       "date": "2026-02-15"
+    },
+    {
+      "company": "Indeed / Glassdoor",
+      "country": "US",
+      "sector": "Recruitment",
+      "jobs_cut": 1300,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "CEO stated 'AI is changing the world' forcing 6% global workforce reduction across both platforms.",
+      "source": "Programs.com",
+      "date": "2025-07-15"
+    },
+    {
+      "company": "Livspace",
+      "country": "SG",
+      "sector": "PropTech",
+      "jobs_cut": 1000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Singapore home design platform cut 1,000 jobs to accelerate AI adoption across its digital interior-design marketplace.",
+      "source": "TechNode Global",
+      "date": "2026-03-01"
+    },
+    {
+      "company": "Ocado",
+      "country": "GB",
+      "sector": "E-commerce / Grocery",
+      "jobs_cut": 1000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Online grocery company cutting 1,000 roles from 20,000 workforce as AI reshapes fulfillment operations.",
+      "source": "Programs.com",
+      "date": "2026-03-10"
+    },
+    {
+      "company": "eBay",
+      "country": "US",
+      "sector": "E-commerce",
+      "jobs_cut": 800,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "800 jobs cut as company shifts to AI-powered listings and automated seller tools.",
+      "source": "RationalFX",
+      "date": "2026-02-25"
     },
     {
       "company": "Pinterest",
       "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 500,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "15% of team laid off, attributed in part to a strategic shift toward AI-powered discovery and ad products.",
-      "source": "CBS News",
-      "date": "2026-02-20"
-    },
-    {
-      "company": "BT Group",
-      "country": "GB",
-      "sector": "Telecom",
-      "jobs_cut": 10000,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Accelerating plan to replace 10,000 jobs with AI by end of decade, primarily in customer service and network operations.",
-      "source": "BBC",
-      "date": "2026-01-15"
-    },
-    {
-      "company": "SAP",
-      "country": "DE",
-      "sector": "Tech",
-      "jobs_cut": 8000,
+      "sector": "Social Media",
+      "jobs_cut": 675,
       "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Continuing restructuring of 8,000 roles as part of Joule AI transformation strategy, converting positions to AI engineering.",
-      "source": "Reuters",
+      "ai_role": "direct",
+      "description": "Cut 15% of workforce to prioritize AI-focused teams and products while streamlining sales structure.",
+      "source": "RationalFX",
       "date": "2026-01-20"
     },
     {
-      "company": "Klarna",
-      "country": "SE",
-      "sector": "FinTech",
-      "jobs_cut": 700,
+      "company": "ANGI Homeservices",
+      "country": "US",
+      "sector": "Tech / Services",
+      "jobs_cut": 350,
       "jobs_cut_estimated": false,
       "ai_role": "direct",
-      "description": "AI chatbots fully replaced 700 customer service agents. CEO Sebastian Siemiatkowski cited AI as primary driver and plans further reductions.",
-      "source": "Financial Times",
-      "date": "2026-02-05"
+      "description": "Workforce reduction as AI automates home services matching and customer interactions.",
+      "source": "RationalFX",
+      "date": "2026-02-15"
     },
     {
-      "company": "Intuit (TurboTax)",
+      "company": "Oracle",
       "country": "US",
-      "sector": "FinTech",
-      "jobs_cut": 1800,
+      "sector": "Enterprise Software",
+      "jobs_cut": 254,
       "jobs_cut_estimated": false,
       "ai_role": "direct",
-      "description": "Continued AI-first pivot eliminating roles across tax preparation and customer support as AI handles majority of user queries.",
-      "source": "Wall Street Journal",
-      "date": "2026-01-12"
+      "description": "Job cuts as company restructures around cloud AI services.",
+      "source": "RationalFX",
+      "date": "2026-03-05"
     },
     {
-      "company": "Chegg",
-      "country": "US",
-      "sector": "EdTech",
-      "jobs_cut": 300,
-      "jobs_cut_estimated": true,
+      "company": "MercadoLibre",
+      "country": "AR",
+      "sector": "E-commerce",
+      "jobs_cut": 119,
+      "jobs_cut_estimated": false,
       "ai_role": "direct",
-      "description": "Further cuts as ChatGPT continues disrupting core homework-help business. Stock down 95% from peak.",
-      "source": "Business Insider",
-      "date": "2026-02-18"
-    },
-    {
-      "company": "Duolingo",
-      "country": "US",
-      "sector": "EdTech",
-      "jobs_cut": 200,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "AI fully replaces remaining human translators and content creators, completing AI-first content pipeline.",
-      "source": "Bloomberg",
-      "date": "2026-01-08"
+      "description": "Latin America's largest e-commerce company cuts roles as AI automates logistics and seller operations.",
+      "source": "RationalFX",
+      "date": "2026-03-01"
     }
   ],
   "gulf_mena_automation": [
     {
-      "company": "SDAIA / Government",
+      "company": "Saudi Cabinet",
       "country": "SA",
       "sector": "Government",
-      "event_type": "automation_deployment",
+      "event_type": "policy",
       "jobs_affected": 0,
-      "jobs_affected_estimated": true,
-      "description": "Saudi Arabia ranked #1 globally in Public Sector AI Adoption Index 2026, scoring 66/100 across 324 surveyed public servants.",
-      "source": "Kiteworks / Public Sector AI Index",
-      "date": "2026-03-01"
+      "jobs_affected_estimated": false,
+      "description": "Saudi Arabia officially designates 2026 as the Year of Artificial Intelligence. Cabinet decision under MBS as SDAIA chair.",
+      "source": "Arab News / SPA",
+      "date": "2026-03-10"
     },
     {
-      "company": "HUMAIN (PIF-backed)",
+      "company": "SDAIA",
+      "country": "SA",
+      "sector": "Government / AI",
+      "event_type": "ai_deployment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": false,
+      "description": "Applied AI Bootcamp launched in Riyadh providing intensive hands-on AI and data science training for Saudi nationals.",
+      "source": "Saudi Times",
+      "date": "2026-03-15"
+    },
+    {
+      "company": "Hexagon Data Center",
+      "country": "SA",
+      "sector": "Infrastructure",
+      "event_type": "infrastructure",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": false,
+      "description": "World's largest government data center (480MW, 30M+ sqft, Tier IV) under construction in Riyadh. $2.7B contract awarded to Albawani.",
+      "source": "Gulf News",
+      "date": "2026-01-15"
+    },
+    {
+      "company": "Microsoft Saudi Arabia",
       "country": "SA",
       "sector": "Tech",
-      "event_type": "automation_deployment",
+      "event_type": "ai_deployment",
       "jobs_affected": 0,
-      "jobs_affected_estimated": true,
-      "description": "Signed MOU with Qualcomm to deliver advanced AI data centers, hybrid AI across edge devices and cloud, and AI services to KSA.",
-      "source": "Qualcomm Press Release",
-      "date": "2026-02-20"
-    },
-    {
-      "company": "MGX / Stargate",
-      "country": "AE",
-      "sector": "Tech",
-      "event_type": "automation_deployment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": true,
-      "description": "AI supercomputing hub in UAE (with OpenAI, G42, Microsoft) plans 1 GW data center cluster, 200 MW operational by 2026.",
-      "source": "DataCenter Dynamics",
+      "jobs_affected_estimated": false,
+      "description": "Microsoft commits to helping 3 million people in Saudi Arabia acquire AI skills by 2030.",
+      "source": "Microsoft EMEA",
       "date": "2026-02-15"
     },
     {
-      "company": "Saudi Aramco",
+      "company": "PIF / HUMAIN",
       "country": "SA",
-      "sector": "Energy",
-      "event_type": "automation_deployment",
-      "jobs_affected": 200,
-      "jobs_affected_estimated": true,
-      "description": "Expanding AI-driven predictive maintenance and autonomous drilling systems across upstream operations.",
-      "source": "Aramco Technology Review",
-      "date": "2026-02-10"
-    },
-    {
-      "company": "stc",
-      "country": "SA",
-      "sector": "Telecom",
-      "event_type": "ai_replacement",
-      "jobs_affected": 150,
-      "jobs_affected_estimated": true,
-      "description": "AI customer service platform now handles 80%+ of routine inquiries, reducing frontline staffing needs.",
-      "source": "stc Annual Report",
-      "date": "2026-02-28"
-    },
-    {
-      "company": "Al Rajhi Bank",
-      "country": "SA",
-      "sector": "Banking",
-      "event_type": "automation_deployment",
-      "jobs_affected": 80,
-      "jobs_affected_estimated": true,
-      "description": "Expanded AI deployment for fraud detection, loan processing, and compliance automation across all branches.",
-      "source": "Al Rajhi Digital Report",
-      "date": "2026-01-25"
-    },
-    {
-      "company": "Ooredoo",
-      "country": "QA",
-      "sector": "Telecom",
-      "event_type": "automation_deployment",
-      "jobs_affected": 50,
-      "jobs_affected_estimated": true,
-      "description": "Secured $500M financing to expand data center and AI operations, constructing 120MW capacity over 5 years.",
-      "source": "Ooredoo Press Release",
-      "date": "2026-02-01"
-    },
-    {
-      "company": "Noon.com",
-      "country": "AE",
-      "sector": "Retail",
-      "event_type": "automation_deployment",
-      "jobs_affected": 120,
-      "jobs_affected_estimated": true,
-      "description": "Robotic warehouse fulfillment and AI demand forecasting scaling across MENA operations.",
-      "source": "TechRadar MENA",
-      "date": "2026-01-10"
-    },
-    {
-      "company": "Careem (Uber MENA)",
-      "country": "AE",
-      "sector": "Logistics",
-      "event_type": "ai_replacement",
-      "jobs_affected": 250,
-      "jobs_affected_estimated": true,
-      "description": "AI-powered dispatch, dynamic routing, and automated customer support reducing operational headcount.",
-      "source": "Arabian Business",
-      "date": "2026-02-12"
-    },
-    {
-      "company": "NEOM",
-      "country": "SA",
-      "sector": "Government",
-      "event_type": "automation_deployment",
+      "sector": "Sovereign Wealth / AI",
+      "event_type": "investment",
       "jobs_affected": 0,
-      "jobs_affected_estimated": true,
-      "description": "Planning AI-native city operations with autonomous transport, robotic construction, and agentic building management.",
-      "source": "NEOM Master Plan",
-      "date": "2026-01-15"
+      "jobs_affected_estimated": false,
+      "description": "PIF finalizing revised 2026-2030 strategy with ~15% capex reduction but accelerating AI infrastructure investment through HUMAIN.",
+      "source": "Middle East Briefing",
+      "date": "2026-03-18"
+    },
+    {
+      "company": "Tuwaiq Academy",
+      "country": "SA",
+      "sector": "Education / AI",
+      "event_type": "ai_deployment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": false,
+      "description": "Saudi student Al-Jawhara Al-Qahtani wins global Grand Prize at Geneva Inventions Exhibition for AI medical platform PulMind.",
+      "source": "SPA",
+      "date": "2026-03-17"
+    },
+    {
+      "company": "Desert Technologies",
+      "country": "SA",
+      "sector": "Infrastructure / Energy",
+      "event_type": "infrastructure",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": false,
+      "description": "Developing advanced data centers in KSA through partnerships with global companies for AI technology localization.",
+      "source": "Zawya",
+      "date": "2026-03-15"
+    },
+    {
+      "company": "King Salman Park",
+      "country": "SA",
+      "sector": "Real Estate / Giga-Projects",
+      "event_type": "investment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": false,
+      "description": "5th investment package worth SAR 11B awarded at MIPIM 2026. Total private sector investment in the park now exceeds SAR 20B.",
+      "source": "SPA",
+      "date": "2026-03-17"
     }
   ],
   "saudi_policy_updates": [
     {
       "type": "sdaia",
-      "title": "SAMAI 2 Workforce AI Initiative Expanded",
-      "description": "SDAIA confirmed 1.1M Saudi citizens trained through SAMAI programme. SAMAI 2 focuses on sector-specific AI applications across ministries.",
-      "effective_date": "2026-01-01",
-      "source": "Education Saudi / SDAIA",
-      "date_announced": "2026-02-20"
+      "title": "2026 Designated Year of AI",
+      "description": "Saudi Cabinet officially designates 2026 as Year of Artificial Intelligence. Policy umbrella for new incentives, regulatory fast-tracks, and AI procurement preferences across government.",
+      "effective_date": "2026-03-10",
+      "source": "Arab News",
+      "date_announced": "2026-03-10"
     },
     {
       "type": "sdaia",
-      "title": "Saudi Arabia #1 in Global Public Sector AI Adoption",
-      "description": "KSA scored 66/100 in Public Sector AI Adoption Index 2026, placing first globally. However, 50% of public servants report training is compliance-focused, not capability-building.",
-      "effective_date": null,
-      "source": "Kiteworks Report",
-      "date_announced": "2026-03-01"
+      "title": "AI Sector Growth: $9.1B Funding",
+      "description": "664 companies now operating in Saudi data and AI space. Government AI spending up 56.25% in 2024 vs 2023. $9.1B secured across 70 investment deals.",
+      "effective_date": "2026-03-15",
+      "source": "Zawya",
+      "date_announced": "2026-03-15"
+    },
+    {
+      "type": "sdaia",
+      "title": "Shaheen III Supercomputer & Hexagon",
+      "description": "Launch of Shaheen III supercomputer and 480MW Hexagon Data Center. Kingdom targeting 3-6 GW of AI computing capacity.",
+      "effective_date": "2026-03-12",
+      "source": "The Legal Wire",
+      "date_announced": "2026-03-12"
+    },
+    {
+      "type": "sdaia",
+      "title": "GPAI Membership & ICAIRE Center",
+      "description": "Saudi Arabia joins Global Partnership on AI and hosts UNESCO's International Center for AI Research and Ethics in Riyadh.",
+      "effective_date": "2026-03-10",
+      "source": "Arab News",
+      "date_announced": "2026-03-10"
     },
     {
       "type": "other",
-      "title": "PIF $40B AI Investment Fund Active",
-      "description": "Saudi sovereign wealth fund's $40B AI investment fund now actively deploying capital into semiconductors, data centers, and AI companies via HUMAIN.",
-      "effective_date": "2026-01-01",
-      "source": "PIF / Qualcomm MOU",
-      "date_announced": "2026-02-20"
-    },
-    {
-      "type": "tawteen",
-      "title": "Engineering sector Saudization raised to 30%",
-      "description": "HRSD raised engineering profession Saudization quota to 30% in phase 2, increasing pressure on expat engineering roles.",
-      "effective_date": "2025-01-01",
-      "source": "HRSD Decision 2024",
-      "date_announced": "2026-01-15"
-    },
-    {
-      "type": "hrdf",
-      "title": "HRDF AI Reskilling Track Active",
-      "description": "HRDF's dedicated AI reskilling programs for workers in at-risk sectors now enrolling across retail, finance, and admin sectors.",
-      "effective_date": "2025-03-01",
-      "source": "HRDF Portal",
-      "date_announced": "2026-02-10"
+      "title": "PIF Strategy Recalibration 2026-2030",
+      "description": "PIF finalizing revised strategy with ~15% capex reduction. Construction contract awards fell 60% to below $30B. AI infrastructure is fastest-growing segment.",
+      "effective_date": "2026-03-18",
+      "source": "Middle East Briefing",
+      "date_announced": "2026-03-18"
     }
   ],
   "ai_workforce_signals": [
     {
-      "headline": "Block CEO predicts most companies will halve workforce for AI within a year",
-      "description": "Jack Dorsey's letter to shareholders after cutting 4,000 jobs stated that within 12 months, the majority of companies will make similar structural changes. Block shares soared 24% on the announcement.",
+      "headline": "20% of 2026 Tech Layoffs Explicitly AI-Driven",
+      "description": "RationalFX analysis shows 9,238 of 45,363 tech layoffs in 2026 are directly linked to AI and automation. Block, WiseTech Global, and Livspace lead the AI-attributed cuts.",
+      "relevance_to_ksa": "contextual",
+      "source": "TechNode Global / RationalFX",
+      "date": "2026-03-09"
+    },
+    {
+      "headline": "Meta Planning 20% Workforce Cut (~15,800 Jobs)",
+      "description": "Reuters reports Meta planning sweeping layoffs to offset $600B AI data center investment while preparing for AI-assisted worker efficiency. Would be largest cuts since 2022-2023.",
       "relevance_to_ksa": "indirect",
-      "source": "Fortune / TechCrunch",
-      "date": "2026-02-27"
+      "source": "Reuters / CNBC",
+      "date": "2026-03-14"
     },
     {
-      "headline": "55% of US hiring managers expect AI-driven layoffs in 2026",
-      "description": "Resume.org survey of 1,000 US hiring managers found 55% expect layoffs in 2026, with 44% citing AI as the top driver. Oxford Economics warns of widespread AI-washing in layoff justifications.",
-      "relevance_to_ksa": "indirect",
-      "source": "Resume.org / HBR",
-      "date": "2026-02-25"
+      "headline": "Young Workers Hit Hardest by AI Displacement",
+      "description": "Anthropic research finds job-finding rates for workers aged 22-25 in AI-exposed occupations fell 14% since ChatGPT launch. US workers in 20s in AI-exposed jobs saw unemployment rise 3%.",
+      "relevance_to_ksa": "contextual",
+      "source": "The Conversation / Anthropic",
+      "date": "2026-03-16"
     },
     {
-      "headline": "Saudi Arabia leads world in government AI adoption",
-      "description": "Public Sector AI Adoption Index 2026 surveyed 3,335 public servants across 10 countries. KSA scored highest at 66/100, but 52% say training comes too late and 51% lack time for AI learning.",
+      "headline": "Saudi Arabia Ranks 14th Global AI Index, 1st in Arab World",
+      "description": "Kingdom ranks 14th globally in 2025 AI Index, 3rd in OECD AI Policy Observatory, 1st in Arab world for AI model development per Stanford indicators. Over 11,000 specialists trained.",
       "relevance_to_ksa": "direct",
-      "source": "Kiteworks Report",
-      "date": "2026-03-01"
+      "source": "Arab News / SDAIA",
+      "date": "2026-03-10"
     },
     {
-      "headline": "GCC AI adoption reaches 84%, agentic AI emerging as next frontier",
-      "description": "McKinsey reports GCC AI adoption hit 84% in 2025. SDAIA now focusing on agentic AI — systems that plan and execute complex tasks autonomously — as the next phase beyond generative models.",
+      "headline": "Microsoft to Train 3 Million Saudis in AI by 2030",
+      "description": "Microsoft commits to AI skills training for 3 million people in Saudi Arabia, part of broader EMEA initiative aligned with Year of AI designation.",
       "relevance_to_ksa": "direct",
-      "source": "McKinsey / SDAIA",
+      "source": "Microsoft EMEA",
       "date": "2026-02-15"
-    },
-    {
-      "headline": "64% of UAE companies plan to increase automation investment",
-      "description": "PwC Middle East survey shows 64% of UAE companies will increase automation spending in 2026. Top priorities: finance, HR, and customer operations — all high-employment sectors for Gulf expats.",
-      "relevance_to_ksa": "indirect",
-      "source": "PwC Middle East",
-      "date": "2026-02-20"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 44000,
-    "total_ai_cited_this_week": 7500,
-    "total_gulf_events_this_week": 10,
-    "ytd_global_tech_layoffs": 52000,
-    "ytd_ai_cited_us": 12800,
+    "total_global_layoffs_this_week": 45363,
+    "total_ai_cited_this_week": 9238,
+    "total_gulf_events_this_week": 8,
+    "ytd_global_tech_layoffs": 45363,
+    "ytd_ai_cited_us": 9238,
     "trend_vs_last_week": "up",
-    "notable_trend": "Block's 4,000-person AI-driven cut marks a watershed moment — first S&P 500 company to explicitly halve workforce citing AI, with CEO predicting industry-wide adoption within 12 months."
+    "notable_trend": "Saudi Arabia designates 2026 as Year of AI while global tech layoffs hit 45,000 with 20% explicitly AI-driven. Meta reportedly planning 20% workforce cut (~15,800 jobs)."
   }
 }

@@ -4,6 +4,7 @@ import { useLang } from "@/lib/i18n/context";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import JobsDropdown from "@/components/nav/JobsDropdown";
+import MobileJobSearch from "@/components/nav/MobileJobSearch";
 
 export default function LangToggle() {
   const { lang, setLang, t } = useLang();
@@ -70,7 +71,7 @@ export default function LangToggle() {
         </div>
       </nav>
 
-      {/* Mobile: sticky top bar (simplified) + sticky bottom bar */}
+      {/* Mobile: sticky top bar (simplified) */}
       <nav className="sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-md border-b border-white/5 md:hidden">
         <div className="flex items-center justify-between px-4 h-12">
           <Link
@@ -92,6 +93,9 @@ export default function LangToggle() {
           </button>
         </div>
       </nav>
+
+      {/* Mobile: sticky search bar below nav */}
+      <MobileJobSearch />
 
       {/* Mobile: bottom navigation bar */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-primary/95 backdrop-blur-md border-t border-white/5 md:hidden safe-bottom">

@@ -3,6 +3,28 @@ Allow: /
 
 Disallow: /api/
 Allow: /api/og
+Allow: /api/v1/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://www.ksashiftobservatory.online/sitemap.xml
 Sitemap: https://www.ksashiftobservatory.online/api/sitemap
