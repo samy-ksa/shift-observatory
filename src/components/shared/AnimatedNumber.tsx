@@ -15,11 +15,24 @@ export default function AnimatedNumber({
   formatFn,
   className = "",
 }: AnimatedNumberProps) {
-  const [display, setDisplay] = useState(0);
+  // SSR renders the real value so search engines see actual numbers.
+  // On the client we reset to 0 and animate up when the element is visible.
+  const [display, setDisplay] = useState(value);
   const ref = useRef<HTMLSpanElement>(null);
   const hasAnimated = useRef(false);
+  const hasMounted = useRef(false);
+
+  // After hydration, reset to 0 so the animation can play
+  useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      setDisplay(0);
+    }
+  }, []);
 
   useEffect(() => {
+    if (!hasMounted.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
@@ -42,10 +55,12 @@ export default function AnimatedNumber({
     return () => observer.disconnect();
   }, [value, duration]);
 
-  const formatted = formatFn ? formatFn(display) : display.toLocaleString("en-US");
+  const formatted = formatFn
+    ? formatFn(display)
+    : display.toLocaleString("en-US");
 
   return (
-    <span ref={ref} className={`font-mono ${className}`}>
+    <span ref={ref} className={`font-mono ${className}`} data-value={value}>
       {formatted}
     </span>
   );
