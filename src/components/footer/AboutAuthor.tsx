@@ -17,7 +17,7 @@ export default function AboutAuthor() {
         {/* Content */}
         <div className="min-w-0">
           <p className="text-cyan-400 text-[10px] uppercase tracking-[0.15em] font-semibold mb-1">
-            {isAr ? "عن المؤلف" : "About the Author"}
+            {isAr ? "عن المؤلف" : lang === "fr" ? "À propos de l'auteur" : "About the Author"}
           </p>
           <p className="text-white font-medium text-lg leading-tight">
             {isAr ? "سامي العلولو" : "Samy Aloulou"}
@@ -27,6 +27,11 @@ export default function AboutAuthor() {
               <>
                 رائد أعمال فرنسي مقيم في الرياض، المملكة العربية السعودية. الرئيس التنفيذي لشركة{" "}
                 <span className="text-gray-300">Monitoring Force Gulf</span>، شركة استشارية فرنسية-سعودية تدعم شركات علوم الحياة في دخول أسواق الخليج وأوروبا.
+              </>
+            ) : lang === "fr" ? (
+              <>
+                Entrepreneur français basé à Riyad, Arabie saoudite. PDG de{" "}
+                <span className="text-gray-300">Monitoring Force Gulf</span>, cabinet de conseil franco-saoudien accompagnant les entreprises des sciences de la vie sur les marchés du Golfe et européens.
               </>
             ) : (
               <>
@@ -40,11 +45,15 @@ export default function AboutAuthor() {
           <p className="text-gray-400 text-sm leading-relaxed mt-2">
             {isAr
               ? "بُني مرصد شيفت من قناعة راسخة: التحول في القوى العاملة بفعل الذكاء الاصطناعي يتسارع أكثر مما يستعد له معظم المنظمات والمهنيين. هذه المنصة موجودة لجعل هذا التحول مرئياً وقابلاً للقياس والتنفيذ — خاصة في المملكة العربية السعودية، حيث رؤية 2030 وتبني الذكاء الاصطناعي يعيدان تشكيل سوق العمل في آن واحد."
+              : lang === "fr"
+              ? "SHIFT Observatory est né d'une conviction : la transformation du marché du travail par l'IA s'accélère plus vite que ce à quoi la plupart des organisations et des professionnels se préparent. Ce tableau de bord existe pour rendre cette transformation visible, mesurable et exploitable — en particulier en Arabie saoudite, où la Vision 2030 et l'adoption de l'IA remodèlent simultanément le marché du travail."
               : "SHIFT Observatory was built from a conviction: AI-driven workforce transformation is accelerating faster than most organizations and professionals are preparing for. This dashboard exists to make that shift visible, measurable, and actionable — especially in Saudi Arabia, where Vision 2030 and AI adoption are reshaping the labor market simultaneously."}
           </p>
           <p className="text-gray-500 text-xs mt-2">
             {isAr
               ? "بُني ويُدار بشكل مستقل. البيانات من: التأمينات الاجتماعية، المنتدى الاقتصادي العالمي، ماكنزي، وزارة الموارد البشرية، وPerplexity AI."
+              : lang === "fr"
+              ? "Conçu et maintenu de manière indépendante. Données issues de : GOSI, WEF, McKinsey, HRSD et Perplexity AI."
               : "Built and maintained independently. Data sourced from GOSI, WEF, McKinsey, HRSD, and Perplexity AI."}
           </p>
 

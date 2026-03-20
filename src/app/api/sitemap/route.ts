@@ -63,6 +63,7 @@ function buildUrlEntry(page: {
   const hreflangTags = page.hreflang
     ? `
     <xhtml:link rel="alternate" hreflang="en" href="${loc}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${loc}" />
     <xhtml:link rel="alternate" hreflang="ar" href="${loc}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc}" />`
     : "";

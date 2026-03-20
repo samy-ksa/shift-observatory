@@ -32,6 +32,7 @@ export type WorkforceFilter = "all" | "saudi" | "expat";
 export interface TreemapOccupation {
   name_en: string;
   name_ar: string;
+  name_fr: string;
   composite: number;
   category: string;
   employment: number;
@@ -92,6 +93,29 @@ export const SECTOR_LABELS_AR: Record<string, string> = {
   households_extraterritorial: "الأسر",
 };
 
+export const SECTOR_LABELS_FR: Record<string, string> = {
+  agriculture: "Agriculture",
+  mining_oil_gas: "Mines & Pétrole/Gaz",
+  manufacturing: "Industrie",
+  electricity_gas: "Électricité & Gaz",
+  water_waste: "Eau & Déchets",
+  construction: "Construction",
+  wholesale_retail: "Commerce",
+  transport_storage: "Transport & Stockage",
+  accommodation_food: "Hôtellerie & Restauration",
+  ict: "TIC",
+  finance_insurance: "Finance & Assurance",
+  real_estate: "Immobilier",
+  professional_scientific: "Services professionnels",
+  admin_support: "Soutien administratif",
+  public_admin: "Administration publique",
+  education: "Éducation",
+  health: "Santé & Social",
+  arts_entertainment: "Arts & Divertissement",
+  other_services: "Autres services",
+  households_extraterritorial: "Ménages",
+};
+
 /** Minimum employment to show as individual rect (below = grouped into sector "Other") */
 const MIN_EMPLOYMENT_THRESHOLD = 15000;
 
@@ -122,6 +146,7 @@ export function prepareTreemapData(
       return {
         name_en: o.name_en,
         name_ar: o.name_ar,
+        name_fr: o.name_fr || o.name_en,
         composite: o.composite,
         category: o.category,
         employment,
@@ -161,6 +186,7 @@ export function prepareTreemapData(
     visible.push({
       name_en: `Other ${sectorName} (${occs.length})`,
       name_ar: `أخرى ${sectorNameAr} (${occs.length})`,
+      name_fr: `Autres ${sectorName} (${occs.length})`,
       composite: Math.round(avgComp),
       category: "mixed",
       employment: totalEmp,
@@ -292,6 +318,14 @@ export const TIER_LABELS_EN: Record<number, string> = {
   3: "Bachelor's",
   4: "Professional",
   5: "Advanced",
+};
+
+export const TIER_LABELS_FR: Record<number, string> = {
+  1: "Sans diplôme",
+  2: "Diplôme",
+  3: "Licence",
+  4: "Professionnel",
+  5: "Avancé",
 };
 
 export const TIER_LABELS_AR: Record<number, string> = {

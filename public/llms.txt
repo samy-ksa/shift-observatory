@@ -5,6 +5,9 @@
 ## About
 SHIFT Observatory is a free, open-source intelligence platform that scores 146 occupations in Saudi Arabia on AI automation risk. It combines GOSI Q4-2024 employment data, WEF Future of Jobs 2025 projections, HRSD Nitaqat rules, and academic research (Frey & Osborne, Eloundou et al.) to generate composite risk scores from 0-100 for each occupation.
 
+## Langues / Languages
+This platform is available in English, French (Français), and Arabic (العربية).
+
 ## Key Data
 - 146 occupations scored on AI automation risk (composite score 0-100)
 - 4,450,778 expat workers tracked across 13 regions and 20 ISIC sectors
@@ -32,9 +35,27 @@ Sources: GOSI/GASTAT Q4-2024, WEF Future of Jobs 2025, HRSD Nitaqat, McKinsey, F
 4. AI Ethics Specialist: 12.0/100 (450 workers)
 5. Renewable Energy Technician: 12.0/100 (6,500 workers)
 
+## En Français
+SHIFT Observatory est une plateforme gratuite d'intelligence sur le marché du travail en Arabie Saoudite. Elle analyse le risque d'automatisation par l'IA de 146 métiers en combinant les données GOSI Q4-2024, les projections WEF 2025, les règles Nitaqat/Saudisation, et la recherche académique (Frey & Osborne, Eloundou et al.).
+
+Fonctionnalités principales :
+- Calculateur de risque IA (score composite 0-100 par métier)
+- Calculateur d'expatriation (comparaison coût de la vie entre 12 villes et l'Arabie Saoudite)
+- Recommandations de carrière et transitions professionnelles
+- Profil de risque personnalisé
+- Suivi hebdomadaire des licenciements liés à l'IA (SHIFT Pulse)
+- Rapport trimestriel PDF gratuit (15 pages)
+
+Les 5 métiers les plus exposés à l'IA en Arabie Saoudite :
+1. Opérateurs de saisie de données : 94.9/100
+2. Rédacteurs techniques : 93.2/100
+3. Préparateurs fiscaux : 93.1/100
+4. Télévendeurs : 92.4/100
+5. Secrétaires juridiques : 91.5/100
+
 ## API
 Public REST API available:
-- GET /api/v1/occupations — All 146 occupations with scores
+- GET /api/v1/occupations — All 146 occupations with scores (includes name_en, name_fr, name_ar)
 - GET /api/v1/sectors — 20 sectors with AI risk scores
 - GET /api/v1/regions — 13 regions with workforce data
 

@@ -22,6 +22,7 @@ export async function generateStaticParams() {
 
 /* ------------------------------------------------------------------ */
 /* Dynamic SEO metadata per page                                       */
+/* NOTE: No cookies() call — keeps pages statically generated          */
 /* ------------------------------------------------------------------ */
 const SITE = "https://www.ksashiftobservatory.online";
 
@@ -47,10 +48,14 @@ export async function generateMetadata({
     keywords: [
       occ.name_en,
       occ.name_ar,
+      occ.name_fr || occ.name_en,
       "AI risk Saudi Arabia",
       `${occ.name_en} salary KSA`,
       `${occ.name_en} Saudization`,
       `${occ.name_en} automation risk`,
+      // French keywords for discoverability
+      `${occ.name_fr || occ.name_en} Arabie Saoudite`,
+      `risque IA ${occ.name_fr || occ.name_en}`,
     ].join(", "),
     openGraph: {
       title: `${occ.name_en} — ${rl} (${occ.composite}/100)`,
@@ -95,7 +100,7 @@ export default function JobPage({ params }: { params: { slug: string } }) {
       ? "growing"
       : "stable";
 
-  /* ---- FAQ structured data ---- */
+  /* ---- FAQ structured data (English) ---- */
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -107,12 +112,12 @@ export default function JobPage({ params }: { params: { slug: string } }) {
           "@type": "Answer",
           text:
             occ.composite >= 70
-              ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as very high risk \u2014 this occupation faces near-certain significant disruption from AI automation. The score combines automation probability (Frey & Osborne, Eloundou et al.), salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
+              ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as very high risk — this occupation faces near-certain significant disruption from AI automation. The score combines automation probability (Frey & Osborne, Eloundou et al.), salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
               : occ.composite >= 45
-                ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as high risk \u2014 this occupation faces substantial automation pressure. The score combines automation probability (Frey & Osborne, Eloundou et al.), salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
+                ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as high risk — this occupation faces substantial automation pressure. The score combines automation probability (Frey & Osborne, Eloundou et al.), salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
                 : occ.composite >= 25
-                  ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as moderate risk \u2014 some tasks are automatable but human judgment provides partial protection. The score combines automation probability, salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
-                  : `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as low risk \u2014 physical presence, emotional intelligence, and non-routine judgment create strong defenses against automation.`,
+                  ? `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as moderate risk — some tasks are automatable but human judgment provides partial protection. The score combines automation probability, salary impact, Nitaqat regulatory pressure, and WEF demand signals.`
+                  : `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia according to SHIFT Observatory. This is classified as low risk — physical presence, emotional intelligence, and non-routine judgment create strong defenses against automation.`,
         },
       },
       {
@@ -158,13 +163,52 @@ export default function JobPage({ params }: { params: { slug: string } }) {
     ],
   };
 
+  /* ---- French FAQ structured data (included at build time for all jobs) ---- */
+  const nameFr = occ.name_fr || occ.name_en;
+  const faqSchemaFr = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: "fr",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Quel est le risque d'automatisation IA pour ${nameFr} en Arabie Saoudite ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${nameFr} a un score de risque d'automatisation IA de ${occ.composite}/100 en Arabie Saoudite selon SHIFT Observatory. Ce score combine la probabilité d'automatisation (Frey & Osborne, Eloundou et al.), l'impact salarial, la pression réglementaire Nitaqat et les signaux de demande WEF.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Quel est le salaire d'un(e) ${nameFr} en Arabie Saoudite ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Les salaires de ${nameFr} en Arabie Saoudite varient de ${fmt(occ.salary_entry_sar)} SAR/mois (débutant) à ${fmt(occ.salary_senior_sar)} SAR/mois (senior), avec une médiane de ${fmt(occ.salary_median_sar)} SAR/mois. Tous les salaires en Arabie Saoudite sont exonérés d'impôts.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `L'IA va-t-elle remplacer les ${nameFr} en Arabie Saoudite ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            occ.composite >= 70
+              ? `${nameFr} fait face à un risque très élevé de remplacement par l'IA (${occ.composite}/100). La combinaison de tâches numériques routinières et de prise de décision structurée rend ce métier très vulnérable à l'automatisation.`
+              : occ.composite >= 45
+                ? `${nameFr} fait face à un risque modéré à élevé (${occ.composite}/100). Certaines tâches sont automatisables, mais le jugement humain et la créativité offrent une protection partielle.`
+                : `${nameFr} a un risque relativement faible de remplacement par l'IA (${occ.composite}/100). La présence physique, l'intelligence émotionnelle et le jugement non routinier créent de solides défenses contre l'automatisation.`,
+        },
+      },
+    ],
+  };
+
   /* ---- Occupation structured data ---- */
   const occupationSchema = {
     "@context": "https://schema.org",
     "@type": "Occupation",
     name: occ.name_en,
-    alternateName: occ.name_ar,
-    description: `${occ.name_en} in Saudi Arabia \u2014 AI automation risk score ${occ.composite}/100. ${occ.category === "substitution" ? "High automation exposure." : "AI augments rather than replaces."} Salary range: ${fmt(occ.salary_entry_sar)}-${fmt(occ.salary_senior_sar)} SAR/month.`,
+    alternateName: [occ.name_ar, occ.name_fr || occ.name_en],
+    description: `${occ.name_en} in Saudi Arabia — AI automation risk score ${occ.composite}/100. ${occ.category === "substitution" ? "High automation exposure." : "AI augments rather than replaces."} Salary range: ${fmt(occ.salary_entry_sar)}-${fmt(occ.salary_senior_sar)} SAR/month.`,
     occupationLocation: {
       "@type": "Country",
       name: "Saudi Arabia",
@@ -185,6 +229,10 @@ export default function JobPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaFr) }}
       />
       <script
         type="application/ld+json"

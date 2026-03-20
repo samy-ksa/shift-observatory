@@ -34,29 +34,29 @@ function fromSlug(slug: string): Occupation | undefined {
 /* ── Display Mappings ── */
 function fmtCategory(cat: string | undefined | null, lang: string): string {
   if (!cat) return "\u2014";
-  const map: Record<string, { en: string; ar: string }> = {
-    substitution: { en: "Full Substitution", ar: "\u0627\u0633\u062A\u0628\u062F\u0627\u0644 \u0643\u0627\u0645\u0644" },
-    substitution_partial: { en: "Partial Substitution", ar: "\u0627\u0633\u062A\u0628\u062F\u0627\u0644 \u062C\u0632\u0626\u064A" },
-    augmentation: { en: "Augmentation", ar: "\u062A\u0639\u0632\u064A\u0632" },
+  const map: Record<string, { en: string; ar: string; fr: string }> = {
+    substitution: { en: "Full Substitution", ar: "\u0627\u0633\u062A\u0628\u062F\u0627\u0644 \u0643\u0627\u0645\u0644", fr: "Substitution complète" },
+    substitution_partial: { en: "Partial Substitution", ar: "\u0627\u0633\u062A\u0628\u062F\u0627\u0644 \u062C\u0632\u0626\u064A", fr: "Substitution partielle" },
+    augmentation: { en: "Augmentation", ar: "\u062A\u0639\u0632\u064A\u0632", fr: "Augmentation" },
   };
   const entry = map[cat];
   if (!entry) return cat;
-  return lang === "ar" ? entry.ar : entry.en;
+  return lang === "ar" ? entry.ar : lang === "fr" ? entry.fr : entry.en;
 }
 
 function fmtWefTrend(trend: string | undefined | null, lang: string): string {
   if (!trend) return "\u2014";
-  const map: Record<string, { en: string; ar: string }> = {
-    decline_brutal: { en: "\uD83D\uDCC9 Sharp Decline", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639 \u062D\u0627\u062F" },
-    decline_moderate: { en: "\uD83D\uDCC9 Moderate Decline", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639 \u0645\u0639\u062A\u062F\u0644" },
-    decline: { en: "\uD83D\uDCC9 Declining", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639" },
-    growth_rapid: { en: "\uD83D\uDCC8 Rapid Growth", ar: "\uD83D\uDCC8 \u0646\u0645\u0648 \u0633\u0631\u064A\u0639" },
-    growth_moderate: { en: "\uD83D\uDCC8 Moderate Growth", ar: "\uD83D\uDCC8 \u0646\u0645\u0648 \u0645\u0639\u062A\u062F\u0644" },
-    stable: { en: "\u27A1\uFE0F Stable", ar: "\u27A1\uFE0F \u0645\u0633\u062A\u0642\u0631" },
+  const map: Record<string, { en: string; ar: string; fr: string }> = {
+    decline_brutal: { en: "\uD83D\uDCC9 Sharp Decline", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639 \u062D\u0627\u062F", fr: "\uD83D\uDCC9 D\u00E9clin rapide" },
+    decline_moderate: { en: "\uD83D\uDCC9 Moderate Decline", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639 \u0645\u0639\u062A\u062F\u0644", fr: "\uD83D\uDCC9 D\u00E9clin mod\u00E9r\u00E9" },
+    decline: { en: "\uD83D\uDCC9 Declining", ar: "\uD83D\uDCC9 \u062A\u0631\u0627\u062C\u0639", fr: "\uD83D\uDCC9 En d\u00E9clin" },
+    growth_rapid: { en: "\uD83D\uDCC8 Rapid Growth", ar: "\uD83D\uDCC8 \u0646\u0645\u0648 \u0633\u0631\u064A\u0639", fr: "\uD83D\uDCC8 Croissance rapide" },
+    growth_moderate: { en: "\uD83D\uDCC8 Moderate Growth", ar: "\uD83D\uDCC8 \u0646\u0645\u0648 \u0645\u0639\u062A\u062F\u0644", fr: "\uD83D\uDCC8 Croissance mod\u00E9r\u00E9e" },
+    stable: { en: "\u27A1\uFE0F Stable", ar: "\u27A1\uFE0F \u0645\u0633\u062A\u0642\u0631", fr: "\u27A1\uFE0F Stable" },
   };
   const entry = map[trend];
   if (!entry) return trend;
-  return lang === "ar" ? entry.ar : entry.en;
+  return lang === "ar" ? entry.ar : lang === "fr" ? entry.fr : entry.en;
 }
 
 function fmtNitaqatStatus(
@@ -64,19 +64,21 @@ function fmtNitaqatStatus(
   lang: string
 ): string {
   if (!status) return "\u2014";
-  const map: Record<string, { en: string; ar: string }> = {
+  const map: Record<string, { en: string; ar: string; fr: string }> = {
     reserved_saudi_only: {
       en: "\u26D4 Saudi Only",
       ar: "\u26D4 \u0633\u0639\u0648\u062F\u064A\u0648\u0646 \u0641\u0642\u0637",
+      fr: "\u26D4 Saoudiens uniquement",
     },
     sector_quota: {
       en: "\u2705 Sector Quota",
       ar: "\u2705 \u062D\u0635\u0629 \u0642\u0637\u0627\u0639\u064A\u0629",
+      fr: "\u2705 Quota sectoriel",
     },
   };
   const entry = map[status];
   if (!entry) return status;
-  return lang === "ar" ? entry.ar : entry.en;
+  return lang === "ar" ? entry.ar : lang === "fr" ? entry.fr : entry.en;
 }
 
 /* ── Autocomplete Dropdown ── */
@@ -127,7 +129,7 @@ function OccupationPicker({
                 key={occ.name_en}
                 onClick={() => {
                   onSelect(occ);
-                  setQuery(lang === "ar" ? occ.name_ar : occ.name_en);
+                  setQuery(lang === "ar" ? occ.name_ar : lang === "fr" && occ.name_fr ? occ.name_fr : occ.name_en);
                   setOpen(false);
                 }}
                 className="w-full text-left px-4 py-2.5 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
@@ -135,7 +137,7 @@ function OccupationPicker({
                 <div className="flex justify-between items-center gap-2">
                   <div className="truncate">
                     <span className="text-white text-sm">
-                      {lang === "ar" ? occ.name_ar : occ.name_en}
+                      {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
                     </span>
                     {occ.emerging && (
                       <span className={`${lang === "ar" ? "mr-2" : "ml-2"} text-[10px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded-full font-semibold`}>
@@ -301,10 +303,10 @@ export default function CareerRecommender() {
 
   const shareText = useMemo(() => {
     if (!selected) return c.shareText;
-    const name = lang === "ar" ? selected.name_ar : selected.name_en;
+    const name = lang === "ar" ? selected.name_ar : lang === "fr" ? selected.name_fr : selected.name_en;
     const topRec = sorted[0];
     if (!topRec) return c.shareText;
-    const topName = lang === "ar" ? topRec.occupation.name_ar : topRec.occupation.name_en;
+    const topName = lang === "ar" ? topRec.occupation.name_ar : lang === "fr" ? topRec.occupation.name_fr : topRec.occupation.name_en;
     return lang === "ar"
       ? `\uD83D\uDE80 \u0627\u0643\u062A\u0634\u0641\u062A \u0623\u0646 "${topName}" \u0647\u064A \u0623\u0641\u0636\u0644 \u062A\u062D\u0648\u0644 \u0645\u0647\u0646\u064A \u0645\u0646 "${name}" \u0639\u0628\u0631 \u0645\u0631\u0635\u062F \u0634\u064A\u0641\u062A!`
       : `\uD83D\uDE80 Discovered "${topName}" as my best AI-safe career transition from "${name}" on SHIFT Observatory!`;
@@ -414,7 +416,7 @@ export default function CareerRecommender() {
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                   <div className="flex-1">
                     <div className="text-white font-bold text-lg">
-                      {lang === "ar" ? selected.name_ar : selected.name_en}
+                      {lang === "ar" ? selected.name_ar : lang === "fr" ? selected.name_fr : selected.name_en}
                     </div>
                     <div className="text-text-muted text-xs mt-0.5">
                       {lang === "ar" ? selected.name_en : selected.name_ar}
@@ -514,7 +516,7 @@ export default function CareerRecommender() {
                               <DemandBadge signal={rec.demand_signal} t={c} />
                             </div>
                             <div className="text-white font-semibold mt-1">
-                              {lang === "ar" ? rec.occupation.name_ar : rec.occupation.name_en}
+                              {lang === "ar" ? rec.occupation.name_ar : lang === "fr" ? rec.occupation.name_fr : rec.occupation.name_en}
                             </div>
                             <div className="text-text-muted text-xs">
                               {lang === "ar" ? rec.occupation.name_en : rec.occupation.name_ar}

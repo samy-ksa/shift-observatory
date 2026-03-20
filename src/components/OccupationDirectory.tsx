@@ -8,6 +8,7 @@ import {
   toSlug,
   riskLabel,
   riskLabelAr,
+  riskLabelFr,
   riskColor,
   fmt,
   type Occupation,
@@ -38,7 +39,7 @@ function fuzzyMatch(occ: Occupation, query: string): boolean {
   const q = query.toLowerCase().trim();
   if (!q) return true;
   const words = q.split(/\s+/);
-  const haystack = `${occ.name_en} ${occ.name_ar}`.toLowerCase();
+  const haystack = `${occ.name_en} ${occ.name_ar} ${occ.name_fr}`.toLowerCase();
   return words.every((w) => haystack.includes(w));
 }
 
@@ -188,7 +189,7 @@ export default function OccupationDirectory() {
                 href={`/job/${toSlug(occ.name_en)}`}
                 className="text-cyan-400 hover:text-cyan-300 text-xs transition-colors"
               >
-                {lang === "ar" ? occ.name_ar : occ.name_en}
+                {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
               </Link>
               {i < popularOccs.length - 1 && (
                 <span className="text-gray-600 mx-1.5">·</span>
@@ -241,7 +242,9 @@ export default function OccupationDirectory() {
             const rl =
               lang === "ar"
                 ? riskLabelAr(occ.composite)
-                : riskLabel(occ.composite);
+                : lang === "fr"
+                  ? riskLabelFr(occ.composite)
+                  : riskLabel(occ.composite);
             return (
               <Link
                 key={occ.name_en}
@@ -251,13 +254,13 @@ export default function OccupationDirectory() {
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0 flex-1">
                     <div className="text-sm font-medium text-white truncate group-hover:text-cyan-400 transition-colors">
-                      {occ.name_en}
+                      {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
                     </div>
                     <div
                       className="text-xs text-gray-500 truncate mt-0.5"
-                      dir="rtl"
+                      dir={lang === "ar" ? "ltr" : "rtl"}
                     >
-                      {occ.name_ar}
+                      {lang === "ar" ? occ.name_en : occ.name_ar}
                     </div>
                   </div>
                   <span

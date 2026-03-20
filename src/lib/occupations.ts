@@ -38,6 +38,7 @@ export interface Sector {
   id: string;
   name_en: string;
   name_ar: string;
+  name_fr: string;
   ai_risk_score: number;
   ai_risk_category: string;
   total: number;
@@ -137,6 +138,14 @@ export function riskLabelAr(score: number): string {
   return "منخفض";
 }
 
+/** Risk label in French */
+export function riskLabelFr(score: number): string {
+  if (score >= 70) return "Très élevé";
+  if (score >= 45) return "Élevé";
+  if (score >= 25) return "Modéré";
+  return "Faible";
+}
+
 /** Risk color class */
 export function riskColor(score: number): string {
   if (score >= 70) return "text-red-500";
@@ -179,6 +188,20 @@ export function wefTrendLabelAr(trend?: string): string {
     growth_rapid: "نمو سريع",
   };
   return map[trend] || trend;
+}
+
+/** WEF trend FR */
+export function wefTrendLabelFr(trend?: string): string {
+  if (!trend) return "N/D";
+  const map: Record<string, string> = {
+    decline_brutal: "Déclin rapide",
+    decline_progressive: "Déclin progressif",
+    stable: "Stable",
+    growth_ai_augmented: "Croissance augmentée par l'IA",
+    growth_organic: "Croissance organique",
+    growth_rapid: "Croissance rapide",
+  };
+  return map[trend] || trend.replace(/_/g, " ");
 }
 
 /** Format number with commas */

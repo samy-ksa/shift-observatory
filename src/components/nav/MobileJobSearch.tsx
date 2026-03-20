@@ -11,7 +11,7 @@ type Filter = "all" | "high" | "low";
 
 function fuzzyMatch(occ: Occupation, q: string): boolean {
   const words = q.toLowerCase().trim().split(/\s+/);
-  const hay = `${occ.name_en} ${occ.name_ar}`.toLowerCase();
+  const hay = `${occ.name_en} ${occ.name_ar} ${occ.name_fr}`.toLowerCase();
   return words.every((w) => hay.includes(w));
 }
 
@@ -33,7 +33,7 @@ export default function MobileJobSearch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
-  const placeholder = lang === "ar" ? "ابحث عن وظيفتك بين 146 مهنة..." : "Find your job among 146 occupations...";
+  const placeholder = lang === "ar" ? "ابحث عن وظيفتك بين 146 مهنة..." : lang === "fr" ? "Trouvez votre emploi parmi 146 métiers..." : "Find your job among 146 occupations...";
 
   const allOccs = useMemo(
     () => getAllOccupations().sort((a, b) => (b.employment_est || 0) - (a.employment_est || 0)),
@@ -135,7 +135,7 @@ export default function MobileJobSearch() {
               </button>
             ))}
             <span className="text-xs text-gray-600 whitespace-nowrap ml-1">
-              {results.length} {lang === "ar" ? "نتيجة" : "results"}
+              {results.length} {lang === "ar" ? "نتيجة" : lang === "fr" ? "résultats" : "results"}
             </span>
           </div>
 
@@ -153,8 +153,8 @@ export default function MobileJobSearch() {
                   className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-800/30 active:bg-gray-800/50 text-left min-h-[48px]"
                 >
                   <div className="min-w-0 flex-1">
-                    <div className="text-white text-sm truncate">{occ.name_en}</div>
-                    <div className="text-gray-600 text-xs truncate" dir="rtl">{occ.name_ar}</div>
+                    <div className="text-white text-sm truncate">{lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}</div>
+                    <div className="text-gray-600 text-xs truncate" dir={lang === "ar" ? "ltr" : "rtl"}>{lang === "ar" ? occ.name_en : occ.name_ar}</div>
                   </div>
                   <div className="flex items-center gap-2 ml-3 shrink-0">
                     <span className={`font-mono text-sm font-medium ${riskTextColor(occ.composite)}`}>

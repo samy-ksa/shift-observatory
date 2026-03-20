@@ -45,19 +45,21 @@ export default function CookieConsent() {
             <div className="flex items-center gap-2 mb-2">
               <span className="text-lg">🍪</span>
               <h3 className="text-sm font-semibold text-text-primary">
-                {isAr ? "نستخدم ملفات تعريف الارتباط" : "We use cookies"}
+                {isAr ? "نستخدم ملفات تعريف الارتباط" : lang === "fr" ? "Nous utilisons des cookies" : "We use cookies"}
               </h3>
             </div>
             <p className="text-xs text-text-muted leading-relaxed">
               {isAr
                 ? "نستخدم ملفات تعريف الارتباط الأساسية لتشغيل المنصة وملفات تحليلية لتحسين تجربتك. يمكنك قبول جميع ملفات تعريف الارتباط أو قبول الأساسية فقط."
+                : lang === "fr"
+                ? "Nous utilisons des cookies essentiels pour faire fonctionner la plateforme et des cookies analytiques pour améliorer votre expérience. Vous pouvez accepter tous les cookies ou uniquement les essentiels."
                 : "We use essential cookies to run the platform and analytics cookies to improve your experience. You can accept all cookies or only the essential ones."}
               {" "}
               <Link
                 href="/cookies"
                 className="text-accent-primary hover:underline whitespace-nowrap"
               >
-                {isAr ? "اقرأ المزيد" : "Learn more"}
+                {isAr ? "اقرأ المزيد" : lang === "fr" ? "En savoir plus" : "Learn more"}
               </Link>
             </p>
           </div>
@@ -68,13 +70,13 @@ export default function CookieConsent() {
               onClick={decline}
               className="px-4 py-2 text-xs font-medium text-text-muted hover:text-text-primary border border-white/10 rounded-lg transition-colors hover:bg-white/5"
             >
-              {isAr ? "الأساسية فقط" : "Essential only"}
+              {isAr ? "الأساسية فقط" : lang === "fr" ? "Essentiels uniquement" : "Essential only"}
             </button>
             <button
               onClick={accept}
               className="px-5 py-2 text-xs font-semibold text-bg-primary bg-accent-primary rounded-lg transition-all hover:brightness-110 hover:shadow-lg hover:shadow-accent-primary/20"
             >
-              {isAr ? "قبول الكل" : "Accept all"}
+              {isAr ? "قبول الكل" : lang === "fr" ? "Tout accepter" : "Accept all"}
             </button>
           </div>
         </div>

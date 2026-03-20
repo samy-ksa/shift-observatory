@@ -28,6 +28,13 @@ const TIER_NAMES_AR: Record<string, string> = {
   high: "عالي (5-7)",
   very_high: "عالي جداً (7-10)",
 };
+const TIER_NAMES_FR: Record<string, string> = {
+  very_low: "Minimal (0-2)",
+  low: "Faible (2-3.5)",
+  moderate: "Modéré (3.5-5)",
+  high: "Élevé (5-7)",
+  very_high: "Très élevé (7-10)",
+};
 
 export default function TreemapSidebar({ data, lang, filter, onFilterChange, t }: TreemapSidebarProps) {
   const kpis = computeKPIs(data);
@@ -95,7 +102,7 @@ export default function TreemapSidebar({ data, lang, filter, onFilterChange, t }
           {TIER_ORDER.map((tier) => {
             const count = kpis.tiers[tier] || 0;
             const pct = maxTierWorkers > 0 ? (count / maxTierWorkers) * 100 : 0;
-            const tierName = isAr ? TIER_NAMES_AR[tier] : TIER_NAMES_EN[tier];
+            const tierName = isAr ? TIER_NAMES_AR[tier] : lang === "fr" ? TIER_NAMES_FR[tier] : TIER_NAMES_EN[tier];
             return (
               <div key={tier}>
                 <div className={`flex justify-between text-xs mb-0.5 ${isAr ? "flex-row-reverse" : ""}`}>
@@ -176,10 +183,10 @@ export default function TreemapSidebar({ data, lang, filter, onFilterChange, t }
           {t.treemap.wagesExposed}
         </p>
         <p className={`text-lg font-mono font-bold text-risk-very-high ${isAr ? "text-right" : ""}`}>
-          {isAr ? "ر.س" : "SAR"} {formatNumber(Math.round(kpis.wagesExposed / 1e9), lang)}{isAr ? " مليار" : "B"}
+          {isAr ? "ر.س" : "SAR"} {formatNumber(Math.round(kpis.wagesExposed / 1e9), lang)}{isAr ? " مليار" : lang === "fr" ? " Md" : "B"}
         </p>
         <p className={`text-xs text-text-muted mt-0.5 ${isAr ? "text-right" : ""}`}>
-          {isAr ? "رواتب شهرية في مهن عالية المخاطر" : "Monthly wages in high-risk occupations"}
+          {isAr ? "رواتب شهرية في مهن عالية المخاطر" : lang === "fr" ? "Salaires mensuels dans les métiers à haut risque" : "Monthly wages in high-risk occupations"}
         </p>
       </div>
     </div>

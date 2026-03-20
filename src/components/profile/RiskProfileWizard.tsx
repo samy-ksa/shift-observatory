@@ -456,10 +456,10 @@ export default function RiskProfileWizard() {
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1 min-w-0">
                         <p className="text-xs text-accent-primary font-medium mb-1">
-                          {lang === "ar" ? "تم المطابقة مع:" : "Matched to:"}
+                          {lang === "ar" ? "تم المطابقة مع:" : lang === "fr" ? "Correspondance :" : "Matched to:"}
                         </p>
                         <p className="text-white font-semibold text-lg leading-tight">
-                          {lang === "ar" ? selectedOcc.name_ar : selectedOcc.name_en}
+                          {lang === "ar" ? selectedOcc.name_ar : lang === "fr" && selectedOcc.name_fr ? selectedOcc.name_fr : selectedOcc.name_en}
                         </p>
                         <p className="text-text-muted text-sm mt-0.5">
                           {lang === "ar" ? selectedOcc.name_en : selectedOcc.name_ar}
@@ -476,7 +476,7 @@ export default function RiskProfileWizard() {
                           }}
                           className="text-accent-primary text-xs hover:underline underline-offset-2"
                         >
-                          {lang === "ar" ? "تغيير" : "Change"}
+                          {lang === "ar" ? "تغيير" : lang === "fr" ? "Modifier" : "Change"}
                         </button>
                       </div>
                     </div>
@@ -528,7 +528,7 @@ export default function RiskProfileWizard() {
                             <div className="flex items-center justify-between gap-3">
                               <div className="flex-1 min-w-0">
                                 <p className="text-white text-sm font-medium truncate group-hover:text-accent-primary transition-colors">
-                                  {lang === "ar" ? occ.name_ar : occ.name_en}
+                                  {lang === "ar" ? occ.name_ar : lang === "fr" && occ.name_fr ? occ.name_fr : occ.name_en}
                                 </p>
                                 <p className="text-text-muted text-xs truncate mt-0.5">
                                   {lang === "ar" ? occ.name_en : occ.name_ar}
@@ -586,7 +586,7 @@ export default function RiskProfileWizard() {
                     >
                       <div className="px-4 py-2.5 border-b border-white/5 flex justify-between items-center">
                         <span className="text-xs text-text-muted font-medium">
-                          {lang === "ar" ? "جميع المهن (146)" : "All occupations (146)"}
+                          {lang === "ar" ? "جميع المهن (146)" : lang === "fr" ? "Tous les métiers (146)" : "All occupations (146)"}
                         </span>
                         <button
                           onClick={() => setShowBrowseAll(false)}
@@ -604,7 +604,7 @@ export default function RiskProfileWizard() {
                           >
                             <div className="min-w-0 flex-1">
                               <span className="text-white text-sm truncate block">
-                                {lang === "ar" ? occ.name_ar : occ.name_en}
+                                {lang === "ar" ? occ.name_ar : lang === "fr" && occ.name_fr ? occ.name_fr : occ.name_en}
                               </span>
                               <span className="text-text-muted text-xs truncate block">
                                 {lang === "ar" ? occ.name_en : occ.name_ar}
@@ -691,7 +691,7 @@ export default function RiskProfileWizard() {
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
               >
                 <option value="" className="bg-bg-primary text-text-muted">
-                  {lang === "ar" ? "\u0627\u062E\u062A\u0631 \u0627\u0644\u0645\u0646\u0637\u0642\u0629..." : "Select region..."}
+                  {lang === "ar" ? "\u0627\u062E\u062A\u0631 \u0627\u0644\u0645\u0646\u0637\u0642\u0629..." : lang === "fr" ? "Sélectionner la région..." : "Select region..."}
                 </option>
                 {regions.map((r) => (
                   <option
@@ -716,8 +716,8 @@ export default function RiskProfileWizard() {
                         {lang === "ar" ? selectedRegion.name_ar : selectedRegion.name_en}
                       </div>
                       <div className="text-xs text-text-muted mt-1">
-                        {formatNumber(selectedRegion.total, lang)} {lang === "ar" ? "\u0639\u0627\u0645\u0644" : "workers"} {"\u00B7"}{" "}
-                        {selectedRegion.pct_saudi}% {lang === "ar" ? "\u0633\u0639\u0648\u062F\u064A\u0648\u0646" : "Saudi"}
+                        {formatNumber(selectedRegion.total, lang)} {lang === "ar" ? "\u0639\u0627\u0645\u0644" : lang === "fr" ? "travailleurs" : "workers"} {"\u00B7"}{" "}
+                        {selectedRegion.pct_saudi}% {lang === "ar" ? "\u0633\u0639\u0648\u062F\u064A\u0648\u0646" : lang === "fr" ? "Saoudiens" : "Saudi"}
                       </div>
                     </div>
                     <div className={`text-lg font-mono font-bold ${riskBg(scoreToCategory(selectedRegion.ai_risk_score))} px-3 py-1 rounded-lg`}>
@@ -749,7 +749,7 @@ export default function RiskProfileWizard() {
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent-primary focus:outline-none appearance-none cursor-pointer"
               >
                 <option value="" className="bg-bg-primary text-text-muted">
-                  {lang === "ar" ? "\u0627\u062E\u062A\u0631 \u0627\u0644\u0642\u0637\u0627\u0639..." : "Select sector..."}
+                  {lang === "ar" ? "\u0627\u062E\u062A\u0631 \u0627\u0644\u0642\u0637\u0627\u0639..." : lang === "fr" ? "Sélectionner le secteur..." : "Select sector..."}
                 </option>
                 {sectors.map((s) => (
                   <option
@@ -774,8 +774,8 @@ export default function RiskProfileWizard() {
                         {lang === "ar" ? selectedSector.name_ar : selectedSector.name_en}
                       </div>
                       <div className="text-xs text-text-muted mt-1">
-                        {formatNumber(selectedSector.total, lang)} {lang === "ar" ? "\u0639\u0627\u0645\u0644" : "workers"} {"\u00B7"}{" "}
-                        {selectedSector.pct_saudi}% {lang === "ar" ? "\u0633\u0639\u0648\u062F\u064A\u0648\u0646" : "Saudi"}
+                        {formatNumber(selectedSector.total, lang)} {lang === "ar" ? "\u0639\u0627\u0645\u0644" : lang === "fr" ? "travailleurs" : "workers"} {"\u00B7"}{" "}
+                        {selectedSector.pct_saudi}% {lang === "ar" ? "\u0633\u0639\u0648\u062F\u064A\u0648\u0646" : lang === "fr" ? "Saoudiens" : "Saudi"}
                       </div>
                     </div>
                     <div className={`text-lg font-mono font-bold ${riskBg(scoreToCategory(selectedSector.ai_risk_score))} px-3 py-1 rounded-lg`}>
@@ -945,7 +945,7 @@ export default function RiskProfileWizard() {
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  {pdfLoading ? "..." : (lang === "ar" ? "\u062A\u062D\u0645\u064A\u0644 PDF" : "Download PDF")}
+                  {pdfLoading ? "..." : (lang === "ar" ? "\u062A\u062D\u0645\u064A\u0644 PDF" : lang === "fr" ? "Télécharger PDF" : "Download PDF")}
                 </button>
                 <button
                   onClick={() => handleShare("linkedin")}

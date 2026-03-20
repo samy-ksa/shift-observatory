@@ -29,7 +29,7 @@ type Filter = "all" | "high" | "moderate" | "low";
 /* ------------------------------------------------------------------ */
 function fuzzyMatch(occ: Occupation, q: string): boolean {
   const words = q.toLowerCase().trim().split(/\s+/);
-  const hay = `${occ.name_en} ${occ.name_ar}`.toLowerCase();
+  const hay = `${occ.name_en} ${occ.name_ar} ${occ.name_fr}`.toLowerCase();
   return words.every((w) => hay.includes(w));
 }
 
@@ -227,11 +227,11 @@ function SearchPanel({
               >
                 <div className="min-w-0 flex-1">
                   <span className={`text-white truncate block ${mobile ? "text-base" : "text-sm"}`}>
-                    {occ.name_en}
+                    {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
                   </span>
-                  {lang === "ar" && (
-                    <span className="text-gray-600 text-xs block truncate" dir="rtl">
-                      {occ.name_ar}
+                  {lang !== "en" && (
+                    <span className="text-gray-600 text-xs block truncate" dir={lang === "ar" ? "ltr" : "rtl"}>
+                      {lang === "ar" ? occ.name_en : occ.name_ar}
                     </span>
                   )}
                 </div>

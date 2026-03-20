@@ -6,6 +6,7 @@ import CookieConsent from "@/components/legal/CookieConsent";
 import HtmlLangSync from "@/components/HtmlLangSync";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getServerLang } from "@/lib/server-lang";
 
 const SITE_URL = "https://www.ksashiftobservatory.online";
 
@@ -23,75 +24,105 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
-  description:
-    "Free intelligence platform mapping AI automation risk of 146 occupations in Saudi Arabia. GOSI data, Nitaqat analysis, career transitions, weekly AI layoff tracking. Bilingual AR/EN.",
-  keywords: [
-    "AI risk Saudi Arabia",
-    "Saudization",
-    "Nitaqat",
-    "AI jobs KSA",
-    "automation risk",
-    "Saudi labor market",
-    "Vision 2030 jobs",
-    "AI layoffs",
-    "expat jobs Saudi Arabia",
-  ],
-  authors: [{ name: "Samy Aloulou" }],
-  creator: "Samy Aloulou",
-  alternates: {
-    canonical: SITE_URL,
-    languages: {
-      en: SITE_URL,
-      ar: SITE_URL,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    alternateLocale: "ar_SA",
-    url: SITE_URL,
-    siteName: "SHIFT Observatory",
-    title: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
-    description:
-      "Free intelligence platform mapping AI automation risk of 146 occupations in Saudi Arabia. GOSI data, Nitaqat analysis, career transitions, weekly AI layoff tracking.",
-    images: [
-      {
-        url: `${SITE_URL}/api/og`,
-        width: 1200,
-        height: 630,
-        alt: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
-        type: "image/png",
-      },
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = getServerLang();
+
+  const titles: Record<string, string> = {
+    en: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
+    fr: "SHIFT Observatory — Risque IA sur l'emploi en Arabie Saoudite",
+    ar: "SHIFT Observatory — مخاطر الذكاء الاصطناعي على التوظيف في المملكة العربية السعودية",
+  };
+
+  const descriptions: Record<string, string> = {
+    en: "Free dashboard mapping AI automation risk across 146 occupations in Saudi Arabia. Risk scores, salary data, Saudization analysis, relocation calculator.",
+    fr: "Tableau de bord gratuit analysant le risque d'automatisation IA de 146 métiers en Arabie Saoudite. Scores de risque, salaires, Saudisation, calculateur d'expatriation.",
+    ar: "لوحة معلومات مجانية تحلل مخاطر أتمتة الذكاء الاصطناعي على 146 مهنة في المملكة العربية السعودية. درجات المخاطر، بيانات الرواتب، تحليل السعودة، حاسبة الانتقال.",
+  };
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: titles[lang],
+    description: descriptions[lang],
+    keywords: [
+      // English
+      "AI risk Saudi Arabia",
+      "Saudization",
+      "Nitaqat",
+      "AI jobs KSA",
+      "automation risk",
+      "Saudi labor market",
+      "Vision 2030 jobs",
+      "AI layoffs",
+      "expat jobs Saudi Arabia",
+      // French
+      "risque IA",
+      "Arabie Saoudite",
+      "marché du travail",
+      "expatriation",
+      "coût de la vie Riyad",
+      "salaire expatrié",
+      "Saudisation",
+      "calculateur expatriation",
+      "s'expatrier en Arabie Saoudite",
+      // Arabic
+      "مخاطر الذكاء الاصطناعي",
+      "المملكة العربية السعودية",
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
-    description:
-      "Free intelligence platform mapping AI automation risk of 146 occupations in Saudi Arabia. GOSI data, Nitaqat analysis, career transitions.",
-    images: [`${SITE_URL}/api/og`],
-    creator: "@saudi_builder",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    authors: [{ name: "Samy Aloulou" }],
+    creator: "Samy Aloulou",
+    alternates: {
+      canonical: SITE_URL,
+      languages: {
+        en: SITE_URL,
+        fr: SITE_URL,
+        ar: SITE_URL,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: lang === "fr" ? "fr_FR" : lang === "ar" ? "ar_SA" : "en_US",
+      alternateLocale: ["ar_SA", "fr_FR", "en_US"].filter(
+        (l) => l !== (lang === "fr" ? "fr_FR" : lang === "ar" ? "ar_SA" : "en_US")
+      ),
+      url: SITE_URL,
+      siteName: "SHIFT Observatory",
+      title: titles[lang],
+      description: descriptions[lang],
+      images: [
+        {
+          url: `${SITE_URL}/api/og`,
+          width: 1200,
+          height: 630,
+          alt: titles[lang],
+          type: "image/png",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[lang],
+      description: descriptions[lang],
+      images: [`${SITE_URL}/api/og`],
+      creator: "@saudi_builder",
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-  verification: {
-    other: {
-      "msvalidate.01": ["D019A5F91131CCB7B436CFF1C9BF1A32"],
+    verification: {
+      other: {
+        "msvalidate.01": ["D019A5F91131CCB7B436CFF1C9BF1A32"],
+      },
     },
-  },
-};
+  };
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -111,7 +142,7 @@ const jsonLd = {
     "@type": "Person",
     name: "Samy Aloulou",
   },
-  inLanguage: ["en", "ar"],
+  inLanguage: ["en", "fr", "ar"],
 };
 
 const datasetLd = {
@@ -172,14 +203,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = getServerLang();
+
   return (
     <html
-      lang="en"
+      lang={lang}
+      dir={lang === "ar" ? "rtl" : "ltr"}
       className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth`}
     >
       <head>
         <link rel="canonical" href={SITE_URL} />
         <link rel="alternate" hrefLang="en" href={SITE_URL} />
+        <link rel="alternate" hrefLang="fr" href={SITE_URL} />
         <link rel="alternate" hrefLang="ar" href={SITE_URL} />
         <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
         <script

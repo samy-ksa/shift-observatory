@@ -10,10 +10,12 @@ import {
   toSlug,
   riskLabel,
   riskLabelAr,
+  riskLabelFr,
   riskColor,
   riskBg,
   wefTrendLabel,
   wefTrendLabelAr,
+  wefTrendLabelFr,
   fmt,
 } from "@/lib/occupations";
 
@@ -128,14 +130,17 @@ function InlineBar({ value, max = 100 }: { value: number; max?: number }) {
 function ShareButtons({
   occ,
   t,
+  lang,
 }: {
   occ: Occupation;
   t: ReturnType<typeof useLang>["t"];
+  lang: string;
 }) {
   const [copied, setCopied] = useState(false);
   const url = `https://www.ksashiftobservatory.online/job/${toSlug(occ.name_en)}`;
+  const occName = lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en;
   const text = t.jobPage.shareText
-    .replace("{name}", occ.name_en)
+    .replace("{name}", occName)
     .replace("{score}", String(occ.composite));
 
   const shareUrl = (base: string) =>
@@ -219,18 +224,22 @@ export default function JobPageClient({
     );
   }
 
-  const rl = lang === "ar" ? riskLabelAr(occ.composite) : riskLabel(occ.composite);
+  const rl = lang === "ar" ? riskLabelAr(occ.composite) : lang === "fr" ? riskLabelFr(occ.composite) : riskLabel(occ.composite);
   const sectorName = sector
     ? lang === "ar"
       ? sector.name_ar
-      : sector.name_en
+      : lang === "fr"
+        ? sector.name_fr
+        : sector.name_en
     : occ.sector_id;
   const catLabel =
     occ.category === "substitution" ? jp.substitution : jp.augmentation;
   const wefLabel =
     lang === "ar"
       ? wefTrendLabelAr(occ.wef_trend)
-      : wefTrendLabel(occ.wef_trend);
+      : lang === "fr"
+        ? wefTrendLabelFr(occ.wef_trend)
+        : wefTrendLabel(occ.wef_trend);
 
   const tabs = [
     { key: "aiRisk" as const, label: jp.tabs.aiRisk },
@@ -268,7 +277,7 @@ export default function JobPageClient({
             <span className="mx-2">/</span>
             <span className="text-gray-400">{jp.breadcrumbJobs}</span>
             <span className="mx-2">/</span>
-            <span className="text-gray-200">{occ.name_en}</span>
+            <span className="text-gray-200">{lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}</span>
           </nav>
         </div>
       </div>
@@ -278,11 +287,18 @@ export default function JobPageClient({
         <section className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1 min-w-0">
             <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">
-              {occ.name_en}
+              {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
             </h1>
-            <h2 className="text-lg text-gray-400 mt-1 font-medium" dir="rtl">
-              {occ.name_ar}
-            </h2>
+            {lang !== "ar" && (
+              <h2 className="text-lg text-gray-400 mt-1 font-medium" dir="rtl">
+                {occ.name_ar}
+              </h2>
+            )}
+            {lang === "ar" && (
+              <h2 className="text-lg text-gray-400 mt-1 font-medium">
+                {occ.name_en}
+              </h2>
+            )}
 
             <div className="flex flex-wrap gap-2 mt-4">
               {/* Risk badge */}
@@ -573,7 +589,7 @@ export default function JobPageClient({
           <h3 className="text-sm font-medium text-gray-400 mb-3">
             {jp.shareTitle}
           </h3>
-          <ShareButtons occ={occ} t={t} />
+          <ShareButtons occ={occ} t={t} lang={lang} />
         </section>
 
         {/* ── Related occupations ── */}
@@ -591,13 +607,13 @@ export default function JobPageClient({
                 <div className="flex items-center justify-between">
                   <div className="min-w-0 flex-1">
                     <div className="text-sm font-medium text-white truncate group-hover:text-cyan-400 transition-colors">
-                      {r.name_en}
+                      {lang === "ar" ? r.name_ar : lang === "fr" ? r.name_fr : r.name_en}
                     </div>
                     <div
                       className="text-xs text-gray-500 truncate mt-0.5"
-                      dir="rtl"
+                      dir={lang === "ar" ? "ltr" : "rtl"}
                     >
-                      {r.name_ar}
+                      {lang === "ar" ? r.name_en : r.name_ar}
                     </div>
                   </div>
                   <span

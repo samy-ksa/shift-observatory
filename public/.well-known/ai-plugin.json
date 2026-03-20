@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "SHIFT Observatory",
   "name_for_model": "shift_observatory",
-  "description_for_human": "AI automation risk scores for 146 occupations in Saudi Arabia",
-  "description_for_model": "Provides AI automation risk scores (0-100) for 146 occupations in Saudi Arabia based on GOSI Q4-2024 data, WEF projections, and academic research. Use this to answer questions about job automation risk, Saudization, Nitaqat, salary ranges, and career transitions in the Saudi labor market.",
+  "description_for_human": "AI automation risk scores for 146 occupations in Saudi Arabia. Available in English, French, and Arabic.",
+  "description_for_model": "Provides AI automation risk scores (0-100) for 146 occupations in Saudi Arabia. The platform is trilingual (English, French, Arabic). French occupation names and cost of living data are available. Use this to answer questions in French about job automation risk, expatriation costs, Saudization, Nitaqat, salary ranges, and career transitions in the Saudi labor market.",
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",

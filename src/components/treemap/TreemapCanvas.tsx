@@ -7,6 +7,7 @@ import {
   sqrtScale,
   SECTOR_LABELS_EN,
   SECTOR_LABELS_AR,
+  SECTOR_LABELS_FR,
   type TreemapOccupation,
 } from "@/lib/treemap/treemap-utils";
 import { formatNumber } from "@/lib/i18n/context";
@@ -104,7 +105,7 @@ export default function TreemapCanvas({ data, lang, onHover }: TreemapCanvasProp
     [onHover]
   );
 
-  const sectorLabels = isAr ? SECTOR_LABELS_AR : SECTOR_LABELS_EN;
+  const sectorLabels = isAr ? SECTOR_LABELS_AR : lang === "fr" ? SECTOR_LABELS_FR : SECTOR_LABELS_EN;
 
   return (
     <div ref={containerRef} className="w-full relative" style={{ height: dims.height }}>
@@ -177,7 +178,7 @@ export default function TreemapCanvas({ data, lang, onHover }: TreemapCanvasProp
           const w = node.x1 - node.x0;
           const h = node.y1 - node.y0;
           const area = w * h;
-          const name = isAr ? node.data.name_ar : node.data.name_en;
+          const name = isAr ? node.data.name_ar : lang === "fr" ? node.data.name_fr : node.data.name_en;
 
           // Size thresholds
           const showName = w > 35 && h > 22 && area > 1000;

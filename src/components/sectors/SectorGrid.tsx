@@ -22,6 +22,7 @@ interface SectorDetail {
   id: string;
   name_en: string;
   name_ar?: string;
+  name_fr?: string;
   isic: string;
   total: number;
   saudi: number;
@@ -51,8 +52,8 @@ export default function SectorGrid() {
   const { t, lang } = useLang();
   const [selected, setSelected] = useState<SectorDetail | null>(null);
 
-  const sectorName = (s: { name_en: string; name_ar?: string }) =>
-    lang === "ar" && s.name_ar ? s.name_ar : s.name_en;
+  const sectorName = (s: { name_en: string; name_ar?: string; name_fr?: string }) =>
+    lang === "ar" && s.name_ar ? s.name_ar : lang === "fr" && s.name_fr ? s.name_fr : s.name_en;
 
   const riskLabelMap: Record<string, string> = {
     very_low: t.common.veryLow,

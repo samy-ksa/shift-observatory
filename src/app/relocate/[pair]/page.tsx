@@ -52,19 +52,33 @@ export async function generateMetadata({
   if (!parsed) return {};
   const { origin, saudi } = parsed;
 
+  // Detect francophone origins from URL params (no cookies — keeps SSG)
+  const isFrancophoneOrigin = ["paris", "casablanca", "tunis", "beirut"].includes(origin.id);
+
   // Pre-compute a quick stat for the OG title
   const medianSalary = 5000; // representative mid-level salary in local currency
   const taxSavingsLocal = Math.round(medianSalary * (origin.taxRate / 100));
   const taxSavingsSar = Math.round(taxSavingsLocal * origin.rateToSar);
 
-  const title = `Cost of Living: ${origin.name_en} vs ${saudi.name_en} — Salary & Expenses Comparison | SHIFT Observatory`;
-  const description = `Compare cost of living between ${origin.name_en} and ${saudi.name_en}, Saudi Arabia. ${origin.taxRate}% tax in ${origin.country_en} → 0% in KSA. Housing, groceries, schooling, transport — 65+ items compared. Free relocation calculator.`;
+  const title = isFrancophoneOrigin
+    ? `Coût de la vie : ${origin.name_fr} vs ${saudi.name_fr} — Comparaison salaire et dépenses | SHIFT Observatory`
+    : `Cost of Living: ${origin.name_en} vs ${saudi.name_en} — Salary & Expenses Comparison | SHIFT Observatory`;
 
-  const ogTitle =
-    origin.taxRate > 0
+  const description = isFrancophoneOrigin
+    ? `Comparez le coût de la vie entre ${origin.name_fr} et ${saudi.name_fr}, Arabie Saoudite. ${origin.taxRate}% d'impôts en ${origin.country_fr} → 0% en Arabie Saoudite. Logement, courses, scolarité, transport — 65+ postes comparés.`
+    : `Compare cost of living between ${origin.name_en} and ${saudi.name_en}, Saudi Arabia. ${origin.taxRate}% tax in ${origin.country_en} → 0% in KSA. Housing, groceries, schooling, transport — 65+ items compared. Free relocation calculator.`;
+
+  const ogTitle = isFrancophoneOrigin
+    ? origin.taxRate > 0
+      ? `${origin.name_fr} → ${saudi.name_fr} : Économisez ${origin.currencySymbol}${taxSavingsLocal}/mois (${taxSavingsSar} SAR) en impôts`
+      : `${origin.name_fr} → ${saudi.name_fr} : Comparaison complète`
+    : origin.taxRate > 0
       ? `${origin.name_en} → ${saudi.name_en}: Save ${origin.currencySymbol}${taxSavingsLocal}/month (${taxSavingsSar} SAR) in tax alone`
       : `${origin.name_en} → ${saudi.name_en}: Full cost comparison`;
-  const ogDesc = `${saudi.name_en} Mercer rank #${saudi.mercerRank} vs ${origin.name_en} #${origin.mercerRank}. 0% income tax. Compare 65+ items.`;
+
+  const ogDesc = isFrancophoneOrigin
+    ? `${saudi.name_fr} classement Mercer #${saudi.mercerRank} vs ${origin.name_fr} #${origin.mercerRank}. 0% d'impôt sur le revenu. Comparez 65+ postes.`
+    : `${saudi.name_en} Mercer rank #${saudi.mercerRank} vs ${origin.name_en} #${origin.mercerRank}. 0% income tax. Compare 65+ items.`;
 
   return {
     title,
@@ -80,12 +94,25 @@ export async function generateMetadata({
       `expat package ${saudi.name_en}`,
       `tax savings Saudi Arabia ${origin.country_en}`,
       `international school fees ${saudi.name_en}`,
+      // French keywords for francophone origins
+      ...(isFrancophoneOrigin
+        ? [
+            `coût de la vie ${origin.name_fr} vs ${saudi.name_fr}`,
+            `s'expatrier de ${origin.name_fr} à ${saudi.name_fr}`,
+            `salaire expatrié ${saudi.name_fr}`,
+            `déménager de ${origin.name_fr} en Arabie Saoudite`,
+          ]
+        : []),
     ].join(", "),
     openGraph: {
       title: ogTitle,
       description: ogDesc,
       images: [
-        `${SITE}/api/og?title=${encodeURIComponent(`${origin.name_en} → ${saudi.name_en}`)}`,
+        `${SITE}/api/og?title=${encodeURIComponent(
+          isFrancophoneOrigin
+            ? `${origin.name_fr} → ${saudi.name_fr}`
+            : `${origin.name_en} → ${saudi.name_en}`
+        )}`,
       ],
     },
     alternates: {
@@ -183,6 +210,55 @@ export default async function CityPairPage({
     ],
   };
 
+  const isFrancophone = ["paris", "casablanca", "tunis", "beirut"].includes(origin.id);
+
+  const faqSchemaFr = isFrancophone ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Est-ce que ${saudi.name_fr} est moins cher que ${origin.name_fr} ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `D'après le classement Mercer, ${saudi.name_fr} est classée #${saudi.mercerRank} tandis que ${origin.name_fr} est #${origin.mercerRank} (plus bas = plus cher). ${saudi.name_fr} est généralement ${mercerComparison === "cheaper" ? "moins chère" : "plus chère"} que ${origin.name_fr}. Cependant, le logement en compound (${rentCompound.toLocaleString()} SAR/mois) et la scolarité internationale (${schoolAnnual.toLocaleString()} SAR/an) peuvent augmenter significativement les coûts pour les familles. L'impôt sur le revenu à 0% en Arabie Saoudite compense partiellement ou totalement ces coûts supplémentaires.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Quel salaire faut-il à ${saudi.name_fr} pour vivre comme à ${origin.name_fr} ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Pour maintenir un niveau de vie équivalent pour une famille de 3 (2 adultes + 1 enfant) à ${saudi.name_fr}, il faut environ ${result.saudi_total_sar.toLocaleString()} SAR/mois. Avec 0% d'impôt sur le revenu en Arabie Saoudite (vs ${origin.taxRate}% en ${origin.country_fr}), vos économies d'impôts seules valent ${result.tax_savings_sar.toLocaleString()} SAR/mois. Nous recommandons de négocier un package d'au moins ${Math.round(result.saudi_total_sar * 1.2).toLocaleString()} SAR/mois pour inclure une marge d'épargne.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Combien coûte le loyer à ${saudi.name_fr} par rapport à ${origin.name_fr} ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Un appartement 1 chambre au centre de ${saudi.name_fr} coûte environ ${saudi.rent_apt_1br.toLocaleString()} SAR/mois. Les villas en compound pour expatriés varient de ${saudi.rent_compound_2br.toLocaleString()} à ${saudi.rent_compound_3br.toLocaleString()} SAR/mois. À ${origin.name_fr}, un 1 chambre comparable coûte ${origin.currencySymbol}${origin.rent_1br.toLocaleString()}/mois. Le loyer est ${result.rent_diff_pct > 0 ? `${result.rent_diff_pct}% plus cher` : `${Math.abs(result.rent_diff_pct)}% moins cher`} à ${saudi.name_fr} pour un logement en compound.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Combien coûtent les écoles internationales à ${saudi.name_fr} ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Les frais de scolarité internationale à ${saudi.name_fr} varient de 20 000 SAR/an (curriculum indien/pakistanais économique) à 105 000+ SAR/an (programmes américains/britanniques/IB premium). Les écoles mid-tier de curriculum américain/britannique coûtent en moyenne ${schoolAnnual.toLocaleString()} SAR/an. ${origin.schoolFree ? `L'école publique est gratuite en ${origin.country_fr}, ce qui fait de l'allocation scolaire un point de négociation essentiel pour les expatriés.` : `Comparez avec les coûts scolaires à ${origin.name_fr} pour avoir le tableau complet.`} La plupart des employeurs offrent des allocations scolaires dans les packages expatriés.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Est-ce que ça vaut le coup de déménager de ${origin.name_fr} à ${saudi.name_fr} ?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Déménager de ${origin.name_fr} à ${saudi.name_fr} peut être financièrement avantageux. Avantages clés : 0% d'impôt sur le revenu (économie de ${result.tax_savings_sar.toLocaleString()} SAR/mois), indemnité de fin de service EOSB (~${result.eosb_5yr_sar.toLocaleString()} SAR après 5 ans, non imposable). Coûts clés : logement en compound (${rentCompound.toLocaleString()} SAR/mois), scolarité internationale. Votre position nette dépend de votre package négocié. Utilisez notre calculateur ci-dessus pour modéliser votre situation avec votre salaire et taille de famille réels.`,
+        },
+      },
+    ],
+  } : null;
+
   return (
     <>
       {/* JSON-LD FAQPage schema */}
@@ -190,6 +266,13 @@ export default async function CityPairPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {isFrancophone && faqSchemaFr && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaFr) }}
+        />
+      )}
 
       {/* Server-rendered SEO summary */}
       <div className="max-w-5xl mx-auto px-4 pt-8">
