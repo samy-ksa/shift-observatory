@@ -527,6 +527,78 @@ export interface JobsDropdownStrings {
   noResults: string;
 }
 
+export interface RelocateStrings {
+  title: string;
+  subtitle: string;
+  navLabel: string;
+  /* Form */
+  currentSituation: string;
+  iLiveIn: string;
+  monthlySalary: string;
+  myOccupation: string;
+  selectOccupation: string;
+  family: string;
+  adults: string;
+  children: string;
+  saudiOptions: string;
+  targetCity: string;
+  housing: string;
+  housingApt: string;
+  housingCompound: string;
+  schoolTier: string;
+  calculate: string;
+  /* Results */
+  results: string;
+  gross: string;
+  tax: string;
+  net: string;
+  monthlyCosts: string;
+  rent: string;
+  food: string;
+  transport: string;
+  utilities: string;
+  dining: string;
+  school: string;
+  depFee: string;
+  total: string;
+  savings: string;
+  /* Key insights */
+  keyInsights: string;
+  taxSavings: string;
+  taxSaved: string;
+  rentLabel: string;
+  moreExpensive: string;
+  lessExpensive: string;
+  schooling: string;
+  freeInOrigin: string;
+  mercer: string;
+  mercerCheaper: string;
+  mercerPricier: string;
+  eosb: string;
+  eosbAfter5yr: string;
+  aiRisk: string;
+  considerTransition: string;
+  netVerdict: string;
+  verdictNeed: string;
+  verdictSavings: string;
+  negotiate: string;
+  tipNoChildren: string;
+  tipWithChildren: string;
+  tipHighTax: string;
+  tipEmergingMarket: string;
+  /* Chart */
+  comparisonChart: string;
+  /* Actions */
+  back: string;
+  tryAnother: string;
+  disclaimer: string;
+  perMonth: string;
+  taxFree: string;
+  shiftDataShows: string;
+  salaryRange: string;
+  median: string;
+}
+
 export interface Dictionary {
   nav: NavStrings;
   hero: HeroStrings;
@@ -553,4 +625,5 @@ export interface Dictionary {
   explore: ExploreStrings;
   jobsDropdown: JobsDropdownStrings;
   findJob: FindJobStrings;
+  relocate: RelocateStrings;
 }
