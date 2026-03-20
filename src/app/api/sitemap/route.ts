@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAllOccupations, toSlug } from "@/lib/occupations";
+import { ORIGIN_CITIES, SAUDI_CITIES } from "@/data/relocation-data";
 
 const SITE_URL = "https://www.ksashiftobservatory.online";
 
@@ -13,23 +14,38 @@ const STATIC_PAGES: Array<{
   { path: "/", priority: 1.0, changefreq: "weekly", hreflang: true },
   { path: "/profile", priority: 0.9, changefreq: "weekly", hreflang: true },
   { path: "/career", priority: 0.8, changefreq: "weekly", hreflang: true },
+  { path: "/relocate", priority: 0.9, changefreq: "weekly", hreflang: true },
   { path: "/privacy", priority: 0.3, changefreq: "monthly" },
   { path: "/terms", priority: 0.3, changefreq: "monthly" },
   { path: "/cookies", priority: 0.3, changefreq: "monthly" },
 ];
 
 /**
- * Generate dynamic job pages from the occupations data.
+ * Generate dynamic pages: 146 job pages + 75 relocation city pairs.
  */
 async function getDynamicPages(): Promise<
   Array<{ path: string; priority: number; changefreq: string; lastmod?: string }>
 > {
   const occupations = getAllOccupations();
-  return occupations.map((o) => ({
+  const jobPages = occupations.map((o) => ({
     path: `/job/${toSlug(o.name_en)}`,
     priority: 0.7,
     changefreq: "monthly",
   }));
+
+  // 15 origin × 5 saudi = 75 city pair pages
+  const relocationPages: { path: string; priority: number; changefreq: string }[] = [];
+  for (const o of ORIGIN_CITIES) {
+    for (const s of SAUDI_CITIES) {
+      relocationPages.push({
+        path: `/relocate/${o.id}-to-${s.id}`,
+        priority: 0.6,
+        changefreq: "monthly",
+      });
+    }
+  }
+
+  return [...jobPages, ...relocationPages];
 }
 
 function buildUrlEntry(page: {

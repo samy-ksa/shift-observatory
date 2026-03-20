@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
 import { type Occupation, fmt } from "@/lib/occupations";
 import {
@@ -331,6 +332,28 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
               </svg>
             </a>
           ))}
+        </div>
+
+        {/* Relocation calculator link */}
+        <div className="mt-6 border border-cyan-500/20 bg-cyan-400/5 rounded-lg p-4">
+          <Link
+            href="/relocate"
+            className="flex items-center gap-3 group"
+          >
+            <span className="text-lg">💰</span>
+            <div>
+              <p className="text-sm font-medium text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                {isAr
+                  ? "هل تخطط للانتقال لهذه الوظيفة؟ قارن تكلفة المعيشة ←"
+                  : "Planning to relocate for this job? Compare cost of living →"}
+              </p>
+              <p className="text-xs text-gray-500 mt-0.5">
+                {isAr
+                  ? "احسب راتبك الحقيقي وقوتك الشرائية في السعودية"
+                  : "Calculate your real salary and purchasing power in Saudi Arabia"}
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

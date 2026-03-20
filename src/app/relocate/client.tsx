@@ -153,13 +153,19 @@ function InfoBox({ text }: { text: string }) {
 /* Main Component                                                       */
 /* ------------------------------------------------------------------ */
 
-export default function RelocateClient() {
+export default function RelocateClient({
+  defaultOriginId,
+  defaultSaudiId,
+}: {
+  defaultOriginId?: string;
+  defaultSaudiId?: string;
+} = {}) {
   const { t, lang, dir } = useLang();
   const r = t.relocate;
   const resultsRef = useRef<HTMLDivElement>(null);
 
   /* ---- Form state ---- */
-  const [originId, setOriginId] = useState("paris");
+  const [originId, setOriginId] = useState(defaultOriginId || "paris");
   const [salaryStr, setSalaryStr] = useState("");
   const [occSearch, setOccSearch] = useState("");
   const [occDropOpen, setOccDropOpen] = useState(false);
@@ -168,7 +174,7 @@ export default function RelocateClient() {
   const [children, setChildren] = useState(1);
   const [singleIncome, setSingleIncome] = useState(false);
   const [partnerSalaryStr, setPartnerSalaryStr] = useState("");
-  const [saudiId, setSaudiId] = useState("riyadh");
+  const [saudiId, setSaudiId] = useState(defaultSaudiId || "riyadh");
   const [housing, setHousing] = useState<HousingType>("compound");
   const [schoolTierId, setSchoolTierId] = useState("midtier");
   const [showResults, setShowResults] = useState(false);
@@ -1052,6 +1058,31 @@ export default function RelocateClient() {
           <p className="text-xs text-text-muted mt-6 max-w-3xl">{r.disclaimer} {r.exchangeRateNote}</p>
         </motion.div>
       )}
+
+      {/* ---- POPULAR COMPARISONS — internal links for SEO ---- */}
+      <div className="max-w-5xl mx-auto px-4 py-10">
+        <h2 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">
+          {lang === "ar" ? "مقارنات شائعة" : "POPULAR COMPARISONS"}
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {[
+            ["paris", "riyadh"], ["london", "riyadh"], ["new-york", "riyadh"], ["cairo", "riyadh"],
+            ["paris", "jeddah"], ["mumbai", "jeddah"], ["dubai", "riyadh"], ["manila", "dammam"],
+            ["sydney", "riyadh"], ["amman", "jeddah"], ["casablanca", "riyadh"], ["tunis", "jeddah"],
+            ["london", "jeddah"], ["beirut", "riyadh"], ["new-york", "jeddah"], ["cairo", "makkah"],
+          ].map(([o, s]) => {
+            const oCity = ORIGIN_CITIES.find((c) => c.id === o);
+            const sCity = SAUDI_CITIES.find((c) => c.id === s);
+            if (!oCity || !sCity) return null;
+            return (
+              <Link key={`${o}-${s}`} href={`/relocate/${o}-to-${s}`}
+                className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-text-muted hover:text-cyan-400 hover:border-cyan-400/30 transition-colors">
+                {lang === "ar" ? `${oCity.name_ar} → ${sCity.name_ar}` : `${oCity.name_en} → ${sCity.name_en}`}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
 
       {/* Hidden scrollbar CSS */}
       <style jsx global>{`
