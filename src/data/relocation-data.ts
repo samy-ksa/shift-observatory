@@ -275,7 +275,7 @@ export const ORIGIN_CITIES: OriginCity[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Saudi Cities (3)                                                     */
+/* Saudi Cities (5)                                                     */
 /* ------------------------------------------------------------------ */
 
 export const SAUDI_CITIES: SaudiCity[] = [
@@ -308,6 +308,26 @@ export const SAUDI_CITIES: SaudiCity[] = [
     mercerRank: 115,
     desc_en: "Oil & gas hub — Aramco HQ, industrial city, lowest cost of living",
     desc_ar: "مركز النفط والغاز — مقر أرامكو، مدينة صناعية، أقل تكلفة معيشة",
+  },
+  {
+    id: "makkah",
+    name_en: "Makkah", name_ar: "مكة المكرمة",
+    rent_apt_1br: 2500, rent_apt_2br: 4000, rent_apt_3br: 6000,
+    rent_compound_2br: 7000, rent_compound_3br: 10000,
+    food: 1700, car: 700, utilities: 480, dining: 400,
+    mercerRank: 115,
+    desc_en: "Holy city — religious tourism hub, Hajj & Umrah economy, growing tech sector",
+    desc_ar: "المدينة المقدسة — مركز السياحة الدينية، اقتصاد الحج والعمرة، قطاع تقني متنامي",
+  },
+  {
+    id: "madinah",
+    name_en: "Madinah", name_ar: "المدينة المنورة",
+    rent_apt_1br: 2000, rent_apt_2br: 3200, rent_apt_3br: 5000,
+    rent_compound_2br: 6000, rent_compound_3br: 8500,
+    food: 1600, car: 650, utilities: 450, dining: 380,
+    mercerRank: 120,
+    desc_en: "Holy city — knowledge economy, Islamic university hub, growing service sector",
+    desc_ar: "المدينة المقدسة — اقتصاد المعرفة، مركز الجامعات الإسلامية، قطاع خدمات متنامي",
   },
 ];
 

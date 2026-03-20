@@ -648,6 +648,28 @@ export interface RelocateStrings {
   salaryRange: string;
   median: string;
   vsCity: string;
+  /* Tooltips */
+  tooltipEosb: string;
+  tooltipMercer: string;
+  tooltipSar: string;
+  tooltipNitaqat: string;
+  tooltipIqama: string;
+  tooltipGosi: string;
+  tooltipDepFee: string;
+  tooltipVat: string;
+  tooltipCompound: string;
+  /* Price Pulse context */
+  pricePulseSubtitle: string;
+  pricePulseVs: string;
+  ppCity: string;
+  ppOriginPrice: string;
+  /* Exchange rate */
+  exchangeRate: string;
+  exchangeRateUpdated: string;
+  exchangeRateNote: string;
+  /* Dual currency */
+  approx: string;
+  equivalent: string;
 }
 
 export interface Dictionary {
