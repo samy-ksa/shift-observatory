@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
-
 .font-arabic {
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-family: var(--font-arabic), sans-serif;
 }
 
 /* RTL overrides */

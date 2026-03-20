@@ -1,18 +1,19 @@
 "use client";
 
 import { useState, useMemo, useRef, useCallback } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  Radar,
-  Legend,
-  ResponsiveContainer,
-  Tooltip as RTooltip,
-} from "recharts";
+
+const RadarChartSection = dynamic(
+  () => import("./RadarChartSection"),
+  {
+    loading: () => (
+      <div className="h-[500px] animate-pulse bg-gray-900/50 rounded-xl" />
+    ),
+    ssr: false,
+  },
+);
 import { useLang } from "@/lib/i18n/context";
 import LangToggle from "@/components/ui/LangToggle";
 import {
@@ -879,62 +880,24 @@ export default function RelocateClient({
                 </div>
               </div>
 
-              {/* ═══════ RADAR CHART ═══════ */}
-              {radarData.length > 0 && (
-                <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">{r.radarTitle}</h3>
-                  <div className="w-full h-[400px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
-                        <PolarGrid stroke="#374151" />
-                        <PolarAngleAxis dataKey="axis" tick={{ fill: "#9CA3AF", fontSize: 11 }} />
-                        <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: "#6B7280", fontSize: 9 }} axisLine={false} />
-                        <Radar name={originName} dataKey="origin" stroke="#D4A853" fill="#D4A853" fillOpacity={0.2} strokeWidth={2} />
-                        <Radar name={saudiName} dataKey="saudi" stroke="#22D3EE" fill="#22D3EE" fillOpacity={0.2} strokeWidth={2} />
-                        <RTooltip
-                          contentStyle={{ backgroundColor: "#111827", border: "1px solid #374151", borderRadius: "8px", fontSize: 12 }}
-                          labelStyle={{ color: "#9CA3AF" }}
-                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          formatter={((value: any, name: any) => [`${value ?? 0}/100`, name]) as any}
-                        />
-                        <Legend wrapperStyle={{ fontSize: 12, color: "#9CA3AF" }} />
-                      </RadarChart>
-                    </ResponsiveContainer>
-                  </div>
-                  {/* Legend with actual costs */}
-                  <div className="flex flex-wrap gap-4 mt-3 text-xs text-gray-400 justify-center">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#D4A853]" />
-                      {originName}: {fmtLocal(radarData.reduce((s, d) => s + d.originSar, 0) / originRate, origin.currencySymbol)}{r.perMonth}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
-                      {saudiName}: {fmtSar(radarData.reduce((s, d) => s + d.saudiSar, 0))}{r.perMonth}
-                    </span>
-                  </div>
-
-                  {/* Radar summary bullets */}
-                  {radarBullets.length > 0 && (
-                    <div className="mt-4 pt-3 border-t border-white/10">
-                      <p className="text-xs font-bold text-text-muted uppercase tracking-wider mb-2">{r.radarSummary}</p>
-                      <ul className="space-y-1">
-                        {radarBullets.map((b) => (
-                          <li key={b.label} className="text-xs flex items-center gap-2">
-                            <span className={`font-mono font-bold ${b.cheaper ? "text-green-400" : "text-red-400"}`}>
-                              {b.diffPct > 0 ? "+" : ""}{b.diffPct}%
-                            </span>
-                            <span className="text-text-secondary">
-                              {b.label}: {b.cheaper
-                                ? r.radarCheaperBy.replace("{city}", saudiName).replace("{pct}", String(Math.abs(b.diffPct)))
-                                : r.radarPricierBy.replace("{city}", saudiName).replace("{pct}", String(b.diffPct))}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              )}
+              {/* ═══════ RADAR CHART (lazy loaded — Recharts) ═══════ */}
+              <RadarChartSection
+                radarData={radarData}
+                radarBullets={radarBullets}
+                originName={originName}
+                saudiName={saudiName}
+                originRate={originRate}
+                currencySymbol={origin.currencySymbol}
+                fmtLocal={fmtLocal}
+                fmtSar={fmtSar}
+                r={{
+                  radarTitle: r.radarTitle,
+                  perMonth: r.perMonth,
+                  radarSummary: r.radarSummary,
+                  radarCheaperBy: r.radarCheaperBy,
+                  radarPricierBy: r.radarPricierBy,
+                }}
+              />
 
               {/* ═══════ BAR CHART with dual currency & diff lines ═══════ */}
               <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">

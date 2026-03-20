@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n/context";
 import CookieConsent from "@/components/legal/CookieConsent";
@@ -21,6 +21,13 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["arabic"],
+  variable: "--font-arabic",
   display: "swap",
 });
 
@@ -71,7 +78,6 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Samy Aloulou" }],
     creator: "Samy Aloulou",
     alternates: {
-      canonical: SITE_URL,
       languages: {
         en: SITE_URL,
         fr: SITE_URL,
@@ -209,10 +215,13 @@ export default function RootLayout({
     <html
       lang={lang}
       dir={lang === "ar" ? "rtl" : "ltr"}
-      className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth`}
+      className={`${dmSans.variable} ${jetBrainsMono.variable} ${ibmPlexArabic.variable} scroll-smooth`}
     >
       <head>
-        <link rel="canonical" href={SITE_URL} />
+        {/* Preconnect to Google Fonts CDN for Arabic font subset */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <link rel="alternate" hrefLang="en" href={SITE_URL} />
         <link rel="alternate" hrefLang="fr" href={SITE_URL} />
         <link rel="alternate" hrefLang="ar" href={SITE_URL} />

@@ -259,6 +259,17 @@ export default async function CityPairPage({
     ],
   } : null;
 
+  /* ---- Breadcrumb structured data ---- */
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "SHIFT Observatory", item: SITE },
+      { "@type": "ListItem", position: 2, name: "Relocation Calculator", item: `${SITE}/relocate` },
+      { "@type": "ListItem", position: 3, name: `${origin.name_en} to ${saudi.name_en}`, item: `${SITE}/relocate/${pair}` },
+    ],
+  };
+
   return (
     <>
       {/* JSON-LD FAQPage schema */}
@@ -273,6 +284,12 @@ export default async function CityPairPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaFr) }}
         />
       )}
+
+      {/* JSON-LD BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Server-rendered SEO summary */}
       <div className="max-w-5xl mx-auto px-4 pt-8">

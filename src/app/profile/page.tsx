@@ -2,8 +2,9 @@ import RiskProfileWizard from "@/components/profile/RiskProfileWizard";
 import type { Metadata } from "next";
 import { getServerLang } from "@/lib/server-lang";
 
+const SITE = "https://www.ksashiftobservatory.online";
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.ksashiftobservatory.online";
+  process.env.NEXT_PUBLIC_SITE_URL || SITE;
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = getServerLang();
@@ -34,6 +35,9 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       images: [`${BASE_URL}/api/og/profile`],
+    },
+    alternates: {
+      canonical: `${SITE}/profile`,
     },
   };
 }

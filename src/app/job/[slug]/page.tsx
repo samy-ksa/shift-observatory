@@ -224,6 +224,17 @@ export default function JobPage({ params }: { params: { slug: string } }) {
     },
   };
 
+  /* ---- Breadcrumb structured data ---- */
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "SHIFT Observatory", item: SITE },
+      { "@type": "ListItem", position: 2, name: "Occupations", item: `${SITE}/career` },
+      { "@type": "ListItem", position: 3, name: occ.name_en, item: `${SITE}/job/${params.slug}` },
+    ],
+  };
+
   return (
     <>
       <script
@@ -237,6 +248,10 @@ export default function JobPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <JobPageClient
         occupation={occ}
