@@ -345,11 +345,15 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
               <p className="text-sm font-medium text-cyan-400 group-hover:text-cyan-300 transition-colors">
                 {isAr
                   ? "هل تخطط للانتقال لهذه الوظيفة؟ قارن تكلفة المعيشة ←"
-                  : "Planning to relocate for this job? Compare cost of living →"}
+                  : lang === "fr"
+                  ? "Vous envisagez de d\u00e9m\u00e9nager pour ce poste ? Comparez le co\u00fbt de la vie \u2192"
+                  : "Planning to relocate for this job? Compare cost of living \u2192"}
               </p>
               <p className="text-xs text-gray-500 mt-0.5">
                 {isAr
                   ? "احسب راتبك الحقيقي وقوتك الشرائية في السعودية"
+                  : lang === "fr"
+                  ? "Calculez votre vrai salaire et pouvoir d\u2019achat en Arabie Saoudite"
                   : "Calculate your real salary and purchasing power in Saudi Arabia"}
               </p>
             </div>

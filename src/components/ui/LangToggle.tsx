@@ -1,10 +1,17 @@
 "use client";
 
 import { useLang } from "@/lib/i18n/context";
+import type { Lang } from "@/lib/i18n/context";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import JobsDropdown from "@/components/nav/JobsDropdown";
 import MobileJobSearch from "@/components/nav/MobileJobSearch";
+
+const LANG_OPTIONS: { code: Lang; label: string }[] = [
+  { code: "en", label: "EN" },
+  { code: "fr", label: "FR" },
+  { code: "ar", label: "AR" },
+];
 
 export default function LangToggle() {
   const { lang, setLang, t } = useLang();
@@ -13,7 +20,7 @@ export default function LangToggle() {
   const pages = [
     {
       href: "/",
-      label: lang === "ar" ? "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629" : "Dashboard",
+      label: lang === "ar" ? "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629" : lang === "fr" ? "Tableau de bord" : "Dashboard",
     },
     {
       href: "/career",
@@ -33,6 +40,27 @@ export default function LangToggle() {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
+
+  /* Language selector — 3 small buttons: EN | FR | AR */
+  const LangSelector = ({ size = "sm" }: { size?: "sm" | "xs" }) => (
+    <div className="flex items-center gap-0.5 font-mono">
+      {LANG_OPTIONS.map((opt, i) => (
+        <span key={opt.code} className="flex items-center">
+          {i > 0 && <span className="text-gray-600 mx-1">|</span>}
+          <button
+            onClick={() => setLang(opt.code)}
+            className={`${size === "xs" ? "text-xs" : "text-xs"} font-mono transition-colors ${
+              lang === opt.code
+                ? "text-white font-bold"
+                : "text-gray-500 hover:text-gray-300"
+            }`}
+          >
+            {opt.label}
+          </button>
+        </span>
+      ))}
+    </div>
+  );
 
   return (
     <>
@@ -66,12 +94,9 @@ export default function LangToggle() {
             ))}
             <JobsDropdown />
           </div>
-          <button
-            onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm hover:bg-white/10 transition-colors text-text-secondary"
-          >
-            {lang === "en" ? "\u0627\u0644\u0639\u0631\u0628\u064A\u0629" : "English"}
-          </button>
+          <div className="bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+            <LangSelector size="sm" />
+          </div>
         </div>
       </nav>
 
@@ -89,12 +114,9 @@ export default function LangToggle() {
               OBS
             </span>
           </Link>
-          <button
-            onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs hover:bg-white/10 transition-colors text-text-secondary"
-          >
-            {lang === "en" ? "\u0639\u0631\u0628\u064A" : "EN"}
-          </button>
+          <div className="bg-white/5 border border-white/10 rounded-full px-3 py-1">
+            <LangSelector size="xs" />
+          </div>
         </div>
       </nav>
 

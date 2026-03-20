@@ -84,6 +84,28 @@ function sarToLocal(sar: number, rate: number, sym: string) {
   return `~${sym}${(sar / rate).toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
 }
 
+/** Trilingual name resolver */
+function ln(lang: string, obj: { name_en: string; name_ar: string; name_fr?: string }): string {
+  if (lang === "ar") return obj.name_ar;
+  if (lang === "fr" && obj.name_fr) return obj.name_fr;
+  return obj.name_en;
+}
+function lnLabel(lang: string, obj: { label_en: string; label_ar: string; label_fr?: string }): string {
+  if (lang === "ar") return obj.label_ar;
+  if (lang === "fr" && obj.label_fr) return obj.label_fr;
+  return obj.label_en;
+}
+function lnCountry(lang: string, obj: { country_en: string; country_ar: string; country_fr?: string }): string {
+  if (lang === "ar") return obj.country_ar;
+  if (lang === "fr" && obj.country_fr) return obj.country_fr;
+  return obj.country_en;
+}
+function lnCat(lang: string, obj: { name_en: string; name_ar: string; name_fr?: string }): string {
+  if (lang === "ar") return obj.name_ar;
+  if (lang === "fr" && obj.name_fr) return obj.name_fr;
+  return obj.name_en;
+}
+
 function fuzzyScore(query: string, name: string): number {
   const q = query.toLowerCase();
   const n = name.toLowerCase();
@@ -221,7 +243,7 @@ export default function RelocateClient({
   /* ---- Occupation salary info ---- */
   const occInfo = useMemo(() => {
     if (!selectedOcc) return null;
-    const name = lang === "ar" ? selectedOcc.name_ar : selectedOcc.name_en;
+    const name = ln(lang, selectedOcc);
     return {
       name, entry: fmtN(selectedOcc.salary_entry_sar), senior: fmtN(selectedOcc.salary_senior_sar),
       median: fmtN(selectedOcc.salary_median_sar), composite: selectedOcc.composite, slug: toSlug(selectedOcc.name_en),
@@ -342,8 +364,8 @@ export default function RelocateClient({
   /* ---- Share ---- */
   const handleShareLinkedIn = () => {
     if (!result) return;
-    const originN = lang === "ar" ? origin.name_ar : origin.name_en;
-    const saudiN = lang === "ar" ? saudi.name_ar : saudi.name_en;
+    const originN = ln(lang, origin);
+    const saudiN = ln(lang, saudi);
     const text = r.shareText.replace("{origin}", originN).replace("{saudi}", saudiN).replace("{amount}", fmtN(result.tax_savings_sar));
     const url = "https://www.ksashiftobservatory.online/relocate";
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`, "_blank");
@@ -364,8 +386,8 @@ export default function RelocateClient({
     { id: "ksa_fees", label: r.tabKsaFees },
   ];
 
-  const saudiName = lang === "ar" ? saudi.name_ar : saudi.name_en;
-  const originName = lang === "ar" ? origin.name_ar : origin.name_en;
+  const saudiName = ln(lang, saudi);
+  const originName = ln(lang, origin);
 
   /* ================================================================ */
   /* RENDER                                                             */
@@ -409,7 +431,7 @@ export default function RelocateClient({
                 <select value={originId} onChange={(e) => setOriginId(e.target.value)}
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {ORIGIN_CITIES.map((c) => (
-                    <option key={c.id} value={c.id}>{lang === "ar" ? `${c.name_ar}، ${c.country_ar}` : `${c.name_en}, ${c.country_en}`}</option>
+                    <option key={c.id} value={c.id}>{`${ln(lang, c)}, ${lnCountry(lang, c)}`}</option>
                   ))}
                 </select>
               </div>
@@ -439,9 +461,9 @@ export default function RelocateClient({
                     {filteredOccs.length > 0 ? filteredOccs.map(({ occ }) => (
                       <button key={occ.name_en}
                         className="w-full text-left px-4 py-2.5 text-sm hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-                        onClick={() => { setSelectedOcc(occ); setOccSearch(lang === "ar" ? occ.name_ar : occ.name_en); setOccDropOpen(false); }}>
+                        onClick={() => { setSelectedOcc(occ); setOccSearch(ln(lang, occ)); setOccDropOpen(false); }}>
                         <div className="flex items-center justify-between">
-                          <span className="text-text-primary">{lang === "ar" ? occ.name_ar : occ.name_en}</span>
+                          <span className="text-text-primary">{ln(lang, occ)}</span>
                           <span className={`text-xs font-mono ${riskColor(occ.composite)}`}>{occ.composite}/100</span>
                         </div>
                         <div className="text-xs text-text-muted mt-0.5 font-mono">{fmtN(occ.salary_entry_sar)}-{fmtN(occ.salary_senior_sar)} SAR{r.perMonth}</div>
@@ -528,7 +550,7 @@ export default function RelocateClient({
                 <select value={saudiId} onChange={(e) => setSaudiId(e.target.value)}
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {SAUDI_CITIES.map((c) => (
-                    <option key={c.id} value={c.id}>{lang === "ar" ? c.name_ar : c.name_en}</option>
+                    <option key={c.id} value={c.id}>{ln(lang, c)}</option>
                   ))}
                 </select>
               </div>
@@ -555,7 +577,7 @@ export default function RelocateClient({
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40">
                   {SCHOOL_TIERS.map((s) => (
                     <option key={s.id} value={s.id}>
-                      {lang === "ar" ? s.label_ar : s.label_en}
+                      {lnLabel(lang, s)}
                       {s.monthly_sar > 0 ? ` — ${fmtN(s.monthly_sar)} SAR${r.perMonth}` : ""}
                     </option>
                   ))}
@@ -634,7 +656,7 @@ export default function RelocateClient({
                       <span key={item.id} className="inline-flex items-center">
                         {i > 0 && <span className="text-gray-700 mx-2">|</span>}
                         <span className={item.trend === "up" ? "text-red-400" : "text-green-400"}>{item.trend === "up" ? "▲" : "▼"}</span>
-                        <span className="text-text-secondary ml-1">{lang === "ar" ? item.name_ar : item.name_en}</span>
+                        <span className="text-text-secondary ml-1">{ln(lang, item)}</span>
                         {price !== undefined && <span className="text-text-muted ml-1">{fmtN(price)} SAR</span>}
                         <span className={`ml-1 ${item.trend === "up" ? "text-red-400" : "text-green-400"}`}>
                           {item.trendPct! > 0 ? "+" : ""}{item.trendPct}%
@@ -735,7 +757,7 @@ export default function RelocateClient({
                   )}
                   {children > 0 && (
                     <>
-                      <CheckItem text={r.checkEducation.replace("{needed}", fmtN(schoolTier.monthly_sar * 12)).replace("{tier}", lang === "ar" ? schoolTier.label_ar : schoolTier.label_en)} />
+                      <CheckItem text={r.checkEducation.replace("{needed}", fmtN(schoolTier.monthly_sar * 12)).replace("{tier}", lnLabel(lang, schoolTier))} />
                       {schoolTier.monthly_sar * 12 > 40000 && (
                         <p className="text-xs text-amber-400 ml-7">
                           → {r.checkEducationGap.replace("{gap}", fmtN(schoolTier.monthly_sar * 12 - 40000))}
@@ -984,7 +1006,7 @@ export default function RelocateClient({
                           const price = item.prices[saudiCostId];
                           return (
                             <tr key={item.id} className={`border-b border-white/5 ${i % 2 === 0 ? "bg-white/[0.02]" : ""}`}>
-                              <td className="py-2 px-3 text-text-secondary">{lang === "ar" ? item.name_ar : item.name_en}</td>
+                              <td className="py-2 px-3 text-text-secondary">{ln(lang, item)}</td>
                               <td className="py-2 px-3 text-right text-text-muted text-xs">{saudiName}</td>
                               <td className="py-2 px-3 text-right font-mono text-text-primary">{price !== undefined ? fmtN(price) + " SAR" : "—"}</td>
                               {originCostId && (
@@ -1026,7 +1048,7 @@ export default function RelocateClient({
                         <div key={si.id} className="border border-gray-800/50 rounded-md p-3 bg-gray-900/50">
                           <div className="flex items-start justify-between gap-2">
                             <div>
-                              <p className="text-sm text-text-primary font-medium">{lang === "ar" ? si.name_ar : si.name_en}</p>
+                              <p className="text-sm text-text-primary font-medium">{ln(lang, si)}</p>
                               <span className="inline-block mt-1 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">{si.subcategory}</span>
                             </div>
                             <div className="text-right flex-shrink-0">
@@ -1062,7 +1084,7 @@ export default function RelocateClient({
       {/* ---- POPULAR COMPARISONS — internal links for SEO ---- */}
       <div className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">
-          {lang === "ar" ? "مقارنات شائعة" : "POPULAR COMPARISONS"}
+          {lang === "ar" ? "\u0645\u0642\u0627\u0631\u0646\u0627\u062A \u0634\u0627\u0626\u0639\u0629" : lang === "fr" ? "COMPARAISONS POPULAIRES" : "POPULAR COMPARISONS"}
         </h2>
         <div className="flex flex-wrap gap-2">
           {[
@@ -1077,7 +1099,7 @@ export default function RelocateClient({
             return (
               <Link key={`${o}-${s}`} href={`/relocate/${o}-to-${s}`}
                 className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-text-muted hover:text-cyan-400 hover:border-cyan-400/30 transition-colors">
-                {lang === "ar" ? `${oCity.name_ar} → ${sCity.name_ar}` : `${oCity.name_en} → ${sCity.name_en}`}
+                {`${ln(lang, oCity)} \u2192 ${ln(lang, sCity)}`}
               </Link>
             );
           })}
@@ -1129,8 +1151,8 @@ function CheckItem({ text }: { text: string }) {
 function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCategoryComparison }: {
   categories: CostCategory[];
   originCostId: CityId | null;
-  origin: { name_en: string; name_ar: string; currency: string; currencySymbol: string };
-  saudi: { name_en: string; name_ar: string };
+  origin: { name_en: string; name_ar: string; name_fr?: string; currency: string; currencySymbol: string };
+  saudi: { name_en: string; name_ar: string; name_fr?: string };
   lang: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   r: any;
@@ -1147,9 +1169,9 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
     );
   }
 
-  const originLabel = lang === "ar" ? origin.name_ar : origin.name_en;
-  const saudiLabel = lang === "ar" ? saudi.name_ar : saudi.name_en;
-  const catNames = categories.map((c) => COST_CATEGORIES[c]?.name_en || c).join(" & ");
+  const originLabel = ln(lang, origin as { name_en: string; name_ar: string; name_fr?: string });
+  const saudiLabel = ln(lang, saudi as { name_en: string; name_ar: string; name_fr?: string });
+  const catNames = categories.map((c) => lnCat(lang, COST_CATEGORIES[c]) || c).join(" & ");
 
   return (
     <div className="bg-bg-card/60 border border-white/10 rounded-xl overflow-hidden">
@@ -1176,7 +1198,7 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
             {data.map((row, i) => (
               <tr key={row.item.id} className={`border-b border-white/5 ${i % 2 === 0 ? "bg-white/[0.02]" : ""}`}>
                 <td className="py-2 px-4 text-text-secondary">
-                  {lang === "ar" ? row.item.name_ar : row.item.name_en}
+                  {ln(lang, row.item)}
                   {row.item.trend && row.item.trend !== "stable" && (
                     <span className={`ml-1 text-[10px] ${row.item.trend === "up" ? "text-red-400" : "text-green-400"}`}>
                       {row.item.trend === "up" ? "▲" : "▼"}

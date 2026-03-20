@@ -111,7 +111,7 @@ interface KSAMapProps {
   regions: RegionData[];
   selectedRegion: string | null;
   onSelectRegion: (name: string) => void;
-  lang?: "en" | "ar";
+  lang?: "en" | "fr" | "ar";
   riskLabels?: Record<string, string>;
   legendLabels?: { lower: string; higher: string; giga: string };
 }

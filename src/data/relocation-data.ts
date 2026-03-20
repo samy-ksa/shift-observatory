@@ -10,8 +10,10 @@ export interface OriginCity {
   id: string;
   name_en: string;
   name_ar: string;
+  name_fr: string;
   country_en: string;
   country_ar: string;
+  country_fr: string;
   currency: string;          // "EUR", "USD", "GBP" …
   currencySymbol: string;    // "€", "$", "£" …
   rateToSar: number;         // 1 local = X SAR
@@ -31,6 +33,7 @@ export interface SaudiCity {
   id: string;
   name_en: string;
   name_ar: string;
+  name_fr: string;
   rent_apt_1br: number;      // SAR — 1BR apartment
   rent_apt_2br: number;      // SAR — 2BR apartment
   rent_apt_3br: number;      // SAR — 3BR apartment
@@ -51,6 +54,7 @@ export interface SchoolTier {
   id: string;
   label_en: string;
   label_ar: string;
+  label_fr: string;
   monthly_sar: number;       // per child, monthly
 }
 
@@ -111,10 +115,10 @@ export const DEPENDENT_FEE_SAR = 400; // 4,800/yr per dep
 /* ------------------------------------------------------------------ */
 
 export const SCHOOL_TIERS: SchoolTier[] = [
-  { id: "public",  label_en: "Public / Arabic",         label_ar: "حكومي / عربي",             monthly_sar: 0 },
-  { id: "budget",  label_en: "Budget International",    label_ar: "دولي اقتصادي",             monthly_sar: 2500 },
-  { id: "midtier", label_en: "Mid-tier (US/UK curr.)",  label_ar: "متوسط (منهج أمريكي/بريطاني)", monthly_sar: 5400 },
-  { id: "premium", label_en: "Premium (IB/top tier)",   label_ar: "مميز (IB/بكالوريا دولية)",  monthly_sar: 8500 },
+  { id: "public",  label_en: "Public / Arabic",         label_ar: "حكومي / عربي",             label_fr: "Public / Arabe",                monthly_sar: 0 },
+  { id: "budget",  label_en: "Budget International",    label_ar: "دولي اقتصادي",             label_fr: "International économique",       monthly_sar: 2500 },
+  { id: "midtier", label_en: "Mid-tier (US/UK curr.)",  label_ar: "متوسط (منهج أمريكي/بريطاني)", label_fr: "Moyen (curr. US/UK)",          monthly_sar: 5400 },
+  { id: "premium", label_en: "Premium (IB/top tier)",   label_ar: "مميز (IB/بكالوريا دولية)",  label_fr: "Premium (IB/haut de gamme)",    monthly_sar: 8500 },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -124,8 +128,8 @@ export const SCHOOL_TIERS: SchoolTier[] = [
 export const ORIGIN_CITIES: OriginCity[] = [
   {
     id: "paris",
-    name_en: "Paris", name_ar: "باريس",
-    country_en: "France", country_ar: "فرنسا",
+    name_en: "Paris", name_ar: "باريس", name_fr: "Paris",
+    country_en: "France", country_ar: "فرنسا", country_fr: "France",
     currency: "EUR", currencySymbol: "€", rateToSar: 4.10,
     taxRate: 35,
     rent_1br: 1400, rent_2br: 2200, rent_3br: 3200,
@@ -134,8 +138,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "new-york",
-    name_en: "New York", name_ar: "نيويورك",
-    country_en: "USA", country_ar: "أمريكا",
+    name_en: "New York", name_ar: "نيويورك", name_fr: "New York",
+    country_en: "USA", country_ar: "أمريكا", country_fr: "États-Unis",
     currency: "USD", currencySymbol: "$", rateToSar: 3.75,
     taxRate: 37,
     rent_1br: 3200, rent_2br: 4500, rent_3br: 5800,
@@ -144,8 +148,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "san-francisco",
-    name_en: "San Francisco", name_ar: "سان فرانسيسكو",
-    country_en: "USA", country_ar: "أمريكا",
+    name_en: "San Francisco", name_ar: "سان فرانسيسكو", name_fr: "San Francisco",
+    country_en: "USA", country_ar: "أمريكا", country_fr: "États-Unis",
     currency: "USD", currencySymbol: "$", rateToSar: 3.75,
     taxRate: 40,
     rent_1br: 2900, rent_2br: 4200, rent_3br: 5400,
@@ -154,8 +158,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "london",
-    name_en: "London", name_ar: "لندن",
-    country_en: "UK", country_ar: "بريطانيا",
+    name_en: "London", name_ar: "لندن", name_fr: "Londres",
+    country_en: "UK", country_ar: "بريطانيا", country_fr: "Royaume-Uni",
     currency: "GBP", currencySymbol: "£", rateToSar: 4.80,
     taxRate: 33,
     rent_1br: 2000, rent_2br: 2800, rent_3br: 3800,
@@ -164,8 +168,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "dubai",
-    name_en: "Dubai", name_ar: "دبي",
-    country_en: "UAE", country_ar: "الإمارات",
+    name_en: "Dubai", name_ar: "دبي", name_fr: "Duba\u00ef",
+    country_en: "UAE", country_ar: "الإمارات", country_fr: "\u00c9mirats arabes unis",
     currency: "AED", currencySymbol: "د.إ", rateToSar: 1.02,
     taxRate: 0,
     rent_1br: 6500, rent_2br: 10000, rent_3br: 15000,
@@ -174,8 +178,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "cairo",
-    name_en: "Cairo", name_ar: "القاهرة",
-    country_en: "Egypt", country_ar: "مصر",
+    name_en: "Cairo", name_ar: "القاهرة", name_fr: "Le Caire",
+    country_en: "Egypt", country_ar: "مصر", country_fr: "\u00c9gypte",
     currency: "EGP", currencySymbol: "ج.م", rateToSar: 0.076,
     taxRate: 22.5,
     rent_1br: 12000, rent_2br: 18000, rent_3br: 25000,
@@ -184,8 +188,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "amman",
-    name_en: "Amman", name_ar: "عمّان",
-    country_en: "Jordan", country_ar: "الأردن",
+    name_en: "Amman", name_ar: "عمّان", name_fr: "Amman",
+    country_en: "Jordan", country_ar: "الأردن", country_fr: "Jordanie",
     currency: "JOD", currencySymbol: "د.أ", rateToSar: 5.29,
     taxRate: 20,
     rent_1br: 300, rent_2br: 450, rent_3br: 650,
@@ -194,8 +198,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "beirut",
-    name_en: "Beirut", name_ar: "بيروت",
-    country_en: "Lebanon", country_ar: "لبنان",
+    name_en: "Beirut", name_ar: "بيروت", name_fr: "Beyrouth",
+    country_en: "Lebanon", country_ar: "لبنان", country_fr: "Liban",
     currency: "USD", currencySymbol: "$", rateToSar: 3.75,
     taxRate: 25,
     rent_1br: 500, rent_2br: 700, rent_3br: 1000,
@@ -204,8 +208,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "mumbai",
-    name_en: "Mumbai", name_ar: "مومباي",
-    country_en: "India", country_ar: "الهند",
+    name_en: "Mumbai", name_ar: "مومباي", name_fr: "Bombay",
+    country_en: "India", country_ar: "الهند", country_fr: "Inde",
     currency: "INR", currencySymbol: "₹", rateToSar: 0.045,
     taxRate: 30,
     rent_1br: 40000, rent_2br: 65000, rent_3br: 100000,
@@ -214,8 +218,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "manila",
-    name_en: "Manila", name_ar: "مانيلا",
-    country_en: "Philippines", country_ar: "الفلبين",
+    name_en: "Manila", name_ar: "مانيلا", name_fr: "Manille",
+    country_en: "Philippines", country_ar: "الفلبين", country_fr: "Philippines",
     currency: "PHP", currencySymbol: "₱", rateToSar: 0.066,
     taxRate: 25,
     rent_1br: 20000, rent_2br: 35000, rent_3br: 50000,
@@ -224,8 +228,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "toronto",
-    name_en: "Toronto", name_ar: "تورنتو",
-    country_en: "Canada", country_ar: "كندا",
+    name_en: "Toronto", name_ar: "تورنتو", name_fr: "Toronto",
+    country_en: "Canada", country_ar: "كندا", country_fr: "Canada",
     currency: "CAD", currencySymbol: "C$", rateToSar: 2.70,
     taxRate: 33,
     rent_1br: 2200, rent_2br: 2900, rent_3br: 3800,
@@ -234,8 +238,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "islamabad",
-    name_en: "Islamabad", name_ar: "إسلام آباد",
-    country_en: "Pakistan", country_ar: "باكستان",
+    name_en: "Islamabad", name_ar: "إسلام آباد", name_fr: "Islamabad",
+    country_en: "Pakistan", country_ar: "باكستان", country_fr: "Pakistan",
     currency: "PKR", currencySymbol: "Rs", rateToSar: 0.013,
     taxRate: 20,
     rent_1br: 60000, rent_2br: 90000, rent_3br: 130000,
@@ -244,8 +248,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "sydney",
-    name_en: "Sydney", name_ar: "سيدني",
-    country_en: "Australia", country_ar: "أستراليا",
+    name_en: "Sydney", name_ar: "سيدني", name_fr: "Sydney",
+    country_en: "Australia", country_ar: "أستراليا", country_fr: "Australie",
     currency: "AUD", currencySymbol: "A$", rateToSar: 2.42,
     taxRate: 32.5,
     rent_1br: 2800, rent_2br: 3800, rent_3br: 5200,
@@ -254,8 +258,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "casablanca",
-    name_en: "Casablanca", name_ar: "الدار البيضاء",
-    country_en: "Morocco", country_ar: "المغرب",
+    name_en: "Casablanca", name_ar: "الدار البيضاء", name_fr: "Casablanca",
+    country_en: "Morocco", country_ar: "المغرب", country_fr: "Maroc",
     currency: "MAD", currencySymbol: "د.م", rateToSar: 0.38,
     taxRate: 30,
     rent_1br: 5000, rent_2br: 7500, rent_3br: 12000,
@@ -264,8 +268,8 @@ export const ORIGIN_CITIES: OriginCity[] = [
   },
   {
     id: "tunis",
-    name_en: "Tunis", name_ar: "تونس",
-    country_en: "Tunisia", country_ar: "تونس",
+    name_en: "Tunis", name_ar: "تونس", name_fr: "Tunis",
+    country_en: "Tunisia", country_ar: "تونس", country_fr: "Tunisie",
     currency: "TND", currencySymbol: "د.ت", rateToSar: 1.20,
     taxRate: 26,
     rent_1br: 900, rent_2br: 1300, rent_3br: 1800,
@@ -281,7 +285,7 @@ export const ORIGIN_CITIES: OriginCity[] = [
 export const SAUDI_CITIES: SaudiCity[] = [
   {
     id: "riyadh",
-    name_en: "Riyadh", name_ar: "الرياض",
+    name_en: "Riyadh", name_ar: "الرياض", name_fr: "Riyad",
     rent_apt_1br: 3000, rent_apt_2br: 5000, rent_apt_3br: 7500,
     rent_compound_2br: 12000, rent_compound_3br: 18000,
     food: 2200, car: 800, utilities: 500, dining: 500,
@@ -291,7 +295,7 @@ export const SAUDI_CITIES: SaudiCity[] = [
   },
   {
     id: "jeddah",
-    name_en: "Jeddah", name_ar: "جدة",
+    name_en: "Jeddah", name_ar: "جدة", name_fr: "Djeddah",
     rent_apt_1br: 2500, rent_apt_2br: 4200, rent_apt_3br: 6500,
     rent_compound_2br: 10000, rent_compound_3br: 15000,
     food: 2000, car: 750, utilities: 550, dining: 450,
@@ -301,7 +305,7 @@ export const SAUDI_CITIES: SaudiCity[] = [
   },
   {
     id: "dammam",
-    name_en: "Dammam / Eastern Province", name_ar: "الدمام / المنطقة الشرقية",
+    name_en: "Dammam / Eastern Province", name_ar: "الدمام / المنطقة الشرقية", name_fr: "Dammam / Province orientale",
     rent_apt_1br: 2000, rent_apt_2br: 3500, rent_apt_3br: 5500,
     rent_compound_2br: 8000, rent_compound_3br: 13000,
     food: 1800, car: 700, utilities: 450, dining: 400,
@@ -311,7 +315,7 @@ export const SAUDI_CITIES: SaudiCity[] = [
   },
   {
     id: "makkah",
-    name_en: "Makkah", name_ar: "مكة المكرمة",
+    name_en: "Makkah", name_ar: "مكة المكرمة", name_fr: "La Mecque",
     rent_apt_1br: 2500, rent_apt_2br: 4000, rent_apt_3br: 6000,
     rent_compound_2br: 7000, rent_compound_3br: 10000,
     food: 1700, car: 700, utilities: 480, dining: 400,
@@ -321,7 +325,7 @@ export const SAUDI_CITIES: SaudiCity[] = [
   },
   {
     id: "madinah",
-    name_en: "Madinah", name_ar: "المدينة المنورة",
+    name_en: "Madinah", name_ar: "المدينة المنورة", name_fr: "M\u00e9dine",
     rent_apt_1br: 2000, rent_apt_2br: 3200, rent_apt_3br: 5000,
     rent_compound_2br: 6000, rent_compound_3br: 8500,
     food: 1600, car: 650, utilities: 450, dining: 380,
@@ -336,12 +340,12 @@ export const SAUDI_CITIES: SaudiCity[] = [
 /* ------------------------------------------------------------------ */
 
 export const SALARY_PRESETS = [
-  { label_en: "Entry Level",  label_ar: "مبتدئ",       sar: 6000 },
-  { label_en: "Junior",       label_ar: "مبتدئ متقدم", sar: 10000 },
-  { label_en: "Mid-Level",    label_ar: "متوسط",       sar: 18000 },
-  { label_en: "Senior",       label_ar: "أقدم",        sar: 30000 },
-  { label_en: "Manager",      label_ar: "مدير",        sar: 45000 },
-  { label_en: "Executive",    label_ar: "تنفيذي",      sar: 70000 },
+  { label_en: "Entry Level",  label_ar: "مبتدئ",       label_fr: "D\u00e9butant",     sar: 6000 },
+  { label_en: "Junior",       label_ar: "مبتدئ متقدم", label_fr: "Junior",        sar: 10000 },
+  { label_en: "Mid-Level",    label_ar: "متوسط",       label_fr: "Interm\u00e9diaire", sar: 18000 },
+  { label_en: "Senior",       label_ar: "أقدم",        label_fr: "Senior",        sar: 30000 },
+  { label_en: "Manager",      label_ar: "مدير",        label_fr: "Manager",       sar: 45000 },
+  { label_en: "Executive",    label_ar: "تنفيذي",      label_fr: "Cadre dirigeant", sar: 70000 },
 ];
 
 /* ------------------------------------------------------------------ */

@@ -1,11 +1,27 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { en } from "./en";
 import { ar } from "./ar";
+import { fr } from "./fr";
 import type { Dictionary } from "./types";
 
-type Lang = "en" | "ar";
+export type Lang = "en" | "fr" | "ar";
+
+const DICTIONARIES: Record<Lang, Dictionary> = { en, fr, ar };
+
+const STORAGE_KEY = "shift_lang";
+
+/** Detect preferred language from browser settings */
+function detectLang(): Lang {
+  if (typeof window === "undefined") return "en";
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored === "en" || stored === "fr" || stored === "ar") return stored;
+  const nav = navigator.language || "";
+  if (nav.startsWith("ar")) return "ar";
+  if (nav.startsWith("fr")) return "fr";
+  return "en";
+}
 
 const LangContext = createContext<{
   lang: Lang;
@@ -20,8 +36,20 @@ const LangContext = createContext<{
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
-  const t = lang === "ar" ? ar : en;
+  const [lang, setLangState] = useState<Lang>("en");
+
+  useEffect(() => {
+    setLangState(detectLang());
+  }, []);
+
+  const setLang = (l: Lang) => {
+    setLangState(l);
+    if (typeof window !== "undefined") {
+      localStorage.setItem(STORAGE_KEY, l);
+    }
+  };
+
+  const t = DICTIONARIES[lang];
   const dir = lang === "ar" ? "rtl" : "ltr";
 
   return (
@@ -36,5 +64,5 @@ export function LangProvider({ children }: { children: ReactNode }) {
 export const useLang = () => useContext(LangContext);
 
 export function formatNumber(n: number, lang: string): string {
-  return n.toLocaleString(lang === "ar" ? "ar-SA" : "en-US");
+  return n.toLocaleString(lang === "ar" ? "ar-SA" : lang === "fr" ? "fr-FR" : "en-US");
 }
