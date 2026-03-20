@@ -79,13 +79,11 @@ function fmtLocal(n: number, sym: string) {
 function fmtSar(n: number) {
   return fmtN(Math.round(n)) + " SAR";
 }
-/** Convert SAR price to origin currency with ~ prefix */
 function sarToLocal(sar: number, rate: number, sym: string) {
   if (rate <= 0) return "";
   return `~${sym}${(sar / rate).toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
 }
 
-/** Simple fuzzy match score */
 function fuzzyScore(query: string, name: string): number {
   const q = query.toLowerCase();
   const n = name.toLowerCase();
@@ -104,24 +102,12 @@ function fuzzyScore(query: string, name: string): number {
   return 0;
 }
 
-/** Map origin city id to CityId for cost database */
 function toCostCityId(originId: string): CityId | null {
   const map: Record<string, CityId> = {
-    paris: "paris",
-    "new-york": "new_york",
-    "san-francisco": "new_york",
-    london: "london",
-    dubai: "dubai",
-    cairo: "cairo",
-    amman: "amman",
-    beirut: "beirut",
-    mumbai: "mumbai",
-    manila: "manila",
-    toronto: "new_york",
-    islamabad: "mumbai",
-    sydney: "sydney",
-    casablanca: "casablanca",
-    tunis: "tunis",
+    paris: "paris", "new-york": "new_york", "san-francisco": "new_york",
+    london: "london", dubai: "dubai", cairo: "cairo", amman: "amman",
+    beirut: "beirut", mumbai: "mumbai", manila: "manila", toronto: "new_york",
+    islamabad: "mumbai", sydney: "sydney", casablanca: "casablanca", tunis: "tunis",
   };
   return map[originId] || null;
 }
@@ -154,6 +140,15 @@ function Tip({ text, children }: { text: string; children: React.ReactNode }) {
   );
 }
 
+/* Info callout box */
+function InfoBox({ text }: { text: string }) {
+  return (
+    <div className="text-xs text-gray-500 bg-gray-900/30 border-l-2 border-gray-700 p-2 mt-1 leading-relaxed">
+      <span className="text-gray-400 mr-1">ℹ️</span> {text}
+    </div>
+  );
+}
+
 /* ------------------------------------------------------------------ */
 /* Main Component                                                       */
 /* ------------------------------------------------------------------ */
@@ -171,6 +166,8 @@ export default function RelocateClient() {
   const [selectedOcc, setSelectedOcc] = useState<Occupation | null>(null);
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(1);
+  const [singleIncome, setSingleIncome] = useState(false);
+  const [partnerSalaryStr, setPartnerSalaryStr] = useState("");
   const [saudiId, setSaudiId] = useState("riyadh");
   const [housing, setHousing] = useState<HousingType>("compound");
   const [schoolTierId, setSchoolTierId] = useState("midtier");
@@ -181,32 +178,25 @@ export default function RelocateClient() {
   const saudi = SAUDI_CITIES.find((c) => c.id === saudiId)!;
   const schoolTier = SCHOOL_TIERS.find((s) => s.id === schoolTierId)!;
   const salaryNum = parseInt(salaryStr.replace(/[^0-9]/g, ""), 10) || 0;
+  const partnerSalaryNum = parseInt(partnerSalaryStr.replace(/[^0-9]/g, ""), 10) || 0;
+  const combinedLocal = singleIncome ? salaryNum + partnerSalaryNum : salaryNum;
 
   /* ---- Fuzzy occupation search ---- */
   const filteredOccs = useMemo(() => {
     if (!occSearch.trim()) return [];
     const q = occSearch.trim();
-    const scored = allOccupations
-      .map((o) => ({
-        occ: o,
-        score: Math.max(fuzzyScore(q, o.name_en), fuzzyScore(q, o.name_ar)),
-      }))
+    return allOccupations
+      .map((o) => ({ occ: o, score: Math.max(fuzzyScore(q, o.name_en), fuzzyScore(q, o.name_ar)) }))
       .filter((s) => s.score > 0)
-      .sort((a, b) => b.score - a.score);
-    return scored.slice(0, 5);
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
   }, [occSearch]);
 
   /* ---- Calculate ---- */
   const result: RelocationResult | null = useMemo(() => {
     if (salaryNum <= 0) return null;
     return calculateRelocation({
-      origin,
-      saudi,
-      salaryLocal: salaryNum,
-      adults,
-      children,
-      housing,
-      schoolTier,
+      origin, saudi, salaryLocal: salaryNum, adults, children, housing, schoolTier,
     });
   }, [origin, saudi, salaryNum, adults, children, housing, schoolTier]);
 
@@ -214,9 +204,7 @@ export default function RelocateClient() {
     if (!result) return;
     setShowResults(true);
     setActiveTab("overview");
-    setTimeout(() => {
-      resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
+    setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
   };
 
   const handleReset = () => {
@@ -229,12 +217,8 @@ export default function RelocateClient() {
     if (!selectedOcc) return null;
     const name = lang === "ar" ? selectedOcc.name_ar : selectedOcc.name_en;
     return {
-      name,
-      entry: fmtN(selectedOcc.salary_entry_sar),
-      senior: fmtN(selectedOcc.salary_senior_sar),
-      median: fmtN(selectedOcc.salary_median_sar),
-      composite: selectedOcc.composite,
-      slug: toSlug(selectedOcc.name_en),
+      name, entry: fmtN(selectedOcc.salary_entry_sar), senior: fmtN(selectedOcc.salary_senior_sar),
+      median: fmtN(selectedOcc.salary_median_sar), composite: selectedOcc.composite, slug: toSlug(selectedOcc.name_en),
     };
   }, [selectedOcc, lang]);
 
@@ -247,17 +231,9 @@ export default function RelocateClient() {
   const getCategoryComparison = useCallback(
     (categories: CostCategory[]) => {
       if (!originCostId) return [];
-      const items: {
-        item: CostItem;
-        originPrice: number;
-        saudiPrice: number;
-        originInSar: number;
-        saudiInLocal: number;
-        diffPct: number;
-      }[] = [];
+      const items: { item: CostItem; originPrice: number; saudiPrice: number; originInSar: number; saudiInLocal: number; diffPct: number }[] = [];
       for (const cat of categories) {
-        const catItems = getCostsByCategory(cat);
-        for (const ci of catItems) {
+        for (const ci of getCostsByCategory(cat)) {
           const oPrice = ci.prices[originCostId];
           const sPrice = ci.prices[saudiCostId];
           if (oPrice === undefined || sPrice === undefined) continue;
@@ -266,20 +242,29 @@ export default function RelocateClient() {
           const oSar = oPrice * oRate;
           const sSar = sPrice * sRate;
           const diff = oSar > 0 ? Math.round(((sSar - oSar) / oSar) * 100) : 0;
-          items.push({
-            item: ci,
-            originPrice: oPrice,
-            saudiPrice: sPrice,
-            originInSar: Math.round(oSar),
-            saudiInLocal: oRate > 0 ? sSar / oRate : 0,
-            diffPct: diff,
-          });
+          items.push({ item: ci, originPrice: oPrice, saudiPrice: sPrice, originInSar: Math.round(oSar), saudiInLocal: oRate > 0 ? sSar / oRate : 0, diffPct: diff });
         }
       }
       return items;
     },
     [originCostId, saudiCostId]
   );
+
+  /* ---- Tab item counts ---- */
+  const tabCounts = useMemo(() => {
+    const counts: Record<TabId, number> = {} as Record<TabId, number>;
+    for (const [tabId, cats] of Object.entries(TAB_CATEGORY_MAP) as [TabId, CostCategory[]][]) {
+      if (tabId === "overview") { counts[tabId] = 0; continue; }
+      let count = 0;
+      for (const cat of cats) {
+        for (const ci of getCostsByCategory(cat)) {
+          if (ci.prices[saudiCostId] !== undefined && (!originCostId || ci.prices[originCostId] !== undefined)) count++;
+        }
+      }
+      counts[tabId] = count;
+    }
+    return counts;
+  }, [originCostId, saudiCostId]);
 
   /* ---- Radar chart data ---- */
   const radarData = useMemo(() => {
@@ -295,75 +280,67 @@ export default function RelocateClient() {
       { key: "lifestyle", label: r.radarLifestyle, cats: ["subscriptions", "fitness", "clothing"] },
     ];
     return axes.map((axis) => {
-      let originTotal = 0, saudiTotal = 0;
+      let originTotal = 0, saudiTotal = 0, oCount = 0, sCount = 0;
       for (const cat of axis.cats) {
         for (const ci of getCostsByCategory(cat)) {
           const oPrice = ci.prices[originCostId];
           const sPrice = ci.prices[saudiCostId];
-          if (oPrice !== undefined && sPrice !== undefined) {
-            originTotal += oPrice * CITY_EXCHANGE_RATES[originCostId];
-            saudiTotal += sPrice * CITY_EXCHANGE_RATES[saudiCostId];
-          } else if (sPrice !== undefined) {
-            saudiTotal += sPrice * CITY_EXCHANGE_RATES[saudiCostId];
-          } else if (oPrice !== undefined) {
-            originTotal += oPrice * CITY_EXCHANGE_RATES[originCostId];
-          }
+          if (oPrice !== undefined) { originTotal += oPrice * CITY_EXCHANGE_RATES[originCostId]; oCount++; }
+          if (sPrice !== undefined) { saudiTotal += sPrice * CITY_EXCHANGE_RATES[saudiCostId]; sCount++; }
         }
       }
       const max = Math.max(originTotal, saudiTotal, 1);
+      const diffPct = originTotal > 0 ? Math.round(((saudiTotal - originTotal) / originTotal) * 100) : 0;
       return {
-        axis: axis.label,
+        axis: axis.label, key: axis.key,
         origin: Math.round((originTotal / max) * 100),
         saudi: Math.round((saudiTotal / max) * 100),
-        originSar: Math.round(originTotal),
-        saudiSar: Math.round(saudiTotal),
+        originSar: Math.round(originTotal), saudiSar: Math.round(saudiTotal),
+        diffPct, oCount, sCount,
       };
     });
   }, [originCostId, saudiCostId, r]);
+
+  /* Radar summary bullets — top 5 biggest differences */
+  const radarBullets = useMemo(() => {
+    if (!radarData.length) return [];
+    return [...radarData]
+      .filter((d) => d.oCount > 0 || d.sCount > 0)
+      .sort((a, b) => Math.abs(b.diffPct) - Math.abs(a.diffPct))
+      .slice(0, 5)
+      .map((d) => ({
+        label: d.axis,
+        diffPct: d.diffPct,
+        cheaper: d.diffPct < 0,
+      }));
+  }, [radarData]);
 
   /* ---- Price Pulse (city-specific) ---- */
   const priceTrends = useMemo(() => {
     return getPriceTrends().filter((item) => item.prices[saudiCostId] !== undefined);
   }, [saudiCostId]);
 
-  /* ---- Negotiation tips ---- */
-  const negTips = useMemo(() => {
-    if (!result) return [];
-    const tips: string[] = [];
-    if (children === 0) tips.push(r.tipNoChildren);
-    else tips.push(r.tipWithChildren);
-    if (origin.taxRate >= 25)
-      tips.push(r.tipHighTax.replace("{amount}", fmtSar(result.tax_savings_sar)));
-    if (origin.mercerRank > 100) {
-      const range = selectedOcc
-        ? `${fmtN(selectedOcc.salary_entry_sar)}-${fmtN(selectedOcc.salary_senior_sar)} SAR`
-        : "8,000-45,000 SAR";
-      tips.push(r.tipEmergingMarket.replace("{range}", range));
-    }
-    return tips;
-  }, [result, children, origin, selectedOcc, r]);
+  /* ---- Derived values for verdict/negotiation ---- */
+  const minSalary = result ? result.saudi_total_sar : 0;
+  const recSalary = Math.round(minSalary * 1.2);
+  const housingAllowance = Math.round(minSalary * 0.25);
+  const transportAllowance = Math.round(minSalary * 0.10);
+  const flightCount = adults + children;
+  const flightCost = flightCount * 3000; // rough average
 
   /* ---- Schools for Education tab ---- */
   const schoolItems = useMemo(() => {
-    return COST_DATABASE.filter(
-      (ci) => ci.category === "education" && ci.prices[saudiCostId] !== undefined
-    );
+    return COST_DATABASE.filter((ci) => ci.category === "education" && ci.prices[saudiCostId] !== undefined);
   }, [saudiCostId]);
 
   /* ---- Share ---- */
   const handleShareLinkedIn = () => {
     if (!result) return;
-    const originName = lang === "ar" ? origin.name_ar : origin.name_en;
-    const saudiName = lang === "ar" ? saudi.name_ar : saudi.name_en;
-    const text = r.shareText
-      .replace("{origin}", originName)
-      .replace("{saudi}", saudiName)
-      .replace("{amount}", fmtN(result.tax_savings_sar));
+    const originN = lang === "ar" ? origin.name_ar : origin.name_en;
+    const saudiN = lang === "ar" ? saudi.name_ar : saudi.name_en;
+    const text = r.shareText.replace("{origin}", originN).replace("{saudi}", saudiN).replace("{amount}", fmtN(result.tax_savings_sar));
     const url = "https://www.ksashiftobservatory.online/relocate";
-    window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`,
-      "_blank"
-    );
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`, "_blank");
   };
 
   /* ---- Tab list ---- */
@@ -394,23 +371,22 @@ export default function RelocateClient() {
 
       {/* Header */}
       <header className="max-w-5xl mx-auto px-4 pt-8 pb-2">
-        <Link href="/" className="text-text-muted text-sm hover:text-text-secondary transition-colors">
-          &larr; {r.back}
-        </Link>
+        <Link href="/" className="text-text-muted text-sm hover:text-text-secondary transition-colors">&larr; {r.back}</Link>
         <div className="flex items-start justify-between mt-4 gap-4 flex-wrap">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-text-primary tracking-wide">{r.title}</h1>
             <p className="text-text-muted mt-1">{r.subtitle}</p>
           </div>
           <div className="bg-emerald-400/10 border border-emerald-400/30 rounded-full px-4 py-1.5 flex-shrink-0">
-            <Tip text={r.tooltipSar || "Saudi Riyal. Fixed rate: 1 USD = 3.75 SAR"}>
-              <span className="text-emerald-400 font-bold text-sm border-b border-dotted border-emerald-400/50 cursor-help">
-                {r.taxFree}
-              </span>
-            </Tip>
+            <Tip text={r.tooltipSar}><span className="text-emerald-400 font-bold text-sm border-b border-dotted border-emerald-400/50 cursor-help">{r.taxFree}</span></Tip>
           </div>
         </div>
       </header>
+
+      {/* ---- HOW IT WORKS INFO BOX ---- */}
+      <div className="max-w-5xl mx-auto px-4 mt-4">
+        <InfoBox text={r.howItWorksText} />
+      </div>
 
       {/* ============================================================ */}
       {/* FORM                                                          */}
@@ -419,22 +395,15 @@ export default function RelocateClient() {
         <div className="bg-bg-card/60 border border-white/10 rounded-xl overflow-hidden">
           {/* YOUR CURRENT SITUATION */}
           <div className="p-5 md:p-6 border-b border-white/10">
-            <h2 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-5">
-              {r.currentSituation}
-            </h2>
+            <h2 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-5">{r.currentSituation}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Origin city */}
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.iLiveIn}</label>
-                <select
-                  value={originId}
-                  onChange={(e) => setOriginId(e.target.value)}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer"
-                >
+                <select value={originId} onChange={(e) => setOriginId(e.target.value)}
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {ORIGIN_CITIES.map((c) => (
-                    <option key={c.id} value={c.id}>
-                      {lang === "ar" ? `${c.name_ar}، ${c.country_ar}` : `${c.name_en}, ${c.country_en}`}
-                    </option>
+                    <option key={c.id} value={c.id}>{lang === "ar" ? `${c.name_ar}، ${c.country_ar}` : `${c.name_en}, ${c.country_en}`}</option>
                   ))}
                 </select>
               </div>
@@ -443,63 +412,38 @@ export default function RelocateClient() {
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.monthlySalary}</label>
                 <div className="relative">
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    value={salaryStr}
+                  <input type="text" inputMode="numeric" value={salaryStr}
                     onChange={(e) => setSalaryStr(e.target.value.replace(/[^0-9,]/g, ""))}
                     placeholder="5,000"
-                    className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16"
-                  />
-                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted text-xs font-mono">
-                    {origin.currency}
-                  </span>
+                    className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted text-xs font-mono">{origin.currency}</span>
                 </div>
               </div>
 
               {/* Occupation — fuzzy search */}
               <div className="relative">
                 <label className="text-sm text-text-muted mb-1.5 block">{r.myOccupation}</label>
-                <input
-                  type="text"
-                  value={occSearch}
-                  onChange={(e) => {
-                    setOccSearch(e.target.value);
-                    setOccDropOpen(true);
-                    if (selectedOcc) setSelectedOcc(null);
-                  }}
+                <input type="text" value={occSearch}
+                  onChange={(e) => { setOccSearch(e.target.value); setOccDropOpen(true); if (selectedOcc) setSelectedOcc(null); }}
                   onFocus={() => occSearch.trim() && setOccDropOpen(true)}
                   placeholder={r.selectOccupation}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary text-sm focus:border-cyan-400 focus:outline-none"
-                />
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary text-sm focus:border-cyan-400 focus:outline-none" />
                 {occDropOpen && occSearch.trim() && (
                   <div className="absolute z-30 top-full left-0 right-0 mt-1 bg-bg-card border border-white/10 rounded-lg max-h-72 overflow-y-auto shadow-xl">
-                    {filteredOccs.length > 0 ? (
-                      filteredOccs.map(({ occ }) => (
-                        <button
-                          key={occ.name_en}
-                          className="w-full text-left px-4 py-2.5 text-sm hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-                          onClick={() => {
-                            setSelectedOcc(occ);
-                            setOccSearch(lang === "ar" ? occ.name_ar : occ.name_en);
-                            setOccDropOpen(false);
-                          }}
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="text-text-primary">{lang === "ar" ? occ.name_ar : occ.name_en}</span>
-                            <span className={`text-xs font-mono ${riskColor(occ.composite)}`}>{occ.composite}/100</span>
-                          </div>
-                          <div className="text-xs text-text-muted mt-0.5 font-mono">
-                            {fmtN(occ.salary_entry_sar)}-{fmtN(occ.salary_senior_sar)} SAR{r.perMonth}
-                          </div>
-                        </button>
-                      ))
-                    ) : (
+                    {filteredOccs.length > 0 ? filteredOccs.map(({ occ }) => (
+                      <button key={occ.name_en}
+                        className="w-full text-left px-4 py-2.5 text-sm hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                        onClick={() => { setSelectedOcc(occ); setOccSearch(lang === "ar" ? occ.name_ar : occ.name_en); setOccDropOpen(false); }}>
+                        <div className="flex items-center justify-between">
+                          <span className="text-text-primary">{lang === "ar" ? occ.name_ar : occ.name_en}</span>
+                          <span className={`text-xs font-mono ${riskColor(occ.composite)}`}>{occ.composite}/100</span>
+                        </div>
+                        <div className="text-xs text-text-muted mt-0.5 font-mono">{fmtN(occ.salary_entry_sar)}-{fmtN(occ.salary_senior_sar)} SAR{r.perMonth}</div>
+                      </button>
+                    )) : (
                       <div className="px-4 py-3 text-sm">
                         <span className="text-text-muted">{r.noMatch} </span>
-                        <Link href="/career" className="text-cyan-400 hover:underline" onClick={() => setOccDropOpen(false)}>
-                          {r.browseAll} &rarr;
-                        </Link>
+                        <Link href="/career" className="text-cyan-400 hover:underline" onClick={() => setOccDropOpen(false)}>{r.browseAll} &rarr;</Link>
                       </div>
                     )}
                   </div>
@@ -537,6 +481,35 @@ export default function RelocateClient() {
                   </div>
                 </div>
               </div>
+
+              {/* ---- SINGLE INCOME TOGGLE ---- */}
+              {adults >= 2 && (
+                <div className="md:col-span-2">
+                  <label className="text-sm text-text-muted mb-1.5 block">{r.incomeMode}</label>
+                  <div className="flex gap-2 mb-3">
+                    {[false, true].map((val) => (
+                      <button key={String(val)} onClick={() => setSingleIncome(val)}
+                        className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all border ${
+                          singleIncome === val ? "border-cyan-400 bg-cyan-400/10 text-cyan-400" : "border-white/10 text-text-muted hover:bg-white/5"
+                        }`}>
+                        {val ? r.oneWorksKsa : r.bothWork}
+                      </button>
+                    ))}
+                  </div>
+                  {singleIncome && (
+                    <div className="relative">
+                      <label className="text-xs text-text-muted mb-1 block">{r.partnerSalary}</label>
+                      <div className="relative">
+                        <input type="text" inputMode="numeric" value={partnerSalaryStr}
+                          onChange={(e) => setPartnerSalaryStr(e.target.value.replace(/[^0-9,]/g, ""))}
+                          placeholder="2,500"
+                          className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted text-xs font-mono">{origin.currency}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
@@ -546,11 +519,8 @@ export default function RelocateClient() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.targetCity}</label>
-                <select
-                  value={saudiId}
-                  onChange={(e) => setSaudiId(e.target.value)}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer"
-                >
+                <select value={saudiId} onChange={(e) => setSaudiId(e.target.value)}
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {SAUDI_CITIES.map((c) => (
                     <option key={c.id} value={c.id}>{lang === "ar" ? c.name_ar : c.name_en}</option>
                   ))}
@@ -560,30 +530,23 @@ export default function RelocateClient() {
                 <label className="text-sm text-text-muted mb-1.5 block">{r.housing}</label>
                 <div className="flex gap-2">
                   {(["apartment", "compound"] as HousingType[]).map((h) => (
-                    <button
-                      key={h}
-                      onClick={() => setHousing(h)}
+                    <button key={h} onClick={() => setHousing(h)}
                       className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all border ${
                         housing === h ? "border-cyan-400 bg-cyan-400/10 text-cyan-400" : "border-white/10 text-text-muted hover:bg-white/5"
-                      }`}
-                    >
+                      }`}>
                       {h === "apartment" ? r.housingApt : (
-                        <Tip text={r.tooltipCompound || "Gated residential community"}>
-                          <span className="border-b border-dotted border-current cursor-help">{r.housingCompound}</span>
-                        </Tip>
+                        <Tip text={r.tooltipCompound}><span className="border-b border-dotted border-current cursor-help">{r.housingCompound}</span></Tip>
                       )}
                     </button>
                   ))}
                 </div>
+                {housing === "compound" && <InfoBox text={r.compoundInfo} />}
               </div>
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.schoolTier}</label>
-                <select
-                  value={schoolTierId}
-                  onChange={(e) => setSchoolTierId(e.target.value)}
+                <select value={schoolTierId} onChange={(e) => setSchoolTierId(e.target.value)}
                   disabled={children === 0}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40"
-                >
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40">
                   {SCHOOL_TIERS.map((s) => (
                     <option key={s.id} value={s.id}>
                       {lang === "ar" ? s.label_ar : s.label_en}
@@ -591,16 +554,14 @@ export default function RelocateClient() {
                     </option>
                   ))}
                 </select>
+                {children > 0 && <InfoBox text={r.schoolTierInfo} />}
               </div>
             </div>
           </div>
         </div>
 
-        <button
-          onClick={handleCalculate}
-          disabled={salaryNum <= 0}
-          className="mt-6 w-full sm:w-auto px-10 py-3.5 bg-cyan-400 text-bg-primary font-bold rounded-lg hover:bg-cyan-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm tracking-wide"
-        >
+        <button onClick={handleCalculate} disabled={salaryNum <= 0}
+          className="mt-6 w-full sm:w-auto px-10 py-3.5 bg-cyan-400 text-bg-primary font-bold rounded-lg hover:bg-cyan-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm tracking-wide">
           {r.calculate} &rarr;
         </button>
       </div>
@@ -609,13 +570,9 @@ export default function RelocateClient() {
       {/* RESULTS                                                        */}
       {/* ============================================================ */}
       {showResults && result && (
-        <motion.div
-          ref={resultsRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-5xl mx-auto px-4 pb-20"
-        >
+        <motion.div ref={resultsRef} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto px-4 pb-20">
+
           {/* Divider */}
           <div className="flex items-center gap-4 my-8">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
@@ -624,26 +581,45 @@ export default function RelocateClient() {
           </div>
 
           {/* ---- EXCHANGE RATE BANNER ---- */}
-          <div className="flex items-center justify-end gap-2 mb-4 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center justify-end gap-2 mb-4 text-xs text-gray-500">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <span className="font-mono">
-              {(r.exchangeRate || "Exchange rate: 1 {currency} = {rate} SAR")
-                .replace("{currency}", origin.currency)
-                .replace("{rate}", origin.rateToSar.toFixed(2))}
+              {r.exchangeRate.replace("{currency}", origin.currency).replace("{rate}", origin.rateToSar.toFixed(2))}
+              {origin.currency === "USD" ? " (fixed peg)" : ""}
             </span>
             <span className="text-gray-600">|</span>
-            <span>{r.exchangeRateUpdated || "Last updated: March 2026"}</span>
+            <span>{r.exchangeRateUpdated}</span>
           </div>
+          <p className="text-[10px] text-gray-600 text-right mb-4">{r.exchangeRatePeg}</p>
+
+          {/* ---- SINGLE INCOME WARNING ---- */}
+          {singleIncome && partnerSalaryNum > 0 && (
+            <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-5 mb-6">
+              <h4 className="text-sm font-bold text-amber-400 mb-2">⚠️ {r.singleIncomeAlert}</h4>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {r.singleIncomeWarning
+                  .replace("{origin}", originName)
+                  .replace("{combined}", fmtLocal(combinedLocal, origin.currencySymbol))
+                  .replace("{single}", fmtLocal(salaryNum, origin.currencySymbol) + ` (${fmtSar(result.gross_sar)})`)}
+              </p>
+              <p className="text-sm text-amber-400 font-mono mt-2">
+                {r.incomeReduction.replace("{pct}", String(Math.round((partnerSalaryNum / combinedLocal) * 100)))}
+              </p>
+              <p className="text-xs text-text-muted mt-3 mb-2">{r.toCompensate}</p>
+              <ul className="text-xs text-text-secondary space-y-1">
+                <li>• {r.tipHousingCover.replace("{rent}", fmtN(result.saudi_costs.rent)).replace("{type}", housing === "compound" ? r.housingCompound : r.housingApt)}</li>
+                {children > 0 && <li>• {r.tipEducationAllow}</li>}
+                <li>• {r.tipFlights.replace("{count}", String(flightCount)).replace("{cost}", fmtN(flightCost))}</li>
+                <li>• {r.tipSpousalSupport}</li>
+              </ul>
+            </div>
+          )}
 
           {/* ---- PRICE PULSE TICKER ---- */}
           {priceTrends.length > 0 && (
             <div className="bg-gray-900/50 border border-gray-800/50 rounded-md p-3 mb-6">
-              <div className="text-xs uppercase tracking-widest text-cyan-400 mb-0.5 font-bold">
-                {r.pricePulse} — {r.pricePulseDate}
-              </div>
-              <div className="text-[10px] text-gray-500 mb-2">
-                {(r.pricePulseSubtitle || "Monthly price changes in {city} vs last month").replace("{city}", saudiName)}
-              </div>
+              <div className="text-xs uppercase tracking-widest text-cyan-400 mb-0.5 font-bold">{r.pricePulse} — {r.pricePulseDate}</div>
+              <div className="text-[10px] text-gray-500 mb-2">{r.pricePulseSubtitle.replace("{city}", saudiName)}</div>
               <div className="overflow-x-auto tabs-scroll">
                 <div className="inline-flex items-center gap-0 text-xs font-mono">
                   {priceTrends.map((item, i) => {
@@ -651,19 +627,13 @@ export default function RelocateClient() {
                     return (
                       <span key={item.id} className="inline-flex items-center">
                         {i > 0 && <span className="text-gray-700 mx-2">|</span>}
-                        <span className={item.trend === "up" ? "text-red-400" : "text-green-400"}>
-                          {item.trend === "up" ? "\u25B2" : "\u25BC"}
-                        </span>
-                        <span className="text-text-secondary ml-1">
-                          {lang === "ar" ? item.name_ar : item.name_en}
-                        </span>
-                        {price !== undefined && (
-                          <span className="text-text-muted ml-1">{fmtN(price)} SAR</span>
-                        )}
+                        <span className={item.trend === "up" ? "text-red-400" : "text-green-400"}>{item.trend === "up" ? "▲" : "▼"}</span>
+                        <span className="text-text-secondary ml-1">{lang === "ar" ? item.name_ar : item.name_en}</span>
+                        {price !== undefined && <span className="text-text-muted ml-1">{fmtN(price)} SAR</span>}
                         <span className={`ml-1 ${item.trend === "up" ? "text-red-400" : "text-green-400"}`}>
                           {item.trendPct! > 0 ? "+" : ""}{item.trendPct}%
                         </span>
-                        <span className="text-gray-600 ml-1">{r.pricePulseVs || "vs Feb"}</span>
+                        <span className="text-gray-600 ml-1">{r.pricePulseVs}</span>
                       </span>
                     );
                   })}
@@ -672,24 +642,21 @@ export default function RelocateClient() {
             </div>
           )}
 
-          {/* ---- TAB NAVIGATION ---- */}
+          {/* ---- TAB NAVIGATION with item counts ---- */}
           <div className="relative mb-6">
-            {/* Fade hints */}
             <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-bg-primary to-transparent z-10 pointer-events-none md:hidden" />
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-bg-primary to-transparent z-10 pointer-events-none md:hidden" />
             <div className="overflow-x-auto tabs-scroll -mx-4 px-4">
               <div className="flex flex-wrap md:flex-wrap gap-0">
                 {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
+                  <button key={tab.id} onClick={() => setActiveTab(tab.id)}
                     className={`px-3 py-2 text-xs uppercase tracking-wider font-medium transition-all whitespace-nowrap ${
-                      activeTab === tab.id
-                        ? "text-white border-b-2 border-cyan-400"
-                        : "text-gray-500 hover:text-gray-300"
-                    }`}
-                  >
+                      activeTab === tab.id ? "text-white border-b-2 border-cyan-400" : "text-gray-500 hover:text-gray-300"
+                    }`}>
                     {tab.label}
+                    {tab.id !== "overview" && tabCounts[tab.id] > 0 && (
+                      <span className="text-gray-600 ml-1">({tabCounts[tab.id]})</span>
+                    )}
                   </button>
                 ))}
               </div>
@@ -699,13 +666,103 @@ export default function RelocateClient() {
           {/* ---- OVERVIEW TAB ---- */}
           {activeTab === "overview" && (
             <div className="space-y-6">
-              {/* Side-by-side income comparison with DUAL CURRENCY */}
+              {/* ═══════ NET VERDICT HERO ═══════ */}
+              <div className="bg-gray-900/80 border border-cyan-500/30 rounded-xl p-6">
+                <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-5">{r.netVerdict}</h3>
+
+                {/* Minimum salary */}
+                <div className="mb-4">
+                  <p className="text-xs text-text-muted uppercase tracking-wider mb-1.5">{r.minimumSalary}</p>
+                  <div className="h-3 bg-gray-800/50 rounded-full overflow-hidden mb-1">
+                    <div className="h-full bg-cyan-400/60 rounded-full" style={{ width: `${Math.min((minSalary / (recSalary * 1.2)) * 100, 100)}%` }} />
+                  </div>
+                  <p className="font-mono text-lg text-cyan-400 font-bold">
+                    {fmtSar(minSalary)} <span className="text-gray-500 text-sm">({sarToLocal(minSalary, originRate, origin.currencySymbol)})</span>
+                  </p>
+                </div>
+
+                {/* Recommended salary */}
+                <div className="mb-4">
+                  <p className="text-xs text-text-muted uppercase tracking-wider mb-1.5">{r.recommendedSalary}</p>
+                  <div className="h-3 bg-gray-800/50 rounded-full overflow-hidden mb-1">
+                    <div className="h-full bg-emerald-400/60 rounded-full" style={{ width: `${Math.min((recSalary / (recSalary * 1.2)) * 100, 100)}%` }} />
+                  </div>
+                  <p className="font-mono text-lg text-emerald-400 font-bold">
+                    {fmtSar(recSalary)} <span className="text-gray-500 text-sm">({sarToLocal(recSalary, originRate, origin.currencySymbol)})</span>
+                  </p>
+                  <p className="text-xs text-gray-500">{r.withSavingsBuffer}</p>
+                </div>
+
+                {/* Tax savings */}
+                {origin.taxRate > 0 && (
+                  <div className="mb-4 pt-3 border-t border-white/10">
+                    <p className="text-xs text-text-muted uppercase tracking-wider mb-1">{r.yourTaxSavings}</p>
+                    <p className="font-mono text-lg text-emerald-400 font-bold">
+                      +{fmtSar(result.tax_savings_sar)}{r.perMonth} <span className="text-gray-500 text-sm">({fmtLocal(result.tax_savings_local, origin.currencySymbol)})</span>
+                    </p>
+                    <p className="text-xs text-gray-500">{r.moneyYouKeep}</p>
+                  </div>
+                )}
+
+                {/* EOSB */}
+                <div className="pt-3 border-t border-white/10">
+                  <p className="text-xs text-text-muted uppercase tracking-wider mb-1">
+                    <Tip text={r.tooltipEosb}><span className="border-b border-dotted border-gray-500 cursor-help">{r.eosbAfterLabel}</span></Tip>
+                  </p>
+                  <p className="font-mono text-lg text-purple-400 font-bold">
+                    ~{fmtSar(result.eosb_5yr_sar)} <span className="text-gray-500 text-sm">({sarToLocal(result.eosb_5yr_sar, originRate, origin.currencySymbol)})</span>
+                  </p>
+                  <p className="text-xs text-gray-500">{r.taxFreeSeverance}</p>
+                </div>
+              </div>
+
+              {/* ═══════ NEGOTIATION CHECKLIST ═══════ */}
+              <div className="bg-bg-card/60 border border-yellow-500/20 rounded-xl p-5 md:p-6">
+                <h3 className="text-xs font-bold text-yellow-400 uppercase tracking-[0.2em] mb-4">📋 {r.packageChecklist}</h3>
+                <div className="space-y-2 text-sm">
+                  <CheckItem text={r.checkBaseSalary.replace("{min}", fmtN(minSalary)).replace("{rec}", fmtN(recSalary))} />
+                  <CheckItem text={r.checkHousing.replace("{amount}", fmtN(housingAllowance))} />
+                  {housingAllowance < result.saudi_costs.rent && (
+                    <p className="text-xs text-amber-400 ml-7">
+                      → {r.checkHousingGap.replace("{type}", housing === "compound" ? r.housingCompound : r.housingApt).replace("{rent}", fmtN(result.saudi_costs.rent))}
+                    </p>
+                  )}
+                  {children > 0 && (
+                    <>
+                      <CheckItem text={r.checkEducation.replace("{needed}", fmtN(schoolTier.monthly_sar * 12)).replace("{tier}", lang === "ar" ? schoolTier.label_ar : schoolTier.label_en)} />
+                      {schoolTier.monthly_sar * 12 > 40000 && (
+                        <p className="text-xs text-amber-400 ml-7">
+                          → {r.checkEducationGap.replace("{gap}", fmtN(schoolTier.monthly_sar * 12 - 40000))}
+                        </p>
+                      )}
+                    </>
+                  )}
+                  <CheckItem text={r.checkFlights.replace("{count}", String(flightCount)).replace("{cost}", fmtN(flightCost))} />
+                  <CheckItem text={r.checkTransport.replace("{amount}", fmtN(transportAllowance))} />
+                  <CheckItem text={r.checkMedical} />
+                  <CheckItem text={r.checkLeave} />
+                </div>
+
+                {origin.taxRate > 0 && (
+                  <div className="mt-4 pt-3 border-t border-white/10">
+                    <p className="text-xs text-yellow-400 font-bold mb-1">💡 PRO TIP</p>
+                    <p className="text-sm text-text-secondary leading-relaxed">
+                      {r.proTip
+                        .replace("{amount}", fmtSar(result.tax_savings_sar))
+                        .replace("{origin}", originName)
+                        .replace("{originNet}", fmtLocal(result.net_local, origin.currencySymbol))
+                        .replace("{needed}", fmtSar(minSalary))}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* ═══════ SIDE-BY-SIDE COMPARISON ═══════ */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/10 rounded-xl overflow-hidden">
                 {/* Origin */}
                 <div className="bg-bg-card/40 p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/10">
                   <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-amber-400" />
-                    {originName}
+                    <span className="w-2 h-2 rounded-full bg-[#D4A853]" />{originName}
                   </h3>
                   <div className="space-y-1 mb-5">
                     <Row label={`${r.gross}:`} value={fmtLocal(result.gross_local, origin.currencySymbol) + r.perMonth} />
@@ -722,22 +779,22 @@ export default function RelocateClient() {
                     <div className="border-t border-white/10 pt-1.5 mt-2">
                       <Row label={`${r.total}:`} value={fmtLocal(result.origin_total_local, origin.currencySymbol)} className="font-bold text-text-primary" />
                     </div>
-                    <Row
-                      label={`${r.savings}:`}
+                  </div>
+                  {/* Savings with explainer */}
+                  <div className="mt-3 pt-2 border-t border-white/10">
+                    <Row label={`${r.savings}:`}
                       value={`${result.origin_savings_local >= 0 ? "" : "-"}${fmtLocal(result.origin_savings_local, origin.currencySymbol)}${r.perMonth}`}
-                      className={result.origin_savings_local >= 0 ? "text-emerald-400" : "text-red-400"}
-                    />
+                      className={result.origin_savings_local >= 0 ? "text-emerald-400 font-bold" : "text-red-400 font-bold"} />
                   </div>
                 </div>
 
-                {/* Saudi — DUAL CURRENCY */}
+                {/* Saudi */}
                 <div className="bg-bg-card/60 p-5 md:p-6">
                   <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                    {saudiName}
+                    <span className="w-2 h-2 rounded-full bg-cyan-400" />{saudiName}
                   </h3>
                   <div className="space-y-1 mb-5">
-                    <Row label={`${r.equivalent || "Equivalent"}:`} value={fmtSar(result.gross_sar) + r.perMonth} />
+                    <Row label={`${r.equivalent}:`} value={fmtSar(result.gross_sar) + r.perMonth} />
                     <Row label={`${r.tax}: 0%`} value="(0 SAR)" className="text-emerald-400" />
                     <Row label={`${r.net}:`} value={fmtSar(result.net_sar) + r.perMonth} className="text-cyan-400 font-bold" />
                   </div>
@@ -752,104 +809,59 @@ export default function RelocateClient() {
                       <DualRow label={`${r.school}:`} sar={result.saudi_costs.school} rate={originRate} sym={origin.currencySymbol} />
                     )}
                     {result.saudi_costs.dep_fee > 0 && (
-                      <DualRow
-                        label={<Tip text={r.tooltipDepFee || "Dependent fee — 400 SAR/month per family member"}><span className="border-b border-dotted border-gray-500 cursor-help">{r.depFee}:</span></Tip>}
-                        sar={result.saudi_costs.dep_fee}
-                        rate={originRate}
-                        sym={origin.currencySymbol}
-                      />
+                      <DualRow label={<Tip text={r.tooltipDepFee}><span className="border-b border-dotted border-gray-500 cursor-help">{r.depFee}:</span></Tip>}
+                        sar={result.saudi_costs.dep_fee} rate={originRate} sym={origin.currencySymbol} />
                     )}
                     <div className="border-t border-white/10 pt-1.5 mt-2">
                       <DualRow label={`${r.total}:`} sar={result.saudi_total_sar} rate={originRate} sym={origin.currencySymbol} bold />
                     </div>
-                    <Row
-                      label={`${r.savings}:`}
-                      value={`${fmtSar(result.saudi_savings_sar)}${r.perMonth}`}
-                      className={result.saudi_savings_sar >= 0 ? "text-emerald-400" : "text-red-400"}
-                    />
                   </div>
-                </div>
-              </div>
-
-              {/* Key Insights with TOOLTIPS */}
-              <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-5">{r.keyInsights}</h3>
-                <div className="space-y-4 text-sm">
-                  <InsightRow icon="$" label={r.taxSavings} color="text-emerald-400"
-                    text={`+${fmtSar(result.tax_savings_sar)}${r.perMonth} (${fmtLocal(result.tax_savings_local, origin.currencySymbol)} ${r.taxSaved})`} />
-
-                  <InsightRow icon="H" label={r.rentLabel}
-                    color={result.rent_diff_pct > 0 ? "text-amber-400" : "text-emerald-400"}
-                    text={`${housing === "compound" ? r.housingCompound : r.housingApt}: ${fmtSar(result.saudi_costs.rent)} ${sarToLocal(result.saudi_costs.rent, originRate, origin.currencySymbol)} vs ${fmtLocal(result.origin_costs.rent, origin.currencySymbol)} = ${result.rent_diff_pct > 0 ? "+" : ""}${result.rent_diff_pct}% ${result.rent_diff_pct > 0 ? r.moreExpensive : r.lessExpensive}`} />
-
-                  {children > 0 && (
-                    <InsightRow icon="S" label={r.schooling} color="text-amber-400"
-                      text={`~${fmtSar(result.school_cost_sar)}${r.perMonth} ${sarToLocal(result.school_cost_sar, originRate, origin.currencySymbol)}${origin.schoolFree ? ` (${r.freeInOrigin} ${originName})` : ""}`} />
-                  )}
-
-                  <InsightRow icon="M"
-                    label={<Tip text={r.tooltipMercer || "Mercer Cost of Living City Ranking 2024"}><span className="border-b border-dotted border-gray-500 cursor-help">{r.mercer}</span></Tip>}
-                    color="text-blue-400"
-                    text={`${saudiName} #${saudi.mercerRank} vs ${originName} #${origin.mercerRank} (${saudi.mercerRank > origin.mercerRank ? r.mercerCheaper : r.mercerPricier})`} />
-
-                  <InsightRow icon="B"
-                    label={<Tip text={r.tooltipEosb || "End of Service Benefit — Tax-free severance payment"}><span className="border-b border-dotted border-gray-500 cursor-help">{r.eosb}</span></Tip>}
-                    color="text-purple-400"
-                    text={`~${fmtSar(result.eosb_5yr_sar)} ${sarToLocal(result.eosb_5yr_sar, originRate, origin.currencySymbol)} ${r.eosbAfter5yr}`} />
-
-                  {occInfo && (
-                    <InsightRow icon="!" label={r.aiRisk} color={riskColor(occInfo.composite)}
-                      text={`${occInfo.name}: ${occInfo.composite}/100`}
-                      link={`/job/${occInfo.slug}`}
-                      linkText={occInfo.composite >= 45 ? r.considerTransition + " \u2192" : undefined} />
-                  )}
-
-                  {/* Verdict */}
-                  <div className="border-t border-white/10 pt-4 mt-4">
-                    <h4 className="text-xs font-bold text-text-primary uppercase tracking-wider mb-2">{r.netVerdict}</h4>
-                    <p className="text-text-secondary leading-relaxed">
-                      {r.verdictNeed}{" "}
-                      <span className="font-mono text-cyan-400 font-bold">{fmtSar(result.saudi_total_sar)}{r.perMonth}</span>{" "}
-                      <span className="text-gray-500">({sarToLocal(result.saudi_total_sar, originRate, origin.currencySymbol)})</span>.{" "}
-                      {origin.taxRate > 0 && (
-                        <>
-                          {r.verdictSavings}{" "}
-                          <span className="font-mono text-emerald-400 font-bold">
-                            {fmtLocal(result.tax_savings_local, origin.currencySymbol)}{r.perMonth}
-                          </span>.
-                        </>
-                      )}
-                    </p>
-                  </div>
-
-                  {/* Tips */}
-                  {negTips.length > 0 && (
-                    <div className="border-t border-white/10 pt-4">
-                      <h4 className="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-2">{r.negotiate}</h4>
-                      <ul className="space-y-1.5">
-                        {negTips.map((tip, i) => (
-                          <li key={i} className="text-text-secondary flex items-start gap-2">
-                            <span className="text-yellow-400 mt-0.5">&#9656;</span>
-                            {tip}
-                          </li>
-                        ))}
-                      </ul>
+                  {/* Savings with explainer */}
+                  <div className="mt-3 pt-2 border-t border-white/10">
+                    <div className={`text-sm font-bold ${result.saudi_savings_sar >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      <div className="flex justify-between">
+                        <span>{r.savings}:</span>
+                        <span className="font-mono">{fmtSar(result.saudi_savings_sar)}{r.perMonth}</span>
+                      </div>
                     </div>
-                  )}
+                    {/* Explicit savings explanation */}
+                    <div className="mt-2 text-xs leading-relaxed">
+                      {result.saudi_savings_sar >= 0 ? (
+                        <p className="text-emerald-400">
+                          ✅ {r.youSave.replace("{amount}", fmtSar(result.saudi_savings_sar)).replace("{city}", saudiName).replace("{origin}", originName)}
+                        </p>
+                      ) : (
+                        <div className="space-y-1">
+                          <p className="text-red-400">
+                            ⚠️ {r.youSpend.replace("{amount}", fmtSar(Math.abs(result.saudi_savings_sar))).replace("{city}", saudiName).replace("{origin}", originName)}
+                          </p>
+                          {origin.taxRate > 0 && (
+                            <>
+                              <p className="text-text-muted">→ {r.taxOffset.replace("{amount}", fmtSar(result.tax_savings_sar))}</p>
+                              <p className="text-text-muted">
+                                → {r.netPosition.replace("{amount}", fmtSar(result.saudi_savings_sar + result.tax_savings_sar))}
+                                {Math.abs(result.saudi_savings_sar + result.tax_savings_sar) < 2000 && ` (${r.almostBreakeven})`}
+                              </p>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Radar Chart — INTERACTIVE */}
+              {/* ═══════ RADAR CHART ═══════ */}
               {radarData.length > 0 && (
                 <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
                   <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">{r.radarTitle}</h3>
-                  <div className="w-full h-[380px]">
+                  <div className="w-full h-[400px]">
                     <ResponsiveContainer width="100%" height="100%">
                       <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
                         <PolarGrid stroke="#374151" />
                         <PolarAngleAxis dataKey="axis" tick={{ fill: "#9CA3AF", fontSize: 11 }} />
                         <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: "#6B7280", fontSize: 9 }} axisLine={false} />
-                        <Radar name={originName} dataKey="origin" stroke="#F59E0B" fill="#F59E0B" fillOpacity={0.2} strokeWidth={2} />
+                        <Radar name={originName} dataKey="origin" stroke="#D4A853" fill="#D4A853" fillOpacity={0.2} strokeWidth={2} />
                         <Radar name={saudiName} dataKey="saudi" stroke="#22D3EE" fill="#22D3EE" fillOpacity={0.2} strokeWidth={2} />
                         <RTooltip
                           contentStyle={{ backgroundColor: "#111827", border: "1px solid #374151", borderRadius: "8px", fontSize: 12 }}
@@ -864,7 +876,7 @@ export default function RelocateClient() {
                   {/* Legend with actual costs */}
                   <div className="flex flex-wrap gap-4 mt-3 text-xs text-gray-400 justify-center">
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#D4A853]" />
                       {originName}: {fmtLocal(radarData.reduce((s, d) => s + d.originSar, 0) / originRate, origin.currencySymbol)}{r.perMonth}
                     </span>
                     <span className="flex items-center gap-1.5">
@@ -872,33 +884,93 @@ export default function RelocateClient() {
                       {saudiName}: {fmtSar(radarData.reduce((s, d) => s + d.saudiSar, 0))}{r.perMonth}
                     </span>
                   </div>
+
+                  {/* Radar summary bullets */}
+                  {radarBullets.length > 0 && (
+                    <div className="mt-4 pt-3 border-t border-white/10">
+                      <p className="text-xs font-bold text-text-muted uppercase tracking-wider mb-2">{r.radarSummary}</p>
+                      <ul className="space-y-1">
+                        {radarBullets.map((b) => (
+                          <li key={b.label} className="text-xs flex items-center gap-2">
+                            <span className={`font-mono font-bold ${b.cheaper ? "text-green-400" : "text-red-400"}`}>
+                              {b.diffPct > 0 ? "+" : ""}{b.diffPct}%
+                            </span>
+                            <span className="text-text-secondary">
+                              {b.label}: {b.cheaper
+                                ? r.radarCheaperBy.replace("{city}", saudiName).replace("{pct}", String(Math.abs(b.diffPct)))
+                                : r.radarPricierBy.replace("{city}", saudiName).replace("{pct}", String(b.diffPct))}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
 
-              {/* Price Pulse GRID — city-specific */}
+              {/* ═══════ BAR CHART with dual currency & diff lines ═══════ */}
+              <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
+                <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-5">{r.comparisonChart}</h3>
+                <div className="space-y-5">
+                  {[
+                    { label: r.rent, o: result.origin_costs.rent, s: result.saudi_costs.rent },
+                    { label: r.food, o: result.origin_costs.food, s: result.saudi_costs.food },
+                    { label: r.transport, o: result.origin_costs.transport, s: result.saudi_costs.transport },
+                    { label: r.utilities, o: result.origin_costs.utilities, s: result.saudi_costs.utilities },
+                    { label: r.dining, o: result.origin_costs.dining, s: result.saudi_costs.dining },
+                  ].map((bar) => {
+                    const oSar = bar.o * origin.rateToSar;
+                    const max = Math.max(oSar, bar.s, 1);
+                    const diffPct = oSar > 0 ? Math.round(((bar.s - oSar) / oSar) * 100) : 0;
+                    return (
+                      <div key={bar.label}>
+                        <div className="text-xs text-text-muted mb-1.5 font-medium">{bar.label}</div>
+                        <div className="flex items-center gap-3 mb-1">
+                          <div className="flex-1 h-5 bg-gray-800/30 rounded overflow-hidden">
+                            <div className="h-full bg-[#D4A853]/60 rounded transition-all duration-500" style={{ width: `${(oSar / max) * 100}%` }} />
+                          </div>
+                          <span className="text-xs font-mono text-[#D4A853] w-40 text-right flex-shrink-0">
+                            {fmtLocal(bar.o, origin.currencySymbol)} <span className="text-gray-600">({fmtSar(oSar)})</span>
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="flex-1 h-5 bg-gray-800/30 rounded overflow-hidden">
+                            <div className="h-full bg-cyan-400/60 rounded transition-all duration-500" style={{ width: `${(bar.s / max) * 100}%` }} />
+                          </div>
+                          <span className="text-xs font-mono text-cyan-400 w-40 text-right flex-shrink-0">
+                            {fmtSar(bar.s)} <span className="text-gray-600">({sarToLocal(bar.s, originRate, origin.currencySymbol)})</span>
+                          </span>
+                        </div>
+                        {/* Diff line */}
+                        <div className={`text-[10px] font-mono mt-0.5 text-center ${diffPct < 0 ? "text-green-400" : diffPct > 0 ? "text-red-400" : "text-gray-500"}`}>
+                          ── {diffPct > 0 ? "+" : ""}{diffPct}% ──
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Price Pulse GRID */}
               {priceTrends.length > 0 && (
                 <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-1">
-                    {r.pricePulse} — {r.pricePulseDate}
-                  </h3>
-                  <p className="text-[10px] text-gray-500 mb-4">
-                    {(r.pricePulseSubtitle || "Monthly price changes in {city} vs last month").replace("{city}", saudiName)}
-                  </p>
+                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-1">{r.pricePulse} — {r.pricePulseDate}</h3>
+                  <p className="text-[10px] text-gray-500 mb-4">{r.pricePulseSubtitle.replace("{city}", saudiName)}</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b border-white/10">
                           <th className="text-left py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppItem}</th>
-                          <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppCity || "CITY"}</th>
+                          <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppCity}</th>
                           <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppPrice} (SAR)</th>
                           {originCostId && (
                             <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">
-                              {(r.ppOriginPrice || "IN {currency}").replace("{currency}", origin.currency)}
+                              {r.ppOriginPrice.replace("{currency}", origin.currency)}
                             </th>
                           )}
                           <th className="text-center py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppTrend}</th>
                           <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.ppChange}</th>
-                          <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.pricePulseVs || "vs Feb"}</th>
+                          <th className="text-right py-2 px-3 text-xs text-text-muted uppercase tracking-wider font-medium">{r.pricePulseVs}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -916,13 +988,13 @@ export default function RelocateClient() {
                               )}
                               <td className="py-2 px-3 text-center">
                                 <span className={item.trend === "up" ? "text-red-400" : "text-green-400"}>
-                                  {item.trend === "up" ? "\u25B2" : "\u25BC"}
+                                  {item.trend === "up" ? "▲" : "▼"}
                                 </span>
                               </td>
                               <td className={`py-2 px-3 text-right font-mono ${item.trend === "up" ? "text-red-400" : "text-green-400"}`}>
                                 {item.trendPct! > 0 ? "+" : ""}{item.trendPct}%
                               </td>
-                              <td className="py-2 px-3 text-right text-gray-600 text-xs">{r.pricePulseVs || "vs Feb"}</td>
+                              <td className="py-2 px-3 text-right text-gray-600 text-xs">{r.pricePulseVs}</td>
                             </tr>
                           );
                         })}
@@ -931,64 +1003,16 @@ export default function RelocateClient() {
                   </div>
                 </div>
               )}
-
-              {/* Summary bar chart with DUAL CURRENCY */}
-              <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-5">{r.comparisonChart}</h3>
-                <div className="space-y-4">
-                  {[
-                    { label: r.rent, o: result.origin_costs.rent, s: result.saudi_costs.rent },
-                    { label: r.food, o: result.origin_costs.food, s: result.saudi_costs.food },
-                    { label: r.transport, o: result.origin_costs.transport, s: result.saudi_costs.transport },
-                    { label: r.utilities, o: result.origin_costs.utilities, s: result.saudi_costs.utilities },
-                    { label: r.dining, o: result.origin_costs.dining, s: result.saudi_costs.dining },
-                  ].map((bar) => {
-                    const oSar = bar.o * origin.rateToSar;
-                    const max = Math.max(oSar, bar.s, 1);
-                    return (
-                      <div key={bar.label}>
-                        <div className="text-xs text-text-muted mb-1 font-medium">{bar.label}</div>
-                        <div className="flex items-center gap-3 mb-1">
-                          <div className="flex-1 h-5 bg-white/5 rounded overflow-hidden">
-                            <div className="h-full bg-amber-400/60 rounded" style={{ width: `${(oSar / max) * 100}%` }} />
-                          </div>
-                          <span className="text-xs font-mono text-amber-400 w-32 text-right flex-shrink-0">
-                            {fmtLocal(bar.o, origin.currencySymbol)}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <div className="flex-1 h-5 bg-white/5 rounded overflow-hidden">
-                            <div className="h-full bg-cyan-400/60 rounded" style={{ width: `${(bar.s / max) * 100}%` }} />
-                          </div>
-                          <span className="text-xs font-mono text-cyan-400 w-32 text-right flex-shrink-0">
-                            {fmtSar(bar.s)} <span className="text-gray-500">({sarToLocal(bar.s, originRate, origin.currencySymbol)})</span>
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
             </div>
           )}
 
           {/* ---- EDUCATION TAB ---- */}
           {activeTab === "education" && (
             <div className="space-y-6">
-              <CategoryTable
-                categories={TAB_CATEGORY_MAP.education}
-                originCostId={originCostId}
-                origin={origin}
-                saudi={saudi}
-                lang={lang}
-                r={r}
-                getCategoryComparison={getCategoryComparison}
-              />
+              <CategoryTable categories={TAB_CATEGORY_MAP.education} originCostId={originCostId} origin={origin} saudi={saudi} lang={lang} r={r} getCategoryComparison={getCategoryComparison} />
               {schoolItems.length > 0 && (
                 <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">
-                    {r.schoolsInCity.replace("{city}", saudiName)}
-                  </h3>
+                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">{r.schoolsInCity.replace("{city}", saudiName)}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {schoolItems.map((si) => {
                       const fee = si.prices[saudiCostId]!;
@@ -997,16 +1021,12 @@ export default function RelocateClient() {
                           <div className="flex items-start justify-between gap-2">
                             <div>
                               <p className="text-sm text-text-primary font-medium">{lang === "ar" ? si.name_ar : si.name_en}</p>
-                              <span className="inline-block mt-1 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">
-                                {si.subcategory}
-                              </span>
+                              <span className="inline-block mt-1 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">{si.subcategory}</span>
                             </div>
                             <div className="text-right flex-shrink-0">
                               <p className="text-sm font-mono text-text-primary font-bold">{fmtN(fee)} SAR</p>
                               <p className="text-[10px] text-gray-500">{sarToLocal(fee, originRate, origin.currencySymbol)} {r.perYear}</p>
-                              {si.trend === "up" && (
-                                <span className="text-[10px] text-red-400 font-mono">{"\u25B2"} +{si.trendPct}%</span>
-                              )}
+                              {si.trend === "up" && <span className="text-[10px] text-red-400 font-mono">▲ +{si.trendPct}%</span>}
                             </div>
                           </div>
                         </div>
@@ -1018,39 +1038,18 @@ export default function RelocateClient() {
             </div>
           )}
 
-          {/* ---- CATEGORY TABS (non-overview, non-education) ---- */}
+          {/* ---- CATEGORY TABS ---- */}
           {activeTab !== "overview" && activeTab !== "education" && (
-            <CategoryTable
-              categories={TAB_CATEGORY_MAP[activeTab]}
-              originCostId={originCostId}
-              origin={origin}
-              saudi={saudi}
-              lang={lang}
-              r={r}
-              getCategoryComparison={getCategoryComparison}
-            />
+            <CategoryTable categories={TAB_CATEGORY_MAP[activeTab]} originCostId={originCostId} origin={origin} saudi={saudi} lang={lang} r={r} getCategoryComparison={getCategoryComparison} />
           )}
 
           {/* ---- SHARE + ACTIONS ---- */}
           <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              onClick={handleShareLinkedIn}
-              className="px-5 py-2.5 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors"
-            >
-              {r.shareLinkedIn}
-            </button>
-            <button
-              onClick={handleReset}
-              className="px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm"
-            >
-              {r.tryAnother}
-            </button>
+            <button onClick={handleShareLinkedIn} className="px-5 py-2.5 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors">{r.shareLinkedIn}</button>
+            <button onClick={handleReset} className="px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
           </div>
 
-          <p className="text-xs text-text-muted mt-6 max-w-3xl">
-            {r.disclaimer}
-            {" "}{r.exchangeRateNote || "Exchange rates updated monthly. All conversions are indicative."}
-          </p>
+          <p className="text-xs text-text-muted mt-6 max-w-3xl">{r.disclaimer} {r.exchangeRateNote}</p>
         </motion.div>
       )}
 
@@ -1076,44 +1075,26 @@ function Row({ label, value, className = "" }: { label: string; value: string; c
   );
 }
 
-/** Saudi cost row showing SAR + (~origin currency) */
 function DualRow({ label, sar, rate, sym, bold }: { label: React.ReactNode; sar: number; rate: number; sym: string; bold?: boolean }) {
   return (
     <div className={`flex justify-between items-center text-sm ${bold ? "font-bold text-text-primary" : "text-text-muted"}`}>
       <span>{label}</span>
       <span className="font-mono">
-        {fmtSar(sar)}{" "}
-        <span className="text-gray-500 text-xs">({sarToLocal(sar, rate, sym)})</span>
+        {fmtSar(sar)} <span className="text-gray-500 text-xs">({sarToLocal(sar, rate, sym)})</span>
       </span>
     </div>
   );
 }
 
-function InsightRow({ icon, label, text, color, link, linkText }: {
-  icon: string;
-  label: React.ReactNode;
-  text: string;
-  color: string;
-  link?: string;
-  linkText?: string;
-}) {
+function CheckItem({ text }: { text: string }) {
   return (
-    <div className="flex items-start gap-3">
-      <span className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold bg-white/5 ${color} flex-shrink-0 mt-0.5`}>
-        {icon}
-      </span>
-      <div>
-        <span className={`font-bold ${color}`}>{label}: </span>
-        <span className="text-text-secondary">{text}</span>
-        {link && linkText && (
-          <> <Link href={link} className="text-cyan-400 hover:underline text-xs">{linkText}</Link></>
-        )}
-      </div>
+    <div className="flex items-start gap-2 text-text-secondary">
+      <span className="text-emerald-400 mt-0.5 flex-shrink-0">✅</span>
+      <span>{text}</span>
     </div>
   );
 }
 
-/* ---- Category Comparison Table with DUAL CURRENCY ---- */
 function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCategoryComparison }: {
   categories: CostCategory[];
   originCostId: CityId | null;
@@ -1156,9 +1137,7 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
               <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
                 {r.thSaudiPrice.replace("{city}", saudiLabel).replace("{currency}", "SAR")}
               </th>
-              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
-                ~{origin.currency}
-              </th>
+              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">~{origin.currency}</th>
               <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium">{r.thDiff}</th>
             </tr>
           </thead>
@@ -1169,7 +1148,7 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
                   {lang === "ar" ? row.item.name_ar : row.item.name_en}
                   {row.item.trend && row.item.trend !== "stable" && (
                     <span className={`ml-1 text-[10px] ${row.item.trend === "up" ? "text-red-400" : "text-green-400"}`}>
-                      {row.item.trend === "up" ? "\u25B2" : "\u25BC"}
+                      {row.item.trend === "up" ? "▲" : "▼"}
                     </span>
                   )}
                 </td>
@@ -1185,8 +1164,7 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
                 <td className={`py-2 px-4 text-right font-mono whitespace-nowrap ${
                   row.diffPct < 0 ? "text-green-400" : row.diffPct > 0 ? "text-red-400" : "text-text-muted"
                 }`}>
-                  {row.diffPct > 0 ? "+" : ""}{row.diffPct}%{" "}
-                  {row.diffPct < -5 ? "\u25BC" : row.diffPct > 5 ? "\u25B2" : ""}
+                  {row.diffPct > 0 ? "+" : ""}{row.diffPct}% {row.diffPct < -5 ? "▼" : row.diffPct > 5 ? "▲" : ""}
                 </td>
               </tr>
             ))}

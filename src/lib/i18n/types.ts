@@ -667,9 +667,60 @@ export interface RelocateStrings {
   exchangeRate: string;
   exchangeRateUpdated: string;
   exchangeRateNote: string;
+  exchangeRatePeg: string;
   /* Dual currency */
   approx: string;
   equivalent: string;
+  /* Single income */
+  incomeMode: string;
+  bothWork: string;
+  oneWorksKsa: string;
+  partnerSalary: string;
+  singleIncomeAlert: string;
+  singleIncomeWarning: string;
+  incomeReduction: string;
+  toCompensate: string;
+  tipHousingCover: string;
+  tipEducationAllow: string;
+  tipFlights: string;
+  tipSpousalSupport: string;
+  /* Savings explainer */
+  youSave: string;
+  youSpend: string;
+  taxOffset: string;
+  netPosition: string;
+  almostBreakeven: string;
+  /* Net verdict hero */
+  minimumSalary: string;
+  recommendedSalary: string;
+  withSavingsBuffer: string;
+  yourTaxSavings: string;
+  moneyYouKeep: string;
+  eosbAfterLabel: string;
+  taxFreeSeverance: string;
+  /* Negotiation checklist */
+  packageChecklist: string;
+  checkBaseSalary: string;
+  checkHousing: string;
+  checkHousingGap: string;
+  checkEducation: string;
+  checkEducationGap: string;
+  checkFlights: string;
+  checkTransport: string;
+  checkMedical: string;
+  checkLeave: string;
+  proTip: string;
+  /* Radar summary */
+  radarSummary: string;
+  radarCheaperBy: string;
+  radarPricierBy: string;
+  /* Info boxes */
+  howItWorks: string;
+  howItWorksText: string;
+  compoundInfo: string;
+  schoolTierInfo: string;
+  /* Tab item counts */
+  items: string;
 }
 
 export interface Dictionary {
