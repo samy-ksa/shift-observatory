@@ -118,7 +118,7 @@ export const SCHOOL_TIERS: SchoolTier[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Origin Cities (12)                                                   */
+/* Origin Cities (15)                                                   */
 /* ------------------------------------------------------------------ */
 
 export const ORIGIN_CITIES: OriginCity[] = [
@@ -241,6 +241,36 @@ export const ORIGIN_CITIES: OriginCity[] = [
     rent_1br: 60000, rent_2br: 90000, rent_3br: 130000,
     food: 30000, transport: 8000, utilities: 10000, dining: 12000,
     schoolFree: true, mercerRank: 190,
+  },
+  {
+    id: "sydney",
+    name_en: "Sydney", name_ar: "سيدني",
+    country_en: "Australia", country_ar: "أستراليا",
+    currency: "AUD", currencySymbol: "A$", rateToSar: 2.42,
+    taxRate: 32.5,
+    rent_1br: 2800, rent_2br: 3800, rent_3br: 5200,
+    food: 500, transport: 217, utilities: 294, dining: 250,
+    schoolFree: true, mercerRank: 58,
+  },
+  {
+    id: "casablanca",
+    name_en: "Casablanca", name_ar: "الدار البيضاء",
+    country_en: "Morocco", country_ar: "المغرب",
+    currency: "MAD", currencySymbol: "د.م", rateToSar: 0.38,
+    taxRate: 30,
+    rent_1br: 5000, rent_2br: 7500, rent_3br: 12000,
+    food: 2500, transport: 250, utilities: 600, dining: 800,
+    schoolFree: true, mercerRank: 128,
+  },
+  {
+    id: "tunis",
+    name_en: "Tunis", name_ar: "تونس",
+    country_en: "Tunisia", country_ar: "تونس",
+    currency: "TND", currencySymbol: "د.ت", rateToSar: 1.20,
+    taxRate: 26,
+    rent_1br: 900, rent_2br: 1300, rent_3br: 1800,
+    food: 400, transport: 48, utilities: 175, dining: 120,
+    schoolFree: true, mercerRank: 170,
   },
 ];
 

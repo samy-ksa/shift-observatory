@@ -7,20 +7,31 @@ export const metadata: Metadata = {
   title:
     "Relocation Calculator — Saudi Arabia Salary & Cost of Living Comparison | SHIFT Observatory",
   description:
-    "Calculate your real purchasing power in Saudi Arabia. Compare salaries, cost of living, tax savings, and expat packages from 12 origin cities to Riyadh, Jeddah, or Dammam.",
+    "Calculate your real purchasing power in Saudi Arabia. Compare salaries, cost of living, tax savings, and expat packages from 15 origin cities to Riyadh, Jeddah, or Dammam. 65+ cost items across 15 categories.",
   keywords: [
     "Saudi Arabia relocation calculator",
     "expat salary Saudi Arabia",
     "cost of living Riyadh",
     "cost of living Jeddah",
+    "cost of living Dammam",
     "tax-free salary KSA",
     "expat package Saudi Arabia",
     "move to Saudi Arabia",
     "Saudi Arabia vs Paris cost of living",
     "Saudi Arabia vs London salary",
+    "Saudi Arabia vs New York",
+    "Saudi Arabia vs Dubai",
+    "Saudi Arabia vs Cairo",
+    "Saudi Arabia vs Mumbai",
+    "Saudi Arabia vs Sydney",
+    "Saudi Arabia vs Casablanca",
+    "Saudi Arabia vs Tunis",
+    "Saudi Arabia vs Amman",
     "compound housing Riyadh",
     "international school fees Saudi Arabia",
     "Mercer cost of living Saudi Arabia",
+    "grocery prices Riyadh",
+    "expat life Saudi Arabia",
   ].join(", "),
   openGraph: {
     title:

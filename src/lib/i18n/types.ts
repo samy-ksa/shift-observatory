@@ -537,6 +537,10 @@ export interface RelocateStrings {
   monthlySalary: string;
   myOccupation: string;
   selectOccupation: string;
+  noMatch: string;
+  browseAll: string;
+  matchedTo: string;
+  customJob: string;
   family: string;
   adults: string;
   children: string;
@@ -547,6 +551,18 @@ export interface RelocateStrings {
   housingCompound: string;
   schoolTier: string;
   calculate: string;
+  /* Tabs */
+  tabOverview: string;
+  tabGroceries: string;
+  tabDining: string;
+  tabSubscriptions: string;
+  tabTech: string;
+  tabTransport: string;
+  tabHousing: string;
+  tabUtilities: string;
+  tabEducation: string;
+  tabLifestyle: string;
+  tabKsaFees: string;
   /* Results */
   results: string;
   gross: string;
@@ -562,6 +578,14 @@ export interface RelocateStrings {
   depFee: string;
   total: string;
   savings: string;
+  /* Table headers */
+  thItem: string;
+  thOriginPrice: string;
+  thSaudiPrice: string;
+  thInSar: string;
+  thDiff: string;
+  cheaper: string;
+  pricier: string;
   /* Key insights */
   keyInsights: string;
   taxSavings: string;
@@ -588,15 +612,42 @@ export interface RelocateStrings {
   tipEmergingMarket: string;
   /* Chart */
   comparisonChart: string;
+  /* Radar */
+  radarTitle: string;
+  radarHousing: string;
+  radarFood: string;
+  radarTransport: string;
+  radarUtilities: string;
+  radarDining: string;
+  radarEducation: string;
+  radarHealthcare: string;
+  radarLifestyle: string;
+  /* Price Pulse */
+  pricePulse: string;
+  pricePulseDate: string;
+  ppItem: string;
+  ppPrice: string;
+  ppTrend: string;
+  ppChange: string;
+  /* Education */
+  schoolsInCity: string;
+  annualFee: string;
+  curriculum: string;
+  /* Share */
+  shareLinkedIn: string;
+  downloadPdf: string;
+  shareText: string;
   /* Actions */
   back: string;
   tryAnother: string;
   disclaimer: string;
   perMonth: string;
+  perYear: string;
   taxFree: string;
   shiftDataShows: string;
   salaryRange: string;
   median: string;
+  vsCity: string;
 }
 
 export interface Dictionary {
