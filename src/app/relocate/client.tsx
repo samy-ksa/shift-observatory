@@ -34,7 +34,7 @@ import {
 } from "@/data/relocation-costs";
 import type { CityId, CostCategory, CostItem } from "@/data/relocation-costs";
 import { getAllOccupations, toSlug, riskColor } from "@/lib/occupations";
-import { getScoreTrend } from "@/data/score-history";
+import { generateRelocationReport } from "@/lib/export-relocation-pdf";
 import type { Occupation } from "@/lib/occupations";
 
 /* ------------------------------------------------------------------ */
@@ -367,282 +367,39 @@ export default function RelocateClient({
     return COST_DATABASE.filter((ci) => ci.category === "education" && ci.prices[saudiCostId] !== undefined);
   }, [saudiCostId]);
 
-  /* ---- PDF export (multi-page report) ---- */
+  /* ---- PDF export (delegates to export-relocation-pdf.ts) ---- */
   const generateRelocationPDF = useCallback(() => {
     if (!result) return;
-    import("jspdf").then(({ default: jsPDF }) => {
-      const doc = new jsPDF();
-      const originN = ln(lang, origin);
-      const saudiN = ln(lang, saudi);
-      const sym = origin.currencySymbol;
-      const cur = origin.currency;
-      const minSal = result.saudi_total_sar;
-      const recSal = Math.round(minSal * 1.2);
-      const rate = CITY_EXCHANGE_RATES[originId as CityId] || 1;
-      const taxPct = Math.round(origin.taxRate * 100);
-      const isFr = lang === "fr";
-      const occName = selectedOcc ? ln(lang, selectedOcc) : "";
-      const occScore = selectedOcc?.composite ?? 0;
-      const occTrend = selectedOcc ? getScoreTrend(toSlug(selectedOcc.name_en), occScore) : null;
-      const today = new Date().toLocaleDateString(isFr ? "fr-FR" : "en-GB", { year: "numeric", month: "long", day: "numeric" });
-      const month = new Date().toLocaleDateString(isFr ? "fr-FR" : "en-US", { year: "numeric", month: "long" });
-
-      const L = {
-        relocationAnalysis: isFr ? "ANALYSE D'EXPATRIATION" : "RELOCATION ANALYSIS",
-        personalizedFor: isFr ? "Personnalis\u00e9 pour :" : "Personalized for:",
-        family: isFr ? "Famille" : "Family",
-        adultsL: isFr ? "adultes" : "adults",
-        childL: isFr ? "enfant(s)" : "child(ren)",
-        execSummary: isFr ? "R\u00c9SUM\u00c9 EX\u00c9CUTIF" : "EXECUTIVE SUMMARY",
-        minSalary: isFr ? "Salaire minimum" : "Minimum salary",
-        recSalary: isFr ? "Salaire recommand\u00e9" : "Recommended",
-        taxSavings: isFr ? "\u00c9conomies d'imp\u00f4ts" : "Tax savings",
-        eosbL: isFr ? "EOSB 5 ans" : "EOSB 5yr",
-        aiRisk: isFr ? "Risque IA" : "AI Risk",
-        verdict: "VERDICT",
-        incComp: isFr ? "COMPARAISON DES REVENUS" : "INCOME COMPARISON",
-        gross: isFr ? "Brut" : "Gross",
-        tax: isFr ? "Imp\u00f4ts" : "Tax",
-        net: "Net",
-        costs: isFr ? "CO\u00dbTS MENSUELS" : "MONTHLY COSTS",
-        cat: isFr ? "Cat\u00e9gorie" : "Category",
-        total: "TOTAL",
-        rent: isFr ? "Loyer" : "Rent",
-        food: isFr ? "Alimentation" : "Food",
-        transport: "Transport",
-        utilities: isFr ? "Services" : "Utilities",
-        dining: isFr ? "Restaurants" : "Dining",
-        school: isFr ? "\u00c9cole" : "School",
-        depFees: isFr ? "Frais Iqama" : "Iqama fees",
-        insights: isFr ? "POINTS CL\u00c9S" : "KEY INSIGHTS",
-        nego: isFr ? "CHECKLIST DE N\u00c9GOCIATION" : "NEGOTIATION CHECKLIST",
-        aiTitle: isFr ? "RISQUE IA : VOTRE M\u00c9TIER" : "AI RISK: YOUR OCCUPATION",
-        about: isFr ? "\u00c0 PROPOS" : "ABOUT THIS REPORT",
-        mo: isFr ? "/mois" : "/mo",
-        yr: isFr ? "/an" : "/yr",
-      };
-      const riskLbl = (s: number) => s < 30 ? (isFr ? "FAIBLE" : "LOW") : s < 50 ? (isFr ? "MOD\u00c9R\u00c9" : "MODERATE") : s < 70 ? (isFr ? "\u00c9LEV\u00c9" : "HIGH") : (isFr ? "TR\u00c8S \u00c9LEV\u00c9" : "VERY HIGH");
-      const W = 210;
-      const M = 15;
-
-      function hdr(title: string) {
-        doc.setFillColor(10, 14, 23);
-        doc.rect(0, 0, W, 30, "F");
-        doc.setTextColor(34, 211, 238);
-        doc.setFontSize(11);
-        doc.text("SHIFT Observatory", M, 12);
-        doc.setFontSize(9);
-        doc.setTextColor(160, 160, 160);
-        doc.text(`${originN}  \u2192  ${saudiN}`, M, 22);
-        doc.setFillColor(34, 211, 238);
-        doc.rect(M, 28, 30, 1, "F");
-        doc.setTextColor(30, 30, 30);
-        doc.setFontSize(16);
-        doc.text(title, M, 46);
-        doc.setDrawColor(220, 220, 220);
-        doc.line(M, 49, W - M, 49);
-      }
-      function ftr() {
-        doc.setFontSize(7);
-        doc.setTextColor(160, 160, 160);
-        doc.text("ksashiftobservatory.online", M, 287);
-        doc.text(today, W - M, 287, { align: "right" });
-      }
-
-      /* PAGE 1 — COVER */
-      doc.setFillColor(10, 14, 23);
-      doc.rect(0, 0, W, 297, "F");
-      doc.setTextColor(34, 211, 238);
-      doc.setFontSize(28);
-      doc.text("SHIFT", M, 60);
-      doc.setTextColor(255, 255, 255);
-      doc.text("Observatory", M + doc.getTextWidth("SHIFT "), 60);
-      doc.setFillColor(34, 211, 238);
-      doc.rect(M, 68, 60, 1.5, "F");
-      doc.setTextColor(255, 255, 255);
-      doc.setFontSize(18);
-      doc.text(L.relocationAnalysis, M, 90);
-      doc.setFontSize(22);
-      doc.setTextColor(34, 211, 238);
-      doc.text(`${originN}  \u2192  ${saudiN}`, M, 110);
-      doc.setTextColor(180, 180, 180);
-      doc.setFontSize(12);
-      let cy = 135;
-      doc.text(L.personalizedFor, M, cy); cy += 10;
-      if (selectedOcc) { doc.setTextColor(255, 255, 255); doc.setFontSize(14); doc.text(occName, M, cy); cy += 10; }
-      doc.setTextColor(180, 180, 180); doc.setFontSize(11);
-      doc.text(`${L.family}: ${adults} ${L.adultsL} + ${children} ${L.childL}`, M, cy); cy += 8;
-      doc.text(`${housing === "compound" ? "Compound" : "Apartment"} | ${schoolTier.label_en}`, M, cy); cy += 20;
-      doc.setFontSize(10); doc.setTextColor(100, 100, 100);
-      doc.text(month, M, cy); cy += 6;
-      doc.text("ksashiftobservatory.online", M, cy);
-
-      /* PAGE 2 — EXECUTIVE SUMMARY */
-      doc.addPage(); hdr(L.execSummary);
-      let y = 58;
-      const bul = (label: string, val: string) => {
-        doc.setFontSize(10); doc.setTextColor(80, 80, 80); doc.text(label + ":", M, y);
-        doc.setTextColor(30, 30, 30); doc.setFontSize(11); doc.text(val, M + 60, y); y += 8;
-      };
-      bul(L.minSalary, `SAR ${fmtN(minSal)}${L.mo}`);
-      bul(L.recSalary, `SAR ${fmtN(recSal)}${L.mo}`);
-      bul(L.taxSavings, `+${sym}${fmtN(result.tax_savings_local)}${L.mo} (${sym}${fmtN(result.tax_savings_local * 12)}${L.yr})`);
-      bul(L.eosbL, `~SAR ${fmtN(result.eosb_5yr_sar)}`);
-      if (selectedOcc) bul(L.aiRisk, `${occScore}/100 (${riskLbl(occScore)})`);
-      y += 6;
-      doc.setFillColor(240, 253, 244); doc.roundedRect(M, y, W - 2 * M, 36, 3, 3, "F");
-      doc.setFontSize(12); doc.setTextColor(22, 163, 74); doc.text(L.verdict, M + 6, y + 10);
-      doc.setFontSize(9); doc.setTextColor(50, 50, 50);
-      const v1 = isFr ? `D\u00e9m\u00e9nager de ${originN} \u00e0 ${saudiN} est financi\u00e8rement avantageux.` : `Relocating from ${originN} to ${saudiN} is financially advantageous.`;
-      const v2 = isFr ? `\u00c9conomies fiscales de ${sym}${fmtN(result.tax_savings_local)}/mois compensent les co\u00fbts.` : `Tax savings of ${sym}${fmtN(result.tax_savings_local)}/mo compensate additional costs.`;
-      doc.text(v1, M + 6, y + 20); doc.text(v2, M + 6, y + 28);
-      ftr();
-
-      /* PAGE 3 — INCOME */
-      doc.addPage(); hdr(L.incComp);
-      y = 58;
-      const cO = 60; const cS = 130;
-      doc.setFontSize(10); doc.setTextColor(120, 120, 120);
-      doc.text(originN, cO, y); doc.text(saudiN, cS, y);
-      y += 3; doc.setDrawColor(220, 220, 220); doc.line(M, y, W - M, y); y += 10;
-      const ir = (l: string, vO: string, vS: string) => {
-        doc.setFontSize(10); doc.setTextColor(80, 80, 80); doc.text(l, M, y);
-        doc.setTextColor(30, 30, 30); doc.text(vO, cO, y); doc.text(vS, cS, y); y += 8;
-      };
-      ir(L.gross, `${sym}${fmtN(result.gross_local)}`, `SAR ${fmtN(result.gross_sar)}`);
-      ir(L.tax, `-${taxPct}% (-${sym}${fmtN(result.tax_local)})`, "0%");
-      ir(L.net, `${sym}${fmtN(result.net_local)}`, `SAR ${fmtN(result.net_sar)}`);
-      y += 6;
-      doc.setFillColor(34, 211, 238); doc.roundedRect(M, y, W - 2 * M, 18, 2, 2, "F");
-      doc.setTextColor(10, 14, 23); doc.setFontSize(10);
-      doc.text(`${L.taxSavings}: ${sym}${fmtN(result.tax_savings_local)}${L.mo} = ${sym}${fmtN(result.tax_savings_local * 12)}${L.yr} = SAR ${fmtN(result.tax_savings_sar * 12)}${L.yr}`, M + 6, y + 11);
-      ftr();
-
-      /* PAGE 4 — COSTS */
-      doc.addPage(); hdr(L.costs);
-      y = 58;
-      doc.setFontSize(9); doc.setTextColor(120, 120, 120);
-      doc.text(L.cat, M, y); doc.text(`${originN} (${cur})`, cO, y); doc.text(`${saudiN} (SAR)`, cS, y);
-      y += 3; doc.line(M, y, W - M, y); y += 8;
-      const rows: [string, number, number][] = [
-        [L.rent, result.origin_costs.rent, result.saudi_costs.rent],
-        [L.food, result.origin_costs.food, result.saudi_costs.food],
-        [L.transport, result.origin_costs.transport, result.saudi_costs.transport],
-        [L.utilities, result.origin_costs.utilities, result.saudi_costs.utilities],
-        [L.dining, result.origin_costs.dining, result.saudi_costs.dining],
-        [L.school, 0, result.saudi_costs.school],
-        [L.depFees, 0, result.saudi_costs.dep_fee],
-      ];
-      rows.forEach(([l, vO, vS], i) => {
-        if (i % 2 === 0) { doc.setFillColor(248, 248, 248); doc.rect(M, y - 4, W - 2 * M, 8, "F"); }
-        doc.setFontSize(9); doc.setTextColor(50, 50, 50);
-        doc.text(l, M + 2, y); doc.text(vO > 0 ? `${sym}${fmtN(vO)}` : "-", cO, y); doc.text(`SAR ${fmtN(vS)}`, cS, y);
-        y += 8;
-      });
-      y += 2; doc.setDrawColor(30, 30, 30); doc.line(M, y, W - M, y); y += 7;
-      doc.setFontSize(10); doc.setTextColor(30, 30, 30);
-      doc.text(L.total, M + 2, y); doc.text(`${sym}${fmtN(result.origin_total_local)}`, cO, y); doc.text(`SAR ${fmtN(result.saudi_total_sar)}`, cS, y);
-      ftr();
-
-      /* PAGE 5 — INSIGHTS */
-      doc.addPage(); hdr(L.insights);
-      y = 58;
-      const ins = (t: string, d: string) => {
-        doc.setFontSize(11); doc.setTextColor(30, 30, 30); doc.text(t, M, y); y += 7;
-        doc.setFontSize(9); doc.setTextColor(100, 100, 100);
-        const ls = doc.splitTextToSize(d, W - 2 * M - 5); doc.text(ls, M + 5, y); y += ls.length * 5 + 6;
-      };
-      ins(isFr ? "IMP\u00d4TS" : "TAX", isFr ? `\u00c9conomie de ${sym}${fmtN(result.tax_savings_local)}/mois (0% d'imp\u00f4t en Arabie Saoudite).` : `Save ${sym}${fmtN(result.tax_savings_local)}/mo (0% income tax in Saudi Arabia).`);
-      ins(isFr ? "LOGEMENT" : "HOUSING", isFr ? `Loyer \u00e0 ${saudiN}: ${result.rent_diff_pct > 0 ? "+" : ""}${result.rent_diff_pct}% vs ${originN}. ${housing === "compound" ? "Compound" : "Appartement"}: SAR ${fmtN(result.saudi_costs.rent)}/mois.` : `Rent in ${saudiN}: ${result.rent_diff_pct > 0 ? "+" : ""}${result.rent_diff_pct}% vs ${originN}. ${housing === "compound" ? "Compound" : "Apartment"}: SAR ${fmtN(result.saudi_costs.rent)}/mo.`);
-      ins(isFr ? "\u00c9DUCATION" : "EDUCATION", isFr ? `SAR ${fmtN(result.school_cost_sar)}/mois (${schoolTier.label_en}).` : `SAR ${fmtN(result.school_cost_sar)}/mo (${schoolTier.label_en}).`);
-      ins("EOSB", isFr ? `Prime de ~SAR ${fmtN(result.eosb_5yr_sar)} apr\u00e8s 5 ans (~${sym}${fmtN(Math.round(result.eosb_5yr_sar / rate))}).` : `Tax-free bonus ~SAR ${fmtN(result.eosb_5yr_sar)} after 5yr (~${sym}${fmtN(Math.round(result.eosb_5yr_sar / rate))}).`);
-      ins("MERCER", `${saudiN} #${result.saudi_mercer} vs ${originN} #${result.origin_mercer} (2024).`);
-      ftr();
-
-      /* PAGE 6 — NEGOTIATION */
-      doc.addPage(); hdr(L.nego);
-      y = 58;
-      const ck = isFr ? [
-        `Base: min SAR ${fmtN(minSal)} (demandez ${fmtN(recSal)}+)`,
-        `Logement: 25% = SAR ${fmtN(Math.round(minSal * 0.25))}`,
-        `\u00c9ducation: SAR ${fmtN(result.school_cost_sar * 12)}/an par enfant`,
-        `Billets: ${adults + children} vers ${originN} \u2248 SAR ${fmtN((adults + children) * 3000)}/an`,
-        `Transport: 10% ou voiture de fonction`,
-        `M\u00e9dical: obligatoire par l'employeur`,
-        `Cong\u00e9s: n\u00e9gociez 30 jours`,
-      ] : [
-        `Base: min SAR ${fmtN(minSal)} (ask for ${fmtN(recSal)}+)`,
-        `Housing: 25% = SAR ${fmtN(Math.round(minSal * 0.25))}`,
-        `Education: SAR ${fmtN(result.school_cost_sar * 12)}/yr per child`,
-        `Flights: ${adults + children} to ${originN} ~ SAR ${fmtN((adults + children) * 3000)}/yr`,
-        `Transport: 10% or company car`,
-        `Medical: employer-paid by law`,
-        `Leave: push for 30 days`,
-      ];
-      ck.forEach((item) => {
-        doc.setFillColor(240, 253, 244); doc.circle(M + 3, y - 1.5, 2.5, "F");
-        doc.setTextColor(22, 163, 74); doc.setFontSize(8); doc.text("\u2713", M + 1.5, y);
-        doc.setTextColor(50, 50, 50); doc.setFontSize(10); doc.text(item, M + 10, y);
-        y += 10;
-      });
-      y += 8;
-      doc.setFillColor(255, 251, 235); doc.roundedRect(M, y, W - 2 * M, 16, 2, 2, "F");
-      doc.setFontSize(9); doc.setTextColor(146, 64, 14);
-      doc.text(isFr ? `PRO TIP: Vos \u00e9conomies de ${sym}${fmtN(result.tax_savings_local)}/mois = levier de n\u00e9gociation.` : `PRO TIP: Your ${sym}${fmtN(result.tax_savings_local)}/mo tax savings = negotiation leverage.`, M + 6, y + 10);
-      ftr();
-
-      /* PAGE 7 — AI RISK (if occ selected) */
-      if (selectedOcc) {
-        doc.addPage(); hdr(L.aiTitle);
-        y = 58;
-        doc.setFontSize(14); doc.setTextColor(30, 30, 30); doc.text(occName, M, y); y += 10;
-        doc.setFontSize(11); doc.text(`Score: ${occScore}/100 \u2014 ${riskLbl(occScore)}`, M, y); y += 8;
-        if (occTrend) {
-          const ar = occTrend.direction === "up" ? "\u25b2" : occTrend.direction === "down" ? "\u25bc" : "\u2501";
-          doc.setFontSize(10); doc.text(`${isFr ? "Tendance" : "Trend"}: ${ar} ${occTrend.delta > 0 ? "+" : ""}${occTrend.delta.toFixed(1)} vs Q4-2025`, M, y); y += 12;
-        }
-        // Risk gauge
-        const gW = W - 2 * M;
-        for (let gx = 0; gx < gW; gx++) {
-          const p = gx / gW;
-          const rr = Math.round(p < 0.5 ? 16 + p * 2 * 233 : 249);
-          const gg = Math.round(p < 0.5 ? 185 : 185 - (p - 0.5) * 2 * 141);
-          doc.setFillColor(rr, gg, p < 0.25 ? 129 : 68);
-          doc.rect(M + gx, y, 1, 8, "F");
-        }
-        const mx = M + (occScore / 100) * gW;
-        doc.setFillColor(30, 30, 30); doc.circle(mx, y + 4, 4, "F");
-        doc.setTextColor(255, 255, 255); doc.setFontSize(6); doc.text(String(occScore), mx - 2, y + 6);
-        y += 20;
-        doc.setFontSize(9); doc.setTextColor(80, 80, 80);
-        if (selectedOcc.salary_median_sar) { doc.text(`${isFr ? "Salaire m\u00e9dian KSA" : "Median salary KSA"}: SAR ${fmtN(selectedOcc.salary_median_sar)}${L.mo}`, M, y); y += 6; }
-        doc.text(`${isFr ? "Secteur" : "Sector"}: ${selectedOcc.sector_id}`, M, y); y += 6;
-        doc.text(`WEF: ${selectedOcc.wef_trend}`, M, y);
-        ftr();
-      }
-
-      /* PAGE 8 — ABOUT */
-      doc.addPage(); hdr(L.about);
-      y = 58;
-      doc.setFontSize(10); doc.setTextColor(80, 80, 80);
-      [
-        "Generated by SHIFT Observatory",
-        "www.ksashiftobservatory.online",
-        "",
-        "Data: Numbeo, Mercer 2024, GOSI Q4-2024, WEF 2025, HRSD",
-        `Exchange rate: 1 ${cur} = ${rate.toFixed(4)} SAR`,
-        `Report date: ${today}`,
-        "",
-        "\u00a9 2026 SHIFT Observatory",
-        "Created by Samy Aloulou",
-        "Monitoring Force Gulf",
-      ].forEach((line) => { doc.text(line, M, y); y += 6; });
-      ftr();
-
-      const ds = new Date().toISOString().slice(0, 10);
-      doc.save(`SHIFT-Relocation-${originN.replace(/\s/g, "-")}-to-${saudiN.replace(/\s/g, "-")}-${ds}.pdf`);
+    generateRelocationReport({
+      lang,
+      result,
+      originName: ln(lang, origin),
+      saudiName: ln(lang, saudi),
+      originCurrency: origin.currency,
+      originCurrencySymbol: origin.currencySymbol,
+      originTaxRate: origin.taxRate,
+      originId,
+      saudiId,
+      originMercer: result.origin_mercer,
+      saudiMercer: result.saudi_mercer,
+      adults,
+      children,
+      housing,
+      schoolTierLabel: schoolTier.label_en,
+      occupation: selectedOcc ? {
+        name: ln(lang, selectedOcc),
+        name_en: selectedOcc.name_en,
+        composite: selectedOcc.composite,
+        sector_id: selectedOcc.sector_id,
+        wef_trend: selectedOcc.wef_trend,
+        salary_median_sar: selectedOcc.salary_median_sar,
+        salary_entry_sar: selectedOcc.salary_entry_sar,
+        salary_senior_sar: selectedOcc.salary_senior_sar,
+        category: selectedOcc.category,
+        employment_est: selectedOcc.employment_est,
+      } : undefined,
     });
-  }, [result, lang, origin, saudi, originId, saudiId, selectedOcc, adults, children, housing, schoolTier, schoolTierId]);
+  }, [result, lang, origin, saudi, originId, saudiId, selectedOcc, adults, children, housing, schoolTier]);
 
   /* ---- Email-gated PDF download ---- */
   const handlePDFClick = useCallback(() => {
