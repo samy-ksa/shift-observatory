@@ -9,6 +9,7 @@ import { riskLabel, scoreToCategory } from "@/lib/utils";
 import InfoTooltip from "@/components/shared/InfoTooltip";
 import { useLang, formatNumber } from "@/lib/i18n/context";
 import { toSlug } from "@/lib/occupations";
+import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
 import data from "@/data/master.json";
 import type { Occupation, SalaryContext, TaweenDecision } from "@/lib/data-types";
@@ -373,6 +374,54 @@ export default function RiskCalculator() {
                     >
                       {occName(o)}
                     </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Occupation matcher — closest matches */}
+              {query.length >= 2 && (
+                <div className="mt-4 space-y-3 text-left">
+                  <p className="text-sm text-gray-400">
+                    <span className="text-white font-medium">&quot;{query}&quot;</span>{" "}
+                    {t.match.matchNotFound}
+                  </p>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                    {t.match.matchClosest}
+                  </p>
+                  {findClosestOccupations(query, 5).map((m) => (
+                    <a
+                      key={m.slug}
+                      href={`/job/${m.slug}`}
+                      className="block border border-gray-800 rounded-lg p-3 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
+                    >
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-white text-sm font-medium">
+                          {lang === "ar" ? m.occupation.name_ar : lang === "fr" ? m.occupation.name_fr : m.occupation.name_en}
+                        </span>
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full ${
+                          m.score > 80 ? "bg-green-500/20 text-green-400" :
+                          m.score > 50 ? "bg-amber-500/20 text-amber-400" :
+                          "bg-gray-700 text-gray-400"
+                        }`}>
+                          {m.score}% {t.match.matchConfidence}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs text-gray-400">
+                        <span className={`w-2 h-2 rounded-full ${
+                          m.occupation.composite > 70 ? "bg-red-500" :
+                          m.occupation.composite > 40 ? "bg-amber-500" :
+                          "bg-green-500"
+                        }`} />
+                        <span>AI: {m.occupation.composite}/100</span>
+                        <span>|</span>
+                        <span>{m.occupation.salary_entry_sar.toLocaleString()}-{m.occupation.salary_senior_sar.toLocaleString()} SAR</span>
+                      </div>
+                      <p className="text-[11px] text-gray-500 mt-1">
+                        {m.reason === "direct" ? t.match.matchDirect :
+                         m.reason === "related" ? t.match.matchRelated :
+                         t.match.matchFuzzy}
+                      </p>
+                    </a>
                   ))}
                 </div>
               )}

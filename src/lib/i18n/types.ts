@@ -537,6 +537,15 @@ export interface JobsDropdownStrings {
   noResults: string;
 }
 
+export interface MatchStrings {
+  matchNotFound: string;
+  matchClosest: string;
+  matchDirect: string;
+  matchRelated: string;
+  matchFuzzy: string;
+  matchConfidence: string;
+}
+
 export interface RelocateStrings {
   title: string;
   subtitle: string;
@@ -760,4 +769,5 @@ export interface Dictionary {
   jobsDropdown: JobsDropdownStrings;
   findJob: FindJobStrings;
   relocate: RelocateStrings;
+  match: MatchStrings;
 }

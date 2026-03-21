@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/i18n/context";
 import { getAllOccupations, toSlug, type Occupation } from "@/lib/occupations";
+import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
 
 const DEBOUNCE_MS = 150;
@@ -143,9 +144,30 @@ export default function MobileJobSearch() {
           {/* Results list — fills remaining space */}
           <div className="flex-1 overflow-y-auto">
             {results.length === 0 ? (
-              <div className="px-4 py-12 text-center text-gray-500 text-sm">
-                {jd.noResults}
-              </div>
+              debouncedQ.length >= 2 ? (
+                <div className="px-4 py-4">
+                  <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-3">
+                    {t.match.matchClosest}
+                  </p>
+                  {findClosestOccupations(debouncedQ, 3).map((m) => (
+                    <a key={m.slug} href={`/job/${m.slug}`} onClick={() => setOpen(false)} className="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-800 transition-colors border-b border-gray-800/30">
+                      <div className="flex items-center gap-2">
+                        <span className={`w-1.5 h-1.5 rounded-full ${m.occupation.composite > 70 ? "bg-red-500" : m.occupation.composite > 40 ? "bg-amber-500" : "bg-green-500"}`} />
+                        <span className="text-gray-200 text-sm">
+                          {lang === "ar" ? m.occupation.name_ar : lang === "fr" ? m.occupation.name_fr : m.occupation.name_en}
+                        </span>
+                      </div>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-gray-500"}`}>
+                        {m.score}%
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <div className="px-4 py-12 text-center text-gray-500 text-sm">
+                  {jd.noResults}
+                </div>
+              )
             ) : (
               results.map((occ) => (
                 <button

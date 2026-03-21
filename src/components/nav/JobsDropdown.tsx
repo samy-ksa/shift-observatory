@@ -15,6 +15,7 @@ import {
   toSlug,
   type Occupation,
 } from "@/lib/occupations";
+import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
@@ -208,9 +209,30 @@ function SearchPanel({
       <div className="relative">
         <div className={`${maxH} overflow-y-auto jobs-scroll`}>
           {results.length === 0 && isSearching ? (
-            <div className="px-3 py-6 text-center text-gray-500 text-xs">
-              {jd.noResults}
-            </div>
+            debouncedQ.length >= 2 ? (
+              <div className="px-3 py-2">
+                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-2">
+                  {t.match.matchClosest}
+                </p>
+                {findClosestOccupations(debouncedQ, 3).map((m) => (
+                  <a key={m.slug} href={`/job/${m.slug}`} onClick={onClose} className="flex items-center justify-between px-2 py-2 rounded hover:bg-gray-800 transition-colors">
+                    <div className="flex items-center gap-2">
+                      <span className={`w-1.5 h-1.5 rounded-full ${m.occupation.composite > 70 ? "bg-red-500" : m.occupation.composite > 40 ? "bg-amber-500" : "bg-green-500"}`} />
+                      <span className="text-gray-200 text-sm">
+                        {lang === "ar" ? m.occupation.name_ar : lang === "fr" ? m.occupation.name_fr : m.occupation.name_en}
+                      </span>
+                    </div>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-gray-500"}`}>
+                      {m.score}%
+                    </span>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="px-3 py-6 text-center text-gray-500 text-xs">
+                {jd.noResults}
+              </div>
+            )
           ) : (
             results.map((occ, i) => (
               <Link

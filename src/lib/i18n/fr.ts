@@ -686,4 +686,12 @@ export const fr: Dictionary = {
     schoolTierInfo: "Les écoles publiques enseignent uniquement en arabe. La plupart des enfants d'expatriés fréquentent des écoles internationales privées. Budget : curriculum indien/pakistanais. Mid-tier : américain/britannique. Premium : programmes IB dans les meilleures écoles.",
     items: "articles",
   },
+  match: {
+    matchNotFound: "n'est pas dans notre base de 237 métiers.",
+    matchClosest: "Voici les correspondances les plus proches :",
+    matchDirect: "Correspondance directe sur le marché saoudien",
+    matchRelated: "Métier apparenté",
+    matchFuzzy: "Titre similaire",
+    matchConfidence: "de correspondance",
+  },
 };

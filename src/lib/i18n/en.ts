@@ -709,4 +709,12 @@ export const en: Dictionary = {
     schoolTierInfo: "Public schools teach in Arabic only. Most expat children attend private international schools. Budget: Indian/Pakistani curriculum. Mid-tier: American/British. Premium: IB programs at top-tier schools.",
     items: "items",
   },
+  match: {
+    matchNotFound: "is not in our database of 237 occupations.",
+    matchClosest: "Here are the closest matches:",
+    matchDirect: "Direct match in the Saudi market",
+    matchRelated: "Related occupation",
+    matchFuzzy: "Similar title match",
+    matchConfidence: "match",
+  },
 };
