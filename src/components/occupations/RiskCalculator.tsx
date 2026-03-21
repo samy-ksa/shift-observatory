@@ -234,7 +234,7 @@ export default function RiskCalculator() {
   }
 
   const tabClass = (tab: OccTab) =>
-    `flex-1 px-4 py-3 text-sm font-medium text-center transition-colors ${
+    `flex-1 px-4 py-3 min-h-10 text-sm font-medium text-center transition-colors ${
       activeTab === tab
         ? "text-text-primary border-b-2 border-accent-primary"
         : "text-text-muted hover:text-text-secondary"
@@ -487,7 +487,7 @@ export default function RiskCalculator() {
                   </div>
 
                   {/* Key metrics row */}
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div className="bg-bg-secondary/30 rounded-lg p-3 text-center">
                       <p className="text-2xl font-mono text-text-primary">
                         {selected.frey_osborne}%
@@ -938,12 +938,12 @@ export default function RiskCalculator() {
             <p className="text-sm mb-6">
               {t.riskTool.notFoundSub}
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex overflow-x-auto mobile-scroll gap-2 pb-2">
               {allOccupations.slice(0, 12).map((occ) => (
                 <button
                   key={occ.name_en}
                   onClick={() => handleSelect(occ)}
-                  className="px-3 py-1.5 bg-bg-card hover:bg-bg-card-hover rounded-full text-sm text-text-secondary hover:text-text-primary transition-colors border border-white/5"
+                  className="flex-shrink-0 min-h-10 px-3 py-1.5 bg-bg-card hover:bg-bg-card-hover rounded-full text-sm text-text-secondary hover:text-text-primary transition-colors border border-white/5"
                 >
                   {occName(occ)}
                 </button>

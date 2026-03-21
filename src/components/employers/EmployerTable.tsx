@@ -277,7 +277,8 @@ export default function EmployerTable() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-lg card-glow overflow-hidden"
         >
-          <div className="overflow-x-auto">
+          <span className="text-[10px] text-gray-500 mb-1 block md:hidden px-4 pt-2">Scroll →</span>
+          <div className="overflow-x-auto mobile-scroll">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/10">
@@ -298,7 +299,7 @@ export default function EmployerTable() {
                   ].map((col, i) => (
                     <th
                       key={i}
-                      className={`${lang === "ar" ? "text-right" : "text-left"} px-4 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider cursor-pointer hover:text-text-secondary transition-colors ${col.width}`}
+                      className={`${lang === "ar" ? "text-right" : "text-left"} px-4 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider cursor-pointer hover:text-text-secondary transition-colors ${col.width}${i === 1 ? " sticky left-0 z-10 bg-bg-card" : ""}`}
                       onClick={() =>
                         i !== 2 ? handleSort(col.key) : undefined
                       }
@@ -328,7 +329,7 @@ export default function EmployerTable() {
                       <td className="px-4 py-3 font-mono text-text-muted text-xs">
                         {emp.rank}
                       </td>
-                      <td className="px-4 py-3 relative">
+                      <td className="px-4 py-3 relative sticky left-0 z-10 bg-bg-card">
                         {/* Background bar */}
                         <div
                           className="absolute inset-y-0 left-0 opacity-[0.07] rounded-r"

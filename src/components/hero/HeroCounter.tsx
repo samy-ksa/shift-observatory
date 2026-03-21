@@ -122,14 +122,14 @@ export default function HeroCounter() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="text-accent-neon text-glow-neon font-mono font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight">
+          <div className="text-accent-neon text-glow-neon font-mono font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight">
             <AnimatedNumber
               key={saudiOnly ? "saudi" : "all"}
               value={mainNumber}
               duration={2000}
             />
           </div>
-          <p className="text-text-secondary text-lg md:text-xl mt-4 max-w-lg mx-auto">
+          <p className="text-text-secondary text-base md:text-xl mt-4 max-w-lg mx-auto">
             {t.hero.subtitle}
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ export default function HeroCounter() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="my-10 h-px bg-gradient-to-r from-transparent via-text-muted/30 to-transparent max-w-2xl mx-auto"
+          className="my-6 md:my-10 h-px bg-gradient-to-r from-transparent via-text-muted/30 to-transparent max-w-2xl mx-auto"
         />
 
         {/* KPI Cards */}
@@ -150,9 +150,9 @@ export default function HeroCounter() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.1, duration: 0.4 }}
-              className="bg-bg-card/60 backdrop-blur rounded-md p-3 border border-white/5 hover:bg-white/5 hover:border-white/10 transition-all duration-200 cursor-default card-hover-lift"
+              className="bg-bg-card/60 backdrop-blur rounded-md p-2 md:p-3 border border-white/5 hover:bg-white/5 hover:border-white/10 transition-all duration-200 cursor-default card-hover-lift"
             >
-              <div className={`text-xl md:text-2xl font-mono font-bold ${kpi.color}`}>
+              <div className={`text-lg md:text-2xl font-mono font-bold ${kpi.color}`}>
                 {kpi.noAnimate ? (
                   kpi.format(kpi.value)
                 ) : (

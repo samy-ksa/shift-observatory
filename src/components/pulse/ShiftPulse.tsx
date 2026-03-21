@@ -195,7 +195,7 @@ export default function ShiftPulse() {
         </motion.div>
 
         {/* Tab Bar */}
-        <div className="flex gap-1 bg-bg-secondary rounded-lg p-1 mb-6 overflow-x-auto">
+        <div className="flex gap-1 bg-bg-secondary rounded-lg p-1 mb-6 overflow-x-auto mobile-scroll">
           {tabs.map((t) => (
             <button
               key={t.key}
@@ -225,7 +225,7 @@ export default function ShiftPulse() {
         >
           {tab === "global" && (
             <>
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.global_layoffs.length === 0 ? (
                   <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
                 ) : (
@@ -285,7 +285,7 @@ export default function ShiftPulse() {
 
           {tab === "gulf" && (
             <>
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.gulf_mena_automation.length === 0 ? (
                   <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
                 ) : (
@@ -352,7 +352,7 @@ export default function ShiftPulse() {
 
           {tab === "policy" && (
             <>
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.saudi_policy_updates.length === 0 ? (
                   <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
                 ) : (

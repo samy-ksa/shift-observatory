@@ -120,7 +120,7 @@ function OccupationPicker({
           }}
           onFocus={() => setOpen(true)}
           placeholder={label}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-accent-primary focus:outline-none text-sm"
+          className="w-full min-h-12 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-accent-primary focus:outline-none text-sm"
         />
         {open && filtered.length > 0 && (
           <div className="absolute top-full left-0 right-0 mt-1 bg-bg-card border border-white/10 rounded-xl max-h-60 overflow-y-auto z-30">
@@ -378,7 +378,7 @@ export default function CareerRecommender() {
           <div className="flex items-center justify-center gap-3">
             <button
               onClick={() => setIsExpat(false)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-all ${
                 !isExpat
                   ? "bg-accent-primary/20 text-accent-primary border border-accent-primary/30"
                   : "bg-white/5 text-text-muted border border-white/10 hover:bg-white/10"
@@ -388,7 +388,7 @@ export default function CareerRecommender() {
             </button>
             <button
               onClick={() => setIsExpat(true)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-all ${
                 isExpat
                   ? "bg-accent-primary/20 text-accent-primary border border-accent-primary/30"
                   : "bg-white/5 text-text-muted border border-white/10 hover:bg-white/10"
@@ -464,7 +464,7 @@ export default function CareerRecommender() {
               </div>
 
               {/* ── Sort & Count ── */}
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
                 <h2 className="text-lg font-bold text-white">
                   {c.recommendations}{" "}
                   <span className="text-sm font-normal text-text-muted">
@@ -550,8 +550,8 @@ export default function CareerRecommender() {
                           {/* Skills overlap */}
                           <div>
                             <div className="text-[10px] text-text-muted uppercase">{c.skillsOverlap}</div>
-                            <div className="flex items-center gap-2 mt-0.5">
-                              <div className="w-16 h-1.5 rounded-full bg-white/10 overflow-hidden">
+                            <div className="flex items-center gap-2 mt-0.5 w-full">
+                              <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
                                 <div
                                   className="h-full rounded-full bg-accent-primary transition-all duration-500"
                                   style={{ width: `${rec.skills_overlap}%` }}
@@ -699,7 +699,7 @@ export default function CareerRecommender() {
                                 else setCareerEmailStatus("error");
                               } catch { setCareerEmailStatus("error"); }
                             }}
-                            className="bg-accent-primary text-bg-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-accent-primary/90 transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
+                            className="bg-accent-primary text-bg-primary px-4 py-2 min-h-11 rounded-lg text-sm font-semibold hover:bg-accent-primary/90 transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
                           >
                             {careerEmailStatus === "loading" ? (
                               <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
@@ -719,11 +719,11 @@ export default function CareerRecommender() {
                   </div>
 
                   {/* Share + PDF */}
-                  <div className="flex flex-wrap gap-3 justify-center">
+                  <div className="flex flex-col md:flex-row flex-wrap gap-3 justify-center">
                     <button
                       onClick={handlePdf}
                       disabled={pdfLoading}
-                      className="bg-white/10 text-white hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center gap-2"
+                      className="w-full md:w-auto bg-white/10 text-white hover:bg-white/20 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                     >
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -732,19 +732,19 @@ export default function CareerRecommender() {
                     </button>
                     <button
                       onClick={() => handleShare("linkedin")}
-                      className="bg-[#0077B5]/20 text-[#0077B5] hover:bg-[#0077B5]/30 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                      className="w-full md:w-auto bg-[#0077B5]/20 text-[#0077B5] hover:bg-[#0077B5]/30 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                     >
                       LinkedIn
                     </button>
                     <button
                       onClick={() => handleShare("twitter")}
-                      className="bg-white/10 text-white hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                      className="w-full md:w-auto bg-white/10 text-white hover:bg-white/20 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                     >
                       X / Twitter
                     </button>
                     <button
                       onClick={() => handleShare("whatsapp")}
-                      className="bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                      className="w-full md:w-auto bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                     >
                       WhatsApp
                     </button>

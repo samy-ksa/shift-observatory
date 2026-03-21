@@ -497,15 +497,15 @@ export default function RelocateClient({
                 <label className="text-sm text-text-muted mb-1.5 block">{r.family}</label>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <button onClick={() => setAdults(Math.max(1, adults - 1))} className="w-8 h-8 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">-</button>
+                    <button onClick={() => setAdults(Math.max(1, adults - 1))} className="min-w-11 min-h-11 md:w-8 md:h-8 md:min-w-0 md:min-h-0 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">-</button>
                     <span className="w-6 text-center font-mono text-text-primary">{adults}</span>
-                    <button onClick={() => setAdults(Math.min(4, adults + 1))} className="w-8 h-8 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">+</button>
+                    <button onClick={() => setAdults(Math.min(4, adults + 1))} className="min-w-11 min-h-11 md:w-8 md:h-8 md:min-w-0 md:min-h-0 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">+</button>
                     <span className="text-xs text-text-muted">{r.adults}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <button onClick={() => setChildren(Math.max(0, children - 1))} className="w-8 h-8 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">-</button>
+                    <button onClick={() => setChildren(Math.max(0, children - 1))} className="min-w-11 min-h-11 md:w-8 md:h-8 md:min-w-0 md:min-h-0 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">-</button>
                     <span className="w-6 text-center font-mono text-text-primary">{children}</span>
-                    <button onClick={() => setChildren(Math.min(6, children + 1))} className="w-8 h-8 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">+</button>
+                    <button onClick={() => setChildren(Math.min(6, children + 1))} className="min-w-11 min-h-11 md:w-8 md:h-8 md:min-w-0 md:min-h-0 rounded border border-white/10 text-text-muted hover:bg-white/5 text-lg">+</button>
                     <span className="text-xs text-text-muted">{r.children}</span>
                   </div>
                 </div>
@@ -557,7 +557,7 @@ export default function RelocateClient({
               </div>
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.housing}</label>
-                <div className="flex gap-2">
+                <div className="flex gap-2 w-full">
                   {(["apartment", "compound"] as HousingType[]).map((h) => (
                     <button key={h} onClick={() => setHousing(h)}
                       className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all border ${
@@ -589,10 +589,12 @@ export default function RelocateClient({
           </div>
         </div>
 
-        <button onClick={handleCalculate} disabled={salaryNum <= 0}
-          className="mt-6 w-full sm:w-auto px-10 py-3.5 bg-cyan-400 text-bg-primary font-bold rounded-lg hover:bg-cyan-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm tracking-wide">
-          {r.calculate} &rarr;
-        </button>
+        <div className="sticky bottom-4 z-50 md:static md:z-auto bg-bg-primary/95 backdrop-blur-md py-3 md:py-0 -mx-4 px-4 md:mx-0 md:px-0 md:bg-transparent md:backdrop-blur-none">
+          <button onClick={handleCalculate} disabled={salaryNum <= 0}
+            className="mt-6 w-full min-h-14 md:w-auto md:min-h-0 px-10 py-3.5 bg-cyan-400 text-bg-primary font-bold rounded-lg hover:bg-cyan-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm tracking-wide">
+            {r.calculate} &rarr;
+          </button>
+        </div>
       </div>
 
       {/* ============================================================ */}
@@ -675,7 +677,7 @@ export default function RelocateClient({
           <div className="relative mb-6">
             <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-bg-primary to-transparent z-10 pointer-events-none md:hidden" />
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-bg-primary to-transparent z-10 pointer-events-none md:hidden" />
-            <div className="overflow-x-auto tabs-scroll -mx-4 px-4">
+            <div className="overflow-x-auto tabs-scroll mobile-scroll -mx-4 px-4">
               <div className="flex flex-wrap md:flex-wrap gap-0">
                 {tabs.map((tab) => (
                   <button key={tab.id} onClick={() => setActiveTab(tab.id)}
@@ -1035,9 +1037,9 @@ export default function RelocateClient({
           )}
 
           {/* ---- SHARE + ACTIONS ---- */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button onClick={handleShareLinkedIn} className="px-5 py-2.5 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors">{r.shareLinkedIn}</button>
-            <button onClick={handleReset} className="px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
+          <div className="mt-8 flex flex-col md:flex-row gap-2">
+            <button onClick={handleShareLinkedIn} className="w-full md:w-auto px-5 py-2.5 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors">{r.shareLinkedIn}</button>
+            <button onClick={handleReset} className="w-full md:w-auto px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
           </div>
 
           <p className="text-xs text-text-muted mt-6 max-w-3xl">{r.disclaimer} {r.exchangeRateNote}</p>

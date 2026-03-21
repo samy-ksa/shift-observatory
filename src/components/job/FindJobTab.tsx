@@ -307,14 +307,14 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
         <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
           {fj.jobBoards}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-col gap-2 w-full">
           {jobBoards.map((jb) => (
             <a
               key={jb.name}
               href={jb.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-gray-800 hover:bg-gray-700 text-white text-sm px-4 py-2 rounded-full transition-colors"
+              className="inline-flex items-center gap-1.5 bg-gray-800 hover:bg-gray-700 text-white text-sm px-4 py-2 rounded-full transition-colors w-full"
             >
               {jb.name}
               <svg

@@ -407,7 +407,7 @@ export default function RiskProfileWizard() {
 
         {/* Step indicator */}
         {!showResults && (
-          <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="flex items-center justify-center gap-2 mb-8 overflow-x-auto mobile-scroll text-xs">
             {stepLabels.map((label, i) => (
               <div key={i} className="flex items-center gap-2">
                 <button
@@ -891,7 +891,7 @@ export default function RiskProfileWizard() {
                     <a
                       href="/reports/SHIFT-Q1-2026-AI-Risk-Report.pdf"
                       download
-                      className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-medium text-sm px-4 py-2 rounded-md transition-colors"
+                      className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-medium text-sm px-4 py-2 min-h-11 rounded-md transition-colors"
                     >
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -901,7 +901,7 @@ export default function RiskProfileWizard() {
                   </div>
                 ) : (
                   <>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                       <input
                         type="email"
                         value={email}
@@ -910,13 +910,13 @@ export default function RiskProfileWizard() {
                           if (emailStatus === "error") setEmailStatus("idle");
                         }}
                         placeholder={t.email.placeholder}
-                        className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:border-accent-primary focus:outline-none"
+                        className="w-full flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:border-accent-primary focus:outline-none"
                         onKeyDown={(e) => e.key === "Enter" && handleEmailSubmit()}
                       />
                       <button
                         onClick={handleEmailSubmit}
                         disabled={emailStatus === "loading"}
-                        className="bg-accent-primary hover:bg-accent-primary/80 text-black font-semibold px-4 py-2 rounded-lg text-sm transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
+                        className="w-full md:w-auto bg-accent-primary hover:bg-accent-primary/80 text-black font-semibold px-4 py-2 min-h-11 rounded-lg text-sm transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[100px] justify-center"
                       >
                         {emailStatus === "loading" ? (
                           <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
@@ -936,11 +936,11 @@ export default function RiskProfileWizard() {
               </div>
 
               {/* Share & PDF Buttons */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-col md:flex-row flex-wrap gap-3 justify-center">
                 <button
                   onClick={handlePdf}
                   disabled={pdfLoading}
-                  className="bg-white/10 text-white hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center gap-2"
+                  className="w-full md:w-auto bg-white/10 text-white hover:bg-white/20 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -949,19 +949,19 @@ export default function RiskProfileWizard() {
                 </button>
                 <button
                   onClick={() => handleShare("linkedin")}
-                  className="bg-[#0077B5]/20 text-[#0077B5] hover:bg-[#0077B5]/30 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="w-full md:w-auto bg-[#0077B5]/20 text-[#0077B5] hover:bg-[#0077B5]/30 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                 >
                   LinkedIn
                 </button>
                 <button
                   onClick={() => handleShare("twitter")}
-                  className="bg-white/10 text-white hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="w-full md:w-auto bg-white/10 text-white hover:bg-white/20 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                 >
                   X / Twitter
                 </button>
                 <button
                   onClick={() => handleShare("whatsapp")}
-                  className="bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="w-full md:w-auto bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 px-4 py-2 min-h-11 rounded-lg text-sm font-medium transition-colors"
                 >
                   WhatsApp
                 </button>
@@ -982,10 +982,10 @@ export default function RiskProfileWizard() {
 
         {/* Navigation Buttons */}
         {!showResults && (
-          <div className="flex justify-between mt-8">
+          <div className="flex flex-col-reverse md:flex-row justify-between gap-3 mt-8">
             <button
               onClick={() => setStep(Math.max(1, step - 1))}
-              className={`px-6 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+              className={`w-full md:w-auto px-6 py-2.5 min-h-11 rounded-xl text-sm font-medium transition-colors ${
                 step === 1
                   ? "invisible"
                   : "bg-white/5 text-text-secondary hover:bg-white/10 border border-white/10"
@@ -1001,7 +1001,7 @@ export default function RiskProfileWizard() {
                 }
               }}
               disabled={!canProceed()}
-              className="px-6 py-2.5 rounded-xl text-sm font-semibold bg-accent-primary text-black hover:bg-accent-primary/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-full md:w-auto px-6 py-2.5 min-h-11 rounded-xl text-sm font-semibold bg-accent-primary text-black hover:bg-accent-primary/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             >
               {step === 4 ? p.results : p.next}
             </button>

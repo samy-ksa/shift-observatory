@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/SectionHeader";
 import RiskBadge from "@/components/shared/RiskBadge";
 import InfoTooltip from "@/components/shared/InfoTooltip";
+import BottomSheet from "@/components/shared/BottomSheet";
 import { formatCompact, riskColor, scoreToCategory } from "@/lib/utils";
 import { useLang, formatNumber } from "@/lib/i18n/context";
 import data from "@/data/master.json";
@@ -125,6 +126,7 @@ export default function KSAMapSection() {
   const [selected, setSelected] = useState<Region>(
     regions.find((r) => r.name_en === "Riyadh") || regions[0]
   );
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   const gosi = getGosi(selected);
   const topSectors = getTopSectors(selected, 5);
@@ -149,13 +151,16 @@ export default function KSAMapSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Map - 3 cols */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 overflow-auto" style={{ touchAction: "manipulation" }}>
             <KSAMap
               regions={regions}
               selectedRegion={selected.name_en}
               onSelectRegion={(name) => {
                 const r = regions.find((reg) => reg.name_en === name);
-                if (r) setSelected(r);
+                if (r) {
+                  setSelected(r);
+                  setSheetOpen(true);
+                }
               }}
               lang={lang}
               riskLabels={{
@@ -169,13 +174,13 @@ export default function KSAMapSection() {
             />
           </div>
 
-          {/* Detail Panel - 2 cols */}
+          {/* Detail Panel - 2 cols (desktop only) */}
           <motion.div
             key={selected.name_en}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:col-span-2 bg-bg-card rounded-2xl p-6 card-glow self-start border border-white/5"
+            className="hidden lg:block lg:col-span-2 bg-bg-card rounded-2xl p-6 card-glow self-start border border-white/5"
           >
             {/* Header */}
             <h3 className="text-2xl font-bold text-text-primary">
@@ -186,7 +191,7 @@ export default function KSAMapSection() {
             </p>
 
             {/* Metrics grid */}
-            <div className="grid grid-cols-2 gap-4 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               {/* Total Workers */}
               <div>
                 <p className="text-xs text-text-muted uppercase tracking-wider">
@@ -368,6 +373,114 @@ export default function KSAMapSection() {
               </p>
             )}
           </motion.div>
+
+          {/* Mobile BottomSheet for region detail */}
+          <BottomSheet
+            open={sheetOpen}
+            onClose={() => setSheetOpen(false)}
+            title={lang === "ar" ? selected.name_ar : selected.name_en}
+          >
+            <p className="text-sm text-text-muted mb-4">
+              {lang === "ar" ? selected.name_en : selected.name_ar}
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <p className="text-xs text-text-muted uppercase tracking-wider">{t.map.detail.workers}</p>
+                <p className="font-mono font-bold text-2xl text-accent-neon">{formatNumber(totalWorkers, lang)}</p>
+                <p className="text-xs text-text-muted/60">{t.map.detail.workersNote}</p>
+              </div>
+              <div>
+                <p className="text-xs text-text-muted uppercase tracking-wider">{t.map.detail.saudiShare}</p>
+                <p className="font-mono font-bold text-2xl text-text-primary">{saudiPct}%</p>
+                <p className="text-xs text-text-muted/60">{t.map.detail.saudiNote}</p>
+              </div>
+              <div>
+                <p className="text-xs text-text-muted uppercase tracking-wider">{t.map.detail.nonSaudi}</p>
+                <p className="font-mono font-bold text-2xl text-text-secondary">{formatNumber(nonSaudiCount, lang)}</p>
+                <p className="text-xs text-text-muted/60">{(100 - saudiPct).toFixed(1)}%</p>
+              </div>
+              <div>
+                <p className="text-xs text-text-muted uppercase tracking-wider">{t.map.detail.riskScore}</p>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <span className="font-mono font-bold text-2xl" style={{ color: riskColor(scoreToCategory(selected.ai_risk_score)) }}>
+                    {selected.ai_risk_score}
+                  </span>
+                  <RiskBadge category={scoreToCategory(selected.ai_risk_score)} size="sm" />
+                </div>
+                <p className="text-xs text-text-muted/60">{t.map.detail.riskNote}</p>
+              </div>
+              {selected.pib_share && (
+                <div>
+                  <p className="text-xs text-text-muted uppercase tracking-wider">{t.map.detail.gdpShare}</p>
+                  <p className="font-mono font-bold text-2xl text-text-primary">{selected.pib_share}%</p>
+                  <p className="text-xs text-text-muted/60">{t.map.detail.gdpNote}</p>
+                </div>
+              )}
+            </div>
+
+            {topSectors.length > 0 && (
+              <>
+                <hr className="border-white/5 my-5" />
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-3">{t.map.detail.topSectors}</p>
+                <div className="space-y-2.5">
+                  {topSectors.map((s) => (
+                    <div key={s.name}>
+                      <div className="flex items-center justify-between mb-0.5">
+                        <span className="text-sm text-text-secondary truncate flex-1">
+                          {lang === "ar" && SECTOR_AR[s.name] ? SECTOR_AR[s.name] : s.name}
+                        </span>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          <span className="text-xs font-mono text-text-muted">{formatCompact(s.count)}</span>
+                          <RiskBadge category={scoreToCategory(getSectorRisk(s.name))} size="sm" />
+                        </div>
+                      </div>
+                      <div className="h-2 bg-bg-secondary rounded-full overflow-hidden">
+                        <div
+                          className="h-full rounded-full"
+                          style={{
+                            width: `${(s.count / maxSectorCount) * 100}%`,
+                            backgroundColor: riskColor(scoreToCategory(getSectorRisk(s.name))),
+                            opacity: 0.7,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {selected.giga_projects && selected.giga_projects.length > 0 && (
+              <>
+                <hr className="border-white/5 my-5" />
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-3">{t.map.detail.gigaProjects}</p>
+                <div className="flex flex-wrap gap-2">
+                  {selected.giga_projects.map((p) => (
+                    <span key={p} className="text-xs px-2.5 py-1 bg-accent-gold/15 text-accent-gold rounded-full font-medium border border-accent-gold/20">
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {v2030Priorities && (
+              <>
+                <hr className="border-white/5 my-5" />
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2">{t.map.detail.v2030Focus}</p>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  {lang === "ar" && V2030_PRIORITIES_AR[selected.name_en]
+                    ? V2030_PRIORITIES_AR[selected.name_en]
+                    : v2030Priorities}
+                </p>
+              </>
+            )}
+
+            {gosi && (
+              <p className="text-[10px] text-text-muted/40 mt-3">{t.map.detail.gosiSource}</p>
+            )}
+          </BottomSheet>
         </div>
       </div>
     </section>

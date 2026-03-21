@@ -69,20 +69,26 @@ export default function StickyNav() {
           transition={{ duration: 0.3 }}
           className="fixed top-12 left-0 right-0 z-40 bg-bg-primary/95 backdrop-blur-md border-b border-white/5"
         >
-          <div className="max-w-7xl mx-auto px-4 flex items-center h-10 gap-0.5 overflow-x-auto scrollbar-none">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollTo(item.href)}
-                className={`px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider transition-all flex-shrink-0 ${
-                  active === item.href
-                    ? "text-cyan-400 border-b-2 border-cyan-400"
-                    : "text-text-muted hover:text-text-secondary"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+          <div className="relative max-w-7xl mx-auto">
+            {/* Left fade gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-bg-primary/95 to-transparent z-10 pointer-events-none md:hidden" />
+            {/* Right fade gradient */}
+            <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-bg-primary/95 to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="px-4 flex items-center h-8 md:h-10 gap-0.5 overflow-x-auto mobile-scroll">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollTo(item.href)}
+                  className={`px-2.5 md:px-3 py-1.5 text-[10px] md:text-[11px] font-medium uppercase tracking-wider transition-all flex-shrink-0 ${
+                    active === item.href
+                      ? "text-cyan-400 border-b-2 border-cyan-400"
+                      : "text-text-muted hover:text-text-secondary"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </div>
         </motion.nav>
       )}

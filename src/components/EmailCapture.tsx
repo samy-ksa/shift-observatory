@@ -59,7 +59,7 @@ export default function EmailCapture() {
           </div>
         ) : (
           <>
-            <div className="flex gap-3">
+            <div className="flex flex-col md:flex-row gap-3">
               <input
                 type="email"
                 value={email}
@@ -68,13 +68,13 @@ export default function EmailCapture() {
                   if (status === "error") setStatus("idle");
                 }}
                 placeholder={t.email.placeholder}
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
+                className="flex-1 min-h-12 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
                 onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
               />
               <button
                 onClick={handleSubmit}
                 disabled={status === "loading"}
-                className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[140px] justify-center"
+                className="min-h-12 w-full md:w-auto bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50 flex items-center gap-2 min-w-[140px] justify-center"
               >
                 {status === "loading" ? (
                   <>

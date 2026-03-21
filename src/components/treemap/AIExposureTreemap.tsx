@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/SectionHeader";
+import BottomSheet from "@/components/shared/BottomSheet";
 import { useLang, formatNumber } from "@/lib/i18n/context";
 import { prepareTreemapData, exposureColor, type WorkforceFilter, type TreemapOccupation } from "@/lib/treemap/treemap-utils";
 import { scoreToCategory } from "@/lib/utils";
@@ -21,6 +22,7 @@ export default function AIExposureTreemap() {
   const [hoveredOcc, setHoveredOcc] = useState<TreemapOccupation | null>(null);
   const [tooltipPos, setTooltipPos] = useState<DOMRect | null>(null);
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
+  const [sidebarSheetOpen, setSidebarSheetOpen] = useState(false);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const treemapData = useMemo(() => prepareTreemapData(highRisk as any, lowRisk as any, filter), [filter]);
@@ -44,8 +46,8 @@ export default function AIExposureTreemap() {
       />
 
       <div className="flex flex-col lg:flex-row gap-6 mt-8">
-        {/* Sidebar — sticky + scrollable on desktop */}
-        <div className="lg:sticky lg:top-28 lg:self-start lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:scrollbar-none">
+        {/* Sidebar — sticky + scrollable on desktop, hidden on mobile */}
+        <div className="hidden lg:block lg:sticky lg:top-28 lg:self-start lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:scrollbar-none">
           <TreemapSidebar
             data={treemapData}
             lang={lang}
@@ -54,6 +56,34 @@ export default function AIExposureTreemap() {
             t={t}
           />
         </div>
+
+        {/* Mobile: button to open sidebar in BottomSheet */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setSidebarSheetOpen(true)}
+            className="min-h-11 px-4 py-2 text-sm bg-bg-card/60 border border-white/10 rounded-md text-text-muted"
+          >
+            {t.treemap.everyone} / {t.treemap.saudiOnly} / {t.treemap.expatOnly}
+          </button>
+        </div>
+
+        {/* Mobile BottomSheet for sidebar content */}
+        <BottomSheet
+          open={sidebarSheetOpen}
+          onClose={() => setSidebarSheetOpen(false)}
+          title={t.treemap.title}
+        >
+          <TreemapSidebar
+            data={treemapData}
+            lang={lang}
+            filter={filter}
+            onFilterChange={(f) => {
+              setFilter(f);
+              setSidebarSheetOpen(false);
+            }}
+            t={t}
+          />
+        </BottomSheet>
 
         {/* Main treemap area */}
         <div className="flex-1 min-w-0">
@@ -67,13 +97,13 @@ export default function AIExposureTreemap() {
             <div className="flex lg:hidden rounded-md border border-white/10 overflow-hidden">
               <button
                 onClick={() => setMobileView("map")}
-                className={`px-3 py-1 text-xs ${mobileView === "map" ? "bg-accent-primary/20 text-accent-primary" : "text-text-muted"}`}
+                className={`px-3 py-1 text-xs min-h-11 ${mobileView === "map" ? "bg-accent-primary/20 text-accent-primary" : "text-text-muted"}`}
               >
                 {t.treemap.mapView}
               </button>
               <button
                 onClick={() => setMobileView("list")}
-                className={`px-3 py-1 text-xs ${mobileView === "list" ? "bg-accent-primary/20 text-accent-primary" : "text-text-muted"}`}
+                className={`px-3 py-1 text-xs min-h-11 ${mobileView === "list" ? "bg-accent-primary/20 text-accent-primary" : "text-text-muted"}`}
               >
                 {t.treemap.listView}
               </button>
@@ -103,13 +133,13 @@ export default function AIExposureTreemap() {
                 <TreemapCanvas data={treemapData} lang={lang} onHover={handleHover} />
               </motion.div>
             ) : (
-              <div className="space-y-1.5 max-h-[600px] overflow-y-auto">
+              <div className="space-y-1.5 max-h-[600px] overflow-y-auto mobile-scroll">
                 {listData.slice(0, 50).map((occ, i) => {
                   const cat = scoreToCategory(occ.composite);
                   return (
                     <div
                       key={`${occ.name_en}-${i}`}
-                      className="flex items-center gap-3 bg-bg-card/40 rounded-md px-3 py-2 border border-white/5"
+                      className="flex items-center gap-3 bg-bg-card/40 rounded-md px-3 py-2 border border-white/5 min-h-11"
                     >
                       <div
                         className="w-2 h-8 rounded-full flex-shrink-0"

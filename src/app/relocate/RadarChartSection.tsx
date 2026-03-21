@@ -61,18 +61,18 @@ export default function RadarChartSection({
       <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">
         {r.radarTitle}
       </h3>
-      <div className="w-full h-[400px]">
+      <div className="w-full h-[250px] md:h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
             <PolarGrid stroke="#374151" />
             <PolarAngleAxis
               dataKey="axis"
-              tick={{ fill: "#9CA3AF", fontSize: 11 }}
+              tick={{ fill: "#9CA3AF", fontSize: 8 }}
             />
             <PolarRadiusAxis
               angle={90}
               domain={[0, 100]}
-              tick={{ fill: "#6B7280", fontSize: 9 }}
+              tick={{ fill: "#6B7280", fontSize: 7 }}
               axisLine={false}
             />
             <Radar

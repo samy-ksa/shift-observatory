@@ -148,12 +148,12 @@ function ShareButtons({
     `${base}${encodeURIComponent(text + " " + url)}`;
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-col md:flex-row gap-2">
       <a
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-3 py-1.5 bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-medium rounded transition-colors"
+        className="w-full md:w-auto px-3 py-1.5 bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-medium rounded transition-colors"
       >
         LinkedIn
       </a>
@@ -161,7 +161,7 @@ function ShareButtons({
         href={shareUrl("https://twitter.com/intent/tweet?text=")}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium rounded transition-colors"
+        className="w-full md:w-auto px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium rounded transition-colors"
       >
         X / Twitter
       </a>
@@ -169,7 +169,7 @@ function ShareButtons({
         href={shareUrl("https://wa.me/?text=")}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-3 py-1.5 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-medium rounded transition-colors"
+        className="w-full md:w-auto px-3 py-1.5 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-medium rounded transition-colors"
       >
         WhatsApp
       </a>
@@ -179,7 +179,7 @@ function ShareButtons({
           setCopied(true);
           setTimeout(() => setCopied(false), 2000);
         }}
-        className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-medium rounded border border-gray-700 transition-colors"
+        className="w-full md:w-auto px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-medium rounded border border-gray-700 transition-colors"
       >
         {copied ? t.jobPage.copied : t.jobPage.copyLink}
       </button>
@@ -351,16 +351,18 @@ export default function JobPageClient({
           </div>
 
           {/* Score gauge */}
-          <ScoreGauge score={occ.composite} />
+          <div className="text-center md:text-left flex justify-center md:justify-start">
+            <ScoreGauge score={occ.composite} />
+          </div>
         </section>
 
         {/* ── Tab navigation ── */}
-        <div className="border-b border-gray-800 flex gap-0 overflow-x-auto">
+        <div className="border-b border-gray-800 flex gap-0 overflow-x-auto mobile-scroll">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
+              className={`px-4 py-2.5 min-h-10 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
                 activeTab === tab.key
                   ? "border-cyan-400 text-cyan-400"
                   : "border-transparent text-gray-500 hover:text-gray-300"
@@ -481,7 +483,7 @@ export default function JobPageClient({
               </h3>
 
               <div className="bg-[#0D1117] border border-gray-800 rounded-lg p-6">
-                <div className="flex justify-between items-end mb-6">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-6">
                   {[
                     { label: jp.entry, value: occ.salary_entry_sar },
                     { label: jp.median, value: occ.salary_median_sar },

@@ -142,7 +142,8 @@ export default function NitaqatSection() {
               {t.nitaqatSection.recentDecisions}
             </h3>
 
-            <div className="overflow-x-auto">
+            <span className="text-[10px] text-gray-500 mb-1 block md:hidden">Scroll →</span>
+            <div className="overflow-x-auto mobile-scroll">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -199,7 +200,8 @@ export default function NitaqatSection() {
             </h3>
 
             {/* Band consequences grid */}
-            <div className="overflow-x-auto">
+            <span className="text-[10px] text-gray-500 mb-1 block md:hidden">Scroll →</span>
+            <div className="overflow-x-auto mobile-scroll">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
