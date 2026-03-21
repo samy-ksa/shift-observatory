@@ -128,11 +128,31 @@ const SmartPopup = dynamic(
 /* ------------------------------------------------------------------ */
 /* Metadata                                                            */
 /* ------------------------------------------------------------------ */
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://www.ksashiftobservatory.online",
-  },
-};
+import { getServerLang } from "@/lib/server-lang";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = getServerLang();
+
+  const titles: Record<string, string> = {
+    en: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+    fr: "Risque IA sur l'emploi en Arabie Saoudite : 237 métiers analysés (2026) | Gratuit",
+    ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة (2026) | مجاني",
+  };
+
+  const descriptions: Record<string, string> = {
+    en: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
+    fr: "Quels métiers l'IA va-t-elle remplacer en Arabie Saoudite ? Dashboard gratuit évaluant 237 métiers. Salaires, Nitaqat, reconversions, calculateur d'expatriation. Mis à jour T1 2026.",
+    ar: "أي الوظائف ستحل محلها الذكاء الاصطناعي في السعودية؟ لوحة تحكم مجانية تقيّم 237 وظيفة. بيانات الرواتب، نطاقات، تحولات مهنية. محدّث الربع الأول 2026.",
+  };
+
+  return {
+    title: titles[lang] ?? titles.en,
+    description: descriptions[lang] ?? descriptions.en,
+    alternates: {
+      canonical: "https://www.ksashiftobservatory.online",
+    },
+  };
+}
 
 /* ------------------------------------------------------------------ */
 /* Page                                                                */

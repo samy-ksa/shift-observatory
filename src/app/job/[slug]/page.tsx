@@ -8,7 +8,6 @@ import {
   getRelevantTawteen,
   isReservedProfession,
   riskLabel,
-  wefTrendLabel,
   fmt,
 } from "@/lib/occupations";
 import JobPageClient from "./client";
@@ -38,14 +37,10 @@ export async function generateMetadata({
   }
 
   const rl = riskLabel(occ.composite);
-  const nitaqatDesc =
-    occ.nitaqat_status === "reserved_saudi_only"
-      ? "Reserved for Saudi nationals."
-      : "Open to expats (sector quota).";
 
   return {
-    title: `${occ.name_en} in Saudi Arabia — AI Risk Score ${occ.composite}/100 | SHIFT Observatory`,
-    description: `${occ.name_en} has an AI automation risk score of ${occ.composite}/100 in Saudi Arabia. Salary: ${fmt(occ.salary_entry_sar)}-${fmt(occ.salary_senior_sar)} SAR/month. ${nitaqatDesc} WEF trend: ${wefTrendLabel(occ.wef_trend)}. See full analysis, career transitions, and reskilling options.`,
+    title: `${occ.name_en}: ${occ.composite}% AI Risk in Saudi Arabia (2026 Data) | SHIFT`,
+    description: `Is your job safe? ${occ.name_en} face ${occ.composite}% AI automation risk in Saudi Arabia. Check salary (${occ.salary_entry_sar.toLocaleString()}-${occ.salary_senior_sar.toLocaleString()} SAR), Nitaqat status, career transitions. Free analysis.`,
     keywords: [
       occ.name_en,
       occ.name_ar,

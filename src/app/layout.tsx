@@ -42,19 +42,20 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = getServerLang();
 
   const titles: Record<string, string> = {
-    en: "SHIFT Observatory — AI Automation Risk Dashboard for Saudi Arabia",
-    fr: "SHIFT Observatory — Risque IA sur l'emploi en Arabie Saoudite",
-    ar: "SHIFT Observatory — مخاطر الذكاء الاصطناعي على التوظيف في المملكة العربية السعودية",
+    en: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+    fr: "Risque IA sur l'emploi en Arabie Saoudite : 237 métiers analysés (2026) | Gratuit",
+    ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة (2026) | مجاني",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Free dashboard mapping AI automation risk across 146 occupations in Saudi Arabia. Risk scores, salary data, Saudization analysis, relocation calculator.",
-    fr: "Tableau de bord gratuit analysant le risque d'automatisation IA de 146 métiers en Arabie Saoudite. Scores de risque, salaires, Saudisation, calculateur d'expatriation.",
-    ar: "لوحة معلومات مجانية تحلل مخاطر أتمتة الذكاء الاصطناعي على 146 مهنة في المملكة العربية السعودية. درجات المخاطر، بيانات الرواتب، تحليل السعودة، حاسبة الانتقال.",
+    en: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
+    fr: "Quels métiers l'IA va-t-elle remplacer en Arabie Saoudite ? Dashboard gratuit évaluant 237 métiers. Salaires, Nitaqat, reconversions, calculateur d'expatriation. Mis à jour T1 2026.",
+    ar: "أي الوظائف ستحل محلها الذكاء الاصطناعي في السعودية؟ لوحة تحكم مجانية تقيّم 237 وظيفة. بيانات الرواتب، نطاقات، تحولات مهنية. محدّث الربع الأول 2026.",
   };
 
   return {
     metadataBase: new URL(SITE_URL),
+    applicationName: "SHIFT Observatory",
     title: titles[lang],
     description: descriptions[lang],
     keywords: [

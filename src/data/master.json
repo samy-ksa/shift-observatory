@@ -21,8 +21,8 @@
       "nlo": "NLO AI in the Workplace Report 2024 + National Occupational Outlook 2025-2034"
     },
     "methodology_note": "AI risk scores are composite indices (0-100) calculated from academic studies. They represent EXPOSURE, not predicted job loss. Augmentation (AI as co-pilot) vs substitution (AI replaces worker) distinction is critical.",
-    "last_updated": "2026-03-02",
-    "total_occupations": 146,
+    "last_updated": "2026-03-21",
+    "total_occupations": 237,
     "enrichments_v2": [
       "100 reserved professions list (Article 36)",
       "Nitaqat Mutawar band parameters for 13 sectors",
@@ -2356,6 +2356,90 @@
         "employment_saudi_pct": 65
       },
       {
+        "rank": 27,
+        "name_en": "Customs Clearance Agent",
+        "name_ar": "مخلص جمركي",
+        "name_fr": "Agent de dédouanement",
+        "eloundou": 0.7,
+        "frey_osborne": 70,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 70,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 5400,
+        "salary_median_sar": 9000,
+        "salary_senior_sar": 15000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 28,
+        "name_en": "SEO Specialist",
+        "name_ar": "أخصائي تحسين محركات البحث",
+        "name_fr": "Spécialiste SEO",
+        "eloundou": 0.7,
+        "frey_osborne": 70,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 70,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 18000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
         "name_en": "Credit Analyst",
         "name_ar": "محلل ائتمان",
         "name_fr": "Analyste crédit",
@@ -2371,7 +2455,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 27,
+        "rank": 29,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -2416,7 +2500,7 @@
         "employment_saudi_pct": 70
       },
       {
-        "rank": 28,
+        "rank": 30,
         "name_en": "Postal Service Clerks",
         "name_fr": "Guichetier postal",
         "eloundou": 0.4,
@@ -2470,7 +2554,7 @@
         "employment_saudi_pct": 85
       },
       {
-        "rank": 29,
+        "rank": 31,
         "name_en": "Market Research Analysts",
         "name_fr": "Analyste de marché",
         "eloundou": 0.88,
@@ -2530,7 +2614,7 @@
         "employment_saudi_pct": 50
       },
       {
-        "rank": 30,
+        "rank": 32,
         "name_en": "Computer Programmers",
         "name_fr": "Programmeur",
         "eloundou": 1,
@@ -2599,7 +2683,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 31,
+        "rank": 33,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -2638,7 +2722,7 @@
         "employment_saudi_pct": 60
       },
       {
-        "rank": 32,
+        "rank": 34,
         "name_en": "Marketing Specialists",
         "name_fr": "Spécialiste marketing",
         "eloundou": 0.8,
@@ -2707,7 +2791,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "high",
         "wef_trend": "decline_moderate",
-        "rank": 33,
+        "rank": 35,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -2746,7 +2830,337 @@
         "employment_saudi_pct": 85
       },
       {
-        "rank": 34,
+        "rank": 36,
+        "name_en": "Audit Associate (Big 4)",
+        "name_ar": "مساعد تدقيق (الشركات الأربع الكبرى)",
+        "name_fr": "Auditeur junior (Big 4)",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 30000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4500,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 37,
+        "name_en": "Estimation Engineer",
+        "name_ar": "مهندس تقدير تكاليف",
+        "name_fr": "Ingénieur estimateur",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 25000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 38,
+        "name_en": "Revenue Manager (Hotels)",
+        "name_ar": "مدير الإيرادات (فنادق)",
+        "name_fr": "Revenue Manager (Hôtellerie)",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 11100,
+        "salary_median_sar": 18500,
+        "salary_senior_sar": 27500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 1500,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 40,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 39,
+        "name_en": "Airline Revenue Manager",
+        "name_ar": "مدير إيرادات شركة طيران",
+        "name_fr": "Revenue Manager (Compagnie aérienne)",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 800,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          }
+        ]
+      },
+      {
+        "rank": 40,
+        "name_en": "Content Creator / Influencer Manager",
+        "name_ar": "مدير محتوى / مدير مؤثرين",
+        "name_fr": "Créateur de contenu / Gestionnaire d'influenceurs",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7200,
+        "salary_median_sar": 12000,
+        "salary_senior_sar": 22000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 41,
+        "name_en": "E-learning Developer",
+        "name_ar": "مطور تعلم إلكتروني",
+        "name_fr": "Développeur e-learning",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7800,
+        "salary_median_sar": 13000,
+        "salary_senior_sar": 22000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "education",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 42,
+        "name_en": "Treasury Analyst",
+        "name_ar": "محلل خزانة",
+        "name_fr": "Analyste trésorerie",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 28000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 43,
+        "name_en": "Investment Analyst",
+        "name_ar": "محلل استثمار",
+        "name_fr": "Analyste en investissement",
+        "eloundou": 0.65,
+        "frey_osborne": 65,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 65,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 32000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 35,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 44,
         "name_en": "Real Estate Agents",
         "name_fr": "Agent immobilier",
         "eloundou": 0.5,
@@ -2815,7 +3229,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 35,
+        "rank": 45,
         "nitaqat_status": "reserved_saudi_only",
         "demand_rank_2024": 16,
         "hrdf_programs": [
@@ -2855,7 +3269,7 @@
         "employment_saudi_pct": 65
       },
       {
-        "rank": 36,
+        "rank": 46,
         "name_en": "Sales Representatives",
         "name_fr": "Commercial",
         "eloundou": 0.55,
@@ -2925,7 +3339,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 37,
+        "rank": 47,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -2979,7 +3393,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "high",
         "wef_trend": "decline_moderate",
-        "rank": 38,
+        "rank": 48,
         "nitaqat_status": "reserved_saudi_only",
         "hrdf_programs": [
           {
@@ -3018,7 +3432,445 @@
         "employment_saudi_pct": 95
       },
       {
-        "rank": 39,
+        "rank": 49,
+        "name_en": "Energy Auditor",
+        "name_ar": "مدقق طاقة",
+        "name_fr": "Auditeur énergétique",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 24000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2000,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          }
+        ]
+      },
+      {
+        "rank": 50,
+        "name_en": "IT Business Analyst",
+        "name_ar": "محلل أعمال تقنية المعلومات",
+        "name_fr": "Analyste d'affaires IT",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 51,
+        "name_en": "Tax Advisor",
+        "name_ar": "مستشار ضريبي",
+        "name_fr": "Conseiller fiscal",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 32000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 52,
+        "name_en": "Barista (Specialty Coffee)",
+        "name_ar": "باريستا (قهوة متخصصة)",
+        "name_fr": "Barista (Café de spécialité)",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 2400,
+        "salary_median_sar": 4000,
+        "salary_senior_sar": 6500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 20000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 53,
+        "name_en": "Procurement Officer",
+        "name_ar": "مسؤول مشتريات",
+        "name_fr": "Responsable des achats",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 8400,
+        "salary_median_sar": 14000,
+        "salary_senior_sar": 24000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 10000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 50,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 54,
+        "name_en": "Sports Marketing Manager",
+        "name_ar": "مدير تسويق رياضي",
+        "name_fr": "Responsable marketing sportif",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2000,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 55,
+        "name_en": "E-commerce Manager",
+        "name_ar": "مدير التجارة الإلكترونية",
+        "name_fr": "Responsable e-commerce",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 25000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 56,
+        "name_en": "Digital Marketing Manager",
+        "name_ar": "مدير التسويق الرقمي",
+        "name_fr": "Responsable marketing digital",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 6000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 45,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 57,
+        "name_en": "Corporate Trainer",
+        "name_ar": "مدرب مؤسسي",
+        "name_fr": "Formateur en entreprise",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 8400,
+        "salary_median_sar": 14000,
+        "salary_senior_sar": 24000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 5000,
+        "sector_id": "education",
+        "employment_saudi_pct": 55,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 58,
+        "name_en": "Contract Manager",
+        "name_ar": "مدير عقود",
+        "name_fr": "Responsable des contrats",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 28000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 59,
+        "name_en": "Personal Assistant",
+        "name_ar": "مساعد شخصي",
+        "name_fr": "Assistant personnel",
+        "eloundou": 0.6,
+        "frey_osborne": 60,
+        "felten": "high",
+        "category": "substitution",
+        "composite": 60,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 15000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 10000,
+        "sector_id": "other_services",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 60,
         "name_en": "Writers & Authors",
         "name_fr": "Rédacteur / auteur",
         "eloundou": 1,
@@ -3069,7 +3921,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 40,
+        "rank": 61,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3105,7 +3957,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 41,
+        "rank": 62,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3132,7 +3984,7 @@
         "employment_saudi_pct": 80
       },
       {
-        "rank": 42,
+        "rank": 63,
         "name_en": "Retail Salespersons",
         "name_fr": "Vendeur au détail",
         "eloundou": 0.3,
@@ -3169,7 +4021,7 @@
         "employment_saudi_pct": 60
       },
       {
-        "rank": 43,
+        "rank": 64,
         "name_en": "Web Developers",
         "name_fr": "Développeur web",
         "eloundou": 0.95,
@@ -3226,7 +4078,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 44,
+        "rank": 65,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3247,7 +4099,733 @@
         "employment_saudi_pct": 40
       },
       {
-        "rank": 45,
+        "rank": 66,
+        "name_en": "Pipeline Technician",
+        "name_ar": "فني خطوط أنابيب",
+        "name_fr": "Technicien de pipelines",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 5400,
+        "salary_median_sar": 9000,
+        "salary_senior_sar": 13000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 67,
+        "name_en": "HSE Manager (Oil & Gas)",
+        "name_ar": "مدير الصحة والسلامة والبيئة (نفط وغاز)",
+        "name_fr": "Responsable HSE (Pétrole et Gaz)",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 12000,
+        "salary_median_sar": 20000,
+        "salary_senior_sar": 29000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 35,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 68,
+        "name_en": "Refinery Operator",
+        "name_ar": "مشغل مصفاة",
+        "name_fr": "Opérateur de raffinerie",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6300,
+        "salary_median_sar": 10500,
+        "salary_senior_sar": 15000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5500,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 69,
+        "name_en": "Risk & Compliance Consultant",
+        "name_ar": "مستشار مخاطر وامتثال",
+        "name_fr": "Consultant en risques et conformité",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 32000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3500,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 28,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 70,
+        "name_en": "Surveying Engineer / Land Surveyor",
+        "name_ar": "مهندس مساحة",
+        "name_fr": "Ingénieur géomètre / Géomètre-topographe",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7800,
+        "salary_median_sar": 13000,
+        "salary_senior_sar": 22000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 18,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 71,
+        "name_en": "Medical Equipment Technician",
+        "name_ar": "فني أجهزة طبية",
+        "name_fr": "Technicien en équipement médical",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 5100,
+        "salary_median_sar": 8500,
+        "salary_senior_sar": 13000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "health",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 72,
+        "name_en": "Home Health Aide",
+        "name_ar": "مساعد رعاية صحية منزلية",
+        "name_fr": "Aide-soignant à domicile",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 2400,
+        "salary_median_sar": 4000,
+        "salary_senior_sar": 6500,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "open",
+        "employment_est": 15000,
+        "sector_id": "health",
+        "employment_saudi_pct": 8,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 73,
+        "name_en": "Clinical Research Coordinator",
+        "name_ar": "منسق أبحاث سريرية",
+        "name_fr": "Coordinateur de recherche clinique",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 22000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 1800,
+        "sector_id": "health",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 74,
+        "name_en": "Event Manager",
+        "name_ar": "مدير فعاليات",
+        "name_fr": "Responsable événementiel",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 7500,
+        "salary_median_sar": 12500,
+        "salary_senior_sar": 21500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 4000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 45,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 75,
+        "name_en": "F&B Manager",
+        "name_ar": "مدير أغذية ومشروبات",
+        "name_fr": "Responsable restauration",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7800,
+        "salary_median_sar": 13000,
+        "salary_senior_sar": 21000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 76,
+        "name_en": "Last-Mile Delivery Manager",
+        "name_ar": "مدير التوصيل للميل الأخير",
+        "name_fr": "Responsable de la livraison du dernier kilomètre",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7200,
+        "salary_median_sar": 12000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 77,
+        "name_en": "Ground Operations Agent",
+        "name_ar": "وكيل عمليات أرضية",
+        "name_fr": "Agent d'opérations au sol",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4200,
+        "salary_median_sar": 7000,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 78,
+        "name_en": "Video Editor / Videographer",
+        "name_ar": "محرر فيديو / مصور فيديو",
+        "name_fr": "Monteur vidéo / Vidéaste",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 18000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 79,
+        "name_en": "Motion Graphics Designer",
+        "name_ar": "مصمم رسوم متحركة",
+        "name_fr": "Designer en motion graphics",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6600,
+        "salary_median_sar": 11000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 80,
+        "name_en": "UI/UX Designer",
+        "name_ar": "مصمم واجهات وتجربة المستخدم",
+        "name_fr": "Designer UI/UX",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 8400,
+        "salary_median_sar": 14000,
+        "salary_senior_sar": 25000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "ict",
+        "employment_saudi_pct": 28,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 81,
+        "name_en": "Lab Assistant (Education)",
+        "name_ar": "مساعد مختبر (تعليمي)",
+        "name_fr": "Assistant de laboratoire (Éducation)",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 3000,
+        "salary_median_sar": 5000,
+        "salary_senior_sar": 8000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 6000,
+        "sector_id": "education",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 82,
+        "name_en": "Islamic Banking Officer",
+        "name_ar": "مسؤول مصرفية إسلامية",
+        "name_fr": "Responsable banque islamique",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 8400,
+        "salary_median_sar": 14000,
+        "salary_senior_sar": 25000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 8000,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 65,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 83,
+        "name_en": "Risk Manager (Finance)",
+        "name_ar": "مدير مخاطر (مالية)",
+        "name_fr": "Gestionnaire des risques (Finance)",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 12000,
+        "salary_median_sar": 20000,
+        "salary_senior_sar": 35000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 84,
+        "name_en": "IP Lawyer",
+        "name_ar": "محامي ملكية فكرية",
+        "name_fr": "Avocat en propriété intellectuelle",
+        "eloundou": 0.55,
+        "frey_osborne": 55,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 55,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 12000,
+        "salary_median_sar": 20000,
+        "salary_senior_sar": 38000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 1500,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 65,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 85,
         "name_en": "Actuaries",
         "name_fr": "Actuaire",
         "eloundou": 0.9,
@@ -3283,7 +4861,7 @@
         "employment_saudi_pct": 35
       },
       {
-        "rank": 46,
+        "rank": 86,
         "name_en": "Cashiers",
         "name_fr": "Caissier",
         "eloundou": 0.05,
@@ -3319,7 +4897,7 @@
         "employment_saudi_pct": 90
       },
       {
-        "rank": 47,
+        "rank": 87,
         "name_en": "Financial Analysts",
         "name_fr": "Analyste financier",
         "eloundou": 0.85,
@@ -3377,7 +4955,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 48,
+        "rank": 88,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 45,
         "hrdf_programs": [
@@ -3414,7 +4992,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 49,
+        "rank": 89,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3450,7 +5028,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 50,
+        "rank": 90,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3477,7 +5055,7 @@
         "employment_saudi_pct": 45
       },
       {
-        "rank": 51,
+        "rank": 91,
         "name_en": "Graphic Designers",
         "name_fr": "Designer graphique",
         "eloundou": 0.85,
@@ -3528,7 +5106,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 52,
+        "rank": 92,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 46,
         "hrdf_programs": [
@@ -3565,7 +5143,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 53,
+        "rank": 93,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3601,7 +5179,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 54,
+        "rank": 94,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 5,
         "hrdf_programs": [
@@ -3644,7 +5222,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 55,
+        "rank": 95,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 13,
         "hrdf_programs": [
@@ -3687,7 +5265,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 56,
+        "rank": 96,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3708,7 +5286,7 @@
         "employment_saudi_pct": 25
       },
       {
-        "rank": 57,
+        "rank": 97,
         "name_en": "Lawyers",
         "name_fr": "Avocat",
         "eloundou": 0.85,
@@ -3759,7 +5337,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "decline_moderate",
-        "rank": 58,
+        "rank": 98,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3795,7 +5373,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 59,
+        "rank": 99,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3816,7 +5394,7 @@
         "employment_saudi_pct": 85
       },
       {
-        "rank": 60,
+        "rank": 100,
         "name_en": "HR Specialists",
         "name_fr": "Spécialiste RH",
         "eloundou": 0.6,
@@ -3879,6 +5457,36 @@
       },
       {
         "rank": 2,
+        "name_en": "Steel Fixer / Rebar Worker",
+        "name_ar": "عامل حديد تسليح",
+        "name_fr": "Ferrailleur",
+        "eloundou": 0.1,
+        "frey_osborne": 10,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 10,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 1800,
+        "salary_median_sar": 3000,
+        "salary_senior_sar": 4500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 35000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 3,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 3,
         "name_en": "Social Workers",
         "name_fr": "Travailleur social",
         "eloundou": 0.05,
@@ -3921,7 +5529,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "growth_rapid",
-        "rank": 3,
+        "rank": 4,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -3972,10 +5580,11 @@
         ],
         "description_en": "Ensures AI systems comply with regulations, ethical standards, and Saudi/GCC frameworks. Critical as NCA and SDAIA issue AI governance rules.",
         "description_ar": "يضمن امتثال أنظمة الذكاء الاصطناعي للأنظمة والمعايير الأخلاقية",
-        "rank": 4,
+        "rank": 5,
         "employment_est": 450,
         "sector_id": "professional_scientific",
-        "employment_saudi_pct": 65
+        "employment_saudi_pct": 65,
+        "name_fr": "Spécialiste en éthique et gouvernance de l'IA"
       },
       {
         "name_en": "Renewable Energy Technician",
@@ -4016,13 +5625,14 @@
         ],
         "description_en": "Installs and maintains solar/wind systems. V2030 targets 50% renewable energy by 2030. NEOM, Sakaka, Dumat Al Jandal projects.",
         "description_ar": "يركب ويصون أنظمة الطاقة الشمسية والرياح. هدف رؤية 2030: 50% طاقة متجددة",
-        "rank": 5,
+        "rank": 6,
         "employment_est": 6500,
         "sector_id": "electricity_gas",
-        "employment_saudi_pct": 35
+        "employment_saudi_pct": 35,
+        "name_fr": "Technicien en énergies renouvelables"
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name_en": "Dentists",
         "name_fr": "Dentiste",
         "eloundou": 0.1,
@@ -4050,7 +5660,7 @@
         "employment_saudi_pct": 58
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name_en": "Teachers (Preschool/Primary)",
         "name_fr": "Enseignant maternelle/primaire",
         "eloundou": 0.1,
@@ -4079,7 +5689,7 @@
         "employment_saudi_pct": 85
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name_en": "Registered Nurses",
         "name_fr": "Infirmier",
         "eloundou": 0.1,
@@ -4151,10 +5761,11 @@
         ],
         "description_en": "Protects systems from cyber threats. NCA mandates drive massive demand in KSA. AI increases both threats and defense capabilities.",
         "description_ar": "يحمي الأنظمة من التهديدات السيبرانية. متطلبات الهيئة الوطنية للأمن السيبراني تدفع الطلب",
-        "rank": 9,
+        "rank": 10,
         "employment_est": 12500,
         "sector_id": "ict",
-        "employment_saudi_pct": 70
+        "employment_saudi_pct": 70,
+        "name_fr": "Analyste en cybersécurité"
       },
       {
         "name_en": "Driving Instructor",
@@ -4172,7 +5783,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 10,
+        "rank": 11,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4202,7 +5813,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 11,
+        "rank": 12,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4259,10 +5870,11 @@
         ],
         "description_en": "Designs and optimizes prompts for LLMs to improve business outcomes. Core role in companies deploying AI.",
         "description_ar": "يصمم ويحسن الأوامر لنماذج اللغة الكبيرة لتحسين نتائج الأعمال",
-        "rank": 12,
+        "rank": 13,
         "employment_est": 2100,
         "sector_id": "ict",
-        "employment_saudi_pct": 50
+        "employment_saudi_pct": 50,
+        "name_fr": "Ingénieur de prompts IA"
       },
       {
         "name_en": "AI-Assisted Healthcare Specialist",
@@ -4301,13 +5913,74 @@
         ],
         "description_en": "Uses AI diagnostic tools, telemedicine AI, and health informatics. KFSHRC already deploys 20+ AI applications.",
         "description_ar": "يستخدم أدوات التشخيص بالذكاء الاصطناعي والمعلوماتية الصحية",
-        "rank": 13,
+        "rank": 14,
         "employment_est": 1400,
         "sector_id": "health",
-        "employment_saudi_pct": 55
+        "employment_saudi_pct": 55,
+        "name_fr": "Spécialiste en santé assistée par l'IA"
       },
       {
-        "rank": 14,
+        "rank": 15,
+        "name_en": "Scaffolder",
+        "name_ar": "عامل سقالات",
+        "name_fr": "Échafaudeur",
+        "eloundou": 0.15,
+        "frey_osborne": 15,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 15,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 2100,
+        "salary_median_sar": 3500,
+        "salary_senior_sar": 5500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 25000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 5,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "name_en": "Concrete Specialist",
+        "name_ar": "أخصائي خرسانة",
+        "name_fr": "Spécialiste du béton",
+        "eloundou": 0.15,
+        "frey_osborne": 15,
+        "felten": "very_low",
+        "category": "augmentation",
+        "composite": 15,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 2400,
+        "salary_median_sar": 4000,
+        "salary_senior_sar": 6000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 20000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 5,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 17,
         "name_en": "Surgeons & Physicians",
         "name_fr": "Médecin / chirurgien",
         "eloundou": 0.15,
@@ -4373,10 +6046,11 @@
         ],
         "description_en": "Designs cloud infrastructure (AWS/Azure/GCP). Critical for Saudi cloud-first mandates and data localization.",
         "description_ar": "يصمم البنية التحتية السحابية. حيوي لمتطلبات الحوسبة السحابية في المملكة",
-        "rank": 15,
+        "rank": 18,
         "employment_est": 6200,
         "sector_id": "ict",
-        "employment_saudi_pct": 40
+        "employment_saudi_pct": 40,
+        "name_fr": "Architecte de solutions cloud"
       },
       {
         "name_en": "Barista/Cafe Worker",
@@ -4394,7 +6068,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 16,
+        "rank": 19,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4430,7 +6104,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 17,
+        "rank": 20,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4460,7 +6134,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 18,
+        "rank": 21,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4512,10 +6186,11 @@
         ],
         "description_en": "Builds, trains, and deploys ML models. Top 3 most in-demand tech role globally and in KSA.",
         "description_ar": "يبني ويدرب وينشر نماذج التعلم الآلي",
-        "rank": 19,
+        "rank": 22,
         "employment_est": 3800,
         "sector_id": "ict",
-        "employment_saudi_pct": 35
+        "employment_saudi_pct": 35,
+        "name_fr": "Ingénieur en apprentissage automatique"
       },
       {
         "name_en": "Autonomous Vehicle Technician",
@@ -4554,13 +6229,14 @@
         ],
         "description_en": "Maintains and calibrates autonomous vehicles and drones. Key for NEOM, smart cities, and logistics.",
         "description_ar": "يصون ويعاير المركبات ذاتية القيادة والطائرات المسيرة. مهم لنيوم والمدن الذكية",
-        "rank": 20,
+        "rank": 23,
         "employment_est": 950,
         "sector_id": "transport_storage",
-        "employment_saudi_pct": 30
+        "employment_saudi_pct": 30,
+        "name_fr": "Technicien en véhicules autonomes"
       },
       {
-        "rank": 21,
+        "rank": 24,
         "name_en": "Maintenance Technicians",
         "name_fr": "Technicien de maintenance",
         "eloundou": 0.1,
@@ -4596,7 +6272,7 @@
       {
         "name_en": "Renewable Energy Technician",
         "name_ar": "فني طاقة متجددة",
-        "name_fr": "Technicien énergies renouvelables",
+        "name_fr": "Technicien en énergies renouvelables",
         "eloundou": 0.3,
         "frey_osborne": 5,
         "felten": "low",
@@ -4609,7 +6285,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_very_rapid",
-        "rank": 22,
+        "rank": 25,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4645,7 +6321,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 23,
+        "rank": 26,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4702,10 +6378,11 @@
         ],
         "description_en": "Manages AI-powered product development, bridging business needs and AI capabilities.",
         "description_ar": "يدير تطوير المنتجات المدعومة بالذكاء الاصطناعي",
-        "rank": 24,
+        "rank": 27,
         "employment_est": 1800,
         "sector_id": "ict",
-        "employment_saudi_pct": 45
+        "employment_saudi_pct": 45,
+        "name_fr": "Chef de produit IA"
       },
       {
         "name_en": "Crane Operator",
@@ -4723,7 +6400,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 25,
+        "rank": 28,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4738,7 +6415,7 @@
         "employment_saudi_pct": 5
       },
       {
-        "rank": 26,
+        "rank": 29,
         "name_en": "Pharmacists",
         "name_fr": "Pharmacien",
         "eloundou": 0.2,
@@ -4788,7 +6465,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 27,
+        "rank": 30,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4824,7 +6501,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 28,
+        "rank": 31,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4860,7 +6537,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 29,
+        "rank": 32,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -4890,7 +6567,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 30,
+        "rank": 33,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 21,
         "hrdf_programs": [
@@ -4921,7 +6598,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 31,
+        "rank": 34,
         "nitaqat_status": "reserved_saudi_only",
         "hrdf_programs": [
           {
@@ -4978,10 +6655,11 @@
         ],
         "description_en": "Builds software bots that automate repetitive business processes. Key role in Saudi digital transformation across banking, government, and logistics.",
         "description_ar": "يبني روبوتات برمجية تؤتمت العمليات التجارية المتكررة",
-        "rank": 32,
+        "rank": 35,
         "employment_est": 3200,
         "sector_id": "ict",
-        "employment_saudi_pct": 40
+        "employment_saudi_pct": 40,
+        "name_fr": "Développeur RPA"
       },
       {
         "name_en": "Petroleum Engineer",
@@ -4999,7 +6677,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 33,
+        "rank": 36,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 38,
         "hrdf_programs": [
@@ -5036,7 +6714,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 34,
+        "rank": 37,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 48,
         "hrdf_programs": [
@@ -5058,7 +6736,7 @@
         "employment_saudi_pct": 30
       },
       {
-        "rank": 35,
+        "rank": 38,
         "name_en": "Civil/Mechanical Engineers",
         "name_fr": "Ingénieur civil/mécanique",
         "eloundou": 0.4,
@@ -5108,7 +6786,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "high",
         "wef_trend": "growth_rapid",
-        "rank": 36,
+        "rank": 39,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5166,10 +6844,41 @@
         ],
         "description_en": "Helps organizations adopt AI, automation, and digital tools. Huge demand as Saudi firms race to digitize under V2030.",
         "description_ar": "يساعد المنظمات على تبني الذكاء الاصطناعي والأتمتة والأدوات الرقمية",
-        "rank": 37,
+        "rank": 40,
         "employment_est": 9200,
         "sector_id": "professional_scientific",
-        "employment_saudi_pct": 50
+        "employment_saudi_pct": 50,
+        "name_fr": "Consultant en transformation numérique"
+      },
+      {
+        "rank": 41,
+        "name_en": "Nanny / Au Pair",
+        "name_ar": "مربية أطفال",
+        "name_fr": "Nounou / Au pair",
+        "eloundou": 0.25,
+        "frey_osborne": 25,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 25,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 2100,
+        "salary_median_sar": 3500,
+        "salary_senior_sar": 5500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 50000,
+        "sector_id": "other_services",
+        "employment_saudi_pct": 5,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
       },
       {
         "name_en": "Chemical Engineer",
@@ -5187,7 +6896,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 38,
+        "rank": 42,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5208,7 +6917,7 @@
         "employment_saudi_pct": 50
       },
       {
-        "rank": 39,
+        "rank": 43,
         "name_en": "Construction Workers",
         "name_fr": "Ouvrier BTP",
         "eloundou": 0,
@@ -5236,7 +6945,7 @@
         "employment_saudi_pct": 3
       },
       {
-        "rank": 40,
+        "rank": 44,
         "name_en": "Landscaping Workers",
         "name_fr": "Paysagiste",
         "eloundou": 0,
@@ -5264,7 +6973,7 @@
         "employment_saudi_pct": 2
       },
       {
-        "rank": 41,
+        "rank": 45,
         "name_en": "Fitness Trainers",
         "name_fr": "Entraîneur sportif",
         "eloundou": 0,
@@ -5307,7 +7016,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 42,
+        "rank": 46,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5343,7 +7052,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 43,
+        "rank": 47,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5379,7 +7088,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 44,
+        "rank": 48,
         "nitaqat_status": "reserved_saudi_only",
         "hrdf_programs": [
           {
@@ -5409,7 +7118,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "high",
         "wef_trend": "decline_moderate",
-        "rank": 45,
+        "rank": 49,
         "nitaqat_status": "reserved_saudi_only",
         "hrdf_programs": [
           {
@@ -5439,7 +7148,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 46,
+        "rank": 50,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 18,
         "hrdf_programs": [
@@ -5470,7 +7179,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 47,
+        "rank": 51,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5500,7 +7209,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 48,
+        "rank": 52,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 1,
         "hrdf_programs": [
@@ -5522,7 +7231,7 @@
         "employment_saudi_pct": 35
       },
       {
-        "rank": 49,
+        "rank": 53,
         "name_en": "Plumbers & Pipefitters",
         "name_fr": "Plombier",
         "eloundou": 0,
@@ -5550,7 +7259,7 @@
         "employment_saudi_pct": 5
       },
       {
-        "rank": 50,
+        "rank": 54,
         "name_en": "Electricians",
         "name_fr": "Électricien",
         "eloundou": 0,
@@ -5593,7 +7302,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "growth_rapid",
-        "rank": 51,
+        "rank": 55,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 41,
         "hrdf_programs": [
@@ -5636,7 +7345,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 52,
+        "rank": 56,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5657,6 +7366,150 @@
         "employment_saudi_pct": 18
       },
       {
+        "rank": 57,
+        "name_en": "Crane Technician",
+        "name_ar": "فني رافعات",
+        "name_fr": "Technicien grutier",
+        "eloundou": 0.3,
+        "frey_osborne": 30,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 30,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4200,
+        "salary_median_sar": 7000,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 10000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 8,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 58,
+        "name_en": "Aviation Safety Inspector",
+        "name_ar": "مفتش سلامة طيران",
+        "name_fr": "Inspecteur de sécurité aérienne",
+        "eloundou": 0.3,
+        "frey_osborne": 30,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 30,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 500,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 70,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 59,
+        "name_en": "Sports Coach / Trainer",
+        "name_ar": "مدرب رياضي",
+        "name_fr": "Entraîneur sportif",
+        "eloundou": 0.3,
+        "frey_osborne": 30,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 30,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 15000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 8000,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 60,
+        "name_en": "Private Chef",
+        "name_ar": "طاهٍ خاص",
+        "name_fr": "Chef privé",
+        "eloundou": 0.3,
+        "frey_osborne": 30,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 30,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 18000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 8000,
+        "sector_id": "other_services",
+        "employment_saudi_pct": 8,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
         "name_en": "Health & Safety Officer",
         "name_ar": "مسؤول الصحة والسلامة",
         "name_fr": "Responsable santé et sécurité",
@@ -5672,7 +7525,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 53,
+        "rank": 61,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 39,
         "hrdf_programs": [
@@ -5709,7 +7562,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 54,
+        "rank": 62,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5745,7 +7598,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 55,
+        "rank": 63,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 35,
         "hrdf_programs": [
@@ -5776,7 +7629,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 56,
+        "rank": 64,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 49,
         "hrdf_programs": [
@@ -5813,7 +7666,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "growth_rapid",
-        "rank": 57,
+        "rank": 65,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5849,7 +7702,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 58,
+        "rank": 66,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5879,7 +7732,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 59,
+        "rank": 67,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 40,
         "hrdf_programs": [
@@ -5916,7 +7769,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "growth_rapid",
-        "rank": 60,
+        "rank": 68,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -5968,10 +7821,449 @@
         ],
         "description_en": "Labels and curates training data for AI models. Essential for Arabic-language AI development in KSA.",
         "description_ar": "يصنف ويراجع بيانات تدريب نماذج الذكاء الاصطناعي. ضروري لتطوير الذكاء الاصطناعي بالعربية",
-        "rank": 61,
+        "rank": 69,
         "employment_est": 4200,
         "sector_id": "ict",
-        "employment_saudi_pct": 70
+        "employment_saudi_pct": 70,
+        "name_fr": "Spécialiste en annotation de données et entraînement IA"
+      },
+      {
+        "rank": 70,
+        "name_en": "Reservoir Engineer",
+        "name_ar": "مهندس مكامن",
+        "name_fr": "Ingénieur de réservoir",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 15000,
+        "salary_median_sar": 25000,
+        "salary_senior_sar": 33000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3200,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 35,
+        "hrdf_programs": [
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 71,
+        "name_en": "Petroleum Geologist",
+        "name_ar": "جيولوجي بترول",
+        "name_fr": "Géologue pétrolier",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 12500,
+        "salary_median_sar": 20800,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2800,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 72,
+        "name_en": "Offshore Installation Manager",
+        "name_ar": "مدير منشأة بحرية",
+        "name_fr": "Directeur d'installation offshore",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 24000,
+        "salary_median_sar": 40000,
+        "salary_senior_sar": 55000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 800,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 73,
+        "name_en": "Site Manager / Construction Manager",
+        "name_ar": "مدير موقع / مدير بناء",
+        "name_fr": "Chef de chantier / Directeur de construction",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 12000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 22,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 74,
+        "name_en": "Audiologist",
+        "name_ar": "أخصائي سمعيات",
+        "name_fr": "Audiologiste",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 14000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 1500,
+        "sector_id": "health",
+        "employment_saudi_pct": 55,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 75,
+        "name_en": "Podiatrist",
+        "name_ar": "أخصائي طب أقدام",
+        "name_fr": "Podologue",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4200,
+        "salary_median_sar": 7000,
+        "salary_senior_sar": 12000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 800,
+        "sector_id": "health",
+        "employment_saudi_pct": 50,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 76,
+        "name_en": "Clinical Psychologist",
+        "name_ar": "أخصائي نفسي إكلينيكي",
+        "name_fr": "Psychologue clinicien",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7200,
+        "salary_median_sar": 12000,
+        "salary_senior_sar": 20000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 3000,
+        "sector_id": "health",
+        "employment_saudi_pct": 60,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 77,
+        "name_en": "Aircraft Mechanic / AME",
+        "name_ar": "ميكانيكي طائرات",
+        "name_fr": "Mécanicien aéronautique",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7200,
+        "salary_median_sar": 12000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 78,
+        "name_en": "Sound & Light Technician",
+        "name_ar": "فني صوت وإضاءة",
+        "name_fr": "Technicien son et lumière",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 14000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 5000,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 12,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 79,
+        "name_en": "Golf Course Manager",
+        "name_ar": "مدير ملعب غولف",
+        "name_fr": "Directeur de parcours de golf",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 25000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 500,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 80,
+        "name_en": "Luxury Sales Associate",
+        "name_ar": "مستشار مبيعات فاخرة",
+        "name_fr": "Conseiller de vente luxe",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 4200,
+        "salary_median_sar": 7000,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 10000,
+        "sector_id": "wholesale_retail",
+        "employment_saudi_pct": 60,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 81,
+        "name_en": "Estate Manager",
+        "name_ar": "مدير عقار خاص",
+        "name_fr": "Gestionnaire de propriété",
+        "eloundou": 0.35,
+        "frey_osborne": 35,
+        "felten": "low",
+        "category": "augmentation",
+        "composite": 35,
+        "wef_trend": "stable",
+        "nitaqat_risk": "low",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "open",
+        "employment_est": 3000,
+        "sector_id": "other_services",
+        "employment_saudi_pct": 10,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
       },
       {
         "name_en": "Medical Laboratory Technician",
@@ -5989,7 +8281,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 62,
+        "rank": 82,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 37,
         "hrdf_programs": [
@@ -6032,7 +8324,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 63,
+        "rank": 83,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6062,7 +8354,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 64,
+        "rank": 84,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6092,7 +8384,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 65,
+        "rank": 85,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6128,7 +8420,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 66,
+        "rank": 86,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6158,7 +8450,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 67,
+        "rank": 87,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6194,7 +8486,7 @@
         "salary_source": "Talent.com 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 68,
+        "rank": 88,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6224,7 +8516,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 69,
+        "rank": 89,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 19,
         "hrdf_programs": [
@@ -6261,7 +8553,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 70,
+        "rank": 90,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6284,7 +8576,7 @@
       {
         "name_en": "Cybersecurity Analyst",
         "name_ar": "محلل أمن سيبراني",
-        "name_fr": "Analyste cybersécurité",
+        "name_fr": "Analyste en cybersécurité",
         "eloundou": 0.55,
         "frey_osborne": 5,
         "felten": "moderate",
@@ -6297,7 +8589,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 71,
+        "rank": 91,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 9,
         "hrdf_programs": [
@@ -6334,7 +8626,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 72,
+        "rank": 92,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6364,7 +8656,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "high",
         "wef_trend": "stable",
-        "rank": 73,
+        "rank": 93,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 32,
         "hrdf_programs": [
@@ -6401,7 +8693,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 74,
+        "rank": 94,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 30,
         "hrdf_programs": [
@@ -6438,7 +8730,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 75,
+        "rank": 95,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 47,
         "hrdf_programs": [
@@ -6460,6 +8752,300 @@
         "employment_saudi_pct": 60
       },
       {
+        "rank": 96,
+        "name_en": "Structural Engineer",
+        "name_ar": "مهندس إنشائي",
+        "name_fr": "Ingénieur en structures",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 10200,
+        "salary_median_sar": 17000,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 7000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 97,
+        "name_en": "Geotechnical Engineer",
+        "name_ar": "مهندس جيوتقني",
+        "name_fr": "Ingénieur géotechnicien",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 27000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 98,
+        "name_en": "Respiratory Therapist",
+        "name_ar": "أخصائي علاج تنفسي",
+        "name_fr": "Thérapeute respiratoire",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 14000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 4000,
+        "sector_id": "health",
+        "employment_saudi_pct": 50,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 99,
+        "name_en": "Hotel General Manager",
+        "name_ar": "مدير عام فندق",
+        "name_fr": "Directeur général d'hôtel",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 5100,
+        "salary_median_sar": 29500,
+        "salary_senior_sar": 53400,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 2000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 40,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 100,
+        "name_en": "Concierge (Luxury)",
+        "name_ar": "كونسيرج (فاخر)",
+        "name_fr": "Concierge de luxe",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 5100,
+        "salary_median_sar": 8500,
+        "salary_senior_sar": 12500,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 3000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 45,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 101,
+        "name_en": "Cold Chain Specialist",
+        "name_ar": "أخصائي سلسلة التبريد",
+        "name_fr": "Spécialiste de la chaîne du froid",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7800,
+        "salary_median_sar": 13000,
+        "salary_senior_sar": 22000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2500,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 102,
+        "name_en": "Montessori Educator",
+        "name_ar": "معلم منتسوري",
+        "name_fr": "Éducateur Montessori",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4200,
+        "salary_median_sar": 7000,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "education",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          }
+        ]
+      },
+      {
+        "rank": 103,
+        "name_en": "University Researcher",
+        "name_ar": "باحث جامعي",
+        "name_fr": "Chercheur universitaire",
+        "eloundou": 0.4,
+        "frey_osborne": 40,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 40,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 12000,
+        "sector_id": "education",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
         "name_en": "Investment Banker",
         "name_ar": "مصرفي استثماري",
         "name_fr": "Banquier d'investissement",
@@ -6475,7 +9061,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 76,
+        "rank": 104,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6505,7 +9091,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_rapid",
-        "rank": 77,
+        "rank": 105,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 10,
         "hrdf_programs": [
@@ -6542,7 +9128,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 78,
+        "rank": 106,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6578,7 +9164,7 @@
         "salary_source": "PayScale SA 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 79,
+        "rank": 107,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6608,7 +9194,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 80,
+        "rank": 108,
         "nitaqat_status": "sector_quota",
         "demand_rank_2024": 29,
         "hrdf_programs": [
@@ -6645,7 +9231,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 81,
+        "rank": 109,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6675,7 +9261,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "stable",
-        "rank": 82,
+        "rank": 110,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6705,7 +9291,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "moderate",
         "wef_trend": "stable",
-        "rank": 83,
+        "rank": 111,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6741,7 +9327,7 @@
         "salary_source": "GulfTalent 2025",
         "nitaqat_risk": "low",
         "wef_trend": "decline_moderate",
-        "rank": 84,
+        "rank": 112,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6777,7 +9363,7 @@
         "salary_source": "Astr 2026",
         "nitaqat_risk": "low",
         "wef_trend": "growth_very_rapid",
-        "rank": 85,
+        "rank": 113,
         "nitaqat_status": "sector_quota",
         "hrdf_programs": [
           {
@@ -6792,7 +9378,883 @@
         "employment_saudi_pct": 50
       },
       {
-        "rank": 86,
+        "rank": 114,
+        "name_en": "Process Engineer (Oil & Gas)",
+        "name_ar": "مهندس عمليات (نفط وغاز)",
+        "name_fr": "Ingénieur de procédés (Pétrole et Gaz)",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 12000,
+        "salary_median_sar": 20000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3500,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 28,
+        "hrdf_programs": [
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 115,
+        "name_en": "Strategy Consultant",
+        "name_ar": "مستشار استراتيجي",
+        "name_fr": "Consultant en stratégie",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 15000,
+        "salary_median_sar": 25000,
+        "salary_senior_sar": 45000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 116,
+        "name_en": "MEP Engineer",
+        "name_ar": "مهندس ميكانيكا وكهرباء وسباكة",
+        "name_fr": "Ingénieur CVC/Électricité/Plomberie",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 28000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 9000,
+        "sector_id": "construction",
+        "employment_saudi_pct": 18,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 117,
+        "name_en": "Physiotherapist",
+        "name_ar": "أخصائي علاج طبيعي",
+        "name_fr": "Kinésithérapeute",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 5400,
+        "salary_median_sar": 6200,
+        "salary_senior_sar": 12900,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 7000,
+        "sector_id": "health",
+        "employment_saudi_pct": 45,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 118,
+        "name_en": "Infection Control Specialist",
+        "name_ar": "أخصائي مكافحة عدوى",
+        "name_fr": "Spécialiste en contrôle des infections",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 22000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 2000,
+        "sector_id": "health",
+        "employment_saudi_pct": 55,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 119,
+        "name_en": "Pastry Chef / Pâtissier",
+        "name_ar": "شيف حلويات",
+        "name_fr": "Chef pâtissier",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 4500,
+        "salary_median_sar": 7500,
+        "salary_senior_sar": 12000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 8000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 120,
+        "name_en": "Spa Therapist / Esthetician",
+        "name_ar": "أخصائي سبا / تجميل",
+        "name_fr": "Thérapeute spa / Esthéticien(ne)",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 3300,
+        "salary_median_sar": 5500,
+        "salary_senior_sar": 9000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 10000,
+        "sector_id": "accommodation_food",
+        "employment_saudi_pct": 20,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 121,
+        "name_en": "Port Operations Manager",
+        "name_ar": "مدير عمليات الموانئ",
+        "name_fr": "Directeur des opérations portuaires",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 122,
+        "name_en": "Fitness Center Manager",
+        "name_ar": "مدير مركز لياقة بدنية",
+        "name_fr": "Directeur de centre de fitness",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 18000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 3000,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 50,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 123,
+        "name_en": "STEM Teacher",
+        "name_ar": "معلم علوم وتقنية وهندسة ورياضيات",
+        "name_fr": "Enseignant STEM",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 16000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 20000,
+        "sector_id": "education",
+        "employment_saudi_pct": 65,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          }
+        ]
+      },
+      {
+        "rank": 124,
+        "name_en": "Wealth Manager / Private Banker",
+        "name_ar": "مدير ثروات / مصرفي خاص",
+        "name_fr": "Gestionnaire de patrimoine / Banquier privé",
+        "eloundou": 0.45,
+        "frey_osborne": 45,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 45,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 13200,
+        "salary_median_sar": 22000,
+        "salary_senior_sar": 40000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2500,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 35,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 125,
+        "name_en": "Rig Operator / Derrickhand",
+        "name_ar": "مشغل حفار / عامل برج الحفر",
+        "name_fr": "Opérateur de forage / Accrocheur",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 15000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 8000,
+        "sector_id": "mining_oil_gas",
+        "employment_saudi_pct": 18,
+        "hrdf_programs": [
+          {
+            "name": "Employment Support (Taqat)",
+            "name_ar": "دعم التوظيف",
+            "type": "Wage Subsidy",
+            "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 126,
+        "name_en": "Management Consultant",
+        "name_ar": "مستشار إداري",
+        "name_fr": "Consultant en management",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 13200,
+        "salary_median_sar": 22000,
+        "salary_senior_sar": 40000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 5000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 127,
+        "name_en": "Change Management Consultant",
+        "name_ar": "مستشار إدارة التغيير",
+        "name_fr": "Consultant en gestion du changement",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 12000,
+        "salary_median_sar": 20000,
+        "salary_senior_sar": 35000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2500,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "name_en": "BIM Manager",
+        "name_ar": "مدير نمذجة معلومات البناء",
+        "name_fr": "Responsable BIM",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 30000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 2500,
+        "sector_id": "construction",
+        "employment_saudi_pct": 22,
+        "hrdf_programs": [
+          {
+            "name": "Fuel (SDA)",
+            "name_ar": "وقود",
+            "type": "Digital Skills",
+            "relevance": "100K+ trainees across 40 digital learning tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          }
+        ]
+      },
+      {
+        "rank": 129,
+        "name_en": "Medical Imaging Specialist",
+        "name_ar": "أخصائي تصوير طبي",
+        "name_fr": "Spécialiste en imagerie médicale",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 6000,
+        "salary_median_sar": 10000,
+        "salary_senior_sar": 16000,
+        "salary_source": "MOH/SCFHS 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 6000,
+        "sector_id": "health",
+        "employment_saudi_pct": 45,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 130,
+        "name_en": "Fleet Manager",
+        "name_ar": "مدير أسطول",
+        "name_fr": "Gestionnaire de flotte",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 7200,
+        "salary_median_sar": 12000,
+        "salary_senior_sar": 20000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "transport_storage",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 131,
+        "name_en": "Event Producer",
+        "name_ar": "منتج فعاليات",
+        "name_fr": "Producteur d'événements",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 9000,
+        "salary_median_sar": 15000,
+        "salary_senior_sar": 25000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 3000,
+        "sector_id": "arts_entertainment",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 132,
+        "name_en": "Loss Prevention Specialist",
+        "name_ar": "أخصائي منع الخسائر",
+        "name_fr": "Spécialiste en prévention des pertes",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "moderate",
+        "salary_entry_sar": 4800,
+        "salary_median_sar": 8000,
+        "salary_senior_sar": 14000,
+        "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 4000,
+        "sector_id": "wholesale_retail",
+        "employment_saudi_pct": 25,
+        "hrdf_programs": [
+          {
+            "name": "Doroob",
+            "name_ar": "دروب",
+            "type": "E-Training",
+            "relevance": "Digital reskilling tracks"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 133,
+        "name_en": "IPO Specialist",
+        "name_ar": "أخصائي طرح عام أولي",
+        "name_fr": "Spécialiste en introduction en bourse",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "growth_organic",
+        "nitaqat_risk": "moderate",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 15000,
+        "salary_median_sar": 25000,
+        "salary_senior_sar": 45000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "sector_quota",
+        "employment_est": 1000,
+        "sector_id": "finance_insurance",
+        "employment_saudi_pct": 30,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 134,
+        "name_en": "Immigration Lawyer",
+        "name_ar": "محامي هجرة",
+        "name_fr": "Avocat en immigration",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 9600,
+        "salary_median_sar": 16000,
+        "salary_senior_sar": 30000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 2000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 70,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 135,
+        "name_en": "Real Estate Lawyer",
+        "name_ar": "محامي عقارات",
+        "name_fr": "Avocat en droit immobilier",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "very_high",
+        "salary_entry_sar": 10800,
+        "salary_median_sar": 18000,
+        "salary_senior_sar": 35000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 3000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 70,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          }
+        ]
+      },
+      {
+        "rank": 136,
+        "name_en": "In-house Counsel",
+        "name_ar": "مستشار قانوني داخلي",
+        "name_fr": "Juriste d'entreprise",
+        "eloundou": 0.5,
+        "frey_osborne": 50,
+        "felten": "moderate",
+        "category": "augmentation",
+        "composite": 50,
+        "wef_trend": "stable",
+        "nitaqat_risk": "high",
+        "ksa_relevance": "high",
+        "salary_entry_sar": 13200,
+        "salary_median_sar": 22000,
+        "salary_senior_sar": 40000,
+        "salary_source": "Cooper Fitch KSA 2025",
+        "nitaqat_status": "reserved_saudi_only",
+        "employment_est": 4000,
+        "sector_id": "professional_scientific",
+        "employment_saudi_pct": 60,
+        "hrdf_programs": [
+          {
+            "name": "Professional Certificates Support",
+            "name_ar": "دعم الشهادات المهنية",
+            "type": "Certification",
+            "relevance": "HRDF reimburses up to SAR 1,350/cert for approved qualifications"
+          },
+          {
+            "name": "SAMAI",
+            "name_ar": "سمائي",
+            "type": "AI Literacy",
+            "relevance": "Free AI fundamentals certificate (SDAIA)"
+          },
+          {
+            "name": "Tamheer",
+            "name_ar": "تمهير",
+            "type": "On-the-Job Training",
+            "relevance": "On-the-job training for fresh graduates at top employers"
+          }
+        ]
+      },
+      {
+        "rank": 137,
         "name_en": "Heavy Truck Drivers",
         "name_fr": "Chauffeur poids lourd",
         "eloundou": 0,

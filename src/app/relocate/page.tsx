@@ -9,17 +9,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const title =
     lang === "fr"
-      ? "Calculateur d'expatriation — Coût de la vie en Arabie Saoudite | SHIFT Observatory"
+      ? "Coût de la vie en Arabie Saoudite : comparez 65+ postes | Outil gratuit"
       : lang === "ar"
-      ? "حاسبة الانتقال — تكلفة المعيشة في المملكة العربية السعودية | SHIFT Observatory"
-      : "Relocation Calculator — Saudi Arabia Salary & Cost of Living Comparison | SHIFT Observatory";
+      ? "حاسبة تكلفة المعيشة في السعودية: قارن 65+ عنصراً | أداة مجانية"
+      : "Saudi Arabia Cost of Living Calculator: Compare 65+ Items | Free Tool";
 
   const description =
     lang === "fr"
-      ? "Comparez votre pouvoir d'achat entre votre ville et l'Arabie Saoudite. Salaires, impôts, logement, scolarité — 65+ postes comparés."
+      ? "Comparez le coût de la vie entre votre ville et l'Arabie Saoudite. Logement, alimentation, transport, écoles, impôts — 65+ postes comparés. Calculateur gratuit avec rapport PDF personnalisé."
       : lang === "ar"
       ? "قارن قوتك الشرائية بين مدينتك والمملكة العربية السعودية. الرواتب، الضرائب، السكن، المدارس — 65+ بند للمقارنة."
-      : "Calculate your real purchasing power in Saudi Arabia. Compare salaries, cost of living, tax savings, and expat packages from 15 origin cities to Riyadh, Jeddah, or Dammam. 65+ cost items across 15 categories.";
+      : "Compare cost of living between your city and Saudi Arabia. Housing, food, transport, schools, taxes — 65+ items compared. Free relocation calculator with personalized PDF report.";
 
   return {
     title,
