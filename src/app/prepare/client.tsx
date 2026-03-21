@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useLang } from "@/lib/i18n/context";
+import LangToggle from "@/components/ui/LangToggle";
 import EmailGateModal from "@/components/shared/EmailGateModal";
 import {
   COUNTRIES,
@@ -113,7 +114,19 @@ export default function PrepareClient() {
 
   return (
     <main className="min-h-screen bg-bg-primary text-white" dir={dir}>
+      <LangToggle />
       <div className="max-w-3xl mx-auto px-4 py-8 md:py-16">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6">
+          <a href="/" className="hover:text-cyan-400 transition-colors">
+            {lang === "ar" ? "الرئيسية" : lang === "fr" ? "Tableau de bord" : "Dashboard"}
+          </a>
+          <span>/</span>
+          <span className="text-gray-300">
+            {lang === "ar" ? "قائمة التجهيز" : lang === "fr" ? "Checklist départ" : "Checklist"}
+          </span>
+        </nav>
+
         {/* Header */}
         <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
           {t.prepare.title}
