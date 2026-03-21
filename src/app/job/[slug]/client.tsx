@@ -19,6 +19,7 @@ import {
   fmt,
 } from "@/lib/occupations";
 import { getScoreHistory, getScoreTrend } from "@/data/score-history";
+import ShareBar from "@/components/shared/ShareBar";
 
 /* ------------------------------------------------------------------ */
 /* Props                                                               */
@@ -126,65 +127,17 @@ function InlineBar({ value, max = 100 }: { value: number; max?: number }) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Share buttons                                                       */
+/* Share block                                                         */
 /* ------------------------------------------------------------------ */
-function ShareButtons({
-  occ,
-  t,
-  lang,
-}: {
-  occ: Occupation;
-  t: ReturnType<typeof useLang>["t"];
-  lang: string;
-}) {
-  const [copied, setCopied] = useState(false);
+function ShareBlock({ occ }: { occ: Occupation }) {
+  const { t, lang } = useLang();
   const url = `https://www.ksashiftobservatory.online/job/${toSlug(occ.name_en)}`;
   const occName = lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en;
   const text = t.jobPage.shareText
     .replace("{name}", occName)
     .replace("{score}", String(occ.composite));
 
-  const shareUrl = (base: string) =>
-    `${base}${encodeURIComponent(text + " " + url)}`;
-
-  return (
-    <div className="flex flex-col md:flex-row gap-2">
-      <a
-        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full md:w-auto px-3 py-1.5 bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-medium rounded transition-colors"
-      >
-        LinkedIn
-      </a>
-      <a
-        href={shareUrl("https://twitter.com/intent/tweet?text=")}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full md:w-auto px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium rounded transition-colors"
-      >
-        X / Twitter
-      </a>
-      <a
-        href={shareUrl("https://wa.me/?text=")}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full md:w-auto px-3 py-1.5 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-medium rounded transition-colors"
-      >
-        WhatsApp
-      </a>
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText(url);
-          setCopied(true);
-          setTimeout(() => setCopied(false), 2000);
-        }}
-        className="w-full md:w-auto px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-medium rounded border border-gray-700 transition-colors"
-      >
-        {copied ? t.jobPage.copied : t.jobPage.copyLink}
-      </button>
-    </div>
-  );
+  return <ShareBar url={url} text={text} />;
 }
 
 /* ================================================================== */
@@ -645,7 +598,7 @@ export default function JobPageClient({
           <h3 className="text-sm font-medium text-gray-400 mb-3">
             {jp.shareTitle}
           </h3>
-          <ShareButtons occ={occ} t={t} lang={lang} />
+          <ShareBlock occ={occ} />
         </section>
 
         {/* ── Related occupations ── */}

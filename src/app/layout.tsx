@@ -7,6 +7,7 @@ import HtmlLangSync from "@/components/HtmlLangSync";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerLang } from "@/lib/server-lang";
+import BackToTop from "@/components/shared/BackToTop";
 
 const SITE_URL = "https://www.ksashiftobservatory.online";
 
@@ -246,6 +247,7 @@ export default function RootLayout({
           <HtmlLangSync />
           {children}
           <CookieConsent />
+          <BackToTop />
         </LangProvider>
         <Analytics />
         <SpeedInsights />

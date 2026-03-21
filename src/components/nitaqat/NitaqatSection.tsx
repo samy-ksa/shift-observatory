@@ -234,7 +234,7 @@ export default function NitaqatSection() {
                       >
                         <td className="py-2.5 px-2">
                           <span
-                            className={`text-xs px-2.5 py-1 rounded-full font-medium border ${colors.bg} ${colors.text} ${colors.border}`}
+                            className={`text-xs px-2.5 py-1 rounded-full font-medium border whitespace-nowrap ${colors.bg} ${colors.text} ${colors.border}`}
                           >
                             {lang === "ar" ? BAND_AR[band] : band}
                           </span>

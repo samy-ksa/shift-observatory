@@ -139,7 +139,11 @@ html, body {
 }
 
 .animate-ticker {
-  animation: ticker 45s linear infinite;
+  animation: ticker 25s linear infinite;
+}
+
+.ticker-hover-pause:hover .animate-ticker {
+  animation-play-state: paused;
 }
 
 /* Pulse glow */

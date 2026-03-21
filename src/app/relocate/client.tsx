@@ -16,6 +16,8 @@ const RadarChartSection = dynamic(
 );
 import { useLang } from "@/lib/i18n/context";
 import LangToggle from "@/components/ui/LangToggle";
+import ShareBar from "@/components/shared/ShareBar";
+import EmailGateModal from "@/components/shared/EmailGateModal";
 import {
   ORIGIN_CITIES,
   SAUDI_CITIES,
@@ -202,6 +204,8 @@ export default function RelocateClient({
   const [schoolTierId, setSchoolTierId] = useState("midtier");
   const [showResults, setShowResults] = useState(false);
   const [activeTab, setActiveTab] = useState<TabId>("overview");
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [emailLoading, setEmailLoading] = useState(false);
 
   const origin = ORIGIN_CITIES.find((c) => c.id === originId)!;
   const saudi = SAUDI_CITIES.find((c) => c.id === saudiId)!;
@@ -362,15 +366,120 @@ export default function RelocateClient({
     return COST_DATABASE.filter((ci) => ci.category === "education" && ci.prices[saudiCostId] !== undefined);
   }, [saudiCostId]);
 
-  /* ---- Share ---- */
-  const handleShareLinkedIn = () => {
+  /* ---- PDF export ---- */
+  const generateRelocationPDF = useCallback(() => {
     if (!result) return;
-    const originN = ln(lang, origin);
-    const saudiN = ln(lang, saudi);
-    const text = r.shareText.replace("{origin}", originN).replace("{saudi}", saudiN).replace("{amount}", fmtN(result.tax_savings_sar));
-    const url = "https://www.ksashiftobservatory.online/relocate";
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`, "_blank");
-  };
+    import("jspdf").then(({ default: jsPDF }) => {
+      const doc = new jsPDF();
+      const originN = ln(lang, origin);
+      const saudiN = ln(lang, saudi);
+
+      // Header
+      doc.setFillColor(10, 14, 23);
+      doc.rect(0, 0, 210, 40, "F");
+      doc.setTextColor(34, 211, 238);
+      doc.setFontSize(18);
+      doc.text("SHIFT Observatory", 15, 18);
+      doc.setFontSize(12);
+      doc.setTextColor(255, 255, 255);
+      doc.text(`${originN} \u2192 ${saudiN}`, 15, 30);
+
+      let y = 55;
+      doc.setTextColor(0, 0, 0);
+
+      // Income comparison section
+      doc.setFontSize(14);
+      doc.text(lang === "fr" ? "Comparaison des revenus" : lang === "ar" ? "\u0645\u0642\u0627\u0631\u0646\u0629 \u0627\u0644\u062F\u062E\u0644" : "Income Comparison", 15, y);
+      y += 10;
+      doc.setFontSize(10);
+
+      // Origin side
+      doc.text(`${originN}:`, 15, y);
+      y += 6;
+      doc.text(`  Gross: ${origin.currency} ${fmtN(result.gross_local)}`, 15, y);
+      y += 6;
+      doc.text(`  Tax: -${origin.currency} ${fmtN(result.tax_local)}`, 15, y);
+      y += 6;
+      doc.text(`  Net: ${origin.currency} ${fmtN(result.net_local)}`, 15, y);
+      y += 10;
+
+      // Saudi side
+      doc.text(`${saudiN}:`, 15, y);
+      y += 6;
+      doc.text(`  Gross/Net (0% tax): SAR ${fmtN(result.gross_sar)}`, 15, y);
+      y += 6;
+      doc.text(`  Tax savings: SAR ${fmtN(result.tax_savings_sar)}/month`, 15, y);
+      y += 12;
+
+      // Verdict
+      const minSal = result.saudi_total_sar;
+      const recSal = Math.round(minSal * 1.2);
+      doc.setFontSize(14);
+      doc.text(lang === "fr" ? "Verdict" : lang === "ar" ? "\u0627\u0644\u0646\u062A\u064A\u062C\u0629" : "Verdict", 15, y);
+      y += 10;
+      doc.setFontSize(10);
+      doc.text(`Minimum salary to match ${originN}: SAR ${fmtN(minSal)}/month`, 15, y);
+      y += 6;
+      doc.text(`Recommended salary: SAR ${fmtN(recSal)}/month`, 15, y);
+      y += 12;
+
+      // Exchange rate
+      doc.setFontSize(8);
+      doc.setTextColor(128, 128, 128);
+      doc.text(`Exchange rate: 1 ${origin.currency} = ${(CITY_EXCHANGE_RATES[originId as CityId] || 1).toFixed(4)} SAR`, 15, y);
+      y += 5;
+      doc.text(`Generated on ${new Date().toLocaleDateString()} \u2014 www.ksashiftobservatory.online`, 15, y);
+
+      doc.save(`SHIFT-Relocation-${originId}-to-${saudiId}.pdf`);
+    });
+  }, [result, lang, origin, saudi, originId, saudiId]);
+
+  /* ---- Email-gated PDF download ---- */
+  const handlePDFClick = useCallback(() => {
+    if (!result) return;
+    const saved = localStorage.getItem("shift_reloc_email");
+    if (saved) {
+      generateRelocationPDF();
+    } else {
+      setShowEmailModal(true);
+    }
+  }, [result, generateRelocationPDF]);
+
+  const handleEmailSubmit = useCallback(async (email: string) => {
+    if (!result) return;
+    setEmailLoading(true);
+    try {
+      await fetch("/api/relocation-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          originCity: ln("en", origin),
+          originCountry: origin.country_en,
+          currentSalary: salaryNum,
+          currency: origin.currency,
+          salarySAR: result.gross_sar,
+          occupation: selectedOcc?.name_en || "",
+          aiRiskScore: selectedOcc?.composite ?? null,
+          adults,
+          children,
+          singleIncome,
+          targetCity: ln("en", saudi),
+          housing,
+          schoolTier: schoolTierId,
+          minSalaryKSA: result.saudi_total_sar,
+          taxSavings: result.tax_savings_sar,
+          language: lang,
+        }),
+      });
+    } catch {
+      // Silently continue — don't block PDF on API failure
+    }
+    localStorage.setItem("shift_reloc_email", email);
+    setEmailLoading(false);
+    setShowEmailModal(false);
+    generateRelocationPDF();
+  }, [result, origin, saudi, salaryNum, selectedOcc, adults, children, singleIncome, housing, schoolTierId, lang, generateRelocationPDF]);
 
   /* ---- Tab list ---- */
   const tabs: { id: TabId; label: string }[] = [
@@ -403,7 +512,7 @@ export default function RelocateClient({
         <Link href="/" className="text-text-muted text-sm hover:text-text-secondary transition-colors">&larr; {r.back}</Link>
         <div className="flex items-start justify-between mt-4 gap-4 flex-wrap">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-text-primary tracking-wide">{r.title}</h1>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary tracking-wide break-words">{r.title}</h1>
             <p className="text-text-muted mt-1">{r.subtitle}</p>
           </div>
           <div className="bg-emerald-400/10 border border-emerald-400/30 rounded-full px-4 py-1.5 flex-shrink-0">
@@ -1037,8 +1146,21 @@ export default function RelocateClient({
           )}
 
           {/* ---- SHARE + ACTIONS ---- */}
-          <div className="mt-8 flex flex-col md:flex-row gap-2">
-            <button onClick={handleShareLinkedIn} className="w-full md:w-auto px-5 py-2.5 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors">{r.shareLinkedIn}</button>
+          <div className="mt-8 space-y-3">
+            <button
+              onClick={handlePDFClick}
+              className="w-full md:w-auto flex items-center justify-center gap-2 border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 rounded-md px-6 py-3 text-sm font-medium transition-colors"
+            >
+              {lang === "fr" ? "T\u00E9l\u00E9charger le PDF" : lang === "ar" ? "\u062A\u062D\u0645\u064A\u0644 PDF" : "Download PDF"}
+            </button>
+            <ShareBar
+              url={`https://www.ksashiftobservatory.online/relocate/${originId}-to-${saudiId}`}
+              text={(() => {
+                const originN = ln(lang, origin);
+                const saudiN = ln(lang, saudi);
+                return r.shareText.replace("{origin}", originN).replace("{saudi}", saudiN).replace("{amount}", fmtN(result.tax_savings_sar));
+              })()}
+            />
             <button onClick={handleReset} className="w-full md:w-auto px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
           </div>
 
@@ -1076,6 +1198,15 @@ export default function RelocateClient({
         .tabs-scroll::-webkit-scrollbar { display: none; }
         .tabs-scroll { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
+
+      {/* Email gate modal for PDF download */}
+      <EmailGateModal
+        open={showEmailModal}
+        onClose={() => setShowEmailModal(false)}
+        onSubmit={handleEmailSubmit}
+        loading={emailLoading}
+        lang={lang}
+      />
     </div>
   );
 }

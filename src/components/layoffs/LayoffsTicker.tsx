@@ -26,7 +26,7 @@ export default function LayoffsTicker() {
         </div>
 
         {/* Scrolling ticker */}
-        <div className="overflow-hidden flex-1">
+        <div className="overflow-hidden flex-1 ticker-hover-pause">
           <div className="animate-ticker whitespace-nowrap">
             {[...items, ...items].map((c, i) => (
               <span key={i} className="inline-flex items-center gap-2 mx-6">
