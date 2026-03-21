@@ -30,6 +30,9 @@ export interface HeroStrings {
   };
   toggleSaudi: string;
   toggleEveryone: string;
+  occupationsUp: string;
+  occupationsStable: string;
+  occupationsDown: string;
 }
 
 export interface SalaryStrings {
@@ -498,6 +501,13 @@ export interface JobPageStrings {
   viewFullAnalysis: string;
   notFound: string;
   notFoundSub: string;
+  scoreEvolution: string;
+  riskIncreasing: string;
+  riskDecreasing: string;
+  riskStable: string;
+  pointsSince: string;
+  nextUpdate: string;
+  vsQuarter: string;
 }
 
 export interface ExploreStrings {

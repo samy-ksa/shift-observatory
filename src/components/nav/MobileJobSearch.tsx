@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/i18n/context";
 import { getAllOccupations, toSlug, type Occupation } from "@/lib/occupations";
+import { getScoreTrend } from "@/data/score-history";
 
 const DEBOUNCE_MS = 150;
 
@@ -160,6 +161,14 @@ export default function MobileJobSearch() {
                     <span className={`font-mono text-sm font-medium ${riskTextColor(occ.composite)}`}>
                       {occ.composite}
                     </span>
+                    {(() => {
+                      const trend = getScoreTrend(toSlug(occ.name_en), occ.composite);
+                      return trend.direction === "up" ? (
+                        <span className="text-red-400 text-[10px]">&#9650;</span>
+                      ) : trend.direction === "down" ? (
+                        <span className="text-green-400 text-[10px]">&#9660;</span>
+                      ) : null;
+                    })()}
                     <span className={`w-1.5 h-1.5 rounded-full ${riskDotBg(occ.composite)}`} />
                     <svg className="w-3.5 h-3.5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

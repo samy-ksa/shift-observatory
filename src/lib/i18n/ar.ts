@@ -45,6 +45,9 @@ export const ar: Dictionary = {
     },
     toggleSaudi: "\u0633\u0639\u0648\u062F\u064A\u0648\u0646 \u0641\u0642\u0637",
     toggleEveryone: "\u0627\u0644\u062C\u0645\u064A\u0639",
+    occupationsUp: "\u0645\u0647\u0646 \u0641\u064A \u0627\u0631\u062A\u0641\u0627\u0639 \u25b2",
+    occupationsStable: "\u0645\u0647\u0646 \u0645\u0633\u062A\u0642\u0631\u0629 \u2501",
+    occupationsDown: "\u0645\u0647\u0646 \u0641\u064A \u0627\u0646\u062E\u0641\u0627\u0636 \u25bc",
   },
   riskTool: {
     title: "\u0647\u0644 \u0648\u0638\u064A\u0641\u062A\u064A \u0641\u064A \u062E\u0637\u0631\u061F",
@@ -465,6 +468,13 @@ export const ar: Dictionary = {
     viewFullAnalysis: "← عرض التحليل الكامل",
     notFound: "المهنة غير موجودة",
     notFoundSub: "المهنة التي تبحث عنها غير موجودة في قاعدة بياناتنا.",
+    scoreEvolution: "تطور الدرجة",
+    riskIncreasing: "المخاطر في ازدياد",
+    riskDecreasing: "المخاطر في تراجع",
+    riskStable: "مستقر",
+    pointsSince: "نقطة منذ",
+    nextUpdate: "التحديث القادم: الربع الثاني 2026 (يونيو)",
+    vsQuarter: "مقارنة بالربع الرابع 2025",
   },
   explore: {
     title: "دليل المهن — 146 مهنة",

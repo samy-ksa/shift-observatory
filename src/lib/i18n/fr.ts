@@ -45,6 +45,9 @@ export const fr: Dictionary = {
     },
     toggleSaudi: "Saoudiens uniquement",
     toggleEveryone: "Tout le monde",
+    occupationsUp: "m\u00e9tiers en hausse \u25b2",
+    occupationsStable: "m\u00e9tiers stables \u2501",
+    occupationsDown: "m\u00e9tiers en baisse \u25bc",
   },
   riskTool: {
     title: "Mon métier est-il menacé ?",
@@ -444,6 +447,13 @@ export const fr: Dictionary = {
     viewFullAnalysis: "Voir l'analyse complète →",
     notFound: "Métier non trouvé",
     notFoundSub: "Le métier que vous recherchez n'existe pas dans notre base de données.",
+    scoreEvolution: "ÉVOLUTION DU SCORE",
+    riskIncreasing: "Le risque AUGMENTE",
+    riskDecreasing: "Le risque DIMINUE",
+    riskStable: "Stable",
+    pointsSince: "points depuis",
+    nextUpdate: "Prochaine mise à jour : Q2-2026 (Juin)",
+    vsQuarter: "vs T4-2025",
   },
   explore: {
     title: "EXPLORER 146 MÉTIERS",

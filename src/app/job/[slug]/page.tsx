@@ -12,6 +12,7 @@ import {
   fmt,
 } from "@/lib/occupations";
 import JobPageClient from "./client";
+import { getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
 /* SSG: generate all 146 pages at build time                           */
@@ -160,6 +161,23 @@ export default function JobPage({ params }: { params: { slug: string } }) {
           text: `According to GOSI Q4-2024 data, approximately ${fmt(occ.employment_est)} ${occ.name_en} are employed in Saudi Arabia, with ${occ.employment_saudi_pct}% being Saudi nationals. This occupation is classified as '${occ.category}' by SHIFT Observatory, meaning AI is expected to ${occ.category === "substitution" ? "replace" : "augment"} workers in this role.`,
         },
       },
+      (() => {
+        const t = getScoreTrend(params.slug, occ.composite);
+        const trendWord = t.direction === "up" ? "increased" : t.direction === "down" ? "decreased" : "remained stable";
+        const trendReason = t.direction === "up"
+          ? "This increase is driven by rapid advances in AI capabilities, particularly large language models and robotic process automation, which expand the range of automatable tasks in this role."
+          : t.direction === "down"
+          ? "This decrease reflects growing recognition that human judgment, creativity, and interpersonal skills in this role provide stronger-than-expected defenses against automation."
+          : "This stability indicates that while AI capabilities continue to advance, the fundamental risk profile of this occupation has not significantly changed in the past quarter.";
+        return {
+          "@type": "Question" as const,
+          name: `Is the AI risk for ${occ.name_en} in Saudi Arabia increasing or decreasing?`,
+          acceptedAnswer: {
+            "@type": "Answer" as const,
+            text: `The AI automation risk score for ${occ.name_en} has ${trendWord} from ${t.previousScore}/100 to ${occ.composite}/100 between Q4-2025 and Q1-2026 (${t.delta > 0 ? "+" : ""}${t.delta} points). ${trendReason} SHIFT Observatory updates scores quarterly using the latest GOSI data, WEF projections, and academic research.`,
+          },
+        };
+      })(),
     ],
   };
 
@@ -199,6 +217,18 @@ export default function JobPage({ params }: { params: { slug: string } }) {
                 : `${nameFr} a un risque relativement faible de remplacement par l'IA (${occ.composite}/100). La présence physique, l'intelligence émotionnelle et le jugement non routinier créent de solides défenses contre l'automatisation.`,
         },
       },
+      (() => {
+        const t = getScoreTrend(params.slug, occ.composite);
+        const trendWord = t.direction === "up" ? "augmenté" : t.direction === "down" ? "diminué" : "resté stable";
+        return {
+          "@type": "Question" as const,
+          name: `Le risque IA pour ${nameFr} en Arabie Saoudite augmente-t-il ou diminue-t-il ?`,
+          acceptedAnswer: {
+            "@type": "Answer" as const,
+            text: `Le score de risque d'automatisation IA de ${nameFr} a ${trendWord}, passant de ${t.previousScore}/100 à ${occ.composite}/100 entre le T4-2025 et le T1-2026 (${t.delta > 0 ? "+" : ""}${t.delta} points). SHIFT Observatory met à jour les scores trimestriellement en utilisant les dernières données GOSI, les projections du WEF et la recherche académique.`,
+          },
+        };
+      })(),
     ],
   };
 

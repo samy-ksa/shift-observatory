@@ -15,6 +15,7 @@ import {
   toSlug,
   type Occupation,
 } from "@/lib/occupations";
+import { getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
 /* Constants                                                           */
@@ -241,6 +242,14 @@ function SearchPanel({
                   >
                     {occ.composite}
                   </span>
+                  {(() => {
+                    const trend = getScoreTrend(toSlug(occ.name_en), occ.composite);
+                    return trend.direction === "up" ? (
+                      <span className="text-red-400 text-[10px]">&#9650;</span>
+                    ) : trend.direction === "down" ? (
+                      <span className="text-green-400 text-[10px]">&#9660;</span>
+                    ) : null;
+                  })()}
                   <span
                     className={`w-1.5 h-1.5 rounded-full ${riskDotColor(occ.composite)}`}
                   />

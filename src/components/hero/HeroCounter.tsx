@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import AnimatedNumber from "@/components/shared/AnimatedNumber";
 import Toggle from "@/components/shared/Toggle";
 import InfoTooltip from "@/components/shared/InfoTooltip";
 import { useLang } from "@/lib/i18n/context";
+import { getTrendCounts } from "@/data/score-history";
+import { getAllOccupations, toSlug } from "@/lib/occupations";
 import data from "@/data/master.json";
 
 const hero = data.hero;
@@ -13,6 +15,11 @@ const hero = data.hero;
 export default function HeroCounter() {
   const { t } = useLang();
   const [saudiOnly, setSaudiOnly] = useState(false);
+
+  const trendCounts = useMemo(() => {
+    const occs = getAllOccupations().map(o => ({ slug: toSlug(o.name_en), composite: o.composite }));
+    return getTrendCounts(occs);
+  }, []);
 
   const mainNumber = saudiOnly
     ? hero.jobs_ai_exposure_saudi
@@ -162,6 +169,15 @@ export default function HeroCounter() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Trend summary */}
+        <div className="flex items-center justify-center gap-3 text-xs font-mono mt-4 flex-wrap">
+          <span className="text-red-400">{trendCounts.up} {t.hero.occupationsUp}</span>
+          <span className="text-gray-600">|</span>
+          <span className="text-gray-400">{trendCounts.stable} {t.hero.occupationsStable}</span>
+          <span className="text-gray-600">|</span>
+          <span className="text-green-400">{trendCounts.down} {t.hero.occupationsDown}</span>
         </div>
 
         {/* Scroll indicator */}

@@ -18,6 +18,7 @@ import {
   wefTrendLabelFr,
   fmt,
 } from "@/lib/occupations";
+import { getScoreHistory, getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
 /* Props                                                               */
@@ -224,6 +225,9 @@ export default function JobPageClient({
     );
   }
 
+  const history = occ ? getScoreHistory(toSlug(occ.name_en), occ.composite) : [];
+  const trend = occ ? getScoreTrend(toSlug(occ.name_en), occ.composite) : null;
+
   const rl = lang === "ar" ? riskLabelAr(occ.composite) : lang === "fr" ? riskLabelFr(occ.composite) : riskLabel(occ.composite);
   const sectorName = sector
     ? lang === "ar"
@@ -415,6 +419,56 @@ export default function JobPageClient({
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {verdict}
                 </p>
+              </div>
+
+              {/* Score Evolution */}
+              <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mt-4">
+                <h4 className="text-xs uppercase tracking-widest text-cyan-400 border-l-2 border-cyan-500 pl-3 mb-4">
+                  {t.jobPage.scoreEvolution}
+                </h4>
+
+                {/* Simple text-based sparkline (no Recharts dependency) */}
+                <div className="flex items-end gap-1 h-16 mb-3">
+                  {history.map((h) => {
+                    const minScore = Math.min(...history.map(x => x.composite));
+                    const maxScore = Math.max(...history.map(x => x.composite));
+                    const range = maxScore - minScore || 1;
+                    const heightPct = 30 + ((h.composite - minScore) / range) * 70;
+                    return (
+                      <div key={h.quarter} className="flex-1 flex flex-col items-center gap-1">
+                        <span className="text-[10px] font-mono text-cyan-400">{h.composite}</span>
+                        <div className="w-full flex justify-center">
+                          <div
+                            className="w-8 rounded-t bg-cyan-500/30 border border-cyan-500/50"
+                            style={{ height: `${heightPct}%`, minHeight: '8px' }}
+                          />
+                        </div>
+                        <span className="text-[10px] text-gray-500">{h.quarter}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Trend summary */}
+                <div className="mt-3 text-sm">
+                  {trend && trend.direction === "up" && (
+                    <p className="text-red-400">
+                      ▲ +{trend.delta} {t.jobPage.pointsSince} Q4-2025 · <span className="text-red-300 font-medium">{t.jobPage.riskIncreasing}</span>
+                    </p>
+                  )}
+                  {trend && trend.direction === "down" && (
+                    <p className="text-green-400">
+                      ▼ {trend.delta} {t.jobPage.pointsSince} Q4-2025 · <span className="text-green-300 font-medium">{t.jobPage.riskDecreasing}</span>
+                    </p>
+                  )}
+                  {trend && trend.direction === "stable" && (
+                    <p className="text-gray-400">
+                      ━ {t.jobPage.riskStable} {lang === "en" ? "since" : lang === "fr" ? "depuis" : "منذ"} Q4-2025
+                    </p>
+                  )}
+                </div>
+
+                <p className="text-xs text-gray-600 mt-2">{t.jobPage.nextUpdate}</p>
               </div>
             </div>
           )}

@@ -52,6 +52,9 @@ export const en: Dictionary = {
     },
     toggleSaudi: "Saudi only",
     toggleEveryone: "Everyone",
+    occupationsUp: "occupations \u25b2",
+    occupationsStable: "occupations \u2501",
+    occupationsDown: "occupations \u25bc",
   },
   riskTool: {
     title: "Is My Job at Risk?",
@@ -465,6 +468,13 @@ export const en: Dictionary = {
     viewFullAnalysis: "View full analysis →",
     notFound: "Occupation Not Found",
     notFoundSub: "The occupation you're looking for doesn't exist in our database.",
+    scoreEvolution: "SCORE EVOLUTION",
+    riskIncreasing: "Risk is INCREASING",
+    riskDecreasing: "Risk is DECREASING",
+    riskStable: "Stable",
+    pointsSince: "points since",
+    nextUpdate: "Next update: Q2-2026 (June)",
+    vsQuarter: "vs Q4-2025",
   },
   explore: {
     title: "EXPLORE 146 OCCUPATIONS",

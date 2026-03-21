@@ -9,6 +9,7 @@ import { riskLabel, scoreToCategory } from "@/lib/utils";
 import InfoTooltip from "@/components/shared/InfoTooltip";
 import { useLang, formatNumber } from "@/lib/i18n/context";
 import { toSlug } from "@/lib/occupations";
+import { getScoreTrend } from "@/data/score-history";
 import data from "@/data/master.json";
 import type { Occupation, SalaryContext, TaweenDecision } from "@/lib/data-types";
 
@@ -413,6 +414,16 @@ export default function RiskCalculator() {
                         {selected.composite.toFixed(1)}
                       </span>{" "}
                       / 100
+                      {(() => {
+                        const trend = getScoreTrend(toSlug(selected.name_en), selected.composite);
+                        if (trend.direction === "up") return (
+                          <span className="text-red-400 text-xs font-mono ml-2">&#9650; +{trend.delta} vs Q4-2025</span>
+                        );
+                        if (trend.direction === "down") return (
+                          <span className="text-green-400 text-xs font-mono ml-2">&#9660; {trend.delta} vs Q4-2025</span>
+                        );
+                        return <span className="text-gray-500 text-xs font-mono ml-2">&#9473; stable</span>;
+                      })()}
                     </span>
                     <span>{t.common.veryHigh}</span>
                   </div>
