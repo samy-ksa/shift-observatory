@@ -124,10 +124,10 @@ export default function LangToggle() {
           </Link>
           <button
             onClick={() => setMenuOpen(true)}
-            className="min-h-12 min-w-12 flex items-center justify-center text-text-muted"
+            className="min-h-12 min-w-12 flex items-center justify-center text-text-muted bg-gray-800/50 rounded-lg"
             aria-label="Open menu"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
@@ -175,9 +175,9 @@ export default function LangToggle() {
                 key={page.href}
                 href={page.href}
                 onClick={() => setMenuOpen(false)}
-                className={`min-h-12 px-6 text-base font-medium border-b border-white/5 flex items-center ${
+                className={`px-6 py-4 text-lg font-medium border-b border-gray-800 flex items-center ${
                   isActive(page.href)
-                    ? "text-accent-primary"
+                    ? "text-cyan-400 font-semibold"
                     : "text-text-muted"
                 }`}
               >
@@ -194,15 +194,16 @@ export default function LangToggle() {
                   if (searchInput) searchInput.focus();
                 }, 300);
               }}
-              className="min-h-12 px-6 text-base font-medium border-b border-white/5 flex items-center text-text-muted text-left w-full"
+              className="w-full text-left py-4 text-lg text-cyan-400 flex items-center gap-3 border-b border-gray-800 px-6"
             >
-              {lang === "ar" ? "\u0628\u062D\u062B \u0639\u0646 \u0648\u0638\u0627\u0626\u0641" : lang === "fr" ? "Rechercher des emplois" : "Search Jobs"}
+              <span>🔍</span>
+              <span>{lang === "fr" ? "Rechercher des emplois" : lang === "ar" ? "البحث عن وظائف" : "Search Jobs"}</span>
             </button>
           </div>
 
           {/* Language toggle at bottom */}
-          <div className="px-6 py-4 border-t border-white/5">
-            <div className="flex gap-2">
+          <div className="px-6 py-6 border-t border-white/5">
+            <div className="flex gap-3">
               {LANG_OPTIONS.map((opt) => (
                 <button
                   key={opt.code}
@@ -210,10 +211,10 @@ export default function LangToggle() {
                     setLang(opt.code);
                     setMenuOpen(false);
                   }}
-                  className={`flex-1 min-h-11 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex-1 min-h-12 rounded-lg text-base font-medium transition-colors ${
                     lang === opt.code
-                      ? "bg-accent-primary text-white"
-                      : "bg-white/5 text-text-muted hover:text-text-secondary"
+                      ? "bg-cyan-500 text-black font-semibold"
+                      : "bg-gray-800 text-gray-400"
                   }`}
                 >
                   {opt.label}
