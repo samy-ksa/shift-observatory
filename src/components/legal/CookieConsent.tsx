@@ -43,7 +43,7 @@ export default function CookieConsent() {
           {/* Icon + text */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">🍪</span>
+              <span className="text-lg font-semibold text-text-primary">Cookies</span>
               <h3 className="text-sm font-semibold text-text-primary">
                 {isAr ? "نستخدم ملفات تعريف الارتباط" : lang === "fr" ? "Nous utilisons des cookies" : "We use cookies"}
               </h3>

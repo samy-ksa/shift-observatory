@@ -340,7 +340,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
             href="/relocate"
             className="flex items-center gap-3 group"
           >
-            <span className="text-lg">💰</span>
+            <span className="text-lg font-semibold text-cyan-400">$</span>
             <div>
               <p className="text-sm font-medium text-cyan-400 group-hover:text-cyan-300 transition-colors">
                 {isAr

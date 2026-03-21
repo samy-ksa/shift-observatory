@@ -65,9 +65,6 @@ export default function EmailGateModal({ open, onClose, onSubmit, loading, lang 
           ✕
         </button>
 
-        {/* Icon */}
-        <div className="text-3xl mb-3">📊</div>
-
         {/* Title */}
         <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-wide mb-1">{c.title}</h3>
         <p className="text-sm text-text-muted mb-5 leading-relaxed">{c.subtitle}</p>
@@ -90,7 +87,7 @@ export default function EmailGateModal({ open, onClose, onSubmit, loading, lang 
             {loading ? (
               <span className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
             ) : (
-              <>📊 {c.button}</>
+              <>{c.button}</>
             )}
           </button>
         </form>

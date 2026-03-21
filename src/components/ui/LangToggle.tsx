@@ -196,7 +196,9 @@ export default function LangToggle() {
               }}
               className="w-full text-left py-4 text-lg text-cyan-400 flex items-center gap-3 border-b border-gray-800 px-6"
             >
-              <span>🔍</span>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
               <span>{lang === "fr" ? "Rechercher des emplois" : lang === "ar" ? "البحث عن وظائف" : "Search Jobs"}</span>
             </button>
           </div>

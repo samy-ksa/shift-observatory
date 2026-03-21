@@ -17,22 +17,22 @@ type PulseTab = "global" | "gulf" | "policy" | "signals";
 const DEFAULT_VISIBLE = 6;
 
 const COUNTRY_FLAGS: Record<string, string> = {
-  US: "🇺🇸",
-  GB: "🇬🇧",
-  DE: "🇩🇪",
-  SE: "🇸🇪",
-  SA: "🇸🇦",
-  AE: "🇦🇪",
-  QA: "🇶🇦",
-  BH: "🇧🇭",
-  KW: "🇰🇼",
-  OM: "🇴🇲",
-  IN: "🇮🇳",
-  CN: "🇨🇳",
-  JP: "🇯🇵",
-  FR: "🇫🇷",
-  CA: "🇨🇦",
-  AU: "🇦🇺",
+  US: "US",
+  GB: "GB",
+  DE: "DE",
+  SE: "SE",
+  SA: "SA",
+  AE: "AE",
+  QA: "QA",
+  BH: "BH",
+  KW: "KW",
+  OM: "OM",
+  IN: "IN",
+  CN: "CN",
+  JP: "JP",
+  FR: "FR",
+  CA: "CA",
+  AU: "AU",
 };
 
 export default function ShiftPulse() {
@@ -150,7 +150,7 @@ export default function ShiftPulse() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
           <SectionHeader title={t.pulse.title} subtitle={t.pulse.subtitle} id="pulse-header" />
           <span className="text-xs text-text-muted bg-bg-card px-3 py-1.5 rounded-full border border-white/5 mt-2 md:mt-0 self-start md:self-auto">
-            ⚡ {t.pulse.updated}: {pulse.report_date}
+            {t.pulse.updated}: {pulse.report_date}
           </span>
         </div>
 
@@ -237,7 +237,7 @@ export default function ShiftPulse() {
                       <div className="flex items-start justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <span className="text-lg">
-                            {COUNTRY_FLAGS[item.country] || "🌍"}
+                            {COUNTRY_FLAGS[item.country] || "--"}
                           </span>
                           <h4 className="font-semibold text-text-primary">
                             {item.company}
@@ -297,7 +297,7 @@ export default function ShiftPulse() {
                       <div className="flex items-start justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <span className="text-lg">
-                            {COUNTRY_FLAGS[item.country] || "🌍"}
+                            {COUNTRY_FLAGS[item.country] || "--"}
                           </span>
                           <h4 className="font-semibold text-text-primary">
                             {item.company}

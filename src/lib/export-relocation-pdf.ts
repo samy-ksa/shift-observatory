@@ -62,7 +62,7 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
   const sym = p.originCurrencySymbol;
   const cur = p.originCurrency;
   const rate = CITY_EXCHANGE_RATES[p.originId as CityId] || 1;
-  const taxPct = Math.round(p.originTaxRate * 100);
+  const taxPct = Math.round(p.originTaxRate);
   const minSal = p.result.saudi_total_sar;
   const recSal = Math.round(minSal * 1.2);
   const monthlySavings = p.result.saudi_savings_sar;
@@ -90,7 +90,7 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
     doc.setTextColor(150, 150, 150);
     doc.setFont("helvetica", "normal");
     doc.text("SHIFT OBSERVATORY", MG, 9);
-    doc.text(`${oN}  \u2192  ${sN}`, PW - MG, 9, { align: "right" });
+    doc.text(`${oN}  >  ${sN}`, PW - MG, 9, { align: "right" });
   }
 
   function addFooter() {
@@ -173,7 +173,7 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(16);
   doc.setTextColor(...CYAN);
-  doc.text(`${oN}  \u2192  ${sN}`, MG, 120);
+  doc.text(`${oN}  >  ${sN}`, MG, 120);
 
   // Profile details
   let cy = 150;
@@ -710,7 +710,7 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
     y += 7;
 
     if (occTrend) {
-      const arrow = occTrend.direction === "up" ? "\u25b2" : occTrend.direction === "down" ? "\u25bc" : "\u2501";
+      const arrow = occTrend.direction === "up" ? "+" : occTrend.direction === "down" ? "-" : "=";
       doc.setFont("helvetica", "normal");
       doc.setFontSize(10);
       doc.text(`${isFr ? "Tendance" : "Trend"}: ${arrow} ${occTrend.delta > 0 ? "+" : ""}${occTrend.delta.toFixed(1)} vs Q4-2025`, MG, y);

@@ -170,7 +170,7 @@ function Tip({ text, children }: { text: string; children: React.ReactNode }) {
 function InfoBox({ text }: { text: string }) {
   return (
     <div className="text-xs text-gray-500 bg-gray-900/30 border-l-2 border-gray-700 p-2 mt-1 leading-relaxed">
-      <span className="text-gray-400 mr-1">ℹ️</span> {text}
+      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-600 text-[10px] text-gray-400 mr-1 flex-shrink-0">i</span> {text}
     </div>
   );
 }
@@ -702,7 +702,7 @@ export default function RelocateClient({
           {/* ---- SINGLE INCOME WARNING ---- */}
           {singleIncome && partnerSalaryNum > 0 && (
             <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-5 mb-6">
-              <h4 className="text-sm font-bold text-amber-400 mb-2">⚠️ {r.singleIncomeAlert}</h4>
+              <h4 className="text-sm font-bold text-amber-400 mb-2">{r.singleIncomeAlert}</h4>
               <p className="text-sm text-text-secondary leading-relaxed">
                 {r.singleIncomeWarning
                   .replace("{origin}", originName)
@@ -825,7 +825,7 @@ export default function RelocateClient({
 
               {/* ═══════ NEGOTIATION CHECKLIST ═══════ */}
               <div className="bg-bg-card/60 border border-yellow-500/20 rounded-xl p-5 md:p-6">
-                <h3 className="text-xs font-bold text-yellow-400 uppercase tracking-[0.2em] mb-4">📋 {r.packageChecklist}</h3>
+                <h3 className="text-xs font-bold text-yellow-400 uppercase tracking-[0.2em] mb-4">{r.packageChecklist}</h3>
                 <div className="space-y-2 text-sm">
                   <CheckItem text={r.checkBaseSalary.replace("{min}", fmtN(minSalary)).replace("{rec}", fmtN(recSalary))} />
                   <CheckItem text={r.checkHousing.replace("{amount}", fmtN(housingAllowance))} />
@@ -852,7 +852,7 @@ export default function RelocateClient({
 
                 {origin.taxRate > 0 && (
                   <div className="mt-4 pt-3 border-t border-white/10">
-                    <p className="text-xs text-yellow-400 font-bold mb-1">💡 PRO TIP</p>
+                    <p className="text-xs text-yellow-400 font-bold mb-1">PRO TIP</p>
                     <p className="text-sm text-text-secondary leading-relaxed">
                       {r.proTip
                         .replace("{amount}", fmtSar(result.tax_savings_sar))
@@ -935,12 +935,12 @@ export default function RelocateClient({
                     <div className="mt-2 text-xs leading-relaxed">
                       {result.saudi_savings_sar >= 0 ? (
                         <p className="text-emerald-400">
-                          ✅ {r.youSave.replace("{amount}", fmtSar(result.saudi_savings_sar)).replace("{city}", saudiName).replace("{origin}", originName)}
+                          {r.youSave.replace("{amount}", fmtSar(result.saudi_savings_sar)).replace("{city}", saudiName).replace("{origin}", originName)}
                         </p>
                       ) : (
                         <div className="space-y-1">
                           <p className="text-red-400">
-                            ⚠️ {r.youSpend.replace("{amount}", fmtSar(Math.abs(result.saudi_savings_sar))).replace("{city}", saudiName).replace("{origin}", originName)}
+                            {r.youSpend.replace("{amount}", fmtSar(Math.abs(result.saudi_savings_sar))).replace("{city}", saudiName).replace("{origin}", originName)}
                           </p>
                           {origin.taxRate > 0 && (
                             <>
@@ -1116,7 +1116,6 @@ export default function RelocateClient({
           <div className="mt-8 space-y-3">
             <div className="border border-cyan-500/30 rounded-lg p-5 bg-gradient-to-r from-cyan-500/5 to-transparent">
               <div className="flex items-start gap-3 mb-4">
-                <span className="text-2xl">📊</span>
                 <div>
                   <h3 className="text-base font-bold text-cyan-400 uppercase tracking-wide mb-1">
                     {lang === "fr" ? "VOTRE RAPPORT PERSONNALIS\u00C9" : lang === "ar" ? "\u062A\u0642\u0631\u064A\u0631\u0643 \u0627\u0644\u0634\u062E\u0635\u064A" : "YOUR PERSONALIZED REPORT"}
@@ -1134,7 +1133,7 @@ export default function RelocateClient({
                 onClick={handlePDFClick}
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold min-h-14 rounded-lg text-base transition-colors flex items-center justify-center gap-2"
               >
-                📄 {lang === "fr" ? "T\u00E9l\u00E9charger mon rapport gratuit \u2192" : lang === "ar" ? "\u062A\u062D\u0645\u064A\u0644 \u062A\u0642\u0631\u064A\u0631\u064A \u0627\u0644\u0645\u062C\u0627\u0646\u064A \u2190" : "Download my free report \u2192"}
+                {lang === "fr" ? "T\u00E9l\u00E9charger mon rapport gratuit \u2192" : lang === "ar" ? "\u062A\u062D\u0645\u064A\u0644 \u062A\u0642\u0631\u064A\u0631\u064A \u0627\u0644\u0645\u062C\u0627\u0646\u064A \u2190" : "Download my free report \u2192"}
               </button>
             </div>
             <ShareBar
@@ -1222,7 +1221,7 @@ function DualRow({ label, sar, rate, sym, bold }: { label: React.ReactNode; sar:
 function CheckItem({ text }: { text: string }) {
   return (
     <div className="flex items-start gap-2 text-text-secondary">
-      <span className="text-emerald-400 mt-0.5 flex-shrink-0">✅</span>
+      <span className="text-emerald-400 mt-0.5 flex-shrink-0">{"\u2713"}</span>
       <span>{text}</span>
     </div>
   );
