@@ -546,6 +546,28 @@ export interface MatchStrings {
   matchConfidence: string;
 }
 
+export interface PrepareStrings {
+  title: string;
+  subtitle: string;
+  navLabel: string;
+  countryLabel: string;
+  sectorLabel: string;
+  generate: string;
+  progress: string;
+  itemsOf: string;
+  completed: string;
+  critical: string;
+  important: string;
+  recommended: string;
+  downloadChecklist: string;
+  timeline6_12: string;
+  timeline3_6: string;
+  timeline1_3: string;
+  timeline1mo: string;
+  timelineArrival: string;
+  timelineFirstMonth: string;
+}
+
 export interface RelocateStrings {
   title: string;
   subtitle: string;
@@ -770,4 +792,5 @@ export interface Dictionary {
   findJob: FindJobStrings;
   relocate: RelocateStrings;
   match: MatchStrings;
+  prepare: PrepareStrings;
 }

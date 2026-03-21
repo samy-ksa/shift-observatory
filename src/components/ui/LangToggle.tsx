@@ -42,6 +42,10 @@ export default function LangToggle() {
       href: "/relocate",
       label: t.relocate.navLabel,
     },
+    {
+      href: "/prepare",
+      label: t.prepare.navLabel,
+    },
   ];
 
   const isActive = (href: string) => {
