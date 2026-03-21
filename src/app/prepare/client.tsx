@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useLang } from "@/lib/i18n/context";
+import EmailGateModal from "@/components/shared/EmailGateModal";
 import {
   COUNTRIES,
   SECTORS,
@@ -18,6 +19,8 @@ export default function PrepareClient() {
   const [generated, setGenerated] = useState(false);
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [emailLoading, setEmailLoading] = useState(false);
 
   // Load from localStorage
   useEffect(() => {
@@ -329,15 +332,47 @@ export default function PrepareClient() {
             {/* Download CTA */}
             <div className="mt-8 border border-cyan-500/20 rounded-lg p-6 bg-gradient-to-r from-cyan-500/5 to-transparent">
               <p className="text-sm text-gray-300 mb-4">
-                {t.prepare.downloadChecklist}
+                {t.prepare.downloadDesc}
               </p>
               <button
-                onClick={() => window.print()}
+                onClick={() => {
+                  const saved = localStorage.getItem("shift_checklist_email");
+                  if (saved) {
+                    window.print();
+                  } else {
+                    setShowEmailModal(true);
+                  }
+                }}
                 className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-600 text-black font-semibold px-8 py-3 rounded-lg min-h-12 transition-colors"
               >
                 {t.prepare.downloadChecklist} &rarr;
               </button>
             </div>
+
+            {/* Email gate modal */}
+            <EmailGateModal
+              open={showEmailModal}
+              onClose={() => setShowEmailModal(false)}
+              loading={emailLoading}
+              lang={lang}
+              onSubmit={async (email: string) => {
+                setEmailLoading(true);
+                try {
+                  await fetch("/api/checklist-lead", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, country, sector }),
+                  });
+                  localStorage.setItem("shift_checklist_email", email);
+                  setShowEmailModal(false);
+                  window.print();
+                } catch {
+                  /* silent */
+                } finally {
+                  setEmailLoading(false);
+                }
+              }}
+            />
           </>
         )}
       </div>

@@ -560,6 +560,7 @@ export interface PrepareStrings {
   important: string;
   recommended: string;
   downloadChecklist: string;
+  downloadDesc: string;
   timeline6_12: string;
   timeline3_6: string;
   timeline1_3: string;
