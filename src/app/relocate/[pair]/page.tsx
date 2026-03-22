@@ -212,16 +212,15 @@ export default async function CityPairPage({
 
   const isFrancophone = ["paris", "casablanca", "tunis", "beirut"].includes(origin.id);
 
-  const faqSchemaFr = isFrancophone ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
+  // Merge French questions into the single FAQPage (Google rejects duplicate FAQPage types)
+  if (isFrancophone) {
+    faqSchema.mainEntity.push(
       {
         "@type": "Question",
         name: `Est-ce que ${saudi.name_fr} est moins cher que ${origin.name_fr} ?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `D'après le classement Mercer, ${saudi.name_fr} est classée #${saudi.mercerRank} tandis que ${origin.name_fr} est #${origin.mercerRank} (plus bas = plus cher). ${saudi.name_fr} est généralement ${mercerComparison === "cheaper" ? "moins chère" : "plus chère"} que ${origin.name_fr}. Cependant, le logement en compound (${rentCompound.toLocaleString()} SAR/mois) et la scolarité internationale (${schoolAnnual.toLocaleString()} SAR/an) peuvent augmenter significativement les coûts pour les familles. L'impôt sur le revenu à 0% en Arabie Saoudite compense partiellement ou totalement ces coûts supplémentaires.`,
+          text: `D'après le classement Mercer, ${saudi.name_fr} est classée #${saudi.mercerRank} tandis que ${origin.name_fr} est #${origin.mercerRank}. ${saudi.name_fr} est généralement ${mercerComparison === "cheaper" ? "moins chère" : "plus chère"} que ${origin.name_fr}. L'impôt sur le revenu à 0% en Arabie Saoudite compense partiellement ou totalement les surcoûts.`,
         },
       },
       {
@@ -229,23 +228,7 @@ export default async function CityPairPage({
         name: `Quel salaire faut-il à ${saudi.name_fr} pour vivre comme à ${origin.name_fr} ?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Pour maintenir un niveau de vie équivalent pour une famille de 3 (2 adultes + 1 enfant) à ${saudi.name_fr}, il faut environ ${result.saudi_total_sar.toLocaleString()} SAR/mois. Avec 0% d'impôt sur le revenu en Arabie Saoudite (vs ${origin.taxRate}% en ${origin.country_fr}), vos économies d'impôts seules valent ${result.tax_savings_sar.toLocaleString()} SAR/mois. Nous recommandons de négocier un package d'au moins ${Math.round(result.saudi_total_sar * 1.2).toLocaleString()} SAR/mois pour inclure une marge d'épargne.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Combien coûte le loyer à ${saudi.name_fr} par rapport à ${origin.name_fr} ?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Un appartement 1 chambre au centre de ${saudi.name_fr} coûte environ ${saudi.rent_apt_1br.toLocaleString()} SAR/mois. Les villas en compound pour expatriés varient de ${saudi.rent_compound_2br.toLocaleString()} à ${saudi.rent_compound_3br.toLocaleString()} SAR/mois. À ${origin.name_fr}, un 1 chambre comparable coûte ${origin.currencySymbol}${origin.rent_1br.toLocaleString()}/mois. Le loyer est ${result.rent_diff_pct > 0 ? `${result.rent_diff_pct}% plus cher` : `${Math.abs(result.rent_diff_pct)}% moins cher`} à ${saudi.name_fr} pour un logement en compound.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Combien coûtent les écoles internationales à ${saudi.name_fr} ?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Les frais de scolarité internationale à ${saudi.name_fr} varient de 20 000 SAR/an (curriculum indien/pakistanais économique) à 105 000+ SAR/an (programmes américains/britanniques/IB premium). Les écoles mid-tier de curriculum américain/britannique coûtent en moyenne ${schoolAnnual.toLocaleString()} SAR/an. ${origin.schoolFree ? `L'école publique est gratuite en ${origin.country_fr}, ce qui fait de l'allocation scolaire un point de négociation essentiel pour les expatriés.` : `Comparez avec les coûts scolaires à ${origin.name_fr} pour avoir le tableau complet.`} La plupart des employeurs offrent des allocations scolaires dans les packages expatriés.`,
+          text: `Pour une famille de 3 à ${saudi.name_fr}, il faut environ ${result.saudi_total_sar.toLocaleString()} SAR/mois. Avec 0% d'impôt (vs ${origin.taxRate}% en ${origin.country_fr}), vos économies d'impôts valent ${result.tax_savings_sar.toLocaleString()} SAR/mois. Nous recommandons au moins ${Math.round(result.saudi_total_sar * 1.2).toLocaleString()} SAR/mois.`,
         },
       },
       {
@@ -253,11 +236,11 @@ export default async function CityPairPage({
         name: `Est-ce que ça vaut le coup de déménager de ${origin.name_fr} à ${saudi.name_fr} ?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Déménager de ${origin.name_fr} à ${saudi.name_fr} peut être financièrement avantageux. Avantages clés : 0% d'impôt sur le revenu (économie de ${result.tax_savings_sar.toLocaleString()} SAR/mois), indemnité de fin de service EOSB (~${result.eosb_5yr_sar.toLocaleString()} SAR après 5 ans, non imposable). Coûts clés : logement en compound (${rentCompound.toLocaleString()} SAR/mois), scolarité internationale. Votre position nette dépend de votre package négocié. Utilisez notre calculateur ci-dessus pour modéliser votre situation avec votre salaire et taille de famille réels.`,
+          text: `Déménager de ${origin.name_fr} à ${saudi.name_fr} peut être financièrement avantageux. 0% d'impôt (économie de ${result.tax_savings_sar.toLocaleString()} SAR/mois), EOSB (~${result.eosb_5yr_sar.toLocaleString()} SAR après 5 ans). Votre position nette dépend de votre package négocié.`,
         },
       },
-    ],
-  } : null;
+    );
+  }
 
   /* ---- Breadcrumb structured data ---- */
   const breadcrumbSchema = {
@@ -277,13 +260,6 @@ export default async function CityPairPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-
-      {isFrancophone && faqSchemaFr && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaFr) }}
-        />
-      )}
 
       {/* JSON-LD BreadcrumbList schema */}
       <script

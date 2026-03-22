@@ -176,56 +176,39 @@ export default function JobPage({ params }: { params: { slug: string } }) {
     ],
   };
 
-  /* ---- French FAQ structured data (included at build time for all jobs) ---- */
+  /* ---- French FAQ questions (merged into single FAQPage to avoid Google duplicate error) ---- */
   const nameFr = occ.name_fr || occ.name_en;
-  const faqSchemaFr = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    inLanguage: "fr",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `Quel est le risque d'automatisation IA pour ${nameFr} en Arabie Saoudite ?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${nameFr} a un score de risque d'automatisation IA de ${occ.composite}/100 en Arabie Saoudite selon SHIFT Observatory. Ce score combine la probabilité d'automatisation (Frey & Osborne, Eloundou et al.), l'impact salarial, la pression réglementaire Nitaqat et les signaux de demande WEF.`,
-        },
+  const tFr = getScoreTrend(params.slug, occ.composite);
+  const trendWordFr = tFr.direction === "up" ? "augmenté" : tFr.direction === "down" ? "diminué" : "resté stable";
+  const frenchQuestions = [
+    {
+      "@type": "Question" as const,
+      name: `Quel est le risque d'automatisation IA pour ${nameFr} en Arabie Saoudite ?`,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: `${nameFr} a un score de risque d'automatisation IA de ${occ.composite}/100 en Arabie Saoudite selon SHIFT Observatory. Ce score combine la probabilité d'automatisation (Frey & Osborne, Eloundou et al.), l'impact salarial, la pression réglementaire Nitaqat et les signaux de demande WEF.`,
       },
-      {
-        "@type": "Question",
-        name: `Quel est le salaire d'un(e) ${nameFr} en Arabie Saoudite ?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Les salaires de ${nameFr} en Arabie Saoudite varient de ${fmt(occ.salary_entry_sar)} SAR/mois (débutant) à ${fmt(occ.salary_senior_sar)} SAR/mois (senior), avec une médiane de ${fmt(occ.salary_median_sar)} SAR/mois. Tous les salaires en Arabie Saoudite sont exonérés d'impôts.`,
-        },
+    },
+    {
+      "@type": "Question" as const,
+      name: `Quel est le salaire d'un(e) ${nameFr} en Arabie Saoudite ?`,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: `Les salaires de ${nameFr} en Arabie Saoudite varient de ${fmt(occ.salary_entry_sar)} SAR/mois (débutant) à ${fmt(occ.salary_senior_sar)} SAR/mois (senior), avec une médiane de ${fmt(occ.salary_median_sar)} SAR/mois. Tous les salaires en Arabie Saoudite sont exonérés d'impôts.`,
       },
-      {
-        "@type": "Question",
-        name: `L'IA va-t-elle remplacer les ${nameFr} en Arabie Saoudite ?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            occ.composite >= 70
-              ? `${nameFr} fait face à un risque très élevé de remplacement par l'IA (${occ.composite}/100). La combinaison de tâches numériques routinières et de prise de décision structurée rend ce métier très vulnérable à l'automatisation.`
-              : occ.composite >= 45
-                ? `${nameFr} fait face à un risque modéré à élevé (${occ.composite}/100). Certaines tâches sont automatisables, mais le jugement humain et la créativité offrent une protection partielle.`
-                : `${nameFr} a un risque relativement faible de remplacement par l'IA (${occ.composite}/100). La présence physique, l'intelligence émotionnelle et le jugement non routinier créent de solides défenses contre l'automatisation.`,
-        },
+    },
+    {
+      "@type": "Question" as const,
+      name: `Le risque IA pour ${nameFr} en Arabie Saoudite augmente-t-il ou diminue-t-il ?`,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: `Le score de risque d'automatisation IA de ${nameFr} a ${trendWordFr}, passant de ${tFr.previousScore}/100 à ${occ.composite}/100 entre le T4-2025 et le T1-2026 (${tFr.delta > 0 ? "+" : ""}${tFr.delta} points). SHIFT Observatory met à jour les scores trimestriellement en utilisant les dernières données GOSI, les projections du WEF et la recherche académique.`,
       },
-      (() => {
-        const t = getScoreTrend(params.slug, occ.composite);
-        const trendWord = t.direction === "up" ? "augmenté" : t.direction === "down" ? "diminué" : "resté stable";
-        return {
-          "@type": "Question" as const,
-          name: `Le risque IA pour ${nameFr} en Arabie Saoudite augmente-t-il ou diminue-t-il ?`,
-          acceptedAnswer: {
-            "@type": "Answer" as const,
-            text: `Le score de risque d'automatisation IA de ${nameFr} a ${trendWord}, passant de ${t.previousScore}/100 à ${occ.composite}/100 entre le T4-2025 et le T1-2026 (${t.delta > 0 ? "+" : ""}${t.delta} points). SHIFT Observatory met à jour les scores trimestriellement en utilisant les dernières données GOSI, les projections du WEF et la recherche académique.`,
-          },
-        };
-      })(),
-    ],
-  };
+    },
+  ];
+
+  // Merge EN + FR questions into a single FAQPage (Google rejects duplicate FAQPage types)
+  faqSchema.mainEntity = [...faqSchema.mainEntity, ...frenchQuestions];
 
   /* ---- Occupation structured data ---- */
   const occupationSchema = {
@@ -265,10 +248,6 @@ export default function JobPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaFr) }}
       />
       <script
         type="application/ld+json"
