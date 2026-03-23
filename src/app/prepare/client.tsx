@@ -362,6 +362,30 @@ export default function PrepareClient() {
               </button>
             </div>
 
+            {/* Cross-links */}
+            <div className="mt-8 border-t border-gray-800 pt-6">
+              <h3 className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-3">
+                {t.links?.exploreMore || "Explore More"}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <a href="/relocate" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  {t.links?.relocationCalculator || "Relocation Calculator"}
+                </a>
+                <a href="/career" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  {t.links?.careerRecommender || "Career Recommender"}
+                </a>
+                <a href="/job/registered-nurses" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  Registered Nurses — AI Risk
+                </a>
+                <a href="/job/software-developers" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  Software Developers — AI Risk
+                </a>
+                <a href="/job/civil-engineers" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  Civil Engineers — AI Risk
+                </a>
+              </div>
+            </div>
+
             {/* Email gate modal */}
             <EmailGateModal
               open={showEmailModal}

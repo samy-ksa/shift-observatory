@@ -765,6 +765,18 @@ export interface RelocateStrings {
   items: string;
 }
 
+export interface LinksStrings {
+  exploreMore: string;
+  relatedOccupations: string;
+  relocationCalculator: string;
+  relocationCalcDesc: string;
+  checklistDepart: string;
+  checklistDesc: string;
+  careerRecommender: string;
+  careerDesc: string;
+  compareShift: string;
+}
+
 export interface Dictionary {
   nav: NavStrings;
   hero: HeroStrings;
@@ -794,4 +806,5 @@ export interface Dictionary {
   relocate: RelocateStrings;
   match: MatchStrings;
   prepare: PrepareStrings;
+  links: LinksStrings;
 }

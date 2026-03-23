@@ -739,4 +739,15 @@ export const en: Dictionary = {
     timelineArrival: "First week",
     timelineFirstMonth: "First month",
   },
+  links: {
+    exploreMore: "Explore More",
+    relatedOccupations: "Related Occupations",
+    relocationCalculator: "Relocation Calculator",
+    relocationCalcDesc: "Compare cost of living across 17 cities",
+    checklistDepart: "Departure Checklist",
+    checklistDesc: "Personalized pre-departure steps",
+    careerRecommender: "Career Recommender",
+    careerDesc: "Find AI-safe career transitions",
+    compareShift: "Compare SHIFT",
+  },
 };

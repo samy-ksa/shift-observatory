@@ -739,4 +739,15 @@ export const ar: Dictionary = {
     timelineArrival: "الأسبوع الأول",
     timelineFirstMonth: "الشهر الأول",
   },
+  links: {
+    exploreMore: "اكتشف المزيد",
+    relatedOccupations: "مهن مشابهة",
+    relocationCalculator: "حاسبة الانتقال",
+    relocationCalcDesc: "قارن تكلفة المعيشة في 17 مدينة",
+    checklistDepart: "قائمة التجهيز",
+    checklistDesc: "خطوات مخصصة قبل السفر",
+    careerRecommender: "توصية المسار المهني",
+    careerDesc: "اعثر على انتقالات مهنية آمنة من الذكاء الاصطناعي",
+    compareShift: "قارن SHIFT",
+  },
 };

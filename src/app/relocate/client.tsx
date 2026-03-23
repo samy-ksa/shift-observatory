@@ -1144,6 +1144,22 @@ export default function RelocateClient({
                 return r.shareText.replace("{origin}", originN).replace("{saudi}", saudiN).replace("{amount}", fmtN(result.tax_savings_sar));
               })()}
             />
+
+            {/* Internal links */}
+            <div className="mt-6 border-t border-gray-800 pt-4">
+              <h3 className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-3">
+                {t.links?.exploreMore || "Explore More"}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <a href="/prepare" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  {t.links?.checklistDepart || "Departure Checklist"}
+                </a>
+                <a href="/career" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                  {t.links?.careerRecommender || "Career Recommender"}
+                </a>
+              </div>
+            </div>
+
             <button onClick={handleReset} className="w-full md:w-auto px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
           </div>
 
