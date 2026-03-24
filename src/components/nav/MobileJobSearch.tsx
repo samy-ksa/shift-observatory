@@ -114,8 +114,9 @@ export default function MobileJobSearch() {
             <button
               onClick={() => setOpen(false)}
               className="px-4 py-3.5 text-gray-400 hover:text-white shrink-0"
+              aria-label="Close search"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>

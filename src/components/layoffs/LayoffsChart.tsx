@@ -275,7 +275,7 @@ export default function LayoffsSection() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-2xl p-4 md:p-6 card-glow"
         >
-          <div className="h-[350px] md:h-[400px]">
+          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly AI-related layoffs in 2024 and 2025">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}

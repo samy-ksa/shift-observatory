@@ -141,6 +141,8 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto"
         style={{ maxHeight: "550px" }}
+        role="img"
+        aria-label="Interactive map of Saudi Arabia showing AI automation risk by region"
       >
         {/* Dark background */}
         <rect width="730" height="600" fill="transparent" />

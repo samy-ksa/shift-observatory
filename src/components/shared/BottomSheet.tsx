@@ -33,7 +33,7 @@ export default function BottomSheet({ open, onClose, title, children }: BottomSh
       {/* Sheet */}
       <div className="absolute bottom-0 inset-x-0 bg-bg-card border-t border-white/10 rounded-t-xl max-h-[60vh] flex flex-col animate-slide-up">
         {/* Drag handle */}
-        <div className="flex justify-center py-3 flex-shrink-0" onClick={onClose}>
+        <div className="flex justify-center py-3 flex-shrink-0" onClick={onClose} role="button" aria-label="Drag handle">
           <div className="w-10 h-1 rounded-full bg-gray-600" />
         </div>
         {title && (

@@ -11,7 +11,6 @@ import {
   riskLabel,
   riskLabelAr,
   riskLabelFr,
-  riskColor,
   riskBg,
   wefTrendLabel,
   wefTrendLabelAr,
@@ -60,7 +59,7 @@ function ScoreGauge({ score }: { score: number }) {
 
   return (
     <div className="relative w-36 h-36 flex-shrink-0">
-      <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
+      <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90" role="img" aria-label={`AI automation risk score: ${score} out of 100`}>
         <circle
           cx="60"
           cy="60"
@@ -110,7 +109,7 @@ function InlineBar({ value, max = 100 }: { value: number; max?: number }) {
           : "bg-green-500";
 
   return (
-    <div className="flex items-center gap-3 flex-1">
+    <div className="flex items-center gap-3 flex-1" role="meter" aria-valuenow={value} aria-valuemin={0} aria-valuemax={max} aria-label={`Score: ${value} out of ${max}`}>
       <div className="flex-1 h-2 bg-gray-800 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full ${color} transition-all duration-500`}
@@ -601,40 +600,40 @@ export default function JobPageClient({
           <ShareBlock occ={occ} />
         </section>
 
-        {/* ── Related occupations ── */}
-        <section className="border-t border-gray-800 pt-6">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            {jp.relatedTitle}
+        {/* ── Explore More ── */}
+        <div className="mt-8 border-t border-gray-800 pt-6">
+          <h3 className="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-4">
+            {t.links.exploreMore}
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {related.map((r) => (
-              <Link
-                key={r.name_en}
-                href={`/job/${toSlug(r.name_en)}`}
-                className="block bg-[#0D1117] border border-gray-800 rounded-lg p-4 hover:border-cyan-500/40 transition-colors group"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <a href="/relocate" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+              <div className="text-white text-sm font-medium">{t.links.relocationCalculator}</div>
+              <div className="text-gray-500 text-xs mt-1">{t.links.relocationCalcDesc}</div>
+            </a>
+            <a href="/prepare" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+              <div className="text-white text-sm font-medium">{t.links.checklistDepart}</div>
+              <div className="text-gray-500 text-xs mt-1">{t.links.checklistDesc}</div>
+            </a>
+            <a href="/career" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+              <div className="text-white text-sm font-medium">{t.links.careerRecommender}</div>
+              <div className="text-gray-500 text-xs mt-1">{t.links.careerDesc}</div>
+            </a>
+          </div>
+
+          {/* Related occupations */}
+          <h4 className="text-sm text-gray-400 mt-6 mb-3">{t.links.relatedOccupations}</h4>
+          <div className="flex flex-wrap gap-2">
+            {related.slice(0, 5).map((job) => (
+              <a
+                key={toSlug(job.name_en)}
+                href={`/job/${toSlug(job.name_en)}`}
+                className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 hover:border-cyan-400/30 transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <div className="min-w-0 flex-1">
-                    <div className="text-sm font-medium text-white truncate group-hover:text-cyan-400 transition-colors">
-                      {lang === "ar" ? r.name_ar : lang === "fr" ? r.name_fr : r.name_en}
-                    </div>
-                    <div
-                      className="text-xs text-gray-500 truncate mt-0.5"
-                      dir={lang === "ar" ? "ltr" : "rtl"}
-                    >
-                      {lang === "ar" ? r.name_en : r.name_ar}
-                    </div>
-                  </div>
-                  <span
-                    className={`ml-3 text-lg font-mono font-bold ${riskColor(r.composite)}`}
-                  >
-                    {r.composite}
-                  </span>
-                </div>
-              </Link>
+                {lang === "ar" ? job.name_ar : lang === "fr" ? (job.name_fr || job.name_en) : job.name_en} — {job.composite}/100
+              </a>
             ))}
           </div>
-        </section>
+        </div>
 
         {/* ── Compare CTA ── */}
         <section className="border-t border-gray-800 pt-6 pb-12 text-center">

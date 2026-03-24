@@ -106,7 +106,7 @@ export default function LangToggle() {
             ))}
             <JobsDropdown />
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+          <div className="bg-white/5 border border-white/10 rounded-full px-4 py-1.5" role="group" aria-label="Switch language">
             <LangSelector size="sm" />
           </div>
         </div>
@@ -131,13 +131,13 @@ export default function LangToggle() {
             className="min-h-12 min-w-12 flex items-center justify-center text-text-muted bg-gray-800/50 rounded-lg"
             aria-label="Open menu"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
           </button>
-          <div className="bg-white/5 border border-white/10 rounded-full px-3 py-1">
+          <div className="bg-white/5 border border-white/10 rounded-full px-3 py-1" role="group" aria-label="Switch language">
             <LangSelector size="xs" />
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function LangToggle() {
               className="min-h-12 min-w-12 flex items-center justify-center text-text-muted"
               aria-label="Close menu"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>

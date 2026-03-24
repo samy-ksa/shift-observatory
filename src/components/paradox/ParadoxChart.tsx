@@ -245,7 +245,7 @@ export default function ParadoxChart() {
             viewport={{ once: true }}
             className="bg-bg-card rounded-2xl p-4 md:p-6 card-glow mb-8"
           >
-            <div className="h-[500px] md:h-[550px]">
+            <div className="h-[500px] md:h-[550px]" role="img" aria-label="Bar chart showing Vision 2030 job creation targets by sector">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={chartData}
@@ -304,7 +304,7 @@ export default function ParadoxChart() {
             <h3 className="text-lg font-bold text-text-primary mb-4">
               {t.v2030.tabs.timeline}
             </h3>
-            <div className="h-[400px]">
+            <div className="h-[400px]" role="img" aria-label="Area chart showing projected jobs created vs jobs exposed to AI from 2024 to 2030">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={timelineData}

@@ -1,37 +1,23 @@
 import type { Metadata } from "next";
-import { getServerLang } from "@/lib/server-lang";
 import PrepareClient from "./client";
 
 const SITE = "https://www.ksashiftobservatory.online";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const lang = getServerLang();
-
-  const titles = {
-    en: "Saudi Arabia Pre-Departure Checklist: Complete Guide by Country (2026) | SHIFT",
-    fr: "Checklist pré-départ Arabie Saoudite : guide complet par pays (2026) | SHIFT",
-    ar: "قائمة التحقق قبل السفر للسعودية: دليل شامل حسب البلد (2026) | SHIFT",
-  };
-
-  const descriptions = {
-    en: "Personalized pre-departure checklist for Saudi Arabia. Visa, diplomas, certifications (SCFHS, SCE, SOCPA), housing, banking — by country of origin and profession.",
-    fr: "Checklist personnalisée pour s'expatrier en Arabie Saoudite. Visa, diplômes, certifications (SCFHS, SCE, SOCPA), logement, banque — par pays d'origine et métier.",
-    ar: "قائمة تحقق مخصصة قبل السفر للمملكة العربية السعودية. تأشيرة، شهادات، ترخيص مهني، سكن، بنك — حسب بلد المنشأ والمهنة.",
-  };
-
-  return {
-    title: titles[lang],
-    description: descriptions[lang],
-    alternates: { canonical: `${SITE}/prepare` },
-    openGraph: {
-      title: titles[lang],
-      description: descriptions[lang],
-      url: `${SITE}/prepare`,
-      siteName: "SHIFT Observatory",
-      type: "website",
-    },
-  };
-}
+// Static metadata — no cookies() call, enables SSG
+export const metadata: Metadata = {
+  title: "Saudi Arabia Pre-Departure Checklist: Complete Guide by Country (2026) | SHIFT",
+  description:
+    "Personalized pre-departure checklist for Saudi Arabia. Visa, diplomas, certifications (SCFHS, SCE, SOCPA), housing, banking — by country of origin and profession.",
+  alternates: { canonical: `${SITE}/prepare` },
+  openGraph: {
+    title: "Saudi Arabia Pre-Departure Checklist: Complete Guide by Country (2026) | SHIFT",
+    description:
+      "Personalized pre-departure checklist for Saudi Arabia. Visa, diplomas, certifications.",
+    url: `${SITE}/prepare`,
+    siteName: "SHIFT Observatory",
+    type: "website",
+  },
+};
 
 const FAQ_JSON_LD = {
   "@context": "https://schema.org",

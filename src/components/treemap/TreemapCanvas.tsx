@@ -114,6 +114,8 @@ export default function TreemapCanvas({ data, lang, onHover }: TreemapCanvasProp
         width={dims.width}
         height={dims.height}
         className="block absolute inset-0"
+        role="img"
+        aria-label="Treemap showing occupations sized by employment and colored by AI exposure risk"
       >
         {/* Sector backgrounds */}
         {sectorNodes.map((s) => {

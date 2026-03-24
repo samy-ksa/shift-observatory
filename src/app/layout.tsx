@@ -6,7 +6,8 @@ import CookieConsent from "@/components/legal/CookieConsent";
 import HtmlLangSync from "@/components/HtmlLangSync";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { getServerLang } from "@/lib/server-lang";
+// getServerLang removed from layout — calling cookies() here forced ALL pages to be dynamic (SSR)
+// Language is now handled client-side by HtmlLangSync + LangProvider
 import BackToTop from "@/components/shared/BackToTop";
 
 const SITE_URL = "https://www.ksashiftobservatory.online";
@@ -38,26 +39,14 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const lang = getServerLang();
-
-  const titles: Record<string, string> = {
-    en: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
-    fr: "Risque IA sur l'emploi en Arabie Saoudite : 237 métiers analysés (2026) | Gratuit",
-    ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة (2026) | مجاني",
-  };
-
-  const descriptions: Record<string, string> = {
-    en: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
-    fr: "Quels métiers l'IA va-t-elle remplacer en Arabie Saoudite ? Dashboard gratuit évaluant 237 métiers. Salaires, Nitaqat, reconversions, calculateur d'expatriation. Mis à jour T1 2026.",
-    ar: "أي الوظائف ستحل محلها الذكاء الاصطناعي في السعودية؟ لوحة تحكم مجانية تقيّم 237 وظيفة. بيانات الرواتب، نطاقات، تحولات مهنية. محدّث الربع الأول 2026.",
-  };
-
-  return {
-    metadataBase: new URL(SITE_URL),
-    applicationName: "SHIFT Observatory",
-    title: titles[lang],
-    description: descriptions[lang],
+// NOTE: Layout metadata uses English defaults for SSG compatibility.
+// Client-side language switching is handled by HtmlLangSync + LangProvider.
+// Page-specific metadata can override these defaults.
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  applicationName: "SHIFT Observatory",
+  title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
     keywords: [
       // English
       "AI risk Saudi Arabia",
@@ -94,28 +83,26 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       type: "website",
-      locale: lang === "fr" ? "fr_FR" : lang === "ar" ? "ar_SA" : "en_US",
-      alternateLocale: ["ar_SA", "fr_FR", "en_US"].filter(
-        (l) => l !== (lang === "fr" ? "fr_FR" : lang === "ar" ? "ar_SA" : "en_US")
-      ),
+      locale: "en_US",
+      alternateLocale: ["ar_SA", "fr_FR"],
       url: SITE_URL,
       siteName: "SHIFT Observatory",
-      title: titles[lang],
-      description: descriptions[lang],
+      title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations.",
       images: [
         {
           url: `${SITE_URL}/api/og`,
           width: 1200,
           height: 630,
-          alt: titles[lang],
+          alt: "SHIFT Observatory - AI Job Risk Dashboard for Saudi Arabia",
           type: "image/png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[lang],
-      description: descriptions[lang],
+      title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026)",
+      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations.",
       images: [`${SITE_URL}/api/og`],
       creator: "@saudi_builder",
     },
@@ -135,8 +122,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "msvalidate.01": ["D019A5F91131CCB7B436CFF1C9BF1A32"],
       },
     },
-  };
-}
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -217,12 +203,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const lang = getServerLang();
-
+  // Default to "en" for SSG — HtmlLangSync updates lang/dir client-side from cookie
   return (
     <html
-      lang={lang}
-      dir={lang === "ar" ? "rtl" : "ltr"}
+      lang="en"
+      dir="ltr"
       className={`${dmSans.variable} ${jetBrainsMono.variable} ${ibmPlexArabic.variable} scroll-smooth`}
     >
       <head>

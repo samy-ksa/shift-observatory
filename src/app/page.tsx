@@ -128,31 +128,14 @@ const SmartPopup = dynamic(
 /* ------------------------------------------------------------------ */
 /* Metadata                                                            */
 /* ------------------------------------------------------------------ */
-import { getServerLang } from "@/lib/server-lang";
-
-export async function generateMetadata(): Promise<Metadata> {
-  const lang = getServerLang();
-
-  const titles: Record<string, string> = {
-    en: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
-    fr: "Risque IA sur l'emploi en Arabie Saoudite : 237 métiers analysés (2026) | Gratuit",
-    ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة (2026) | مجاني",
-  };
-
-  const descriptions: Record<string, string> = {
-    en: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
-    fr: "Quels métiers l'IA va-t-elle remplacer en Arabie Saoudite ? Dashboard gratuit évaluant 237 métiers. Salaires, Nitaqat, reconversions, calculateur d'expatriation. Mis à jour T1 2026.",
-    ar: "أي الوظائف ستحل محلها الذكاء الاصطناعي في السعودية؟ لوحة تحكم مجانية تقيّم 237 وظيفة. بيانات الرواتب، نطاقات، تحولات مهنية. محدّث الربع الأول 2026.",
-  };
-
-  return {
-    title: titles[lang] ?? titles.en,
-    description: descriptions[lang] ?? descriptions.en,
-    alternates: {
-      canonical: "https://www.ksashiftobservatory.online",
-    },
-  };
-}
+// Static metadata — no cookies() call, enables SSG
+export const metadata: Metadata = {
+  title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
+  alternates: {
+    canonical: "https://www.ksashiftobservatory.online",
+  },
+};
 
 /* ------------------------------------------------------------------ */
 /* Page                                                                */
@@ -217,6 +200,31 @@ export default function Home() {
 
       {/* About the Author */}
       <AboutAuthor />
+
+      {/* Compare SHIFT - SEO internal links */}
+      <section className="px-4 py-8 max-w-6xl mx-auto">
+        <h4 className="text-xs uppercase tracking-widest text-gray-500 mb-3">Compare SHIFT</h4>
+        <div className="flex flex-wrap gap-2">
+          {[
+            { slug: "numbeo", label: "Numbeo" },
+            { slug: "glassdoor", label: "Glassdoor" },
+            { slug: "linkedin-salary", label: "LinkedIn Salary" },
+            { slug: "payscale", label: "PayScale" },
+            { slug: "mercer", label: "Mercer" },
+            { slug: "bayt", label: "Bayt.com" },
+            { slug: "jadarat", label: "Jadarat" },
+            { slug: "lightcast", label: "Lightcast" },
+          ].map(({ slug, label }) => (
+            <a
+              key={slug}
+              href={`/vs/${slug}`}
+              className="text-xs text-gray-500 hover:text-cyan-400 transition-colors"
+            >
+              vs {label}
+            </a>
+          ))}
+        </div>
+      </section>
 
       {/* Footer */}
       <Footer />

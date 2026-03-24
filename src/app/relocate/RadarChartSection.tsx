@@ -61,7 +61,7 @@ export default function RadarChartSection({
       <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-4">
         {r.radarTitle}
       </h3>
-      <div className="w-full h-[250px] md:h-[400px]">
+      <div className="w-full h-[250px] md:h-[400px]" role="img" aria-label="Radar chart comparing cost of living between origin country and Saudi Arabia">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
             <PolarGrid stroke="#374151" />

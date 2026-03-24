@@ -39,7 +39,7 @@ export default function AIExposureTreemap() {
   );
 
   return (
-    <section id="sectors" className="pt-16 pb-20 px-4 md:px-8 max-w-[1800px] mx-auto" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <section id="sectors" className="pt-16 pb-20 px-4 md:px-8 max-w-[1800px] mx-auto" dir={lang === "ar" ? "rtl" : "ltr"} aria-label="Treemap visualization of occupations by AI risk category in Saudi Arabia">
       <SectionHeader
         title={t.treemap.title}
         subtitle={t.treemap.subtitle}

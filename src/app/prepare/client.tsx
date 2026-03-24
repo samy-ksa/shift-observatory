@@ -283,6 +283,9 @@ export default function PrepareClient() {
                                 {/* Checkbox */}
                                 <button
                                   onClick={() => toggleCheck(item.id)}
+                                  aria-label={`${isChecked ? "Uncheck" : "Check"}: ${item.description_en}`}
+                                  role="checkbox"
+                                  aria-checked={isChecked}
                                   className={`mt-0.5 w-5 h-5 min-w-5 rounded border flex items-center justify-center transition-colors ${
                                     isChecked
                                       ? "bg-cyan-500 border-cyan-500 text-black"
