@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    optimizePackageImports: ["recharts", "framer-motion", "lucide-react"],
+  },
+
   async redirects() {
     return [
       {

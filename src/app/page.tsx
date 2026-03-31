@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import {
+  LazyLayoffsChart,
+  LazyParadoxChart,
+} from "@/components/shared/LazyRecharts";
 
 /* ------------------------------------------------------------------ */
 /* Above the fold — loaded immediately                                 */
@@ -14,6 +18,13 @@ import CareerCTA from "@/components/career/CareerCTA";
 /* Below the fold — lazy loaded with ssr: false                        */
 /* Recharts (335KB), Treemap (322KB), Map, etc. only load on scroll    */
 /* ------------------------------------------------------------------ */
+/*
+ * LayoffsChart and ParadoxChart use LazyRecharts (IntersectionObserver +
+ * import() inside useEffect) instead of next/dynamic(). This prevents the
+ * 346 KiB Recharts chunk from appearing as <script async> in the initial
+ * HTML — it only downloads when those sections scroll into view.
+ */
+
 const KSAMapSection = dynamic(
   () => import("@/components/risk-map/KSAMapSection"),
   {
@@ -46,14 +57,6 @@ const EmployerTable = dynamic(
   },
 );
 
-const LayoffsSection = dynamic(
-  () => import("@/components/layoffs/LayoffsChart"),
-  {
-    loading: () => <div className="h-80 animate-pulse bg-gray-900/50 rounded-lg mx-4" />,
-    ssr: false,
-  },
-);
-
 const ShiftPulse = dynamic(
   () => import("@/components/pulse/ShiftPulse"),
   {
@@ -64,14 +67,6 @@ const ShiftPulse = dynamic(
 
 const WEFDualList = dynamic(
   () => import("@/components/wef/WEFDualList"),
-  {
-    loading: () => <div className="h-80 animate-pulse bg-gray-900/50 rounded-lg mx-4" />,
-    ssr: false,
-  },
-);
-
-const ParadoxChart = dynamic(
-  () => import("@/components/paradox/ParadoxChart"),
   {
     loading: () => <div className="h-80 animate-pulse bg-gray-900/50 rounded-lg mx-4" />,
     ssr: false,
@@ -187,8 +182,8 @@ export default function Home() {
       <EmployerTable />
       <div className="section-divider" />
 
-      {/* Section 7: Layoffs */}
-      <LayoffsSection />
+      {/* Section 7: Layoffs — IntersectionObserver defers Recharts until in view */}
+      <LazyLayoffsChart />
 
       {/* Section 8: SHIFT Pulse */}
       <ShiftPulse />
@@ -197,8 +192,8 @@ export default function Home() {
       {/* Section 9: WEF Growth vs Decline */}
       <WEFDualList />
 
-      {/* V2030 Paradox */}
-      <ParadoxChart />
+      {/* V2030 Paradox — IntersectionObserver defers Recharts until in view */}
+      <LazyParadoxChart />
       <div className="section-divider" />
 
       {/* Giga-Projects */}
