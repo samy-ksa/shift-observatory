@@ -147,7 +147,7 @@ export default function Home() {
       {/* SSR SEO content — visible to crawlers, above the fold for keyword relevance */}
       <section className="max-w-5xl mx-auto px-4 pt-6 pb-2">
         <h1 className="sr-only">AI Job Risk in Saudi Arabia — SHIFT Observatory Dashboard</h1>
-        <p className="text-sm text-gray-500 leading-relaxed max-w-3xl">
+        <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
           SHIFT Observatory scores the AI automation risk of 237 occupations in Saudi Arabia.
           Explore salary benchmarks, Nitaqat saudization bands, career transition paths, and
           cost-of-living comparisons for expats relocating to Riyadh, Jeddah, or Dammam.
@@ -224,7 +224,7 @@ export default function Home() {
           Built for expats evaluating Saudi Arabia as a career destination under Vision 2030.
         </p>
 
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           Popular AI Risk Analyses
         </h3>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -236,23 +236,23 @@ export default function Home() {
             { slug: "civil-engineers", label: "Civil Engineers" },
             { slug: "teachers", label: "Teachers" },
           ].map(({ slug, label }) => (
-            <a key={slug} href={`/job/${slug}`} className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">
+            <a key={slug} href={`/job/${slug}`} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
               {label}
             </a>
           ))}
         </div>
 
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           Tools
         </h3>
         <div className="flex flex-wrap gap-3 mb-4">
-          <a href="/relocate" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Cost of Living Calculator</a>
-          <a href="/career" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Career Transition Recommender</a>
-          <a href="/profile" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">AI Risk Profile</a>
-          <a href="/prepare" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Pre-Departure Checklist</a>
+          <a href="/relocate" className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">Cost of Living Calculator</a>
+          <a href="/career" className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">Career Transition Recommender</a>
+          <a href="/profile" className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">AI Risk Profile</a>
+          <a href="/prepare" className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">Pre-Departure Checklist</a>
         </div>
 
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           Compare SHIFT
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -269,7 +269,7 @@ export default function Home() {
             <a
               key={slug}
               href={`/vs/${slug}`}
-              className="text-xs text-gray-500 hover:text-cyan-400 transition-colors"
+              className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
             >
               vs {label}
             </a>

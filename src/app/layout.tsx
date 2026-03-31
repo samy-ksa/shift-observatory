@@ -122,6 +122,11 @@ export const metadata: Metadata = {
         "msvalidate.01": ["D019A5F91131CCB7B436CFF1C9BF1A32"],
       },
     },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
 };
 
 const jsonLd = {
