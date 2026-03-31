@@ -37,10 +37,24 @@ export async function generateMetadata({
   }
 
   const rl = riskLabel(occ.composite);
+  const median = fmt(occ.salary_median_sar ?? occ.salary_entry_sar);
+  const entry = fmt(occ.salary_entry_sar);
+  const senior = fmt(occ.salary_senior_sar);
+  const emp = occ.employment_est ? fmt(occ.employment_est) : null;
+  const saudiPct = occ.employment_saudi_pct != null ? Math.round(occ.employment_saudi_pct) : null;
+
+  let description: string;
+  if (occ.composite >= 70) {
+    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (Very High). Salary ${entry}–${senior} SAR/month${saudiPct != null ? `, ${saudiPct}% Saudi workforce` : ""}. Nitaqat status, career transitions & 2026 outlook.`;
+  } else if (occ.composite >= 45) {
+    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (High). Salary ${entry}–${senior} SAR/month.${emp ? ` ${emp} workers in KSA.` : ""} Free analysis with Nitaqat & expat eligibility.`;
+  } else {
+    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (Low–Moderate). Salary ${entry}–${senior} SAR/month.${emp ? ` ${emp} workers.` : ""} Strong expat demand — Nitaqat status & visa guide.`;
+  }
 
   return {
-    title: `${occ.name_en}: ${occ.composite}% AI Risk in Saudi Arabia (2026 Data) | SHIFT`,
-    description: `Is your job safe? ${occ.name_en} face ${occ.composite}% AI automation risk in Saudi Arabia. Check salary (${occ.salary_entry_sar.toLocaleString()}-${occ.salary_senior_sar.toLocaleString()} SAR), Nitaqat status, career transitions. Free analysis.`,
+    title: `${occ.name_en} Jobs Saudi Arabia 2026 — AI Risk ${occ.composite}/100, Salary ${median} SAR | SHIFT`,
+    description,
     keywords: [
       occ.name_en,
       occ.name_ar,
