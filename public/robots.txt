@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /api/
 Allow: /api/og
 Allow: /api/v1/
-Allow: /api/sitemap
+Disallow: /api/
 
 User-agent: GPTBot
 Allow: /
@@ -27,4 +26,3 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://www.ksashiftobservatory.online/sitemap.xml
-Sitemap: https://www.ksashiftobservatory.online/api/sitemap
