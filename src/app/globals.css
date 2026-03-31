@@ -117,18 +117,15 @@ html, body {
   transform: translateY(-1px) scale(1.005);
 }
 
-/* Hero number pulse glow */
+/* Hero number pulse glow — opacity-only animation (GPU compositable, no repaint) */
 @keyframes heroGlow {
-  0%, 100% {
-    text-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
-  }
-  50% {
-    text-shadow: 0 0 40px rgba(34, 211, 238, 0.6), 0 0 80px rgba(34, 211, 238, 0.3), 0 0 120px rgba(34, 211, 238, 0.1);
-  }
+  0%, 100% { opacity: 0.85; }
+  50%       { opacity: 1; }
 }
 
 .text-glow-neon {
-  text-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
+  /* filter: drop-shadow() is GPU-composited; text-shadow is not — never animate text-shadow */
+  filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.4)) drop-shadow(0 0 50px rgba(34, 211, 238, 0.2));
   animation: heroGlow 3s ease-in-out infinite;
 }
 
