@@ -114,6 +114,12 @@ export default function ShiftPulse() {
               </div>
             ))}
           </div>
+          {/* SkeletonTabBar — min-height prevents CLS when tabs load */}
+          <div className="flex gap-1 bg-bg-secondary rounded-lg p-1 mb-6 overflow-x-auto" style={{ minHeight: "44px" }}>
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex-1 h-8 bg-white/5 rounded-md animate-pulse" />
+            ))}
+          </div>
           <div className="bg-bg-card rounded-lg p-4 border border-white/5 animate-pulse">
             <div className="h-40 bg-white/5 rounded" />
           </div>
@@ -156,8 +162,8 @@ export default function ShiftPulse() {
 
         {/* KPI Cards */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
         >
@@ -195,21 +201,30 @@ export default function ShiftPulse() {
         </motion.div>
 
         {/* Tab Bar */}
-        <div className="flex gap-1 bg-bg-secondary rounded-lg p-1 mb-6 overflow-x-auto mobile-scroll">
-          {tabs.map((t) => (
+        <div
+          role="tablist"
+          aria-label="SHIFT Pulse sections"
+          className="flex gap-1 bg-bg-secondary rounded-lg p-1 mb-6 overflow-x-auto mobile-scroll"
+          style={{ minHeight: "44px" }}
+        >
+          {tabs.map((tabItem) => (
             <button
-              key={t.key}
-              onClick={() => { setTab(t.key); setShowAll(false); }}
+              key={tabItem.key}
+              role="tab"
+              aria-selected={tab === tabItem.key}
+              aria-controls={`pulse-panel-${tabItem.key}`}
+              id={`pulse-tab-${tabItem.key}`}
+              onClick={() => { setTab(tabItem.key); setShowAll(false); }}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap flex items-center gap-2 ${
-                tab === t.key
+                tab === tabItem.key
                   ? "bg-white/10 text-text-primary"
                   : "text-text-muted hover:text-text-primary"
               }`}
             >
-              {t.label}
-              {t.count > 0 && (
+              {tabItem.label}
+              {tabItem.count > 0 && (
                 <span className="bg-white/10 text-xs px-1.5 py-0.5 rounded-full">
-                  {t.count}
+                  {tabItem.count}
                 </span>
               )}
             </button>
@@ -219,8 +234,11 @@ export default function ShiftPulse() {
         {/* Tab Content */}
         <motion.div
           key={tab}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          role="tabpanel"
+          id={`pulse-panel-${tab}`}
+          aria-labelledby={`pulse-tab-${tab}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
           {tab === "global" && (
@@ -239,9 +257,9 @@ export default function ShiftPulse() {
                           <span className="text-lg">
                             {COUNTRY_FLAGS[item.country] || "--"}
                           </span>
-                          <h4 className="font-semibold text-text-primary">
+                          <h3 className="font-semibold text-text-primary text-base">
                             {item.company}
-                          </h4>
+                          </h3>
                         </div>
                         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${aiRoleColor(item.ai_role)}`}>
                           {aiRoleLabel(item.ai_role)}
@@ -299,9 +317,9 @@ export default function ShiftPulse() {
                           <span className="text-lg">
                             {COUNTRY_FLAGS[item.country] || "--"}
                           </span>
-                          <h4 className="font-semibold text-text-primary">
+                          <h3 className="font-semibold text-text-primary text-base">
                             {item.company}
-                          </h4>
+                          </h3>
                         </div>
                         <span className="text-xs bg-accent-gold/20 text-accent-gold px-2 py-0.5 rounded-full font-medium">
                           {(() => {
@@ -362,9 +380,9 @@ export default function ShiftPulse() {
                       className="bg-bg-card rounded-lg p-4 border border-white/5 hover:border-white/10 transition-colors"
                     >
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-semibold text-text-primary flex-1">
+                        <h3 className="font-semibold text-text-primary flex-1 text-base">
                           {item.title}
-                        </h4>
+                        </h3>
                         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${lang === "ar" ? "mr-2" : "ml-2"} ${policyTypeColor(item.type)}`}>
                           {item.type.toUpperCase()}
                         </span>
@@ -409,9 +427,9 @@ export default function ShiftPulse() {
                       className="bg-bg-card rounded-lg p-4 border border-white/5 hover:border-white/10 transition-colors"
                     >
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-semibold text-text-primary flex-1">
+                        <h3 className="font-semibold text-text-primary flex-1 text-base">
                           {item.headline}
-                        </h4>
+                        </h3>
                         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${lang === "ar" ? "mr-2" : "ml-2"} whitespace-nowrap ${relevanceColor(item.relevance_to_ksa)}`}>
                           {item.relevance_to_ksa === "direct"
                             ? t.pulse.relevanceDirect
@@ -446,14 +464,9 @@ export default function ShiftPulse() {
         </motion.div>
 
         {/* Source attribution */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-8"
-        >
+        <div className="text-center mt-8">
           <p className="text-xs text-text-muted">{t.pulse.source}</p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

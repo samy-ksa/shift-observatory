@@ -45,7 +45,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "SHIFT Observatory",
-  title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
+  title: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
   description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
     keywords: [
       // English
@@ -87,8 +87,8 @@ export const metadata: Metadata = {
       alternateLocale: ["ar_SA", "fr_FR"],
       url: SITE_URL,
       siteName: "SHIFT Observatory",
-      title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
-      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations.",
+      title: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
+      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations with salary data and Nitaqat analysis.",
       images: [
         {
           url: `${SITE_URL}/api/og`,
@@ -101,8 +101,8 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026)",
-      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations.",
+      title: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
+      description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations with salary data and Nitaqat analysis.",
       images: [`${SITE_URL}/api/og`],
       creator: "@saudi_builder",
     },
@@ -211,10 +211,6 @@ export default function RootLayout({
       className={`${dmSans.variable} ${jetBrainsMono.variable} ${ibmPlexArabic.variable} scroll-smooth`}
     >
       <head>
-        {/* Preconnect to Google Fonts CDN for Arabic font subset */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
         <link rel="alternate" hrefLang="en" href={SITE_URL} />
         <link rel="alternate" hrefLang="fr" href={SITE_URL} />
         <link rel="alternate" hrefLang="ar" href={SITE_URL} />

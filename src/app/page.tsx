@@ -130,8 +130,8 @@ const SmartPopup = dynamic(
 /* ------------------------------------------------------------------ */
 // Static metadata — no cookies() call, enables SSG
 export const metadata: Metadata = {
-  title: "AI Job Risk in Saudi Arabia: 237 Jobs Scored (2026) | Free Dashboard",
-  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
+  title: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
+  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations with salary data, Nitaqat status, career transitions and relocation calculator.",
   alternates: {
     canonical: "https://www.ksashiftobservatory.online",
   },
@@ -148,6 +148,18 @@ export default function Home() {
 
       {/* Sticky Navigation */}
       <StickyNav />
+
+      {/* SSR SEO content — visible to crawlers, above the fold for keyword relevance */}
+      <section className="max-w-5xl mx-auto px-4 pt-6 pb-2">
+        <h1 className="sr-only">AI Job Risk in Saudi Arabia — SHIFT Observatory Dashboard</h1>
+        <p className="text-sm text-gray-500 leading-relaxed max-w-3xl">
+          SHIFT Observatory scores the AI automation risk of 237 occupations in Saudi Arabia.
+          Explore salary benchmarks, Nitaqat saudization bands, career transition paths, and
+          cost-of-living comparisons for expats relocating to Riyadh, Jeddah, or Dammam.
+          Data from GOSI Q4-2024, WEF Future of Jobs 2025, and Frey &amp; Osborne methodology.
+          Free, trilingual (English, French, Arabic), updated Q1 2026.
+        </p>
+      </section>
 
       {/* Section 1: Hero */}
       <HeroCounter />
@@ -201,9 +213,53 @@ export default function Home() {
       {/* About the Author */}
       <AboutAuthor />
 
-      {/* Compare SHIFT - SEO internal links */}
-      <section className="px-4 py-8 max-w-6xl mx-auto">
-        <h4 className="text-xs uppercase tracking-widest text-gray-500 mb-3">Compare SHIFT</h4>
+      {/* SSR SEO footer content — crawlable text for keyword density + internal links */}
+      <section className="px-4 py-8 max-w-5xl mx-auto border-t border-gray-800/50">
+        <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          About SHIFT Observatory
+        </h2>
+        <p className="text-xs text-gray-600 leading-relaxed mb-4">
+          SHIFT Observatory is a free AI job risk dashboard for Saudi Arabia.
+          It scores 237 occupations using the Frey and Osborne automation probability framework
+          combined with LLM exposure data from Eloundou et al. Each occupation includes entry,
+          median, and senior salary benchmarks in SAR, Nitaqat saudization band classification,
+          WEF growth trends, and career transition recommendations.
+          The relocation calculator compares cost of living across 17 origin cities including
+          Paris, London, Cairo, Mumbai, and Manila against Riyadh, Jeddah, and Dammam.
+          Built for expats evaluating Saudi Arabia as a career destination under Vision 2030.
+        </p>
+
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          Popular AI Risk Analyses
+        </h3>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {[
+            { slug: "data-entry-keyers", label: "Data Entry Keyers" },
+            { slug: "registered-nurses", label: "Registered Nurses" },
+            { slug: "software-developers", label: "Software Developers" },
+            { slug: "accountants-auditors", label: "Accountants" },
+            { slug: "civil-engineers", label: "Civil Engineers" },
+            { slug: "teachers", label: "Teachers" },
+          ].map(({ slug, label }) => (
+            <a key={slug} href={`/job/${slug}`} className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">
+              {label}
+            </a>
+          ))}
+        </div>
+
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          Tools
+        </h3>
+        <div className="flex flex-wrap gap-3 mb-4">
+          <a href="/relocate" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Cost of Living Calculator</a>
+          <a href="/career" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Career Transition Recommender</a>
+          <a href="/profile" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">AI Risk Profile</a>
+          <a href="/prepare" className="text-xs text-gray-500 hover:text-cyan-400 transition-colors">Pre-Departure Checklist</a>
+        </div>
+
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          Compare SHIFT
+        </h3>
         <div className="flex flex-wrap gap-2">
           {[
             { slug: "numbeo", label: "Numbeo" },

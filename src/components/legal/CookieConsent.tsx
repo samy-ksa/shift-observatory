@@ -59,7 +59,7 @@ export default function CookieConsent() {
                 href="/cookies"
                 className="text-accent-primary hover:underline whitespace-nowrap"
               >
-                {isAr ? "اقرأ المزيد" : lang === "fr" ? "En savoir plus" : "Learn more"}
+                {isAr ? "اقرأ المزيد عن سياسة ملفات تعريف الارتباط" : lang === "fr" ? "En savoir plus sur notre politique de cookies" : "Learn more about our cookie policy"}
               </Link>
             </p>
           </div>

@@ -253,7 +253,11 @@ export default function EmployerTable() {
 
         {/* Filter */}
         <div className="flex flex-wrap items-center gap-4 mb-6">
+          <label htmlFor="employer-sector-filter" className="sr-only">
+            Filter by sector
+          </label>
           <select
+            id="employer-sector-filter"
             value={filterSector}
             onChange={(e) => setFilterSector(e.target.value)}
             className="bg-bg-card border border-white/10 rounded-lg px-4 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-primary/50"
