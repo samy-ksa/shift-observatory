@@ -1,13 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/lib/i18n/context";
+
+const PAGE_LINKS = [
+  { label: "Career", href: "/career" },
+  { label: "Relocate", href: "/relocate" },
+  { label: "Checklist", href: "/prepare" },
+  { label: "Jobs", href: "/job/software-developers" },
+];
 
 export default function StickyNav() {
   const { t } = useLang();
   const [visible, setVisible] = useState(false);
   const [active, setActive] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close mobile menu on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
 
   const navItems = [
     { label: t.nav.riskTool, href: "#calculator" },
@@ -74,20 +95,67 @@ export default function StickyNav() {
             <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-bg-primary/95 to-transparent z-10 pointer-events-none md:hidden" />
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-bg-primary/95 to-transparent z-10 pointer-events-none md:hidden" />
-            <div className="px-4 flex items-center h-8 md:h-10 gap-0.5 overflow-x-auto mobile-scroll">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollTo(item.href)}
-                  className={`px-2.5 md:px-3 py-1.5 text-[10px] md:text-[11px] font-medium uppercase tracking-wider transition-all flex-shrink-0 ${
-                    active === item.href
-                      ? "text-cyan-400 border-b-2 border-cyan-400"
-                      : "text-text-muted hover:text-text-secondary"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+            <div className="px-4 flex items-center h-8 md:h-10 gap-0.5">
+              {/* Section scroll links — scrollable on mobile */}
+              <div className="flex items-center gap-0.5 overflow-x-auto mobile-scroll flex-1 min-w-0">
+                {navItems.map((item) => (
+                  <button
+                    key={item.href}
+                    onClick={() => scrollTo(item.href)}
+                    className={`px-2.5 md:px-3 py-1.5 text-[10px] md:text-[11px] font-medium uppercase tracking-wider transition-all flex-shrink-0 ${
+                      active === item.href
+                        ? "text-cyan-400 border-b-2 border-cyan-400"
+                        : "text-text-muted hover:text-text-secondary"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Page links — desktop: inline pipes, mobile: ≡ dropdown */}
+              <div className="flex-shrink-0 flex items-center pl-2 border-l border-white/10">
+                {/* Desktop */}
+                <div className="hidden md:flex items-center gap-0">
+                  {PAGE_LINKS.map((link, i) => (
+                    <span key={link.href} className="flex items-center">
+                      {i > 0 && <span className="text-white/20 text-[10px] px-1">|</span>}
+                      <Link
+                        href={link.href}
+                        className="text-[10px] text-gray-400 hover:text-cyan-400 transition-colors whitespace-nowrap px-1"
+                      >
+                        {link.label}
+                      </Link>
+                    </span>
+                  ))}
+                </div>
+
+                {/* Mobile: hamburger dropdown */}
+                <div className="md:hidden relative" ref={menuRef}>
+                  <button
+                    onClick={() => setMenuOpen((o) => !o)}
+                    className="px-2 py-1 text-[11px] text-gray-400 hover:text-cyan-400 transition-colors"
+                    aria-label="Pages menu"
+                    aria-expanded={menuOpen}
+                  >
+                    ≡ Pages
+                  </button>
+                  {menuOpen && (
+                    <div className="absolute right-0 top-full mt-1 bg-bg-card border border-white/10 rounded-lg shadow-xl overflow-hidden z-50 min-w-[130px]">
+                      {PAGE_LINKS.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block px-4 py-2.5 text-xs text-gray-400 hover:text-cyan-400 hover:bg-white/5 transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </motion.nav>

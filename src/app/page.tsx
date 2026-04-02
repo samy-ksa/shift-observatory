@@ -144,10 +144,10 @@ export default function Home() {
       {/* Sticky Navigation */}
       <StickyNav />
 
-      {/* SSR SEO content — visible to crawlers, above the fold for keyword relevance */}
-      <section className="max-w-5xl mx-auto px-4 pt-6 pb-2">
-        <h1 className="sr-only">AI Job Risk in Saudi Arabia — SHIFT Observatory Dashboard</h1>
-        <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
+      {/* SSR SEO content — screen-reader + crawler only, invisible at runtime */}
+      <section className="sr-only">
+        <h1>AI Job Risk in Saudi Arabia — SHIFT Observatory Dashboard</h1>
+        <p>
           SHIFT Observatory scores the AI automation risk of 237 occupations in Saudi Arabia.
           Explore salary benchmarks, Nitaqat saudization bands, career transition paths, and
           cost-of-living comparisons for expats relocating to Riyadh, Jeddah, or Dammam.
