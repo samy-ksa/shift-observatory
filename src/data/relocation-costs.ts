@@ -147,6 +147,7 @@ export const COST_CATEGORIES: Record<
 
 /* ------------------------------------------------------------------ */
 /* Exchange rates: 1 local currency unit → SAR                         */
+/* Last updated: 2026-04-01 — sources: Yahoo Finance, exchange-rates.org */
 /* ------------------------------------------------------------------ */
 
 export const CITY_EXCHANGE_RATES: Record<CityId, number> = {
@@ -155,10 +156,10 @@ export const CITY_EXCHANGE_RATES: Record<CityId, number> = {
   dammam: 1, // SAR
   makkah: 1, // SAR
   madinah: 1, // SAR
-  paris: 4.05, // EUR → SAR
-  london: 4.72, // GBP → SAR
-  new_york: 3.75, // USD → SAR
-  sydney: 2.42, // AUD → SAR
+  paris: 4.40, // EUR → SAR (+4.8% YTD 2026, EUR strong vs SAR)
+  london: 5.04, // GBP → SAR (avg 2026 = 5.05, stable)
+  new_york: 3.75, // USD → SAR (pegged, unchanged)
+  sydney: 2.42, // AUD → SAR (no reliable Apr 2026 source — unchanged)
   dubai: 1.02, // AED → SAR
   cairo: 0.075, // EGP → SAR
   mumbai: 0.045, // INR → SAR
@@ -1340,10 +1341,10 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 2.52,
       beirut: 0.9,
     },
-    trend: "up",
-    trendPct: 4.2,
-    note_en: "Key indicator amid Middle East tensions",
-    note_ar: "مؤشر رئيسي في ظل التوترات الإقليمية",
+    trend: "stable",
+    trendPct: 0,
+    note_en: "Aramco official price — unchanged since Jan 2026. 95-octane: 2.33 SAR/L. 91-octane: 2.18 SAR/L.",
+    note_ar: "سعر أرامكو الرسمي — ثابت منذ يناير 2026. بنزين 95: 2.33 ريال/لتر. بنزين 91: 2.18 ريال/لتر.",
   },
   {
     id: "diesel_1l",
@@ -1372,8 +1373,10 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 2.1,
       beirut: 0.85,
     },
-    trend: "up",
-    trendPct: 3.0,
+    trend: "stable",
+    trendPct: 0,
+    note_en: "Aramco official — 1.79 SAR/L since Jan 2026 (up from 1.66 SAR in 2025).",
+    note_ar: "سعر أرامكو الرسمي — 1.79 ريال/لتر منذ يناير 2026 (ارتفع من 1.66 ريال في 2025).",
   },
   {
     id: "uber_10km",
@@ -1816,9 +1819,9 @@ export const COST_DATABASE: CostItem[] = [
     category: "housing",
     subcategory: "rent",
     prices: {
-      riyadh: 4400,
-      jeddah: 2100,
-      dammam: 1500,
+      riyadh: 4400,   // freeze in effect — unchanged Q1 2026
+      jeddah: 2200,   // +4.8% YoY (no regulatory cap)
+      dammam: 1550,   // +3.3% YoY
       makkah: 2500,
       madinah: 2000,
       paris: 1379,
@@ -1834,8 +1837,10 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 912,
       beirut: 772,
     },
-    trend: "up",
-    trendPct: 6.0,
+    trend: "stable",
+    trendPct: 1.0,
+    note_en: "Riyadh: 5-year rent freeze active (Real Estate Authority, Dec 2025). Landlords must give 365-day notice for non-renewal. Jeddah: +3-6% YoY, no cap. Dammam: +2-4% YoY.",
+    note_fr: "Riyad : gel des loyers 5 ans en vigueur (Autorité Immobilière, déc. 2025). Djeddah : +3-6% par an, pas de plafond réglementaire.",
   },
   {
     id: "rent_3br_center",
@@ -1846,9 +1851,9 @@ export const COST_DATABASE: CostItem[] = [
     category: "housing",
     subcategory: "rent",
     prices: {
-      riyadh: 7800,
-      jeddah: 3800,
-      dammam: 2800,
+      riyadh: 7950,   // +1.9% (freeze allows max 2% YoY)
+      jeddah: 3980,   // +4.7% YoY
+      dammam: 2890,   // +3.2% YoY
       makkah: 4500,
       madinah: 3800,
       paris: 3014,
@@ -1864,8 +1869,8 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 1424,
       beirut: 2026,
     },
-    trend: "up",
-    trendPct: 4.0,
+    trend: "stable",
+    trendPct: 2.5,
   },
   {
     id: "rent_compound",
@@ -1875,11 +1880,11 @@ export const COST_DATABASE: CostItem[] = [
     unit: "monthly",
     category: "housing",
     subcategory: "compound",
-    prices: { riyadh: 18000, jeddah: 12000, dammam: 9000, makkah: 10000, madinah: 8500 },
+    prices: { riyadh: 18500, jeddah: 12550, dammam: 9280, makkah: 10000, madinah: 8500 },
     trend: "up",
-    trendPct: 8.0,
-    note_en: "High demand from RHQ relocations",
-    note_ar: "طلب مرتفع من انتقال المقرات الإقليمية",
+    trendPct: 3.5,
+    note_en: "High demand from RHQ relocations continues. Compounds largely exempt from residential rent freeze — market rate applies.",
+    note_ar: "طلب مرتفع مستمر من انتقال المقرات الإقليمية. الكمباوندات مستثناة إلى حد كبير من تجميد الإيجارات السكنية.",
   },
 
   // ============ EDUCATION ============

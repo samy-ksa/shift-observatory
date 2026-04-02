@@ -1,5 +1,5 @@
 {
-  "report_date": "2026-03-18",
+  "report_date": "2026-04-02",
   "period": "last 7 days",
   "global_layoffs": [
     {
@@ -166,6 +166,61 @@
       "description": "Latin America's largest e-commerce company cuts roles as AI automates logistics and seller operations.",
       "source": "RationalFX",
       "date": "2026-03-01"
+    },
+    {
+      "company": "Oracle",
+      "country": "US",
+      "sector": "Enterprise Software / Cloud",
+      "jobs_cut": 30000,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Largest layoff in Oracle's 48-year history. 20,000–30,000 employees terminated via email with no notice. Cuts fund $156B AI infrastructure buildout. TD Cowen: expected to free $8–10B cash flow. AI coding tools cited by co-CEO Sicilia: 'smaller engineering teams deliver more complete solutions'.",
+      "source": "Bloomberg / CNBC / TNW",
+      "date": "2026-03-31"
+    },
+    {
+      "company": "Atlassian",
+      "country": "AU",
+      "sector": "Developer Tools / SaaS",
+      "jobs_cut": 1600,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "10% of global workforce. CEO Cannon-Brookes: cuts needed to 'self-fund AI investment and enterprise sales in the AI era'.",
+      "source": "TechCrunch",
+      "date": "2026-03-16"
+    },
+    {
+      "company": "Meta",
+      "country": "US",
+      "sector": "Tech / Social Media",
+      "jobs_cut": 700,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Reality Labs, social media and recruiting teams affected. Part of ongoing AI-driven efficiency push alongside $135B AI capex planned for 2026.",
+      "source": "New York Times",
+      "date": "2026-03-25"
+    },
+    {
+      "company": "Broadcom",
+      "country": "US",
+      "sector": "Semiconductors",
+      "jobs_cut": 1200,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Post-VMware integration cuts in sales and support. Company pivoting resources toward AI networking portfolio.",
+      "source": "Layoffs.fyi",
+      "date": "2026-03-29"
+    },
+    {
+      "company": "Eidos Montréal",
+      "country": "CA",
+      "sector": "Gaming",
+      "jobs_cut": 124,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Deus Ex studio restructuring. Part of broader gaming industry consolidation amid AI content generation pressure.",
+      "source": "IGN",
+      "date": "2026-03-30"
     }
   ],
   "gulf_mena_automation": [
@@ -335,15 +390,22 @@
       "relevance_to_ksa": "direct",
       "source": "Microsoft EMEA",
       "date": "2026-02-15"
+    },
+    {
+      "headline": "Morgan Stanley: AI Could Eliminate 200,000 European Banking Jobs",
+      "description": "Morgan Stanley report warns European banks may cut 200,000 roles via AI automation over 5 years, freeing €15B in cost savings. Gulf banking sector watches closely: GCC banks, including Saudi lenders, face comparable efficiency pressure as SAMA accelerates fintech licensing.",
+      "relevance_to_ksa": "indirect",
+      "source": "Morgan Stanley Research / Bloomberg",
+      "date": "2026-03-20"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 45363,
-    "total_ai_cited_this_week": 9238,
-    "total_gulf_events_this_week": 8,
-    "ytd_global_tech_layoffs": 45363,
-    "ytd_ai_cited_us": 9238,
+    "total_global_layoffs_this_week": 78987,
+    "total_ai_cited_this_week": 42862,
+    "total_gulf_events_this_week": 9,
+    "ytd_global_tech_layoffs": 78987,
+    "ytd_ai_cited_us": 42862,
     "trend_vs_last_week": "up",
-    "notable_trend": "Saudi Arabia designates 2026 as Year of AI while global tech layoffs hit 45,000 with 20% explicitly AI-driven. Meta reportedly planning 20% workforce cut (~15,800 jobs)."
+    "notable_trend": "Q1 2026 closes with 79,000+ tech layoffs, led by Oracle's 30,000-job cut — largest in its 48-year history. AI explicitly cited in 54% of cuts. Atlassian (1,600), Broadcom (1,200) and Meta (700) add to the wave. Morgan Stanley warns 200,000 European banking jobs at risk from AI."
   }
 }
