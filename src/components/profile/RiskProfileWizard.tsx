@@ -7,6 +7,7 @@ import { scoreToCategory, riskBg, riskColor } from "@/lib/utils";
 import { exportProfilePDF } from "@/lib/export-pdf";
 import data from "@/data/master.json";
 import type { Occupation, HRDFProgram } from "@/lib/data-types";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 import LangToggle from "@/components/ui/LangToggle";
 
 const BASE_URL =
@@ -505,8 +506,8 @@ export default function RiskProfileWizard() {
                     </div>
                     <p className="text-text-muted text-xs mt-2 text-center">
                       {lang === "ar"
-                        ? "اكتب مسمى وظيفتك — سنجد أقرب تطابق من 146 مهنة مسجّلة"
-                        : "Type your job title — we'll find the closest match from 146 scored occupations"}
+                        ? `اكتب مسمى وظيفتك — سنجد أقرب تطابق من ${OCCUPATION_COUNT} مهنة مسجّلة`
+                        : `Type your job title — we'll find the closest match from ${OCCUPATION_COUNT} scored occupations`}
                     </p>
                   </div>
 
@@ -571,8 +572,8 @@ export default function RiskProfileWizard() {
                         className="text-accent-primary text-sm font-medium hover:underline underline-offset-2"
                       >
                         {lang === "ar"
-                          ? "تصفح جميع المهن الـ 146 ←"
-                          : "Browse all 146 occupations →"}
+                          ? `تصفح جميع المهن الـ ${OCCUPATION_COUNT} ←`
+                          : `Browse all ${OCCUPATION_COUNT} occupations →`}
                       </button>
                     </motion.div>
                   )}
@@ -586,7 +587,7 @@ export default function RiskProfileWizard() {
                     >
                       <div className="px-4 py-2.5 border-b border-white/5 flex justify-between items-center">
                         <span className="text-xs text-text-muted font-medium">
-                          {lang === "ar" ? "جميع المهن (146)" : lang === "fr" ? "Tous les métiers (146)" : "All occupations (146)"}
+                          {lang === "ar" ? `جميع المهن (${OCCUPATION_COUNT})` : lang === "fr" ? `Tous les métiers (${OCCUPATION_COUNT})` : `All occupations (${OCCUPATION_COUNT})`}
                         </span>
                         <button
                           onClick={() => setShowBrowseAll(false)}

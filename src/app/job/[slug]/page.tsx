@@ -14,7 +14,7 @@ import JobPageClient from "./client";
 import { getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
-/* SSG: generate all 146 pages at build time                           */
+/* SSG: generate all 237 pages at build time                           */
 /* ------------------------------------------------------------------ */
 export async function generateStaticParams() {
   return getAllOccupations().map((o) => ({ slug: toSlug(o.name_en) }));

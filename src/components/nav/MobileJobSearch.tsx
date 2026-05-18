@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/i18n/context";
-import { getAllOccupations, toSlug, type Occupation } from "@/lib/occupations";
+import { getAllOccupations, toSlug, type Occupation, OCCUPATION_COUNT } from "@/lib/occupations";
 import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
 
@@ -35,7 +35,7 @@ export default function MobileJobSearch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
-  const placeholder = lang === "ar" ? "ابحث عن وظيفتك بين 146 مهنة..." : lang === "fr" ? "Trouvez votre emploi parmi 146 métiers..." : "Find your job among 146 occupations...";
+  const placeholder = lang === "ar" ? `ابحث عن وظيفتك بين ${OCCUPATION_COUNT} مهنة...` : lang === "fr" ? `Trouvez votre emploi parmi ${OCCUPATION_COUNT} métiers...` : `Find your job among ${OCCUPATION_COUNT} occupations...`;
 
   const allOccs = useMemo(
     () => getAllOccupations().sort((a, b) => (b.employment_est || 0) - (a.employment_est || 0)),
