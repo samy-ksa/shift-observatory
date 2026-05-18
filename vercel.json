@@ -5,6 +5,15 @@
       "has": [{ "type": "host", "value": "ksashiftobservatory.online" }],
       "destination": "https://www.ksashiftobservatory.online/:path*",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.ksashiftobservatory.online" },
+        { "type": "header", "key": "x-forwarded-proto", "value": "http" }
+      ],
+      "destination": "https://www.ksashiftobservatory.online/:path*",
+      "permanent": true
     }
   ],
   "crons": [
