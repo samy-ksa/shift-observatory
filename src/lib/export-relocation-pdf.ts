@@ -4,7 +4,7 @@ import type { RelocationResult } from "@/data/relocation-data";
 import { CITY_EXCHANGE_RATES } from "@/data/relocation-costs";
 import type { CityId } from "@/data/relocation-costs";
 import { getScoreTrend } from "@/data/score-history";
-import { toSlug } from "@/lib/occupations";
+import { toSlug, OCCUPATION_COUNT } from "@/lib/occupations";
 
 /* ================================================================== */
 /* Types                                                               */
@@ -883,8 +883,8 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
   y += 4;
 
   const methodText = isFr
-    ? "SHIFT Observatory est une plateforme gratuite et open-source d'intelligence sur le march\u00e9 du travail en Arabie Saoudite. Elle analyse le risque d'automatisation par l'IA de 146 m\u00e9tiers et fournit des outils de comparaison de co\u00fbt de la vie pour les expatri\u00e9s."
-    : "SHIFT Observatory is a free, open-source labor market intelligence platform for Saudi Arabia. It analyzes AI automation risk for 146 occupations and provides cost-of-living comparison tools for expatriates.";
+    ? `SHIFT Observatory est une plateforme gratuite et open-source d'intelligence sur le march\u00e9 du travail en Arabie Saoudite. Elle analyse le risque d'automatisation par l'IA de ${OCCUPATION_COUNT} m\u00e9tiers et fournit des outils de comparaison de co\u00fbt de la vie pour les expatri\u00e9s.`
+    : `SHIFT Observatory is a free, open-source labor market intelligence platform for Saudi Arabia. It analyzes AI automation risk for ${OCCUPATION_COUNT} occupations and provides cost-of-living comparison tools for expatriates.`;
   y = bodyText(methodText, y);
   y += 6;
 

@@ -1,4 +1,5 @@
 import type { Dictionary } from "./types";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 
 export const ar: Dictionary = {
   nav: {
@@ -387,7 +388,7 @@ export const ar: Dictionary = {
   },
   treemap: {
     title: "التعرض للذكاء الاصطناعي في سوق العمل السعودي",
-    subtitle: "146 مهنة — المساحة = حجم التوظيف، اللون = درجة التعرض للذكاء الاصطناعي",
+    subtitle: `${OCCUPATION_COUNT} مهنة — المساحة = حجم التوظيف، اللون = درجة التعرض للذكاء الاصطناعي`,
     totalWorkforce: "إجمالي القوى العاملة",
     avgExposure: "متوسط التعرض المرجح",
     byExposureTier: "الوظائف حسب التعرض",
@@ -477,10 +478,10 @@ export const ar: Dictionary = {
     vsQuarter: "مقارنة بالربع الرابع 2025",
   },
   explore: {
-    title: "دليل المهن — 146 مهنة",
+    title: `دليل المهن — ${OCCUPATION_COUNT} مهنة`,
     searchPlaceholder: "ابحث بالمسمى الوظيفي (عربي أو إنجليزي)...",
     popular: "الأكثر بحثاً",
-    showAll: "عرض جميع المهن (146)",
+    showAll: `عرض جميع المهن (${OCCUPATION_COUNT})`,
     showLess: "عرض أقل",
     noResults: "لا توجد نتائج",
     clearSearch: "مسح البحث",
@@ -493,8 +494,8 @@ export const ar: Dictionary = {
   },
   jobsDropdown: {
     nav: "المهن",
-    searchPlaceholder: "ابحث في 146 مهنة...",
-    browseAll: "\u2190 تصفح جميع المهن (146)",
+    searchPlaceholder: `ابحث في ${OCCUPATION_COUNT} مهنة...`,
+    browseAll: `← تصفح جميع المهن (${OCCUPATION_COUNT})`,
     filterAll: "الكل",
     filterHigh: "مخاطر عالية",
     filterModerate: "متوسط",
@@ -546,7 +547,7 @@ export const ar: Dictionary = {
     myOccupation: "مهنتي",
     selectOccupation: "اكتب المسمى الوظيفي...",
     noMatch: "لا يوجد تطابق.",
-    browseAll: "تصفح كل 146 مهنة",
+    browseAll: `تصفح كل ${OCCUPATION_COUNT} مهنة`,
     matchedTo: "مطابقة:",
     customJob: "مهنة مخصصة — بيانات SHIFT غير متوفرة",
     family: "العائلة",

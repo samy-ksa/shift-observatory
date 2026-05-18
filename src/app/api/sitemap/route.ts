@@ -21,7 +21,7 @@ const STATIC_PAGES: Array<{
 ];
 
 /**
- * Generate dynamic pages: 146 job pages + 75 relocation city pairs.
+ * Generate dynamic pages: 237 job pages + 75 relocation city pairs.
  */
 async function getDynamicPages(): Promise<
   Array<{ path: string; priority: number; changefreq: string; lastmod?: string }>

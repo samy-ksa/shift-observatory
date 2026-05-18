@@ -75,7 +75,7 @@ const data = masterData as {
   };
 };
 
-/** All 146 occupations sorted by composite descending */
+/** All occupations sorted by composite descending */
 export function getAllOccupations(): Occupation[] {
   const all = [
     ...data.occupations.high_risk,
@@ -83,6 +83,10 @@ export function getAllOccupations(): Occupation[] {
   ];
   return all.sort((a, b) => b.composite - a.composite);
 }
+
+/** Single source of truth for the occupation count. Derived from data,
+ *  never hardcoded, so UI copy can never diverge from master.json again. */
+export const OCCUPATION_COUNT: number = getAllOccupations().length;
 
 /** Find by slug — returns undefined if not found */
 export function findBySlug(slug: string): Occupation | undefined {

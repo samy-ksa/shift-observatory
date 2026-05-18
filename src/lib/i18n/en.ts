@@ -1,4 +1,5 @@
 import type { Dictionary } from "./types";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 
 export const en: Dictionary = {
   nav: {
@@ -387,7 +388,7 @@ export const en: Dictionary = {
   },
   treemap: {
     title: "AI Exposure of the KSA Job Market",
-    subtitle: "146 occupations — area = employment, color = AI exposure score",
+    subtitle: `${OCCUPATION_COUNT} occupations — area = employment, color = AI exposure score`,
     totalWorkforce: "Total Workforce",
     avgExposure: "Weighted Avg. Exposure",
     byExposureTier: "Jobs by Exposure",
@@ -477,10 +478,10 @@ export const en: Dictionary = {
     vsQuarter: "vs Q4-2025",
   },
   explore: {
-    title: "EXPLORE 146 OCCUPATIONS",
+    title: `EXPLORE ${OCCUPATION_COUNT} OCCUPATIONS`,
     searchPlaceholder: "Search by job title (EN or AR)...",
     popular: "Popular",
-    showAll: "Show all 146 occupations",
+    showAll: `Show all ${OCCUPATION_COUNT} occupations`,
     showLess: "Show less",
     noResults: "No results found",
     clearSearch: "Clear search",
@@ -493,8 +494,8 @@ export const en: Dictionary = {
   },
   jobsDropdown: {
     nav: "Jobs",
-    searchPlaceholder: "Search 146 occupations...",
-    browseAll: "Browse all 146 occupations \u2192",
+    searchPlaceholder: `Search ${OCCUPATION_COUNT} occupations...`,
+    browseAll: `Browse all ${OCCUPATION_COUNT} occupations \u2192`,
     filterAll: "All",
     filterHigh: "High Risk",
     filterModerate: "Moderate",
@@ -546,7 +547,7 @@ export const en: Dictionary = {
     myOccupation: "My occupation",
     selectOccupation: "Type your job title...",
     noMatch: "No exact match.",
-    browseAll: "Browse all 146 occupations",
+    browseAll: `Browse all ${OCCUPATION_COUNT} occupations`,
     matchedTo: "Matched to:",
     customJob: "Custom job — SHIFT salary/risk data not available",
     family: "Family",

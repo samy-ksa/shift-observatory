@@ -14,7 +14,7 @@ import JobPageClient from "./client";
 import { getScoreTrend } from "@/data/score-history";
 
 /* ------------------------------------------------------------------ */
-/* SSG: generate all 146 pages at build time                           */
+/* SSG: generate all 237 pages at build time                           */
 /* ------------------------------------------------------------------ */
 export async function generateStaticParams() {
   return getAllOccupations().map((o) => ({ slug: toSlug(o.name_en) }));
@@ -40,20 +40,78 @@ export async function generateMetadata({
   const median = fmt(occ.salary_median_sar ?? occ.salary_entry_sar);
   const entry = fmt(occ.salary_entry_sar);
   const senior = fmt(occ.salary_senior_sar);
-  const emp = occ.employment_est ? fmt(occ.employment_est) : null;
-  const saudiPct = occ.employment_saudi_pct != null ? Math.round(occ.employment_saudi_pct) : null;
 
+  const smartSlice = (s: string): string => {
+    let cut = 59;
+    if (/[\d,]/.test(s[cut - 1])) {
+      const lastSpace = s.lastIndexOf(" ", cut - 1);
+      cut = lastSpace > 0 ? lastSpace : cut;
+    }
+    const result = s.slice(0, cut).trimEnd().replace(/[:–—&/,]+$/, "").trimEnd();
+    return result + "…";
+  };
+
+  const firstFit = (...candidates: string[]): string => {
+    for (const t of candidates) {
+      if (t.length <= 60) return t;
+    }
+    return smartSlice(candidates[candidates.length - 1]);
+  };
+
+  const clampDesc = (d: string): string => {
+    if (d.length <= 158) return d;
+    const truncated = d.slice(0, 155);
+    const lastSpace = truncated.lastIndexOf(" ");
+    return (lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated) + "…";
+  };
+
+  const { name_en, composite } = occ;
+
+  let title: string;
   let description: string;
-  if (occ.composite >= 70) {
-    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (Very High). Salary ${entry}–${senior} SAR/month${saudiPct != null ? `, ${saudiPct}% Saudi workforce` : ""}. Nitaqat status, career transitions & 2026 outlook.`;
-  } else if (occ.composite >= 45) {
-    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (High). Salary ${entry}–${senior} SAR/month.${emp ? ` ${emp} workers in KSA.` : ""} Free analysis with Nitaqat & expat eligibility.`;
+
+  if (composite >= 70) {
+    title = firstFit(
+      `${name_en}: ${composite}/100 AI Risk in Saudi Arabia 2026`,
+      `${name_en}: ${composite}/100 AI Risk — Saudi Arabia`,
+      `${name_en}: ${composite}/100 AI Risk KSA`,
+      `${name_en}: High AI Risk in Saudi Arabia`,
+      `${name_en} — Saudi Arabia`,
+      `${name_en} — KSA`,
+    );
+    description = `${composite}/100 AI automation risk for ${name_en} in Saudi Arabia. Salary ${entry}–${senior} SAR/mo. See safer career paths & 2026 outlook — free, no signup.`;
+  } else if (composite >= 45) {
+    title = firstFit(
+      `${name_en} Saudi Arabia: ${composite}/100 AI Risk, ${median} SAR`,
+      `${name_en}: AI Risk ${composite}/100 · ${median} SAR/mo`,
+      `${name_en}: ${composite}/100 AI Risk, ${median} SAR`,
+      `${name_en} AI Risk ${composite}/100 KSA`,
+      `${name_en}: AI Risk & Salary, Saudi Arabia`,
+      `${name_en} — Saudi Arabia`,
+      `${name_en} — KSA`,
+    );
+    description = `${name_en} in Saudi Arabia: ${composite}/100 AI risk, ${entry}–${senior} SAR/mo (tax-free). Nitaqat status, expat eligibility & career transitions. Free.`;
   } else {
-    description = `${occ.name_en} in Saudi Arabia: ${occ.composite}/100 AI risk (Low–Moderate). Salary ${entry}–${senior} SAR/month.${emp ? ` ${emp} workers.` : ""} Strong expat demand — Nitaqat status & visa guide.`;
+    title = firstFit(
+      `${name_en} Salary Saudi Arabia 2026: ${entry}–${senior} SAR/mo`,
+      `${name_en} Salary Saudi Arabia: ${median} SAR/month`,
+      `${name_en} Salary in Saudi Arabia: ${median} SAR`,
+      `${name_en} Salary KSA: ${median} SAR/mo`,
+      `${name_en} Salary in Saudi Arabia (2026)`,
+      `${name_en} — Saudi Arabia`,
+      `${name_en} — KSA`,
+    );
+    description = `${name_en} in Saudi Arabia earns ${entry}–${senior} SAR/mo (tax-free). Low AI risk (${composite}/100). Nitaqat status, expat visa guide & demand outlook. Free.`;
+  }
+
+  if (occ.nitaqat_status === "reserved_saudi_only") {
+    description = clampDesc("Reserved for Saudi nationals. " + description);
+  } else {
+    description = clampDesc(description);
   }
 
   return {
-    title: `${occ.name_en} Jobs Saudi Arabia 2026 — AI Risk ${occ.composite}/100, Salary ${median} SAR | SHIFT`,
+    title,
     description,
     keywords: [
       occ.name_en,

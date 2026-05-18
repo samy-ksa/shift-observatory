@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import data from "@/data/master.json";
 import type { Occupation } from "@/lib/data-types";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 
 const allOccupations: Occupation[] = [
   ...(data.occupations.high_risk as Occupation[]),
@@ -52,7 +53,7 @@ export async function GET(req: NextRequest) {
   return NextResponse.json(
     {
       description:
-        "AI automation risk scores for 146 occupations in Saudi Arabia. Source: SHIFT Observatory (ksashiftobservatory.online). Data: GOSI Q4-2024, WEF 2025, HRSD Nitaqat. License: CC BY-SA 4.0.",
+        `AI automation risk scores for ${OCCUPATION_COUNT} occupations in Saudi Arabia. Source: SHIFT Observatory (ksashiftobservatory.online). Data: GOSI Q4-2024, WEF 2025, HRSD Nitaqat. License: CC BY-SA 4.0.`,
       count: filtered.length,
       data: filtered,
       meta,

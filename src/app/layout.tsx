@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // getServerLang removed from layout — calling cookies() here forced ALL pages to be dynamic (SSR)
 // Language is now handled client-side by HtmlLangSync + LangProvider
 import BackToTop from "@/components/shared/BackToTop";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 
 const SITE_URL = "https://www.ksashiftobservatory.online";
 
@@ -135,7 +136,7 @@ const jsonLd = {
   name: "SHIFT Observatory",
   url: SITE_URL,
   description:
-    "AI automation risk dashboard for 146 occupations in Saudi Arabia",
+    `AI automation risk dashboard for ${OCCUPATION_COUNT} occupations in Saudi Arabia`,
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   offers: {
@@ -155,7 +156,7 @@ const datasetLd = {
   "@type": "Dataset",
   name: "SHIFT Observatory - AI Automation Risk Scores for Saudi Arabia",
   description:
-    "Composite AI automation risk scores for 146 occupations in Saudi Arabia, combining GOSI employment data, WEF projections, Nitaqat regulations, and academic research.",
+    `Composite AI automation risk scores for ${OCCUPATION_COUNT} occupations in Saudi Arabia, combining GOSI employment data, WEF projections, Nitaqat regulations, and academic research.`,
   url: SITE_URL,
   license: "https://creativecommons.org/licenses/by-sa/4.0/",
   creator: {

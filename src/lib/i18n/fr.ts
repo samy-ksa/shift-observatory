@@ -1,4 +1,5 @@
 import type { Dictionary } from "./types";
+import { OCCUPATION_COUNT } from "@/lib/occupations";
 
 export const fr: Dictionary = {
   nav: {
@@ -371,7 +372,7 @@ export const fr: Dictionary = {
   },
   treemap: {
     title: "Exposition IA du marché de l'emploi saoudien",
-    subtitle: "146 métiers — superficie = emploi, couleur = score d'exposition IA",
+    subtitle: `${OCCUPATION_COUNT} métiers — superficie = emploi, couleur = score d'exposition IA`,
     totalWorkforce: "Main-d'œuvre totale",
     avgExposure: "Exposition moyenne pondérée",
     byExposureTier: "Emplois par exposition",
@@ -456,10 +457,10 @@ export const fr: Dictionary = {
     vsQuarter: "vs T4-2025",
   },
   explore: {
-    title: "EXPLORER 146 MÉTIERS",
+    title: `EXPLORER ${OCCUPATION_COUNT} MÉTIERS`,
     searchPlaceholder: "Rechercher par intitulé de poste (EN ou AR)...",
     popular: "Populaires",
-    showAll: "Afficher les 146 métiers",
+    showAll: `Afficher les ${OCCUPATION_COUNT} métiers`,
     showLess: "Réduire",
     noResults: "Aucun résultat trouvé",
     clearSearch: "Effacer la recherche",
@@ -472,8 +473,8 @@ export const fr: Dictionary = {
   },
   jobsDropdown: {
     nav: "Métiers",
-    searchPlaceholder: "Rechercher 146 métiers...",
-    browseAll: "Parcourir les 146 métiers →",
+    searchPlaceholder: `Rechercher ${OCCUPATION_COUNT} métiers...`,
+    browseAll: `Parcourir les ${OCCUPATION_COUNT} métiers →`,
     filterAll: "Tous",
     filterHigh: "Risque élevé",
     filterModerate: "Modéré",
@@ -523,7 +524,7 @@ export const fr: Dictionary = {
     myOccupation: "Mon métier",
     selectOccupation: "Rechercher un métier...",
     noMatch: "Aucune correspondance exacte.",
-    browseAll: "Parcourir les 146 métiers",
+    browseAll: `Parcourir les ${OCCUPATION_COUNT} métiers`,
     matchedTo: "Correspondance :",
     customJob: "Métier personnalisé — données SHIFT salaire/risque non disponibles",
     family: "Famille",
