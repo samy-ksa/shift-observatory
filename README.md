@@ -67,7 +67,7 @@ Next.js 14 · React · TypeScript · Tailwind CSS · Recharts · Remotion · Per
 GOSI/GASTAT Q4-2024 · WEF Future of Jobs 2025 · HRSD Nitaqat · McKinsey · Frey & Osborne (2017) · Eloundou et al. (2023) · layoffs.fyi · Challenger Gray & Christmas
 
 ## Author
-**Samy Aloulou** — French entrepreneur based in Riyadh, Saudi Arabia. CEO of Monitoring Force Gulf.
+**Samy Aloulou** — French entrepreneur based in Riyadh Saudi Arabia. CEO of Monitoring Force Gulf.
 samy@monitoringforcegulf.com
 
 ## License
