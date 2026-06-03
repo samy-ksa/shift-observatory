@@ -35,12 +35,27 @@ const LangContext = createContext<{
   dir: "ltr",
 });
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+export function LangProvider({
+  children,
+  initialLang,
+}: {
+  children: ReactNode;
+  /**
+   * Optional locked-in lang from the URL ([lang] segment).
+   * When provided, skip browser/localStorage detection — the URL is
+   * the source of truth. This is what the new /[lang]/* routes pass.
+   * Old routes (without prefix) call <LangProvider /> with no prop
+   * and get the legacy detection behavior.
+   */
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang ?? "en");
 
   useEffect(() => {
+    // Skip detection when the URL already pinned a lang
+    if (initialLang) return;
     setLangState(detectLang());
-  }, []);
+  }, [initialLang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);
