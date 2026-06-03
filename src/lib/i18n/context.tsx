@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { en } from "./en";
 import { ar } from "./ar";
 import { fr } from "./fr";
@@ -9,19 +9,6 @@ import type { Dictionary } from "./types";
 export type Lang = "en" | "fr" | "ar";
 
 const DICTIONARIES: Record<Lang, Dictionary> = { en, fr, ar };
-
-const STORAGE_KEY = "shift_lang";
-
-/** Detect preferred language from browser settings */
-function detectLang(): Lang {
-  if (typeof window === "undefined") return "en";
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "en" || stored === "fr" || stored === "ar") return stored;
-  const nav = navigator.language || "";
-  if (nav.startsWith("ar")) return "ar";
-  if (nav.startsWith("fr")) return "fr";
-  return "en";
-}
 
 const LangContext = createContext<{
   lang: Lang;
@@ -35,33 +22,30 @@ const LangContext = createContext<{
   dir: "ltr",
 });
 
+/**
+ * LangProvider — URL-driven after Phase 4 i18n migration.
+ *
+ * `initialLang` is REQUIRED and comes from the [lang] URL segment via
+ * src/app/[lang]/layout.tsx. The URL is the source of truth; this provider
+ * just exposes it to client components via the useLang() hook.
+ *
+ * setLang() is a no-op fallback for legacy callers — language changes happen
+ * through navigation (LangToggle pushes to /<newLang>/<path>), not state.
+ */
 export function LangProvider({
   children,
   initialLang,
 }: {
   children: ReactNode;
-  /**
-   * Optional locked-in lang from the URL ([lang] segment).
-   * When provided, skip browser/localStorage detection — the URL is
-   * the source of truth. This is what the new /[lang]/* routes pass.
-   * Old routes (without prefix) call <LangProvider /> with no prop
-   * and get the legacy detection behavior.
-   */
-  initialLang?: Lang;
+  initialLang: Lang;
 }) {
-  const [lang, setLangState] = useState<Lang>(initialLang ?? "en");
+  // State exists to satisfy the existing useLang() contract, but it's locked
+  // to the URL-provided value. Navigations remount the provider with a new
+  // initialLang, which re-initializes state.
+  const [lang] = useState<Lang>(initialLang);
 
-  useEffect(() => {
-    // Skip detection when the URL already pinned a lang
-    if (initialLang) return;
-    setLangState(detectLang());
-  }, [initialLang]);
-
-  const setLang = (l: Lang) => {
-    setLangState(l);
-    if (typeof window !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, l);
-    }
+  const setLang = () => {
+    // Legacy no-op. Real lang switching is done by LangToggle via router.push.
   };
 
   const t = DICTIONARIES[lang];
