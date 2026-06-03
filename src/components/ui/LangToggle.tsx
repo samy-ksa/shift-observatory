@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import JobsDropdown from "@/components/nav/JobsDropdown";
 import MobileJobSearch from "@/components/nav/MobileJobSearch";
+import { localizedHref, switchLang } from "@/lib/i18n/links";
 
 const LANG_OPTIONS: { code: Lang; label: string }[] = [
   { code: "en", label: "EN" },
@@ -15,7 +16,7 @@ const LANG_OPTIONS: { code: Lang; label: string }[] = [
 ];
 
 export default function LangToggle() {
-  const { lang, setLang, t } = useLang();
+  const { lang, t } = useLang();
   const pathname = usePathname();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,42 +26,41 @@ export default function LangToggle() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  /**
+   * Switch lang by navigating to the same page under the new locale.
+   * Phase 4 — URL is the source of truth; cookie is best-effort persistence.
+   */
+  const switchTo = (newLang: Lang) => {
+    const target = switchLang(pathname, newLang);
+    // Persist for next visit to "/" (handled by middleware)
+    document.cookie = `shift_lang=${newLang}; max-age=${60 * 60 * 24 * 365}; path=/; SameSite=Lax`;
+    router.push(target);
+  };
+
   const pages = [
     {
       href: "/",
-      label: lang === "ar" ? "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629" : lang === "fr" ? "Tableau de bord" : "Dashboard",
+      label: lang === "ar" ? "الرئيسية" : lang === "fr" ? "Tableau de bord" : "Dashboard",
     },
-    {
-      href: "/career",
-      label: t.career.navLabel,
-    },
-    {
-      href: "/profile",
-      label: t.profile.navLabel,
-    },
-    {
-      href: "/relocate",
-      label: t.relocate.navLabel,
-    },
-    {
-      href: "/prepare",
-      label: t.prepare.navLabel,
-    },
+    { href: "/career", label: t.career.navLabel },
+    { href: "/profile", label: t.profile.navLabel },
+    { href: "/relocate", label: t.relocate.navLabel },
+    { href: "/prepare", label: t.prepare.navLabel },
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    const localized = localizedHref(lang, href);
+    if (href === "/") return pathname === localized;
+    return pathname.startsWith(localized);
   };
 
-  /* Language selector — 3 small buttons: EN | FR | AR */
   const LangSelector = ({ size = "sm" }: { size?: "sm" | "xs" }) => (
     <div className="flex items-center gap-0.5 font-mono">
       {LANG_OPTIONS.map((opt, i) => (
         <span key={opt.code} className="flex items-center">
           {i > 0 && <span className="text-gray-600 mx-1">|</span>}
           <button
-            onClick={() => setLang(opt.code)}
+            onClick={() => switchTo(opt.code)}
             className={`${size === "xs" ? "text-xs" : "text-xs"} font-mono transition-colors ${
               lang === opt.code
                 ? "text-white font-bold"
@@ -76,25 +76,20 @@ export default function LangToggle() {
 
   return (
     <>
-      {/* Desktop: sticky top bar */}
       <nav className="sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-md border-b border-white/5 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-12">
           <div className="flex items-center gap-1">
             <Link
-              href="/"
+              href={localizedHref(lang, "/")}
               className="flex items-center gap-1.5 mr-6 flex-shrink-0"
             >
-              <span className="text-accent-primary font-bold text-sm tracking-[0.15em] uppercase">
-                SHIFT
-              </span>
-              <span className="text-text-muted text-xs tracking-[0.1em] uppercase font-medium">
-                OBSERVATORY
-              </span>
+              <span className="text-accent-primary font-bold text-sm tracking-[0.15em] uppercase">SHIFT</span>
+              <span className="text-text-muted text-xs tracking-[0.1em] uppercase font-medium">OBSERVATORY</span>
             </Link>
             {pages.map((page) => (
               <Link
                 key={page.href}
-                href={page.href}
+                href={localizedHref(lang, page.href)}
                 className={`relative px-4 py-2 text-sm font-medium transition-all ${
                   isActive(page.href)
                     ? "text-accent-primary border-b-2 border-accent-primary"
@@ -112,19 +107,11 @@ export default function LangToggle() {
         </div>
       </nav>
 
-      {/* Mobile: sticky top bar (simplified) */}
       <nav className="sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-md border-b border-white/5 md:hidden">
         <div className="flex items-center justify-between px-4 h-12">
-          <Link
-            href="/"
-            className="flex items-center gap-1"
-          >
-            <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">
-              SHIFT
-            </span>
-            <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">
-              OBS
-            </span>
+          <Link href={localizedHref(lang, "/")} className="flex items-center gap-1">
+            <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">SHIFT</span>
+            <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">OBS</span>
           </Link>
           <button
             onClick={() => setMenuOpen(true)}
@@ -143,22 +130,12 @@ export default function LangToggle() {
         </div>
       </nav>
 
-      {/* Mobile: full-screen overlay menu */}
       {menuOpen && (
         <div className="fixed inset-0 z-[70] bg-bg-primary/98 backdrop-blur-md flex flex-col md:hidden">
-          {/* Top row */}
           <div className="flex items-center justify-between px-4 min-h-12 border-b border-white/5">
-            <Link
-              href="/"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-1"
-            >
-              <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">
-                SHIFT
-              </span>
-              <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">
-                OBS
-              </span>
+            <Link href={localizedHref(lang, "/")} onClick={() => setMenuOpen(false)} className="flex items-center gap-1">
+              <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">SHIFT</span>
+              <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">OBS</span>
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
@@ -172,12 +149,11 @@ export default function LangToggle() {
             </button>
           </div>
 
-          {/* Menu items */}
           <div className="flex-1 flex flex-col overflow-y-auto">
             {pages.map((page) => (
               <Link
                 key={page.href}
-                href={page.href}
+                href={localizedHref(lang, page.href)}
                 onClick={() => setMenuOpen(false)}
                 className={`px-6 py-4 text-lg font-medium border-b border-gray-800 flex items-center ${
                   isActive(page.href)
@@ -191,8 +167,7 @@ export default function LangToggle() {
             <button
               onClick={() => {
                 setMenuOpen(false);
-                router.push("/career");
-                // Allow MobileJobSearch to open after navigation
+                router.push(localizedHref(lang, "/career"));
                 setTimeout(() => {
                   const searchInput = document.querySelector<HTMLInputElement>("[data-mobile-search]");
                   if (searchInput) searchInput.focus();
@@ -207,14 +182,13 @@ export default function LangToggle() {
             </button>
           </div>
 
-          {/* Language toggle at bottom */}
           <div className="px-6 py-6 border-t border-white/5">
             <div className="flex gap-3">
               {LANG_OPTIONS.map((opt) => (
                 <button
                   key={opt.code}
                   onClick={() => {
-                    setLang(opt.code);
+                    switchTo(opt.code);
                     setMenuOpen(false);
                   }}
                   className={`flex-1 min-h-12 rounded-lg text-base font-medium transition-colors ${
@@ -231,16 +205,14 @@ export default function LangToggle() {
         </div>
       )}
 
-      {/* Mobile: sticky search bar below nav */}
       <MobileJobSearch />
 
-      {/* Mobile: bottom navigation bar */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 bg-bg-primary/95 backdrop-blur-md border-t border-white/5 md:hidden safe-bottom">
         <div className="flex items-center justify-around h-14 px-2">
           {pages.map((page) => (
             <Link
               key={page.href}
-              href={page.href}
+              href={localizedHref(lang, page.href)}
               className={`relative flex flex-col items-center gap-0.5 px-4 py-1.5 transition-all ${
                 isActive(page.href)
                   ? "text-accent-primary"
