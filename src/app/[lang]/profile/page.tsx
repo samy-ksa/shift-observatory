@@ -27,12 +27,12 @@ export async function generateMetadata({
     openGraph: {
       title: TITLES[lang],
       description: DESCRIPTIONS[lang],
-      images: [`${SITE_URL}/api/og/profile`],
+      images: [`${SITE_URL}/api/og/profile?lang=${lang}`],
     },
     twitter: {
       card: "summary_large_image",
       title: TITLES[lang],
-      images: [`${SITE_URL}/api/og/profile`],
+      images: [`${SITE_URL}/api/og/profile?lang=${lang}`],
     },
     alternates: buildLanguageAlternates(lang, "/profile"),
   };

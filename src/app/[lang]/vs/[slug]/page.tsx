@@ -23,10 +23,14 @@ export async function generateMetadata({
   const data = getComparison(slug);
   if (!data) return { title: "Not Found" };
 
-  // FR has localized fields; AR falls back to EN until comparisons.ts ships AR.
-  const title = lang === "fr" ? data.title_fr : data.title_en;
+  const title =
+    lang === "fr" ? data.title_fr : lang === "ar" ? data.title_ar : data.title_en;
   const description =
-    lang === "fr" ? data.description_fr : data.description_en;
+    lang === "fr"
+      ? data.description_fr
+      : lang === "ar"
+        ? data.description_ar
+        : data.description_en;
 
   const alternates = buildLanguageAlternates(lang, `/vs/${slug}`);
 
@@ -49,15 +53,17 @@ export default async function LangVSPage({
 }: {
   params: Promise<{ lang: Lang; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { lang, slug } = await params;
   const data = getComparison(slug);
   if (!data) notFound();
 
-  // FAQ stays in EN for now — full AR FAQPage localization batched in 3c
+  // FAQ localized per lang — uses faq_ar / faq_fr / faq_en accordingly
+  const faqs =
+    lang === "ar" ? data.faq_ar : lang === "fr" ? data.faq_fr : data.faq_en;
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: data.faq_en.map((faq) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: { "@type": "Answer", text: faq.answer },

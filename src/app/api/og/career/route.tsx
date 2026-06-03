@@ -1,8 +1,39 @@
 import { ImageResponse } from "next/og";
+import type { NextRequest } from "next/server";
+import { fontsForLang, type Lang } from "@/lib/og-fonts";
 
 export const runtime = "edge";
 
-export async function GET() {
+function parseLang(req: NextRequest): Lang {
+  const l = req.nextUrl.searchParams.get("lang");
+  return l === "fr" || l === "ar" ? l : "en";
+}
+
+const TITLE: Record<Lang, string> = {
+  en: "Career Transition Recommender",
+  fr: "Recommandeur de transition de carrière",
+  ar: "موجه التحول المهني",
+};
+
+const FEATURE_LABELS: Record<Lang, { risk: string; salary: string; demand: string; training: string }> = {
+  en: { risk: "Risk Reduction", salary: "Salary Insights", demand: "Demand Signals", training: "Training Paths" },
+  fr: { risk: "Baisse du risque", salary: "Aperçu salarial", demand: "Signaux de demande", training: "Parcours formation" },
+  ar: { risk: "تقليل المخاطر", salary: "رؤى الرواتب", demand: "إشارات الطلب", training: "مسارات التدريب" },
+};
+
+const FOOTER: Record<Lang, string> = {
+  en: "Find AI-safe career paths | ksashiftobservatory.online",
+  fr: "Parcours de carrière protégés de l'IA | ksashiftobservatory.online",
+  ar: "ابحث عن مسارات مهنية آمنة من الذكاء الاصطناعي | ksashiftobservatory.online",
+};
+
+export async function GET(req: NextRequest) {
+  const lang = parseLang(req);
+  const labels = FEATURE_LABELS[lang];
+  const isAr = lang === "ar";
+  const fonts = await fontsForLang(lang);
+  const arabicFamily = isAr ? "Cairo, Inter, sans-serif" : "Inter, sans-serif";
+
   return new ImageResponse(
     (
       <div
@@ -15,24 +46,13 @@ export async function GET() {
           alignItems: "center",
           background:
             "linear-gradient(135deg, #0A0E17 0%, #111827 50%, #0A0E17 100%)",
-          fontFamily: "Inter, sans-serif",
+          fontFamily: arabicFamily,
           padding: "60px",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Grid overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
 
-        {/* Top accent */}
         <div
           style={{
             position: "absolute",
@@ -45,7 +65,6 @@ export async function GET() {
           }}
         />
 
-        {/* Brand */}
         <div
           style={{
             display: "flex",
@@ -82,41 +101,30 @@ export async function GET() {
           </span>
         </div>
 
-        {/* Icon */}
         <div style={{ fontSize: "64px", marginBottom: "16px" }}>
-          {"\uD83D\uDE80"}
+          {"🚀"}
         </div>
 
-        {/* Title */}
         <div
           style={{
             color: "white",
-            fontSize: "48px",
+            fontSize: isAr ? "42px" : "48px",
             fontWeight: 800,
             textAlign: "center",
             lineHeight: 1.2,
+            maxWidth: "1080px",
+            direction: isAr ? "rtl" : "ltr",
           }}
         >
-          Career Transition Recommender
-        </div>
-        <div
-          style={{
-            color: "rgba(255,255,255,0.4)",
-            fontSize: "24px",
-            marginTop: "8px",
-            textAlign: "center",
-          }}
-        >
-          {"\u0645\u0648\u062C\u0647 \u0627\u0644\u062A\u062D\u0648\u0644 \u0627\u0644\u0645\u0647\u0646\u064A"}
+          {TITLE[lang]}
         </div>
 
-        {/* Feature cards */}
         <div style={{ display: "flex", gap: "20px", marginTop: "40px" }}>
           {[
-            { icon: "\u2B07\uFE0F", label: "Risk Reduction" },
-            { icon: "\uD83D\uDCB0", label: "Salary Insights" },
-            { icon: "\uD83D\uDCC8", label: "Demand Signals" },
-            { icon: "\uD83C\uDF93", label: "Training Paths" },
+            { icon: "⬇️", label: labels.risk },
+            { icon: "💰", label: labels.salary },
+            { icon: "📈", label: labels.demand },
+            { icon: "🎓", label: labels.training },
           ].map((item) => (
             <div
               key={item.label}
@@ -144,7 +152,6 @@ export async function GET() {
           ))}
         </div>
 
-        {/* Footer */}
         <div
           style={{
             color: "rgba(255,255,255,0.2)",
@@ -152,10 +159,10 @@ export async function GET() {
             marginTop: "36px",
           }}
         >
-          Find AI-safe career paths | shift-observatory.vercel.app
+          {FOOTER[lang]}
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts }
   );
 }

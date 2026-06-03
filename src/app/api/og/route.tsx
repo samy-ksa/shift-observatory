@@ -1,8 +1,39 @@
 import { ImageResponse } from "next/og";
+import type { NextRequest } from "next/server";
+import { fontsForLang, type Lang } from "@/lib/og-fonts";
 
 export const runtime = "edge";
 
-export async function GET() {
+function parseLang(req: NextRequest): Lang {
+  const l = req.nextUrl.searchParams.get("lang");
+  return l === "fr" || l === "ar" ? l : "en";
+}
+
+const TITLE: Record<Lang, string> = {
+  en: "Saudi Jobs Exposed to AI",
+  fr: "Emplois saoudiens exposés à l'IA",
+  ar: "الوظائف السعودية المعرضة للذكاء الاصطناعي",
+};
+
+const STAT_LABELS: Record<Lang, { workers: string; atRisk: string; sectors: string; regions: string }> = {
+  en: { workers: "Workers", atRisk: "At Risk", sectors: "Sectors", regions: "Regions" },
+  fr: { workers: "Actifs", atRisk: "À risque", sectors: "Secteurs", regions: "Régions" },
+  ar: { workers: "عاملون", atRisk: "في خطر", sectors: "قطاعات", regions: "مناطق" },
+};
+
+const FOOTER: Record<Lang, string> = {
+  en: "Interactive Dashboard · GASTAT · WEF · McKinsey Data",
+  fr: "Tableau de bord interactif · GASTAT · WEF · McKinsey",
+  ar: "لوحة تحكم تفاعلية · GASTAT · WEF · McKinsey",
+};
+
+export async function GET(req: NextRequest) {
+  const lang = parseLang(req);
+  const isAr = lang === "ar";
+  const labels = STAT_LABELS[lang];
+  const fonts = await fontsForLang(lang);
+  const arabicFamily = isAr ? "Cairo, Inter, sans-serif" : "Inter, sans-serif";
+
   return new ImageResponse(
     (
       <div
@@ -15,24 +46,13 @@ export async function GET() {
           alignItems: "center",
           background:
             "linear-gradient(135deg, #0A0E17 0%, #111827 50%, #0A0E17 100%)",
-          fontFamily: "Inter, sans-serif",
+          fontFamily: arabicFamily,
           padding: "60px",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Subtle grid overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
 
-        {/* Top accent line */}
         <div
           style={{
             position: "absolute",
@@ -45,7 +65,6 @@ export async function GET() {
           }}
         />
 
-        {/* Logo / Brand */}
         <div
           style={{
             display: "flex",
@@ -82,36 +101,26 @@ export async function GET() {
           </span>
         </div>
 
-        {/* Title */}
         <div
           style={{
             color: "white",
-            fontSize: "52px",
+            fontSize: isAr ? "46px" : "52px",
             fontWeight: 800,
             textAlign: "center",
             lineHeight: 1.2,
+            maxWidth: "1080px",
+            direction: isAr ? "rtl" : "ltr",
           }}
         >
-          Saudi Jobs Exposed to AI
-        </div>
-        <div
-          style={{
-            color: "rgba(255,255,255,0.45)",
-            fontSize: "28px",
-            marginTop: "8px",
-            textAlign: "center",
-          }}
-        >
-          الوظائف السعودية المعرضة للذكاء الاصطناعي
+          {TITLE[lang]}
         </div>
 
-        {/* Stats */}
         <div style={{ display: "flex", gap: "32px", marginTop: "44px" }}>
           {[
-            { value: "12.4M", label: "Workers" },
-            { value: "4.5M", label: "At Risk" },
-            { value: "20", label: "Sectors" },
-            { value: "13", label: "Regions" },
+            { value: "12.4M", label: labels.workers },
+            { value: "4.5M", label: labels.atRisk },
+            { value: "20", label: labels.sectors },
+            { value: "13", label: labels.regions },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -149,7 +158,6 @@ export async function GET() {
           ))}
         </div>
 
-        {/* Footer */}
         <div
           style={{
             color: "rgba(255,255,255,0.25)",
@@ -158,10 +166,10 @@ export async function GET() {
             letterSpacing: "0.03em",
           }}
         >
-          Interactive Dashboard · GASTAT · WEF · McKinsey Data
+          {FOOTER[lang]}
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts }
   );
 }

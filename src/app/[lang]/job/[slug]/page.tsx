@@ -165,7 +165,7 @@ export async function generateMetadata({
       title: `${name} — ${rl} (${occ.composite}/100)`,
       description: `AI automation risk analysis for ${occ.name_en} in Saudi Arabia`,
       images: [
-        `${SITE_URL}/api/og?occupation=${encodeURIComponent(occ.name_en)}&score=${occ.composite}`,
+        `${SITE_URL}/api/og?lang=${lang}&occupation=${encodeURIComponent(occ.name_en)}&score=${occ.composite}`,
       ],
     },
     alternates: buildLanguageAlternates(lang, `/job/${slug}`),
@@ -310,6 +310,75 @@ export default async function LangJobPage({
         acceptedAnswer: {
           "@type": "Answer" as const,
           text: `Le score de risque d'automatisation IA de ${nameFr} a ${trendWordFr}, passant de ${tFr.previousScore}/100 à ${occ.composite}/100 entre le T4-2025 et le T1-2026 (${tFr.delta > 0 ? "+" : ""}${tFr.delta} points). SHIFT Observatory met à jour les scores trimestriellement en utilisant les dernières données GOSI, les projections du WEF et la recherche académique.`,
+        },
+      },
+    );
+  }
+
+  if (lang === "ar") {
+    const nameAr = occ.name_ar || occ.name_en;
+    const tAr = getScoreTrend(slug, occ.composite);
+    const trendWordAr =
+      tAr.direction === "up"
+        ? "ارتفع"
+        : tAr.direction === "down"
+          ? "انخفض"
+          : "ظل مستقراً";
+    faqSchema.mainEntity.push(
+      {
+        "@type": "Question" as const,
+        name: `ما هي مخاطر أتمتة الذكاء الاصطناعي لـ ${nameAr} في المملكة العربية السعودية؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: `${nameAr} لديه درجة مخاطر أتمتة الذكاء الاصطناعي ${occ.composite}/100 في المملكة العربية السعودية وفقاً لمرصد شيفت. تجمع هذه الدرجة بين احتمالية الأتمتة (Frey & Osborne، Eloundou et al.)، الأثر على الراتب، الضغط التنظيمي لنطاقات، وإشارات الطلب من المنتدى الاقتصادي العالمي (WEF).`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `ما هو راتب ${nameAr} في المملكة العربية السعودية؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: `تتراوح رواتب ${nameAr} في المملكة العربية السعودية من ${fmt(occ.salary_entry_sar)} ريال/شهر (مستوى مبتدئ) إلى ${fmt(occ.salary_senior_sar)} ريال/شهر (مستوى أول)، بمتوسط ${fmt(occ.salary_median_sar)} ريال/شهر. جميع الرواتب في المملكة العربية السعودية معفاة من الضرائب.`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `هل يمكن للمغتربين العمل كـ ${nameAr} في المملكة العربية السعودية؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text:
+            occ.nitaqat_status === "reserved_saudi_only"
+              ? `لا. ${nameAr} هي إحدى 100 مهنة محجوزة حصرياً للمواطنين السعوديين بموجب لوائح وزارة الموارد البشرية والتنمية الاجتماعية. لا يمكن للمغتربين الحصول على تصاريح عمل (إقامة) لهذه المهنة. قد تتوفر مهن غير محجوزة ذات صلة.`
+              : `نعم. ${nameAr} مفتوح للمغتربين بموجب حصص قطاع نطاقات. تحتاج إلى عرض عمل من صاحب عمل سعودي (راعٍ)، تأشيرة عمل، وإقامة. يجب أن يكون صاحب العمل في نطاق نطاقات الأخضر أو البلاتيني. الإطار الزمني المعتاد من العرض إلى الوصول هو 2-8 أسابيع.`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `هل سيستبدل الذكاء الاصطناعي ${nameAr} في المملكة العربية السعودية؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text:
+            occ.composite >= 70
+              ? `${nameAr} يواجه مخاطر استبدال عالية جداً بواسطة الذكاء الاصطناعي (${occ.composite}/100). الجمع بين المهام الرقمية الروتينية واتخاذ القرارات المهيكلة يجعل هذه المهنة قابلة للأتمتة بشدة بواسطة نماذج اللغة الكبيرة وأدوات RPA. يجب على العمال في هذا الدور استكشاف مسارات الانتقال إلى مهن ذات مخاطر أقل.`
+              : occ.composite >= 45
+                ? `${nameAr} يواجه مخاطر متوسطة إلى عالية بواسطة الذكاء الاصطناعي (${occ.composite}/100). بينما يمكن أتمتة بعض المهام، فإن العناصر التي تتطلب الحكم البشري والإبداع أو المهارات الشخصية توفر حماية جزئية. يُنصح بإعادة التأهيل في المهارات المكملة للذكاء الاصطناعي.`
+                : `${nameAr} لديه مخاطر استبدال منخفضة نسبياً بواسطة الذكاء الاصطناعي (${occ.composite}/100). متطلبات الحضور المادي، الذكاء العاطفي، والحكم غير الروتيني تخلق دفاعات طبيعية قوية ضد الأتمتة.`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `كم عدد ${nameAr} العاملين في المملكة العربية السعودية؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: `وفقاً لبيانات الهيئة العامة للإحصاء (GOSI) للربع الرابع 2024، يعمل تقريباً ${fmt(occ.employment_est)} ${nameAr} في المملكة العربية السعودية، منهم ${occ.employment_saudi_pct}% مواطنون سعوديون. صنف مرصد شيفت هذه المهنة كـ '${occ.category}'، مما يعني أن الذكاء الاصطناعي متوقع أن ${occ.category === "substitution" ? "يستبدل" : "يعزز"} العمال في هذا الدور.`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `هل مخاطر الذكاء الاصطناعي لـ ${nameAr} في المملكة العربية السعودية ترتفع أم تنخفض؟`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: `درجة مخاطر أتمتة الذكاء الاصطناعي لـ ${nameAr} قد ${trendWordAr} من ${tAr.previousScore}/100 إلى ${occ.composite}/100 بين الربع الرابع 2025 والربع الأول 2026 (${tAr.delta > 0 ? "+" : ""}${tAr.delta} نقطة). يحدّث مرصد شيفت الدرجات ربع سنوياً باستخدام أحدث بيانات GOSI، توقعات المنتدى الاقتصادي العالمي، والأبحاث الأكاديمية.`,
         },
       },
     );

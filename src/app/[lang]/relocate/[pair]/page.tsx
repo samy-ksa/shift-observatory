@@ -95,7 +95,7 @@ export async function generateMetadata({
       title: ogTitle,
       description: ogDesc,
       images: [
-        `${SITE_URL}/api/og?title=${encodeURIComponent(
+        `${SITE_URL}/api/og?lang=${lang}&title=${encodeURIComponent(
           isFr ? `${origin.name_fr} → ${saudi.name_fr}` : `${origin.name_en} → ${saudi.name_en}`,
         )}`,
       ],
@@ -207,6 +207,51 @@ export default async function LangCityPairPage({
         acceptedAnswer: {
           "@type": "Answer",
           text: `Déménager de ${origin.name_fr} à ${saudi.name_fr} peut être financièrement avantageux. 0% d'impôt (économie de ${result.tax_savings_sar.toLocaleString()} SAR/mois), EOSB (~${result.eosb_5yr_sar.toLocaleString()} SAR après 5 ans).`,
+        },
+      },
+    );
+  }
+
+  if (lang === "ar") {
+    faqSchema.mainEntity.push(
+      {
+        "@type": "Question",
+        name: `هل ${saudi.name_ar} أرخص من ${origin.name_ar}؟`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `وفقاً لتصنيف Mercer لتكلفة المعيشة، ${saudi.name_ar} مصنفة رقم ${saudi.mercerRank} بينما ${origin.name_ar} رقم ${origin.mercerRank} (الأقل = أغلى). ${saudi.name_ar} ${mercerComparison === "cheaper" ? "أرخص" : "أغلى"} عموماً من ${origin.name_ar}. ضريبة الدخل 0% في المملكة العربية السعودية تعوض جزئياً أو كلياً التكاليف الإضافية للمساكن والمدارس الدولية.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `ما الراتب الذي أحتاجه في ${saudi.name_ar} لمطابقة نمط حياتي في ${origin.name_ar}؟`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `للحفاظ على نمط حياة معادل لأسرة مكونة من 3 أفراد (بالغان + طفل واحد) في ${saudi.name_ar}، تحتاج إلى حوالي ${result.saudi_total_sar.toLocaleString()} ريال/شهر. مع 0% ضريبة دخل في المملكة العربية السعودية (مقابل ${origin.taxRate}% في ${origin.country_ar})، توفر ضرائبك وحدها تساوي ${result.tax_savings_sar.toLocaleString()} ريال/شهر. نوصي بالتفاوض على حزمة بحد أدنى ${Math.round(result.saudi_total_sar * 1.2).toLocaleString()} ريال/شهر لتشمل احتياطي ادخار.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `كم تبلغ تكلفة الإيجار في ${saudi.name_ar} مقارنة بـ ${origin.name_ar}؟`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `تكلف شقة بغرفة نوم واحدة في وسط ${saudi.name_ar} حوالي ${saudi.rent_apt_1br.toLocaleString()} ريال/شهر. فيلات الكمباوند للمغتربين تتراوح من ${saudi.rent_compound_2br.toLocaleString()} إلى ${saudi.rent_compound_3br.toLocaleString()} ريال/شهر. الإيجار ${result.rent_diff_pct > 0 ? `أغلى بنسبة ${result.rent_diff_pct}%` : `أرخص بنسبة ${Math.abs(result.rent_diff_pct)}%`} في ${saudi.name_ar} لمساكن الكمباوند.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `كم تكلف المدارس الدولية في ${saudi.name_ar}؟`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `تتراوح رسوم المدارس الدولية في ${saudi.name_ar} من 20,000 ريال/سنة (مناهج هندية/باكستانية اقتصادية) إلى 105,000+ ريال/سنة (برامج أمريكية/بريطانية/IB متميزة). المدارس متوسطة المستوى ذات المناهج الأمريكية/البريطانية تبلغ في المتوسط ${schoolAnnual.toLocaleString()} ريال/سنة. يقدم معظم أصحاب العمل بدلات تعليمية كجزء من حزم المغتربين.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `هل يستحق الانتقال من ${origin.name_ar} إلى ${saudi.name_ar} مالياً؟`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `الانتقال من ${origin.name_ar} إلى ${saudi.name_ar} يمكن أن يكون مفيداً مالياً. الفوائد الرئيسية: 0% ضريبة دخل (توفير ${result.tax_savings_sar.toLocaleString()} ريال/شهر)، مكافأة نهاية الخدمة (مكافأة معفاة من الضرائب بحوالي ${result.eosb_5yr_sar.toLocaleString()} ريال بعد 5 سنوات). التكاليف الرئيسية: مساكن الكمباوند (${rentCompound.toLocaleString()} ريال/شهر)، المدارس الدولية. يعتمد وضعك الصافي على حزمتك التفاوضية.`,
         },
       },
     );

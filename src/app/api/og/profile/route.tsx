@@ -1,8 +1,39 @@
 import { ImageResponse } from "next/og";
+import type { NextRequest } from "next/server";
+import { fontsForLang, type Lang } from "@/lib/og-fonts";
 
 export const runtime = "edge";
 
-export async function GET() {
+function parseLang(req: NextRequest): Lang {
+  const l = req.nextUrl.searchParams.get("lang");
+  return l === "fr" || l === "ar" ? l : "en";
+}
+
+const TITLE: Record<Lang, string> = {
+  en: "My AI Risk Profile",
+  fr: "Mon profil de risque IA",
+  ar: "ملفي الشخصي لمخاطر الذكاء الاصطناعي",
+};
+
+const FEATURE_LABELS: Record<Lang, { occupation: string; sector: string; region: string; nitaqat: string }> = {
+  en: { occupation: "Occupation Risk", sector: "Sector Pressure", region: "Region Exposure", nitaqat: "Nitaqat Impact" },
+  fr: { occupation: "Risque métier", sector: "Pression secteur", region: "Exposition région", nitaqat: "Impact Nitaqat" },
+  ar: { occupation: "مخاطر المهنة", sector: "ضغط القطاع", region: "تعرض المنطقة", nitaqat: "تأثير نطاقات" },
+};
+
+const FOOTER: Record<Lang, string> = {
+  en: "Discover your personalized AI risk score | ksashiftobservatory.online",
+  fr: "Découvrez votre score de risque IA personnalisé | ksashiftobservatory.online",
+  ar: "اكتشف درجة مخاطر الذكاء الاصطناعي الشخصية | ksashiftobservatory.online",
+};
+
+export async function GET(req: NextRequest) {
+  const lang = parseLang(req);
+  const labels = FEATURE_LABELS[lang];
+  const isAr = lang === "ar";
+  const fonts = await fontsForLang(lang);
+  const arabicFamily = isAr ? "Cairo, Inter, sans-serif" : "Inter, sans-serif";
+
   return new ImageResponse(
     (
       <div
@@ -15,24 +46,13 @@ export async function GET() {
           alignItems: "center",
           background:
             "linear-gradient(135deg, #0A0E17 0%, #111827 50%, #0A0E17 100%)",
-          fontFamily: "Inter, sans-serif",
+          fontFamily: arabicFamily,
           padding: "60px",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Grid overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
 
-        {/* Top accent */}
         <div
           style={{
             position: "absolute",
@@ -45,7 +65,6 @@ export async function GET() {
           }}
         />
 
-        {/* Brand */}
         <div
           style={{
             display: "flex",
@@ -82,46 +101,35 @@ export async function GET() {
           </span>
         </div>
 
-        {/* Icon */}
         <div
           style={{
             fontSize: "64px",
             marginBottom: "16px",
           }}
         >
-          {"\uD83C\uDFAF"}
+          {"🎯"}
         </div>
 
-        {/* Title */}
         <div
           style={{
             color: "white",
-            fontSize: "48px",
+            fontSize: isAr ? "40px" : "48px",
             fontWeight: 800,
             textAlign: "center",
             lineHeight: 1.2,
+            maxWidth: "1080px",
+            direction: isAr ? "rtl" : "ltr",
           }}
         >
-          My AI Risk Profile
-        </div>
-        <div
-          style={{
-            color: "rgba(255,255,255,0.4)",
-            fontSize: "24px",
-            marginTop: "8px",
-            textAlign: "center",
-          }}
-        >
-          {"\u0645\u0644\u0641\u064A \u0627\u0644\u0634\u062E\u0635\u064A \u0644\u0645\u062E\u0627\u0637\u0631 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064A"}
+          {TITLE[lang]}
         </div>
 
-        {/* Feature cards */}
         <div style={{ display: "flex", gap: "20px", marginTop: "40px" }}>
           {[
-            { icon: "\uD83D\uDCBC", label: "Occupation Risk" },
-            { icon: "\uD83C\uDFED", label: "Sector Pressure" },
-            { icon: "\uD83D\uDDFA\uFE0F", label: "Region Exposure" },
-            { icon: "\u26A0\uFE0F", label: "Nitaqat Impact" },
+            { icon: "💼", label: labels.occupation },
+            { icon: "🏭", label: labels.sector },
+            { icon: "🗺️", label: labels.region },
+            { icon: "⚠️", label: labels.nitaqat },
           ].map((item) => (
             <div
               key={item.label}
@@ -149,7 +157,6 @@ export async function GET() {
           ))}
         </div>
 
-        {/* Footer */}
         <div
           style={{
             color: "rgba(255,255,255,0.2)",
@@ -157,10 +164,10 @@ export async function GET() {
             marginTop: "36px",
           }}
         >
-          Discover your personalized AI risk score | shift-observatory.vercel.app
+          {FOOTER[lang]}
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts }
   );
 }

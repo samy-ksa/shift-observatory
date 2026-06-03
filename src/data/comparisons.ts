@@ -14,16 +14,21 @@ export interface ComparisonData {
   competitor: string;
   competitor_description_en: string;
   competitor_description_fr: string;
+  competitor_description_ar: string;
   competitor_url: string;
   title_en: string;
   title_fr: string;
+  title_ar: string;
   description_en: string;
   description_fr: string;
+  description_ar: string;
   features: ComparisonFeature[];
   verdict_en: string;
   verdict_fr: string;
+  verdict_ar: string;
   faq_en: { question: string; answer: string }[];
   faq_fr: { question: string; answer: string }[];
+  faq_ar: { question: string; answer: string }[];
 }
 
 export const COMPARISONS: ComparisonData[] = [
@@ -33,11 +38,14 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Numbeo",
     competitor_description_en: "Numbeo is the world's largest cost of living database, powered by user-contributed data covering 9,000+ cities worldwide.",
     competitor_description_fr: "Numbeo est la plus grande base de données de coût de la vie au monde, alimentée par des contributions d'utilisateurs couvrant plus de 9 000 villes.",
+    competitor_description_ar: "Numbeo هي أكبر قاعدة بيانات لتكلفة المعيشة في العالم، تعتمد على بيانات يساهم بها المستخدمون وتغطي أكثر من 9,000 مدينة حول العالم.",
     competitor_url: "https://www.numbeo.com",
     title_en: "SHIFT vs Numbeo: Best Cost of Living Tool for Saudi Arabia (2026)",
     title_fr: "SHIFT vs Numbeo : meilleur outil cout de la vie en Arabie Saoudite (2026)",
+    title_ar: "شيفت مقابل Numbeo: أفضل أداة لتكلفة المعيشة في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory and Numbeo for Saudi Arabia cost of living, salary data, AI risk scoring, and relocation planning. Free, trilingual, 237 occupations.",
     description_fr: "Comparez SHIFT Observatory et Numbeo pour le cout de la vie, les salaires, le risque IA et la planification de relocation en Arabie Saoudite.",
+    description_ar: "قارن بين مرصد شيفت و Numbeo لتكلفة المعيشة في المملكة العربية السعودية، بيانات الرواتب، تقييم مخاطر الذكاء الاصطناعي، وتخطيط الانتقال. مجاني، ثلاثي اللغة، 237 مهنة.",
     features: [
       {
         feature_en: "Saudi Arabia cost of living data",
@@ -132,6 +140,7 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Numbeo is a great general cost-of-living tool, but SHIFT is purpose-built for Saudi Arabia with AI risk scoring, Nitaqat analysis, and personalized relocation reports that Numbeo doesn't offer.",
     verdict_fr: "Numbeo est un excellent outil general de cout de la vie, mais SHIFT est concu specifiquement pour l'Arabie Saoudite avec le scoring de risque IA, l'analyse Nitaqat et des rapports personnalises que Numbeo ne propose pas.",
+    verdict_ar: "Numbeo أداة ممتازة عامة لتكلفة المعيشة، لكن شيفت مصمم خصيصاً للمملكة العربية السعودية مع تقييم مخاطر الذكاء الاصطناعي، تحليل نطاقات، وتقارير انتقال مخصصة لا يقدمها Numbeo.",
     faq_en: [
       { question: "Is SHIFT better than Numbeo for Saudi Arabia?", answer: "For Saudi Arabia specifically, yes. SHIFT provides KSA-specific data including compound housing costs, international school fees, Nitaqat regulations, and AI automation risk scoring for 237 occupations. Numbeo is better for comparing cities globally." },
       { question: "Does Numbeo have AI risk data?", answer: "No. Numbeo focuses exclusively on cost of living data. SHIFT Observatory is the only free platform combining cost of living, AI automation risk, salary benchmarks, and Nitaqat analysis for Saudi Arabia." },
@@ -142,6 +151,11 @@ export const COMPARISONS: ComparisonData[] = [
       { question: "Numbeo a-t-il des donnees sur le risque IA ?", answer: "Non. Numbeo se concentre exclusivement sur le cout de la vie. SHIFT Observatory est la seule plateforme gratuite combinant cout de la vie, risque IA, salaires et analyse Nitaqat pour l'Arabie Saoudite." },
       { question: "Peut-on utiliser SHIFT et Numbeo ensemble ?", answer: "Absolument. Ils se completent bien. Utilisez Numbeo pour les comparaisons globales et SHIFT pour l'analyse specifique a l'Arabie Saoudite." },
     ],
+    faq_ar: [
+      { question: "هل شيفت أفضل من Numbeo للمملكة العربية السعودية؟", answer: "بالنسبة للمملكة العربية السعودية تحديداً، نعم. يقدم شيفت بيانات خاصة بالمملكة تشمل تكاليف مساكن الكمباوند، رسوم المدارس الدولية، لوائح نطاقات، وتقييم مخاطر أتمتة الذكاء الاصطناعي لـ 237 مهنة. Numbeo أفضل لمقارنة المدن عالمياً." },
+      { question: "هل لدى Numbeo بيانات عن مخاطر الذكاء الاصطناعي؟", answer: "لا. يركز Numbeo حصرياً على بيانات تكلفة المعيشة. مرصد شيفت هو المنصة المجانية الوحيدة التي تجمع بين تكلفة المعيشة، مخاطر الذكاء الاصطناعي، معايير الرواتب، وتحليل نطاقات للمملكة العربية السعودية." },
+      { question: "هل يمكنني استخدام شيفت و Numbeo معاً؟", answer: "بالتأكيد. يكملان بعضهما بشكل جيد. استخدم Numbeo للمقارنات العامة بين المدن عالمياً وشيفت للتحليل الخاص بالمملكة العربية السعودية بما في ذلك مخاطر الذكاء الاصطناعي، تخطيط الانتقال، والإرشاد المهني." },
+    ],
   },
 
   // 2. GLASSDOOR
@@ -150,9 +164,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Glassdoor",
     competitor_description_en: "Glassdoor is a platform for company reviews, salary reports, and job listings, primarily focused on the US and European markets.",
     competitor_description_fr: "Glassdoor est une plateforme d'avis sur les entreprises, de rapports salariaux et d'offres d'emploi, principalement axee sur les marches americain et europeen.",
+    description_ar: "قارن بين مرصد شيفت و Glassdoor لبيانات الرواتب في المملكة العربية السعودية، مراجعات الشركات، تقييم مخاطر الذكاء الاصطناعي، وتخطيط المهنة. وصول مجاني مقابل اشتراك مدفوع.",
+    competitor_description_ar: "Glassdoor منصة لمراجعات الشركات وتقارير الرواتب وقوائم الوظائف، تركز بشكل رئيسي على الأسواق الأمريكية والأوروبية.",
     competitor_url: "https://www.glassdoor.com",
     title_en: "SHIFT vs Glassdoor: Saudi Arabia Salary & Job Data Compared (2026)",
     title_fr: "SHIFT vs Glassdoor : salaires et emploi en Arabie Saoudite compares (2026)",
+    title_ar: "شيفت مقابل Glassdoor: مقارنة بيانات الرواتب والوظائف في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory and Glassdoor for Saudi Arabia salary data, company reviews, AI risk scoring, and career planning. Free access vs paywall.",
     description_fr: "Comparez SHIFT Observatory et Glassdoor pour les salaires en Arabie Saoudite, avis entreprises, risque IA et planification de carriere.",
     features: [
@@ -167,10 +184,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Glassdoor excels at company reviews and interview prep, but has limited Saudi data. SHIFT provides comprehensive KSA-specific salary, AI risk, and relocation data without requiring an account.",
     verdict_fr: "Glassdoor excelle dans les avis entreprises et la preparation d'entretien, mais a des donnees saoudiennes limitees. SHIFT fournit des donnees salariales, de risque IA et de relocation specifiques au KSA sans compte.",
+    verdict_ar: "Glassdoor يتفوق في مراجعات الشركات والتحضير للمقابلات، لكن لديه بيانات سعودية محدودة. شيفت يوفر بيانات شاملة خاصة بالمملكة للرواتب ومخاطر الذكاء الاصطناعي والانتقال دون الحاجة لحساب.",
     faq_en: [
       { question: "Does Glassdoor have good Saudi Arabia data?", answer: "Glassdoor has limited Saudi Arabia coverage compared to Western markets. Most KSA salary data is self-reported and sparse. SHIFT uses official GOSI data and structured salary surveys for 237 occupations." },
       { question: "Is SHIFT free unlike Glassdoor?", answer: "Yes. SHIFT Observatory is completely free with no login required. Glassdoor requires account creation and paywalls detailed salary insights behind a premium subscription." },
       { question: "Should I use Glassdoor or SHIFT for Saudi job search?", answer: "Use both. Glassdoor for company reviews and interview prep. SHIFT for salary benchmarks, AI risk assessment, Nitaqat status, and relocation cost analysis specific to Saudi Arabia." },
+    ],
+    faq_ar: [
+        { question: "هل لدى Glassdoor بيانات جيدة عن المملكة العربية السعودية؟", answer: "Glassdoor لديه تغطية محدودة للمملكة العربية السعودية مقارنة بالأسواق الغربية. معظم بيانات الرواتب في السعودية ذاتية التبليغ ومحدودة. يستخدم شيفت بيانات GOSI الرسمية واستطلاعات الرواتب المنظمة لـ 237 مهنة." },
+        { question: "هل شيفت مجاني على عكس Glassdoor؟", answer: "نعم. مرصد شيفت مجاني تماماً بدون الحاجة لتسجيل الدخول. Glassdoor يتطلب إنشاء حساب ويحجب رؤى الرواتب التفصيلية وراء اشتراك مدفوع." },
+        { question: "هل يجب استخدام Glassdoor أم شيفت للبحث عن وظائف في السعودية؟", answer: "استخدم كليهما. Glassdoor لمراجعات الشركات والتحضير للمقابلات. شيفت لمعايير الرواتب وتقييم مخاطر الذكاء الاصطناعي وحالة نطاقات وتحليل تكلفة الانتقال الخاصة بالمملكة العربية السعودية." },
     ],
     faq_fr: [
       { question: "Glassdoor a-t-il de bonnes donnees sur l'Arabie Saoudite ?", answer: "Glassdoor a une couverture limitee de l'Arabie Saoudite. SHIFT utilise des donnees GOSI officielles pour 237 metiers." },
@@ -185,9 +208,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "LinkedIn Salary Insights",
     competitor_description_en: "LinkedIn Salary Insights provides salary data based on self-reported member information, available primarily to LinkedIn Premium subscribers.",
     competitor_description_fr: "LinkedIn Salary Insights fournit des donnees salariales basees sur les declarations de ses membres, accessible principalement aux abonnes Premium.",
+    description_ar: "قارن بين مرصد شيفت و LinkedIn Salary لبيانات الرواتب في السعودية. معايير 237 مهنة مجاناً مقابل رؤى LinkedIn المحجوزة لـ Premium.",
+    competitor_description_ar: "LinkedIn Salary Insights يوفر بيانات الرواتب بناءً على المعلومات الذاتية المُبلَّغة من الأعضاء، متاح بشكل رئيسي لمشتركي LinkedIn Premium.",
     competitor_url: "https://www.linkedin.com/salary",
     title_en: "SHIFT vs LinkedIn Salary: Saudi Arabia Salary Benchmarks (2026)",
     title_fr: "SHIFT vs LinkedIn Salary : salaires en Arabie Saoudite compares (2026)",
+    title_ar: "شيفت مقابل LinkedIn Salary: معايير الرواتب في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory and LinkedIn Salary for KSA salary data. Free 237-occupation benchmarks vs Premium-only LinkedIn insights.",
     description_fr: "Comparez SHIFT Observatory et LinkedIn Salary pour les salaires en Arabie Saoudite. 237 metiers gratuits vs donnees Premium LinkedIn.",
     features: [
@@ -200,10 +226,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "LinkedIn provides real-time hiring signals but locks salary data behind Premium. SHIFT offers free, comprehensive KSA salary benchmarks for 237 occupations plus AI risk and relocation tools.",
     verdict_fr: "LinkedIn fournit des signaux de recrutement en temps reel mais reserve les salaires au Premium. SHIFT offre gratuitement des salaires pour 237 metiers plus le risque IA et la relocation.",
+    verdict_ar: "LinkedIn يوفر إشارات توظيف في الوقت الفعلي لكنه يحجب بيانات الرواتب خلف Premium. شيفت يقدم مجاناً معايير شاملة لرواتب 237 مهنة في المملكة بالإضافة لمخاطر الذكاء الاصطناعي وأدوات الانتقال.",
     faq_en: [
       { question: "Is LinkedIn salary data accurate for Saudi Arabia?", answer: "LinkedIn has limited self-reported salary data for KSA. SHIFT uses structured salary survey data and GOSI employment figures for 237 occupations, providing more reliable Saudi-specific benchmarks." },
       { question: "Do I need LinkedIn Premium to see salary data?", answer: "Yes, LinkedIn requires Premium subscription for detailed salary insights. SHIFT Observatory provides comprehensive salary data for 237 Saudi occupations completely free." },
       { question: "Which is better for Saudi Arabia job research?", answer: "Use LinkedIn for networking and job applications. Use SHIFT for salary benchmarking, AI risk assessment, and relocation planning specific to Saudi Arabia." },
+    ],
+    faq_ar: [
+        { question: "هل بيانات رواتب LinkedIn دقيقة للمملكة العربية السعودية؟", answer: "LinkedIn لديه بيانات رواتب محدودة ذاتية التبليغ للمملكة. يستخدم شيفت بيانات استطلاعات رواتب منظمة وأرقام توظيف GOSI لـ 237 مهنة، مما يوفر معايير أكثر موثوقية خاصة بالسعودية." },
+        { question: "هل أحتاج LinkedIn Premium لرؤية بيانات الرواتب؟", answer: "نعم، يتطلب LinkedIn اشتراك Premium لرؤى الرواتب التفصيلية. مرصد شيفت يوفر بيانات رواتب شاملة لـ 237 مهنة سعودية مجاناً تماماً." },
+        { question: "أيهما أفضل للبحث الوظيفي في السعودية؟", answer: "استخدم LinkedIn للتواصل وتقديم الطلبات. استخدم شيفت لمعايير الرواتب وتقييم مخاطر الذكاء الاصطناعي وتخطيط الانتقال الخاص بالمملكة العربية السعودية." },
     ],
     faq_fr: [
       { question: "Les salaires LinkedIn sont-ils fiables pour l'Arabie Saoudite ?", answer: "LinkedIn a des donnees salariales KSA limitees et auto-declarees. SHIFT utilise des donnees structurees et GOSI pour 237 metiers." },
@@ -218,9 +250,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "PayScale",
     competitor_description_en: "PayScale provides compensation data and salary benchmarking tools, primarily for the US market with some international coverage.",
     competitor_description_fr: "PayScale fournit des donnees de remuneration et des outils de benchmarking salarial, principalement pour le marche americain.",
+    description_ar: "قارن بين مرصد شيفت و PayScale لمعايير الرواتب في السعودية، تقييم مخاطر الذكاء الاصطناعي، وأدوات تخطيط المهنة.",
+    competitor_description_ar: "PayScale يوفر بيانات التعويضات وأدوات معايرة الرواتب، بشكل رئيسي للسوق الأمريكي مع بعض التغطية الدولية.",
     competitor_url: "https://www.payscale.com",
     title_en: "SHIFT vs PayScale: Saudi Arabia Salary & Career Data (2026)",
     title_fr: "SHIFT vs PayScale : salaires et carrieres en Arabie Saoudite (2026)",
+    title_ar: "شيفت مقابل PayScale: بيانات الرواتب والمهن في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory and PayScale for Saudi Arabia salary benchmarks, AI risk scoring, and career planning tools.",
     description_fr: "Comparez SHIFT et PayScale pour les salaires, le risque IA et la planification de carriere en Arabie Saoudite.",
     features: [
@@ -233,10 +268,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "PayScale is strong for US compensation data but has limited Saudi coverage. SHIFT is purpose-built for KSA with AI risk scoring, Nitaqat analysis, and personalized relocation tools.",
     verdict_fr: "PayScale est fort pour les remunerations americaines mais a une couverture saoudienne limitee. SHIFT est concu pour le KSA avec risque IA, Nitaqat et outils de relocation.",
+    verdict_ar: "PayScale قوي لبيانات التعويضات الأمريكية لكن تغطيته السعودية محدودة. شيفت مصمم خصيصاً للمملكة مع تقييم مخاطر الذكاء الاصطناعي وتحليل نطاقات وأدوات انتقال مخصصة.",
     faq_en: [
       { question: "Does PayScale cover Saudi Arabia?", answer: "PayScale has limited Saudi Arabia data compared to Western markets. SHIFT provides comprehensive KSA-specific salary benchmarks for 237 occupations based on structured survey data." },
       { question: "Is SHIFT or PayScale better for expat salary negotiation?", answer: "For Saudi Arabia, SHIFT is better. It provides KSA-specific salary tiers, tax savings calculations, and a full relocation cost comparison that PayScale doesn't offer for the Gulf region." },
       { question: "Does PayScale have AI risk data?", answer: "No. PayScale focuses on compensation data. SHIFT is the only free platform combining salary benchmarks with AI automation risk scoring for the Saudi market." },
+    ],
+    faq_ar: [
+        { question: "هل يغطي PayScale المملكة العربية السعودية؟", answer: "PayScale لديه بيانات محدودة عن المملكة مقارنة بالأسواق الغربية. شيفت يوفر معايير رواتب شاملة خاصة بالسعودية لـ 237 مهنة بناءً على بيانات استطلاع منظمة." },
+        { question: "هل شيفت أو PayScale أفضل لتفاوض رواتب المغتربين؟", answer: "للمملكة العربية السعودية، شيفت أفضل. يوفر مستويات رواتب خاصة بالسعودية وحسابات وفر الضرائب ومقارنة كاملة لتكلفة الانتقال لا يقدمها PayScale لمنطقة الخليج." },
+        { question: "هل لدى PayScale بيانات عن مخاطر الذكاء الاصطناعي؟", answer: "لا. يركز PayScale على بيانات التعويضات. شيفت هو المنصة المجانية الوحيدة التي تجمع بين معايير الرواتب وتقييم مخاطر أتمتة الذكاء الاصطناعي للسوق السعودي." },
     ],
     faq_fr: [
       { question: "PayScale couvre-t-il l'Arabie Saoudite ?", answer: "PayScale a des donnees KSA limitees. SHIFT fournit des salaires specifiques pour 237 metiers saoudiens." },
@@ -251,9 +292,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Mercer Cost of Living",
     competitor_description_en: "Mercer publishes the annual Cost of Living Survey ranking 227 cities worldwide, used by multinational corporations for expat compensation benchmarking.",
     competitor_description_fr: "Mercer publie l'enquete annuelle sur le cout de la vie classant 227 villes, utilisee par les multinationales pour le benchmarking des remunerations d'expatries.",
+    description_ar: "قارن بين مرصد شيفت (مجاني) و Mercer (تقارير بـ 500 دولار+) لبيانات تكلفة المعيشة في السعودية، معايير الرواتب، وتخطيط الانتقال.",
+    competitor_description_ar: "Mercer ينشر استطلاع تكلفة المعيشة السنوي الذي يصنف 227 مدينة حول العالم، تستخدمه الشركات متعددة الجنسيات لمعايرة تعويضات المغتربين.",
     competitor_url: "https://www.mercer.com/insights/total-rewards/cost-of-living/",
     title_en: "SHIFT vs Mercer: Saudi Arabia Cost of Living Comparison (2026)",
     title_fr: "SHIFT vs Mercer : cout de la vie en Arabie Saoudite compare (2026)",
+    title_ar: "شيفت مقابل Mercer: مقارنة تكلفة المعيشة في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory (free) and Mercer ($500+ reports) for Saudi Arabia cost of living data, salary benchmarks, and relocation planning.",
     description_fr: "Comparez SHIFT (gratuit) et Mercer (500$+ par rapport) pour le cout de la vie et la relocation en Arabie Saoudite.",
     features: [
@@ -266,10 +310,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Mercer is the gold standard for multinational HR departments, but costs $500+ per report. SHIFT provides free, granular cost-of-living data for Saudi Arabia with personalized relocation analysis that Mercer doesn't offer to individuals.",
     verdict_fr: "Mercer est la reference pour les DRH de multinationales, mais coute 500$+ par rapport. SHIFT offre gratuitement des donnees detaillees avec une analyse de relocation personnalisee.",
+    verdict_ar: "Mercer هو المعيار الذهبي لأقسام الموارد البشرية في الشركات متعددة الجنسيات، لكنه يكلف 500 دولار+ لكل تقرير. شيفت يوفر مجاناً بيانات تفصيلية لتكلفة المعيشة في المملكة مع تحليل انتقال مخصص لا يقدمه Mercer للأفراد.",
     faq_en: [
       { question: "Is SHIFT as accurate as Mercer?", answer: "SHIFT uses Numbeo crowd-sourced data and structured salary surveys while Mercer uses proprietary corporate data. For individual expat planning, SHIFT provides more granular and actionable data. For corporate HR benchmarking, Mercer remains the standard." },
       { question: "How much does Mercer cost vs SHIFT?", answer: "Mercer reports start at $500+ per city. SHIFT Observatory is completely free for all features including the relocation calculator, salary benchmarks, and AI risk scoring." },
       { question: "Can SHIFT replace Mercer for expat planning?", answer: "For individual expats, yes. SHIFT provides personalized relocation analysis with 65+ cost items, salary benchmarks, and AI risk data for free. Mercer is better suited for corporate HR departments managing large expat populations." },
+    ],
+    faq_ar: [
+        { question: "هل شيفت دقيق بقدر Mercer؟", answer: "يستخدم شيفت بيانات Numbeo المستندة إلى الجمهور واستطلاعات الرواتب المنظمة بينما يستخدم Mercer بيانات الشركات المملوكة. لتخطيط المغتربين الأفراد، يوفر شيفت بيانات أكثر تفصيلاً وقابلية للتنفيذ. لمعايرة الموارد البشرية للشركات، يبقى Mercer هو المعيار." },
+        { question: "كم يكلف Mercer مقابل شيفت؟", answer: "تبدأ تقارير Mercer من 500 دولار+ لكل مدينة. مرصد شيفت مجاني تماماً لجميع الميزات بما في ذلك حاسبة الانتقال ومعايير الرواتب وتقييم مخاطر الذكاء الاصطناعي." },
+        { question: "هل يمكن لشيفت أن يحل محل Mercer لتخطيط المغتربين؟", answer: "للمغتربين الأفراد، نعم. يوفر شيفت تحليل انتقال مخصص مع أكثر من 65 بنداً من التكاليف، ومعايير الرواتب، وبيانات مخاطر الذكاء الاصطناعي مجاناً. Mercer أكثر ملاءمة لأقسام الموارد البشرية للشركات التي تدير عدداً كبيراً من المغتربين." },
     ],
     faq_fr: [
       { question: "SHIFT est-il aussi precis que Mercer ?", answer: "SHIFT utilise des donnees Numbeo et des enquetes salariales structurees. Pour la planification individuelle, SHIFT fournit des donnees plus granulaires. Pour le benchmarking RH, Mercer reste la reference." },
@@ -284,9 +334,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Bayt.com",
     competitor_description_en: "Bayt.com is the leading job board in the Middle East and North Africa, connecting job seekers with employers across the Gulf region.",
     competitor_description_fr: "Bayt.com est le principal site d'emploi au Moyen-Orient et en Afrique du Nord, connectant les candidats aux employeurs du Golfe.",
+    description_ar: "قارن بين مرصد شيفت و Bayt.com لبيانات سوق العمل في السعودية، معايير الرواتب، تقييم مخاطر الذكاء الاصطناعي، وتخطيط المهنة.",
+    competitor_description_ar: "Bayt.com هو موقع الوظائف الرائد في الشرق الأوسط وشمال أفريقيا، يربط الباحثين عن عمل بأصحاب العمل في منطقة الخليج.",
     competitor_url: "https://www.bayt.com",
     title_en: "SHIFT vs Bayt.com: Saudi Arabia Job Market Intelligence (2026)",
     title_fr: "SHIFT vs Bayt.com : intelligence du marche de l'emploi en Arabie Saoudite (2026)",
+    title_ar: "شيفت مقابل Bayt.com: ذكاء سوق العمل في المملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory and Bayt.com for Saudi Arabia job market data, salary benchmarks, AI risk scoring, and career planning.",
     description_fr: "Comparez SHIFT et Bayt.com pour les donnees du marche de l'emploi saoudien, salaires, risque IA et planification de carriere.",
     features: [
@@ -300,10 +353,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Bayt.com is essential for finding job listings in the Gulf, but SHIFT complements it with salary intelligence, AI risk analysis, and relocation planning that Bayt doesn't provide.",
     verdict_fr: "Bayt.com est essentiel pour trouver des offres d'emploi dans le Golfe, mais SHIFT le complete avec des salaires, le risque IA et la relocation.",
+    verdict_ar: "Bayt.com ضروري للعثور على فرص العمل في الخليج، لكن شيفت يكمله بذكاء الرواتب وتحليل مخاطر الذكاء الاصطناعي وتخطيط الانتقال الذي لا يوفره Bayt.",
     faq_en: [
       { question: "Should I use Bayt or SHIFT for Saudi job search?", answer: "Use both. Bayt.com for job listings and applications. SHIFT for salary negotiation data, AI risk assessment, and understanding Nitaqat regulations before applying." },
       { question: "Does Bayt have AI risk data?", answer: "No. Bayt.com focuses on job listings and CV services. SHIFT provides AI automation risk scoring for 237 occupations in Saudi Arabia." },
       { question: "Is Bayt.com salary data reliable?", answer: "Bayt salary data is self-reported by users. SHIFT uses structured salary survey data and GOSI employment figures for more reliable benchmarks." },
+    ],
+    faq_ar: [
+        { question: "هل يجب استخدام Bayt أم شيفت للبحث عن وظائف في السعودية؟", answer: "استخدم كليهما. Bayt.com لقوائم الوظائف والتقديمات. شيفت لبيانات تفاوض الرواتب وتقييم مخاطر الذكاء الاصطناعي وفهم لوائح نطاقات قبل التقديم." },
+        { question: "هل لدى Bayt بيانات عن مخاطر الذكاء الاصطناعي؟", answer: "لا. يركز Bayt.com على قوائم الوظائف وخدمات السيرة الذاتية. شيفت يوفر تقييم مخاطر أتمتة الذكاء الاصطناعي لـ 237 مهنة في المملكة العربية السعودية." },
+        { question: "هل بيانات رواتب Bayt.com موثوقة؟", answer: "بيانات رواتب Bayt ذاتية التبليغ من المستخدمين. يستخدم شيفت بيانات استطلاع رواتب منظمة وأرقام توظيف GOSI لمعايير أكثر موثوقية." },
     ],
     faq_fr: [
       { question: "Faut-il utiliser Bayt ou SHIFT ?", answer: "Les deux. Bayt pour les offres d'emploi. SHIFT pour les salaires, le risque IA et le Nitaqat." },
@@ -318,9 +377,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Jadarat",
     competitor_description_en: "Jadarat is Saudi Arabia's official national employment portal operated by HRDF, primarily serving Saudi nationals seeking private sector employment.",
     competitor_description_fr: "Jadarat est le portail national saoudien de l'emploi opere par le HRDF, servant principalement les citoyens saoudiens a la recherche d'emploi dans le secteur prive.",
+    description_ar: "قارن بين مرصد شيفت وجدارات لبيانات التوظيف السعودية. شيفت يخدم المغتربين بأدوات مخاطر الذكاء الاصطناعي والانتقال؛ جدارات يخدم المواطنين السعوديين.",
+    competitor_description_ar: "جدارات هو البوابة الوطنية الرسمية للتوظيف في المملكة العربية السعودية يديرها صندوق تنمية الموارد البشرية، تخدم بشكل رئيسي المواطنين السعوديين الباحثين عن عمل في القطاع الخاص.",
     competitor_url: "https://www.jadarat.sa",
     title_en: "SHIFT vs Jadarat: Saudi Arabia Employment Data for Expats (2026)",
     title_fr: "SHIFT vs Jadarat : donnees emploi en Arabie Saoudite pour expatries (2026)",
+    title_ar: "شيفت مقابل جدارات: بيانات التوظيف في المملكة العربية السعودية للمغتربين (2026)",
     description_en: "Compare SHIFT Observatory and Jadarat for Saudi employment data. SHIFT serves expats with AI risk and relocation tools; Jadarat serves Saudi nationals.",
     description_fr: "Comparez SHIFT et Jadarat pour les donnees emploi saoudiennes. SHIFT pour les expatries, Jadarat pour les Saoudiens.",
     features: [
@@ -334,10 +396,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Jadarat is Saudi Arabia's official job portal for Saudi nationals. SHIFT serves a completely different audience: international workers evaluating relocation to KSA with AI risk, salary, and cost-of-living analysis.",
     verdict_fr: "Jadarat est le portail officiel d'emploi saoudien pour les citoyens saoudiens. SHIFT sert un public different : les travailleurs internationaux evaluant une expatriation avec risque IA, salaires et cout de la vie.",
+    verdict_ar: "جدارات هي بوابة التوظيف الرسمية للمملكة العربية السعودية للمواطنين السعوديين. شيفت يخدم جمهوراً مختلفاً تماماً: العمال الدوليون الذين يقيّمون الانتقال إلى المملكة مع تحليل مخاطر الذكاء الاصطناعي والرواتب وتكلفة المعيشة.",
     faq_en: [
       { question: "Can expats use Jadarat?", answer: "Jadarat primarily serves Saudi nationals seeking private sector employment. Expats should use SHIFT Observatory for salary benchmarks, AI risk data, and relocation planning, then apply through employer-sponsored channels." },
       { question: "Is Jadarat or SHIFT better for job research?", answer: "They serve different audiences. Jadarat is for Saudi nationals looking for jobs. SHIFT is for international workers evaluating Saudi Arabia as a career destination with AI risk and cost-of-living analysis." },
       { question: "Does Jadarat have AI risk data?", answer: "No. Jadarat is a job matching portal. SHIFT provides AI automation risk scoring, career transition recommendations, and labour market intelligence for 237 occupations." },
+    ],
+    faq_ar: [
+        { question: "هل يمكن للمغتربين استخدام جدارات؟", answer: "جدارات يخدم بشكل رئيسي المواطنين السعوديين الباحثين عن عمل في القطاع الخاص. يجب على المغتربين استخدام مرصد شيفت لمعايير الرواتب وبيانات مخاطر الذكاء الاصطناعي وتخطيط الانتقال، ثم التقديم عبر القنوات المدعومة من صاحب العمل." },
+        { question: "هل جدارات أو شيفت أفضل لبحث الوظائف؟", answer: "يخدمان جمهورين مختلفين. جدارات للمواطنين السعوديين الباحثين عن وظائف. شيفت للعمال الدوليين الذين يقيّمون المملكة العربية السعودية كوجهة مهنية مع تحليل مخاطر الذكاء الاصطناعي وتكلفة المعيشة." },
+        { question: "هل لدى جدارات بيانات عن مخاطر الذكاء الاصطناعي؟", answer: "لا. جدارات هي بوابة لمطابقة الوظائف. شيفت يوفر تقييم مخاطر أتمتة الذكاء الاصطناعي، توصيات الانتقال المهني، وذكاء سوق العمل لـ 237 مهنة." },
     ],
     faq_fr: [
       { question: "Les expatries peuvent-ils utiliser Jadarat ?", answer: "Jadarat est principalement pour les Saoudiens. Les expatries doivent utiliser SHIFT pour les salaires, le risque IA et la relocation." },
@@ -352,9 +420,12 @@ export const COMPARISONS: ComparisonData[] = [
     competitor: "Lightcast (Emsi Burning Glass)",
     competitor_description_en: "Lightcast (formerly Emsi Burning Glass) is the leading enterprise labor market analytics platform, used by governments and corporations worldwide.",
     competitor_description_fr: "Lightcast (ex Emsi Burning Glass) est la principale plateforme d'analyse du marche du travail pour les entreprises, utilisee par les gouvernements et les multinationales.",
+    description_ar: "قارن بين مرصد شيفت (مجاني) و Lightcast (50 ألف دولار+/سنة) لذكاء سوق عمل الذكاء الاصطناعي في السعودية، بيانات الرواتب، وتصنيف المهارات.",
+    competitor_description_ar: "Lightcast (سابقاً Emsi Burning Glass) هي المنصة الرائدة لتحليلات سوق العمل للمؤسسات، تستخدمها الحكومات والشركات حول العالم.",
     competitor_url: "https://lightcast.io",
     title_en: "SHIFT vs Lightcast: AI Labour Market Data for Saudi Arabia (2026)",
     title_fr: "SHIFT vs Lightcast : donnees IA du marche du travail en Arabie Saoudite (2026)",
+    title_ar: "شيفت مقابل Lightcast: بيانات سوق عمل الذكاء الاصطناعي للمملكة العربية السعودية (2026)",
     description_en: "Compare SHIFT Observatory (free) and Lightcast ($50K+/year) for Saudi Arabia AI labour market intelligence, salary data, and skills taxonomy.",
     description_fr: "Comparez SHIFT (gratuit) et Lightcast (50K$+/an) pour l'intelligence du marche du travail IA en Arabie Saoudite.",
     features: [
@@ -367,10 +438,16 @@ export const COMPARISONS: ComparisonData[] = [
     ],
     verdict_en: "Lightcast is the enterprise standard for global labour analytics but costs $50K+/year and has limited MENA coverage. SHIFT is free, focused on Saudi Arabia, and built for individual workers and small businesses.",
     verdict_fr: "Lightcast est la reference entreprise pour l'analyse mondiale du travail mais coute 50K$+/an avec une couverture MENA limitee. SHIFT est gratuit, concentre sur le KSA et concu pour les individus.",
+    verdict_ar: "Lightcast هو المعيار المؤسسي لتحليلات العمل العالمية لكنه يكلف 50 ألف دولار+/سنة وتغطيته لمنطقة الشرق الأوسط وشمال أفريقيا محدودة. شيفت مجاني، يركز على المملكة العربية السعودية، ومصمم للعمال الأفراد والشركات الصغيرة.",
     faq_en: [
       { question: "Is SHIFT a free alternative to Lightcast?", answer: "For Saudi Arabia specifically, yes. SHIFT provides free AI automation risk scoring, salary benchmarks, and Nitaqat analysis for 237 KSA occupations. Lightcast offers broader global data but at enterprise pricing ($50K+/year)." },
       { question: "Does Lightcast cover Saudi Arabia well?", answer: "Lightcast has limited MENA coverage compared to US and European markets. SHIFT uses official GOSI data and is purpose-built for the Saudi labour market." },
       { question: "Who should use Lightcast vs SHIFT?", answer: "Lightcast for governments, large corporations, and workforce planners needing global data. SHIFT for individual workers, expats, recruiters, and SMEs focused on Saudi Arabia." },
+    ],
+    faq_ar: [
+        { question: "هل شيفت بديل مجاني لـ Lightcast؟", answer: "للمملكة العربية السعودية تحديداً، نعم. يوفر شيفت مجاناً تقييم مخاطر أتمتة الذكاء الاصطناعي ومعايير الرواتب وتحليل نطاقات لـ 237 مهنة سعودية. Lightcast يقدم بيانات عالمية أوسع لكن بأسعار المؤسسات (50 ألف دولار+/سنة)." },
+        { question: "هل يغطي Lightcast المملكة العربية السعودية جيداً؟", answer: "Lightcast لديه تغطية محدودة لمنطقة الشرق الأوسط وشمال أفريقيا مقارنة بالأسواق الأمريكية والأوروبية. شيفت يستخدم بيانات GOSI الرسمية ومصمم خصيصاً لسوق العمل السعودي." },
+        { question: "من يجب أن يستخدم Lightcast مقابل شيفت؟", answer: "Lightcast للحكومات والشركات الكبيرة ومخططي القوى العاملة الذين يحتاجون لبيانات عالمية. شيفت للعمال الأفراد والمغتربين والمجندين والشركات الصغيرة والمتوسطة التي تركز على المملكة العربية السعودية." },
     ],
     faq_fr: [
       { question: "SHIFT est-il une alternative gratuite a Lightcast ?", answer: "Pour l'Arabie Saoudite, oui. SHIFT fournit gratuitement le risque IA, les salaires et l'analyse Nitaqat pour 237 metiers. Lightcast coute 50K$+/an." },

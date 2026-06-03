@@ -27,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: TITLES[lang],
       description: DESCRIPTIONS[lang],
-      images: [`${SITE_URL}/api/og?title=Relocation+Calculator`],
+      images: [`${SITE_URL}/api/og?lang=${lang}&title=Relocation+Calculator`],
     },
     alternates: buildLanguageAlternates(lang, "/relocate"),
   };

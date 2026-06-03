@@ -101,7 +101,7 @@ export async function generateMetadata({
       description: DESCRIPTIONS[lang],
       images: [
         {
-          url: `${SITE}/api/og`,
+          url: `${SITE}/api/og?lang=${lang}`,
           width: 1200,
           height: 630,
           alt: "SHIFT Observatory - AI Job Risk Dashboard for Saudi Arabia",
@@ -113,7 +113,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: TITLES[lang],
       description: DESCRIPTIONS[lang],
-      images: [`${SITE}/api/og`],
+      images: [`${SITE}/api/og?lang=${lang}`],
       creator: "@saudi_builder",
     },
     robots: {
