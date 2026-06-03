@@ -1,6 +1,13 @@
-import { kv } from "@vercel/kv";
-
 export const runtime = "edge";
+
+const AIRTABLE_BASE = "appyqLmjVv9KLEnIR";
+const AIRTABLE_TABLE = "tbl8gxM7A3X4xhpZQ"; // Pulse Snapshots
+const AIRTABLE_URL = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
+
+// Field IDs (Pulse Snapshots table)
+const FIELD_DATE = "fldZacblCCB07ezNm";
+const FIELD_PAYLOAD = "fldJFwxtyahUCAFo8";
+const FIELD_WEEKLY_STATS = "fldD9ra9mc8iime3d";
 
 const SYSTEM_PROMPT = `You are a labor market intelligence analyst specializing in AI-driven workforce disruption. You provide structured, factual data about companies reducing headcount due to AI automation. You always respond in valid JSON only, with no preamble, no markdown, no commentary.`;
 
@@ -93,6 +100,14 @@ export async function GET(req: Request) {
     return new Response("Unauthorized", { status: 401 });
   }
 
+  const pat = process.env.AIRTABLE_PAT;
+  if (!pat) {
+    return Response.json(
+      { ok: false, error: "AIRTABLE_PAT not configured" },
+      { status: 500 },
+    );
+  }
+
   const today = new Date().toISOString().split("T")[0];
   const lastWeek = new Date(Date.now() - 7 * 86400000)
     .toISOString()
@@ -116,7 +131,7 @@ export async function GET(req: Request) {
           temperature: 0.1,
           max_tokens: 4000,
         }),
-      }
+      },
     );
 
     if (!response.ok) {
@@ -129,37 +144,51 @@ export async function GET(req: Request) {
 
     // Parse and validate JSON (strip markdown code fences if present)
     const pulse = JSON.parse(
-      content.replace(/```json\n?|```\n?/g, "").trim()
+      content.replace(/```json\n?|```\n?/g, "").trim(),
     );
 
-    // Store in Vercel KV
-    await kv.set("shift:pulse:latest", JSON.stringify(pulse));
-    await kv.set(`shift:pulse:${today}`, JSON.stringify(pulse));
+    // Upsert into Airtable — merge on `date` so re-runs same day overwrite
+    const airtableRes = await fetch(`${AIRTABLE_URL}`, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${pat}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        performUpsert: { fieldsToMergeOn: [FIELD_DATE] },
+        records: [
+          {
+            fields: {
+              [FIELD_DATE]: today,
+              [FIELD_PAYLOAD]: JSON.stringify(pulse),
+              [FIELD_WEEKLY_STATS]: JSON.stringify(pulse.weekly_stats ?? {}),
+            },
+          },
+        ],
+        typecast: true,
+      }),
+    });
 
-    // Keep history of last 12 weeks
-    const historyRaw = await kv.get<string>("shift:pulse:history");
-    const history: Array<{ date: string; stats: unknown }> = historyRaw
-      ? (typeof historyRaw === "string" ? JSON.parse(historyRaw) : historyRaw)
-      : [];
-    history.unshift({ date: today, stats: pulse.weekly_stats });
-    if (history.length > 12) history.pop();
-    await kv.set("shift:pulse:history", JSON.stringify(history));
+    if (!airtableRes.ok) {
+      const errText = await airtableRes.text();
+      throw new Error(`Airtable error ${airtableRes.status}: ${errText}`);
+    }
 
     return Response.json({
       ok: true,
       date: today,
       events: {
-        global: pulse.global_layoffs.length,
-        gulf: pulse.gulf_mena_automation.length,
-        policy: pulse.saudi_policy_updates.length,
-        signals: pulse.ai_workforce_signals.length,
+        global: pulse.global_layoffs?.length ?? 0,
+        gulf: pulse.gulf_mena_automation?.length ?? 0,
+        policy: pulse.saudi_policy_updates?.length ?? 0,
+        signals: pulse.ai_workforce_signals?.length ?? 0,
       },
     });
   } catch (error) {
     console.error("Pulse cron failed:", error);
     return Response.json(
       { ok: false, error: String(error) },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

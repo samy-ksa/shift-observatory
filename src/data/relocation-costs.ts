@@ -298,7 +298,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 3.7,
     },
     trend: "up",
-    trendPct: 3.5,
+    trendPct: 0.8,
   },
   {
     id: "chicken_1kg",
@@ -358,7 +358,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 11.51,
     },
     trend: "up",
-    trendPct: 2.1,
+    trendPct: 1.5,
   },
   {
     id: "lamb_1kg",
@@ -388,7 +388,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 14.0,
     },
     trend: "up",
-    trendPct: 4.0,
+    trendPct: 4.5,
   },
   {
     id: "tomatoes_1kg",
@@ -417,8 +417,8 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 2.23,
       beirut: 1.19,
     },
-    trend: "down",
-    trendPct: -5.0,
+    trend: "up",
+    trendPct: 3.0,
   },
   {
     id: "potatoes_1kg",
@@ -842,7 +842,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 7.0,
     },
     trend: "up",
-    trendPct: 3.7,
+    trendPct: 0.5,
   },
   {
     id: "starbucks",
@@ -962,7 +962,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 40.0,
     },
     trend: "up",
-    trendPct: 5.0,
+    trendPct: 0.8,
   },
 
   // ============ DIGITAL SUBSCRIPTIONS ============
@@ -1220,7 +1220,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 1100,
     },
     trend: "down",
-    trendPct: -5.0,
+    trendPct: -1.5,
   },
   {
     id: "macbook_air_m3",
@@ -1588,7 +1588,7 @@ export const COST_DATABASE: CostItem[] = [
       beirut: 100,
     },
     trend: "up",
-    trendPct: 8.0,
+    trendPct: 6.0,
     note_en: "Summer AC costs can triple this in KSA",
     note_ar: "تكاليف التكييف صيفاً قد تتضاعف 3 مرات",
   },
@@ -1837,9 +1837,9 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 912,
       beirut: 772,
     },
-    trend: "stable",
-    trendPct: 1.0,
-    note_en: "Riyadh: 5-year rent freeze active (Real Estate Authority, Dec 2025). Landlords must give 365-day notice for non-renewal. Jeddah: +3-6% YoY, no cap. Dammam: +2-4% YoY.",
+    trend: "up",
+    trendPct: 0.3,
+    note_en: "Riyadh: 5-year rent freeze active (Real Estate Authority, Dec 2025). Landlords must give 365-day notice for non-renewal. Jeddah: +3-6% YoY, no cap. Dammam: +2-4% YoY. GASTAT Apr 2026: actual rentals +4.8% YoY.",
     note_fr: "Riyad : gel des loyers 5 ans en vigueur (Autorité Immobilière, déc. 2025). Djeddah : +3-6% par an, pas de plafond réglementaire.",
   },
   {
@@ -1869,8 +1869,8 @@ export const COST_DATABASE: CostItem[] = [
       tunis: 1424,
       beirut: 2026,
     },
-    trend: "stable",
-    trendPct: 2.5,
+    trend: "up",
+    trendPct: 0.6,
   },
   {
     id: "rent_compound",
@@ -1882,7 +1882,7 @@ export const COST_DATABASE: CostItem[] = [
     subcategory: "compound",
     prices: { riyadh: 18500, jeddah: 12550, dammam: 9280, makkah: 10000, madinah: 8500 },
     trend: "up",
-    trendPct: 3.5,
+    trendPct: 1.2,
     note_en: "High demand from RHQ relocations continues. Compounds largely exempt from residential rent freeze — market rate applies.",
     note_ar: "طلب مرتفع مستمر من انتقال المقرات الإقليمية. الكمباوندات مستثناة إلى حد كبير من تجميد الإيجارات السكنية.",
   },
@@ -1897,8 +1897,8 @@ export const COST_DATABASE: CostItem[] = [
     category: "education",
     subcategory: "american",
     prices: { riyadh: 105110 },
-    trend: "up",
-    trendPct: 8.0,
+    trend: "stable",
+    trendPct: 0,
   },
   {
     id: "school_bisr",

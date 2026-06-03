@@ -725,7 +725,10 @@ export default function RelocateClient({
           {/* ---- PRICE PULSE TICKER ---- */}
           {priceTrends.length > 0 && (
             <div className="bg-gray-900/50 border border-gray-800/50 rounded-md p-3 mb-6">
-              <div className="text-xs uppercase tracking-widest text-cyan-400 mb-0.5 font-bold">{r.pricePulse} — {r.pricePulseDate}</div>
+              <div className="text-xs uppercase tracking-widest text-cyan-400 mb-0.5 font-bold flex items-center gap-2 flex-wrap">
+                <span>{r.pricePulse} — {r.pricePulseDate}</span>
+                <span className="inline-block px-1.5 py-0.5 rounded text-[9px] font-medium bg-amber-500/10 border border-amber-500/30 text-amber-300 normal-case tracking-normal">{r.pricePulseEstimated}</span>
+              </div>
               <div className="text-[10px] text-gray-500 mb-2">{r.pricePulseSubtitle.replace("{city}", saudiName)}</div>
               <div className="overflow-x-auto tabs-scroll">
                 <div className="inline-flex items-center gap-0 text-xs font-mono">
@@ -1023,7 +1026,10 @@ export default function RelocateClient({
               {/* Price Pulse GRID */}
               {priceTrends.length > 0 && (
                 <div className="bg-bg-card/60 border border-white/10 rounded-xl p-5 md:p-6">
-                  <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-1">{r.pricePulse} — {r.pricePulseDate}</h3>
+                  <div className="flex items-center gap-2 flex-wrap mb-1">
+                    <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em]">{r.pricePulse} — {r.pricePulseDate}</h3>
+                    <span className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-500/10 border border-amber-500/30 text-amber-300">{r.pricePulseEstimated}</span>
+                  </div>
                   <p className="text-[10px] text-gray-500 mb-4">{r.pricePulseSubtitle.replace("{city}", saudiName)}</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">

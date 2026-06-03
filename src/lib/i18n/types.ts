@@ -703,6 +703,7 @@ export interface RelocateStrings {
   /* Price Pulse context */
   pricePulseSubtitle: string;
   pricePulseVs: string;
+  pricePulseEstimated: string;
   ppCity: string;
   ppOriginPrice: string;
   /* Exchange rate */
