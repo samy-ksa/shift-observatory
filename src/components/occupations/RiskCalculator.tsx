@@ -8,6 +8,7 @@ import RiskBadge from "@/components/shared/RiskBadge";
 import { riskLabel, scoreToCategory } from "@/lib/utils";
 import InfoTooltip from "@/components/shared/InfoTooltip";
 import { useLang, formatNumber } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import { toSlug } from "@/lib/occupations";
 import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
@@ -391,7 +392,7 @@ export default function RiskCalculator() {
                   {findClosestOccupations(query, 5).map((m) => (
                     <a
                       key={m.slug}
-                      href={`/job/${m.slug}`}
+                      href={localizedHref(lang, `/job/${m.slug}`)}
                       className="block border border-gray-800 rounded-lg p-3 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
                     >
                       <div className="flex items-center justify-between mb-1">
@@ -964,7 +965,7 @@ export default function RiskCalculator() {
               {/* FOOTER */}
               <div className="p-4 border-t border-white/5 flex justify-between items-center">
                 <Link
-                  href={`/job/${toSlug(selected.name_en)}`}
+                  href={localizedHref(lang, `/job/${toSlug(selected.name_en)}`)}
                   className="text-xs text-accent-neon hover:text-cyan-300 transition-colors font-medium"
                 >
                   {t.jobPage.viewFullAnalysis}

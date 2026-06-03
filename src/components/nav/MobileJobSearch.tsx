@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import { getAllOccupations, toSlug, type Occupation, OCCUPATION_COUNT } from "@/lib/occupations";
 import { findClosestOccupations } from "@/lib/occupation-matcher";
 import { getScoreTrend } from "@/data/score-history";
@@ -68,9 +69,9 @@ export default function MobileJobSearch() {
   }, [open]);
 
   const handleSelect = useCallback((occ: Occupation) => {
-    router.push(`/job/${toSlug(occ.name_en)}`);
+    router.push(localizedHref(lang, `/job/${toSlug(occ.name_en)}`));
     setOpen(false);
-  }, [router]);
+  }, [router, lang]);
 
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: jd.filterAll },
@@ -151,7 +152,7 @@ export default function MobileJobSearch() {
                     {t.match.matchClosest}
                   </p>
                   {findClosestOccupations(debouncedQ, 3).map((m) => (
-                    <a key={m.slug} href={`/job/${m.slug}`} onClick={() => setOpen(false)} className="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-800 transition-colors border-b border-gray-800/30">
+                    <a key={m.slug} href={localizedHref(lang, `/job/${m.slug}`)} onClick={() => setOpen(false)} className="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-800 transition-colors border-b border-gray-800/30">
                       <div className="flex items-center gap-2">
                         <span className={`w-1.5 h-1.5 rounded-full ${m.occupation.composite > 70 ? "bg-red-500" : m.occupation.composite > 40 ? "bg-amber-500" : "bg-green-500"}`} />
                         <span className="text-gray-200 text-sm">

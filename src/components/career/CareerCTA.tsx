@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import { motion } from "framer-motion";
 
 export default function CareerCTA() {
-  const { t, dir } = useLang();
+  const { t, dir, lang } = useLang();
 
   return (
     <motion.div
@@ -17,7 +18,7 @@ export default function CareerCTA() {
       dir={dir}
     >
       <Link
-        href="/career"
+        href={localizedHref(lang, "/career")}
         className="group flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl
           bg-gradient-to-r from-accent-primary/10 to-cyan-500/5
           border border-accent-primary/20 hover:border-accent-primary/40

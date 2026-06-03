@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import { type Occupation, fmt } from "@/lib/occupations";
 import {
   JOB_REQUIREMENTS,
@@ -337,7 +338,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
         {/* Relocation calculator link */}
         <div className="mt-6 border border-cyan-500/20 bg-cyan-400/5 rounded-lg p-4">
           <Link
-            href="/relocate"
+            href={localizedHref(lang, "/relocate")}
             className="flex items-center gap-3 group"
           >
             <span className="text-lg font-semibold text-cyan-400">$</span>

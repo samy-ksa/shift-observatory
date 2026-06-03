@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import LangToggle from "@/components/ui/LangToggle";
 import EmailGateModal from "@/components/shared/EmailGateModal";
 import {
@@ -371,19 +372,19 @@ export default function PrepareClient() {
                 {t.links?.exploreMore || "Explore More"}
               </h3>
               <div className="flex flex-wrap gap-2">
-                <a href="/relocate" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/relocate")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   {t.links?.relocationCalculator || "Relocation Calculator"}
                 </a>
-                <a href="/career" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/career")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   {t.links?.careerRecommender || "Career Recommender"}
                 </a>
-                <a href="/job/registered-nurses" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/job/registered-nurses")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   Registered Nurses — AI Risk
                 </a>
-                <a href="/job/software-developers" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/job/software-developers")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   Software Developers — AI Risk
                 </a>
-                <a href="/job/civil-engineers" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/job/civil-engineers")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   Civil Engineers — AI Risk
                 </a>
               </div>

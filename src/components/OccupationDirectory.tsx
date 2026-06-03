@@ -3,6 +3,7 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import {
   getAllOccupations,
   toSlug,
@@ -187,7 +188,7 @@ export default function OccupationDirectory() {
           {popularOccs.map((occ, i) => (
             <span key={occ.name_en} className="flex items-center">
               <Link
-                href={`/job/${toSlug(occ.name_en)}`}
+                href={localizedHref(lang, `/job/${toSlug(occ.name_en)}`)}
                 className="text-cyan-400 hover:text-cyan-300 text-xs transition-colors"
               >
                 {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
@@ -249,7 +250,7 @@ export default function OccupationDirectory() {
             return (
               <Link
                 key={occ.name_en}
-                href={`/job/${toSlug(occ.name_en)}`}
+                href={localizedHref(lang, `/job/${toSlug(occ.name_en)}`)}
                 className="group block border border-gray-800/50 rounded-md p-3 bg-gray-900/50 hover:bg-gray-800/30 hover:border-gray-700 transition-all"
               >
                 <div className="flex items-start justify-between gap-2">

@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import {
   getAllOccupations,
   toSlug,
@@ -152,11 +153,11 @@ function SearchPanel({
         results[highlightIdx]
       ) {
         e.preventDefault();
-        router.push(`/job/${toSlug(results[highlightIdx].name_en)}`);
+        router.push(localizedHref(lang, `/job/${toSlug(results[highlightIdx].name_en)}`));
         onClose();
       }
     },
-    [results, highlightIdx, router, onClose]
+    [results, highlightIdx, router, onClose, lang]
   );
 
   const filters: { key: Filter; label: string }[] = [
@@ -216,7 +217,7 @@ function SearchPanel({
                   {t.match.matchClosest}
                 </p>
                 {findClosestOccupations(debouncedQ, 3).map((m) => (
-                  <a key={m.slug} href={`/job/${m.slug}`} onClick={onClose} className="flex items-center justify-between px-2 py-2 rounded hover:bg-gray-800 transition-colors">
+                  <a key={m.slug} href={localizedHref(lang, `/job/${m.slug}`)} onClick={onClose} className="flex items-center justify-between px-2 py-2 rounded hover:bg-gray-800 transition-colors">
                     <div className="flex items-center gap-2">
                       <span className={`w-1.5 h-1.5 rounded-full ${m.occupation.composite > 70 ? "bg-red-500" : m.occupation.composite > 40 ? "bg-amber-500" : "bg-green-500"}`} />
                       <span className="text-gray-200 text-sm">
@@ -238,7 +239,7 @@ function SearchPanel({
             results.map((occ, i) => (
               <Link
                 key={occ.name_en}
-                href={`/job/${toSlug(occ.name_en)}`}
+                href={localizedHref(lang, `/job/${toSlug(occ.name_en)}`)}
                 onClick={onClose}
                 onMouseEnter={() => setHighlightIdx(i)}
                 className={`flex items-center justify-between px-3 cursor-pointer transition-colors ${
@@ -306,7 +307,7 @@ function SearchPanel({
 
       {/* Browse all */}
       <Link
-        href="/career"
+        href={localizedHref(lang, "/career")}
         onClick={onClose}
         className="block text-center text-cyan-400 hover:text-cyan-300 text-xs py-3 border-t border-gray-800 transition-colors"
       >

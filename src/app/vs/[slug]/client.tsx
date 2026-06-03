@@ -1,6 +1,7 @@
 "use client";
 
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import LangToggle from "@/components/ui/LangToggle";
 import type { ComparisonData } from "@/data/comparisons";
 
@@ -115,10 +116,10 @@ export default function VSClient({ data }: { data: ComparisonData }) {
             <a href="/" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold px-6 py-3 rounded-lg transition-colors">
               {isFr ? "Ouvrir le tableau de bord" : "Open Dashboard"} →
             </a>
-            <a href="/relocate" className="border border-gray-700 hover:border-cyan-500 text-gray-300 hover:text-cyan-400 px-6 py-3 rounded-lg transition-colors">
+            <a href={localizedHref(lang, "/relocate")} className="border border-gray-700 hover:border-cyan-500 text-gray-300 hover:text-cyan-400 px-6 py-3 rounded-lg transition-colors">
               {isFr ? "Calculateur de relocation" : "Relocation Calculator"}
             </a>
-            <a href="/prepare" className="border border-gray-700 hover:border-cyan-500 text-gray-300 hover:text-cyan-400 px-6 py-3 rounded-lg transition-colors">
+            <a href={localizedHref(lang, "/prepare")} className="border border-gray-700 hover:border-cyan-500 text-gray-300 hover:text-cyan-400 px-6 py-3 rounded-lg transition-colors">
               {isFr ? "Checklist depart" : "Departure Checklist"}
             </a>
           </div>
@@ -128,10 +129,10 @@ export default function VSClient({ data }: { data: ComparisonData }) {
         <div className="mt-8 text-xs text-gray-500">
           <p className="mb-2">{isFr ? "Explorez egalement :" : "Also explore:"}</p>
           <div className="flex flex-wrap gap-3">
-            <a href="/job/data-entry-keyers" className="text-cyan-400 hover:underline">Data Entry Keyers</a>
-            <a href="/job/registered-nurses" className="text-cyan-400 hover:underline">Registered Nurses</a>
-            <a href="/job/software-developers" className="text-cyan-400 hover:underline">Software Developers</a>
-            <a href="/career" className="text-cyan-400 hover:underline">{isFr ? "Recommandation carriere" : "Career Recommender"}</a>
+            <a href={localizedHref(lang, "/job/data-entry-keyers")} className="text-cyan-400 hover:underline">Data Entry Keyers</a>
+            <a href={localizedHref(lang, "/job/registered-nurses")} className="text-cyan-400 hover:underline">Registered Nurses</a>
+            <a href={localizedHref(lang, "/job/software-developers")} className="text-cyan-400 hover:underline">Software Developers</a>
+            <a href={localizedHref(lang, "/career")} className="text-cyan-400 hover:underline">{isFr ? "Recommandation carriere" : "Career Recommender"}</a>
           </div>
         </div>
       </div>

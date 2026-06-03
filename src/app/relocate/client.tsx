@@ -15,6 +15,7 @@ const RadarChartSection = dynamic(
   },
 );
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import LangToggle from "@/components/ui/LangToggle";
 import ShareBar from "@/components/shared/ShareBar";
 import EmailGateModal from "@/components/shared/EmailGateModal";
@@ -548,7 +549,7 @@ export default function RelocateClient({
                     )) : (
                       <div className="px-4 py-3 text-sm">
                         <span className="text-text-muted">{r.noMatch} </span>
-                        <Link href="/career" className="text-cyan-400 hover:underline" onClick={() => setOccDropOpen(false)}>{r.browseAll} &rarr;</Link>
+                        <Link href={localizedHref(lang, "/career")} className="text-cyan-400 hover:underline" onClick={() => setOccDropOpen(false)}>{r.browseAll} &rarr;</Link>
                       </div>
                     )}
                   </div>
@@ -1157,10 +1158,10 @@ export default function RelocateClient({
                 {t.links?.exploreMore || "Explore More"}
               </h3>
               <div className="flex flex-wrap gap-2">
-                <a href="/prepare" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/prepare")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   {t.links?.checklistDepart || "Departure Checklist"}
                 </a>
-                <a href="/career" className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href={localizedHref(lang, "/career")} className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 transition-colors">
                   {t.links?.careerRecommender || "Career Recommender"}
                 </a>
               </div>
@@ -1189,7 +1190,7 @@ export default function RelocateClient({
             const sCity = SAUDI_CITIES.find((c) => c.id === s);
             if (!oCity || !sCity) return null;
             return (
-              <Link key={`${o}-${s}`} href={`/relocate/${o}-to-${s}`}
+              <Link key={`${o}-${s}`} href={localizedHref(lang, `/relocate/${o}-to-${s}`)}
                 className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-text-muted hover:text-cyan-400 hover:border-cyan-400/30 transition-colors">
                 {`${ln(lang, oCity)} \u2192 ${ln(lang, sCity)}`}
               </Link>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
 import FindJobTab from "@/components/job/FindJobTab";
 import {
   type Occupation,
@@ -606,15 +607,15 @@ export default function JobPageClient({
             {t.links.exploreMore}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <a href="/relocate" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+            <a href={localizedHref(lang, "/relocate")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.relocationCalculator}</div>
               <div className="text-gray-500 text-xs mt-1">{t.links.relocationCalcDesc}</div>
             </a>
-            <a href="/prepare" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+            <a href={localizedHref(lang, "/prepare")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.checklistDepart}</div>
               <div className="text-gray-500 text-xs mt-1">{t.links.checklistDesc}</div>
             </a>
-            <a href="/career" className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
+            <a href={localizedHref(lang, "/career")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.careerRecommender}</div>
               <div className="text-gray-500 text-xs mt-1">{t.links.careerDesc}</div>
             </a>
@@ -626,7 +627,7 @@ export default function JobPageClient({
             {related.slice(0, 5).map((job) => (
               <a
                 key={toSlug(job.name_en)}
-                href={`/job/${toSlug(job.name_en)}`}
+                href={localizedHref(lang, `/job/${toSlug(job.name_en)}`)}
                 className="text-xs border border-gray-800/50 rounded px-3 py-1.5 text-gray-300 hover:text-cyan-400 hover:border-cyan-400/30 transition-colors"
               >
                 {lang === "ar" ? job.name_ar : lang === "fr" ? (job.name_fr || job.name_en) : job.name_en} — {job.composite}/100
@@ -638,7 +639,7 @@ export default function JobPageClient({
         {/* ── Compare CTA ── */}
         <section className="border-t border-gray-800 pt-6 pb-12 text-center">
           <Link
-            href="/career"
+            href={localizedHref(lang, "/career")}
             className="inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-medium rounded-md transition-colors"
           >
             {jp.compareCta}
