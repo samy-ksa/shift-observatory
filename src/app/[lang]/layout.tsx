@@ -1,3 +1,5 @@
+import "../globals.css";
+
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, JetBrains_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
