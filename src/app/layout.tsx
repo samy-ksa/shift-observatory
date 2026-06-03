@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "SHIFT Observatory",
   title: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
-  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q1 2026.",
+  description: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations. Salary data, Nitaqat status, career transitions, relocation calculator. Updated Q2 2026.",
     keywords: [
       // English
       "AI risk Saudi Arabia",

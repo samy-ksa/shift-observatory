@@ -318,7 +318,7 @@ export const en: Dictionary = {
   },
   footer: {
     tagline: "Built with data. Not fear.",
-    version: "SHIFT Observatory V1.0 \u2014 Mar 2026",
+    version: "SHIFT Observatory V1.0 \u2014 Jun 2026",
   },
   profile: {
     title: "My AI Risk Profile",

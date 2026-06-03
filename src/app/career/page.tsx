@@ -27,14 +27,21 @@ export const metadata: Metadata = {
 
 export default function CareerPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-bg-primary flex items-center justify-center">
-          <div className="text-text-muted animate-pulse">Loading...</div>
-        </div>
-      }
-    >
-      <CareerRecommender />
-    </Suspense>
+    <>
+      {/* SEO-only H1 — server-rendered so Google sees the topic instantly.
+          Visually hidden because CareerRecommender (client) renders its own localized hero h2. */}
+      <h1 className="sr-only">
+        AI-Resilient Career Paths in Saudi Arabia — Career Transition Recommender
+      </h1>
+      <Suspense
+        fallback={
+          <div className="min-h-screen bg-bg-primary flex items-center justify-center">
+            <div className="text-text-muted animate-pulse">Loading...</div>
+          </div>
+        }
+      >
+        <CareerRecommender />
+      </Suspense>
+    </>
   );
 }

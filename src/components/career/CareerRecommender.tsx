@@ -362,7 +362,7 @@ export default function CareerRecommender() {
         {/* Header */}
         <div className="text-center mb-10">
           <span className="text-4xl mb-3 block">{"\uD83D\uDE80"}</span>
-          <h1 className="text-3xl font-bold text-white">{c.title}</h1>
+          <h2 className="text-3xl font-bold text-white">{c.title}</h2>
           <p className="text-text-muted mt-2 text-sm">{c.subtitle}</p>
         </div>
 

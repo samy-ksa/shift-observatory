@@ -302,7 +302,7 @@ export const fr: Dictionary = {
   },
   footer: {
     tagline: "Construit avec des données. Pas la peur.",
-    version: "SHIFT Observatory V1.0 — Mars 2026",
+    version: "SHIFT Observatory V1.0 — Juin 2026",
   },
   profile: {
     title: "Mon profil de risque IA",

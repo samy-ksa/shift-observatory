@@ -152,7 +152,7 @@ export default function Home() {
           Explore salary benchmarks, Nitaqat saudization bands, career transition paths, and
           cost-of-living comparisons for expats relocating to Riyadh, Jeddah, or Dammam.
           Data from GOSI Q4-2024, WEF Future of Jobs 2025, and Frey &amp; Osborne methodology.
-          Free, trilingual (English, French, Arabic), updated Q1 2026.
+          Free, trilingual (English, French, Arabic), updated Q2 2026.
         </p>
       </section>
 

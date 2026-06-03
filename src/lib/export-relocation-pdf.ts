@@ -768,7 +768,7 @@ export async function generateRelocationReport(p: RelocationPDFParams) {
   y = bodyText(v2030Text, y);
   y += 6;
 
-  y = boldLine(isFr ? "INDICATEURS CL\u00c9S (T1 2026)" : "KEY INDICATORS (Q1 2026)", y);
+  y = boldLine(isFr ? "INDICATEURS CL\u00c9S (T2 2026)" : "KEY INDICATORS (Q2 2026)", y);
   y += 2;
   const indicators = isFr ? [
     "4,45 millions de travailleurs expatri\u00e9s enregistr\u00e9s (GOSI)",

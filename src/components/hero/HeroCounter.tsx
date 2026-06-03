@@ -93,9 +93,9 @@ export default function HeroCounter() {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h1 className="text-lg font-semibold tracking-[0.3em] text-text-secondary uppercase">
+          <p className="text-lg font-semibold tracking-[0.3em] text-text-secondary uppercase">
             SHIFT Observatory
-          </h1>
+          </p>
           <p className="text-sm text-text-muted mt-1">
             {t.hero.title}
           </p>
