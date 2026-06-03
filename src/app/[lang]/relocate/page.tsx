@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n/context";
 import RelocateClient from "@/app/relocate/client";
-import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 
 const TITLES: Record<Lang, string> = {
   en: "Saudi Arabia Cost of Living Calculator: Compare 65+ Items | Free Tool",
@@ -33,6 +33,28 @@ export async function generateMetadata({
   };
 }
 
-export default function LangRelocatePage() {
-  return <RelocateClient />;
+const BREADCRUMB_LABEL: Record<Lang, string> = {
+  en: "Relocation Calculator",
+  fr: "Calculateur de relocation",
+  ar: "حاسبة الانتقال",
+};
+
+export default async function LangRelocatePage({
+  params,
+}: {
+  params: Promise<{ lang: Lang }>;
+}) {
+  const { lang } = await params;
+  const breadcrumbLd = buildBreadcrumbLd(lang, [
+    { name: BREADCRUMB_LABEL[lang], path: "/relocate" },
+  ]);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <RelocateClient />
+    </>
+  );
 }

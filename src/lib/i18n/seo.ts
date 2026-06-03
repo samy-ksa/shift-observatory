@@ -50,3 +50,43 @@ export function buildLanguageAlternates(
     },
   };
 }
+
+/**
+ * Localized labels for breadcrumb "Home" item across the site.
+ */
+const HOME_LABEL: Record<Lang, string> = {
+  en: "SHIFT Observatory",
+  fr: "SHIFT Observatory",
+  ar: "مرصد شيفت",
+};
+
+type BreadcrumbItem = { name: string; path: string };
+
+/**
+ * Build a BreadcrumbList JSON-LD schema for the given trail.
+ *
+ * The "Home" entry is auto-prepended; pass only the descendant items.
+ * URLs are locale-prefixed automatically.
+ *
+ * @example
+ * buildBreadcrumbLd("ar", [{ name: "موصي الانتقال المهني", path: "/career" }])
+ */
+export function buildBreadcrumbLd(
+  lang: Lang,
+  trail: BreadcrumbItem[],
+) {
+  const items = [
+    { name: HOME_LABEL[lang], path: "/" },
+    ...trail,
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: urlFor(lang, item.path),
+    })),
+  };
+}

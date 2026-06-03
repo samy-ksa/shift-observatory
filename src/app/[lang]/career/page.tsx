@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n/context";
 import CareerRecommender from "@/components/career/CareerRecommender";
-import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 
 const TITLES: Record<Lang, string> = {
   en: "Career Transition Recommender | SHIFT Observatory",
@@ -20,6 +20,12 @@ const SR_H1: Record<Lang, string> = {
   en: "AI-Resilient Career Paths in Saudi Arabia — Career Transition Recommender",
   fr: "Parcours de carrière résilients à l'IA en Arabie Saoudite — Recommandeur de transition",
   ar: "مسارات مهنية مرنة للذكاء الاصطناعي في المملكة العربية السعودية — موصي الانتقال المهني",
+};
+
+const BREADCRUMB_LABEL: Record<Lang, string> = {
+  en: "Career Transition Recommender",
+  fr: "Recommandeur de transition de carrière",
+  ar: "موصي الانتقال المهني",
 };
 
 export function generateStaticParams() {
@@ -57,8 +63,15 @@ export default async function LangCareerPage({
   params: Promise<{ lang: Lang }>;
 }) {
   const { lang } = await params;
+  const breadcrumbLd = buildBreadcrumbLd(lang, [
+    { name: BREADCRUMB_LABEL[lang], path: "/career" },
+  ]);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <h1 className="sr-only">{SR_H1[lang]}</h1>
       <Suspense
         fallback={

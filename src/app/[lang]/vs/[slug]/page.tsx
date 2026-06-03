@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getComparison, getAllComparisonSlugs } from "@/data/comparisons";
 import type { Lang } from "@/lib/i18n/context";
 import VSClient from "@/app/vs/[slug]/client";
-import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
 
 const LANGS: Lang[] = ["en", "fr", "ar"];
 
@@ -70,19 +70,9 @@ export default async function LangVSPage({
     })),
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "SHIFT Observatory", item: SITE_URL },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: `SHIFT vs ${data.competitor}`,
-        item: `${SITE_URL}/vs/${slug}`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbLd(lang, [
+    { name: `SHIFT vs ${data.competitor}`, path: `/vs/${slug}` },
+  ]);
 
   return (
     <>

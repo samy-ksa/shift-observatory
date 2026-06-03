@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n/context";
 import PrepareClient from "@/app/prepare/client";
-import { buildLanguageAlternates } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
+
+const BREADCRUMB_LABEL: Record<Lang, string> = {
+  en: "Pre-Departure Checklist",
+  fr: "Check-list pré-départ",
+  ar: "قائمة التحضير للسفر",
+};
 
 const TITLES: Record<Lang, string> = {
   en: "Saudi Arabia Pre-Departure Checklist: Complete Guide by Country (2026) | SHIFT",
@@ -79,11 +85,18 @@ export default async function LangPreparePage({
   params: Promise<{ lang: Lang }>;
 }) {
   const { lang } = await params;
+  const breadcrumbLd = buildBreadcrumbLd(lang, [
+    { name: BREADCRUMB_LABEL[lang], path: "/prepare" },
+  ]);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqLd(lang)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <PrepareClient />
     </>
