@@ -4,49 +4,86 @@ import { ORIGIN_CITIES, SAUDI_CITIES } from "@/data/relocation-data";
 import { getAllComparisonSlugs } from "@/data/comparisons";
 
 const BASE = "https://www.ksashiftobservatory.online";
+const LANGS = ["en", "fr", "ar"] as const;
+const HREFLANG_REGIONS: Record<(typeof LANGS)[number], string[]> = {
+  en: ["en"],
+  fr: ["fr"],
+  ar: ["ar", "ar-SA"],
+};
+
 const now = new Date();
 
+type Path = {
+  path: string;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority: number;
+};
+
+function buildAlternates(path: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const lang of LANGS) {
+    const url = `${BASE}/${lang}${path === "/" ? "" : path}`;
+    for (const hl of HREFLANG_REGIONS[lang]) {
+      out[hl] = url;
+    }
+  }
+  out["x-default"] = `${BASE}/en${path === "/" ? "" : path}`;
+  return out;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static pages
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/career`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/relocate`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/profile`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/prepare`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${BASE}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${BASE}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+  // Static paths
+  const staticPaths: Path[] = [
+    { path: "/", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/career", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/relocate", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/profile", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/prepare", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/cookies", changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  // /job/[slug] — 237 occupation pages
-  const jobPages: MetadataRoute.Sitemap = getAllOccupations().map((occ) => ({
-    url: `${BASE}/job/${toSlug(occ.name_en)}`,
-    lastModified: now,
-    changeFrequency: "weekly",
+  // Dynamic paths
+  const jobPaths: Path[] = getAllOccupations().map((occ) => ({
+    path: `/job/${toSlug(occ.name_en)}`,
+    changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
 
-  // /relocate/[pair] — all origin × saudi city pairs
-  const relocatePages: MetadataRoute.Sitemap = [];
+  const relocatePaths: Path[] = [];
   for (const origin of ORIGIN_CITIES) {
     for (const saudi of SAUDI_CITIES) {
-      relocatePages.push({
-        url: `${BASE}/relocate/${origin.id}-to-${saudi.id}`,
-        lastModified: now,
-        changeFrequency: "monthly",
+      relocatePaths.push({
+        path: `/relocate/${origin.id}-to-${saudi.id}`,
+        changeFrequency: "monthly" as const,
         priority: 0.7,
       });
     }
   }
 
-  // /vs/[slug] — 8 comparison pages
-  const vsPages: MetadataRoute.Sitemap = getAllComparisonSlugs().map((slug) => ({
-    url: `${BASE}/vs/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
+  const vsPaths: Path[] = getAllComparisonSlugs().map((slug) => ({
+    path: `/vs/${slug}`,
+    changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...staticPages, ...jobPages, ...relocatePages, ...vsPages];
+  const allPaths = [...staticPaths, ...jobPaths, ...relocatePaths, ...vsPaths];
+
+  // Emit 3 URL entries per path (one per lang), each with full hreflang alternates.
+  // Next.js renders `alternates.languages` as <xhtml:link rel="alternate" hreflang>.
+  const entries: MetadataRoute.Sitemap = [];
+  for (const lang of LANGS) {
+    for (const p of allPaths) {
+      entries.push({
+        url: `${BASE}/${lang}${p.path === "/" ? "" : p.path}`,
+        lastModified: now,
+        changeFrequency: p.changeFrequency,
+        priority: p.priority,
+        alternates: { languages: buildAlternates(p.path) },
+      });
+    }
+  }
+
+  return entries;
 }
