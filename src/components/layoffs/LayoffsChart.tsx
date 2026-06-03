@@ -29,7 +29,13 @@ const monthly2025 = data.layoffs.monthly["2025"].map((m) => ({
   year: 2025,
 }));
 
-const chartData = [...monthly2024, ...monthly2025];
+const monthly2026 = (data.layoffs.monthly as Record<string, Array<{ month: string; total: number; top3: string }>>)["2026"]?.map((m) => ({
+  name: m.month + " '26",
+  total: m.total,
+  year: 2026,
+})) ?? [];
+
+const chartData = [...monthly2024, ...monthly2025, ...monthly2026];
 
 const challenger = data.layoffs.challenger;
 
@@ -57,6 +63,15 @@ const gulfCases: CaseItem[] = data.ksa_ai_cases.map((c) => ({
 }));
 
 const internationalCases: CaseItem[] = [
+  // ===== 2026 H1 (most recent first) =====
+  { entity: "Meta", jobs: 8000, reason: "10% workforce cut, Trust & Safety AI moderation replaced humans", date: "May 2026", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
+  { entity: "Microsoft", jobs: 12000, reason: "AI capex pivot, buyouts + cuts as payroll converts to GPU spend", date: "Apr 2026", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
+  { entity: "Oracle", jobs: 30000, reason: "Largest layoff in 49-yr history, Cerner/OCI/ERP cut to fund $50B AI infra (Stargate)", date: "Mar 2026", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
+  { entity: "Atlassian", jobs: 1600, reason: "Q1 2026 restructuring, AI-first product strategy", date: "Mar 2026", status: "confirmed", country: "Australia", flag: "AU", ai_role: "direct" },
+  { entity: "Broadcom", jobs: 1200, reason: "Post-acquisition consolidation, AI workflow automation", date: "Mar 2026", status: "confirmed", country: "US", flag: "US", ai_role: "contributing" },
+  { entity: "Salesforce", jobs: 4000, reason: "Customer support cut, Benioff: 'I need less heads' — Agentforce AI", date: "Q1 2026", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
+  { entity: "Amazon (Corp)", jobs: 16000, reason: "Corporate roles cut, AI-driven workflow consolidation", date: "Jan 2026", status: "confirmed", country: "US", flag: "US", ai_role: "contributing" },
+  // ===== 2024-2025 (existing) =====
   { entity: "Google (Ads)", jobs: 1000, reason: "AI-powered ad products replacing account management", date: "Jan 2024", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
   { entity: "Chegg", jobs: 468, reason: "ChatGPT destroying homework help demand", date: "Oct 2025", status: "confirmed", country: "US", flag: "US", ai_role: "direct" },
   { entity: "Klarna", jobs: 700, reason: "AI assistant replaced 700 FTE equivalent", date: "Feb 2024", status: "confirmed", country: "Sweden", flag: "SE", ai_role: "direct" },
@@ -104,6 +119,15 @@ const GULF_CASE_AR: Record<string, string> = {
 
 /* International case description AR mapping */
 const INTL_CASE_AR: Record<string, string> = {
+  // 2026 H1
+  "10% workforce cut, Trust & Safety AI moderation replaced humans": "تخفيض 10% من القوى العاملة، الإشراف بالذكاء الاصطناعي يحل محل البشر",
+  "AI capex pivot, buyouts + cuts as payroll converts to GPU spend": "تحول استثمارات الذكاء الاصطناعي، استبدال الرواتب بإنفاق GPU",
+  "Largest layoff in 49-yr history, Cerner/OCI/ERP cut to fund $50B AI infra (Stargate)": "أكبر تسريح في تاريخ أوراكل، تخفيض Cerner/OCI/ERP لتمويل 50 مليار دولار للبنية التحتية للذكاء الاصطناعي",
+  "Q1 2026 restructuring, AI-first product strategy": "إعادة هيكلة الربع الأول 2026، استراتيجية المنتج المعتمدة على الذكاء الاصطناعي أولاً",
+  "Post-acquisition consolidation, AI workflow automation": "دمج ما بعد الاستحواذ، أتمتة سير العمل بالذكاء الاصطناعي",
+  "Customer support cut, Benioff: 'I need less heads' — Agentforce AI": "تخفيض دعم العملاء، Benioff: «أحتاج عدد أقل من الموظفين» — Agentforce AI",
+  "Corporate roles cut, AI-driven workflow consolidation": "تخفيض الأدوار المؤسسية، دمج سير العمل بالذكاء الاصطناعي",
+  // Existing 2024-2025
   "AI-powered ad products replacing account management": "منتجات الإعلانات بالذكاء الاصطناعي تحل محل إدارة الحسابات",
   "ChatGPT destroying homework help demand": "ChatGPT يقضي على الطلب على مساعدة الواجبات",
   "AI assistant replaced 700 FTE equivalent": "مساعد ذكاء اصطناعي حل محل 700 موظف بدوام كامل",
@@ -211,46 +235,46 @@ export default function LayoffsSection() {
         >
           {[
             {
-              label: t.layoffs.kpiLabels.techLayoffs2024,
-              value: "151K",
-              color: "text-text-primary",
-              tooltip:
-                "Total tech sector layoffs globally in 2024 as tracked by Layoffs.fyi via TechCrunch. Includes all reasons, not just AI.",
-            },
-            {
               label: t.layoffs.kpiLabels.techLayoffs2025,
               value: "245K",
               color: "text-text-primary",
               tooltip:
-                "Total tech sector layoffs globally in 2025 year-to-date. Source: Layoffs.fyi monthly compilations.",
+                "Total tech sector layoffs globally in 2025. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.techLayoffs2026Ytd,
-              value: "38K",
+              value: "125K",
               color: "text-text-primary",
               tooltip:
-                "Total tech sector layoffs globally in 2026 year-to-date. Source: Layoffs.fyi monthly compilations.",
+                "Total tech sector layoffs globally in 2026 year-to-date (Jan–May). Source: Layoffs.fyi / TrueUp tracker (May 2026).",
+            },
+            {
+              label: t.layoffs.kpiLabels.oracleMega,
+              value: "30K",
+              color: "text-risk-very-high",
+              tooltip:
+                "Oracle's March 31, 2026 layoff — 30,000 jobs cut, the largest in Oracle's 49-year history. Cerner/OCI/ERP teams hit hardest to fund the $50B Stargate AI infrastructure buildout. Source: CNBC, Time, TechTimes.",
             },
             {
               label: t.layoffs.kpiLabels.aiCited,
-              value: formatNumber(55000, lang),
+              value: formatNumber(challenger["2026_ytd_ai_cited"], lang),
               color: "text-risk-high",
               tooltip:
-                "Number of US layoffs in 2025 where AI or automation was explicitly cited as a reason. This is 4.6% of all US layoffs. Source: Challenger, Gray & Christmas.",
+                "Number of US layoffs in 2026 YTD where AI was explicitly cited as cause. Up from 54,836 in all of 2025. Source: Challenger, Gray & Christmas (April 2026 report).",
             },
             {
-              label: t.layoffs.kpiLabels.aiPct2025,
-              value: "4.8%",
+              label: t.layoffs.kpiLabels.aiPct2026,
+              value: challenger["2026_ytd_ai_pct"] + "%",
               color: "text-risk-high",
               tooltip:
-                "Percentage of all US layoffs in 2025 that explicitly cited AI as a cause. Source: Challenger, Gray & Christmas.",
+                "Share of all US layoffs in 2026 YTD that explicitly cited AI as cause — up from 4.6% in 2025. AI is now the #1 stated reason for cuts in March and April 2026. Source: Challenger, Gray & Christmas.",
             },
             {
               label: t.layoffs.kpiLabels.peakAi,
               value: challenger.peak_month.ai_pct + "%",
               color: "text-risk-very-high",
               tooltip:
-                "In October 2025, 20.3% of all US layoffs explicitly mentioned AI as a cause — the highest monthly percentage ever recorded. Source: Challenger, Gray & Christmas.",
+                "In April 2026, 26% of all US layoffs explicitly mentioned AI as cause — highest monthly share ever. AI led all reasons for 2 consecutive months (Mar–Apr 2026). Source: Challenger, Gray & Christmas.",
             },
           ].map((stat) => (
             <div
@@ -275,7 +299,7 @@ export default function LayoffsSection() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-2xl p-4 md:p-6 card-glow"
         >
-          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly AI-related layoffs in 2024 and 2025">
+          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly AI-related layoffs from 2024 to 2026">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}
@@ -298,25 +322,27 @@ export default function LayoffsSection() {
                 />
                 <Tooltip content={<CustomTooltip lang={lang} jobsLabel={t.layoffs.jobsLabel} />} />
                 <ReferenceLine
-                  x="Jan '25"
-                  stroke="#374151"
+                  x="Mar '26"
+                  stroke="#DC2626"
                   strokeDasharray="3 3"
                   label={{
-                    value: t.layoffs.postHolidayLull,
-                    position: "bottom",
-                    fill: "#6B7280",
+                    value: t.layoffs.oracleMarker,
+                    position: "top",
+                    fill: "#DC2626",
                     fontSize: 10,
-                    offset: 5,
+                    offset: 8,
                   }}
                 />
                 <Bar dataKey="total" radius={[4, 4, 0, 0]}>
-                  {chartData.map((entry, i) => (
-                    <Cell
-                      key={i}
-                      fill={entry.year === 2025 ? "#EF4444" : "#6B7280"}
-                      fillOpacity={0.8}
-                    />
-                  ))}
+                  {chartData.map((entry, i) => {
+                    const fill =
+                      entry.year === 2026
+                        ? "#DC2626" // red-600 — current year, strongest signal
+                        : entry.year === 2025
+                          ? "#F59E0B" // amber-500 — prior year
+                          : "#6B7280"; // gray-500 — older
+                    return <Cell key={i} fill={fill} fillOpacity={0.85} />;
+                  })}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
@@ -326,7 +352,10 @@ export default function LayoffsSection() {
               <span className="w-3 h-3 rounded bg-[#6B7280]" /> 2024
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded bg-[#EF4444]" /> 2025
+              <span className="w-3 h-3 rounded bg-[#F59E0B]" /> 2025
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded bg-[#DC2626]" /> 2026
             </span>
           </div>
         </motion.div>

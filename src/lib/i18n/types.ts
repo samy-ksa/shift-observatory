@@ -186,6 +186,7 @@ export interface LayoffStrings {
   suspected: string;
   jobsLabel: string;
   postHolidayLull: string;
+  oracleMarker: string;
   stats: {
     total: string;
     biggest: string;
@@ -199,6 +200,8 @@ export interface LayoffStrings {
     peakAi: string;
     techLayoffs2026Ytd: string;
     aiPct2025: string;
+    aiPct2026: string;
+    oracleMega: string;
   };
   showAll: string;
   showLess: string;

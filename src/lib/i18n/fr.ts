@@ -156,6 +156,7 @@ export const fr: Dictionary = {
     suspected: "IA suspectée",
     jobsLabel: "licenciements",
     postHolidayLull: "Accalmie post-vacances",
+    oracleMarker: "Oracle 30K",
     stats: {
       total: "Total licenciements IA",
       biggest: "Plus grande coupe unique",
@@ -165,10 +166,12 @@ export const fr: Dictionary = {
     kpiLabels: {
       techLayoffs2024: "Licenciements tech 2024",
       techLayoffs2025: "Licenciements tech 2025",
-      aiCited: "IA citée (US, 2025)",
-      peakAi: "Pic IA % (Oct 2025)",
+      aiCited: "IA citée (US, 2026 YTD)",
+      peakAi: "Pic IA % (Avr 2026)",
       techLayoffs2026Ytd: "Licenciements tech 2026 YTD",
       aiPct2025: "% IA citée (2025)",
+      aiPct2026: "% IA citée (2026 YTD)",
+      oracleMega: "Oracle mars 2026",
     },
     showAll: "Tout afficher",
     showLess: "Réduire",

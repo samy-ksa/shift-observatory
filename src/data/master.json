@@ -10973,6 +10973,33 @@
           "total": 300,
           "top3": "ND"
         }
+      ],
+      "2026": [
+        {
+          "month": "Jan",
+          "total": 28500,
+          "top3": "Amazon, Salesforce, Workday"
+        },
+        {
+          "month": "Feb",
+          "total": 12800,
+          "top3": "ND"
+        },
+        {
+          "month": "Mar",
+          "total": 50200,
+          "top3": "Oracle, Atlassian, Broadcom"
+        },
+        {
+          "month": "Apr",
+          "total": 14600,
+          "top3": "Microsoft, Meta"
+        },
+        {
+          "month": "May",
+          "total": 18900,
+          "top3": "Meta, Salesforce, IBM"
+        }
       ]
     },
     "ai_cases_global": [
@@ -11065,20 +11092,25 @@
       "2025_total_us_layoffs": 1200000,
       "2025_ai_cited": 54836,
       "2025_ai_pct": 4.6,
-      "cumulative_2023_2026_ai": 79449,
+      "2026_ytd_total_us_layoffs": 300749,
+      "2026_ytd_ai_cited": 49135,
+      "2026_ytd_ai_pct": 16.3,
+      "cumulative_2023_2026_ai": 128584,
       "peak_month": {
-        "month": "Oct 2025",
-        "total": 153074,
-        "ai_cited": 31039,
-        "ai_pct": 20.3
+        "month": "Apr 2026",
+        "total": 82800,
+        "ai_cited": 21490,
+        "ai_pct": 26.0
       },
-      "note": "AI is 2nd cause after cost-cutting in Oct 2025. Strong upward trend."
+      "note": "AI is #1 cited cause of US layoffs in March and April 2026 (Challenger). YTD total cuts -50% YoY but AI share rising sharply (4.6% in 2025 → 16.3% YTD 2026)."
     },
     "totals": {
       "tech_global_2024": 151000,
-      "tech_global_2025": 118500,
+      "tech_global_2025": 245000,
+      "tech_global_2026_ytd": 125000,
       "ai_cited_us_2025": 54836,
-      "ai_cited_cumulative_2023_2026": 79449
+      "ai_cited_us_2026_ytd": 49135,
+      "ai_cited_cumulative_2023_2026": 128584
     }
   },
   "ksa_ai_cases": [

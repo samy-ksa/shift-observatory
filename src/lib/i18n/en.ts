@@ -171,6 +171,7 @@ export const en: Dictionary = {
     suspected: "AI Suspected",
     jobsLabel: "layoffs",
     postHolidayLull: "Post-holiday lull",
+    oracleMarker: "Oracle 30K",
     stats: {
       total: "Total AI layoffs",
       biggest: "Largest single cut",
@@ -180,10 +181,12 @@ export const en: Dictionary = {
     kpiLabels: {
       techLayoffs2024: "Tech layoffs 2024",
       techLayoffs2025: "Tech layoffs 2025",
-      aiCited: "AI-cited (US, 2025)",
-      peakAi: "Peak AI % (Oct 2025)",
+      aiCited: "AI-cited (US, 2026 YTD)",
+      peakAi: "Peak AI % (Apr 2026)",
       techLayoffs2026Ytd: "Tech layoffs 2026 YTD",
       aiPct2025: "AI-cited % (2025)",
+      aiPct2026: "AI-cited % (2026 YTD)",
+      oracleMega: "Oracle Mar 2026",
     },
     showAll: "Show all",
     showLess: "Show less",
