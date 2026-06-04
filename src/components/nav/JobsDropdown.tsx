@@ -217,7 +217,7 @@ function SearchPanel({
                   {t.match.matchClosest}
                 </p>
                 {findClosestOccupations(debouncedQ, 3).map((m) => (
-                  <a key={m.slug} href={localizedHref(lang, `/job/${m.slug}`)} onClick={onClose} className="flex items-center justify-between px-2 py-2 rounded hover:bg-gray-800 transition-colors">
+                  <a key={m.slug} href={localizedHref(lang, `/job/${m.slug}`)} onClick={onClose} className="flex items-center justify-between px-2 py-3 min-h-11 rounded hover:bg-gray-800 transition-colors">
                     <div className="flex items-center gap-2">
                       <span className={`w-1.5 h-1.5 rounded-full ${m.occupation.composite > 70 ? "bg-red-500" : m.occupation.composite > 40 ? "bg-amber-500" : "bg-green-500"}`} />
                       <span className="text-gray-200 text-sm">

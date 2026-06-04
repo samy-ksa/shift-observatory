@@ -45,7 +45,7 @@ export default function VSClient({ data }: { data: ComparisonData }) {
 
         {/* Feature comparison table */}
         <div className="border border-gray-800 rounded-lg overflow-hidden mb-8">
-          <div className="grid grid-cols-3 bg-gray-900/80 px-4 py-3 text-xs uppercase tracking-wider text-gray-400 border-b border-gray-800">
+          <div className="grid grid-cols-[1.5fr_1fr_1fr] sm:grid-cols-3 bg-gray-900/80 px-4 py-3 text-xs uppercase tracking-wider text-gray-400 border-b border-gray-800">
             <span>{isFr ? "Fonctionnalite" : "Feature"}</span>
             <span className="text-center">SHIFT</span>
             <span className="text-center">{data.competitor}</span>
@@ -54,7 +54,7 @@ export default function VSClient({ data }: { data: ComparisonData }) {
           {data.features.map((feature, i) => (
             <div
               key={i}
-              className={`grid grid-cols-3 px-4 py-3 text-sm border-b border-gray-800/50 ${
+              className={`grid grid-cols-[1.5fr_1fr_1fr] sm:grid-cols-3 px-4 py-3 text-sm border-b border-gray-800/50 ${
                 i % 2 === 0 ? "bg-gray-900/20" : ""
               }`}
             >

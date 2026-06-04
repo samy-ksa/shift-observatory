@@ -507,7 +507,7 @@ export default function RelocateClient({
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.iLiveIn}</label>
                 <select value={originId} onChange={(e) => setOriginId(e.target.value)}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {ORIGIN_CITIES.map((c) => (
                     <option key={c.id} value={c.id}>{`${ln(lang, c)}, ${lnCountry(lang, c)}`}</option>
                   ))}
@@ -521,7 +521,7 @@ export default function RelocateClient({
                   <input type="text" inputMode="numeric" value={salaryStr}
                     onChange={(e) => setSalaryStr(e.target.value.replace(/[^0-9,]/g, ""))}
                     placeholder="5,000"
-                    className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
+                    className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted text-xs font-mono">{origin.currency}</span>
                 </div>
               </div>
@@ -533,12 +533,12 @@ export default function RelocateClient({
                   onChange={(e) => { setOccSearch(e.target.value); setOccDropOpen(true); if (selectedOcc) setSelectedOcc(null); }}
                   onFocus={() => occSearch.trim() && setOccDropOpen(true)}
                   placeholder={r.selectOccupation}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary text-sm focus:border-cyan-400 focus:outline-none" />
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary text-sm focus:border-cyan-400 focus:outline-none" />
                 {occDropOpen && occSearch.trim() && (
                   <div className="absolute z-30 top-full left-0 right-0 mt-1 bg-bg-card border border-white/10 rounded-lg max-h-72 overflow-y-auto shadow-xl">
                     {filteredOccs.length > 0 ? filteredOccs.map(({ occ }) => (
                       <button key={occ.name_en}
-                        className="w-full text-left px-4 py-2.5 text-sm hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                        className="w-full text-left px-4 py-3 text-sm hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
                         onClick={() => { setSelectedOcc(occ); setOccSearch(ln(lang, occ)); setOccDropOpen(false); }}>
                         <div className="flex items-center justify-between">
                           <span className="text-text-primary">{ln(lang, occ)}</span>
@@ -609,7 +609,7 @@ export default function RelocateClient({
                         <input type="text" inputMode="numeric" value={partnerSalaryStr}
                           onChange={(e) => setPartnerSalaryStr(e.target.value.replace(/[^0-9,]/g, ""))}
                           placeholder="2,500"
-                          className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
+                          className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none pr-16" />
                         <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted text-xs font-mono">{origin.currency}</span>
                       </div>
                     </div>
@@ -626,7 +626,7 @@ export default function RelocateClient({
               <div>
                 <label className="text-sm text-text-muted mb-1.5 block">{r.targetCity}</label>
                 <select value={saudiId} onChange={(e) => setSaudiId(e.target.value)}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {SAUDI_CITIES.map((c) => (
                     <option key={c.id} value={c.id}>{ln(lang, c)}</option>
                   ))}
@@ -652,7 +652,7 @@ export default function RelocateClient({
                 <label className="text-sm text-text-muted mb-1.5 block">{r.schoolTier}</label>
                 <select value={schoolTierId} onChange={(e) => setSchoolTierId(e.target.value)}
                   disabled={children === 0}
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40">
+                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40">
                   {SCHOOL_TIERS.map((s) => (
                     <option key={s.id} value={s.id}>
                       {lnLabel(lang, s)}
@@ -1167,7 +1167,7 @@ export default function RelocateClient({
               </div>
             </div>
 
-            <button onClick={handleReset} className="w-full md:w-auto px-5 py-2.5 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
+            <button onClick={handleReset} className="w-full md:w-auto px-5 py-3 border border-white/10 text-text-secondary rounded-lg hover:bg-white/5 transition-colors text-sm">{r.tryAnother}</button>
           </div>
 
           <p className="text-xs text-text-muted mt-6 max-w-3xl">{r.disclaimer} {r.exchangeRateNote}</p>
@@ -1285,15 +1285,15 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-white/10 bg-white/[0.03]">
-              <th className="text-left py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium">{r.thItem}</th>
-              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
+              <th className="text-left py-3 px-4 text-xs text-text-muted uppercase tracking-wider font-medium">{r.thItem}</th>
+              <th className="text-right py-3 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
                 {r.thOriginPrice.replace("{city}", originLabel).replace("{currency}", origin.currency)}
               </th>
-              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
+              <th className="text-right py-3 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">
                 {r.thSaudiPrice.replace("{city}", saudiLabel).replace("{currency}", "SAR")}
               </th>
-              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">~{origin.currency}</th>
-              <th className="text-right py-2.5 px-4 text-xs text-text-muted uppercase tracking-wider font-medium">{r.thDiff}</th>
+              <th className="text-right py-3 px-4 text-xs text-text-muted uppercase tracking-wider font-medium whitespace-nowrap">~{origin.currency}</th>
+              <th className="text-right py-3 px-4 text-xs text-text-muted uppercase tracking-wider font-medium">{r.thDiff}</th>
             </tr>
           </thead>
           <tbody>

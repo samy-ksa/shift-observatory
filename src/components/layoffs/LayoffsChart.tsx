@@ -428,7 +428,7 @@ export default function LayoffsSection() {
             <div className="flex justify-center mt-6">
               <button
                 onClick={() => setShowAllIntl((prev) => !prev)}
-                className="px-6 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-secondary hover:text-text-primary hover:bg-white/10 transition-colors"
+                className="px-6 py-3 min-h-11 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-secondary hover:text-text-primary hover:bg-white/10 transition-colors"
               >
                 {showAllIntl
                   ? t.layoffs.showLess

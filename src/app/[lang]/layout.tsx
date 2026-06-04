@@ -51,6 +51,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  themeColor: "#0A0E17", // matches bg-bg-primary — colors Safari/Chrome iOS address bar
 };
 
 const TITLES: Record<Lang, string> = {

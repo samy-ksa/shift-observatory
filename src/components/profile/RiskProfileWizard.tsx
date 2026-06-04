@@ -822,6 +822,7 @@ export default function RiskProfileWizard() {
                 <div className="px-4 py-3 border-b border-white/5">
                   <h3 className="text-sm font-semibold text-white">{p.breakdown}</h3>
                 </div>
+                <div className="overflow-x-auto mobile-scroll">
                 <table className="w-full text-sm">
                   <tbody>
                     {breakdown.map((row, i) => (
@@ -842,6 +843,7 @@ export default function RiskProfileWizard() {
                     </tr>
                   </tbody>
                 </table>
+                </div>
               </div>
 
               {/* Key Findings */}
