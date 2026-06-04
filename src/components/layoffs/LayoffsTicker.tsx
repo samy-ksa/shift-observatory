@@ -15,7 +15,7 @@ export default function LayoffsTicker() {
   const items = cases.filter((c) => c.jobs);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#1A1F2E]/95 backdrop-blur-sm border-t border-white/10">
+    <div className="hidden md:block fixed bottom-0 left-0 right-0 z-50 bg-[#1A1F2E]/95 backdrop-blur-sm border-t border-white/10">
       <div className="flex items-center h-9">
         {/* Red pulsing badge */}
         <div className="bg-risk-very-high/90 px-4 h-full flex items-center gap-2 shrink-0">

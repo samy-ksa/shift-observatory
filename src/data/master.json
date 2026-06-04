@@ -11120,7 +11120,11 @@
       "impact": "35 processes automated, 100+ bots, 40K hours saved, 2M+ requests processed",
       "jobs_impact": "Back-office data entry and compliance partially replaced",
       "year": 2021,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "35 processus automatisés, 100+ bots, 40K heures économisées, 2M+ requêtes traitées",
+      "impact_ar": "أتمتة 35 عملية، أكثر من 100 بوت، توفير 40 ألف ساعة، معالجة أكثر من 2 مليون طلب",
+      "jobs_impact_fr": "Saisie de données back-office et conformité partiellement remplacées",
+      "jobs_impact_ar": "استبدال جزئي لإدخال البيانات والامتثال في المكاتب الخلفية"
     },
     {
       "entity": "Saudi Post (SPL)",
@@ -11128,7 +11132,11 @@
       "impact": "200 sorting robots deployed, largest robotic sorting center in Middle East",
       "jobs_impact": "Manual sorting positions reduced",
       "year": 2024,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "200 robots de tri déployés, plus grand centre de tri robotisé du Moyen-Orient",
+      "impact_ar": "نشر 200 روبوت فرز، أكبر مركز فرز آلي في الشرق الأوسط",
+      "jobs_impact_fr": "Postes de tri manuel réduits",
+      "jobs_impact_ar": "تقليل وظائف الفرز اليدوي"
     },
     {
       "entity": "BinDawood (Danube)",
@@ -11136,7 +11144,11 @@
       "impact": "Fully automated dark stores for e-commerce fulfillment",
       "jobs_impact": "Warehouse picking/packing jobs automated",
       "year": 2024,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "Dark stores entièrement automatisés pour la préparation e-commerce",
+      "impact_ar": "متاجر مظلمة آلية بالكامل لتنفيذ طلبات التجارة الإلكترونية",
+      "jobs_impact_fr": "Postes de préparation/emballage en entrepôt automatisés",
+      "jobs_impact_ar": "أتمتة وظائف انتقاء وتغليف المستودعات"
     },
     {
       "entity": "Absher Platform",
@@ -11144,7 +11156,11 @@
       "impact": "12M+ operations in H1 2023, 17B SAR annual savings",
       "jobs_impact": "Government counter staff demand reduced via non-replacement",
       "year": 2023,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "12M+ opérations au S1 2023, 17 milliards SAR d'économies annuelles",
+      "impact_ar": "أكثر من 12 مليون عملية في النصف الأول 2023، توفير 17 مليار ريال سنوياً",
+      "jobs_impact_fr": "Personnel de guichet gouvernemental réduit",
+      "jobs_impact_ar": "تقليل موظفي المكاتب الحكومية"
     },
     {
       "entity": "ZATCA Customs",
@@ -11152,7 +11168,11 @@
       "impact": "50% customs operations automated, clearance time 24h→5h",
       "jobs_impact": "Document processing clerks replaced by AI workflows",
       "year": 2024,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "Opérations douanières automatisées, temps de dédouanement réduit de 50%",
+      "impact_ar": "أتمتة العمليات الجمركية، تقليص زمن التخليص بنسبة 50%",
+      "jobs_impact_fr": "Postes d'inspecteurs et de saisie douanière réduits",
+      "jobs_impact_ar": "تقليل وظائف المفتشين وإدخال البيانات الجمركية"
     },
     {
       "entity": "KFSHRC Hospital",
@@ -11160,7 +11180,11 @@
       "impact": "20+ AI applications, 170K automated interventions, 25% diagnostic accuracy improvement",
       "jobs_impact": "Augmentation: radiologists freed from routine, no reported layoffs",
       "year": 2024,
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "20+ applications IA, 170K interventions automatisées, +25% de précision diagnostique",
+      "impact_ar": "أكثر من 20 تطبيق ذكاء اصطناعي، 170 ألف تدخل آلي، تحسن الدقة التشخيصية بنسبة 25%",
+      "jobs_impact_fr": "Travail administratif et techniques diagnostiques routinières réduits",
+      "jobs_impact_ar": "تقليل العمل الإداري والتقنيات التشخيصية الروتينية"
     },
     {
       "entity": "NEOM (The Line)",
@@ -11168,7 +11192,11 @@
       "impact": "Native autonomous transport, predictive maintenance, AI-first urban management",
       "jobs_impact": "Traditional urban jobs (drivers, counter staff) structurally absent from design",
       "year": "2025+",
-      "country": "KSA"
+      "country": "KSA",
+      "impact_fr": "Transport autonome natif, maintenance prédictive, gestion urbaine IA-first",
+      "impact_ar": "نقل ذاتي القيادة بالكامل، صيانة تنبؤية، إدارة حضرية تعتمد على الذكاء الاصطناعي",
+      "jobs_impact_fr": "Postes traditionnels de transport, logistique, gestion immobilière éliminés",
+      "jobs_impact_ar": "إلغاء وظائف النقل واللوجستيات وإدارة العقارات التقليدية"
     },
     {
       "entity": "Carrefour City+ Dubai",
@@ -11176,7 +11204,11 @@
       "impact": "Fully cashierless store using AI vision and auto-payment",
       "jobs_impact": "All cashier positions eliminated in pilot store",
       "year": 2023,
-      "country": "UAE"
+      "country": "UAE",
+      "impact_fr": "Magasin entièrement sans caisse utilisant la vision IA et le paiement automatique",
+      "impact_ar": "متجر بدون كاشير بالكامل يستخدم رؤية الذكاء الاصطناعي والدفع التلقائي",
+      "jobs_impact_fr": "Postes de caissier et de surveillance entièrement supprimés",
+      "jobs_impact_ar": "إلغاء كامل لوظائف الكاشير والمراقبة"
     },
     {
       "entity": "Emirates NBD",
@@ -11184,7 +11216,11 @@
       "impact": "800 positions cut (~10% workforce), accelerated by Covid + digitalization",
       "jobs_impact": "Branch staff, back-office processing reduced",
       "year": 2020,
-      "country": "UAE"
+      "country": "UAE",
+      "impact_fr": "800 postes supprimés (~10% des effectifs), accélérés par Covid + digitalisation",
+      "impact_ar": "إلغاء 800 وظيفة (~10% من القوى العاملة)، بسبب كوفيد والتحول الرقمي",
+      "jobs_impact_fr": "Fonctions support et back-office bancaire réduites",
+      "jobs_impact_ar": "تقليل وظائف الدعم والمكاتب الخلفية المصرفية"
     },
     {
       "entity": "Dubai/Abu Dhabi Autonomous Taxis",
@@ -11192,7 +11228,11 @@
       "impact": "Cruise and TXAI pilot programs for autonomous taxis",
       "jobs_impact": "Strategic direction: progressive replacement of human drivers by 2030",
       "year": "2024+",
-      "country": "UAE"
+      "country": "UAE",
+      "impact_fr": "Programmes pilotes Cruise et TXAI pour taxis autonomes",
+      "impact_ar": "برامج تجريبية لـ Cruise و TXAI للسيارات الذاتية القيادة",
+      "jobs_impact_fr": "Postes de chauffeurs de taxi à risque sur 10 ans",
+      "jobs_impact_ar": "وظائف سائقي الأجرة في خطر خلال 10 سنوات"
     }
   ],
   "v2030": {

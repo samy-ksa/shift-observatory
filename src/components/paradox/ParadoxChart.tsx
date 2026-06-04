@@ -28,20 +28,36 @@ const confidenceOpacity: Record<string, number> = {
   low: 0.6,
 };
 
-/* V2030 sector label AR mapping */
+/* V2030 sector label AR mapping — keys must match master.json v2030.targets[*].sector */
 const V2030_SECTOR_AR: Record<string, string> = {
   "Tourism": "السياحة",
   "Entertainment": "الترفيه",
-  "Renewable Energy": "الطاقة المتجددة",
-  "Mining & Metals": "التعدين والمعادن",
-  "Manufacturing (NIDLP)": "التصنيع (نيدلب)",
-  "Digital Economy": "الاقتصاد الرقمي",
-  "Financial Services": "الخدمات المالية",
-  "Healthcare Expansion": "التوسع الصحي",
-  "Logistics & Transport": "اللوجستيات والنقل",
-  "Construction (Giga)": "البناء (المشاريع الكبرى)",
-  "Agriculture & Food": "الزراعة والغذاء",
-  "Education Reform": "إصلاح التعليم",
+  "Sports (incl. esports)": "الرياضة",
+  "Healthcare (additional)": "الرعاية الصحية",
+  "Fintech": "التقنية المالية",
+  "ICT + Digital + Data Centers": "تقنية المعلومات ومراكز البيانات",
+  "Mining & Minerals": "التعدين والمعادن",
+  "Renewables & Hydrogen": "الطاقة المتجددة والهيدروجين",
+  "Defense Industries": "الصناعات الدفاعية",
+  "Culture & Creative": "الثقافة والإبداع",
+  "Space": "الفضاء",
+  "Giga-Projects (construction + operations)": "المشاريع الكبرى",
+};
+
+/* V2030 sector label FR mapping — keys must match master.json v2030.targets[*].sector */
+const V2030_SECTOR_FR: Record<string, string> = {
+  "Tourism": "Tourisme",
+  "Entertainment": "Divertissement",
+  "Sports (incl. esports)": "Sports (esports inclus)",
+  "Healthcare (additional)": "Santé (additionnel)",
+  "Fintech": "Fintech",
+  "ICT + Digital + Data Centers": "TIC + Numérique + Datacenters",
+  "Mining & Minerals": "Mines & Minéraux",
+  "Renewables & Hydrogen": "Renouvelables & Hydrogène",
+  "Defense Industries": "Industries de défense",
+  "Culture & Creative": "Culture & Créatif",
+  "Space": "Spatial",
+  "Giga-Projects (construction + operations)": "Méga-projets (construction + exploitation)",
 };
 
 // Timeline projection data (2024 → 2030)
@@ -69,7 +85,9 @@ export default function ParadoxChart() {
       name:
         lang === "ar"
           ? (V2030_SECTOR_AR[tgt.sector] || (tgt as { sector_ar?: string }).sector_ar || tgt.sector)
-          : tgt.sector,
+          : lang === "fr"
+            ? (V2030_SECTOR_FR[tgt.sector] || tgt.sector)
+            : tgt.sector,
       jobs: tgt.target_jobs,
       confidence: tgt.confidence,
       nameEn: tgt.sector,
@@ -268,10 +286,10 @@ export default function ParadoxChart() {
                   <YAxis
                     dataKey="name"
                     type="category"
-                    tick={{ fill: "#9CA3AF", fontSize: 12 }}
+                    tick={{ fill: "#E5E7EB", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
-                    width={160}
+                    width={lang === "ar" ? 140 : lang === "fr" ? 200 : 200}
                   />
                   <Tooltip content={<CustomTooltip />} />
                   <Bar dataKey="jobs" radius={[0, 4, 4, 0]}>

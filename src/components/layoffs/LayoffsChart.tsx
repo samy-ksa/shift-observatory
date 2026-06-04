@@ -51,16 +51,28 @@ interface CaseItem {
   ai_role: "direct" | "contributing" | "suspected";
 }
 
-const gulfCases: CaseItem[] = data.ksa_ai_cases.map((c) => ({
-  entity: c.entity,
-  jobs: typeof c.jobs_impact === "number" ? c.jobs_impact : null,
-  reason: c.impact,
-  date: "",
-  status: "confirmed" as const,
-  country: c.country,
-  flag: c.country === "KSA" ? "SA" : "AE",
-  ai_role: "direct" as const,
-}));
+/** Build the Gulf cases list localized per language. Called inside the
+ *  component so it picks up the active lang from useLang(). */
+function buildGulfCases(lang: "en" | "fr" | "ar"): CaseItem[] {
+  return data.ksa_ai_cases.map((c) => {
+    const localizedImpact =
+      lang === "fr"
+        ? (c as { impact_fr?: string }).impact_fr || c.impact
+        : lang === "ar"
+          ? (c as { impact_ar?: string }).impact_ar || c.impact
+          : c.impact;
+    return {
+      entity: c.entity,
+      jobs: typeof c.jobs_impact === "number" ? c.jobs_impact : null,
+      reason: localizedImpact,
+      date: "",
+      status: "confirmed" as const,
+      country: c.country,
+      flag: c.country === "KSA" ? "SA" : "AE",
+      ai_role: "direct" as const,
+    };
+  });
+}
 
 const internationalCases: CaseItem[] = [
   // ===== 2026 H1 (most recent first) =====
@@ -189,6 +201,9 @@ export default function LayoffsSection() {
   const { t, lang } = useLang();
   const [caseTab, setCaseTab] = useState<CaseTab>("gulf");
   const [showAllIntl, setShowAllIntl] = useState(false);
+
+  // Localize KSA AI cases descriptions on every render (cheap — 10 items).
+  const gulfCases = buildGulfCases(lang);
 
   // Apply the 12-item limit for international cases when not expanded
   const filteredCases = (() => {

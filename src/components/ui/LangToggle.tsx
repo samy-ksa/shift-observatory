@@ -131,7 +131,7 @@ export default function LangToggle() {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-[70] bg-bg-primary/98 backdrop-blur-md flex flex-col md:hidden">
+        <div className="fixed inset-0 z-[70] bg-bg-primary flex flex-col md:hidden">
           <div className="flex items-center justify-between px-4 min-h-12 border-b border-white/5">
             <Link href={localizedHref(lang, "/")} onClick={() => setMenuOpen(false)} className="flex items-center gap-1">
               <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">SHIFT</span>

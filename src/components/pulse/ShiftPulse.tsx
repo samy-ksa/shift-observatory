@@ -46,7 +46,16 @@ export default function ShiftPulse() {
     fetch("/api/pulse")
       .then((r) => r.json())
       .then((d) => {
-        setPulse(d.latest);
+        const latest = d.latest;
+        setPulse(latest);
+        // Auto-select first tab with content so the dashboard isn't blank
+        // when the week had no qualifying events in the default category.
+        if (latest) {
+          if ((latest.global_layoffs?.length ?? 0) > 0) setTab("global");
+          else if ((latest.gulf_mena_automation?.length ?? 0) > 0) setTab("gulf");
+          else if ((latest.saudi_policy_updates?.length ?? 0) > 0) setTab("policy");
+          else if ((latest.ai_workforce_signals?.length ?? 0) > 0) setTab("signals");
+        }
         setLoading(false);
       })
       .catch(() => setLoading(false));
