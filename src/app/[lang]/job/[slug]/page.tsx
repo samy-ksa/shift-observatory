@@ -11,6 +11,7 @@ import {
   fmt,
 } from "@/lib/occupations";
 import JobPageClient from "@/app/job/[slug]/client";
+import JobAICitableLede from "@/components/job/JobAICitableLede";
 import { getScoreTrend } from "@/data/score-history";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
@@ -420,6 +421,7 @@ export default async function LangJobPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JobAICitableLede occupation={occ} lang={lang} />
       <JobPageClient
         occupation={occ}
         related={related}

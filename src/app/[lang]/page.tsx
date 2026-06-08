@@ -70,8 +70,10 @@ const TITLES: Record<Lang, string> = {
 const DESCRIPTIONS: Record<Lang, string> = {
   // EN: shortened from 178 → 119 chars, action-oriented
   en: "Free tool scoring 237 Saudi occupations for AI risk. Salary in SAR, Nitaqat status, career pivots. No signup, no tracking.",
-  fr: "Quels métiers saoudiens l'IA va-t-elle remplacer ? Tableau de bord gratuit notant 237 professions avec salaires, statut Nitaqat, transitions de carrière et calculateur de relocalisation.",
-  ar: "أي الوظائف السعودية سيستبدلها الذكاء الاصطناعي؟ لوحة تحكم مجانية تُقيّم 237 مهنة مع بيانات الرواتب وحالة نطاقات وانتقالات المهنة وحاسبة الانتقال.",
+  // FR: 193 → 117 chars — keep the question hook (FR converts at 13.5% CTR)
+  fr: "Quels métiers saoudiens l'IA va-t-elle remplacer ? Outil gratuit notant 237 professions. Salaire, Nitaqat, transitions.",
+  // AR: 266 → 119 chars — keep direct question + trust signals
+  ar: "أي الوظائف السعودية سيستبدلها الذكاء الاصطناعي؟ أداة مجانية تُقيّم 237 مهنة. الراتب، نطاقات، التحولات. بدون تسجيل.",
 };
 
 const SR_INTRO: Record<Lang, string> = {
