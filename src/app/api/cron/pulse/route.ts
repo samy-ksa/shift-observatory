@@ -82,15 +82,66 @@ Return ONLY a valid JSON object with this exact structure:
 
 Rules:
 - ONLY include events from the last 7 days (since ${lastWeek})
-- For global_layoffs: only include cases where AI/automation was explicitly cited or strongly implied as a factor. Do not include generic layoffs.
-- For gulf_mena_automation: include both layoffs AND significant automation deployments (robots, AI systems replacing human tasks)
-- For saudi_policy_updates: include any new HRSD, Nitaqat, SDAIA, HRDF, or labor market decisions
-- For ai_workforce_signals: include 3-5 major developments (new AI capabilities threatening jobs, major studies, government AI strategies)
-- If no events found in a category, return an empty array []
-- jobs_cut must be a number. If unknown, estimate and set jobs_cut_estimated: true
-- ai_role: "direct" = company explicitly said AI caused cuts, "contributing" = AI mentioned alongside other factors, "suspected" = automation is the obvious driver but not stated
-- All sources must be real, verifiable publications
-- Do NOT fabricate or hallucinate events`;
+- Strong default: it is highly unlikely no qualifying events occurred in any
+  category in a given week. If you initially produce an empty array, EXPAND
+  your search before returning — check Challenger Gray monthly compilations,
+  Layoffs.fyi weekly digests, Bloomberg / Reuters / FT tech & enterprise
+  coverage, Arab News / Khaleej Times / Gulf News for MENA, Wamda / MAGNiTT
+  for regional venture / corp restructuring, GASTAT / HRSD / SDAIA press
+  releases, and major bank / telco / energy company press rooms for the GCC.
+
+- For global_layoffs (inclusive): include workforce reductions where AI,
+  automation, "AI capex pivot", "AI-first restructuring", "agentic systems",
+  RPA, "headcount-to-GPU spend", customer-support consolidation tied to
+  Copilot / Agentforce / Claude / Gemini-for-work, or efficiency programs
+  citing AI productivity gains are mentioned even ALONGSIDE other factors
+  (revenue miss, restructuring, integration). When in doubt, INCLUDE with
+  ai_role="contributing" or "suspected" rather than excluding. Cap at 8-12
+  most material events per week.
+
+- For gulf_mena_automation (inclusive): include layoffs, automation
+  deployments (sorting robots, customer-service chatbots, autonomous
+  delivery, AI underwriting, RPA back-office), bank/telco/government
+  digitization milestones, and announcements of AI-driven process
+  consolidation across SA, AE, QA, BH, KW, OM. Smaller pilots are
+  acceptable if widely reported. Cap at 6-10 events per week.
+
+- For saudi_policy_updates: include HRSD decisions, Nitaqat band changes,
+  Tawteen quotas, HRDF program updates, SDAIA AI policy announcements,
+  visa rules affecting expat workforce, labor disputes, NEOM / Qiddiya /
+  Red Sea staffing announcements, and Saudization milestones. 0-5 per week
+  is realistic.
+
+- For ai_workforce_signals: include 5-8 major developments (new AI
+  capabilities threatening jobs, major studies, government AI strategies,
+  enterprise AI roll-out milestones, regulatory shifts). This is the
+  "broadest" category — if other categories are sparse, this one should
+  always have content.
+
+- jobs_cut: must be a number. If a precise number isn't reported, estimate
+  conservatively from secondary signals (e.g., "5% of 80,000 employees" =
+  4000) and set jobs_cut_estimated: true. If absolutely no estimate is
+  derivable, use 0 but DO NOT skip the event — keep it.
+
+- ai_role: "direct" = company explicitly said AI caused cuts;
+  "contributing" = AI mentioned alongside other factors (revenue, strategy
+  pivot, integration); "suspected" = automation is the obvious driver but
+  not formally stated (back-office, IT support, basic ops).
+
+- Source quality: must be real, verifiable publications. Prefer primary
+  source (company press release, SEC filing, government bulletin) when
+  available; secondary tier (Bloomberg, Reuters, FT, WSJ) acceptable;
+  tabloid / unverified rumor not acceptable.
+
+- weekly_stats.notable_trend MUST be a single, content-rich sentence that
+  captures the week's story — not a meta-comment about lack of data.
+  Even in slow weeks, surface the dominant directional signal (e.g.,
+  "AI capex pivots are accelerating in mid-cap tech while AI-cited layoff
+  intensity holds steady in the US"). This sentence is the headline shown
+  to readers when individual category tabs are empty.
+
+- Do NOT fabricate or hallucinate events. If a claim cannot be verified
+  against a real publication, drop it entirely.`;
 }
 
 export async function GET(req: Request) {

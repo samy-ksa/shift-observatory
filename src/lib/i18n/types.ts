@@ -307,6 +307,8 @@ export interface PulseStrings {
   };
   source: string;
   noData: string;
+  notableTrend: string;
+  seeOtherTabs: string;
   direct: string;
   contributing: string;
   suspected: string;

@@ -207,6 +207,8 @@ export const en: Dictionary = {
     },
     source: "Data: Perplexity AI · Sources verified weekly",
     noData: "No pulse data yet. Check back after Sunday.",
+    notableTrend: "This week's notable trend",
+    seeOtherTabs: "Where the action is this week",
     direct: "AI explicitly cited",
     contributing: "AI contributing factor",
     suspected: "AI suspected driver",

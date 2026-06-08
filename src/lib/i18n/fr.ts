@@ -192,6 +192,8 @@ export const fr: Dictionary = {
     },
     source: "Données : Perplexity AI · Sources vérifiées hebdomadairement",
     noData: "Pas encore de données pulse. Revenez après dimanche.",
+    notableTrend: "Tendance marquante de la semaine",
+    seeOtherTabs: "Où ça bouge cette semaine",
     direct: "IA explicitement citée",
     contributing: "IA facteur contributif",
     suspected: "IA suspectée",

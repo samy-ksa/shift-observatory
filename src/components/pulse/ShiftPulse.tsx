@@ -158,6 +158,59 @@ export default function ShiftPulse() {
     { key: "signals", label: t.pulse.tabs.signals, count: pulse.ai_workforce_signals.length },
   ];
 
+  /**
+   * Smart empty state. Replaces the bare "No data" message with:
+   *  - The weekly notable_trend summary if available (gives the user the week's
+   *    headline even when this tab is silent),
+   *  - Quick-switch buttons to OTHER tabs that DO have content this week,
+   *  - The fallback "check back after Sunday" only if every tab is empty.
+   */
+  function EmptyTabState({ current }: { current: PulseTab }) {
+    const others = tabs.filter((tb) => tb.key !== current && tb.count > 0);
+    const trendSentence = stats?.notable_trend;
+    if (others.length === 0 && !trendSentence) {
+      // Genuinely empty week
+      return (
+        <p className="text-text-muted col-span-2 text-center py-12">
+          {t.pulse.noData}
+        </p>
+      );
+    }
+    return (
+      <div className="col-span-2 bg-bg-card/40 rounded-lg p-6 border border-white/5">
+        {trendSentence && (
+          <>
+            <p className="text-xs uppercase tracking-wider text-accent-gold mb-2">
+              {t.pulse.notableTrend}
+            </p>
+            <p className="text-sm md:text-base text-text-secondary mb-5 leading-relaxed">
+              {trendSentence}
+            </p>
+          </>
+        )}
+        {others.length > 0 && (
+          <>
+            <p className="text-xs uppercase tracking-wider text-text-muted mb-3">
+              {t.pulse.seeOtherTabs}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {others.map((tb) => (
+                <button
+                  key={tb.key}
+                  onClick={() => setTab(tb.key)}
+                  className="text-xs bg-bg-secondary hover:bg-white/10 border border-white/10 rounded-full px-3 py-1.5 transition-colors min-h-11"
+                >
+                  {tb.label}{" "}
+                  <span className="text-text-muted">({tb.count})</span>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  }
+
   return (
     <section className="py-20 px-4" id="pulse">
       <div className="max-w-7xl mx-auto">
@@ -254,7 +307,7 @@ export default function ShiftPulse() {
             <>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.global_layoffs.length === 0 ? (
-                  <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
+                  <EmptyTabState current="global" />
                 ) : (
                   (showAll ? pulse.global_layoffs : pulse.global_layoffs.slice(0, DEFAULT_VISIBLE)).map((item: PulseGlobalLayoff, i: number) => (
                     <div
@@ -314,7 +367,7 @@ export default function ShiftPulse() {
             <>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.gulf_mena_automation.length === 0 ? (
-                  <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
+                  <EmptyTabState current="gulf" />
                 ) : (
                   (showAll ? pulse.gulf_mena_automation : pulse.gulf_mena_automation.slice(0, DEFAULT_VISIBLE)).map((item: PulseGulfEvent, i: number) => (
                     <div
@@ -381,7 +434,7 @@ export default function ShiftPulse() {
             <>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {pulse.saudi_policy_updates.length === 0 ? (
-                  <p className="text-text-muted col-span-2 text-center py-8">{t.pulse.noData}</p>
+                  <EmptyTabState current="policy" />
                 ) : (
                   (showAll ? pulse.saudi_policy_updates : pulse.saudi_policy_updates.slice(0, DEFAULT_VISIBLE)).map((item: PulsePolicyUpdate, i: number) => (
                     <div
@@ -428,7 +481,7 @@ export default function ShiftPulse() {
             <>
               <div className="grid gap-4">
                 {pulse.ai_workforce_signals.length === 0 ? (
-                  <p className="text-text-muted text-center py-8">{t.pulse.noData}</p>
+                  <EmptyTabState current="signals" />
                 ) : (
                   (showAll ? pulse.ai_workforce_signals : pulse.ai_workforce_signals.slice(0, DEFAULT_VISIBLE)).map((item: PulseSignal, i: number) => (
                     <div

@@ -205,6 +205,8 @@ export const ar: Dictionary = {
     },
     source: "البيانات: Perplexity AI · مصادر موثقة أسبوعياً",
     noData: "لا توجد بيانات بعد. تحقق بعد يوم الأحد.",
+    notableTrend: "اتجاه الأسبوع البارز",
+    seeOtherTabs: "أين تحدث الأحداث هذا الأسبوع",
     direct: "ذكاء اصطناعي مؤكد",
     contributing: "عامل مساهم",
     suspected: "مشتبه به",
