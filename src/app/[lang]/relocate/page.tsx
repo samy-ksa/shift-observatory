@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n/context";
 import RelocateClient from "@/app/relocate/client";
 import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import {
+  CostOfLivingLede,
+  CostOfLivingDepth,
+  FAQ,
+} from "@/components/relocate/CostOfLivingEditorial";
 
 const TITLES: Record<Lang, string> = {
   // EN: leads with cluster keyword "Cost of Living" + year + value prop (salary needed) — 60 chars
@@ -50,13 +55,34 @@ export default async function LangRelocatePage({
   const breadcrumbLd = buildBreadcrumbLd(lang, [
     { name: BREADCRUMB_LABEL[lang], path: "/relocate" },
   ]);
+
+  // FAQPage JSON-LD targeting the "cost of living in Saudi Arabia" cluster.
+  // Per Google policy (Aug 2023), FAQ rich results are restricted to government
+  // and health sites — so this won't show as a SERP accordion, but it remains
+  // a strong signal for AI Overviews and Perplexity citation.
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ[lang].map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <CostOfLivingLede lang={lang} />
       <RelocateClient />
+      <CostOfLivingDepth lang={lang} />
     </>
   );
 }
