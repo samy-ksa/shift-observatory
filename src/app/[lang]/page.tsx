@@ -59,13 +59,17 @@ const LayoffsTicker = dynamic(() => import("@/components/layoffs/LayoffsTicker")
 const SmartPopup = dynamic(() => import("@/components/SmartPopup"), { ssr: false });
 
 const TITLES: Record<Lang, string> = {
-  en: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
+  // EN: question hook + value prop, ~49 chars (pixel budget OK)
+  en: "Is Your Saudi Job at AI Risk? Free 237-Job Score",
+  // FR: kept conversion-friendly format (FR market already at 13.5% CTR — don't break what works)
   fr: "Risque IA emplois Arabie Saoudite : 237 métiers scorés | SHIFT",
-  ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة | شيفت",
+  // AR: direct question framing for Saudi market — leads with the personal stake
+  ar: "هل سيستبدل الذكاء الاصطناعي وظيفتك؟ فحص مجاني لـ 237 مهنة",
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
-  en: "Which Saudi jobs will AI replace? Free dashboard scoring 237 occupations with salary data, Nitaqat status, career transitions and relocation calculator.",
+  // EN: shortened from 178 → 119 chars, action-oriented
+  en: "Free tool scoring 237 Saudi occupations for AI risk. Salary in SAR, Nitaqat status, career pivots. No signup, no tracking.",
   fr: "Quels métiers saoudiens l'IA va-t-elle remplacer ? Tableau de bord gratuit notant 237 professions avec salaires, statut Nitaqat, transitions de carrière et calculateur de relocalisation.",
   ar: "أي الوظائف السعودية سيستبدلها الذكاء الاصطناعي؟ لوحة تحكم مجانية تُقيّم 237 مهنة مع بيانات الرواتب وحالة نطاقات وانتقالات المهنة وحاسبة الانتقال.",
 };

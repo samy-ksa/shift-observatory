@@ -200,6 +200,32 @@ export default async function LangLayout({
     keywords: ["AI automation risk", "Saudi Arabia", "labor market", "Saudization", "Nitaqat", "occupations", "workforce", "Vision 2030"],
   };
 
+  // Organization schema — unlocks sitelinks + knowledge panel candidacy. Stays
+  // lang-agnostic on purpose (the entity is the same across locales).
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SHIFT Observatory",
+    alternateName: ["مرصد شيفت", "SHIFT"],
+    url: SITE,
+    logo: `${SITE}/apple-touch-icon.png`,
+    description:
+      "Independent, free AI workforce risk dashboard for Saudi Arabia — 237 occupations scored, salary benchmarks, Nitaqat status, relocation calculator.",
+    founder: { "@type": "Person", name: "Samy Aloulou" },
+    foundingDate: "2026-03",
+    areaServed: { "@type": "Place", name: "Saudi Arabia" },
+    knowsAbout: [
+      "Saudi labor market",
+      "AI automation risk",
+      "Vision 2030 workforce transformation",
+      "Nitaqat saudization",
+      "Expat relocation Saudi Arabia",
+    ],
+    sameAs: [
+      "https://twitter.com/saudi_builder",
+    ],
+  };
+
   return (
     <html
       lang={lang}
@@ -209,6 +235,7 @@ export default async function LangLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
       </head>
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen">
         <LangProvider initialLang={lang}>

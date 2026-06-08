@@ -4,15 +4,17 @@ import RelocateClient from "@/app/relocate/client";
 import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 
 const TITLES: Record<Lang, string> = {
-  en: "Saudi Arabia Cost of Living Calculator: Compare 65+ Items | Free Tool",
-  fr: "Calculateur de coût de la vie en Arabie Saoudite : 65+ items | SHIFT",
-  ar: "حاسبة تكلفة المعيشة في المملكة العربية السعودية: قارن 65+ صنفاً | أداة مجانية",
+  // EN: leads with cluster keyword "Cost of Living" + year + value prop (salary needed) — 60 chars
+  en: "Cost of Living Saudi Arabia (2026): Free Calc + Salary Needed",
+  fr: "Coût de la vie en Arabie Saoudite (2026) : calc + salaire requis",
+  ar: "تكلفة المعيشة في السعودية 2026: حاسبة مجانية + الراتب المطلوب",
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
-  en: "Compare cost of living between your city and Saudi Arabia. Housing, food, transport, schools, taxes — 65+ items compared. Free relocation calculator with personalized PDF report.",
-  fr: "Comparez le coût de la vie entre votre ville et l'Arabie Saoudite. Logement, alimentation, transport, écoles, impôts — 65+ articles comparés. Calculateur gratuit avec rapport PDF personnalisé.",
-  ar: "قارن تكلفة المعيشة بين مدينتك والمملكة العربية السعودية. السكن، الطعام، النقل، المدارس، الضرائب — أكثر من 65 صنفاً. حاسبة مجانية مع تقرير PDF شخصي.",
+  // EN: action-oriented, mentions cities, ends with "PDF report" hook — 140 chars
+  en: "Free calculator: see the salary you need in Riyadh, Jeddah or Dammam vs your home city. 65 items priced. PDF report. No signup.",
+  fr: "Calculateur gratuit : découvrez le salaire qu'il vous faut à Riyad, Djeddah ou Dammam vs votre ville. 65 postes chiffrés. Rapport PDF. Sans inscription.",
+  ar: "حاسبة مجانية: اكتشف الراتب المطلوب في الرياض أو جدة أو الدمام مقارنة بمدينتك. 65 بنداً مُسعّراً. تقرير PDF. بدون تسجيل.",
 };
 
 export async function generateMetadata({
