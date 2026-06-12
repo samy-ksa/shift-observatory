@@ -170,6 +170,14 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630, fonts }
+    {
+      width: 1200,
+      height: 630,
+      fonts,
+      // Image endpoint — let Google FETCH (for social previews) but never index
+      // as a page. Without this, GSC reports the OG variants as "Duplicate,
+      // Google chose different canonical" (image presented like a page).
+      headers: { "X-Robots-Tag": "noindex" },
+    }
   );
 }
