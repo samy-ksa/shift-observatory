@@ -98,6 +98,18 @@ export async function generateMetadata({
     title: TITLES[lang],
     description: DESCRIPTIONS[lang],
     alternates: buildLanguageAlternates(lang, "/"),
+    // Override layout openGraph for the home — keeps social shares
+    // consistent with the page <title>. Without this, og:title falls
+    // back to the layout's longer "AI Job Risk Saudi Arabia: 237 Jobs
+    // Scored | SHIFT" while the SERP shows the punchier question.
+    openGraph: {
+      title: TITLES[lang],
+      description: DESCRIPTIONS[lang],
+    },
+    twitter: {
+      title: TITLES[lang],
+      description: DESCRIPTIONS[lang],
+    },
   };
 }
 
