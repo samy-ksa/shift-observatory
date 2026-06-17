@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getComparison, getAllComparisonSlugs } from "@/data/comparisons";
 import type { Lang } from "@/lib/i18n/context";
 import VSClient from "@/app/vs/[slug]/client";
-import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 
 const LANGS: Lang[] = ["en", "fr", "ar"];
 
@@ -34,6 +34,15 @@ export async function generateMetadata({
 
   const alternates = buildLanguageAlternates(lang, `/vs/${slug}`);
 
+  const ogTitle = `SHIFT vs ${data.competitor}`;
+  const ogSubtitle =
+    lang === "fr"
+      ? "Comparaison gratuite, données saoudiennes"
+      : lang === "ar"
+        ? "مقارنة مجانية، بيانات سعودية"
+        : "Free comparison, Saudi data";
+  const ogImage = `${SITE_URL}/api/og?lang=${lang}&title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent(ogSubtitle)}`;
+
   return {
     title,
     description,
@@ -44,6 +53,12 @@ export async function generateMetadata({
       url: alternates.canonical,
       siteName: "SHIFT Observatory",
       type: "article",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      images: [ogImage],
     },
   };
 }

@@ -96,7 +96,36 @@ export async function generateMetadata({
       description: ogDesc,
       images: [
         `${SITE_URL}/api/og?lang=${lang}&title=${encodeURIComponent(
-          isFr ? `${origin.name_fr} → ${saudi.name_fr}` : `${origin.name_en} → ${saudi.name_en}`,
+          lang === "fr"
+            ? `${origin.name_fr} → ${saudi.name_fr}`
+            : lang === "ar"
+              ? `${origin.name_ar || origin.name_en} → ${saudi.name_ar || saudi.name_en}`
+              : `${origin.name_en} → ${saudi.name_en}`,
+        )}&subtitle=${encodeURIComponent(
+          lang === "fr"
+            ? "Calculateur coût de la vie"
+            : lang === "ar"
+              ? "حاسبة تكلفة المعيشة"
+              : "Cost of Living Calculator",
+        )}`,
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      images: [
+        `${SITE_URL}/api/og?lang=${lang}&title=${encodeURIComponent(
+          lang === "fr"
+            ? `${origin.name_fr} → ${saudi.name_fr}`
+            : lang === "ar"
+              ? `${origin.name_ar || origin.name_en} → ${saudi.name_ar || saudi.name_en}`
+              : `${origin.name_en} → ${saudi.name_en}`,
+        )}&subtitle=${encodeURIComponent(
+          lang === "fr"
+            ? "Calculateur coût de la vie"
+            : lang === "ar"
+              ? "حاسبة تكلفة المعيشة"
+              : "Cost of Living Calculator",
         )}`,
       ],
     },

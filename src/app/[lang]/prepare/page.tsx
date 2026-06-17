@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Lang } from "@/lib/i18n/context";
 import PrepareClient from "@/app/prepare/client";
-import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
+import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 
 const BREADCRUMB_LABEL: Record<Lang, string> = {
   en: "Pre-Departure Checklist",
@@ -65,6 +65,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const alternates = buildLanguageAlternates(lang, "/prepare");
+
+  const ogTitle =
+    lang === "fr"
+      ? "Check-list pré-départ Arabie Saoudite"
+      : lang === "ar"
+        ? "قائمة التحضير للسفر إلى السعودية"
+        : "Saudi Arabia Pre-Departure Checklist";
+  const ogSubtitle =
+    lang === "fr"
+      ? "12 pays · 8 secteurs · 55+ étapes"
+      : lang === "ar"
+        ? "12 دولة · 8 قطاعات · 55+ خطوة"
+        : "12 countries · 8 sectors · 55+ steps";
+  const ogImage = `${SITE_URL}/api/og?lang=${lang}&title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent(ogSubtitle)}`;
+
   return {
     title: TITLES[lang],
     description: DESCRIPTIONS[lang],
@@ -75,6 +90,12 @@ export async function generateMetadata({
       url: alternates.canonical,
       siteName: "SHIFT Observatory",
       type: "website",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: TITLES[lang],
+      images: [ogImage],
     },
   };
 }
