@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import type { Lang } from "@/lib/i18n/context";
-import { buildLanguageAlternates } from "@/lib/i18n/seo";
+import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
 import {
   LazyLayoffsChart,
@@ -94,21 +94,39 @@ export async function generateMetadata({
   params: Promise<{ lang: Lang }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  // CRITICAL: Next.js REPLACES the openGraph block when redeclared in a child
+  // generateMetadata — it does NOT merge with the layout's openGraph. So if
+  // we override openGraph.title/description here, we MUST also restate every
+  // other field we want preserved (images, type, locale, url, siteName).
+  // See: https://nextjs.org/docs/app/api-reference/functions/generate-metadata
+  const ogImage = `${SITE_URL}/api/og?lang=${lang}`;
+  const ogLocale = lang === "fr" ? "fr_FR" : lang === "ar" ? "ar_SA" : "en_US";
   return {
     title: TITLES[lang],
     description: DESCRIPTIONS[lang],
     alternates: buildLanguageAlternates(lang, "/"),
-    // Override layout openGraph for the home — keeps social shares
-    // consistent with the page <title>. Without this, og:title falls
-    // back to the layout's longer "AI Job Risk Saudi Arabia: 237 Jobs
-    // Scored | SHIFT" while the SERP shows the punchier question.
     openGraph: {
+      type: "website",
+      locale: ogLocale,
+      url: `${SITE_URL}/${lang}`,
+      siteName: "SHIFT Observatory",
       title: TITLES[lang],
       description: DESCRIPTIONS[lang],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: "SHIFT Observatory — AI Job Risk Dashboard for Saudi Arabia",
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
+      card: "summary_large_image",
       title: TITLES[lang],
       description: DESCRIPTIONS[lang],
+      images: [ogImage],
     },
   };
 }
