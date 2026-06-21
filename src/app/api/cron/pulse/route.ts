@@ -11,7 +11,7 @@ const FIELD_WEEKLY_STATS = "fldD9ra9mc8iime3d";
 
 const SYSTEM_PROMPT = `You are a labor market intelligence analyst specializing in AI-driven workforce disruption. You provide structured, factual data about companies reducing headcount due to AI automation. You always respond in valid JSON only, with no preamble, no markdown, no commentary.`;
 
-function buildUserPrompt(today: string, lastWeek: string) {
+function buildUserPrompt(today: string, lastWeek: string, lastMonth: string) {
   return `Today is ${today}. Provide a weekly intelligence briefing on AI-driven layoffs and workforce automation.
 
 Return ONLY a valid JSON object with this exact structure:
@@ -81,14 +81,23 @@ Return ONLY a valid JSON object with this exact structure:
 }
 
 Rules:
-- ONLY include events from the last 7 days (since ${lastWeek})
-- Strong default: it is highly unlikely no qualifying events occurred in any
-  category in a given week. If you initially produce an empty array, EXPAND
-  your search before returning — check Challenger Gray monthly compilations,
-  Layoffs.fyi weekly digests, Bloomberg / Reuters / FT tech & enterprise
-  coverage, Arab News / Khaleej Times / Gulf News for MENA, Wamda / MAGNiTT
-  for regional venture / corp restructuring, GASTAT / HRSD / SDAIA press
-  releases, and major bank / telco / energy company press rooms for the GCC.
+- PRIMARY WINDOW: prioritise events from the last 7 days (since ${lastWeek}).
+  Each event keeps its REAL announcement date — never relabel an older event
+  as recent.
+- ANTI-EMPTY BACKFILL: global_layoffs and ai_workforce_signals must NEVER be
+  returned empty — across any rolling 30-day window there is always
+  reportable AI-workforce activity. If the strict 7-day window yields fewer
+  than 4 global_layoffs or fewer than 5 ai_workforce_signals, BACKFILL from
+  the trailing 30 days (since ${lastMonth}) with the most material events,
+  each carrying its true date. gulf_mena_automation and saudi_policy_updates
+  MAY legitimately be empty in a quiet week — do not pad them with stale or
+  generic items just to fill space.
+- Before returning, if any array you expected to fill is empty, EXPAND your
+  search — check Challenger Gray monthly compilations, Layoffs.fyi weekly
+  digests, Bloomberg / Reuters / FT tech & enterprise coverage, Arab News /
+  Khaleej Times / Gulf News for MENA, Wamda / MAGNiTT for regional venture /
+  corp restructuring, GASTAT / HRSD / SDAIA press releases, and major bank /
+  telco / energy company press rooms for the GCC.
 
 - For global_layoffs (inclusive): include workforce reductions where AI,
   automation, "AI capex pivot", "AI-first restructuring", "agentic systems",
@@ -163,11 +172,16 @@ export async function GET(req: Request) {
   const lastWeek = new Date(Date.now() - 7 * 86400000)
     .toISOString()
     .split("T")[0];
+  const lastMonth = new Date(Date.now() - 30 * 86400000)
+    .toISOString()
+    .split("T")[0];
 
   try {
-    const response = await fetch(
-      "https://api.perplexity.ai/chat/completions",
-      {
+    // Call Perplexity, retrying once on a transient (non-2xx) response so a
+    // single blip doesn't cost a whole week's snapshot.
+    let response: Response | null = null;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      response = await fetch("https://api.perplexity.ai/chat/completions", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${process.env.PERPLEXITY_API_KEY}`,
@@ -177,17 +191,25 @@ export async function GET(req: Request) {
           model: "sonar-pro",
           messages: [
             { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: buildUserPrompt(today, lastWeek) },
+            {
+              role: "user",
+              content: buildUserPrompt(today, lastWeek, lastMonth),
+            },
           ],
           temperature: 0.1,
           max_tokens: 4000,
         }),
-      },
-    );
+      });
+      if (response.ok) break;
+      // 401/403 are auth errors — retrying won't help, fail fast & loud.
+      if (response.status === 401 || response.status === 403) break;
+    }
 
-    if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(`Perplexity API error ${response.status}: ${errText}`);
+    if (!response || !response.ok) {
+      const errText = response ? await response.text() : "no response";
+      throw new Error(
+        `Perplexity API error ${response?.status ?? "?"}: ${errText}`,
+      );
     }
 
     const data = await response.json();
@@ -197,6 +219,22 @@ export async function GET(req: Request) {
     const pulse = JSON.parse(
       content.replace(/```json\n?|```\n?/g, "").trim(),
     );
+
+    // Guard: never overwrite a good snapshot with a fully-empty one. If every
+    // category came back empty, the run is degenerate (model miss / quota) —
+    // skip the write so the site keeps serving the last meaningful pulse.
+    const totalEvents =
+      (pulse.global_layoffs?.length ?? 0) +
+      (pulse.gulf_mena_automation?.length ?? 0) +
+      (pulse.saudi_policy_updates?.length ?? 0) +
+      (pulse.ai_workforce_signals?.length ?? 0);
+    if (totalEvents === 0) {
+      console.error("Pulse cron: empty payload, skipping write", { today });
+      return Response.json(
+        { ok: false, skipped: "empty_payload", date: today },
+        { status: 200 },
+      );
+    }
 
     // Upsert into Airtable — merge on `date` so re-runs same day overwrite
     const airtableRes = await fetch(`${AIRTABLE_URL}`, {
