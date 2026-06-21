@@ -9,6 +9,35 @@ const FIELD_DATE = "fldZacblCCB07ezNm";
 const FIELD_PAYLOAD = "fldJFwxtyahUCAFo8";
 const FIELD_WEEKLY_STATS = "fldD9ra9mc8iime3d";
 
+/**
+ * Best-effort failure alert. Emails via Resend when the weekly pulse can't
+ * refresh, so a silent outage (like the expired-API-key one) is caught within
+ * hours instead of weeks. No-op when RESEND_API_KEY / ALERT_EMAIL are unset.
+ * Never throws — it must not mask the original failure.
+ */
+async function sendAlert(reason: string) {
+  const key = process.env.RESEND_API_KEY;
+  const to = process.env.ALERT_EMAIL;
+  if (!key || !to) return;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "SHIFT Pulse <onboarding@resend.dev>",
+        to: [to],
+        subject: "⚠️ SHIFT Pulse cron failed — weekly update did not refresh",
+        text: `The SHIFT Pulse weekly cron did not produce a fresh snapshot.\n\nReason: ${reason}\n\nThe site is now serving a stale pulse. Check Vercel logs for /api/cron/pulse and verify PERPLEXITY_API_KEY is valid.`,
+      }),
+    });
+  } catch (e) {
+    console.error("sendAlert failed:", e);
+  }
+}
+
 const SYSTEM_PROMPT = `You are a labor market intelligence analyst specializing in AI-driven workforce disruption. You provide structured, factual data about companies reducing headcount due to AI automation. You always respond in valid JSON only, with no preamble, no markdown, no commentary.`;
 
 function buildUserPrompt(today: string, lastWeek: string, lastMonth: string) {
@@ -230,6 +259,7 @@ export async function GET(req: Request) {
       (pulse.ai_workforce_signals?.length ?? 0);
     if (totalEvents === 0) {
       console.error("Pulse cron: empty payload, skipping write", { today });
+      await sendAlert(`Empty payload on ${today} — all categories returned 0 events.`);
       return Response.json(
         { ok: false, skipped: "empty_payload", date: today },
         { status: 200 },
@@ -275,6 +305,7 @@ export async function GET(req: Request) {
     });
   } catch (error) {
     console.error("Pulse cron failed:", error);
+    await sendAlert(String(error));
     return Response.json(
       { ok: false, error: String(error) },
       { status: 500 },
