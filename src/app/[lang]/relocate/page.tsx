@@ -9,17 +9,19 @@ import {
 } from "@/components/relocate/CostOfLivingEditorial";
 
 const TITLES: Record<Lang, string> = {
-  // EN: leads with cluster keyword "Cost of Living" + year + value prop (salary needed) — 60 chars
-  en: "Cost of Living Saudi Arabia (2026): Free Calc + Salary Needed",
-  fr: "Coût de la vie en Arabie Saoudite (2026) : calc + salaire requis",
-  ar: "تكلفة المعيشة في السعودية 2026: حاسبة مجانية + الراتب المطلوب",
+  // Lead with "Cost of Living Saudi Arabia 2026" (cluster keyword carrying 9+7
+  // impressions on GSC) + a curiosity gap ("How Much Salary You Need") that
+  // differentiates from generic aggregators (Numbeo/Expatistan) at position 25.
+  en: "Cost of Living Saudi Arabia 2026: How Much Salary You Need",
+  fr: "Coût de la vie en Arabie Saoudite 2026 : quel salaire pour vivre",
+  ar: "تكلفة المعيشة في السعودية 2026: ما الراتب الذي تحتاجه",
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
-  // EN: action-oriented, mentions cities, ends with "PDF report" hook — 140 chars
-  en: "Free calculator: see the salary you need in Riyadh, Jeddah or Dammam vs your home city. 65 items priced. PDF report. No signup.",
-  fr: "Calculateur gratuit : découvrez le salaire qu'il vous faut à Riyad, Djeddah ou Dammam vs votre ville. 65 postes chiffrés. Rapport PDF. Sans inscription.",
-  ar: "حاسبة مجانية: اكتشف الراتب المطلوب في الرياض أو جدة أو الدمام مقارنة بمدينتك. 65 بنداً مُسعّراً. تقرير PDF. بدون تسجيل.",
+  // Add data-source trust signal ("Numbeo + GASTAT") absent from competitors.
+  en: "Free calculator comparing your city to Riyadh, Jeddah, Dammam. 65 prices, required salary, downloadable PDF. Numbeo + GASTAT data. No signup.",
+  fr: "Calculateur gratuit comparant votre ville à Riyad, Djeddah, Dammam. 65 prix, salaire nécessaire, PDF téléchargeable. Sources Numbeo + GASTAT. Sans inscription.",
+  ar: "حاسبة مجانية تقارن مدينتك بالرياض وجدة والدمام. 65 سعراً، الراتب المطلوب، تقرير PDF. مصادر Numbeo + GASTAT. بدون تسجيل.",
 };
 
 export async function generateMetadata({
