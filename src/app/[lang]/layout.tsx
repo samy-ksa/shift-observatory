@@ -55,11 +55,9 @@ export const viewport: Viewport = {
 };
 
 const TITLES: Record<Lang, string> = {
-  // Rewritten for desktop CTR (audit lever #1): question/fear hook instead of a
-  // cold "dashboard" title. Drops the "| SHIFT" suffix to save SERP space.
-  en: "Will AI Take Your Job in Saudi Arabia? Check 237 Roles",
-  fr: "L'IA va-t-elle prendre votre emploi en Arabie Saoudite ?",
-  ar: "هل سيأخذ الذكاء الاصطناعي وظيفتك في السعودية؟",
+  en: "AI Job Risk Saudi Arabia: 237 Jobs Scored | SHIFT",
+  fr: "Risque IA emplois Arabie Saoudite : 237 métiers scorés | SHIFT",
+  ar: "مخاطر الذكاء الاصطناعي على الوظائف في السعودية: 237 وظيفة | شيفت",
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
