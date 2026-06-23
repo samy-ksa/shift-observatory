@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "2026-06-21",
+    "kind": "pulse",
+    "date": "2026-06-21",
+    "published_at": "2026-06-23T09:18:29",
+    "keyword": "AI layoffs and the Saudi workforce: week of 2026-06-21",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: AI Layoffs: 14,000 Cut This Week, None in the Gulf. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=AI%20Layoffs%3A%2014%2C000%20Cut%20This%20Week%2C%20None%20in%20the%20Gulf&subtitle=AI-cited%20layoffs%20hit%2014%2C000%20this%20week%20%E2%80%94%20all%20U.S.%20tech%20%28Meta%2C%20Intuit%2C%20Cisco%29%20%E2%80%94%20wi",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=Licenciements%20li%C3%A9s%20%C3%A0%20l%27IA%20%3A%2014%20000%20postes%20supprim%C3%A9s%20cette%20semaine%2C%20aucun%20dans%20le%20Golfe&subtitle=Les%20licenciements%20attribu%C3%A9s%20%C3%A0%20l%27IA%20ont%20atteint%2014%20000%20cette%20semaine%20%E2%80%94%20uniquement",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%A7%D8%AA%20%D8%A8%D8%B3%D8%A8%D8%A8%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%3A%2014%2C000%20%D9%88%D8%B8%D9%8A%D9%81%D8%A9%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%D8%8C%20%D9%88%D9%84%D8%A7%20%D9%88%D8%A7%D8%AD%D8%AF%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%AC&subtitle=%D8%A8%D9%84%D8%BA%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%86%D8%B3%D9%88%D8%A8%D8%A9%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%2014%2C000%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%20%E2%80%94%20%D8%AC%D9%85%D9%8A%D8%B9%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%82%D8%B7%D8%A7%D8%B9"
+    },
+    "langs": {
+      "en": {
+        "title": "AI Layoffs: 14,000 Cut This Week, None in the Gulf",
+        "description": "U.S. tech firms cut 14,000 jobs this week to fund AI, while the Gulf logged zero AI-layoff events. What the global signal means for Saudi workers.",
+        "lede": "AI-cited layoffs reached 14,000 this week, and every one of those cuts was tied to artificial intelligence, according to the KSA Shift Observatory's Weekly Pulse for the period ending 21 June 2026. Three U.S. technology firms drove the total: Meta cut 8,000 roles, Intuit 3,000, and Cisco an estimated 3,000 (CBS News). The Gulf recorded zero AI-layoff events over the same seven days, so this is a global signal rather than a local one. For the year so far, 85,411 tech jobs have been eliminated worldwide, with 49,135 U.S. cuts explicitly linked to AI between January and April — roughly 16 to 17 percent of all announced layoffs (CFO Dive). The week's relevance to Saudi Arabia is contextual: it shows where hiring is tightening, especially for junior roles, not a wave of Saudi job losses.",
+        "h2_sections": [
+          {
+            "q": "How many jobs were cut because of AI this week?",
+            "body": "The Observatory logged 14,000 layoffs in the seven days to 21 June 2026, and all 14,000 were AI-cited — a figure up on the previous week. The total came almost entirely from three U.S. technology firms: Meta (8,000 roles), Intuit (3,000), and Cisco (an estimated 3,000). No Gulf or MENA automation events were recorded over the same period, so the week's signal is a U.S. story with read-across value rather than a regional one."
+          },
+          {
+            "q": "Why did Intuit, Meta, and Cisco cut staff?",
+            "body": "The stated reasons differ by company. Intuit cut 3,000 jobs — about 17% of its workforce — as a direct pivot toward AI-powered products (CBS News, 18 June 2026). Meta's 8,000 cuts are described as a contributing case: a restructuring that shifts spending toward AI infrastructure. Cisco's roughly 3,000 reductions are also classed as contributing, with the restructuring partly meant to fund employee AI use (CBS News, 14 June 2026). Two of the three, then, are spending-reallocation moves; only Intuit frames the cut as a straight AI product bet."
+          },
+          {
+            "q": "Did Saudi Arabia or the Gulf record any AI layoffs this week?",
+            "body": "No. The Observatory recorded zero Gulf AI-layoff events and no Saudi policy updates for the week. The relevance to Saudi Arabia is contextual rather than direct: shifts in global hiring patterns and entry-level exposure, not local job losses. The Observatory currently scores 237 Saudi occupations for AI exposure — you can see how each one ranks on the [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "Is AI actually causing layoffs, or just slower hiring?",
+            "body": "Both readings hold, depending on the lens. Economists cited by CBS News (18 June 2026) argue AI's main labour-market effect so far is weaker hiring — especially for junior and entry-level roles — more than mass layoffs; Goldman Sachs estimates AI has trimmed monthly U.S. payroll growth by about 16,000 jobs and nudged unemployment up 0.1 point. At the same time, AI was the leading stated reason for U.S. job cuts in March, April and May 2026 (CFO Dive / Challenger, Gray & Christmas). In April alone, 21,490 U.S. cuts were tied directly to AI, within a technology sector that shed 33,361 roles that month."
+          },
+          {
+            "q": "What should a Saudi worker take from a U.S.-only week?",
+            "body": "The actionable signal is where the pressure lands: entry-level and junior positions, and sectors already exposed elsewhere. A layoff-tracking review estimates more than 150,000 workers worldwide were affected by AI-driven layoffs in 2026 across tech, finance, logistics, consulting, media, retail and manufacturing (Programs.com, 28 May 2026). None of that is a Saudi headcount figure, so treat it as a map of exposure rather than a forecast. To gauge your own position, run a [Personal AI Risk Profile](/profile) and, if you are weighing a move, the [Pre-Departure Checklist](/prepare) covers visa and certification steps."
+          }
+        ],
+        "faq": [
+          {
+            "q": "How does this week compare with the year so far?",
+            "a": "Year-to-date, 85,411 tech jobs have been eliminated worldwide. Of the U.S. total, 49,135 planned layoffs between January and April 2026 were explicitly linked to AI — about 16 to 17 percent of all announced cuts (CFO Dive, 30 May 2026)."
+          },
+          {
+            "q": "Which industries are most exposed to AI-driven cuts?",
+            "a": "Technology, chemicals and industrial goods are the most affected, per CFO Dive / Challenger, Gray & Christmas (1 June 2026). In April 2026 the technology sector recorded 33,361 cuts and the chemical sector 4,975, with AI named as a primary driver in both."
+          },
+          {
+            "q": "Are more AI-funded layoffs expected?",
+            "a": "A March 2026 survey suggests so: 26% of companies expect to lay off staff specifically to fund AI, and 54% anticipate cutting compensation for the same reason (CFO Dive, 30 May 2026)."
+          },
+          {
+            "q": "How can I check whether my own occupation is exposed?",
+            "a": "The Observatory scores 237 Saudi occupations. Start with your role on the [AI Job Risk Dashboard](/career); per-occupation detail pages sit under /job/<occupation>. For relocation cost context, the Cost of Living & Relocation Calculator is at /relocate."
+          }
+        ],
+        "key_takeaway": "AI-cited layoffs hit 14,000 this week — all U.S. tech (Meta, Intuit, Cisco) — with zero Gulf events; for Saudi workers the signal is tighter entry-level hiring, not local job cuts.",
+        "sources": [
+          {
+            "label": "CBS News — Intuit, Meta and Cisco AI-driven layoffs (2026-06-14 / 2026-06-18)",
+            "url": ""
+          },
+          {
+            "label": "CFO Dive — AI as top driver of U.S. job cuts, April and YTD 2026 (2026-05-30)",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas via CFO Dive — leading reason for cuts, Mar–May 2026 (2026-06-01)",
+            "url": ""
+          },
+          {
+            "label": "Programs.com — AI layoff list, >150,000 workers affected in 2026 (2026-05-28)",
+            "url": ""
+          },
+          {
+            "label": "KSA Shift Observatory — Weekly Pulse snapshot (2026-06-21)",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "Licenciements IA : 14 000 cette semaine, zéro dans le Golfe",
+        "description": "La tech américaine a supprimé 14 000 postes cette semaine pour financer l'IA, contre zéro dans le Golfe. Ce que ce signal mondial dit aux Saoudiens.",
+        "lede": "Les licenciements attribués à l'IA ont atteint 14 000 cette semaine, et chacune de ces suppressions était liée à l'intelligence artificielle, selon le Weekly Pulse du KSA Shift Observatory pour la période close le 21 juin 2026. Trois entreprises technologiques américaines concentrent ce total : Meta a supprimé 8 000 postes, Intuit 3 000 et Cisco environ 3 000 (CBS News). Le Golfe n'a enregistré aucun licenciement lié à l'IA sur ces sept mêmes jours : il s'agit donc d'un signal mondial, et non local. Depuis le début de l'année, 85 411 emplois tech ont été supprimés dans le monde, dont 49 135 aux États-Unis explicitement liés à l'IA entre janvier et avril — soit environ 16 à 17 % de tous les licenciements annoncés (CFO Dive). La portée de cette semaine pour l'Arabie saoudite est contextuelle : elle montre où l'embauche se resserre, surtout pour les postes juniors, et non une vague de pertes d'emplois saoudiennes.",
+        "h2_sections": [
+          {
+            "q": "Combien d'emplois ont été supprimés à cause de l'IA cette semaine ?",
+            "body": "L'Observatoire a recensé 14 000 licenciements sur les sept jours précédant le 21 juin 2026, et les 14 000 étaient attribués à l'IA — un chiffre en hausse par rapport à la semaine précédente. Le total provient presque entièrement de trois entreprises technologiques américaines : Meta (8 000 postes), Intuit (3 000) et Cisco (environ 3 000). Aucun événement d'automatisation dans le Golfe ou la région MENA n'a été enregistré sur la même période : le signal de la semaine est donc une histoire américaine porteuse d'enseignements transposables, plutôt qu'un phénomène régional."
+          },
+          {
+            "q": "Pourquoi Intuit, Meta et Cisco ont-ils réduit leurs effectifs ?",
+            "body": "Les raisons avancées diffèrent selon l'entreprise. Intuit a supprimé 3 000 emplois — environ 17 % de ses effectifs — dans un virage direct vers des produits dopés à l'IA (CBS News, 18 juin 2026). Les 8 000 suppressions de Meta sont présentées comme un cas contributif : une restructuration qui réoriente les dépenses vers l'infrastructure IA. Les quelque 3 000 réductions de Cisco sont également classées comme contributives, la restructuration visant en partie à financer l'usage de l'IA par les salariés (CBS News, 14 juin 2026). Deux des trois relèvent donc d'une réallocation des dépenses ; seul Intuit présente la coupe comme un pari assumé sur un produit IA."
+          },
+          {
+            "q": "L'Arabie saoudite ou le Golfe ont-ils enregistré des licenciements liés à l'IA cette semaine ?",
+            "body": "Non. L'Observatoire n'a enregistré aucun licenciement lié à l'IA dans le Golfe ni aucune mise à jour réglementaire saoudienne pour la semaine. La portée pour l'Arabie saoudite est contextuelle plutôt que directe : évolution des tendances mondiales d'embauche et exposition des postes débutants, et non des pertes d'emplois locales. L'Observatoire évalue actuellement l'exposition à l'IA de 237 métiers saoudiens — vous pouvez voir comment chacun se classe sur le [tableau de bord des risques liés à l'IA](/career)."
+          },
+          {
+            "q": "L'IA provoque-t-elle vraiment des licenciements, ou seulement un ralentissement des embauches ?",
+            "body": "Les deux lectures tiennent, selon l'angle retenu. Les économistes cités par CBS News (18 juin 2026) estiment que le principal effet de l'IA sur le marché du travail à ce jour est un affaiblissement des embauches — surtout pour les postes juniors et débutants — plus qu'une vague de licenciements ; Goldman Sachs estime que l'IA a réduit la croissance mensuelle de l'emploi américain d'environ 16 000 postes et fait grimper le chômage de 0,1 point. Dans le même temps, l'IA a été la première raison invoquée pour les suppressions d'emplois aux États-Unis en mars, avril et mai 2026 (CFO Dive / Challenger, Gray & Christmas). Rien qu'en avril, 21 490 suppressions américaines étaient directement liées à l'IA, au sein d'un secteur technologique qui a perdu 33 361 postes ce mois-là."
+          },
+          {
+            "q": "Que doit retenir un travailleur saoudien d'une semaine 100 % américaine ?",
+            "body": "Le signal exploitable, c'est l'endroit où la pression s'exerce : les postes débutants et juniors, et les secteurs déjà exposés ailleurs. Une analyse de suivi des licenciements estime que plus de 150 000 travailleurs dans le monde ont été touchés par des licenciements liés à l'IA en 2026, dans la tech, la finance, la logistique, le conseil, les médias, le commerce de détail et l'industrie (Programs.com, 28 mai 2026). Aucun de ces chiffres ne concerne les effectifs saoudiens : voyez-y une carte de l'exposition plutôt qu'une prévision. Pour évaluer votre propre situation, établissez un [profil de risque IA personnel](/profile) et, si vous envisagez un départ, la [checklist de pré-départ](/prepare) couvre les étapes de visa et de certification."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Comment cette semaine se compare-t-elle à l'année écoulée jusqu'ici ?",
+            "a": "Depuis le début de l'année, 85 411 emplois tech ont été supprimés dans le monde. Sur le total américain, 49 135 licenciements planifiés entre janvier et avril 2026 étaient explicitement liés à l'IA — soit environ 16 à 17 % de toutes les suppressions annoncées (CFO Dive, 30 mai 2026)."
+          },
+          {
+            "q": "Quels secteurs sont les plus exposés aux suppressions liées à l'IA ?",
+            "a": "La technologie, la chimie et les biens industriels sont les plus touchés, d'après CFO Dive / Challenger, Gray & Christmas (1 juin 2026). En avril 2026, le secteur technologique a enregistré 33 361 suppressions et le secteur chimique 4 975, l'IA étant citée comme un moteur principal dans les deux cas."
+          },
+          {
+            "q": "Faut-il s'attendre à davantage de licenciements destinés à financer l'IA ?",
+            "a": "Une enquête de mars 2026 le laisse penser : 26 % des entreprises prévoient de licencier spécifiquement pour financer l'IA, et 54 % anticipent une baisse des rémunérations pour la même raison (CFO Dive, 30 mai 2026)."
+          },
+          {
+            "q": "Comment vérifier si mon propre métier est exposé ?",
+            "a": "L'Observatoire évalue 237 métiers saoudiens. Commencez par votre poste sur le [tableau de bord des risques liés à l'IA](/career) ; les pages de détail par métier se trouvent sous /job/<occupation>. Pour le contexte des coûts de relocalisation, le calculateur du coût de la vie et de relocalisation est à l'adresse /relocate."
+          }
+        ],
+        "key_takeaway": "Les licenciements attribués à l'IA ont atteint 14 000 cette semaine — tous dans la tech américaine (Meta, Intuit, Cisco) — avec zéro événement dans le Golfe ; pour les travailleurs saoudiens, le signal est un resserrement des embauches débutantes, pas des suppressions locales.",
+        "sources": [
+          {
+            "label": "CBS News — licenciements liés à l'IA chez Intuit, Meta et Cisco (2026-06-14 / 2026-06-18)",
+            "url": ""
+          },
+          {
+            "label": "CFO Dive — l'IA, premier moteur des suppressions d'emplois aux États-Unis, avril et cumul annuel 2026 (2026-05-30)",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas via CFO Dive — première raison des suppressions, mars–mai 2026 (2026-06-01)",
+            "url": ""
+          },
+          {
+            "label": "Programs.com — liste des licenciements liés à l'IA, plus de 150 000 travailleurs touchés en 2026 (2026-05-28)",
+            "url": ""
+          },
+          {
+            "label": "KSA Shift Observatory — instantané du Weekly Pulse (2026-06-21)",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "تسريحات الذكاء الاصطناعي: 14000 هذا الأسبوع، صفر في الخليج",
+        "description": "سرّحت شركات التقنية الأمريكية 14000 وظيفة هذا الأسبوع لتمويل الذكاء الاصطناعي، بينما سجّل الخليج صفر تسريحات. ماذا تعني الإشارة العالمية للعمال السعوديين؟",
+        "lede": "بلغت التسريحات المنسوبة إلى الذكاء الاصطناعي 14000 وظيفة هذا الأسبوع، وقد ارتبطت كل واحدة من هذه التخفيضات بالذكاء الاصطناعي، وذلك وفقًا لنشرة النبض الأسبوعية الصادرة عن مرصد التحول في المملكة العربية السعودية للفترة المنتهية في 21 يونيو 2026. وقد جاء هذا الإجمالي بالكامل تقريبًا من ثلاث شركات تقنية أمريكية كبرى: فقد سرّحت ميتا 8000 وظيفة، وإنتويت 3000 وظيفة، وسيسكو نحو 3000 وظيفة (CBS News). وفي المقابل، سجّل الخليج صفر تسريحات مرتبطة بالذكاء الاصطناعي خلال الأيام السبعة نفسها، ما يجعل هذه إشارة عالمية أكثر منها محلية. ومنذ بداية العام حتى الآن، أُلغيت 85411 وظيفة تقنية حول العالم، مع ربط 49135 تسريحًا أمريكيًا صراحةً بالذكاء الاصطناعي بين يناير وأبريل — أي ما يقارب 16 إلى 17 بالمئة من جميع التسريحات المُعلَنة (CFO Dive). أما أهمية هذا الأسبوع بالنسبة للسعودية فهي سياقية: فهو يُظهر أين يتشدد التوظيف، خصوصًا في الوظائف المبتدئة، وليس موجة من فقدان الوظائف داخل المملكة.",
+        "h2_sections": [
+          {
+            "q": "كم عدد الوظائف التي أُلغيت بسبب الذكاء الاصطناعي هذا الأسبوع؟",
+            "body": "سجّل المرصد 14000 تسريح خلال الأيام السبعة المنتهية في 21 يونيو 2026، وكانت جميعها الـ14000 منسوبة إلى الذكاء الاصطناعي — وهو رقم أعلى من الأسبوع السابق. وقد جاء الإجمالي بالكامل تقريبًا من ثلاث شركات تقنية أمريكية: ميتا (8000 وظيفة)، وإنتويت (3000)، وسيسكو (نحو 3000). ولم تُسجَّل أي أحداث أتمتة في الخليج أو منطقة الشرق الأوسط وشمال إفريقيا خلال الفترة نفسها، ما يجعل إشارة الأسبوع قصة أمريكية ذات قيمة استرشادية لا قصة إقليمية."
+          },
+          {
+            "q": "لماذا سرّحت إنتويت وميتا وسيسكو موظفيها؟",
+            "body": "تختلف الأسباب المعلنة من شركة إلى أخرى. سرّحت إنتويت 3000 وظيفة — نحو 17% من قوتها العاملة — في تحوّل مباشر نحو منتجات تعمل بالذكاء الاصطناعي (CBS News، 18 يونيو 2026). أما تسريحات ميتا البالغة 8000 وظيفة فتُوصف بأنها حالة مساهِمة: إعادة هيكلة تحوّل الإنفاق نحو بنية الذكاء الاصطناعي التحتية. وتخفيضات سيسكو البالغة نحو 3000 وظيفة تُصنّف أيضًا ضمن الحالات المساهِمة، إذ تهدف إعادة الهيكلة جزئيًا إلى تمويل استخدام الموظفين للذكاء الاصطناعي (CBS News، 14 يونيو 2026). أي أن اثنتين من الثلاث هما خطوتا إعادة تخصيص للإنفاق؛ وحدها إنتويت تصف التسريح كرهان مباشر على منتجات الذكاء الاصطناعي."
+          },
+          {
+            "q": "هل سجّلت السعودية أو الخليج أي تسريحات بسبب الذكاء الاصطناعي هذا الأسبوع؟",
+            "body": "لا. سجّل المرصد صفر أحداث تسريح مرتبطة بالذكاء الاصطناعي في الخليج، ولا أي تحديثات في السياسات السعودية خلال الأسبوع. والأهمية بالنسبة للسعودية سياقية لا مباشرة: تحوّلات في أنماط التوظيف العالمية وانكشاف الوظائف المبتدئة، لا فقدان وظائف محلي. ويقيّم المرصد حاليًا 237 مهنة سعودية من حيث انكشافها للذكاء الاصطناعي — ويمكنك الاطلاع على ترتيب كل منها على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career)."
+          },
+          {
+            "q": "هل يتسبب الذكاء الاصطناعي فعلًا في تسريحات، أم في تباطؤ التوظيف فقط؟",
+            "body": "كلا القراءتين صحيحة، تبعًا للزاوية. يرى اقتصاديون نقلت عنهم CBS News (18 يونيو 2026) أن أثر الذكاء الاصطناعي الرئيسي على سوق العمل حتى الآن هو ضعف التوظيف — خصوصًا للوظائف المبتدئة وذات المستوى الأولي — أكثر من التسريحات الجماعية؛ وتقدّر غولدمان ساكس أن الذكاء الاصطناعي قلّص النمو الشهري لكشوف الرواتب الأمريكية بنحو 16000 وظيفة ورفع البطالة 0.1 نقطة. وفي الوقت نفسه، كان الذكاء الاصطناعي السبب المعلن الأبرز لتخفيضات الوظائف الأمريكية في مارس وأبريل ومايو 2026 (CFO Dive / Challenger, Gray & Christmas). وفي أبريل وحده، ارتبط 21490 تسريحًا أمريكيًا مباشرةً بالذكاء الاصطناعي، ضمن قطاع تقني فقد 33361 وظيفة ذلك الشهر."
+          },
+          {
+            "q": "ماذا يجب أن يستخلص العامل السعودي من أسبوع أمريكي محض؟",
+            "body": "الإشارة القابلة للتطبيق هي أين يقع الضغط: الوظائف المبتدئة وذات المستوى الأولي، والقطاعات المنكشفة بالفعل في أماكن أخرى. يقدّر استعراض لتتبّع التسريحات أن أكثر من 150000 عامل حول العالم تأثروا بتسريحات مدفوعة بالذكاء الاصطناعي في 2026 عبر التقنية والمال والخدمات اللوجستية والاستشارات والإعلام والتجزئة والتصنيع (Programs.com، 28 مايو 2026). ولا شيء من ذلك رقم عمالة سعودي، لذا تعامل معه كخريطة للانكشاف لا كتوقّع. ولقياس موقعك الخاص، أنشئ [ملفًا شخصيًا لمخاطر الذكاء الاصطناعي](/profile)، وإن كنت تدرس الانتقال، فإن [قائمة ما قبل المغادرة](/prepare) تغطي خطوات التأشيرة والاعتمادات."
+          }
+        ],
+        "faq": [
+          {
+            "q": "كيف يقارَن هذا الأسبوع بإجمالي العام حتى الآن؟",
+            "a": "منذ بداية العام حتى الآن، أُلغيت 85411 وظيفة تقنية حول العالم. ومن الإجمالي الأمريكي، ارتبط 49135 تسريحًا مخططًا بين يناير وأبريل 2026 صراحةً بالذكاء الاصطناعي — أي نحو 16 إلى 17 بالمئة من جميع التخفيضات المُعلَنة (CFO Dive، 30 مايو 2026)."
+          },
+          {
+            "q": "ما القطاعات الأكثر انكشافًا للتخفيضات المدفوعة بالذكاء الاصطناعي؟",
+            "a": "التقنية والكيماويات والسلع الصناعية هي الأكثر تأثرًا، وفقًا لـ CFO Dive / Challenger, Gray & Christmas (1 يونيو 2026). ففي أبريل 2026 سجّل قطاع التقنية 33361 تسريحًا، وقطاع الكيماويات 4975، مع تسمية الذكاء الاصطناعي محركًا رئيسيًا في كليهما."
+          },
+          {
+            "q": "هل يُتوقَّع مزيد من التسريحات لتمويل الذكاء الاصطناعي؟",
+            "a": "يشير استطلاع أُجري في مارس 2026 إلى ذلك: 26% من الشركات تتوقع تسريح موظفين تحديدًا لتمويل الذكاء الاصطناعي، و54% تتوقع خفض التعويضات للسبب نفسه (CFO Dive، 30 مايو 2026)."
+          },
+          {
+            "q": "كيف أتحقق مما إذا كانت مهنتي منكشفة؟",
+            "a": "يقيّم المرصد 237 مهنة سعودية. ابدأ بمهنتك على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career)؛ وتوجد صفحات التفاصيل الخاصة بكل مهنة تحت /job/<occupation>. ولسياق تكاليف الانتقال، تجد حاسبة تكلفة المعيشة والانتقال على /relocate."
+          }
+        ],
+        "key_takeaway": "بلغت التسريحات المنسوبة إلى الذكاء الاصطناعي 14000 هذا الأسبوع — كلها في قطاع التقنية الأمريكي (ميتا، إنتويت، سيسكو) — مع صفر أحداث في الخليج؛ وبالنسبة للعمال السعوديين فالإشارة هي تشدد توظيف المبتدئين، لا تسريحات محلية.",
+        "sources": [
+          {
+            "label": "CBS News — تسريحات إنتويت وميتا وسيسكو المدفوعة بالذكاء الاصطناعي (2026-06-14 / 2026-06-18)",
+            "url": ""
+          },
+          {
+            "label": "CFO Dive — الذكاء الاصطناعي كأبرز محرك لتخفيضات الوظائف الأمريكية، أبريل والعام حتى تاريخه 2026 (2026-05-30)",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas عبر CFO Dive — السبب الأبرز للتخفيضات، مارس–مايو 2026 (2026-06-01)",
+            "url": ""
+          },
+          {
+            "label": "Programs.com — قائمة تسريحات الذكاء الاصطناعي، أكثر من 150000 عامل تأثروا في 2026 (2026-05-28)",
+            "url": ""
+          },
+          {
+            "label": "مرصد التحول السعودي — لقطة نشرة النبض الأسبوعية (2026-06-21)",
+            "url": ""
+          }
+        ]
+      }
+    }
+  }
+]

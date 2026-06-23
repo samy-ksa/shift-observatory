@@ -77,3 +77,12 @@ Built by Samy Aloulou (independent), based in Saudi Arabia. The dataset and meth
 ## Contact
 
 [samy@monitoringforcegulf.com](mailto:samy@monitoringforcegulf.com)
+
+<!-- seo_engine:articles:start -->
+
+## Insights & Pulse
+
+- [Will AI Replace Accountants in Saudi Arabia?](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-accountants-in-saudi-arabia): Accounting scores 88.2/100 for AI risk in Saudi Arabia — 7th of 237 jobs. But Nitaqat quotas and tax-free pay change what that means.
+- [AI Layoffs: 14,000 Cut This Week, None in the Gulf](https://www.ksashiftobservatory.online/en/pulse/2026-06-21): U.S. tech firms cut 14,000 jobs this week to fund AI, while the Gulf logged zero AI-layoff events. What the global signal means for Saudi workers.
+
+<!-- seo_engine:articles:end -->

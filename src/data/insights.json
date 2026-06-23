@@ -1,0 +1,262 @@
+[
+  {
+    "slug": "will-ai-replace-accountants-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-06-23",
+    "published_at": "2026-06-23T09:01:45",
+    "keyword": "will AI replace accountants in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Accountants in Saudi Arabia?. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Accountants%20in%20Saudi%20Arabia%3F&subtitle=Accounting%20ranks%207th%20of%20237%20for%20AI%20risk%20in%20Saudi%20Arabia%20%2888.2/100%2C%20%27substitution",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=L%27IA%20va-t-elle%20remplacer%20les%20comptables%20en%20Arabie%20saoudite%20%3F&subtitle=La%20comptabilit%C3%A9%20se%20classe%207e%20sur%20237%20pour%20le%20risque%20IA%20en%20Arabie%20saoudite%20%2888%2C2/",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D8%B3%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F&subtitle=%D8%AA%D8%AD%D8%AA%D9%84%20%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9%20%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A9%207%20%D9%85%D9%86%20%D8%A3%D8%B5%D9%84%20237%20%D9%85%D9%86%20%D8%AD%D9%8A%D8%AB%20%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%2888"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Accountants in Saudi Arabia?",
+        "description": "Accounting scores 88.2/100 for AI risk in Saudi Arabia — 7th of 237 jobs. But Nitaqat quotas and tax-free pay change what that means.",
+        "lede": "Accountants and auditors rank 7th out of 237 occupations for AI automation risk in Saudi Arabia, with a composite score of 88.2 out of 100 (KSA Shift Observatory). The dataset files the role under 'substitution_partial' — meaning AI is expected to take over parts of the work, not eliminate the job outright. That distinction matters. Median pay has held at SAR 10,000 a month, tax-free, and the role still carries 'very_high' relevance to the Saudi market. A Nitaqat Saudization quota adds a second buffer, pushing employers to hire and retain Saudi nationals even as automation climbs. So the practical question is not whether accounting disappears. It is which tasks automate first, and how quickly accountants move into the work that remains. This guide crosses the AI-risk score with real salaries, Nitaqat status, and funded reskilling — the Saudi-specific layer that generic automation rankings leave out.",
+        "h2_sections": [
+          {
+            "q": "How high is the AI risk for accountants in Saudi Arabia?",
+            "body": "The composite score is 88.2 out of 100, putting accounting and auditing 7th out of 237 occupations tracked by the KSA Shift Observatory. Three independent measures feed that number: a maximum LLM-exposure rating of 1 in the Eloundou framework, a 94% automation probability from Frey-Osborne, and a 'high' AI-exposure reading from Felten. The role also combines this very high exposure with 'very_high' relevance to the Saudi labor market — two separate readings that both run hot, rather than one driving the other. The 'substitution_partial' label is the key qualifier: structured, rule-based tasks (reconciliations, data entry, first-pass reporting) are the most exposed, not the judgment work. The WEF Future of Jobs outlook lists the role as in decline, and 2024 demand ranked 27th. You can see where every other role lands on the [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "Are accounting salaries in Saudi Arabia falling because of AI?",
+            "body": "Pay has not collapsed. As of 2026, accountants in Saudi Arabia earn SAR 6,000 a month at entry, SAR 10,000 at the median, and SAR 16,000 at senior level — all tax-free (Astr 2026). A high automation score and steady salaries can coexist for now, because the score measures task exposure, not this year's pay. The signal worth watching is the gap between entry and senior pay: routine work automates from the bottom up, so the entry rungs are the most exposed while senior judgment roles hold value. To see how tax-free pay translates against living costs, use the [Cost of Living & Relocation Calculator](/relocate)."
+          },
+          {
+            "q": "Does Nitaqat protect Saudi accountants from automation?",
+            "body": "Nitaqat applies a 'sector_quota' to financial activities with a 'very_high' compliance risk, which obliges employers to hire and retain Saudi nationals — a pressure that can cushion displacement for Saudi accountants even as automation rises. This is the Saudi-specific layer generic guides miss. Worldwide automation rankings treat accounting as a single global job; in Saudi Arabia, a Saudization quota sits on top of the technology trend. The specific local mechanism is the pairing of that quota with tax-free pay: together they give Saudi nationals a structural advantage that AI-risk scores, calibrated largely on Western labor data, do not capture. The flip side is concentration risk — roughly 95,000 people work in this role nationally, in a sector explicitly under quota."
+          },
+          {
+            "q": "How does Saudi Arabia compare to France and Europe?",
+            "body": "Across the OECD, about 27% of jobs sit at high risk of automation, and accounting and bookkeeping clerical tasks fall in the highest-exposure band in every country studied (OECD 2023). The Saudi score is therefore not an outlier — the exposure is global. What differs is the response: the Big Four publicly frame AI as augmenting auditors rather than replacing them, which fits the 'substitution_partial' reading rather than wholesale elimination. For Saudi accountants, the takeaway is that the technology trend is shared with Europe, while the Nitaqat quota and tax-free pay are not. Related desk roles such as [bookkeeping clerks](/job/bookkeeping-clerks) sit in the same high-exposure band and are worth checking individually."
+          },
+          {
+            "q": "How can accountants in Saudi Arabia stay employable?",
+            "body": "Reskilling for this role is funded directly by HRDF. Saudi accountants can take free AI fundamentals through SAMAI (SDAIA's AI literacy certificate), digital tracks via Doroob, and the Fuel (SDA) program, which has trained over 100,000 people across 40 digital learning tracks. HRDF reimburses up to SAR 1,350 per approved professional certificate, and the Taqat employment-support scheme subsidizes 30–50% of salary, up to SAR 3,000 a month for 24 months. The priority is moving up the value chain — from reconciliations and reporting toward advisory, controls, and AI oversight. Check your own exposure with the [Personal AI Risk Profile](/profile); the [Pre-Departure Checklist](/prepare) covers the certifications worth securing first."
+          }
+        ],
+        "faq": [
+          {
+            "q": "How do I check the AI risk for a different occupation?",
+            "a": "The [AI Job Risk Dashboard](/career) scores all 237 occupations in the dataset, so you can look up any role directly. For a personalized read on your own tasks and skills, the [Personal AI Risk Profile](/profile) breaks the exposure down further."
+          },
+          {
+            "q": "Does the 88.2 score predict that accounting jobs will be lost?",
+            "a": "No. The score measures AI-weighted task exposure, not predicted job losses. Nationally, the Observatory weights about 4,450,778 jobs by AI exposure out of a 12,420,050-strong GOSI workforce, but its own methodology notes that actual displacement will be lower because augmentation outweighs substitution for many roles."
+          },
+          {
+            "q": "Are expat accountants affected differently from Saudi nationals?",
+            "a": "Likely yes, because of Nitaqat. Of Saudi Arabia's GOSI workforce, 9,444,691 are non-Saudi and 2,975,359 are Saudi nationals. The sector_quota pushes employers to prioritize Saudi nationals, so expat accountants face the automation trend without the quota buffer that protects nationals."
+          },
+          {
+            "q": "Is it still worth relocating to Saudi Arabia to work in accounting?",
+            "a": "It depends on your timeline. The pay is tax-free (SAR 10,000 at the median), but automation exposure is high and Nitaqat favors Saudi nationals for hiring. Model the trade-off with the [Cost of Living & Relocation Calculator](/relocate), and the [Pre-Departure Checklist](/prepare) lists the certifications and visa steps to line up first."
+          }
+        ],
+        "key_takeaway": "Accounting ranks 7th of 237 for AI risk in Saudi Arabia (88.2/100, 'substitution_partial'), but tax-free pay and a Nitaqat Saudization quota cushion Saudi nationals — the task to manage is reskilling into judgment work, not a job that simply vanishes.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (composite score 88.2/100, rank 7/237, Nitaqat status, employment, national workforce)",
+            "url": ""
+          },
+          {
+            "label": "Astr 2026 — Saudi accountant salaries (SAR entry 6,000 / median 10,000 / senior 16,000, tax-free)",
+            "url": ""
+          },
+          {
+            "label": "Eloundou et al. — LLM-exposure rating (1)",
+            "url": ""
+          },
+          {
+            "label": "Frey & Osborne — automation probability (94%)",
+            "url": ""
+          },
+          {
+            "label": "Felten et al. — AI-exposure ('high')",
+            "url": ""
+          },
+          {
+            "label": "WEF Future of Jobs — outlook (decline), 2024 demand rank 27",
+            "url": ""
+          },
+          {
+            "label": "OECD 2023 — ~27% of jobs at high automation risk; accounting/bookkeeping in highest-exposure band",
+            "url": ""
+          },
+          {
+            "label": "HRDF — reskilling tracks (Doroob, SAMAI, Fuel/SDA, Professional Certificates Support, Taqat)",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "L'IA va-t-elle remplacer les comptables en Arabie saoudite ?",
+        "description": "La comptabilité obtient un score de risque IA de 88,2/100 en Arabie saoudite — 7e sur 237 métiers. Mais les quotas Nitaqat et la rémunération défiscalisée changent ce que cela signifie.",
+        "lede": "Les comptables et auditeurs se classent 7e sur 237 professions pour le risque d'automatisation par l'IA en Arabie saoudite, avec un score composite de 88,2 sur 100 (KSA Shift Observatory). Le jeu de données range le métier sous l'étiquette « substitution_partial » — autrement dit, l'IA devrait prendre en charge une partie du travail, sans pour autant supprimer le poste. Cette nuance compte. La rémunération médiane s'est maintenue à 10 000 SAR par mois, défiscalisée, et le métier conserve une pertinence « very_high » pour le marché saoudien. Un quota de saoudisation Nitaqat ajoute un second amortisseur, poussant les employeurs à embaucher et fidéliser les ressortissants saoudiens alors même que l'automatisation progresse. La vraie question pratique n'est donc pas de savoir si la comptabilité disparaît, mais quelles tâches s'automatisent en premier, et à quelle vitesse les comptables évoluent vers le travail qui subsiste. Ce guide croise le score de risque IA avec les vrais salaires, le statut Nitaqat et la reconversion financée — la couche propre à l'Arabie saoudite que les classements génériques d'automatisation laissent de côté.",
+        "h2_sections": [
+          {
+            "q": "Quel est le niveau de risque IA pour les comptables en Arabie saoudite ?",
+            "body": "Le score composite est de 88,2 sur 100, ce qui place la comptabilité et l'audit au 7e rang sur 237 professions suivies par le KSA Shift Observatory. Trois mesures indépendantes alimentent ce chiffre : une note d'exposition aux LLM maximale de 1 dans le cadre d'Eloundou, une probabilité d'automatisation de 94 % selon Frey-Osborne, et une lecture d'exposition à l'IA « high » selon Felten. Le métier combine en outre cette très forte exposition avec une pertinence « very_high » pour le marché du travail saoudien — deux lectures distinctes qui montent toutes deux en flèche, plutôt que l'une qui entraîne l'autre. L'étiquette « substitution_partial » est le qualificatif clé : les tâches structurées et fondées sur des règles (rapprochements, saisie de données, reporting de première passe) sont les plus exposées, et non le travail de jugement. Les perspectives du WEF Future of Jobs classent le métier en déclin, et la demande en 2024 se situait au 27e rang. Vous pouvez voir où se situe chaque autre métier sur le [Tableau de bord du risque IA par métier](/career)."
+          },
+          {
+            "q": "Les salaires de la comptabilité en Arabie saoudite baissent-ils à cause de l'IA ?",
+            "body": "La rémunération ne s'est pas effondrée. En 2026, les comptables en Arabie saoudite gagnent 6 000 SAR par mois en début de carrière, 10 000 SAR au niveau médian et 16 000 SAR au niveau senior — le tout défiscalisé (Astr 2026). Un score d'automatisation élevé et des salaires stables peuvent coexister pour l'instant, car le score mesure l'exposition des tâches, et non la rémunération de cette année. Le signal à surveiller est l'écart entre les salaires d'entrée et seniors : le travail routinier s'automatise de bas en haut, de sorte que les premiers échelons sont les plus exposés tandis que les rôles seniors de jugement conservent leur valeur. Pour voir comment la rémunération défiscalisée se traduit face au coût de la vie, utilisez le [Calculateur de coût de la vie et de relocalisation](/relocate)."
+          },
+          {
+            "q": "Le Nitaqat protège-t-il les comptables saoudiens de l'automatisation ?",
+            "body": "Le Nitaqat applique un « sector_quota » aux activités financières avec un risque de conformité « very_high », ce qui oblige les employeurs à embaucher et fidéliser les ressortissants saoudiens — une pression qui peut amortir les suppressions de postes pour les comptables saoudiens même quand l'automatisation augmente. C'est la couche propre à l'Arabie saoudite que les guides génériques manquent. Les classements mondiaux d'automatisation traitent la comptabilité comme un métier unique à l'échelle planétaire ; en Arabie saoudite, un quota de saoudisation se superpose à la tendance technologique. Le mécanisme local spécifique est le couplage de ce quota avec une rémunération défiscalisée : ensemble, ils confèrent aux ressortissants saoudiens un avantage structurel que les scores de risque IA, calibrés en grande partie sur des données de marché du travail occidentales, ne captent pas. Le revers de la médaille est un risque de concentration — environ 95 000 personnes occupent ce métier à l'échelle nationale, dans un secteur explicitement soumis à quota."
+          },
+          {
+            "q": "Comment l'Arabie saoudite se compare-t-elle à la France et à l'Europe ?",
+            "body": "À travers l'OCDE, environ 27 % des emplois présentent un risque élevé d'automatisation, et les tâches de bureau de comptabilité et de tenue de livres tombent dans la tranche la plus exposée dans chaque pays étudié (OCDE 2023). Le score saoudien n'est donc pas une anomalie — l'exposition est mondiale. Ce qui diffère, c'est la réponse : les Big Four présentent publiquement l'IA comme augmentant les auditeurs plutôt que les remplaçant, ce qui correspond à la lecture « substitution_partial » plutôt qu'à une élimination totale. Pour les comptables saoudiens, l'enseignement est que la tendance technologique est partagée avec l'Europe, tandis que le quota Nitaqat et la rémunération défiscalisée ne le sont pas. Des métiers de bureau connexes comme les [employés de tenue de livres](/job/bookkeeping-clerks) se situent dans la même tranche de forte exposition et méritent d'être examinés individuellement."
+          },
+          {
+            "q": "Comment les comptables en Arabie saoudite peuvent-ils rester employables ?",
+            "body": "La reconversion pour ce métier est financée directement par le HRDF. Les comptables saoudiens peuvent suivre gratuitement les fondamentaux de l'IA via SAMAI (le certificat de culture IA de la SDAIA), des parcours numériques via Doroob, et le programme Fuel (SDA), qui a formé plus de 100 000 personnes à travers 40 parcours d'apprentissage numérique. Le HRDF rembourse jusqu'à 1 350 SAR par certificat professionnel agréé, et le dispositif de soutien à l'emploi Taqat subventionne 30 à 50 % du salaire, jusqu'à 3 000 SAR par mois pendant 24 mois. La priorité est de monter dans la chaîne de valeur — des rapprochements et du reporting vers le conseil, les contrôles et la supervision de l'IA. Vérifiez votre propre exposition avec le [Profil personnel de risque IA](/profile) ; la [Checklist avant départ](/prepare) recense les certifications à sécuriser en premier."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Comment vérifier le risque IA pour une autre profession ?",
+            "a": "Le [Tableau de bord du risque IA par métier](/career) note l'ensemble des 237 professions du jeu de données, vous pouvez donc consulter directement n'importe quel métier. Pour une lecture personnalisée de vos propres tâches et compétences, le [Profil personnel de risque IA](/profile) décompose l'exposition plus en détail."
+          },
+          {
+            "q": "Le score de 88,2 prédit-il que des emplois de comptable seront supprimés ?",
+            "a": "Non. Le score mesure l'exposition des tâches pondérée par l'IA, et non les pertes d'emplois prévues. À l'échelle nationale, l'Observatory pondère environ 4 450 778 emplois selon l'exposition à l'IA sur une main-d'œuvre GOSI de 12 420 050 personnes, mais sa propre méthodologie note que les suppressions réelles seront plus faibles, car l'augmentation l'emporte sur la substitution pour de nombreux métiers."
+          },
+          {
+            "q": "Les comptables expatriés sont-ils affectés différemment des ressortissants saoudiens ?",
+            "a": "Probablement oui, à cause du Nitaqat. Sur la main-d'œuvre GOSI de l'Arabie saoudite, 9 444 691 sont non-Saoudiens et 2 975 359 sont des ressortissants saoudiens. Le sector_quota pousse les employeurs à privilégier les ressortissants saoudiens, de sorte que les comptables expatriés affrontent la tendance à l'automatisation sans l'amortisseur du quota qui protège les nationaux."
+          },
+          {
+            "q": "Cela vaut-il toujours la peine de s'installer en Arabie saoudite pour travailler dans la comptabilité ?",
+            "a": "Cela dépend de votre horizon. La rémunération est défiscalisée (10 000 SAR au niveau médian), mais l'exposition à l'automatisation est élevée et le Nitaqat favorise les ressortissants saoudiens à l'embauche. Modélisez le compromis avec le [Calculateur de coût de la vie et de relocalisation](/relocate), et la [Checklist avant départ](/prepare) liste les certifications et les étapes de visa à organiser en premier."
+          }
+        ],
+        "key_takeaway": "La comptabilité se classe 7e sur 237 pour le risque IA en Arabie saoudite (88,2/100, « substitution_partial »), mais la rémunération défiscalisée et un quota de saoudisation Nitaqat amortissent le choc pour les ressortissants saoudiens — l'enjeu à gérer est la reconversion vers le travail de jugement, et non un métier qui disparaît purement et simplement.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (score composite 88,2/100, rang 7/237, statut Nitaqat, emploi, main-d'œuvre nationale)",
+            "url": ""
+          },
+          {
+            "label": "Astr 2026 — salaires des comptables saoudiens (SAR entrée 6 000 / médian 10 000 / senior 16 000, défiscalisés)",
+            "url": ""
+          },
+          {
+            "label": "Eloundou et al. — note d'exposition aux LLM (1)",
+            "url": ""
+          },
+          {
+            "label": "Frey & Osborne — probabilité d'automatisation (94 %)",
+            "url": ""
+          },
+          {
+            "label": "Felten et al. — exposition à l'IA (« high »)",
+            "url": ""
+          },
+          {
+            "label": "WEF Future of Jobs — perspectives (déclin), rang de demande 2024 : 27",
+            "url": ""
+          },
+          {
+            "label": "OCDE 2023 — ~27 % des emplois à risque élevé d'automatisation ; comptabilité/tenue de livres dans la tranche la plus exposée",
+            "url": ""
+          },
+          {
+            "label": "HRDF — parcours de reconversion (Doroob, SAMAI, Fuel/SDA, Soutien aux certificats professionnels, Taqat)",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل سيحل الذكاء الاصطناعي محل المحاسبين في المملكة العربية السعودية؟",
+        "description": "تسجل المحاسبة 88.2/100 من حيث مخاطر الذكاء الاصطناعي في السعودية — المرتبة 7 من أصل 237 وظيفة. لكن حصص نطاقات والأجر المعفى من الضرائب يغيّران معنى ذلك.",
+        "lede": "يحتل المحاسبون والمراجعون المرتبة 7 من أصل 237 مهنة من حيث مخاطر الأتمتة بالذكاء الاصطناعي في المملكة العربية السعودية، بدرجة مركّبة قدرها 88.2 من 100 (مرصد التحولات السعودي). تصنّف البيانات الدور تحت بند 'استبدال جزئي' — أي أن الذكاء الاصطناعي يُتوقع أن يتولى أجزاءً من العمل، لا أن يُلغي الوظيفة بالكامل. وهذا التمييز مهم. فقد ظل متوسط الأجر ثابتاً عند 10,000 ريال سعودي شهرياً، معفى من الضرائب، ولا يزال الدور يحمل صلة 'مرتفعة جداً' بالسوق السعودي. وتضيف حصة السعودة في نطاقات حاجزاً ثانياً، إذ تدفع أصحاب العمل إلى توظيف المواطنين السعوديين والاحتفاظ بهم حتى مع تصاعد الأتمتة. لذا فالسؤال العملي ليس هل تختفي المحاسبة، بل أي المهام تُؤتمت أولاً، وبأي سرعة ينتقل المحاسبون إلى العمل المتبقي. يقاطع هذا الدليل درجة مخاطر الذكاء الاصطناعي مع الرواتب الحقيقية ووضع نطاقات وإعادة التأهيل الممولة — الطبقة الخاصة بالسعودية التي تغفلها تصنيفات الأتمتة العامة.",
+        "h2_sections": [
+          {
+            "q": "ما مدى ارتفاع مخاطر الذكاء الاصطناعي على المحاسبين في السعودية؟",
+            "body": "الدرجة المركّبة هي 88.2 من 100، ما يضع المحاسبة والمراجعة في المرتبة 7 من أصل 237 مهنة يرصدها مرصد التحولات السعودي. تغذّي هذا الرقم ثلاثة مقاييس مستقلة: تقييم أقصى للتعرض لنماذج اللغة الكبيرة قدره 1 في إطار إلوندو، واحتمال أتمتة بنسبة 94% من فري-أوزبورن، وقراءة تعرّض 'مرتفعة' للذكاء الاصطناعي من فيلتن. كما يجمع الدور بين هذا التعرض المرتفع جداً وصلة 'مرتفعة جداً' بسوق العمل السعودي — قراءتان منفصلتان كلتاهما مرتفعتان، بدلاً من أن تكون إحداهما مدفوعة بالأخرى. وتصنيف 'الاستبدال الجزئي' هو المؤهّل الرئيسي: المهام المنظمة القائمة على القواعد (التسويات، إدخال البيانات، التقارير الأولية) هي الأكثر تعرضاً، وليس العمل القائم على الحكم. ويُدرج تقرير مستقبل الوظائف للمنتدى الاقتصادي العالمي الدور بوصفه في تراجع، واحتل الطلب في عام 2024 المرتبة 27. يمكنك معرفة موقع كل دور آخر على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career)."
+          },
+          {
+            "q": "هل تتراجع رواتب المحاسبة في السعودية بسبب الذكاء الاصطناعي؟",
+            "body": "لم تنهَر الأجور. اعتباراً من عام 2026، يكسب المحاسبون في السعودية 6,000 ريال سعودي شهرياً عند المستوى المبتدئ، و10,000 ريال عند المتوسط، و16,000 ريال عند المستوى الأقدم — وكلها معفاة من الضرائب (Astr 2026). يمكن أن تتعايش درجة أتمتة مرتفعة مع رواتب ثابتة في الوقت الحالي، لأن الدرجة تقيس تعرّض المهام، لا أجر هذا العام. والإشارة الجديرة بالمتابعة هي الفجوة بين أجر المبتدئ والأقدم: العمل الروتيني يُؤتمت من الأسفل إلى الأعلى، لذا فالدرجات المبتدئة هي الأكثر تعرضاً بينما تحتفظ أدوار الحكم في المستويات العليا بقيمتها. لمعرفة كيف يُترجَم الأجر المعفى من الضرائب مقابل تكاليف المعيشة، استخدم [حاسبة تكلفة المعيشة والانتقال](/relocate)."
+          },
+          {
+            "q": "هل تحمي نطاقات المحاسبين السعوديين من الأتمتة؟",
+            "body": "تطبّق نطاقات 'حصة قطاعية' على الأنشطة المالية مع مخاطر امتثال 'مرتفعة جداً'، ما يُلزم أصحاب العمل بتوظيف المواطنين السعوديين والاحتفاظ بهم — وهو ضغط يمكن أن يخفّف من إزاحة المحاسبين السعوديين حتى مع تصاعد الأتمتة. هذه هي الطبقة الخاصة بالسعودية التي تغفلها الأدلة العامة. تتعامل تصنيفات الأتمتة العالمية مع المحاسبة كوظيفة عالمية واحدة؛ أما في السعودية فتجلس حصة السعودة فوق الاتجاه التقني. والآلية المحلية المحددة هي اقتران تلك الحصة بالأجر المعفى من الضرائب: فهما معاً يمنحان المواطنين السعوديين ميزة هيكلية لا تلتقطها درجات مخاطر الذكاء الاصطناعي، المعايرة إلى حد كبير على بيانات سوق العمل الغربي. والوجه الآخر هو مخاطر التركّز — إذ يعمل نحو 95,000 شخص في هذا الدور على المستوى الوطني، في قطاع يخضع صراحةً للحصة."
+          },
+          {
+            "q": "كيف تقارَن السعودية بفرنسا وأوروبا؟",
+            "body": "على مستوى منظمة التعاون الاقتصادي والتنمية، تقع نحو 27% من الوظائف ضمن مخاطر مرتفعة للأتمتة، وتقع مهام المحاسبة ومسك الدفاتر الكتابية في نطاق التعرض الأعلى في كل بلد جرت دراسته (OECD 2023). لذا فالدرجة السعودية ليست شاذة — فالتعرض عالمي. ما يختلف هو الاستجابة: تصوّر شركات المحاسبة الأربع الكبرى علناً الذكاء الاصطناعي بوصفه معزّزاً للمراجعين بدلاً من أن يحل محلهم، وهو ما يتوافق مع قراءة 'الاستبدال الجزئي' لا الإلغاء الشامل. وبالنسبة للمحاسبين السعوديين، الخلاصة هي أن الاتجاه التقني مشترك مع أوروبا، بينما لا تشترك معها حصة نطاقات والأجر المعفى من الضرائب. وتقع الأدوار المكتبية ذات الصلة مثل [موظفي مسك الدفاتر](/job/bookkeeping-clerks) في النطاق نفسه المرتفع التعرض، ويجدر التحقق من كل منها على حدة."
+          },
+          {
+            "q": "كيف يمكن للمحاسبين في السعودية أن يبقوا قابلين للتوظيف؟",
+            "body": "إعادة التأهيل لهذا الدور ممولة مباشرة من صندوق تنمية الموارد البشرية (هدف). يمكن للمحاسبين السعوديين دراسة أساسيات الذكاء الاصطناعي مجاناً عبر سامي (شهادة محو الأمية في الذكاء الاصطناعي من سدايا)، ومسارات رقمية عبر دروب، وبرنامج فيول (SDA) الذي درّب أكثر من 100,000 شخص عبر 40 مساراً للتعلم الرقمي. ويعوّض صندوق تنمية الموارد البشرية ما يصل إلى 1,350 ريال سعودي عن كل شهادة مهنية معتمدة، كما يدعم برنامج دعم التوظيف 'طاقات' 30–50% من الراتب، بحد أقصى 3,000 ريال سعودي شهرياً لمدة 24 شهراً. الأولوية هي الصعود في سلسلة القيمة — من التسويات والتقارير نحو الاستشارات والضوابط والإشراف على الذكاء الاصطناعي. تحقق من تعرّضك الخاص عبر [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile)؛ وتغطي [قائمة ما قبل المغادرة](/prepare) الشهادات الجديرة بالتأمين أولاً."
+          }
+        ],
+        "faq": [
+          {
+            "q": "كيف أتحقق من مخاطر الذكاء الاصطناعي لمهنة مختلفة؟",
+            "a": "تسجّل [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career) جميع المهن البالغ عددها 237 في مجموعة البيانات، بحيث يمكنك البحث عن أي دور مباشرة. وللحصول على قراءة مخصصة لمهامك ومهاراتك، يفصّل [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile) التعرض بشكل أعمق."
+          },
+          {
+            "q": "هل تتنبأ درجة 88.2 بفقدان وظائف المحاسبة؟",
+            "a": "لا. تقيس الدرجة تعرّض المهام المرجّح بالذكاء الاصطناعي، لا فقدان الوظائف المتوقع. على المستوى الوطني، يرجّح المرصد نحو 4,450,778 وظيفة حسب التعرض للذكاء الاصطناعي من أصل قوة عمل قوامها 12,420,050 مسجّلة في التأمينات الاجتماعية، لكن منهجيته نفسها تشير إلى أن الإزاحة الفعلية ستكون أقل لأن التعزيز يفوق الاستبدال في كثير من الأدوار."
+          },
+          {
+            "q": "هل يتأثر المحاسبون الوافدون بشكل مختلف عن المواطنين السعوديين؟",
+            "a": "على الأرجح نعم، بسبب نطاقات. من بين قوة عمل التأمينات الاجتماعية في السعودية، يبلغ عدد غير السعوديين 9,444,691 ويبلغ عدد المواطنين السعوديين 2,975,359. تدفع الحصة القطاعية أصحاب العمل إلى إعطاء الأولوية للمواطنين السعوديين، لذا يواجه المحاسبون الوافدون اتجاه الأتمتة دون حاجز الحصة الذي يحمي المواطنين."
+          },
+          {
+            "q": "هل لا يزال الانتقال إلى السعودية للعمل في المحاسبة يستحق العناء؟",
+            "a": "يعتمد ذلك على إطارك الزمني. الأجر معفى من الضرائب (10,000 ريال سعودي عند المتوسط)، لكن التعرض للأتمتة مرتفع وتفضّل نطاقات المواطنين السعوديين في التوظيف. احسب المفاضلة عبر [حاسبة تكلفة المعيشة والانتقال](/relocate)، وتسرد [قائمة ما قبل المغادرة](/prepare) الشهادات وخطوات التأشيرة الواجب تجهيزها أولاً."
+          }
+        ],
+        "key_takeaway": "تحتل المحاسبة المرتبة 7 من أصل 237 من حيث مخاطر الذكاء الاصطناعي في السعودية (88.2/100، 'استبدال جزئي')، لكن الأجر المعفى من الضرائب وحصة السعودة في نطاقات يخففان عن المواطنين السعوديين — والمهمة الواجب إدارتها هي إعادة التأهيل نحو العمل القائم على الحكم، لا وظيفة تتلاشى ببساطة.",
+        "sources": [
+          {
+            "label": "مرصد التحولات السعودي — master.json (الدرجة المركّبة 88.2/100، المرتبة 7/237، وضع نطاقات، التوظيف، القوة العاملة الوطنية)",
+            "url": ""
+          },
+          {
+            "label": "Astr 2026 — رواتب المحاسبين السعوديين (مبتدئ 6,000 ريال / متوسط 10,000 ريال / أقدم 16,000 ريال، معفاة من الضرائب)",
+            "url": ""
+          },
+          {
+            "label": "إلوندو وآخرون — تقييم التعرض لنماذج اللغة الكبيرة (1)",
+            "url": ""
+          },
+          {
+            "label": "فري وأوزبورن — احتمال الأتمتة (94%)",
+            "url": ""
+          },
+          {
+            "label": "فيلتن وآخرون — التعرض للذكاء الاصطناعي ('مرتفع')",
+            "url": ""
+          },
+          {
+            "label": "مستقبل الوظائف للمنتدى الاقتصادي العالمي — التوقعات (تراجع)، الطلب في 2024 المرتبة 27",
+            "url": ""
+          },
+          {
+            "label": "OECD 2023 — نحو 27% من الوظائف ضمن مخاطر أتمتة مرتفعة؛ المحاسبة/مسك الدفاتر في نطاق التعرض الأعلى",
+            "url": ""
+          },
+          {
+            "label": "صندوق تنمية الموارد البشرية — مسارات إعادة التأهيل (دروب، سامي، فيول/SDA، دعم الشهادات المهنية، طاقات)",
+            "url": ""
+          }
+        ]
+      }
+    }
+  }
+]

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllOccupations, toSlug } from "@/lib/occupations";
 import { ORIGIN_CITIES, SAUDI_CITIES } from "@/data/relocation-data";
 import { getAllComparisonSlugs } from "@/data/comparisons";
+import { getAllInsights, getAllPulse } from "@/lib/insights";
 
 const BASE = "https://www.ksashiftobservatory.online";
 const LANGS = ["en", "fr", "ar"] as const;
@@ -68,7 +69,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const allPaths = [...staticPaths, ...jobPaths, ...relocatePaths, ...vsPaths];
+  const insightPaths: Path[] = getAllInsights().map((a) => ({
+    path: `/insights/${a.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const pulsePaths: Path[] = getAllPulse().map((a) => ({
+    path: `/pulse/${a.date}`,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const allPaths = [
+    ...staticPaths,
+    ...jobPaths,
+    ...relocatePaths,
+    ...vsPaths,
+    ...insightPaths,
+    ...pulsePaths,
+  ];
 
   // Emit 3 URL entries per path (one per lang), each with full hreflang alternates.
   // Next.js renders `alternates.languages` as <xhtml:link rel="alternate" hreflang>.

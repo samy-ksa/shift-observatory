@@ -1,6 +1,6 @@
 # SHIFT Observatory — AI Labor Market Intelligence for Saudi Arabia
 
-Free, open-source platform mapping AI automation risk of 146 occupations in Saudi Arabia.
+Free, open-source platform mapping AI automation risk of 237 occupations in Saudi Arabia.
 
 **Live:** https://www.ksashiftobservatory.online
 **Report:** [Q1 2026 AI Disruption Index (PDF)](https://www.ksashiftobservatory.online/reports/SHIFT-Q1-2026-AI-Risk-Report.pdf)
@@ -14,7 +14,7 @@ SHIFT scores every occupation on a composite AI automation risk index (0-100) co
 - Demand signals (WEF Future of Jobs 2025)
 
 ## Key Data
-- **146** occupations scored
+- **237** occupations scored
 - **4.45M+** expat workers tracked (GOSI Q4-2024)
 - **13** Saudi regions, **20** ISIC sectors
 - **100** professions reserved for Saudis
