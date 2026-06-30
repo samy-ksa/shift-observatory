@@ -135,6 +135,7 @@ function toCostCityId(originId: string): CityId | null {
     london: "london", dubai: "dubai", cairo: "cairo", amman: "amman",
     beirut: "beirut", mumbai: "mumbai", manila: "manila", toronto: "new_york",
     islamabad: "mumbai", sydney: "sydney", casablanca: "casablanca", tunis: "tunis",
+    cebu: "manila", davao: "manila",
   };
   return map[originId] || null;
 }
