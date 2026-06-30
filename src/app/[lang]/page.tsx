@@ -155,6 +155,12 @@ const POPULAR_H3: Record<Lang, string> = {
   ar: "تحليلات شعبية لمخاطر الذكاء الاصطناعي",
 };
 
+const RELOCATION_H3: Record<Lang, string> = {
+  en: "Popular Relocation Comparisons",
+  fr: "Comparaisons de relocation populaires",
+  ar: "مقارنات الانتقال الشائعة",
+};
+
 const TOOLS_H3: Record<Lang, string> = {
   en: "Tools",
   fr: "Outils",
@@ -238,14 +244,36 @@ export default async function LangHome({
         </h3>
         <div className="flex flex-wrap gap-2 mb-4">
           {[
-            { slug: "data-entry-keyers", label: "Data Entry Keyers" },
-            { slug: "registered-nurses", label: "Registered Nurses" },
-            { slug: "software-developers", label: "Software Developers" },
-            { slug: "accountants-auditors", label: "Accountants" },
-            { slug: "civil-engineers", label: "Civil Engineers" },
-            { slug: "teachers", label: "Teachers" },
+            { slug: "petroleum-engineer", label: "Petroleum Engineer" },
+            { slug: "hospital-administrator", label: "Hospital Administrator" },
+            { slug: "data-annotation-ai-training-specialist", label: "Data Annotation Specialist" },
+            { slug: "rpa-developer", label: "RPA Developer" },
+            { slug: "concierge-luxury", label: "Concierge (Luxury)" },
+            { slug: "medical-laboratory-technician", label: "Medical Lab Technician" },
+            { slug: "ai-prompt-engineer", label: "AI Prompt Engineer" },
+            { slug: "respiratory-therapist", label: "Respiratory Therapist" },
           ].map(({ slug, label }) => (
             <a key={slug} href={localizedHref(lang, `/job/${slug}`)} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
+              {label}
+            </a>
+          ))}
+        </div>
+
+        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+          {RELOCATION_H3[lang]}
+        </h3>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {[
+            { pair: "manila-to-riyadh", label: "Manila → Riyadh" },
+            { pair: "manila-to-jeddah", label: "Manila → Jeddah" },
+            { pair: "cebu-to-riyadh", label: "Cebu → Riyadh" },
+            { pair: "davao-to-riyadh", label: "Davao → Riyadh" },
+            { pair: "jakarta-to-riyadh", label: "Jakarta → Riyadh" },
+            { pair: "surabaya-to-jeddah", label: "Surabaya → Jeddah" },
+            { pair: "dubai-to-riyadh", label: "Dubai → Riyadh" },
+            { pair: "mumbai-to-riyadh", label: "Mumbai → Riyadh" },
+          ].map(({ pair, label }) => (
+            <a key={pair} href={localizedHref(lang, `/relocate/${pair}`)} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
               {label}
             </a>
           ))}
