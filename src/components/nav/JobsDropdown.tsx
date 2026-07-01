@@ -307,7 +307,7 @@ function SearchPanel({
 
       {/* Browse all */}
       <Link
-        href={localizedHref(lang, "/career")}
+        href={localizedHref(lang, "/job")}
         onClick={onClose}
         className="block text-center text-cyan-400 hover:text-cyan-300 text-xs py-3 border-t border-gray-800 transition-colors"
       >

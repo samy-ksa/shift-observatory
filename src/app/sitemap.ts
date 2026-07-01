@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static paths
   const staticPaths: Path[] = [
     { path: "/", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/job", changeFrequency: "weekly", priority: 0.8 },
     { path: "/career", changeFrequency: "weekly", priority: 0.9 },
     { path: "/relocate", changeFrequency: "weekly", priority: 0.9 },
     { path: "/profile", changeFrequency: "monthly", priority: 0.8 },

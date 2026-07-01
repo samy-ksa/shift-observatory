@@ -25,6 +25,12 @@ export interface Occupation {
   employment_est: number;
   sector_id: string;
   employment_saudi_pct: number;
+  risk_reasoning_en: string;
+  risk_reasoning_fr: string;
+  risk_reasoning_ar: string;
+  risk_action_en: string;
+  risk_action_fr: string;
+  risk_action_ar: string;
 }
 
 export interface HrdfProgram {

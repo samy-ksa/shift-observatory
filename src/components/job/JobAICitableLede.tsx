@@ -10,8 +10,12 @@
  *
  * The paragraph answers "Will AI replace {occupation} in Saudi Arabia?"
  * with: score, reasoning, salary range, headcount, Nitaqat status, and a
- * recommended action. All facts are sourced from master.json — no AI-
- * generated content, only structured data interpolated into a template.
+ * recommended action. Score/salary/headcount/Nitaqat are structured data
+ * interpolated into a template. reasoning/action are per-occupation text
+ * generated once offline (scripts/generate-risk-reasoning.py, grounded
+ * strictly in the occupation's own scores — zero invention) and stored in
+ * master.json, replacing the 3 fixed score-tier blocks that caused
+ * duplicate-content across all 711 job pages.
  *
  * Trilingual: EN (full), FR (compact), AR (compact). Each version is
  * tonally faithful to its locale's reading conventions.
@@ -53,19 +57,8 @@ function buildEnglish(occ: Occupation): string {
         ? "partially — the risk is moderate to high, depending on task mix"
         : "unlikely in the near term — natural defenses against automation are strong";
 
-  const reasoning =
-    composite >= 70
-      ? `Routine digital tasks and structured decision-making make this role highly susceptible to large language models and robotic process automation, both of which are now deployed at scale across Saudi banks (Arab National Bank, SAMA), telcos (STC), and government services (Absher).`
-      : composite >= 45
-        ? `Some core tasks are automatable, but elements requiring human judgment, creativity, or interpersonal interaction provide partial protection. Saudi employers are deploying AI to augment rather than fully replace this role.`
-        : `Physical presence, emotional intelligence, and non-routine judgment create durable defenses against AI. Demand in Saudi Arabia is also supported by Vision 2030 sector targets in healthcare, education, and renewable energy.`;
-
-  const action =
-    composite >= 70
-      ? "We recommend exploring transition pathways to lower-risk occupations — see the career recommender."
-      : composite >= 45
-        ? "Reskilling in AI-complementary capabilities (judgment, client interaction, oversight) is recommended to stay ahead of the curve."
-        : "This role is among the safer choices in the Saudi labor market over a 5-10 year horizon.";
+  const reasoning = occ.risk_reasoning_en;
+  const action = occ.risk_action_en;
 
   const nit = nitaqatLabel(nitaqat_status, "en");
 
@@ -86,19 +79,8 @@ function buildFrench(occ: Occupation): string {
         ? "partiellement — le risque est modéré à élevé selon les tâches"
         : "peu probable à court terme — les défenses naturelles contre l'automatisation sont solides";
 
-  const reasoning =
-    composite >= 70
-      ? `Les tâches numériques routinières et la prise de décision structurée rendent ce poste très susceptible d'être remplacé par les LLM et les outils RPA, déjà déployés à grande échelle dans les banques saoudiennes (Arab National Bank), telcos (STC) et services publics (Absher).`
-      : composite >= 45
-        ? `Certaines tâches sont automatisables, mais le jugement humain, la créativité et l'interaction interpersonnelle offrent une protection partielle. Les employeurs saoudiens déploient l'IA pour augmenter plutôt que remplacer ce rôle.`
-        : `La présence physique, l'intelligence émotionnelle et le jugement non routinier créent des défenses durables. La demande saoudienne est soutenue par les objectifs Vision 2030 en santé, éducation et énergies renouvelables.`;
-
-  const action =
-    composite >= 70
-      ? "Nous recommandons d'explorer des transitions vers des métiers à plus faible risque — consultez le recommandeur de carrière."
-      : composite >= 45
-        ? "Une montée en compétences sur les capacités complémentaires à l'IA (jugement, relation client, supervision) est recommandée."
-        : "Ce métier figure parmi les choix les plus sûrs du marché saoudien sur un horizon 5-10 ans.";
+  const reasoning = occ.risk_reasoning_fr;
+  const action = occ.risk_action_fr;
 
   const nit = nitaqatLabel(nitaqat_status, "fr");
 
@@ -119,19 +101,8 @@ function buildArabic(occ: Occupation): string {
         ? "جزئياً — المخاطر متوسطة إلى عالية حسب المهام"
         : "غير محتمل على المدى القصير — الدفاعات الطبيعية ضد الأتمتة قوية";
 
-  const reasoning =
-    composite >= 70
-      ? `المهام الرقمية الروتينية واتخاذ القرارات المهيكلة تجعل هذه المهنة عرضة للاستبدال بنماذج اللغة الكبيرة وأدوات الأتمتة، التي تُنشر بالفعل على نطاق واسع في البنوك السعودية والاتصالات والخدمات الحكومية.`
-      : composite >= 45
-        ? `بعض المهام قابلة للأتمتة، لكن الحكم البشري والإبداع والتفاعل الشخصي يوفر حماية جزئية. يستخدم أصحاب العمل السعوديون الذكاء الاصطناعي لتعزيز هذا الدور بدلاً من استبداله بالكامل.`
-        : `الحضور الجسدي والذكاء العاطفي والحكم غير الروتيني تخلق دفاعات قوية. الطلب السعودي مدعوم بأهداف رؤية 2030 في الرعاية الصحية والتعليم والطاقة المتجددة.`;
-
-  const action =
-    composite >= 70
-      ? "ننصح باستكشاف مسارات الانتقال إلى مهن ذات مخاطر أقل."
-      : composite >= 45
-        ? "يُنصح بإعادة التأهيل في المهارات المكملة للذكاء الاصطناعي (الحكم، التفاعل مع العملاء، الإشراف)."
-        : "تعد هذه المهنة من بين الخيارات الأكثر أماناً في سوق العمل السعودي على مدى 5-10 سنوات.";
+  const reasoning = occ.risk_reasoning_ar;
+  const action = occ.risk_action_ar;
 
   const nit = nitaqatLabel(nitaqat_status, "ar");
 
