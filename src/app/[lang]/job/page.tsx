@@ -4,6 +4,7 @@ import type { Lang } from "@/lib/i18n/context";
 import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
 import { getAllOccupations, getSector, toSlug, riskColor, fmt } from "@/lib/occupations";
+import OccupationDirectory from "@/components/OccupationDirectory";
 
 const TITLES: Record<Lang, string> = {
   en: "Jobs in Saudi Arabia for Foreigners: 237 Roles Scored",
@@ -161,9 +162,13 @@ export default async function JobIndexPage({
         <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
           {H1[lang]}
         </h1>
-        <p className="text-text-secondary text-sm md:text-base mb-10 max-w-2xl">
+        <p className="text-text-secondary text-sm md:text-base mb-2 max-w-2xl">
           {INTRO[lang]}
         </p>
+
+        <div className="-mx-4">
+          <OccupationDirectory />
+        </div>
 
         <div className="space-y-10">
           {sections.map((section) => (
