@@ -111,7 +111,7 @@ export default function LangToggle() {
         <div className="flex items-center justify-between px-4 h-12">
           <Link href={localizedHref(lang, "/")} className="flex items-center gap-1">
             <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">SHIFT</span>
-            <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">OBS</span>
+            <span className="text-text-secondary text-[10px] tracking-[0.1em] uppercase">OBS</span>
           </Link>
           <button
             onClick={() => setMenuOpen(true)}
@@ -135,7 +135,7 @@ export default function LangToggle() {
           <div className="flex items-center justify-between px-4 min-h-12 border-b border-white/5">
             <Link href={localizedHref(lang, "/")} onClick={() => setMenuOpen(false)} className="flex items-center gap-1">
               <span className="text-accent-primary font-bold text-xs tracking-[0.15em] uppercase">SHIFT</span>
-              <span className="text-text-muted text-[10px] tracking-[0.1em] uppercase">OBS</span>
+              <span className="text-text-secondary text-[10px] tracking-[0.1em] uppercase">OBS</span>
             </Link>
             <button
               onClick={() => setMenuOpen(false)}

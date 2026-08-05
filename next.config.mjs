@@ -45,7 +45,7 @@ const nextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' va.vercel-scripts.com vitals.vercel-insights.com",
               "connect-src 'self' va.vercel-scripts.com vitals.vercel-insights.com",
-              "img-src 'self' data: blob:",
+              "img-src 'self' data: blob: https://www.google.com",
               "font-src 'self'",
               "style-src 'self' 'unsafe-inline'",
               "frame-ancestors 'self'",
