@@ -56,8 +56,12 @@ export async function generateMetadata({
   const taxSavingsSar = Math.round(taxSavingsLocal * origin.rateToSar);
 
   const title = isFr
-    ? `Coût de la vie : ${origin.name_fr} vs ${saudi.name_fr} — Comparaison salaire et dépenses | SHIFT Observatory`
-    : `Cost of Living: ${origin.name_en} vs ${saudi.name_en} — Salary & Expenses Comparison | SHIFT Observatory`;
+    ? origin.taxRate > 0
+      ? `${origin.name_fr} → ${saudi.name_fr} : Économisez ${origin.currencySymbol}${taxSavingsLocal}/mois d'impôts`
+      : `${origin.name_fr} → ${saudi.name_fr} : Comparaison complète (2026)`
+    : origin.taxRate > 0
+      ? `${origin.name_en} → ${saudi.name_en}: Save ${origin.currencySymbol}${taxSavingsLocal}/mo in tax alone`
+      : `${origin.name_en} → ${saudi.name_en}: Full Cost Comparison (2026)`;
 
   const description = isFr
     ? `Comparez le coût de la vie entre ${origin.name_fr} et ${saudi.name_fr}, Arabie Saoudite. ${origin.taxRate}% d'impôts en ${origin.country_fr} → 0% en Arabie Saoudite. Logement, courses, scolarité, transport — 65+ postes comparés.`
