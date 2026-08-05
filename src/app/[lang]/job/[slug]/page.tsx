@@ -145,6 +145,8 @@ export async function generateMetadata({
 
   if (occ.nitaqat_status === "reserved_saudi_only" && lang === "en") {
     description = clampDesc("Reserved for Saudi nationals. " + description);
+  } else if (occ.nitaqat_status === "reserved_saudi_only" && lang === "fr") {
+    description = clampDesc("Réservé aux ressortissants saoudiens. " + description);
   } else {
     description = clampDesc(description);
   }
@@ -310,6 +312,17 @@ export default async function LangJobPage({
         acceptedAnswer: {
           "@type": "Answer" as const,
           text: `Le score de risque d'automatisation IA de ${nameFr} a ${trendWordFr}, passant de ${tFr.previousScore}/100 à ${occ.composite}/100 entre le T4-2025 et le T1-2026 (${tFr.delta > 0 ? "+" : ""}${tFr.delta} points). SHIFT Observatory met à jour les scores trimestriellement en utilisant les dernières données GOSI, les projections du WEF et la recherche académique.`,
+        },
+      },
+      {
+        "@type": "Question" as const,
+        name: `Un expatrié peut-il travailler comme ${nameFr} en Arabie Saoudite ?`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text:
+            occ.nitaqat_status === "reserved_saudi_only"
+              ? `Non. ${nameFr} fait partie des professions réservées exclusivement aux ressortissants saoudiens selon la réglementation du ministère des Ressources humaines (HRSD). Les expatriés ne peuvent pas obtenir de permis de travail (iqama) pour ce métier. Des métiers connexes non réservés peuvent être disponibles.`
+              : `Oui. ${nameFr} est ouvert aux expatriés dans le cadre des quotas sectoriels Nitaqat. Il faut une offre d'emploi d'un employeur saoudien (sponsor), un visa de travail et une iqama (permis de résidence). L'employeur doit être classé en bande Nitaqat Verte ou Platine. Le délai typique entre l'offre et l'arrivée est de 2 à 8 semaines.`,
         },
       },
     );
