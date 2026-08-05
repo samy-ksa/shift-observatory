@@ -145,7 +145,7 @@ export default function OccupationDirectory() {
       <div className="relative mb-5">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <svg
-            className="w-4 h-4 text-gray-500"
+            className="w-4 h-4 text-text-muted"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ export default function OccupationDirectory() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={ex.searchPlaceholder}
-          className="w-full bg-gray-900/60 border border-gray-800 rounded-lg py-3 pl-11 pr-4 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
+          className="w-full bg-gray-900/60 border border-gray-800 rounded-lg py-3 pl-11 pr-4 text-sm text-white placeholder:text-text-muted focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
         />
         {query && (
           <button
@@ -171,7 +171,7 @@ export default function OccupationDirectory() {
               setQuery("");
               setDebouncedQuery("");
             }}
-            className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500 hover:text-gray-300"
+            className="absolute inset-y-0 right-0 pr-4 flex items-center text-text-muted hover:text-gray-300"
             aria-label="Clear search"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -184,7 +184,7 @@ export default function OccupationDirectory() {
       {/* Popular chips */}
       {!isSearching && (
         <div className="mb-5 flex flex-wrap items-center gap-x-1 gap-y-1">
-          <span className="text-xs text-gray-500 mr-1">{ex.popular}:</span>
+          <span className="text-xs text-text-muted mr-1">{ex.popular}:</span>
           {popularOccs.map((occ, i) => (
             <span key={occ.name_en} className="flex items-center">
               <Link
@@ -224,7 +224,7 @@ export default function OccupationDirectory() {
       {/* No results */}
       {isSearching && filtered.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-500 text-sm mb-3">{ex.noResults}</p>
+          <p className="text-text-muted text-sm mb-3">{ex.noResults}</p>
           <button
             onClick={() => {
               setQuery("");
@@ -259,7 +259,7 @@ export default function OccupationDirectory() {
                       {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
                     </div>
                     <div
-                      className="text-xs text-gray-500 truncate mt-0.5"
+                      className="text-xs text-text-muted truncate mt-0.5"
                       dir={lang === "ar" ? "ltr" : "rtl"}
                     >
                       {lang === "ar" ? occ.name_en : occ.name_ar}
@@ -274,7 +274,7 @@ export default function OccupationDirectory() {
                 <div className="flex items-center justify-between mt-2.5">
                   <div className="flex items-center gap-1.5">
                     <RiskDot score={occ.composite} />
-                    <span className="text-xs text-gray-500">{rl}</span>
+                    <span className="text-xs text-text-muted">{rl}</span>
                   </div>
                   <span className="text-xs text-gray-600 font-mono">
                     {fmt(occ.employment_est)} {ex.workers}

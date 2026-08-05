@@ -61,7 +61,7 @@ export default function EmailGateModal({ open, onClose, onSubmit, loading, lang 
         dir={lang === "ar" ? "rtl" : "ltr"}
       >
         {/* Close */}
-        <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-300 text-lg leading-none" aria-label="Close">
+        <button onClick={onClose} className="absolute top-3 right-3 text-text-muted hover:text-gray-300 text-lg leading-none" aria-label="Close">
           ✕
         </button>
 

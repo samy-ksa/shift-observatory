@@ -124,7 +124,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
 
         {/* Degree */}
         <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mb-3">
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-1">
             {fj.degree}
           </div>
           <p className="text-sm text-gray-300 leading-relaxed">
@@ -134,7 +134,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
 
         {/* Certifications */}
         <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mb-3">
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-3">
             {fj.certifications}
           </div>
           <div className="space-y-2">
@@ -146,7 +146,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
                 <span className="text-sm text-white font-medium flex-1">
                   {c.name}
                 </span>
-                <span className="text-xs text-gray-500">{c.body}</span>
+                <span className="text-xs text-text-muted">{c.body}</span>
                 <span className="text-xs text-gray-600 italic">{c.timeline}</span>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
 
         {/* Skills */}
         <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mb-3">
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-3">
             {fj.skills}
           </div>
           <div className="flex flex-wrap gap-2">
@@ -172,7 +172,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
 
         {/* Competitive Edge */}
         <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mb-3">
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-3">
             {fj.edge}
           </div>
           <div className="grid gap-2">
@@ -215,7 +215,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
 
         {/* Salary package */}
         <div className="border border-gray-800/50 rounded-md bg-gray-900/50 p-4 mb-3">
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-2">
             {fj.salaryPackage}
           </div>
           <div className="flex gap-6 mb-3">
@@ -226,11 +226,11 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div className="text-lg font-mono text-white">{fmt(s.value)}</div>
-                <div className="text-xs text-gray-500">{s.label}</div>
+                <div className="text-xs text-text-muted">{s.label}</div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-xs text-text-muted leading-relaxed">
             {fj.packageNote}
           </p>
         </div>
@@ -243,7 +243,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
               : "border-gray-800/50 bg-gray-900/50"
           }`}
         >
-          <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+          <div className="text-xs text-text-muted uppercase tracking-wider mb-2">
             {fj.visa}
           </div>
           {occ.nitaqat_status === "reserved_saudi_only" ? (
@@ -274,7 +274,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
                   </li>
                 ))}
               </ol>
-              <p className="text-xs text-gray-500">{fj.visaTimeline}</p>
+              <p className="text-xs text-text-muted">{fj.visaTimeline}</p>
             </div>
           )}
         </div>
@@ -293,11 +293,11 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
             >
               <div>
                 <span className="text-sm text-white font-medium">{e.name}</span>
-                <span className="text-xs text-gray-500 ml-2">
+                <span className="text-xs text-text-muted ml-2">
                   {isAr && e.sector_ar ? e.sector_ar : e.sector}
                 </span>
               </div>
-              <span className="text-xs text-gray-500 font-mono">
+              <span className="text-xs text-text-muted font-mono">
                 {fmt(e.employees)} {fj.employees}
               </span>
             </div>
@@ -305,7 +305,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
         </div>
 
         {/* Job boards */}
-        <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+        <div className="text-xs text-text-muted uppercase tracking-wider mb-3">
           {fj.jobBoards}
         </div>
         <div className="flex flex-col gap-2 w-full">
@@ -350,7 +350,7 @@ export default function FindJobTab({ occ }: { occ: Occupation }) {
                   ? "Vous envisagez de d\u00e9m\u00e9nager pour ce poste ? Comparez le co\u00fbt de la vie \u2192"
                   : "Planning to relocate for this job? Compare cost of living \u2192"}
               </p>
-              <p className="text-xs text-gray-500 mt-0.5">
+              <p className="text-xs text-text-muted mt-0.5">
                 {isAr
                   ? "احسب راتبك الحقيقي وقوتك الشرائية في السعودية"
                   : lang === "fr"

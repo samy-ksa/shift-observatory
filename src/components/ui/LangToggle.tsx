@@ -64,7 +64,7 @@ export default function LangToggle() {
             className={`${size === "xs" ? "text-xs" : "text-xs"} font-mono transition-colors ${
               lang === opt.code
                 ? "text-white font-bold"
-                : "text-gray-500 hover:text-gray-300"
+                : "text-text-muted hover:text-gray-300"
             }`}
           >
             {opt.label}

@@ -89,7 +89,7 @@ function ScoreGauge({ score }: { score: number }) {
         >
           {score}
         </span>
-        <span className="text-xs text-gray-500">/ 100</span>
+        <span className="text-xs text-text-muted">/ 100</span>
       </div>
     </div>
   );
@@ -227,7 +227,7 @@ export default function JobPageClient({
           >
             {jp.backToDashboard}
           </Link>
-          <nav className="text-gray-500 text-xs">
+          <nav className="text-text-muted text-xs">
             <Link href="/" className="hover:text-gray-300">
               Dashboard
             </Link>
@@ -277,7 +277,7 @@ export default function JobPageClient({
             {/* Quick stats */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
               <div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">
+                <div className="text-xs text-text-muted uppercase tracking-wider">
                   {jp.workforce}
                 </div>
                 <div className="text-lg font-mono text-white mt-0.5">
@@ -285,7 +285,7 @@ export default function JobPageClient({
                 </div>
               </div>
               <div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">
+                <div className="text-xs text-text-muted uppercase tracking-wider">
                   {jp.saudiPct}
                 </div>
                 <div className="text-lg font-mono text-white mt-0.5">
@@ -293,7 +293,7 @@ export default function JobPageClient({
                 </div>
               </div>
               <div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">
+                <div className="text-xs text-text-muted uppercase tracking-wider">
                   {jp.sector}
                 </div>
                 <div className="text-sm text-gray-300 mt-0.5">
@@ -318,7 +318,7 @@ export default function JobPageClient({
               className={`px-4 py-2.5 min-h-10 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
                 activeTab === tab.key
                   ? "border-cyan-400 text-cyan-400"
-                  : "border-transparent text-gray-500 hover:text-gray-300"
+                  : "border-transparent text-text-muted hover:text-gray-300"
               }`}
             >
               {tab.label}
@@ -398,7 +398,7 @@ export default function JobPageClient({
                             style={{ height: `${heightPct}%`, minHeight: '8px' }}
                           />
                         </div>
-                        <span className="text-[10px] text-gray-500">{h.quarter}</span>
+                        <span className="text-[10px] text-text-muted">{h.quarter}</span>
                       </div>
                     );
                   })}
@@ -443,13 +443,13 @@ export default function JobPageClient({
                     { label: jp.senior, value: occ.salary_senior_sar },
                   ].map((s) => (
                     <div key={s.label} className="text-center flex-1">
-                      <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">
+                      <div className="text-xs text-text-muted uppercase tracking-wider mb-1">
                         {s.label}
                       </div>
                       <div className="text-xl font-mono text-white">
                         {fmt(s.value)}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-text-muted">
                         SAR{jp.perMonth}
                       </div>
                     </div>
@@ -472,7 +472,7 @@ export default function JobPageClient({
                 </div>
               </div>
 
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-text-muted">
                 {jp.salarySource}: {occ.salary_source}
               </p>
             </div>
@@ -534,7 +534,7 @@ export default function JobPageClient({
                         <div className="text-sm text-white font-medium">
                           {td.profession}
                         </div>
-                        <div className="flex gap-4 text-xs text-gray-500">
+                        <div className="flex gap-4 text-xs text-text-muted">
                           <span>
                             {jp.quota}: {td.quota_pct}%
                           </span>
@@ -549,7 +549,7 @@ export default function JobPageClient({
                     ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-gray-500">{jp.noTawteen}</p>
+                  <p className="text-sm text-text-muted">{jp.noTawteen}</p>
                 )}
               </div>
             </div>
@@ -575,7 +575,7 @@ export default function JobPageClient({
                             {p.name}
                           </h4>
                           <span
-                            className="text-xs text-gray-500 mt-0.5 block"
+                            className="text-xs text-text-muted mt-0.5 block"
                             dir="rtl"
                           >
                             {p.name_ar}
@@ -592,7 +592,7 @@ export default function JobPageClient({
                   ))}
                 </div>
               ) : (
-                <p className="text-sm text-gray-500">{jp.noPrograms}</p>
+                <p className="text-sm text-text-muted">{jp.noPrograms}</p>
               )}
             </div>
           )}
@@ -617,15 +617,15 @@ export default function JobPageClient({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <a href={localizedHref(lang, "/relocate")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.relocationCalculator}</div>
-              <div className="text-gray-500 text-xs mt-1">{t.links.relocationCalcDesc}</div>
+              <div className="text-text-muted text-xs mt-1">{t.links.relocationCalcDesc}</div>
             </a>
             <a href={localizedHref(lang, "/prepare")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.checklistDepart}</div>
-              <div className="text-gray-500 text-xs mt-1">{t.links.checklistDesc}</div>
+              <div className="text-text-muted text-xs mt-1">{t.links.checklistDesc}</div>
             </a>
             <a href={localizedHref(lang, "/career")} className="border border-gray-800/50 rounded-md p-3 hover:bg-gray-800/30 transition-colors block">
               <div className="text-white text-sm font-medium">{t.links.careerRecommender}</div>
-              <div className="text-gray-500 text-xs mt-1">{t.links.careerDesc}</div>
+              <div className="text-text-muted text-xs mt-1">{t.links.careerDesc}</div>
             </a>
           </div>
 

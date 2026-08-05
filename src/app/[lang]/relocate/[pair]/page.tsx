@@ -312,7 +312,7 @@ export default async function LangCityPairPage({
       />
 
       <div className="max-w-5xl mx-auto px-4 pt-8">
-        <nav className="text-xs text-gray-500 mb-4">
+        <nav className="text-xs text-text-muted mb-4">
           <a href={localizedHref(lang, "/")} className="hover:text-gray-300">SHIFT Observatory</a>
           {" › "}
           <a href={localizedHref(lang, "/relocate")} className="hover:text-gray-300">Relocation Calculator</a>
@@ -327,33 +327,33 @@ export default async function LangCityPairPage({
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
           <div className="bg-gray-900/60 border border-gray-800/50 rounded-lg p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Mercer Ranking</p>
+            <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Mercer Ranking</p>
             <p className="text-sm text-white">
               {saudi.name_en} <span className="font-mono text-cyan-400">#{saudi.mercerRank}</span>
               {" vs "}
               {origin.name_en} <span className="font-mono text-amber-400">#{origin.mercerRank}</span>
             </p>
-            <p className="text-xs text-gray-500 mt-1">{saudi.name_en} is {mercerComparison}</p>
+            <p className="text-xs text-text-muted mt-1">{saudi.name_en} is {mercerComparison}</p>
           </div>
           <div className="bg-gray-900/60 border border-gray-800/50 rounded-lg p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Tax Savings</p>
+            <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Tax Savings</p>
             <p className="text-sm text-white">
               {origin.country_en}: <span className="font-mono text-red-400">{taxSavingsPct}%</span>
               {" → KSA: "}
               <span className="font-mono text-emerald-400">0%</span>
             </p>
-            <p className="text-xs text-gray-500 mt-1">Save {result.tax_savings_sar.toLocaleString()} SAR/month</p>
+            <p className="text-xs text-text-muted mt-1">Save {result.tax_savings_sar.toLocaleString()} SAR/month</p>
           </div>
           <div className="bg-gray-900/60 border border-gray-800/50 rounded-lg p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Minimum Package</p>
+            <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Minimum Package</p>
             <p className="text-sm text-white font-mono">
               <span className="text-cyan-400">{result.saudi_total_sar.toLocaleString()} SAR</span>/mo
             </p>
-            <p className="text-xs text-gray-500 mt-1">For family of 3, compound housing</p>
+            <p className="text-xs text-text-muted mt-1">For family of 3, compound housing</p>
           </div>
         </div>
 
-        <div className="mb-6 text-xs text-gray-500">
+        <div className="mb-6 text-xs text-text-muted">
           <span className="text-gray-400 font-medium">Also compare: </span>
           {otherSaudiCities.map((sc, i) => (
             <span key={sc.id}>

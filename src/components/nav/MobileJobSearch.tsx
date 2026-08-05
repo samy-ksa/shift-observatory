@@ -87,10 +87,10 @@ export default function MobileJobSearch() {
           onClick={() => setOpen(true)}
           className="w-full flex items-center gap-2.5 px-4 h-10 text-left"
         >
-          <svg className="w-3.5 h-3.5 text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <span className="text-gray-500 text-sm truncate">{placeholder}</span>
+          <span className="text-text-muted text-sm truncate">{placeholder}</span>
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export default function MobileJobSearch() {
           {/* Header: search + close */}
           <div className="flex items-center border-b border-gray-800 shrink-0">
             <div className="flex items-center flex-1 px-3">
-              <svg className="w-4 h-4 text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -109,7 +109,7 @@ export default function MobileJobSearch() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={placeholder}
-                className="flex-1 bg-transparent text-white text-base py-3.5 px-3 focus:outline-none placeholder:text-gray-500 min-h-[48px]"
+                className="flex-1 bg-transparent text-white text-base py-3.5 px-3 focus:outline-none placeholder:text-text-muted min-h-[48px]"
               />
             </div>
             <button
@@ -132,7 +132,7 @@ export default function MobileJobSearch() {
                 className={`text-xs px-3 py-1.5 rounded-full border whitespace-nowrap transition-colors ${
                   filter === f.key
                     ? "bg-cyan-500/20 text-cyan-400 border-cyan-500/50"
-                    : "bg-transparent text-gray-500 border-gray-700"
+                    : "bg-transparent text-text-muted border-gray-700"
                 }`}
               >
                 {f.label}
@@ -148,7 +148,7 @@ export default function MobileJobSearch() {
             {results.length === 0 ? (
               debouncedQ.length >= 2 ? (
                 <div className="px-4 py-4">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-3">
+                  <p className="text-[10px] text-text-muted uppercase tracking-wider mb-3">
                     {t.match.matchClosest}
                   </p>
                   {findClosestOccupations(debouncedQ, 3).map((m) => (
@@ -159,14 +159,14 @@ export default function MobileJobSearch() {
                           {lang === "ar" ? m.occupation.name_ar : lang === "fr" ? m.occupation.name_fr : m.occupation.name_en}
                         </span>
                       </div>
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-gray-500"}`}>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-text-muted"}`}>
                         {m.score}%
                       </span>
                     </a>
                   ))}
                 </div>
               ) : (
-                <div className="px-4 py-12 text-center text-gray-500 text-sm">
+                <div className="px-4 py-12 text-center text-text-muted text-sm">
                   {jd.noResults}
                 </div>
               )

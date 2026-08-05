@@ -281,7 +281,7 @@ export default function EmployerTable() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-lg card-glow overflow-hidden"
         >
-          <span className="text-[10px] text-gray-500 mb-1 block md:hidden px-4 pt-2">Scroll →</span>
+          <span className="text-[10px] text-text-muted mb-1 block md:hidden px-4 pt-2">Scroll →</span>
           <div className="overflow-x-auto mobile-scroll">
             <table className="w-full text-sm">
               <thead>

@@ -49,7 +49,7 @@ export default function AboutAuthor() {
               ? "SHIFT Observatory est né d'une conviction : la transformation du marché du travail par l'IA s'accélère plus vite que ce à quoi la plupart des organisations et des professionnels se préparent. Ce tableau de bord existe pour rendre cette transformation visible, mesurable et exploitable — en particulier en Arabie saoudite, où la Vision 2030 et l'adoption de l'IA remodèlent simultanément le marché du travail."
               : "SHIFT Observatory was built from a conviction: AI-driven workforce transformation is accelerating faster than most organizations and professionals are preparing for. This dashboard exists to make that shift visible, measurable, and actionable — especially in Saudi Arabia, where Vision 2030 and AI adoption are reshaping the labor market simultaneously."}
           </p>
-          <p className="text-gray-500 text-xs mt-2">
+          <p className="text-text-muted text-xs mt-2">
             {isAr
               ? "بُني ويُدار بشكل مستقل. البيانات من: التأمينات الاجتماعية، المنتدى الاقتصادي العالمي، ماكنزي، وزارة الموارد البشرية، وPerplexity AI."
               : lang === "fr"

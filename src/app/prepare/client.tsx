@@ -118,7 +118,7 @@ export default function PrepareClient() {
       <LangToggle />
       <div className="max-w-3xl mx-auto px-4 py-8 md:py-16">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6">
+        <nav className="flex items-center gap-2 text-xs text-text-muted mb-6">
           <a href="/" className="hover:text-cyan-400 transition-colors">
             {lang === "ar" ? "الرئيسية" : lang === "fr" ? "Tableau de bord" : "Dashboard"}
           </a>
@@ -183,7 +183,7 @@ export default function PrepareClient() {
           <button
             onClick={handleGenerate}
             disabled={!country || !sector}
-            className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-700 disabled:text-gray-500 text-black font-semibold px-8 py-3 rounded-lg min-h-12 transition-colors"
+            className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-700 disabled:text-text-muted text-black font-semibold px-8 py-3 rounded-lg min-h-12 transition-colors"
           >
             {t.prepare.generate} &rarr;
           </button>
@@ -247,12 +247,12 @@ export default function PrepareClient() {
                           <span className="text-white font-medium text-sm">
                             {sectionTitle}
                           </span>
-                          <span className="text-gray-500 text-xs ml-2">
+                          <span className="text-text-muted text-xs ml-2">
                             ({sectionTimeline})
                           </span>
                         </div>
                       </div>
-                      <span className="text-xs text-gray-500 font-mono">
+                      <span className="text-xs text-text-muted font-mono">
                         {sectionCompleted}/{section.items.length}
                       </span>
                     </button>
@@ -304,13 +304,13 @@ export default function PrepareClient() {
                                 <div className="flex-1 min-w-0">
                                   <div className="flex flex-wrap items-center gap-2 mb-1">
                                     <span
-                                      className={`text-sm ${isChecked ? "line-through text-gray-500" : "text-white"}`}
+                                      className={`text-sm ${isChecked ? "line-through text-text-muted" : "text-white"}`}
                                     >
                                       {itemTitle}
                                     </span>
                                     {priorityBadge(item.priority)}
                                   </div>
-                                  <p className="text-xs text-gray-500 leading-relaxed">
+                                  <p className="text-xs text-text-muted leading-relaxed">
                                     {itemDesc}
                                   </p>
                                   {/* Links */}

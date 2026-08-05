@@ -258,7 +258,7 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
             }}
           >
             <div className="font-bold text-white text-sm">{lang === "ar" && data.name_ar ? data.name_ar : data.name_en}</div>
-            <div className="text-gray-500 text-xs">{lang === "ar" ? data.name_en : data.name_ar}</div>
+            <div className="text-text-muted text-xs">{lang === "ar" ? data.name_en : data.name_ar}</div>
             <div className="mt-2 flex justify-between text-xs">
               <span className="text-gray-400">{lang === "ar" ? "العمال" : "Workers"}</span>
               <span className="text-cyan-400 font-mono font-bold">

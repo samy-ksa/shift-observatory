@@ -12,7 +12,7 @@ function StatusBadge({ status, detail }: { status: "yes" | "partial" | "no"; det
   return (
     <div className="flex flex-col items-center gap-1">
       <span className={`text-lg font-bold ${colors[status]}`}>{icons[status]}</span>
-      <span className="text-[10px] text-gray-500 leading-tight">{detail}</span>
+      <span className="text-[10px] text-text-muted leading-tight">{detail}</span>
     </div>
   );
 }
@@ -26,7 +26,7 @@ export default function VSClient({ data }: { data: ComparisonData }) {
       <LangToggle />
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-gray-500 mb-6">
+        <nav className="flex items-center gap-2 text-xs text-text-muted mb-6">
           <a href="/" className="hover:text-cyan-400 transition-colors">
             {isFr ? "Tableau de bord" : "Dashboard"}
           </a>
@@ -36,7 +36,7 @@ export default function VSClient({ data }: { data: ComparisonData }) {
 
         {/* Hero */}
         <h1 className="text-2xl md:text-4xl font-bold text-white mb-3">
-          SHIFT Observatory <span className="text-gray-500">vs</span>{" "}
+          SHIFT Observatory <span className="text-text-muted">vs</span>{" "}
           <span className="text-cyan-400">{data.competitor}</span>
         </h1>
         <p className="text-gray-400 text-sm md:text-base mb-8 max-w-2xl">
@@ -126,7 +126,7 @@ export default function VSClient({ data }: { data: ComparisonData }) {
         </div>
 
         {/* Internal links */}
-        <div className="mt-8 text-xs text-gray-500">
+        <div className="mt-8 text-xs text-text-muted">
           <p className="mb-2">{isFr ? "Explorez egalement :" : "Also explore:"}</p>
           <div className="flex flex-wrap gap-3">
             <a href={localizedHref(lang, "/job/data-entry-keyers")} className="text-cyan-400 hover:underline">Data Entry Keyers</a>

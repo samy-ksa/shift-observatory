@@ -31,7 +31,7 @@ const config: Config = {
         text: {
           primary: "#F9FAFB",
           secondary: "#9CA3AF",
-          muted: "#6B7280",
+          muted: "#75808D",
         },
       },
       fontFamily: {

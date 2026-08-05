@@ -147,7 +147,7 @@ export default function SmartPopup() {
         {/* Close button */}
         <button
           onClick={dismiss}
-          className="absolute top-4 end-4 text-gray-500 hover:text-white transition-colors"
+          className="absolute top-4 end-4 text-text-muted hover:text-white transition-colors"
           aria-label="Close"
         >
           <svg

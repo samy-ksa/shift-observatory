@@ -172,7 +172,7 @@ function Tip({ text, children }: { text: string; children: React.ReactNode }) {
 /* Info callout box */
 function InfoBox({ text }: { text: string }) {
   return (
-    <div className="text-xs text-gray-500 bg-gray-900/30 border-l-2 border-gray-700 p-2 mt-1 leading-relaxed">
+    <div className="text-xs text-text-muted bg-gray-900/30 border-l-2 border-gray-700 p-2 mt-1 leading-relaxed">
       <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-600 text-[10px] text-gray-400 mr-1 flex-shrink-0">i</span> {text}
     </div>
   );
@@ -474,7 +474,7 @@ export default function RelocateClient({
   /* ================================================================ */
 
   return (
-    <div className="min-h-screen bg-bg-primary overflow-x-hidden" dir={dir}>
+    <main className="min-h-screen bg-bg-primary overflow-x-hidden" dir={dir}>
       <LangToggle />
 
       {/* Header */}
@@ -507,8 +507,8 @@ export default function RelocateClient({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Origin city */}
               <div>
-                <label className="text-sm text-text-muted mb-1.5 block">{r.iLiveIn}</label>
-                <select value={originId} onChange={(e) => setOriginId(e.target.value)}
+                <label htmlFor="origin-city" className="text-sm text-text-muted mb-1.5 block">{r.iLiveIn}</label>
+                <select id="origin-city" value={originId} onChange={(e) => setOriginId(e.target.value)}
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {ORIGIN_CITIES.map((c) => (
                     <option key={c.id} value={c.id}>{`${ln(lang, c)}, ${lnCountry(lang, c)}`}</option>
@@ -626,8 +626,8 @@ export default function RelocateClient({
             <h2 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-5">{r.saudiOptions}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
-                <label className="text-sm text-text-muted mb-1.5 block">{r.targetCity}</label>
-                <select value={saudiId} onChange={(e) => setSaudiId(e.target.value)}
+                <label htmlFor="target-city" className="text-sm text-text-muted mb-1.5 block">{r.targetCity}</label>
+                <select id="target-city" value={saudiId} onChange={(e) => setSaudiId(e.target.value)}
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer">
                   {SAUDI_CITIES.map((c) => (
                     <option key={c.id} value={c.id}>{ln(lang, c)}</option>
@@ -651,8 +651,8 @@ export default function RelocateClient({
                 {housing === "compound" && <InfoBox text={r.compoundInfo} />}
               </div>
               <div>
-                <label className="text-sm text-text-muted mb-1.5 block">{r.schoolTier}</label>
-                <select value={schoolTierId} onChange={(e) => setSchoolTierId(e.target.value)}
+                <label htmlFor="school-tier" className="text-sm text-text-muted mb-1.5 block">{r.schoolTier}</label>
+                <select id="school-tier" value={schoolTierId} onChange={(e) => setSchoolTierId(e.target.value)}
                   disabled={children === 0}
                   className="w-full bg-bg-primary border border-white/10 rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:border-cyan-400 focus:outline-none appearance-none cursor-pointer disabled:opacity-40">
                   {SCHOOL_TIERS.map((s) => (
@@ -691,7 +691,7 @@ export default function RelocateClient({
           </div>
 
           {/* ---- EXCHANGE RATE BANNER ---- */}
-          <div className="flex flex-wrap items-center justify-end gap-2 mb-4 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center justify-end gap-2 mb-4 text-xs text-text-muted">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <span className="font-mono">
               {r.exchangeRate.replace("{currency}", origin.currency).replace("{rate}", origin.rateToSar.toFixed(2))}
@@ -732,7 +732,7 @@ export default function RelocateClient({
                 <span>{r.pricePulse} — {r.pricePulseDate}</span>
                 <span className="inline-block px-1.5 py-0.5 rounded text-[9px] font-medium bg-amber-500/10 border border-amber-500/30 text-amber-300 normal-case tracking-normal">{r.pricePulseEstimated}</span>
               </div>
-              <div className="text-[10px] text-gray-500 mb-2">{r.pricePulseSubtitle.replace("{city}", saudiName)}</div>
+              <div className="text-[10px] text-text-muted mb-2">{r.pricePulseSubtitle.replace("{city}", saudiName)}</div>
               <div className="overflow-x-auto tabs-scroll">
                 <div className="inline-flex items-center gap-0 text-xs font-mono">
                   {priceTrends.map((item, i) => {
@@ -764,7 +764,7 @@ export default function RelocateClient({
                 {tabs.map((tab) => (
                   <button key={tab.id} onClick={() => setActiveTab(tab.id)}
                     className={`px-3 py-2 text-xs uppercase tracking-wider font-medium transition-all whitespace-nowrap ${
-                      activeTab === tab.id ? "text-white border-b-2 border-cyan-400" : "text-gray-500 hover:text-gray-300"
+                      activeTab === tab.id ? "text-white border-b-2 border-cyan-400" : "text-text-muted hover:text-gray-300"
                     }`}>
                     {tab.label}
                     {tab.id !== "overview" && tabCounts[tab.id] > 0 && (
@@ -790,7 +790,7 @@ export default function RelocateClient({
                     <div className="h-full bg-cyan-400/60 rounded-full" style={{ width: `${Math.min((minSalary / (recSalary * 1.2)) * 100, 100)}%` }} />
                   </div>
                   <p className="font-mono text-lg text-cyan-400 font-bold">
-                    {fmtSar(minSalary)} <span className="text-gray-500 text-sm">({sarToLocal(minSalary, originRate, origin.currencySymbol)})</span>
+                    {fmtSar(minSalary)} <span className="text-text-muted text-sm">({sarToLocal(minSalary, originRate, origin.currencySymbol)})</span>
                   </p>
                 </div>
 
@@ -801,9 +801,9 @@ export default function RelocateClient({
                     <div className="h-full bg-emerald-400/60 rounded-full" style={{ width: `${Math.min((recSalary / (recSalary * 1.2)) * 100, 100)}%` }} />
                   </div>
                   <p className="font-mono text-lg text-emerald-400 font-bold">
-                    {fmtSar(recSalary)} <span className="text-gray-500 text-sm">({sarToLocal(recSalary, originRate, origin.currencySymbol)})</span>
+                    {fmtSar(recSalary)} <span className="text-text-muted text-sm">({sarToLocal(recSalary, originRate, origin.currencySymbol)})</span>
                   </p>
-                  <p className="text-xs text-gray-500">{r.withSavingsBuffer}</p>
+                  <p className="text-xs text-text-muted">{r.withSavingsBuffer}</p>
                 </div>
 
                 {/* Tax savings */}
@@ -811,9 +811,9 @@ export default function RelocateClient({
                   <div className="mb-4 pt-3 border-t border-white/10">
                     <p className="text-xs text-text-muted uppercase tracking-wider mb-1">{r.yourTaxSavings}</p>
                     <p className="font-mono text-lg text-emerald-400 font-bold">
-                      +{fmtSar(result.tax_savings_sar)}{r.perMonth} <span className="text-gray-500 text-sm">({fmtLocal(result.tax_savings_local, origin.currencySymbol)})</span>
+                      +{fmtSar(result.tax_savings_sar)}{r.perMonth} <span className="text-text-muted text-sm">({fmtLocal(result.tax_savings_local, origin.currencySymbol)})</span>
                     </p>
-                    <p className="text-xs text-gray-500">{r.moneyYouKeep}</p>
+                    <p className="text-xs text-text-muted">{r.moneyYouKeep}</p>
                   </div>
                 )}
 
@@ -823,9 +823,9 @@ export default function RelocateClient({
                     <Tip text={r.tooltipEosb}><span className="border-b border-dotted border-gray-500 cursor-help">{r.eosbAfterLabel}</span></Tip>
                   </p>
                   <p className="font-mono text-lg text-purple-400 font-bold">
-                    ~{fmtSar(result.eosb_5yr_sar)} <span className="text-gray-500 text-sm">({sarToLocal(result.eosb_5yr_sar, originRate, origin.currencySymbol)})</span>
+                    ~{fmtSar(result.eosb_5yr_sar)} <span className="text-text-muted text-sm">({sarToLocal(result.eosb_5yr_sar, originRate, origin.currencySymbol)})</span>
                   </p>
-                  <p className="text-xs text-gray-500">{r.taxFreeSeverance}</p>
+                  <p className="text-xs text-text-muted">{r.taxFreeSeverance}</p>
                 </div>
               </div>
 
@@ -1017,7 +1017,7 @@ export default function RelocateClient({
                           </span>
                         </div>
                         {/* Diff line */}
-                        <div className={`text-[10px] font-mono mt-0.5 text-center ${diffPct < 0 ? "text-green-400" : diffPct > 0 ? "text-red-400" : "text-gray-500"}`}>
+                        <div className={`text-[10px] font-mono mt-0.5 text-center ${diffPct < 0 ? "text-green-400" : diffPct > 0 ? "text-red-400" : "text-text-muted"}`}>
                           ── {diffPct > 0 ? "+" : ""}{diffPct}% ──
                         </div>
                       </div>
@@ -1033,7 +1033,7 @@ export default function RelocateClient({
                     <h3 className="text-xs font-bold text-cyan-400 uppercase tracking-[0.2em]">{r.pricePulse} — {r.pricePulseDate}</h3>
                     <span className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-500/10 border border-amber-500/30 text-amber-300">{r.pricePulseEstimated}</span>
                   </div>
-                  <p className="text-[10px] text-gray-500 mb-4">{r.pricePulseSubtitle.replace("{city}", saudiName)}</p>
+                  <p className="text-[10px] text-text-muted mb-4">{r.pricePulseSubtitle.replace("{city}", saudiName)}</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
@@ -1060,7 +1060,7 @@ export default function RelocateClient({
                               <td className="py-2 px-3 text-right text-text-muted text-xs">{saudiName}</td>
                               <td className="py-2 px-3 text-right font-mono text-text-primary">{price !== undefined ? fmtN(price) + " SAR" : "—"}</td>
                               {originCostId && (
-                                <td className="py-2 px-3 text-right font-mono text-gray-500">
+                                <td className="py-2 px-3 text-right font-mono text-text-muted">
                                   {price !== undefined ? sarToLocal(price, originRate, origin.currencySymbol) : "—"}
                                 </td>
                               )}
@@ -1103,7 +1103,7 @@ export default function RelocateClient({
                             </div>
                             <div className="text-right flex-shrink-0">
                               <p className="text-sm font-mono text-text-primary font-bold">{fmtN(fee)} SAR</p>
-                              <p className="text-[10px] text-gray-500">{sarToLocal(fee, originRate, origin.currencySymbol)} {r.perYear}</p>
+                              <p className="text-[10px] text-text-muted">{sarToLocal(fee, originRate, origin.currencySymbol)} {r.perYear}</p>
                               {si.trend === "up" && <span className="text-[10px] text-red-400 font-mono">▲ +{si.trendPct}%</span>}
                             </div>
                           </div>
@@ -1215,7 +1215,7 @@ export default function RelocateClient({
         loading={emailLoading}
         lang={lang}
       />
-    </div>
+    </main>
   );
 }
 
@@ -1237,7 +1237,7 @@ function DualRow({ label, sar, rate, sym, bold }: { label: React.ReactNode; sar:
     <div className={`flex justify-between items-center text-sm ${bold ? "font-bold text-text-primary" : "text-text-muted"}`}>
       <span>{label}</span>
       <span className="font-mono">
-        {fmtSar(sar)} <span className="text-gray-500 text-xs">({sarToLocal(sar, rate, sym)})</span>
+        {fmtSar(sar)} <span className="text-text-muted text-xs">({sarToLocal(sar, rate, sym)})</span>
       </span>
     </div>
   );
@@ -1315,7 +1315,7 @@ function CategoryTable({ categories, originCostId, origin, saudi, lang, r, getCa
                 <td className="py-2 px-4 text-right font-mono text-text-primary whitespace-nowrap">
                   {row.saudiPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })} SAR
                 </td>
-                <td className="py-2 px-4 text-right font-mono text-gray-500 whitespace-nowrap">
+                <td className="py-2 px-4 text-right font-mono text-text-muted whitespace-nowrap">
                   ~{origin.currencySymbol}{row.saudiInLocal.toLocaleString("en-US", { maximumFractionDigits: 2 })}
                 </td>
                 <td className={`py-2 px-4 text-right font-mono whitespace-nowrap ${

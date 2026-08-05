@@ -54,7 +54,7 @@ export default function InfoTooltip({ text }: { text: string }) {
         ref={iconRef}
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
-        className="inline-flex items-center justify-center w-4 h-4 text-[10px] text-gray-500 hover:text-gray-300 cursor-help transition-colors"
+        className="inline-flex items-center justify-center w-4 h-4 text-[10px] text-text-muted hover:text-gray-300 cursor-help transition-colors"
       >
         &#9432;
       </span>

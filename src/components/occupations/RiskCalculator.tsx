@@ -386,7 +386,7 @@ export default function RiskCalculator() {
                     <span className="text-white font-medium">&quot;{query}&quot;</span>{" "}
                     {t.match.matchNotFound}
                   </p>
-                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                  <p className="text-xs text-text-muted uppercase tracking-wider">
                     {t.match.matchClosest}
                   </p>
                   {findClosestOccupations(query, 5).map((m) => (
@@ -417,7 +417,7 @@ export default function RiskCalculator() {
                         <span>|</span>
                         <span>{m.occupation.salary_entry_sar.toLocaleString()}-{m.occupation.salary_senior_sar.toLocaleString()} SAR</span>
                       </div>
-                      <p className="text-[11px] text-gray-500 mt-1">
+                      <p className="text-[11px] text-text-muted mt-1">
                         {m.reason === "direct" ? t.match.matchDirect :
                          m.reason === "related" ? t.match.matchRelated :
                          t.match.matchFuzzy}
@@ -472,7 +472,7 @@ export default function RiskCalculator() {
                         if (trend.direction === "down") return (
                           <span className="text-green-400 text-xs font-mono ml-2">&#9660; {trend.delta} vs Q4-2025</span>
                         );
-                        return <span className="text-gray-500 text-xs font-mono ml-2">&#9473; stable</span>;
+                        return <span className="text-text-muted text-xs font-mono ml-2">&#9473; stable</span>;
                       })()}
                     </span>
                     <span>{t.common.veryHigh}</span>

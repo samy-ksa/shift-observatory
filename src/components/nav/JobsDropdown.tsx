@@ -190,7 +190,7 @@ function SearchPanel({
       {/* Search input */}
       <div className="relative border-b border-gray-800">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <SearchIcon className="w-4 h-4 text-gray-500" />
+          <SearchIcon className="w-4 h-4 text-text-muted" />
         </div>
         <input
           ref={inputRef}
@@ -201,7 +201,7 @@ function SearchPanel({
             setHighlightIdx(-1);
           }}
           placeholder={jd.searchPlaceholder}
-          className={`w-full bg-gray-900 text-white text-sm pl-10 pr-3 focus:outline-none placeholder:text-gray-500 ${
+          className={`w-full bg-gray-900 text-white text-sm pl-10 pr-3 focus:outline-none placeholder:text-text-muted ${
             mobile ? "py-4 text-base min-h-[48px]" : "py-3"
           }`}
         />
@@ -213,7 +213,7 @@ function SearchPanel({
           {results.length === 0 && isSearching ? (
             debouncedQ.length >= 2 ? (
               <div className="px-3 py-2">
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-2">
+                <p className="text-[10px] text-text-muted uppercase tracking-wider mb-2">
                   {t.match.matchClosest}
                 </p>
                 {findClosestOccupations(debouncedQ, 3).map((m) => (
@@ -224,14 +224,14 @@ function SearchPanel({
                         {lang === "ar" ? m.occupation.name_ar : lang === "fr" ? m.occupation.name_fr : m.occupation.name_en}
                       </span>
                     </div>
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-gray-500"}`}>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded ${m.score > 80 ? "text-green-400" : m.score > 50 ? "text-amber-400" : "text-text-muted"}`}>
                       {m.score}%
                     </span>
                   </a>
                 ))}
               </div>
             ) : (
-              <div className="px-3 py-6 text-center text-gray-500 text-xs">
+              <div className="px-3 py-6 text-center text-text-muted text-xs">
                 {jd.noResults}
               </div>
             )
@@ -297,7 +297,7 @@ function SearchPanel({
             className={`text-xs px-2 py-1 rounded border transition-colors ${
               filter === f.key
                 ? "bg-cyan-500/20 text-cyan-400 border-cyan-500/50"
-                : "bg-transparent text-gray-500 border-gray-700 hover:border-gray-600 hover:text-gray-400"
+                : "bg-transparent text-text-muted border-gray-700 hover:border-gray-600 hover:text-gray-400"
             }`}
           >
             {f.label}
