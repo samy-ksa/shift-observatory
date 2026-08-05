@@ -116,12 +116,9 @@ export default function HeroCounter() {
           />
         </motion.div>
 
-        {/* Main Counter */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        {/* Main Counter — no entrance fade/delay: this is the LCP element,
+            animating its visibility in directly inflates LCP (web.dev guidance) */}
+        <div>
           <div className="text-accent-neon text-glow-neon font-mono font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight">
             <AnimatedNumber
               key={saudiOnly ? "saudi" : "all"}
@@ -132,7 +129,7 @@ export default function HeroCounter() {
           <p className="text-text-secondary text-base md:text-xl mt-4 max-w-lg mx-auto">
             {t.hero.subtitle}
           </p>
-        </motion.div>
+        </div>
 
         {/* Divider */}
         <motion.div
