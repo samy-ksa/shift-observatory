@@ -93,8 +93,9 @@ export async function generateMetadata({
       description = `${name} en Arabie Saoudite : ${composite}/100 risque IA, ${entry}–${senior} SAR/mois (sans impôt). Nitaqat, éligibilité expat. Gratuit.`;
     } else {
       title = firstFit(
-        `${name} Salaire Arabie Saoudite 2026 : ${entry}–${senior} SAR/mois`,
-        `${name} Salaire Arabie Saoudite : ${median} SAR/mois`,
+        `${name} : Risque IA ${composite}/100 · Guide Salaire, Arabie Saoudite`,
+        `${name} Arabie Saoudite : Risque IA ${composite}/100, Guide Salaire`,
+        `${name} : Risque IA ${composite}/100 · Guide Salaire KSA`,
         `${name} — Arabie Saoudite`,
       );
       description = `${name} en Arabie Saoudite gagne ${entry}–${senior} SAR/mois (sans impôt). Risque IA faible (${composite}/100). Guide expat.`;
@@ -132,11 +133,9 @@ export async function generateMetadata({
       description = `${name} in Saudi Arabia: ${composite}/100 AI risk, ${entry}–${senior} SAR/mo (tax-free). Nitaqat status, expat eligibility & career transitions. Free.`;
     } else {
       title = firstFit(
-        `${name} Salary Saudi Arabia 2026: ${entry}–${senior} SAR/mo`,
-        `${name} Salary Saudi Arabia: ${median} SAR/month`,
-        `${name} Salary in Saudi Arabia: ${median} SAR`,
-        `${name} Salary KSA: ${median} SAR/mo`,
-        `${name} Salary in Saudi Arabia (2026)`,
+        `${name}: AI Risk ${composite}/100 · Salary Guide, Saudi Arabia`,
+        `${name} Saudi Arabia: AI Risk ${composite}/100, Salary Guide`,
+        `${name}: AI Risk ${composite}/100 · Salary Guide KSA`,
         `${name} — Saudi Arabia`,
         `${name} — KSA`,
       );
