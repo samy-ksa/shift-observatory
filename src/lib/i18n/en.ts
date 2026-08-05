@@ -455,6 +455,7 @@ export const en: Dictionary = {
     openToExpats: "Open to Expats (sector quota)",
     reservedWarning:
       "This occupation is on the list of 100 professions reserved exclusively for Saudi nationals. Expat workers cannot be hired for this role.",
+    reservedSeeOpenJobs: "Browse occupations open to expats instead →",
     relevantTawteen: "Relevant Tawteen Decisions",
     noTawteen: "No specific tawteen decisions currently affect this occupation.",
     quota: "Quota",

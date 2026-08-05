@@ -487,6 +487,7 @@ export interface JobPageStrings {
   sectorQuota: string;
   openToExpats: string;
   reservedWarning: string;
+  reservedSeeOpenJobs: string;
   relevantTawteen: string;
   noTawteen: string;
   quota: string;

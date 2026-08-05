@@ -508,9 +508,17 @@ export default function JobPageClient({
                   </span>
                 </div>
                 {reserved && (
-                  <p className="text-sm text-red-400 mt-2">
-                    {jp.reservedWarning}
-                  </p>
+                  <>
+                    <p className="text-sm text-red-400 mt-2">
+                      {jp.reservedWarning}
+                    </p>
+                    <Link
+                      href={localizedHref(lang, "/career")}
+                      className="text-sm text-blue-400 hover:text-blue-300 mt-2 inline-block underline"
+                    >
+                      {jp.reservedSeeOpenJobs}
+                    </Link>
+                  </>
                 )}
               </div>
 

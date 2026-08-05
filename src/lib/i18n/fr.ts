@@ -434,6 +434,7 @@ export const fr: Dictionary = {
     sectorQuota: "Quota sectoriel applicable",
     openToExpats: "Ouvert aux expatriés (quota sectoriel)",
     reservedWarning: "Ce métier figure sur la liste des 100 professions réservées exclusivement aux nationaux saoudiens. Les expatriés ne peuvent pas être embauchés pour ce rôle.",
+    reservedSeeOpenJobs: "Voir les métiers ouverts aux expatriés →",
     relevantTawteen: "Décisions de Tawteen pertinentes",
     noTawteen: "Aucune décision de tawteen n'affecte actuellement ce métier.",
     quota: "Quota",
