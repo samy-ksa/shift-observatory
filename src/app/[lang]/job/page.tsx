@@ -3,18 +3,18 @@ import Link from "next/link";
 import type { Lang } from "@/lib/i18n/context";
 import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
-import { getAllOccupations, getSector, toSlug, riskColor } from "@/lib/occupations";
+import { getAllOccupations, getSector, toSlug, riskColor, fmt } from "@/lib/occupations";
 
 const TITLES: Record<Lang, string> = {
-  en: "Browse All 237 Occupations | SHIFT Observatory",
-  fr: "Parcourir les 237 métiers | SHIFT Observatory",
-  ar: "تصفح جميع المهن (237) | مرصد شيفت",
+  en: "Jobs in Saudi Arabia for Foreigners: 237 Roles Scored",
+  fr: "Emplois en Arabie Saoudite pour expatriés : 237 métiers notés",
+  ar: "وظائف في السعودية للأجانب: 237 مهنة مقيّمة",
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
-  en: "Full directory of 237 occupations rated for AI automation risk in Saudi Arabia, grouped by sector. Find any role's risk score, salary range, and Nitaqat status.",
-  fr: "Répertoire complet des 237 métiers évalués selon leur risque d'automatisation IA en Arabie Saoudite, classés par secteur. Score de risque, salaire et statut Nitaqat pour chaque métier.",
-  ar: "دليل شامل لـ 237 مهنة مقيّمة حسب مخاطر أتمتة الذكاء الاصطناعي في المملكة العربية السعودية، مصنفة حسب القطاع. درجة المخاطر ونطاق الراتب وحالة نطاقات لكل مهنة.",
+  en: "216 of 237 tracked occupations are open to expats under Nitaqat sector quotas. Compare salary, AI automation risk, and visa eligibility for every role. Free, no signup.",
+  fr: "216 des 237 métiers suivis sont ouverts aux expatriés sous quotas Nitaqat. Comparez salaire, risque d'automatisation IA et éligibilité au visa pour chaque métier. Gratuit.",
+  ar: "216 من أصل 237 مهنة مرصودة مفتوحة للوافدين ضمن حصص نطاقات القطاعية. قارن الراتب ومخاطر الأتمتة وأهلية التأشيرة لكل مهنة. مجاناً.",
 };
 
 const H1: Record<Lang, string> = {
@@ -33,6 +33,12 @@ const BREADCRUMB_LABEL: Record<Lang, string> = {
   en: "Browse All Occupations",
   fr: "Parcourir tous les métiers",
   ar: "تصفح جميع المهن",
+};
+
+const FAQ_HEADING: Record<Lang, string> = {
+  en: "Frequently Asked Questions",
+  fr: "Questions fréquentes",
+  ar: "الأسئلة الشائعة",
 };
 
 function sectorName(sectorId: string | undefined, lang: Lang): string {
@@ -79,8 +85,9 @@ export default async function JobIndexPage({
     { name: BREADCRUMB_LABEL[lang], path: "/job" },
   ]);
 
+  const allOccs = getAllOccupations();
   const bySector = new Map<string, ReturnType<typeof getAllOccupations>>();
-  for (const occ of getAllOccupations()) {
+  for (const occ of allOccs) {
     const key = occ.sector_id || "other";
     if (!bySector.has(key)) bySector.set(key, []);
     bySector.get(key)!.push(occ);
@@ -93,11 +100,62 @@ export default async function JobIndexPage({
     }))
     .sort((a, b) => a.name.localeCompare(b.name, lang));
 
+  const openOccs = allOccs.filter((o) => o.nitaqat_status !== "reserved_saudi_only");
+  const reservedCount = allOccs.length - openOccs.length;
+  const topPaid = [...openOccs]
+    .sort((a, b) => (b.salary_senior_sar || 0) - (a.salary_senior_sar || 0))
+    .slice(0, 3);
+  const lowRisk = [...openOccs].sort((a, b) => a.composite - b.composite).slice(0, 3);
+
+  const nameOf = (o: (typeof allOccs)[number]) =>
+    occupationName(o.name_en, o.name_fr, o.name_ar, lang);
+
+  const faqText = {
+    en: {
+      q1: "Can foreigners get jobs in Saudi Arabia?",
+      a1: `Yes. ${openOccs.length} of the ${allOccs.length} occupations SHIFT Observatory tracks are open to expatriates under Nitaqat sector quotas — you need a job offer, work visa, and iqama. ${reservedCount} occupations are reserved exclusively for Saudi nationals under HRSD regulations.`,
+      q2: "Which jobs in Saudi Arabia pay the most for expats?",
+      a2: `Among occupations open to expats, the highest-paying are ${topPaid.map((o) => `${nameOf(o)} (up to ${fmt(o.salary_senior_sar)} SAR/month)`).join(", ")}.`,
+      q3: "Which Saudi Arabia jobs have the lowest AI automation risk?",
+      a3: `The lowest AI-risk occupations open to expats are ${lowRisk.map((o) => `${nameOf(o)} (${o.composite}/100)`).join(", ")} — roles requiring physical presence or interpersonal judgment score lowest.`,
+    },
+    fr: {
+      q1: "Les expatriés peuvent-ils travailler en Arabie Saoudite ?",
+      a1: `Oui. ${openOccs.length} des ${allOccs.length} métiers suivis par SHIFT Observatory sont ouverts aux expatriés sous quotas sectoriels Nitaqat — il faut une offre d'emploi, un visa de travail et une iqama. ${reservedCount} métiers sont réservés exclusivement aux nationaux saoudiens.`,
+      q2: "Quels métiers paient le mieux les expatriés en Arabie Saoudite ?",
+      a2: `Parmi les métiers ouverts aux expatriés, les mieux payés sont ${topPaid.map((o) => `${nameOf(o)} (jusqu'à ${fmt(o.salary_senior_sar)} SAR/mois)`).join(", ")}.`,
+      q3: "Quels métiers ont le risque d'automatisation IA le plus faible ?",
+      a3: `Les métiers ouverts aux expatriés avec le risque IA le plus faible sont ${lowRisk.map((o) => `${nameOf(o)} (${o.composite}/100)`).join(", ")}.`,
+    },
+    ar: {
+      q1: "هل يمكن للأجانب العمل في المملكة العربية السعودية؟",
+      a1: `نعم. ${openOccs.length} من أصل ${allOccs.length} مهنة يرصدها مرصد شيفت مفتوحة للوافدين ضمن حصص نطاقات القطاعية — تحتاج إلى عرض عمل وتأشيرة عمل وإقامة. ${reservedCount} مهنة محصورة حصرياً على المواطنين السعوديين.`,
+      q2: "ما هي أعلى الوظائف أجراً للوافدين في السعودية؟",
+      a2: `من بين المهن المفتوحة للوافدين، الأعلى أجراً هي ${topPaid.map((o) => `${nameOf(o)} (حتى ${fmt(o.salary_senior_sar)} ريال/شهر)`).join("، ")}.`,
+      q3: "ما هي المهن الأقل مخاطرة من الذكاء الاصطناعي؟",
+      a3: `المهن المفتوحة للوافدين ذات أقل مخاطر أتمتة هي ${lowRisk.map((o) => `${nameOf(o)} (${o.composite}/100)`).join("، ")}.`,
+    },
+  }[lang];
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: faqText.q1, acceptedAnswer: { "@type": "Answer", text: faqText.a1 } },
+      { "@type": "Question", name: faqText.q2, acceptedAnswer: { "@type": "Answer", text: faqText.a2 } },
+      { "@type": "Question", name: faqText.q3, acceptedAnswer: { "@type": "Answer", text: faqText.a3 } },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <main className="max-w-5xl mx-auto px-4 py-10" dir={dir}>
         <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
@@ -133,6 +191,24 @@ export default async function JobIndexPage({
             </section>
           ))}
         </div>
+
+        <section className="mt-14 pt-10 border-t border-white/10" aria-label={FAQ_HEADING[lang]}>
+          <h2 className="text-lg font-semibold text-text-primary mb-4">
+            {FAQ_HEADING[lang]}
+          </h2>
+          <div className="space-y-5">
+            {[
+              [faqText.q1, faqText.a1],
+              [faqText.q2, faqText.a2],
+              [faqText.q3, faqText.a3],
+            ].map(([q, a]) => (
+              <div key={q}>
+                <h3 className="text-sm font-medium text-text-primary mb-1">{q}</h3>
+                <p className="text-sm text-text-secondary max-w-2xl">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );
