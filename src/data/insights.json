@@ -258,5 +258,205 @@
         ]
       }
     }
+  },
+  {
+    "slug": "riyadh-salary-needed-to-match-paris-cost-of-living",
+    "kind": "insights",
+    "date": "2026-08-12",
+    "published_at": "2026-08-12T10:30:40",
+    "keyword": "riyadh salary needed to match paris cost of living",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Riyadh Salary to Match Paris: SAR 7,000 Is the Floor. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Riyadh%20Salary%20to%20Match%20Paris%3A%20SAR%207%2C000%20Is%20the%20Floor&subtitle=Below%20roughly%20%E2%82%AC4%2C000%20gross%20per%20month%20in%20Paris%2C%20most%20professionals%20aren%27t%20net-sav",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=Riyad%20%C3%A9gale%20Paris%20d%C3%A8s%20SAR%207%2C000%20%3A%20le%20salaire%20plancher&subtitle=En%20dessous%20d%27environ%20%E2%82%AC4%2C000%20brut%20par%20mois%20%C3%A0%20Paris%2C%20la%20plupart%20des%20professionnels",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D8%B1%D8%A7%D8%AA%D8%A8%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%20%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D9%82%D8%A9%20%D8%A8%D8%A7%D8%B1%D9%8A%D8%B3%3A%207%2C000%20%D8%B1%D9%8A%D8%A7%D9%84%20%D9%87%D9%88%20%D8%A7%D9%84%D8%AD%D8%AF%20%D8%A7%D9%84%D8%A3%D8%AF%D9%86%D9%89&subtitle=%D8%AF%D9%88%D9%86%20%D9%86%D8%AD%D9%88%204%2C000%20%D9%8A%D9%88%D8%B1%D9%88%20%D8%A5%D8%AC%D9%85%D8%A7%D9%84%D9%8A%20%D8%B4%D9%87%D8%B1%D9%8A%D9%8B%D8%A7%20%D9%81%D9%8A%20%D8%A8%D8%A7%D8%B1%D9%8A%D8%B3%D8%8C%20%D9%84%D8%A7%20%D9%8A%D8%AD%D9%82%D9%82%20%D9%85%D8%B9%D8%B8%D9%85%20%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D9%8A%D9%86%20%D8%A3%D9%8A%20%D9%88%D9%81%D9%88%D8%B1%D8%A7%D8%AA%20%D8%B5%D8%A7%D9%81%D9%8A%D8%A9"
+    },
+    "langs": {
+      "en": {
+        "title": "Riyadh Salary to Match Paris: SAR 7,000 Is the Floor",
+        "description": "Need just SAR 7,000/month tax-free to match Paris purchasing power below €4,000 gross. See the full Riyadh break-even salary table by income.",
+        "lede": "Below roughly €4,000 gross per month in Paris, the answer is simple: SAR 7,000/month tax-free in Riyadh already matches or beats Paris purchasing power, no break-even calculation needed. At €3,000 gross (€1,950 net), Paris's own basket already runs a monthly deficit, so the tax-free floor alone clears it with room to spare.\n\nAbove €4,000, the math shifts: a Paris salary that clears its own monthly cost-of-living basket (rent, food, transport, utilities, dining) starts generating savings, and the Riyadh salary needed must replace those savings on top of its own SAR 7,000 basket. At €5,000 gross (€3,250 net), monthly savings run to €840, pushing the Riyadh break-even to SAR 10,444/month; at €8,000 gross, it climbs to SAR 18,439/month. The figures below, drawn from the KSA Shift Observatory relocation calculator's Paris–Riyadh dataset, single-adult and apartment-based, show exactly where that line falls at each income band.",
+        "h2_sections": [
+          {
+            "q": "What salary do you need in Riyadh at each Paris income level?",
+            "body": "The list below converts a Paris gross salary into the tax-free Riyadh salary needed to preserve the same monthly savings, using the 4.10 SAR/EUR rate from the underlying dataset. Figures assume a single adult renting a one-bedroom apartment in both cities.\n\n- €2,500/month gross in Paris (€1,625 net): Paris basket runs a €785 monthly deficit. SAR 7,000/month (~€1,707) in Riyadh already covers costs with room to spare.\n- €3,000/month gross (€1,950 net): Paris deficit is €460/month. SAR 7,000/month still applies.\n- €4,000/month gross (€2,600 net): Paris starts saving €190/month. Riyadh break-even: SAR 7,779/month (~€1,897).\n- €5,000/month gross (€3,250 net): Paris saves €840/month. Riyadh break-even: SAR 10,444/month (~€2,547).\n- €6,000/month gross (€3,900 net): Paris saves €1,490/month. Riyadh break-even: SAR 13,109/month (~€3,197).\n- €8,000/month gross (€5,200 net): Paris saves €2,790/month. Riyadh break-even: SAR 18,439/month (~€4,497).\n\nFor any salary in between, the [relocation calculator](/relocate) computes the exact number."
+          },
+          {
+            "q": "Does Riyadh's 0% income tax cover the gap by itself?",
+            "body": "Partly, and only up to a point. The two tax regimes work differently:\n\n- In Paris, net salary equals gross pay minus a 35% tax rate: a €4,000 gross salary becomes €2,600 net, with €1,400/month lost to tax.\n- In Riyadh, there is no personal income tax, so gross and take-home pay are the same figure.\n\nBelow about €4,000 gross in Paris, that tax gap alone is usually enough to outweigh what's left of Paris's shrinking or negative monthly savings. Above that threshold, the exemption no longer closes the gap on its own: Paris savings grow faster than 0% tax compensates for, which is why the break-even salary keeps climbing in the list above."
+          },
+          {
+            "q": "Why does SAR 7,000/month already work below €4,000 gross?",
+            "body": "Paris's own monthly basket (rent, food, transport, utilities and dining combined) adds up to €2,410. At €2,500 and €3,000 gross, net pay in Paris doesn't fully cover that basket, so there's no savings left to replace. A Riyadh salary only needs to clear its own SAR 7,000 basket (about €1,707) to match or beat that position, and Riyadh's 0% tax means the full amount is available for spending. No separate calculation is needed in this income band; the floor is the answer."
+          },
+          {
+            "q": "How does the break-even salary grow above €4,000?",
+            "body": "Above €4,000 gross in Paris, the formula is fixed: Riyadh break-even equals SAR 7,000 (the basket) plus that month's Paris savings, converted at 4.10 SAR per euro. Because the rate is constant, each additional €1,000 of monthly Paris savings adds about SAR 4,100 to the number needed in Riyadh. Someone saving €840/month in Paris, for instance, needs SAR 3,444 above the floor, for a break-even of SAR 10,444/month. The relationship holds in a straight line from there through the higher income bands."
+          },
+          {
+            "q": "Is Riyadh cheaper than Paris on every cost line?",
+            "body": "No, and the exception is a single line. Rent and food are the two largest costs in both cities' baskets, and Riyadh runs lower on both:\n\n- Rent: about €732/month in Riyadh (SAR 3,000) against €1,400/month in Paris.\n- Food: about €537/month in Riyadh (SAR 2,200) against €550/month in Paris.\n- Utilities: about €122/month in Riyadh (SAR 500) against €180/month in Paris.\n- Dining: about €122/month in Riyadh (SAR 500) against €200/month in Paris.\n- Transport: about €195/month in Riyadh (SAR 800, car) against €80/month in Paris (transit).\n\nTransport is the only line where Riyadh costs more. Rent alone accounts for most of the roughly €700 gap between the two full baskets: €1,707/month all-in for Riyadh against €2,410/month for Paris."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does this break-even number include a family or villa-style housing?",
+            "a": "No. Every figure here is a single-adult, one-bedroom-apartment scenario, the simplest and most common baseline. Housing for families, compound living, and school fees all raise the Riyadh side of the equation, and none of that is quantified in this specific comparison. Check the [pre-departure checklist](/prepare) before finalizing a move."
+          },
+          {
+            "q": "Are healthcare, end-of-service benefits, or visa costs factored in?",
+            "a": "No. Saudi Arabia's end-of-service benefit (EOSB), healthcare costs, and relocation or visa fees are excluded from both the Paris and Riyadh baskets in this comparison. They apply on top of the figures above and aren't quantified here."
+          },
+          {
+            "q": "How does this compare to independent cost-of-living rankings?",
+            "a": "Mercer's 2024 Cost of Living ranking places Paris at #29 globally and Riyadh at #90 (a lower rank means a more expensive city), which is directionally consistent with Riyadh's lower basket total here. Mercer's ranking is cited as outside corroboration; it isn't the source of the break-even figures themselves."
+          },
+          {
+            "q": "How do I know if I'm above or below the €4,000 threshold?",
+            "a": "Compare your Paris net pay (gross minus roughly 35% tax) to the €2,410/month cost-of-living basket used here. If your net pay falls short of that basket, you're in deficit and SAR 7,000/month in Riyadh already matches your position. If your net pay clears it, you're saving money in Paris, and the Riyadh number needs to replace those savings above the SAR 7,000 floor. The [relocation calculator](/relocate) plugs in your exact salary."
+          },
+          {
+            "q": "Does the right salary vary by occupation?",
+            "a": "This comparison is purely about cost of living; it doesn't factor in how pay scales differ by role or how AI-driven demand shifts are reshaping specific occupations. For occupation-level detail, see the [AI job risk dashboard](/career) or a specific role page such as the [accountants salary page](/job/accountants)."
+          }
+        ],
+        "key_takeaway": "Below roughly €4,000 gross per month in Paris, most professionals aren't net-saving anything against their own cost-of-living basket, so SAR 7,000/month tax-free in Riyadh already matches or beats Paris purchasing power with no break-even math required. Above that income band, the break-even salary in SAR rises in a straight line with Paris savings, scaled at 4.10 SAR per euro.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory relocation calculator — Paris–Riyadh dataset",
+            "url": "/relocate"
+          },
+          {
+            "label": "Mercer Cost of Living Ranking 2024 (Paris #29, Riyadh #90)",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "Riyad égale Paris dès SAR 7,000 : le salaire plancher",
+        "description": "Il suffit de SAR 7,000/mois net d'impôt pour égaler le pouvoir d'achat parisien sous €4,000 brut. Tableau complet du salaire d'équilibre Riyad-Paris.",
+        "lede": "En dessous d'environ €4,000 brut par mois à Paris, la réponse est simple : SAR 7,000/mois net d'impôt à Riyad égale ou dépasse déjà le pouvoir d'achat parisien, sans calcul de seuil d'équilibre nécessaire. À €3,000 brut (€1,950 net), le panier parisien affiche déjà un déficit mensuel, si bien que le seul plancher net d'impôt suffit à le couvrir.\n\nAu-delà de €4,000, le calcul change : un salaire parisien qui couvre son propre panier mensuel de coût de la vie (loyer, alimentation, transport, charges, restauration) commence à générer de l'épargne, et le salaire nécessaire à Riyad doit alors remplacer cette épargne en plus de son propre panier de SAR 7,000. À €5,000 brut (€3,250 net), l'épargne mensuelle atteint €840, portant le seuil d'équilibre à Riyad à SAR 10,444/mois ; à €8,000 brut, il grimpe à SAR 18,439/mois. Les chiffres ci-dessous, tirés du jeu de données Paris-Riyad du calculateur de relocalisation du KSA Shift Observatory, basés sur un adulte seul en appartement, montrent exactement où se situe cette limite à chaque tranche de revenu.",
+        "h2_sections": [
+          {
+            "q": "De quel salaire avez-vous besoin à Riyad selon chaque niveau de revenu parisien ?",
+            "body": "La liste ci-dessous convertit un salaire brut parisien en salaire net d'impôt nécessaire à Riyad pour préserver la même épargne mensuelle, en utilisant le taux de 4.10 SAR/EUR du jeu de données sous-jacent. Les chiffres supposent un adulte seul louant un appartement d'une chambre dans les deux villes.\n\n- €2,500/mois brut à Paris (€1,625 net) : le panier parisien affiche un déficit mensuel de €785. SAR 7,000/mois (~€1,707) à Riyad couvre déjà les coûts avec une marge.\n- €3,000/mois brut (€1,950 net) : le déficit parisien est de €460/mois. SAR 7,000/mois s'applique toujours.\n- €4,000/mois brut (€2,600 net) : Paris commence à épargner €190/mois. Seuil d'équilibre à Riyad : SAR 7,779/mois (~€1,897).\n- €5,000/mois brut (€3,250 net) : Paris épargne €840/mois. Seuil d'équilibre à Riyad : SAR 10,444/mois (~€2,547).\n- €6,000/mois brut (€3,900 net) : Paris épargne €1,490/mois. Seuil d'équilibre à Riyad : SAR 13,109/mois (~€3,197).\n- €8,000/mois brut (€5,200 net) : Paris épargne €2,790/mois. Seuil d'équilibre à Riyad : SAR 18,439/mois (~€4,497).\n\nPour tout salaire intermédiaire, le [calculateur de relocalisation](/relocate) donne le chiffre exact."
+          },
+          {
+            "q": "L'impôt sur le revenu à 0% de Riyad comble-t-il l'écart à lui seul ?",
+            "body": "En partie seulement, et jusqu'à un certain point. Les deux régimes fiscaux fonctionnent différemment :\n\n- À Paris, le salaire net équivaut au salaire brut moins un taux d'imposition de 35% : un salaire brut de €4,000 devient €2,600 net, avec €1,400/mois perdus en impôts.\n- À Riyad, il n'existe pas d'impôt sur le revenu des personnes physiques, donc le salaire brut et le salaire net sont identiques.\n\nEn dessous d'environ €4,000 brut à Paris, cet écart fiscal seul suffit généralement à compenser ce qui reste de l'épargne mensuelle parisienne, réduite voire négative. Au-delà de ce seuil, l'exonération ne comble plus l'écart à elle seule : l'épargne parisienne augmente plus vite que ce que compense une imposition à 0%, ce qui explique pourquoi le salaire d'équilibre continue de grimper dans la liste ci-dessus."
+          },
+          {
+            "q": "Pourquoi SAR 7,000/mois suffit-il déjà en dessous de €4,000 brut ?",
+            "body": "Le panier mensuel propre à Paris (loyer, alimentation, transport, charges et restauration combinés) totalise €2,410. À €2,500 et €3,000 brut, le salaire net à Paris ne couvre pas entièrement ce panier, donc il ne reste aucune épargne à remplacer. Un salaire à Riyad n'a besoin de couvrir que son propre panier de SAR 7,000 (environ €1,707) pour égaler ou dépasser cette position, et l'imposition à 0% de Riyad signifie que la totalité du montant est disponible pour les dépenses. Aucun calcul séparé n'est nécessaire dans cette tranche de revenu ; le plancher est la réponse."
+          },
+          {
+            "q": "Comment le salaire d'équilibre augmente-t-il au-delà de €4,000 ?",
+            "body": "Au-delà de €4,000 brut à Paris, la formule est fixe : le seuil d'équilibre à Riyad égale SAR 7,000 (le panier) plus l'épargne parisienne de ce mois-là, convertie à 4.10 SAR par euro. Le taux étant constant, chaque tranche supplémentaire de €1,000 d'épargne mensuelle parisienne ajoute environ SAR 4,100 au montant nécessaire à Riyad. Une personne épargnant €840/mois à Paris, par exemple, a besoin de SAR 3,444 au-dessus du plancher, pour un seuil d'équilibre de SAR 10,444/mois. Cette relation reste linéaire à partir de là jusqu'aux tranches de revenu supérieures."
+          },
+          {
+            "q": "Riyad est-elle moins chère que Paris sur tous les postes de dépenses ?",
+            "body": "Non, et l'exception se limite à un seul poste. Le loyer et l'alimentation sont les deux postes les plus lourds dans les paniers des deux villes, et Riyad est moins chère sur les deux :\n\n- Loyer : environ €732/mois à Riyad (SAR 3,000) contre €1,400/mois à Paris.\n- Alimentation : environ €537/mois à Riyad (SAR 2,200) contre €550/mois à Paris.\n- Charges : environ €122/mois à Riyad (SAR 500) contre €180/mois à Paris.\n- Restauration : environ €122/mois à Riyad (SAR 500) contre €200/mois à Paris.\n- Transport : environ €195/mois à Riyad (SAR 800, voiture) contre €80/mois à Paris (transports en commun).\n\nLe transport est le seul poste où Riyad coûte plus cher. Le loyer explique à lui seul l'essentiel de l'écart d'environ €700 entre les deux paniers complets : €1,707/mois tout compris pour Riyad contre €2,410/mois pour Paris."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Ce chiffre d'équilibre inclut-il un logement familial ou de type villa ?",
+            "a": "Non. Chaque chiffre ici correspond à un scénario d'adulte seul en appartement d'une chambre, la référence la plus simple et la plus courante. Le logement familial, la vie en compound et les frais de scolarité augmentent tous le côté Riyad de l'équation, et rien de tout cela n'est quantifié dans cette comparaison spécifique. Consultez la [liste de vérification avant départ](/prepare) avant de finaliser un déménagement."
+          },
+          {
+            "q": "Les frais de santé, les indemnités de fin de service ou les frais de visa sont-ils pris en compte ?",
+            "a": "Non. L'indemnité de fin de service saoudienne (EOSB), les frais de santé et les frais de relocalisation ou de visa sont exclus des paniers parisien et riyadais dans cette comparaison. Ils s'ajoutent aux chiffres ci-dessus et ne sont pas quantifiés ici."
+          },
+          {
+            "q": "Comment cela se compare-t-il aux classements indépendants du coût de la vie ?",
+            "a": "Le classement Mercer du coût de la vie 2024 place Paris au 29e rang mondial et Riyad au 90e (un rang plus bas signifie une ville plus chère), ce qui va globalement dans le même sens que le total de panier plus bas observé ici pour Riyad. Le classement Mercer est cité à titre de corroboration externe ; il n'est pas la source des chiffres d'équilibre eux-mêmes."
+          },
+          {
+            "q": "Comment savoir si je suis au-dessus ou en dessous du seuil de €4,000 ?",
+            "a": "Comparez votre salaire net parisien (brut moins environ 35% d'impôt) au panier de coût de la vie de €2,410/mois utilisé ici. Si votre salaire net est inférieur à ce panier, vous êtes en déficit et SAR 7,000/mois à Riyad égale déjà votre position. S'il le dépasse, vous épargnez à Paris, et le chiffre nécessaire à Riyad doit remplacer cette épargne au-dessus du plancher de SAR 7,000. Le [calculateur de relocalisation](/relocate) intègre votre salaire exact."
+          },
+          {
+            "q": "Le salaire approprié varie-t-il selon la profession ?",
+            "a": "Cette comparaison porte uniquement sur le coût de la vie ; elle ne tient pas compte des écarts d'échelles salariales selon les postes, ni de la manière dont les évolutions de la demande liées à l'IA redessinent certaines professions. Pour un détail par profession, consultez le [tableau de bord des risques liés à l'IA sur l'emploi](/career) ou une page dédiée comme la [page salaire des comptables](/job/accountants)."
+          }
+        ],
+        "key_takeaway": "En dessous d'environ €4,000 brut par mois à Paris, la plupart des professionnels n'épargnent rien net face à leur propre panier de coût de la vie, si bien que SAR 7,000/mois net d'impôt à Riyad égale ou dépasse déjà le pouvoir d'achat parisien, sans calcul de seuil d'équilibre nécessaire. Au-delà de cette tranche de revenu, le salaire d'équilibre en SAR augmente de façon linéaire avec l'épargne parisienne, à raison de 4.10 SAR par euro.",
+        "sources": [
+          {
+            "label": "Calculateur de relocalisation KSA Shift Observatory — jeu de données Paris–Riyad",
+            "url": "/relocate"
+          },
+          {
+            "label": "Classement Mercer du coût de la vie 2024 (Paris n°29, Riyad n°90)",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "راتب الرياض لمطابقة باريس: 7,000 ريال هو الحد الأدنى",
+        "description": "يكفي 7,000 ريال شهريًا معفاة من الضريبة لمطابقة القوة الشرائية لباريس دون 4,000 يورو إجمالي. اطلع على جدول رواتب التعادل الكامل في الرياض حسب الدخل.",
+        "lede": "دون نحو 4,000 يورو إجمالي شهريًا في باريس، الإجابة بسيطة: 7,000 ريال شهريًا معفاة من الضريبة في الرياض تطابق بالفعل القوة الشرائية في باريس أو تتفوق عليها، دون الحاجة لأي حساب تعادل. عند 3,000 يورو إجمالي (1,950 يورو صافي)، تسجل سلة التكاليف الخاصة بباريس عجزًا شهريًا بالفعل، لذا فإن الحد الأدنى المعفى من الضريبة وحده يغطيه مع هامش إضافي.\n\nفوق 4,000 يورو، تتغير المعادلة: الراتب في باريس الذي يغطي سلة تكاليف المعيشة الشهرية الخاصة به (الإيجار، الطعام، النقل، المرافق، تناول الطعام خارج المنزل) يبدأ في توليد مدخرات، والراتب المطلوب في الرياض يجب أن يعوض تلك المدخرات فوق سلته البالغة 7,000 ريال. عند 5,000 يورو إجمالي (3,250 يورو صافي)، تصل المدخرات الشهرية إلى 840 يورو، ما يرفع نقطة التعادل في الرياض إلى 10,444 ريال شهريًا؛ وعند 8,000 يورو إجمالي، ترتفع إلى 18,439 ريال شهريًا. الأرقام أدناه، المستمدة من مجموعة بيانات باريس-الرياض في حاسبة الانتقال الخاصة بمرصد KSA Shift، والمبنية على سيناريو شخص بالغ واحد يسكن شقة، توضح بدقة أين يقع هذا الخط عند كل شريحة دخل.",
+        "h2_sections": [
+          {
+            "q": "ما الراتب الذي تحتاجه في الرياض عند كل مستوى دخل في باريس؟",
+            "body": "تحوّل القائمة أدناه الراتب الإجمالي في باريس إلى الراتب المعفى من الضريبة اللازم في الرياض للحفاظ على المدخرات الشهرية نفسها، باستخدام سعر صرف 4.10 ريال/يورو من مجموعة البيانات الأساسية. تفترض الأرقام شخصًا بالغًا واحدًا يستأجر شقة من غرفة نوم واحدة في المدينتين.\n\n- 2,500 يورو/شهريًا إجمالي في باريس (1,625 يورو صافي): تسجل سلة باريس عجزًا شهريًا قدره 785 يورو. 7,000 ريال/شهريًا (~1,707 يورو) في الرياض تغطي التكاليف بالفعل مع هامش إضافي.\n- 3,000 يورو/شهريًا إجمالي (1,950 يورو صافي): عجز باريس 460 يورو/شهريًا. 7,000 ريال/شهريًا لا تزال كافية.\n- 4,000 يورو/شهريًا إجمالي (2,600 يورو صافي): تبدأ باريس بتوفير 190 يورو/شهريًا. نقطة التعادل في الرياض: 7,779 ريال/شهريًا (~1,897 يورو).\n- 5,000 يورو/شهريًا إجمالي (3,250 يورو صافي): توفر باريس 840 يورو/شهريًا. نقطة التعادل في الرياض: 10,444 ريال/شهريًا (~2,547 يورو).\n- 6,000 يورو/شهريًا إجمالي (3,900 يورو صافي): توفر باريس 1,490 يورو/شهريًا. نقطة التعادل في الرياض: 13,109 ريال/شهريًا (~3,197 يورو).\n- 8,000 يورو/شهريًا إجمالي (5,200 يورو صافي): توفر باريس 2,790 يورو/شهريًا. نقطة التعادل في الرياض: 18,439 ريال/شهريًا (~4,497 يورو).\n\nبالنسبة لأي راتب بين هذه القيم، تحسب [حاسبة الانتقال](/relocate) الرقم الدقيق."
+          },
+          {
+            "q": "هل تغطي نسبة الضريبة صفر% في الرياض الفجوة بمفردها؟",
+            "body": "جزئيًا، وحتى حد معين فقط. يعمل النظامان الضريبيان بشكل مختلف:\n\n- في باريس، يساوي صافي الراتب الأجر الإجمالي مطروحًا منه معدل ضريبة 35%: يتحول راتب إجمالي قدره 4,000 يورو إلى 2,600 يورو صافي، مع خسارة 1,400 يورو/شهريًا للضريبة.\n- في الرياض، لا توجد ضريبة دخل شخصي، لذا فإن الراتب الإجمالي والصافي هما الرقم نفسه.\n\nدون نحو 4,000 يورو إجمالي في باريس، تكفي هذه الفجوة الضريبية وحدها عادة لتفوق ما تبقى من مدخرات باريس الشهرية المتناقصة أو السلبية. فوق هذه العتبة، لم يعد الإعفاء يغلق الفجوة بمفرده: تنمو مدخرات باريس أسرع مما تعوضه ضريبة صفر%، وهو ما يفسر استمرار ارتفاع راتب التعادل في القائمة أعلاه."
+          },
+          {
+            "q": "لماذا يكفي 7,000 ريال/شهريًا بالفعل دون 4,000 يورو إجمالي؟",
+            "body": "تبلغ سلة التكاليف الشهرية الخاصة بباريس (الإيجار والطعام والنقل والمرافق وتناول الطعام خارج المنزل مجتمعة) 2,410 يورو. عند 2,500 و3,000 يورو إجمالي، لا يغطي صافي الأجر في باريس هذه السلة بالكامل، لذا لا توجد مدخرات متبقية يجب تعويضها. لا يحتاج الراتب في الرياض إلا إلى تغطية سلته الخاصة البالغة 7,000 ريال (نحو 1,707 يورو) لمطابقة هذا الوضع أو تجاوزه، وتعني ضريبة صفر% في الرياض أن المبلغ كاملًا متاح للإنفاق. لا حاجة لأي حساب منفصل في شريحة الدخل هذه؛ فالحد الأدنى هو الإجابة."
+          },
+          {
+            "q": "كيف يرتفع راتب التعادل فوق 4,000 يورو؟",
+            "body": "فوق 4,000 يورو إجمالي في باريس، تكون المعادلة ثابتة: تساوي نقطة التعادل في الرياض 7,000 ريال (السلة) مضافًا إليها مدخرات باريس لذلك الشهر، محوّلة بسعر 4.10 ريال لكل يورو. ولأن السعر ثابت، يضيف كل 1,000 يورو إضافية من المدخرات الشهرية في باريس نحو 4,100 ريال إلى الرقم المطلوب في الرياض. فمن يوفر 840 يورو/شهريًا في باريس، على سبيل المثال، يحتاج إلى 3,444 ريال فوق الحد الأدنى، ليصل إلى نقطة تعادل قدرها 10,444 ريال/شهريًا. وتستمر هذه العلاقة بشكل خطي من هناك عبر شرائح الدخل الأعلى."
+          },
+          {
+            "q": "هل الرياض أرخص من باريس في كل بند من بنود التكلفة؟",
+            "body": "لا، والاستثناء بند واحد فقط. الإيجار والطعام هما أكبر بندين في سلتي المدينتين، وتكون الرياض أقل تكلفة في كليهما:\n\n- الإيجار: نحو 732 يورو/شهريًا في الرياض (3,000 ريال) مقابل 1,400 يورو/شهريًا في باريس.\n- الطعام: نحو 537 يورو/شهريًا في الرياض (2,200 ريال) مقابل 550 يورو/شهريًا في باريس.\n- المرافق: نحو 122 يورو/شهريًا في الرياض (500 ريال) مقابل 180 يورو/شهريًا في باريس.\n- تناول الطعام خارج المنزل: نحو 122 يورو/شهريًا في الرياض (500 ريال) مقابل 200 يورو/شهريًا في باريس.\n- النقل: نحو 195 يورو/شهريًا في الرياض (800 ريال، سيارة) مقابل 80 يورو/شهريًا في باريس (نقل عام).\n\nالنقل هو البند الوحيد الذي تكون فيه تكلفة الرياض أعلى. ويُعزى معظم الفارق البالغ نحو 700 يورو بين السلتين الكاملتين إلى الإيجار وحده: 1,707 يورو/شهريًا إجمالاً للرياض مقابل 2,410 يورو/شهريًا لباريس."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل يشمل رقم التعادل هذا سكن الأسرة أو الفلل؟",
+            "a": "لا. كل رقم هنا يمثل سيناريو شخص بالغ واحد في شقة من غرفة نوم واحدة، وهو أبسط وأكثر خط الأساس شيوعًا. سكن الأسرة، والعيش في مجمع سكني، والرسوم المدرسية، كلها ترفع الجانب الخاص بالرياض في المعادلة، ولم يتم تحديد أي من ذلك كميًا في هذه المقارنة تحديدًا. راجع [قائمة التحقق قبل المغادرة](/prepare) قبل إتمام الانتقال."
+          },
+          {
+            "q": "هل تم احتساب الرعاية الصحية، أو مكافأة نهاية الخدمة، أو تكاليف التأشيرة؟",
+            "a": "لا. تُستبعد مكافأة نهاية الخدمة في السعودية (EOSB)، وتكاليف الرعاية الصحية، ورسوم الانتقال أو التأشيرة من سلتي باريس والرياض في هذه المقارنة. وهي تُضاف فوق الأرقام أعلاه ولم يتم احتسابها كميًا هنا."
+          },
+          {
+            "q": "كيف تتم مقارنة ذلك بترتيبات تكلفة المعيشة المستقلة؟",
+            "a": "يضع تصنيف مؤسسة Mercer لتكلفة المعيشة لعام 2024 باريس في المرتبة 29 عالميًا والرياض في المرتبة 90 (الترتيب الأقل يعني مدينة أكثر تكلفة)، وهو ما يتوافق من حيث الاتجاه مع انخفاض إجمالي سلة الرياض هنا. يُستشهد بتصنيف Mercer كتأكيد خارجي؛ وهو ليس مصدر أرقام التعادل نفسها."
+          },
+          {
+            "q": "كيف أعرف إن كنت فوق أو دون عتبة الـ4,000 يورو؟",
+            "a": "قارن صافي أجرك في باريس (الإجمالي مطروحًا منه نحو 35% ضريبة) بسلة تكلفة المعيشة البالغة 2,410 يورو/شهريًا المستخدمة هنا. إذا كان صافي أجرك أقل من هذه السلة، فأنت في عجز و7,000 ريال/شهريًا في الرياض تطابق وضعك بالفعل. وإذا كان صافي أجرك يغطيها، فأنت توفر أموالًا في باريس، ويحتاج رقم الرياض إلى تعويض تلك المدخرات فوق الحد الأدنى البالغ 7,000 ريال. تُدخل [حاسبة الانتقال](/relocate) راتبك الدقيق."
+          },
+          {
+            "q": "هل يختلف الراتب المناسب باختلاف المهنة؟",
+            "a": "تتعلق هذه المقارنة بتكلفة المعيشة فقط؛ ولا تأخذ في الاعتبار كيفية اختلاف سلالم الأجور حسب الدور الوظيفي أو كيفية إعادة تشكيل التحولات في الطلب المدفوعة بالذكاء الاصطناعي لمهن محددة. للحصول على تفاصيل على مستوى المهنة، راجع [لوحة مخاطر الوظائف بفعل الذكاء الاصطناعي](/career) أو صفحة دور وظيفي محددة مثل [صفحة رواتب المحاسبين](/job/accountants)."
+          }
+        ],
+        "key_takeaway": "دون نحو 4,000 يورو إجمالي شهريًا في باريس، لا يحقق معظم المهنيين أي وفورات صافية مقابل سلة تكلفة معيشتهم الخاصة، لذا فإن 7,000 ريال/شهريًا معفاة من الضريبة في الرياض تطابق بالفعل القوة الشرائية في باريس أو تتفوق عليها دون الحاجة لأي حساب تعادل. فوق شريحة الدخل هذه، يرتفع راتب التعادل بالريال بشكل خطي مع مدخرات باريس، بمعدل 4.10 ريال لكل يورو.",
+        "sources": [
+          {
+            "label": "حاسبة الانتقال لمرصد KSA Shift — مجموعة بيانات باريس-الرياض",
+            "url": "/relocate"
+          },
+          {
+            "label": "تصنيف Mercer لتكلفة المعيشة 2024 (باريس #29، الرياض #90)",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]
