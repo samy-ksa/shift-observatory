@@ -46,6 +46,18 @@ const FAQ_BY_LANG: Record<Lang, Array<{ q: string; a: string }>> = {
   ],
 };
 
+const SR_H1: Record<Lang, string> = {
+  en: "Saudi Arabia Pre-Departure Checklist by Country and Profession",
+  fr: "Check-list pré-départ Arabie Saoudite par pays et profession",
+  ar: "قائمة التحضير للسفر إلى المملكة العربية السعودية حسب البلد والمهنة",
+};
+
+const SR_INTRO: Record<Lang, string> = {
+  en: "Free pre-departure checklist for relocating to Saudi Arabia, covering 12 countries of origin and 8 professional sectors across 55+ steps: visa sponsorship, diploma apostille or embassy legalization, professional licensing (SCFHS for healthcare, SCE for engineering, SOCPA for accounting), the Iqama residence permit, banking, and housing. Personalized by selecting your country and profession — no signup required.",
+  fr: "Check-list gratuite de préparation au départ pour l'Arabie Saoudite, couvrant 12 pays d'origine et 8 secteurs professionnels sur plus de 55 étapes : sponsorship du visa, apostille des diplômes ou légalisation consulaire, licences professionnelles (SCFHS pour la santé, SCE pour l'ingénierie, SOCPA pour la comptabilité), permis de résidence Iqama, banque et logement. Personnalisée selon votre pays et votre profession — sans inscription.",
+  ar: "قائمة تحضير مجانية للسفر إلى المملكة العربية السعودية، تغطي 12 دولة منشأ و8 قطاعات مهنية عبر أكثر من 55 خطوة: كفالة التأشيرة، تصديق الشهادات بالأبوستيل أو التصديق القنصلي، التراخيص المهنية (هيئة التخصصات الصحية SCFHS للرعاية الصحية، الهيئة السعودية للمهندسين SCE للهندسة، الهيئة السعودية للمحاسبين SOCPA للمحاسبة)، الإقامة، البنوك والسكن. مخصصة حسب بلدك ومهنتك — بدون تسجيل.",
+};
+
 function buildFaqLd(lang: Lang) {
   return {
     "@context": "https://schema.org",
@@ -119,6 +131,10 @@ export default async function LangPreparePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      <section className="sr-only">
+        <h1>{SR_H1[lang]}</h1>
+        <p>{SR_INTRO[lang]}</p>
+      </section>
       <PrepareClient />
     </>
   );

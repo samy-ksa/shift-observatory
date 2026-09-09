@@ -22,6 +22,12 @@ const SR_H1: Record<Lang, string> = {
   ar: "مسارات مهنية مرنة للذكاء الاصطناعي في المملكة العربية السعودية — موصي الانتقال المهني",
 };
 
+const SR_INTRO: Record<Lang, string> = {
+  en: "Free career transition recommender for workers in Saudi Arabia. Select your current occupation from 237 scored jobs and get up to 5 personalized pivot recommendations toward lower AI-automation-risk occupations, each showing the risk score reduction, expected salary change in SAR, and the HRDF reskilling programs available for that transition. Built on the same composite score (Frey & Osborne automation probability, Eloundou LLM exposure, Nitaqat regulatory pressure, WEF demand signal) used across SHIFT Observatory. Free, instant, no signup.",
+  fr: "Recommandeur gratuit de transition de carrière pour les travailleurs en Arabie Saoudite. Sélectionnez votre métier actuel parmi 237 professions notées et obtenez jusqu'à 5 recommandations de transition personnalisées vers des métiers à moindre risque IA, avec pour chacune la réduction du score de risque, l'évolution salariale attendue en SAR, et les programmes de formation HRDF disponibles pour cette transition. Basé sur le même score composite (probabilité d'automatisation Frey-Osborne, exposition LLM d'Eloundou, pression réglementaire Nitaqat, signal de demande WEF) utilisé dans tout SHIFT Observatory. Gratuit, instantané, sans inscription.",
+  ar: "موصي مجاني لانتقال المهنة للعاملين في المملكة العربية السعودية. اختر مهنتك الحالية من بين 237 مهنة مقيّمة واحصل على حتى 5 توصيات انتقال شخصية نحو مهن أقل عرضة لمخاطر الذكاء الاصطناعي، مع تخفيض درجة المخاطر، التغيير المتوقع في الراتب بالريال السعودي، وبرامج التدريب HRDF المتاحة لهذا الانتقال لكل توصية. مبني على نفس الدرجة المركّبة (احتمالية الأتمتة Frey-Osborne، تعرض LLM من Eloundou، الضغط التنظيمي لنطاقات، إشارة الطلب من WEF) المستخدمة في جميع أنحاء مرصد شيفت. مجاني، فوري، بدون تسجيل.",
+};
+
 const BREADCRUMB_LABEL: Record<Lang, string> = {
   en: "Career Transition Recommender",
   fr: "Recommandeur de transition de carrière",
@@ -72,7 +78,10 @@ export default async function LangCareerPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-      <h1 className="sr-only">{SR_H1[lang]}</h1>
+      <section className="sr-only">
+        <h1>{SR_H1[lang]}</h1>
+        <p>{SR_INTRO[lang]}</p>
+      </section>
       <Suspense
         fallback={
           <div className="min-h-screen bg-bg-primary flex items-center justify-center">
