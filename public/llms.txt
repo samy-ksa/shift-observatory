@@ -5,14 +5,14 @@
 ## Primary Use Cases
 
 - Saudi workers checking AI risk on their occupation before retraining
-- Expats evaluating a Saudi Arabia relocation offer (salary delta + cost comparison vs 17 origin cities)
+- Expats evaluating a Saudi Arabia relocation offer (salary delta + cost comparison vs 26 origin cities)
 - HR teams benchmarking salaries by occupation, region, sector, and Nitaqat band
 - Researchers and journalists working on AI-workforce impact in the Gulf
 
 ## Core Tools
 
 - [AI Job Risk Dashboard](https://www.ksashiftobservatory.online/en): scoring 237 Saudi occupations on a 0-100 composite scale
-- [Cost of Living Calculator](https://www.ksashiftobservatory.online/en/relocate): 65 cost items compared between Riyadh / Jeddah / Dammam / Makkah / Madinah and 17 origin cities
+- [Cost of Living Calculator](https://www.ksashiftobservatory.online/en/relocate): 65 cost items compared between Riyadh / Jeddah / Dammam / Makkah / Madinah and 26 origin cities
 - [Career Transition Recommender](https://www.ksashiftobservatory.online/en/career): personalized pivot suggestions toward AI-safer occupations
 - [Personal AI Risk Profile](https://www.ksashiftobservatory.online/en/profile): occupation × region × sector × status scoring
 - [Pre-Departure Checklist](https://www.ksashiftobservatory.online/en/prepare): visa, certifications (SCFHS / SCE / SOCPA), banking, housing, by country and profession

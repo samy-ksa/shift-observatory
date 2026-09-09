@@ -728,7 +728,7 @@ export const fr: Dictionary = {
     exploreMore: "Explorer davantage",
     relatedOccupations: "Metiers similaires",
     relocationCalculator: "Calculateur de relocation",
-    relocationCalcDesc: "Comparez le cout de la vie dans 17 villes",
+    relocationCalcDesc: "Comparez le cout de la vie dans 26 villes",
     checklistDepart: "Checklist depart",
     checklistDesc: "Etapes personnalisees avant le depart",
     careerRecommender: "Recommandation carriere",
