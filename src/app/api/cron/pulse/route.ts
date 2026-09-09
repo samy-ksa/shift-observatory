@@ -1,4 +1,4 @@
-export const runtime = "edge";
+export const maxDuration = 60;
 
 const AIRTABLE_BASE = "appyqLmjVv9KLEnIR";
 const AIRTABLE_TABLE = "tbl8gxM7A3X4xhpZQ"; // Pulse Snapshots
