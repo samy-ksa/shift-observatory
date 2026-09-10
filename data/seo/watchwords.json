@@ -33,5 +33,35 @@
     "keyword": "19000 riyal is enough for dammam couples ?",
     "targetPath": "/en/relocate",
     "priority": "low"
+  },
+  {
+    "keyword": "investment banker salary in saudi arabia",
+    "targetPath": "/en/job/investment-banker",
+    "priority": "high"
+  },
+  {
+    "keyword": "hospital administration salary in saudi arabia",
+    "targetPath": "/en/job/hospital-administrator",
+    "priority": "medium"
+  },
+  {
+    "keyword": "aircraft mechanic salary in saudi arabia",
+    "targetPath": "/en/job/aircraft-mechanic-ame",
+    "priority": "medium"
+  },
+  {
+    "keyword": "ai ml engineer salary in saudi arabia",
+    "targetPath": "/en/job/machine-learning-engineer",
+    "priority": "medium"
+  },
+  {
+    "keyword": "pharmacist salary saudi arabia 2026",
+    "targetPath": "/en/job/pharmacists",
+    "priority": "low"
+  },
+  {
+    "keyword": "dentist salary saudi arabia",
+    "targetPath": "/en/job/dentists",
+    "priority": "low"
   }
 ]
