@@ -429,11 +429,15 @@ export default function JobPageClient({
           )}
 
           {/* Salary tab */}
-          {activeTab === "salary" && (
-            <div className="space-y-6">
+          <div className={activeTab === "salary" ? "space-y-6" : "space-y-6 hidden"}>
               <h3 className="text-lg font-semibold text-white">
-                {jp.salaryRange}
+                {lang === "ar"
+                  ? `راتب ${occ.name_ar} في المملكة العربية السعودية`
+                  : lang === "fr"
+                    ? `Salaire ${occ.name_fr || occ.name_en} en Arabie Saoudite`
+                    : `${occ.name_en} Salary in Saudi Arabia`}
               </h3>
+              <p className="text-sm text-text-muted -mt-4">{jp.salaryRange}</p>
 
               <div className="bg-[#0D1117] border border-gray-800 rounded-lg p-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-6">
@@ -475,8 +479,7 @@ export default function JobPageClient({
               <p className="text-xs text-text-muted">
                 {jp.salarySource}: {occ.salary_source}
               </p>
-            </div>
-          )}
+          </div>
 
           {/* Nitaqat tab */}
           {activeTab === "nitaqat" && (

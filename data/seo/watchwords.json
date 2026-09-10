@@ -1,0 +1,37 @@
+[
+  {
+    "keyword": "cloud engineer salary in saudi arabia",
+    "targetPath": "/en/job/cloud-engineer",
+    "priority": "high"
+  },
+  {
+    "keyword": "petroleum engineering salary in saudi arabia",
+    "targetPath": "/en/job/petroleum-engineer",
+    "priority": "high"
+  },
+  {
+    "keyword": "hotel management salary in saudi arabia",
+    "targetPath": "/en/job/hotel-manager",
+    "priority": "medium"
+  },
+  {
+    "keyword": "mlt salary in saudi arabia",
+    "targetPath": "/en/job/medical-laboratory-technician",
+    "priority": "medium"
+  },
+  {
+    "keyword": "saudi arabia cost of living riyadh rent 2026",
+    "targetPath": "/en/relocate",
+    "priority": "medium"
+  },
+  {
+    "keyword": "numbeo cost of living",
+    "targetPath": "/en/vs/numbeo",
+    "priority": "low"
+  },
+  {
+    "keyword": "19000 riyal is enough for dammam couples ?",
+    "targetPath": "/en/relocate",
+    "priority": "low"
+  }
+]

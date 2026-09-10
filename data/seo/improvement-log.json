@@ -1,0 +1,16 @@
+[
+  {
+    "keyword": "cloud engineer salary in saudi arabia",
+    "targetPath": "/en/job/cloud-engineer",
+    "status": "observing",
+    "nextReviewDate": "2026-09-17",
+    "actions": [
+      {
+        "date": "2026-09-10",
+        "rankAtAction": 6.35,
+        "needs": "Chercheurs veulent le salaire mensuel d'un Cloud Engineer en Arabie Saoudite (fourchette entry/median/senior), immédiatement visible. Les pages en tête (Glassdoor, ERI/SalaryExpert, Paylab) sont 100% dédiées au salaire, avec le chiffre visible dès le haut de page. Notre page cadre d'abord le sujet 'risque IA' et ne montre le detail salaire (fourchette + barre) que derrière un onglet client non rendu au premier chargement.",
+        "done": "1) Titre dédié 'Cloud Engineer Salary in Saudi Arabia' ajouté au-dessus de la fourchette (remplace le libellé générique 'Salary Range (SAR/month)', dupliqué sur les 711 pages métier). 2) La section salaire (fourchette entry/median/senior + barre visuelle) est désormais toujours présente dans le HTML statique (masquage CSS au lieu d'un unmount conditionnel React), donc visible dès le premier rendu et non plus seulement après clic sur l'onglet."
+      }
+    ]
+  }
+]
