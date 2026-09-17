@@ -2,14 +2,34 @@
   {
     "keyword": "cloud engineer salary in saudi arabia",
     "targetPath": "/en/job/cloud-engineer",
-    "status": "observing",
-    "nextReviewDate": "2026-09-17",
+    "status": "active",
     "actions": [
       {
         "date": "2026-09-10",
         "rankAtAction": 6.35,
         "needs": "Chercheurs veulent le salaire mensuel d'un Cloud Engineer en Arabie Saoudite (fourchette entry/median/senior), immédiatement visible. Les pages en tête (Glassdoor, ERI/SalaryExpert, Paylab) sont 100% dédiées au salaire, avec le chiffre visible dès le haut de page. Notre page cadre d'abord le sujet 'risque IA' et ne montre le detail salaire (fourchette + barre) que derrière un onglet client non rendu au premier chargement.",
-        "done": "1) Titre dédié 'Cloud Engineer Salary in Saudi Arabia' ajouté au-dessus de la fourchette (remplace le libellé générique 'Salary Range (SAR/month)', dupliqué sur les 711 pages métier). 2) La section salaire (fourchette entry/median/senior + barre visuelle) est désormais toujours présente dans le HTML statique (masquage CSS au lieu d'un unmount conditionnel React), donc visible dès le premier rendu et non plus seulement après clic sur l'onglet."
+        "done": "1) Titre dédié 'Cloud Engineer Salary in Saudi Arabia' ajouté au-dessus de la fourchette (remplace le libellé générique 'Salary Range (SAR/month)', dupliqué sur les 711 pages métier). 2) La section salaire (fourchette entry/median/senior + barre visuelle) est désormais toujours présente dans le HTML statique (masquage CSS au lieu d'un unmount conditionnel React), donc visible dès le premier rendu et non plus seulement après clic sur l'onglet.",
+        "review": {
+          "date": "2026-09-17",
+          "windowDays": 7,
+          "position": 7.96,
+          "impressions": 94,
+          "judgment": "Aucun effet mesurable — position a régressé (6.35 → 7.96 sur les 7 derniers jours, vs 7.05 en moyenne 28 jours) au lieu de s'améliorer. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher l'onglet salaire (déjà statique) ; explorer plutôt le title/description de la page (actuellement 'Cloud Engineer: AI Risk NN/100 · Salary Guide...' place le risque IA avant le salaire dans le tag <title>, contrairement aux pages concurrentes qui mènent par 'Salary'), ou l'intro au-dessus du gauge de risque."
+        }
+      }
+    ]
+  },
+  {
+    "keyword": "investment banker salary in saudi arabia",
+    "targetPath": "/en/job/investment-banker",
+    "status": "observing",
+    "nextReviewDate": "2026-09-24",
+    "actions": [
+      {
+        "date": "2026-09-17",
+        "rankAtAction": 4.75,
+        "needs": "Chercheurs veulent directement le montant du salaire d'un Investment Banker en Arabie Saoudite. Les pages en tête (Levels.fyi, GrabJobs, ERI, PayScale, Glassdoor) sont toutes des pages salaire dédiées, dont le titre affiche 'Investment Banker Salary in Saudi Arabia' quasi mot pour mot. Sur notre page, le <title> généré tombe dans le bucket 'AI Risk < 45' où les deux premiers gabarits ('...Salary Guide, Saudi Arabia' / '...Saudi Arabia: AI Risk N, Salary Guide') dépassent 60 caractères à cause de la longueur du nom 'Investment Banker' + la décimale du score composite (40.2), donc le générateur de titre retombe sur le gabarit dégradé '...Salary Guide KSA', qui remplace 'Saudi Arabia' par l'abréviation 'KSA' — un décalage direct avec la requête réelle.",
+        "done": "Ajout d'un gabarit de titre intermédiaire '{name} Salary in Saudi Arabia: AI Risk {composite}/100' dans src/app/[lang]/job/[slug]/page.tsx (bucket composite < 45, EN), inséré avant le fallback 'KSA'. Pour Investment Banker, le <title> passe de 'Investment Banker: AI Risk 40.2/100 · Salary Guide KSA' (54 car.) à 'Investment Banker Salary in Saudi Arabia: AI Risk 40.2/100' (58 car.), qui reprend la formulation exacte de la requête ('salary ... in Saudi Arabia') tout en gardant 'Saudi Arabia' au lieu de 'KSA'. Changement additif et vérifié sans régression : les pages dont le titre tenait déjà dans les deux premiers gabarits (ex. Dentists, Pharmacists) restent inchangées ; 36 pages qui retombaient auparavant sur le fallback 'KSA' bénéficient désormais du nouveau gabarit complet, 17 pages au nom encore plus long retombent toujours sur 'KSA' (aucune régression)."
       }
     ]
   }

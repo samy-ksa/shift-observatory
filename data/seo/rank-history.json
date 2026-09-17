@@ -178,5 +178,122 @@
     "impressions": 6,
     "clicks": 0,
     "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "cloud engineer salary in saudi arabia",
+    "targetPath": "/en/job/cloud-engineer",
+    "position": 7.05,
+    "impressions": 182,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "petroleum engineering salary in saudi arabia",
+    "targetPath": "/en/job/petroleum-engineer",
+    "position": 7.5,
+    "impressions": 108,
+    "clicks": 1,
+    "ctr": 0.0093
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "hotel management salary in saudi arabia",
+    "targetPath": "/en/job/hotel-manager",
+    "position": 7.9,
+    "impressions": 31,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "mlt salary in saudi arabia",
+    "targetPath": "/en/job/medical-laboratory-technician",
+    "position": 7.56,
+    "impressions": 25,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "saudi arabia cost of living riyadh rent 2026",
+    "targetPath": "/en/relocate",
+    "position": 7.66,
+    "impressions": 35,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "numbeo cost of living",
+    "targetPath": "/en/vs/numbeo",
+    "position": 7.27,
+    "impressions": 11,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "19000 riyal is enough for dammam couples ?",
+    "targetPath": "/en/relocate",
+    "position": 9.33,
+    "impressions": 3,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "investment banker salary in saudi arabia",
+    "targetPath": "/en/job/investment-banker",
+    "position": 4.75,
+    "impressions": 4,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "hospital administration salary in saudi arabia",
+    "targetPath": "/en/job/hospital-administrator",
+    "position": 6,
+    "impressions": 1,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "aircraft mechanic salary in saudi arabia",
+    "targetPath": "/en/job/aircraft-mechanic-ame",
+    "position": 10,
+    "impressions": 1,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "ai ml engineer salary in saudi arabia",
+    "targetPath": "/en/job/machine-learning-engineer",
+    "position": 8.33,
+    "impressions": 3,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "pharmacist salary saudi arabia 2026",
+    "targetPath": "/en/job/pharmacists",
+    "position": 10.5,
+    "impressions": 2,
+    "clicks": 0,
+    "ctr": 0
+  },
+  {
+    "date": "2026-09-17",
+    "keyword": "dentist salary saudi arabia",
+    "targetPath": "/en/job/dentists",
+    "position": 11,
+    "impressions": 3,
+    "clicks": 0,
+    "ctr": 0
   }
 ]

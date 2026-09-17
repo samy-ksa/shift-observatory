@@ -135,6 +135,7 @@ export async function generateMetadata({
       title = firstFit(
         `${name}: AI Risk ${composite}/100 · Salary Guide, Saudi Arabia`,
         `${name} Saudi Arabia: AI Risk ${composite}/100, Salary Guide`,
+        `${name} Salary in Saudi Arabia: AI Risk ${composite}/100`,
         `${name}: AI Risk ${composite}/100 · Salary Guide KSA`,
         `${name} — Saudi Arabia`,
         `${name} — KSA`,
