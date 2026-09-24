@@ -22,14 +22,34 @@
   {
     "keyword": "investment banker salary in saudi arabia",
     "targetPath": "/en/job/investment-banker",
-    "status": "observing",
-    "nextReviewDate": "2026-09-24",
+    "status": "active",
     "actions": [
       {
         "date": "2026-09-17",
         "rankAtAction": 4.75,
         "needs": "Chercheurs veulent directement le montant du salaire d'un Investment Banker en Arabie Saoudite. Les pages en tête (Levels.fyi, GrabJobs, ERI, PayScale, Glassdoor) sont toutes des pages salaire dédiées, dont le titre affiche 'Investment Banker Salary in Saudi Arabia' quasi mot pour mot. Sur notre page, le <title> généré tombe dans le bucket 'AI Risk < 45' où les deux premiers gabarits ('...Salary Guide, Saudi Arabia' / '...Saudi Arabia: AI Risk N, Salary Guide') dépassent 60 caractères à cause de la longueur du nom 'Investment Banker' + la décimale du score composite (40.2), donc le générateur de titre retombe sur le gabarit dégradé '...Salary Guide KSA', qui remplace 'Saudi Arabia' par l'abréviation 'KSA' — un décalage direct avec la requête réelle.",
-        "done": "Ajout d'un gabarit de titre intermédiaire '{name} Salary in Saudi Arabia: AI Risk {composite}/100' dans src/app/[lang]/job/[slug]/page.tsx (bucket composite < 45, EN), inséré avant le fallback 'KSA'. Pour Investment Banker, le <title> passe de 'Investment Banker: AI Risk 40.2/100 · Salary Guide KSA' (54 car.) à 'Investment Banker Salary in Saudi Arabia: AI Risk 40.2/100' (58 car.), qui reprend la formulation exacte de la requête ('salary ... in Saudi Arabia') tout en gardant 'Saudi Arabia' au lieu de 'KSA'. Changement additif et vérifié sans régression : les pages dont le titre tenait déjà dans les deux premiers gabarits (ex. Dentists, Pharmacists) restent inchangées ; 36 pages qui retombaient auparavant sur le fallback 'KSA' bénéficient désormais du nouveau gabarit complet, 17 pages au nom encore plus long retombent toujours sur 'KSA' (aucune régression)."
+        "done": "Ajout d'un gabarit de titre intermédiaire '{name} Salary in Saudi Arabia: AI Risk {composite}/100' dans src/app/[lang]/job/[slug]/page.tsx (bucket composite < 45, EN), inséré avant le fallback 'KSA'. Pour Investment Banker, le <title> passe de 'Investment Banker: AI Risk 40.2/100 · Salary Guide KSA' (54 car.) à 'Investment Banker Salary in Saudi Arabia: AI Risk 40.2/100' (58 car.), qui reprend la formulation exacte de la requête ('salary ... in Saudi Arabia') tout en gardant 'Saudi Arabia' au lieu de 'KSA'. Changement additif et vérifié sans régression : les pages dont le titre tenait déjà dans les deux premiers gabarits (ex. Dentists, Pharmacists) restent inchangées ; 36 pages qui retombaient auparavant sur le fallback 'KSA' bénéficient désormais du nouveau gabarit complet, 17 pages au nom encore plus long retombent toujours sur 'KSA' (aucune régression).",
+        "review": {
+          "date": "2026-09-24",
+          "windowDays": 7,
+          "position": null,
+          "impressions": 0,
+          "judgment": "Aucun effet mesurable — la requête exacte n'a généré ni impression ni position sur les 7 derniers jours (fenêtre 2026-09-14 → 2026-09-21), contre position 4.75 / 4 impressions le 2026-09-17. Volume déjà très faible avant l'action (7 puis 4 impressions/semaine), donc compatible avec une simple variance de requête à faible volume plutôt qu'une régression confirmée. Vérifié via WebSearch : la page ksashiftobservatory.online n'apparaît pas dans les 10 premiers résultats pour 'investment banker salary in saudi arabia' (résultats dominés par Levels.fyi, WallStreetMojo, Glassdoor, GrabJobs, ERI, PayScale), cohérent avec l'absence d'impressions GSC — pas un problème d'indexation. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher le <title> (déjà aligné sur la requête) ; le gap probable est dans le contenu de la page elle-même (intro/description) plutôt que dans le titre, à vérifier à la prochaine analyse de besoin de recherche."
+        }
+      }
+    ]
+  },
+  {
+    "keyword": "petroleum engineering salary in saudi arabia",
+    "targetPath": "/en/job/petroleum-engineer",
+    "status": "observing",
+    "nextReviewDate": "2026-10-01",
+    "actions": [
+      {
+        "date": "2026-09-24",
+        "rankAtAction": 7.37,
+        "needs": "Chercheurs veulent le salaire d'un Petroleum Engineer en Arabie Saoudite. Les pages en tête (Glassdoor, GrabJobs, ERI/SalaryExpert, WorldSalaries, PayScale) sont des pages salaire dédiées ; une page Glassdoor spécifique 'Saudi Aramco Petroleum Engineer Salaries' apparaît aussi dans le top 10, signe que les chercheurs veulent aussi savoir QUI recrute (Aramco domine le secteur pétrolier saoudien). Notre <title> ('Petroleum Engineer Salary in Saudi Arabia: AI Risk 24/100') correspond déjà bien à la requête. En creusant le contenu de la page, l'onglet 'Find this Job' (qui contient un bloc 'Who's Hiring' avec les employeurs réels du secteur, ex. Saudi Aramco) n'était jamais rendu dans le HTML statique (unmount React conditionnel au clic, même défaut déjà corrigé pour l'onglet salaire lors du cycle précédent). Pire : même une fois rendu, cet onglet affichait les mauvais employeurs pour ce métier, car le sector_id réel 'mining_oil_gas' (master.json) n'existait pas dans SECTOR_CATEGORY_MAP (qui ne connaissait que 'mining_quarrying'), donc la page retombait sur la catégorie par défaut 'admin' (employeurs génériques Conglomerate/Services/HR) au lieu du secteur pétrolier.",
+        "done": "1) src/app/job/[slug]/client.tsx : l'onglet 'Find this Job' (FindJobTab, qui contient le bloc réel 'Who's Hiring') est désormais toujours monté dans le HTML statique et seulement masqué en CSS (\"hidden\") quand l'onglet n'est pas actif, au lieu d'un rendu conditionnel React — même correctif que celui déjà appliqué à l'onglet salaire. 2) src/data/job-requirements.ts : ajout de la clé manquante 'mining_oil_gas': 'engineering' dans SECTOR_CATEGORY_MAP, pour que Petroleum Engineer (et Petroleum Geologist, même secteur) affichent les vrais employeurs Oil & Gas (Saudi Aramco, 73 311 employés) au lieu de la catégorie 'admin' par défaut. Vérifié après build : 'Saudi Aramco' apparaît désormais dans le HTML statique de /en/job/petroleum-engineer. tsc --noEmit et npm run build passent sans erreur (705+ pages générées)."
       }
     ]
   }

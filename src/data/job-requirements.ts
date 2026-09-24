@@ -240,6 +240,7 @@ export const SECTOR_CATEGORY_MAP: Record<string, OccupationCategory> = {
   logistics: "logistics",
   professional_scientific: "engineering",
   mining_quarrying: "engineering",
+  mining_oil_gas: "engineering",
   real_estate: "finance",
   arts_entertainment: "hospitality",
   public_admin: "admin",

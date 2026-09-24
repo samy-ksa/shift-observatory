@@ -601,7 +601,9 @@ export default function JobPageClient({
           )}
 
           {/* Find this Job tab */}
-          {activeTab === "findJob" && <FindJobTab occ={occ} />}
+          <div className={activeTab === "findJob" ? "" : "hidden"}>
+            <FindJobTab occ={occ} />
+          </div>
         </div>
 
         {/* ── Share section ── */}
