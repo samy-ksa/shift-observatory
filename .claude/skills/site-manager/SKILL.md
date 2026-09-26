@@ -27,7 +27,7 @@ Objectif unique : **clics / visites**, toutes sources confondues.
 |---|---|---|
 | Clics Google 28 j (total, FR/EN/AR) | `data/seo/index-coverage.jsonl` (champ `clicks28`) | 48 (FR 13) |
 | Pages indexées (échantillon URL Inspection) | `data/seo/index-coverage.jsonl` | 55 % ; articles 0 % ; EN métier 3/8 |
-| Citations dans les réponses IA | `data/seo/llm-visibility.jsonl` (écrit par le relais Mac) | à établir |
+| Citations dans les réponses IA (Perplexity, 10 questions types) | `data/seo/llm-visibility.jsonl` | 3/10 |
 | Positions des mots-clés suivis | `data/seo/rank-history.json` | voir fichier |
 
 Jalons : 10/10 articles indexés ≥ 50 % · 24/10 pages métier EN ≥ 60 % · 28/11 ≥ 100 clics / 28 j.
@@ -36,8 +36,8 @@ Jalons : 10/10 articles indexés ≥ 50 % · 24/10 pages métier EN ≥ 60 % · 
 
 - **Lundi** : cycle d'action (mesure rapide + 1 à 3 actions).
 - **Jeudi** : cycle d'action + **point hebdomadaire** (`data/seo/reports/AAAA-MM-JJ.md`).
-- Autour de toi, sans que tu aies à les lancer : article du moteur Hermès (mercredi,
-  publication auto), Pulse (dimanche, cron Vercel), relais Mac du jeudi 10:30
+- Autour de toi, sans que tu aies à les lancer : article du moteur Hermès (mercredi ;
+  publication automatique pas encore activée, l'article attend l'accord de Samy), Pulse (dimanche, cron Vercel), relais Mac du jeudi 10:30
   (sitemap re-soumis, IndexNow, mesure d'indexation et de visibilité IA, envoi
   Telegram de ton rapport). Lis leurs traces dans `git log` et `data/seo/`.
 
