@@ -918,5 +918,217 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-pharmacists-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-07-15",
+    "published_at": "2026-07-15T09:05:51",
+    "keyword": "will AI replace pharmacists in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Pharmacists in Saudi Arabia?. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Pharmacists%20in%20Saudi%20Arabia%3F&subtitle=Pharmacists%20in%20Saudi%20Arabia%20score%2020.9/100%20for%20AI%20risk%20%28rank%2029%20of%20237%2C%20augmenta",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=L%27IA%20remplacera-t-elle%20les%20pharmaciens%20saoudiens%20%3F&subtitle=Les%20pharmaciens%20en%20Arabie%20saoudite%20obtiennent%2020%2C9/100%20de%20risque%20IA%20%28rang%2029%20sur",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D8%AF%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F&subtitle=%D9%8A%D8%B3%D8%AC%D9%84%20%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D8%AF%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%2020.9%20%D9%85%D9%86%20100%20%D9%84%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%28%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A9%2029%20%D9%85%D9%86%20237"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Pharmacists in Saudi Arabia?",
+        "description": "Pharmacists score 20.9/100 for AI risk in Saudi Arabia — rank 29 of 237. See the salary in SAR, Nitaqat status and reskilling tracks behind the number.",
+        "lede": "Pharmacists in Saudi Arabia score 20.9 out of 100 on the KSA Shift Observatory's composite AI automation risk index — rank 29 of 237 occupations, and formally classed as augmentation rather than substitution. In plain terms: AI is far more likely to reshape the pharmacist's day than to remove the job. The score is built from three published measures (Eloundou task exposure 0.2, Frey-Osborne automation probability 12%, Felten AI-occupational exposure rated 'low'), which agree that most of the role resists full automation. Around 35,000 pharmacists work across the Kingdom in the Human Health and Social Work sector, where KSA relevance is rated very high. Pay is tax-free: SAR 8,000/month at entry, SAR 13,000 median, SAR 19,000 for senior roles (Astr 2026). This article breaks down what that risk score means, what pharmacists earn, where Nitaqat fits, and which reskilling tracks are funded.",
+        "h2_sections": [
+          {
+            "q": "What is the AI risk score for pharmacists in Saudi Arabia?",
+            "body": "The composite score is 20.9/100, ranking pharmacists 29th of 237 occupations tracked by the KSA Shift Observatory — a low-risk band, tagged as augmentation. That classification is not a guess: it aggregates Eloundou task exposure (0.2), the Frey-Osborne automation probability (12%), and Felten's AI-occupational exposure ('low'). A low score means the measurable, routine parts of the job — dispensing checks, stock, some verification — are exposed to automation, while clinical judgement, patient counselling and regulated sign-off are not. You can see how pharmacists rank against other roles on the [AI Job Risk Dashboard](/career) or open the dedicated [pharmacists occupation page](/job/pharmacists)."
+          },
+          {
+            "q": "How much do pharmacists earn in Saudi Arabia?",
+            "body": "Salaries are tax-free and, per Astr 2026 data, run SAR 8,000/month at entry, SAR 13,000 at the median, and SAR 19,000 for senior pharmacists. The Observatory pairs pay with AI risk deliberately: a role that is both well-paid and low-exposure is more durable than a high-paid, high-exposure one. To see what these figures mean in real terms after housing and living costs, the [Cost of Living & Relocation Calculator](/relocate) converts a salary into disposable income by city."
+          },
+          {
+            "q": "Does Nitaqat affect pharmacist jobs?",
+            "body": "Pharmacists sit under a sector_quota Nitaqat status, with KSA relevance rated very high. That means Saudization targets apply to the sector rather than an occupation-specific hard cap. The Observatory records the specific Nitaqat risk level for pharmacists as n/d — not available in the current dataset — so we flag it rather than estimate it. What is clear: quota-based demand for Saudi nationals in health roles is a structural tailwind that AI exposure alone does not capture."
+          },
+          {
+            "q": "How does this compare to automation risk in France and Europe?",
+            "body": "The OECD (2023) estimates roughly 27% of jobs across member states are at high risk of automation, with clerical and administrative tasks in the highest-exposure band. Pharmacists in Saudi Arabia, at 20.9/100 in the augmentation band, sit well below that high-risk threshold. The pattern is consistent across regions: automation pressure concentrates in routine desk work, not in licensed clinical roles that require direct patient contact and regulatory accountability. You can generate a role-specific read with the [Personal AI Risk Profile](/profile)."
+          },
+          {
+            "q": "What reskilling support exists for pharmacists in Saudi Arabia?",
+            "body": "Two HRDF tracks are documented for this occupation. Tamheer (On-the-job Training) offers a 3–6 month placement with a SAR 3,000/month stipend for graduates. Employment Support via Taqat (Wage Subsidy) covers 30–50% of salary, up to SAR 3,000/month, for 24 months. Both lower the cost of moving into or staying in the role rather than retraining out of it — consistent with an augmentation-classed occupation. If you are relocating, the [Pre-Departure Checklist](/prepare) covers visa and certification steps."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does the 20.9 score mean 20.9% of pharmacist jobs will be lost?",
+            "a": "No. The score is AI-weighted exposure, not a job-loss forecast. The Observatory's own methodology note states actual displacement will be lower than exposure implies, because augmentation outweighs substitution for many roles. Nationally, 4,450,778 jobs are weighted as AI-exposed out of a 12,420,050 GOSI workforce — an exposure measure, not predicted losses."
+          },
+          {
+            "q": "How many pharmacists work in Saudi Arabia?",
+            "a": "Estimated national employment is around 35,000, in the Human Health and Social Work sector, with a 2024 demand rank of 36. KSA relevance for the role is rated very high."
+          },
+          {
+            "q": "Which parts of the pharmacist role are most exposed to AI?",
+            "a": "The dataset gives a single composite score rather than a task-by-task split, so a precise breakdown is n/d. The inputs — a low Felten rating and a 12% Frey-Osborne probability — point to routine, rule-based tasks being most exposed, while regulated clinical decisions remain human-led. The augmentation classification reflects that mix."
+          },
+          {
+            "q": "Is the future demand trend for pharmacists rising or falling?",
+            "a": "The WEF Future of Jobs trend for this occupation is recorded as n/d in the dataset, so we do not assign a direction. The available signals are the 2024 demand rank (36), the very-high KSA relevance, and sector-level Nitaqat quotas."
+          }
+        ],
+        "key_takeaway": "Pharmacists in Saudi Arabia score 20.9/100 for AI risk (rank 29 of 237, augmentation) — a low-exposure, quota-supported, tax-free role where AI is set to reshape tasks, not replace the profession.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (237 occupations scored)",
+            "url": "/career"
+          },
+          {
+            "label": "Salary data — Astr 2026 (SAR, tax-free)",
+            "url": "/job/pharmacists"
+          },
+          {
+            "label": "OECD (2023) — automation risk in member states",
+            "url": ""
+          },
+          {
+            "label": "Methodology inputs — Eloundou, Frey-Osborne, Felten",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "L'IA remplacera-t-elle les pharmaciens saoudiens ?",
+        "description": "Les pharmaciens obtiennent 20,9/100 de risque IA en Arabie saoudite — rang 29 sur 237. Salaire en SAR, statut Nitaqat et reconversions financées.",
+        "lede": "En Arabie saoudite, les pharmaciens obtiennent un score de 20,9 sur 100 à l'indice composite de risque d'automatisation par l'IA du KSA Shift Observatory — rang 29 sur 237 métiers, et officiellement classés en augmentation plutôt qu'en substitution. En clair : l'IA a bien plus de chances de transformer le quotidien du pharmacien que de supprimer le poste. Le score repose sur trois mesures publiées (exposition des tâches Eloundou 0,2, probabilité d'automatisation Frey-Osborne 12 %, exposition professionnelle à l'IA Felten jugée « faible »), qui s'accordent sur le fait que l'essentiel du rôle résiste à une automatisation totale. Environ 35 000 pharmaciens travaillent dans le Royaume, dans le secteur de la santé humaine et de l'action sociale, où la pertinence pour le marché saoudien est jugée très élevée. La rémunération est exonérée d'impôt : 8 000 SAR/mois à l'entrée, 13 000 SAR en médiane, 19 000 SAR pour les postes seniors (Astr 2026). Cet article détaille ce que signifie ce score de risque, ce que gagnent les pharmaciens, la place du Nitaqat et les parcours de reconversion financés.",
+        "h2_sections": [
+          {
+            "q": "Quel est le score de risque IA des pharmaciens en Arabie saoudite ?",
+            "body": "Le score composite est de 20,9/100, ce qui place les pharmaciens au 29ᵉ rang sur 237 métiers suivis par le KSA Shift Observatory — une bande de faible risque, étiquetée augmentation. Cette classification n'est pas une supposition : elle agrège l'exposition des tâches Eloundou (0,2), la probabilité d'automatisation Frey-Osborne (12 %) et l'exposition professionnelle à l'IA de Felten (« faible »). Un score bas signifie que les parties mesurables et routinières du métier — contrôles de dispensation, gestion des stocks, certaines vérifications — sont exposées à l'automatisation, tandis que le jugement clinique, le conseil au patient et la validation réglementée ne le sont pas. Vous pouvez voir comment les pharmaciens se situent par rapport aux autres métiers sur le [tableau de bord du risque IA par métier](/career) ou ouvrir la [page métier dédiée aux pharmaciens](/job/pharmacists)."
+          },
+          {
+            "q": "Combien gagnent les pharmaciens en Arabie saoudite ?",
+            "body": "Les salaires sont exonérés d'impôt et, selon les données Astr 2026, s'échelonnent de 8 000 SAR/mois à l'entrée à 13 000 SAR en médiane et 19 000 SAR pour les pharmaciens seniors. L'Observatoire associe délibérément la rémunération au risque IA : un métier à la fois bien payé et peu exposé est plus durable qu'un métier bien payé mais fortement exposé. Pour voir ce que ces chiffres représentent concrètement après le logement et le coût de la vie, le [calculateur coût de la vie & relocalisation](/relocate) convertit un salaire en revenu disponible par ville."
+          },
+          {
+            "q": "Le Nitaqat affecte-t-il les emplois de pharmacien ?",
+            "body": "Les pharmaciens relèvent d'un statut Nitaqat de type sector_quota, avec une pertinence pour le marché saoudien jugée très élevée. Cela signifie que les objectifs de saoudisation s'appliquent au secteur plutôt qu'à un plafond strict propre au métier. L'Observatoire indique le niveau de risque Nitaqat spécifique aux pharmaciens comme n/d — non disponible dans le jeu de données actuel — nous le signalons donc plutôt que de l'estimer. Ce qui est clair : la demande fondée sur des quotas de ressortissants saoudiens dans les métiers de la santé constitue un vent porteur structurel que la seule exposition à l'IA ne capte pas."
+          },
+          {
+            "q": "Comment cela se compare-t-il au risque d'automatisation en France et en Europe ?",
+            "body": "L'OCDE (2023) estime qu'environ 27 % des emplois dans les États membres présentent un risque élevé d'automatisation, les tâches administratives et de bureau figurant dans la bande la plus exposée. Les pharmaciens en Arabie saoudite, à 20,9/100 dans la bande augmentation, se situent bien en dessous de ce seuil de risque élevé. La tendance est cohérente d'une région à l'autre : la pression de l'automatisation se concentre sur le travail de bureau routinier, et non sur les métiers cliniques réglementés qui exigent un contact direct avec le patient et une responsabilité réglementaire. Vous pouvez générer une lecture propre à votre métier avec le [profil de risque IA personnel](/profile)."
+          },
+          {
+            "q": "Quel accompagnement à la reconversion existe pour les pharmaciens en Arabie saoudite ?",
+            "body": "Deux parcours HRDF sont documentés pour ce métier. Tamheer (formation en situation de travail) propose un stage de 3 à 6 mois avec une allocation de 3 000 SAR/mois pour les diplômés. Le soutien à l'emploi via Taqat (subvention salariale) couvre 30 à 50 % du salaire, jusqu'à 3 000 SAR/mois, pendant 24 mois. Tous deux réduisent le coût pour accéder au métier ou s'y maintenir, plutôt que d'en sortir par une reconversion — ce qui est cohérent avec un métier classé en augmentation. Si vous vous expatriez, la [check-list avant départ](/prepare) couvre les étapes de visa et de certification."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Le score de 20,9 signifie-t-il que 20,9 % des emplois de pharmacien seront perdus ?",
+            "a": "Non. Le score est une exposition pondérée par l'IA, pas une prévision de pertes d'emploi. La note méthodologique de l'Observatoire précise que le déplacement réel sera inférieur à ce que suggère l'exposition, car l'augmentation l'emporte sur la substitution pour de nombreux métiers. À l'échelle nationale, 4 450 778 emplois sont pondérés comme exposés à l'IA sur une main-d'œuvre GOSI de 12 420 050 — une mesure d'exposition, pas des pertes prévues."
+          },
+          {
+            "q": "Combien de pharmaciens travaillent en Arabie saoudite ?",
+            "a": "L'emploi national estimé est d'environ 35 000, dans le secteur de la santé humaine et de l'action sociale, avec un rang de demande 2024 de 36. La pertinence du métier pour le marché saoudien est jugée très élevée."
+          },
+          {
+            "q": "Quelles parties du métier de pharmacien sont les plus exposées à l'IA ?",
+            "a": "Le jeu de données fournit un score composite unique plutôt qu'une ventilation tâche par tâche, si bien qu'une répartition précise est n/d. Les données d'entrée — une note Felten faible et une probabilité Frey-Osborne de 12 % — indiquent que les tâches routinières et fondées sur des règles sont les plus exposées, tandis que les décisions cliniques réglementées restent pilotées par l'humain. La classification en augmentation reflète ce dosage."
+          },
+          {
+            "q": "La tendance de la demande future pour les pharmaciens est-elle à la hausse ou à la baisse ?",
+            "a": "La tendance WEF Future of Jobs pour ce métier est enregistrée comme n/d dans le jeu de données, nous n'assignons donc pas de direction. Les signaux disponibles sont le rang de demande 2024 (36), la très haute pertinence pour le marché saoudien et les quotas Nitaqat au niveau sectoriel."
+          }
+        ],
+        "key_takeaway": "Les pharmaciens en Arabie saoudite obtiennent 20,9/100 de risque IA (rang 29 sur 237, augmentation) — un métier peu exposé, soutenu par les quotas et exonéré d'impôt, où l'IA va remodeler les tâches, pas remplacer la profession.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (237 métiers scorés)",
+            "url": "/career"
+          },
+          {
+            "label": "Données salariales — Astr 2026 (SAR, exonéré d'impôt)",
+            "url": "/job/pharmacists"
+          },
+          {
+            "label": "OCDE (2023) — risque d'automatisation dans les États membres",
+            "url": ""
+          },
+          {
+            "label": "Données d'entrée méthodologiques — Eloundou, Frey-Osborne, Felten",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل يحل الذكاء الاصطناعي محل الصيادلة في السعودية؟",
+        "description": "يسجل الصيادلة 20.9 من 100 لمخاطر الذكاء الاصطناعي في السعودية — المرتبة 29 من 237. الراتب بالريال وحالة نطاقات ومسارات إعادة التأهيل خلف الرقم.",
+        "lede": "يسجل الصيادلة في السعودية 20.9 من 100 على المؤشر المركب لمخاطر الأتمتة بالذكاء الاصطناعي الصادر عن مرصد شفت السعودية — المرتبة 29 من 237 مهنة، ويُصنَّفون رسميًا ضمن خانة التعزيز لا الاستبدال. بعبارة واضحة: الذكاء الاصطناعي أميل إلى إعادة تشكيل يوم الصيدلي منه إلى إلغاء الوظيفة. بُني المؤشر من ثلاثة مقاييس منشورة (تعرُّض المهام لدى إيلوندو 0.2، واحتمال الأتمتة لدى فراي-أوزبورن 12%، وتعرُّض المهن للذكاء الاصطناعي لدى فيلتن المصنَّف 'منخفضًا')، وتتفق جميعها على أن معظم الدور يقاوم الأتمتة الكاملة. يعمل نحو 35,000 صيدلي في أنحاء المملكة ضمن قطاع الصحة البشرية والعمل الاجتماعي، حيث تُقيَّم الأهمية للسعودية بأنها مرتفعة جدًا. الأجر معفى من الضرائب: 8,000 ريال شهريًا عند البداية، و13,000 ريال وسيطًا، و19,000 ريال للأدوار الأقدم (Astr 2026). يفصّل هذا المقال ما يعنيه هذا الرقم من المخاطر، وكم يكسب الصيادلة، وأين تقع نطاقات، وأي مسارات إعادة التأهيل ممولة.",
+        "h2_sections": [
+          {
+            "q": "ما هي درجة مخاطر الذكاء الاصطناعي للصيادلة في السعودية؟",
+            "body": "الدرجة المركبة هي 20.9 من 100، وتضع الصيادلة في المرتبة 29 من 237 مهنة يرصدها مرصد شفت السعودية — وهي نطاق منخفض المخاطر مُصنَّف ضمن خانة التعزيز. هذا التصنيف ليس تخمينًا: فهو يجمع تعرُّض المهام لدى إيلوندو (0.2)، واحتمال الأتمتة لدى فراي-أوزبورن (12%)، وتعرُّض المهن للذكاء الاصطناعي لدى فيلتن ('منخفض'). تعني الدرجة المنخفضة أن الأجزاء القابلة للقياس والروتينية من العمل — فحوصات الصرف والمخزون وبعض التحقق — معرَّضة للأتمتة، بينما لا يُعرَّض لها الحكم السريري وإرشاد المرضى والاعتماد المنظَّم. يمكنك الاطلاع على ترتيب الصيادلة مقابل الأدوار الأخرى على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career) أو فتح [صفحة مهنة الصيادلة المخصصة](/job/pharmacists)."
+          },
+          {
+            "q": "كم يكسب الصيادلة في السعودية؟",
+            "body": "الرواتب معفاة من الضرائب، ووفقًا لبيانات Astr 2026، تبلغ 8,000 ريال شهريًا عند البداية، و13,000 ريال عند الوسيط، و19,000 ريال للصيادلة الأقدم. يقرن المرصد الأجر بمخاطر الذكاء الاصطناعي عمدًا: فالدور الذي يجمع بين الأجر الجيد والتعرُّض المنخفض أكثر ديمومة من دور مرتفع الأجر ومرتفع التعرُّض. لمعرفة ما تعنيه هذه الأرقام واقعيًا بعد تكاليف السكن والمعيشة، تحوّل [حاسبة تكلفة المعيشة والانتقال](/relocate) الراتب إلى دخل متاح حسب المدينة."
+          },
+          {
+            "q": "هل تؤثر نطاقات على وظائف الصيادلة؟",
+            "body": "يقع الصيادلة ضمن حالة نطاقات من نوع حصة القطاع، مع تقييم الأهمية للسعودية بأنها مرتفعة جدًا. وهذا يعني أن أهداف السعودة تنطبق على القطاع لا على سقف صارم خاص بمهنة بعينها. يسجل المرصد مستوى مخاطر نطاقات المحدد للصيادلة بأنه غير متاح — غير موجود في مجموعة البيانات الحالية — لذا نشير إليه بدل تقديره. الواضح أن الطلب القائم على الحصص على المواطنين السعوديين في الأدوار الصحية يشكّل رياحًا هيكلية داعمة لا يلتقطها تعرُّض الذكاء الاصطناعي وحده."
+          },
+          {
+            "q": "كيف يقارن هذا بمخاطر الأتمتة في فرنسا وأوروبا؟",
+            "body": "تقدّر منظمة التعاون الاقتصادي والتنمية (2023) أن نحو 27% من الوظائف عبر الدول الأعضاء معرَّضة لمخاطر أتمتة عالية، مع وقوع المهام الكتابية والإدارية في أعلى نطاق تعرُّض. أما الصيادلة في السعودية، عند 20.9 من 100 ضمن خانة التعزيز، فيقعون دون ذلك الحد العالي بكثير. والنمط متسق عبر المناطق: يتركز ضغط الأتمتة في الأعمال المكتبية الروتينية، لا في الأدوار السريرية المرخَّصة التي تتطلب تواصلًا مباشرًا مع المرضى ومساءلة تنظيمية. يمكنك توليد قراءة خاصة بالدور عبر [الملف الشخصي لمخاطر الذكاء الاصطناعي](/profile)."
+          },
+          {
+            "q": "ما دعم إعادة التأهيل المتاح للصيادلة في السعودية؟",
+            "body": "هناك مساران موثقان من صندوق تنمية الموارد البشرية لهذه المهنة. يقدّم تمهير (التدريب على رأس العمل) تنسيبًا لمدة 3–6 أشهر بمكافأة 3,000 ريال شهريًا للخريجين. ويغطي دعم التوظيف عبر طاقات (دعم الأجور) 30–50% من الراتب، بحد أقصى 3,000 ريال شهريًا، لمدة 24 شهرًا. وكلاهما يخفض تكلفة الانتقال إلى الدور أو البقاء فيه بدل إعادة التأهيل للخروج منه — بما يتسق مع مهنة مصنَّفة ضمن خانة التعزيز. إن كنت تنتقل للعمل، يغطي [قائمة ما قبل المغادرة](/prepare) خطوات التأشيرة والاعتماد."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل تعني درجة 20.9 أن 20.9% من وظائف الصيادلة ستُفقد؟",
+            "a": "لا. الدرجة هي تعرُّض مرجَّح بالذكاء الاصطناعي، وليست تنبؤًا بفقدان الوظائف. تنص المذكرة المنهجية للمرصد نفسها على أن الإزاحة الفعلية ستكون أقل مما يوحي به التعرُّض، لأن التعزيز يفوق الاستبدال في كثير من الأدوار. على المستوى الوطني، تُرجَّح 4,450,778 وظيفة على أنها معرَّضة للذكاء الاصطناعي من أصل قوة عاملة قوامها 12,420,050 مسجلة في التأمينات الاجتماعية — وهو مقياس تعرُّض، لا خسائر متوقعة."
+          },
+          {
+            "q": "كم عدد الصيادلة العاملين في السعودية؟",
+            "a": "يُقدَّر التوظيف الوطني بنحو 35,000، ضمن قطاع الصحة البشرية والعمل الاجتماعي، مع مرتبة طلب لعام 2024 قدرها 36. وتُقيَّم الأهمية للسعودية لهذا الدور بأنها مرتفعة جدًا."
+          },
+          {
+            "q": "أي أجزاء دور الصيدلي هي الأكثر تعرُّضًا للذكاء الاصطناعي؟",
+            "a": "تعطي مجموعة البيانات درجة مركبة واحدة بدل تفصيل مهمة بمهمة، لذا فإن التفصيل الدقيق غير متاح. تشير المدخلات — تقييم فيلتن المنخفض واحتمال فراي-أوزبورن البالغ 12% — إلى أن المهام الروتينية القائمة على القواعد هي الأكثر تعرُّضًا، بينما تظل القرارات السريرية المنظَّمة بقيادة بشرية. ويعكس تصنيف التعزيز هذا المزيج."
+          },
+          {
+            "q": "هل اتجاه الطلب المستقبلي على الصيادلة صاعد أم هابط؟",
+            "a": "اتجاه مستقبل الوظائف الصادر عن المنتدى الاقتصادي العالمي لهذه المهنة مسجَّل بأنه غير متاح في مجموعة البيانات، لذا لا نحدد له اتجاهًا. الإشارات المتاحة هي مرتبة الطلب لعام 2024 (36)، والأهمية المرتفعة جدًا للسعودية، وحصص نطاقات على مستوى القطاع."
+          }
+        ],
+        "key_takeaway": "يسجل الصيادلة في السعودية 20.9 من 100 لمخاطر الذكاء الاصطناعي (المرتبة 29 من 237، تعزيز) — دور منخفض التعرُّض، مدعوم بالحصص، ومعفى من الضرائب، حيث يتجه الذكاء الاصطناعي إلى إعادة تشكيل المهام لا استبدال المهنة.",
+        "sources": [
+          {
+            "label": "مرصد شفت السعودية — master.json (237 مهنة مُقيَّمة)",
+            "url": "/career"
+          },
+          {
+            "label": "بيانات الرواتب — Astr 2026 (بالريال، معفاة من الضرائب)",
+            "url": "/job/pharmacists"
+          },
+          {
+            "label": "منظمة التعاون الاقتصادي والتنمية (2023) — مخاطر الأتمتة في الدول الأعضاء",
+            "url": ""
+          },
+          {
+            "label": "مدخلات المنهجية — إيلوندو، فراي-أوزبورن، فيلتن",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]
