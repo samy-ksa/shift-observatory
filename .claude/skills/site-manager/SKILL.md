@@ -43,12 +43,15 @@ Jalons : 10/10 articles indexés ≥ 50 % · 24/10 pages métier EN ≥ 60 % · 
 
 ## Cycle
 
-1. **Mesurer.** `node .claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs --repo "$(pwd)" --append`
-   puis requêtes GSC libres si besoin (pages, requêtes, pays, 28 j vs 28 j précédents).
-   Lis les dernières lignes de `data/seo/index-coverage.jsonl`, `data/seo/llm-visibility.jsonl`
-   (écrits chaque jeudi par le relais Mac) et `data/seo/agent-journal.json`.
-2. **Juger ce qui a été fait.** Pour chaque action passée encore en observation :
-   `node .claude/skills/seo-rank-watch/scripts/check_crawl.mjs --repo "$(pwd)" --since <date> <path>` d'abord. Pas recrawlée = on ne juge pas.
+1. **Mesurer.** Tu n'as pas d'identifiants Google : le Mac de Samy dépose avant chaque
+   cycle (lundi et jeudi ~05:15 UTC) les données dans `data/seo/` :
+   `gsc-snapshot.json` (pages, requêtes et couples requête×page sur 28 j et les 28 j
+   précédents, dernier crawl des pages en observation), `index-coverage.jsonl`,
+   `llm-visibility.jsonl`, `rank-history.json`. Vérifie la date du snapshot.
+   Lis aussi `data/seo/agent-journal.json` (tes actions passées).
+2. **Juger ce qui a été fait.** Pour chaque action passée encore en observation, regarde
+   `crawl` dans `gsc-snapshot.json` : page pas recrawlée depuis l'action = on ne juge pas.
+   Les pages listées dans `reviewAfter`/`targetPath` du journal y sont inspectées.
 3. **Choisir 1 à 3 actions** dans le catalogue ci-dessous, par rendement attendu
    (volume d'impressions concerné × probabilité d'effet). Jamais deux actions sur
    la même page dans la même fenêtre d'observation, sinon on ne saura pas laquelle a

@@ -50,7 +50,8 @@ export const config = {
      * - /api/*           (no lang prefix on API routes)
      * - /_next/*         (Next.js internals)
      * - static assets    (favicon, icons, sitemap, robots, llms, reports/, .well-known)
+     * - IndexNow key     (32 hex chars + .txt at the root, read by Bing/Yandex)
      */
-    "/((?!api|_next/static|_next/image|favicon.ico|icon.png|apple-touch-icon.png|sitemap.xml|robots.txt|llms.txt|reports|.well-known).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|icon.png|apple-touch-icon.png|sitemap.xml|robots.txt|llms.txt|reports|.well-known|[0-9a-f]{32}\\.txt$).*)",
   ],
 };
