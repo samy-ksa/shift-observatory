@@ -458,5 +458,241 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-registered-nurses-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-07-01",
+    "published_at": "2026-07-01T09:04:55",
+    "keyword": "will AI replace registered nurses in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Registered Nurses in Saudi Arabia?. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Registered%20Nurses%20in%20Saudi%20Arabia%3F&subtitle=Registered%20nurses%20in%20Saudi%20Arabia%20rank%20among%20the%20safest%20jobs%20from%20AI%20automation%20",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=L%27IA%20remplacera-t-elle%20les%20infirmiers%20en%20Arabie%20saoudite%20%3F&subtitle=Les%20infirmiers%20en%20Arabie%20saoudite%20figurent%20parmi%20les%20m%C3%A9tiers%20les%20plus%20%C3%A0%20l%27abri%20d",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D8%A7%D9%84%D9%85%D9%85%D8%B1%D8%B6%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F&subtitle=%D9%8A%D9%8F%D8%B9%D8%AF%D9%91%20%D8%A7%D9%84%D9%85%D9%85%D8%B1%D8%B6%D9%88%D9%86%20%D8%A7%D9%84%D9%85%D8%B3%D8%AC%D9%91%D9%84%D9%88%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D9%85%D9%86%20%D8%A8%D9%8A%D9%86%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%A7%D9%84%D9%88%D8%B8%D8%A7%D8%A6%D9%81%20%D8%A3%D9%85%D8%A7%D9%86%D9%8B%D8%A7%20%D9%85%D9%86%20%D8%A3%D8%AA%D9%85%D8%AA%D8%A9%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Registered Nurses in Saudi Arabia?",
+        "description": "Registered nurses score 13.6/100 on AI automation risk in Saudi Arabia — rank 9 of 237. See the salary in SAR, Nitaqat status and reskilling tracks.",
+        "lede": "Registered nurses in Saudi Arabia carry an AI automation risk score of 13.6 out of 100 — rank 9 of 237 occupations tracked by the KSA Shift Observatory, which classes the role as augmentation, not substitution. In plain terms, AI is far more likely to assist Saudi nurses than replace them. The score draws on three published measures that point the same way: Eloundou 0.1, Frey-Osborne 0.9%, and a Felten exposure rated 'low'. Demand supports the picture — nursing ranked 6th for hiring demand in the Kingdom in 2024, across an estimated 243,336 jobs in Human Health & Social Work. Pay is tax-free: entry roles start near SAR 6,000 a month, the median sits at SAR 10,000, and senior nurses reach SAR 15,000 (Astr 2026). One honest caveat: an augmentation score means AI reshapes parts of the work, not the bedside role — and the Observatory measures task exposure, not predicted job losses.",
+        "h2_sections": [
+          {
+            "q": "Will AI replace registered nurses in Saudi Arabia?",
+            "body": "Not on the current data. Registered nursing scores 13.6 out of 100 on the KSA Shift Observatory's composite AI automation risk index — 9th-lowest of 237 occupations — and is formally classed as augmentation rather than substitution. Three independent inputs agree: Eloundou (0.1), Frey-Osborne (0.9%) and Felten ('low'). A low score does not mean nothing changes; it means AI is expected to support clinical work rather than remove the role. You can see where nursing sits against every other job on the [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "How much do registered nurses earn in Saudi Arabia?",
+            "body": "Nursing pay in the Kingdom is tax-free. According to Astr 2026 figures in the dataset, entry-level nurses earn around SAR 6,000 per month, the median is SAR 10,000, and senior nurses reach SAR 15,000. Because there is no income tax on salaries, the take-home figure is the headline figure — a meaningful difference from France or most of Europe, where gross pay is reduced by income tax and social contributions. To weigh net pay against housing and living costs, use the [Cost of Living & Relocation Calculator](/relocate)."
+          },
+          {
+            "q": "What does the Nitaqat status mean for nurses?",
+            "body": "Nursing falls under a sector_quota Nitaqat status, and the dataset rates its KSA relevance as very_high. Sector_quota means Saudization targets apply at the sector level rather than a single fixed company ratio. The specific Nitaqat risk value for the occupation is not available in the dataset (n/d), so we do not estimate it. What is clear is that healthcare is a priority sector for Saudi workforce localisation, which supports steady domestic demand for qualified nurses."
+          },
+          {
+            "q": "How does nursing compare to jobs at higher AI risk?",
+            "body": "Nursing sits far below the exposed end of the labour market. For a European reference point, the OECD (2023) estimates that roughly 27% of jobs across member states are at high risk of automation, with clerical and administrative tasks in the highest-exposure band. Nursing's 13.6 score places it well inside the safer tier by comparison. The Observatory also notes, nationally, that jobs weighted by AI exposure total about 4.45 million of the 12.42 million GOSI workforce — an exposure measure, not a forecast of losses. Compare specific roles side by side on the [dashboard](/career)."
+          },
+          {
+            "q": "What reskilling support exists for nurses in Saudi Arabia?",
+            "body": "Two HRDF tracks apply. Tamheer offers on-the-job training: a 3-to-6 month placement with a SAR 3,000 monthly stipend for graduates. Employment Support (Taqat) is a wage subsidy covering 30–50% of salary, up to SAR 3,000 a month for 24 months. Both lower the cost of entering or upskilling in the profession. If you are planning a move into the sector, the [Pre-Departure Checklist](/prepare) covers visa and certification steps."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does a 13.6 risk score mean 13.6% of nursing jobs will disappear?",
+            "a": "No. The Observatory's methodology note is explicit: scores measure AI-weighted task exposure, not predicted job losses. Actual displacement is expected to be lower than exposure, because for many roles — nursing included — augmentation outweighs substitution."
+          },
+          {
+            "q": "How was the nursing AI risk score calculated?",
+            "a": "The composite 13.6/100 score combines three published measures of AI exposure: Eloundou (0.1), Frey-Osborne (0.9%) and Felten (rated 'low'). All three converge on low automation risk, which is why the role is classed as augmentation."
+          },
+          {
+            "q": "How can I check the AI risk for a different job?",
+            "a": "The [AI Job Risk Dashboard](/career) scores 237 occupations, and the [Personal AI Risk Profile](/profile) tailors the assessment to your own role. Per-occupation pages also exist for specific jobs."
+          },
+          {
+            "q": "Is the search demand for 'AI replacing nurses' known?",
+            "a": "No. Search-volume data for this query is not available in the dataset (n/d), so we do not report a figure. Occupational demand is a separate metric — nursing ranked 6th for hiring demand in the Kingdom in 2024."
+          }
+        ],
+        "key_takeaway": "Registered nurses in Saudi Arabia rank among the safest jobs from AI automation — 13.6/100, rank 9 of 237, classed as augmentation — with tax-free pay of SAR 6,000–15,000/month and HRDF reskilling support behind a high-demand, quota-backed profession.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (237 occupations scored)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — Saudi nursing salary data (SAR, tax-free)",
+            "url": ""
+          },
+          {
+            "label": "OECD (2023) — automation risk across member states",
+            "url": ""
+          },
+          {
+            "label": "Eloundou et al. — AI task exposure",
+            "url": ""
+          },
+          {
+            "label": "Frey & Osborne — occupational automation probability",
+            "url": ""
+          },
+          {
+            "label": "Felten et al. — AI occupational exposure",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "L'IA remplacera-t-elle les infirmiers en Arabie saoudite ?",
+        "description": "Les infirmiers affichent 13,6/100 au risque d'automatisation par l'IA en Arabie saoudite — rang 9 sur 237. Salaire en SAR, statut Nitaqat et reconversion.",
+        "lede": "Les infirmiers diplômés en Arabie saoudite affichent un score de risque d'automatisation par l'IA de 13,6 sur 100 — rang 9 sur 237 professions suivies par l'Observatoire KSA Shift, qui classe le métier comme une augmentation, non une substitution. En clair, l'IA a bien plus de chances de les aider que de les remplacer. Le score repose sur trois mesures publiées qui convergent : Eloundou 0,1, Frey-Osborne 0,9 % et une exposition Felten jugée « faible ». La demande confirme le tableau : l'infirmier s'est classé 6ᵉ pour la demande d'embauche dans le Royaume en 2024, sur environ 243 336 emplois dans la Santé humaine et l'action sociale. La rémunération est exonérée d'impôt : l'entrée débute autour de 6 000 SAR par mois, la médiane s'établit à 10 000 SAR et les infirmiers seniors atteignent 15 000 SAR (Astr 2026). Une réserve honnête : un score d'augmentation signifie que l'IA remodèle des parties du travail, pas le rôle au chevet du patient — et l'Observatoire mesure l'exposition des tâches, non les pertes d'emploi prévues.",
+        "h2_sections": [
+          {
+            "q": "L'IA va-t-elle remplacer les infirmiers en Arabie saoudite ?",
+            "body": "Pas au vu des données actuelles. Le métier d'infirmier obtient 13,6 sur 100 à l'indice composite de risque d'automatisation par l'IA de l'Observatoire KSA Shift — 9ᵉ score le plus bas sur 237 professions — et il est formellement classé comme une augmentation plutôt qu'une substitution. Trois sources indépendantes concordent : Eloundou (0,1), Frey-Osborne (0,9 %) et Felten (« faible »). Un score bas ne signifie pas que rien ne change ; il signifie que l'IA devrait soutenir le travail clinique plutôt que supprimer le rôle. Vous pouvez voir où se situe le métier d'infirmier face à tous les autres emplois sur le [tableau de bord du risque IA par métier](/career)."
+          },
+          {
+            "q": "Combien gagnent les infirmiers en Arabie saoudite ?",
+            "body": "La rémunération des infirmiers dans le Royaume est exonérée d'impôt. Selon les chiffres Astr 2026 du jeu de données, les infirmiers débutants gagnent environ 6 000 SAR par mois, la médiane est de 10 000 SAR et les infirmiers seniors atteignent 15 000 SAR. Comme les salaires ne sont soumis à aucun impôt sur le revenu, le montant net correspond au montant affiché — une différence notable par rapport à la France ou à la plupart des pays européens, où le salaire brut est amputé par l'impôt sur le revenu et les cotisations sociales. Pour comparer le salaire net au logement et au coût de la vie, utilisez le [calculateur de coût de la vie et d'expatriation](/relocate)."
+          },
+          {
+            "q": "Que signifie le statut Nitaqat pour les infirmiers ?",
+            "body": "Le métier d'infirmier relève d'un statut Nitaqat sector_quota, et le jeu de données évalue sa pertinence en Arabie saoudite comme very_high. Sector_quota signifie que les objectifs de saoudisation s'appliquent au niveau du secteur plutôt que par un ratio fixe propre à chaque entreprise. La valeur de risque Nitaqat propre à la profession n'est pas disponible dans le jeu de données (n/d), nous ne l'estimons donc pas. Ce qui est clair, c'est que la santé est un secteur prioritaire pour la localisation de la main-d'œuvre saoudienne, ce qui soutient une demande intérieure stable d'infirmiers qualifiés."
+          },
+          {
+            "q": "Comment le métier d'infirmier se compare-t-il aux emplois plus exposés à l'IA ?",
+            "body": "Le métier d'infirmier se situe très loin de l'extrémité exposée du marché du travail. Comme point de repère européen, l'OCDE (2023) estime qu'environ 27 % des emplois dans les États membres présentent un risque élevé d'automatisation, les tâches administratives et de bureau figurant dans la tranche la plus exposée. Avec 13,6, le métier d'infirmier se place bien à l'intérieur de la tranche la plus sûre par comparaison. L'Observatoire note aussi, à l'échelle nationale, que les emplois pondérés par l'exposition à l'IA totalisent environ 4,45 millions sur les 12,42 millions d'actifs GOSI — une mesure d'exposition, non une prévision de pertes. Comparez des métiers précis côte à côte sur le [tableau de bord](/career)."
+          },
+          {
+            "q": "Quel soutien à la reconversion existe pour les infirmiers en Arabie saoudite ?",
+            "body": "Deux dispositifs HRDF s'appliquent. Tamheer propose une formation en situation de travail : un stage de 3 à 6 mois assorti d'une allocation mensuelle de 3 000 SAR pour les diplômés. Le soutien à l'emploi (Taqat) est une subvention salariale couvrant 30 à 50 % du salaire, jusqu'à 3 000 SAR par mois pendant 24 mois. Les deux réduisent le coût de l'entrée dans la profession ou de la montée en compétences. Si vous préparez une transition vers le secteur, la [check-list de préparation au départ](/prepare) couvre les étapes de visa et de certification."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Un score de risque de 13,6 signifie-t-il que 13,6 % des postes d'infirmier vont disparaître ?",
+            "a": "Non. La note méthodologique de l'Observatoire est explicite : les scores mesurent l'exposition des tâches pondérée par l'IA, non les pertes d'emploi prévues. Les suppressions réelles devraient être inférieures à l'exposition, car pour de nombreux métiers — dont celui d'infirmier — l'augmentation l'emporte sur la substitution."
+          },
+          {
+            "q": "Comment le score de risque IA du métier d'infirmier a-t-il été calculé ?",
+            "a": "Le score composite de 13,6/100 combine trois mesures publiées de l'exposition à l'IA : Eloundou (0,1), Frey-Osborne (0,9 %) et Felten (jugé « faible »). Les trois convergent vers un faible risque d'automatisation, raison pour laquelle le rôle est classé comme une augmentation."
+          },
+          {
+            "q": "Comment vérifier le risque IA d'un autre métier ?",
+            "a": "Le [tableau de bord du risque IA par métier](/career) note 237 professions, et le [profil de risque IA personnalisé](/profile) adapte l'évaluation à votre propre poste. Des pages par profession existent aussi pour des métiers précis."
+          },
+          {
+            "q": "La demande de recherche pour « l'IA remplace les infirmiers » est-elle connue ?",
+            "a": "Non. Les données de volume de recherche pour cette requête ne sont pas disponibles dans le jeu de données (n/d), nous ne rapportons donc aucun chiffre. La demande professionnelle est une métrique distincte — le métier d'infirmier s'est classé 6ᵉ pour la demande d'embauche dans le Royaume en 2024."
+          }
+        ],
+        "key_takeaway": "Les infirmiers en Arabie saoudite figurent parmi les métiers les plus à l'abri de l'automatisation par l'IA — 13,6/100, rang 9 sur 237, classés en augmentation — avec une rémunération exonérée d'impôt de 6 000 à 15 000 SAR/mois et un soutien à la reconversion HRDF, dans une profession très demandée et protégée par des quotas.",
+        "sources": [
+          {
+            "label": "Observatoire KSA Shift — master.json (237 professions notées)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — données salariales des infirmiers saoudiens (SAR, exonéré d'impôt)",
+            "url": ""
+          },
+          {
+            "label": "OCDE (2023) — risque d'automatisation dans les États membres",
+            "url": ""
+          },
+          {
+            "label": "Eloundou et al. — exposition des tâches à l'IA",
+            "url": ""
+          },
+          {
+            "label": "Frey & Osborne — probabilité d'automatisation par profession",
+            "url": ""
+          },
+          {
+            "label": "Felten et al. — exposition professionnelle à l'IA",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل يحل الذكاء الاصطناعي محل الممرضين في السعودية؟",
+        "description": "الممرضون المسجّلون يسجّلون 13.6/100 على مخاطر أتمتة الذكاء الاصطناعي بالسعودية — المرتبة 9 من 237. تعرّف على الراتب بالريال وحالة نطاقات ومسارات التأهيل.",
+        "lede": "يحمل الممرضون المسجّلون في السعودية درجة مخاطر أتمتة بالذكاء الاصطناعي تبلغ 13.6 من 100 — المرتبة 9 من بين 237 مهنة يتتبّعها مرصد التحوّل السعودي (KSA Shift Observatory)، الذي يصنّف الدور على أنه تعزيز لا إحلال. وببساطة، من الأرجح كثيرًا أن يساعد الذكاء الاصطناعي الممرضين السعوديين لا أن يحلّ محلّهم. تستند الدرجة إلى ثلاثة مقاييس منشورة تشير جميعها في الاتجاه نفسه: إيلوندو 0.1، وفراي-أوزبورن 0.9%، وتعرّض فيلتن المصنّف 'منخفض'. ويدعم الطلبُ هذه الصورة — إذ احتلّت مهنة التمريض المرتبة 6 من حيث الطلب على التوظيف في المملكة عام 2024، ضمن نحو 243,336 وظيفة في قطاع الصحة البشرية والعمل الاجتماعي. والأجر معفى من الضرائب: تبدأ الوظائف المبتدئة قرب 6,000 ريال شهريًا، ويبلغ الوسيط 10,000 ريال، ويصل الممرضون الكبار إلى 15,000 ريال (Astr 2026). تحفّظٌ واحد بأمانة: درجة التعزيز تعني أن الذكاء الاصطناعي يعيد تشكيل أجزاء من العمل، لا الدور بجانب سرير المريض — والمرصد يقيس تعرّض المهام، لا خسائر الوظائف المتوقّعة.",
+        "h2_sections": [
+          {
+            "q": "هل يحل الذكاء الاصطناعي محل الممرضين المسجّلين في السعودية؟",
+            "body": "ليس وفق البيانات الحالية. يسجّل التمريض المسجّل 13.6 من 100 على المؤشر المركّب لمخاطر أتمتة الذكاء الاصطناعي لدى مرصد التحوّل السعودي — تاسع أدنى درجة من بين 237 مهنة — ويُصنّف رسميًا على أنه تعزيز لا إحلال. وتتفق ثلاثة مدخلات مستقلة: إيلوندو (0.1)، وفراي-أوزبورن (0.9%)، وفيلتن ('منخفض'). والدرجة المنخفضة لا تعني أن شيئًا لن يتغيّر؛ بل تعني أنه يُتوقّع أن يدعم الذكاء الاصطناعي العمل السريري بدلاً من إزالة الدور. يمكنك معرفة موقع التمريض مقابل كل وظيفة أخرى على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career)."
+          },
+          {
+            "q": "كم يكسب الممرضون المسجّلون في السعودية؟",
+            "body": "أجر التمريض في المملكة معفى من الضرائب. وفق أرقام Astr 2026 في مجموعة البيانات، يكسب الممرضون المبتدئون نحو 6,000 ريال شهريًا، والوسيط 10,000 ريال، ويصل الممرضون الكبار إلى 15,000 ريال. ولأنه لا توجد ضريبة دخل على الرواتب، فإن الرقم الصافي هو الرقم المعلن — وهو فرق جوهري عن فرنسا أو معظم أوروبا، حيث يُخفَّض الأجر الإجمالي بضريبة الدخل والاشتراكات الاجتماعية. ولموازنة الأجر الصافي مع تكاليف السكن والمعيشة، استخدم [حاسبة تكلفة المعيشة والانتقال](/relocate)."
+          },
+          {
+            "q": "ماذا تعني حالة نطاقات بالنسبة للممرضين؟",
+            "body": "يقع التمريض ضمن حالة نطاقات من نوع sector_quota، وتُقيّم مجموعة البيانات ملاءمته للسعودية بأنها very_high. يعني sector_quota أن أهداف السعودة تُطبَّق على مستوى القطاع لا كنسبة ثابتة لشركة واحدة. أما قيمة مخاطر نطاقات المحدّدة لهذه المهنة فغير متوفّرة في مجموعة البيانات (n/d)، ولذلك لا نقدّرها. والواضح أن الرعاية الصحية قطاع ذو أولوية في توطين القوى العاملة السعودية، ما يدعم طلبًا محليًا مستقرًا على الممرضين المؤهّلين."
+          },
+          {
+            "q": "كيف يقارَن التمريض بالوظائف الأعلى خطرًا من الذكاء الاصطناعي؟",
+            "body": "يقع التمريض في مرتبة أدنى بكثير من الطرف المعرّض في سوق العمل. وكمرجع أوروبي، تقدّر منظمة التعاون الاقتصادي والتنمية (OECD) عام 2023 أن نحو 27% من الوظائف عبر الدول الأعضاء معرّضة لخطر أتمتة مرتفع، مع كون المهام الكتابية والإدارية في أعلى نطاق تعرّض. وتضع درجة التمريض البالغة 13.6 المهنة داخل الفئة الأكثر أمانًا بالمقارنة. ويشير المرصد أيضًا، على المستوى الوطني، إلى أن الوظائف الموزونة بالتعرّض للذكاء الاصطناعي تبلغ نحو 4.45 مليون من أصل 12.42 مليون في القوى العاملة المسجّلة لدى GOSI — وهو مقياس تعرّض لا توقّع للخسائر. قارن أدوارًا محدّدة جنبًا إلى جنب على [اللوحة](/career)."
+          },
+          {
+            "q": "ما دعم إعادة التأهيل المتاح للممرضين في السعودية؟",
+            "body": "ينطبق مساران من صندوق تنمية الموارد البشرية (HRDF). يقدّم تمهير تدريبًا على رأس العمل: تنسيب لمدة 3 إلى 6 أشهر مع مكافأة شهرية قدرها 3,000 ريال للخرّيجين. أما دعم التوظيف (طاقات) فهو دعم للأجر يغطّي 30–50% من الراتب، بحد أقصى 3,000 ريال شهريًا لمدة 24 شهرًا. ويخفّض كلاهما تكلفة دخول المهنة أو رفع المهارات فيها. إن كنت تخطّط للانتقال إلى القطاع، تغطّي [قائمة ما قبل المغادرة](/prepare) خطوات التأشيرة والاعتماد."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل تعني درجة مخاطر 13.6 أن 13.6% من وظائف التمريض ستختفي؟",
+            "a": "لا. مذكّرة منهجية المرصد صريحة: تقيس الدرجات تعرّض المهام الموزون بالذكاء الاصطناعي، لا خسائر الوظائف المتوقّعة. ويُتوقّع أن يكون الإحلال الفعلي أدنى من التعرّض، لأن التعزيز يفوق الإحلال في كثير من الأدوار — ومنها التمريض."
+          },
+          {
+            "q": "كيف حُسبت درجة مخاطر الذكاء الاصطناعي للتمريض؟",
+            "a": "تجمع الدرجة المركّبة 13.6/100 ثلاثة مقاييس منشورة للتعرّض للذكاء الاصطناعي: إيلوندو (0.1)، وفراي-أوزبورن (0.9%)، وفيلتن (المصنّف 'منخفض'). وتتقارب المقاييس الثلاثة جميعها على مخاطر أتمتة منخفضة، ولذلك يُصنَّف الدور على أنه تعزيز."
+          },
+          {
+            "q": "كيف أتحقّق من مخاطر الذكاء الاصطناعي لوظيفة مختلفة؟",
+            "a": "تسجّل [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career) درجات 237 مهنة، ويكيّف [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile) التقييم وفق دورك الخاص. كما توجد صفحات لكل مهنة على حدة لوظائف محدّدة."
+          },
+          {
+            "q": "هل حجم البحث عن 'إحلال الذكاء الاصطناعي محل الممرضين' معروف؟",
+            "a": "لا. بيانات حجم البحث عن هذا الاستعلام غير متوفّرة في مجموعة البيانات (n/d)، ولذلك لا نورد رقمًا. والطلب المهني مقياس منفصل — إذ احتلّ التمريض المرتبة 6 من حيث الطلب على التوظيف في المملكة عام 2024."
+          }
+        ],
+        "key_takeaway": "يُعدّ الممرضون المسجّلون في السعودية من بين أكثر الوظائف أمانًا من أتمتة الذكاء الاصطناعي — 13.6/100، المرتبة 9 من 237، مصنّفة على أنها تعزيز — مع أجر معفى من الضرائب يتراوح بين 6,000 و15,000 ريال شهريًا ودعم إعادة تأهيل من HRDF لمهنة عالية الطلب ومدعومة بحصص التوطين.",
+        "sources": [
+          {
+            "label": "مرصد التحوّل السعودي — master.json (تسجيل 237 مهنة)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — بيانات رواتب التمريض السعودي (بالريال، معفاة من الضرائب)",
+            "url": ""
+          },
+          {
+            "label": "OECD (2023) — مخاطر الأتمتة عبر الدول الأعضاء",
+            "url": ""
+          },
+          {
+            "label": "Eloundou وآخرون — تعرّض المهام للذكاء الاصطناعي",
+            "url": ""
+          },
+          {
+            "label": "Frey و Osborne — احتمال أتمتة المهن",
+            "url": ""
+          },
+          {
+            "label": "Felten وآخرون — التعرّض المهني للذكاء الاصطناعي",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]
