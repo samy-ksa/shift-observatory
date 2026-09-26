@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "date": "2026-09-26",
+    "lever": "backlog",
+    "pages": [
+      "/pulse"
+    ],
+    "why": "Juges du moteur d'articles (Pulse du 26/09, 89,2/100, non publié) : aucune page archive du Weekly Pulse, donc pas de lien vers l'édition précédente ni vers la série ; l'intention « suivi hebdo » n'est pas servie.",
+    "done": "Rien encore. Piste pour l'agent : créer /[lang]/pulse (liste des éditions, lien depuis chaque édition vers la précédente et l'archive, ajout au sitemap et à SiteExplore).",
+    "reviewAfter": "2026-10-05"
+  }
+]
