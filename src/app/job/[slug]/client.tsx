@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/i18n/context";
 import { localizedHref } from "@/lib/i18n/links";
 import FindJobTab from "@/components/job/FindJobTab";
+import { sarToEurFr, EUR_RATE_DATE_FR } from "@/lib/currency";
 import {
   type Occupation,
   type Sector,
@@ -456,6 +457,11 @@ export default function JobPageClient({
                       <div className="text-xs text-text-muted">
                         SAR{jp.perMonth}
                       </div>
+                      {lang === "fr" && (
+                        <div className="text-xs text-text-secondary mt-1">
+                          ≈ {sarToEurFr(s.value)} €/mois
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -478,6 +484,8 @@ export default function JobPageClient({
 
               <p className="text-xs text-text-muted">
                 {jp.salarySource}: {occ.salary_source}
+                {lang === "fr" &&
+                  ` · Équivalent en euros indicatif (taux BCE du ${EUR_RATE_DATE_FR}, riyal arrimé au dollar), salaire net d'impôt en Arabie Saoudite.`}
               </p>
           </div>
 

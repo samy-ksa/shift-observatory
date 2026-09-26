@@ -93,15 +93,19 @@ export function hasPulse(): boolean {
 }
 
 /**
- * Insights relevant to an occupation page. Engine articles follow the pattern
- * "will-ai-replace-<occupation>-in-saudi-arabia"; the captured part matches the job
- * slug exactly or as its first segment ("accountants" → "accountants-auditors").
+ * Insights relevant to an occupation page. Engine articles use the slug
+ * "will-ai-replace-<occupation>-in-saudi-arabia"; every token of <occupation>
+ * (plural folded) must appear in the job slug: "accountants" → "accountants-auditors",
+ * "physicians" → "surgeons-physicians", "civil-engineers" → "civil-mechanical-engineers".
  * Used to link job pages to their article (orphan articles, GSC 26/09).
  */
+const tokens = (s: string) =>
+  s.split("-").filter(Boolean).map((t) => (t.length > 3 && t.endsWith("s") ? t.slice(0, -1) : t));
+
 export function getInsightsForJob(jobSlug: string): ArticleRecord[] {
+  const job = new Set(tokens(jobSlug));
   return getAllInsights().filter((a) => {
     const m = a.slug.match(/^will-ai-replace-(.+)-in-saudi-arabia$/);
-    if (!m) return false;
-    return jobSlug === m[1] || jobSlug.startsWith(m[1] + "-");
+    return !!m && tokens(m[1]).every((t) => job.has(t));
   });
 }

@@ -18,6 +18,7 @@ import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import Link from "next/link";
 import { localizedHref } from "@/lib/i18n/links";
 import { getInsightsForJob, getLangContent } from "@/lib/insights";
+import { sarToEurFr } from "@/lib/currency";
 
 const RELATED_ANALYSIS: Record<Lang, string> = {
   en: "Related analysis",
@@ -85,30 +86,18 @@ export async function generateMetadata({
   let description: string;
 
   if (lang === "fr") {
-    if (composite >= 70) {
-      title = firstFit(
-        `${name} : ${composite}/100 risque IA en Arabie Saoudite 2026`,
-        `${name} : ${composite}/100 risque IA — Arabie Saoudite`,
-        `${name} : ${composite}/100 risque IA KSA`,
-        `${name} — Arabie Saoudite`,
-      );
-      description = `${composite}/100 risque d'automatisation IA pour ${name} en Arabie Saoudite. Salaire ${entry}–${senior} SAR/mois. Voir transitions plus sûres — gratuit.`;
-    } else if (composite >= 45) {
-      title = firstFit(
-        `${name} Arabie Saoudite : ${composite}/100 risque IA, ${median} SAR`,
-        `${name} : ${composite}/100 risque IA, ${median} SAR`,
-        `${name} — Arabie Saoudite`,
-      );
-      description = `${name} en Arabie Saoudite : ${composite}/100 risque IA, ${entry}–${senior} SAR/mois (sans impôt). Nitaqat, éligibilité expat. Gratuit.`;
-    } else {
-      title = firstFit(
-        `${name} : Risque IA ${composite}/100 · Guide Salaire, Arabie Saoudite`,
-        `${name} Arabie Saoudite : Risque IA ${composite}/100, Guide Salaire`,
-        `${name} : Risque IA ${composite}/100 · Guide Salaire KSA`,
-        `${name} — Arabie Saoudite`,
-      );
-      description = `${name} en Arabie Saoudite gagne ${entry}–${senior} SAR/mois (sans impôt). Risque IA faible (${composite}/100). Guide expat.`;
-    }
+    // 26/09 : le public francophone cherche « salaire <métier> arabie saoudite (en euros) »
+    // → titre mené par le salaire, fourchette SAR + € dans la description.
+    const eEntry = sarToEurFr(occ.salary_entry_sar);
+    const eSenior = sarToEurFr(occ.salary_senior_sar);
+    title = firstFit(
+      `Salaire ${name} en Arabie Saoudite 2026 · Risque IA ${composite}/100`,
+      `Salaire ${name} en Arabie Saoudite · Risque IA ${composite}/100`,
+      `Salaire ${name} Arabie Saoudite · IA ${composite}/100`,
+      `Salaire ${name} en Arabie Saoudite`,
+      `${name} — Arabie Saoudite`,
+    );
+    description = `${name} en Arabie Saoudite : ${entry}–${senior} SAR/mois sans impôt (≈ ${eEntry}–${eSenior} €). Risque IA ${composite}/100, statut Nitaqat, accès expatriés.`;
   } else if (lang === "ar") {
     // AR: localized title with EN name fallback when name_ar missing
     title = firstFit(
