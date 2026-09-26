@@ -694,5 +694,229 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-lawyers-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-07-08",
+    "published_at": "2026-07-08T09:04:28",
+    "keyword": "will AI replace lawyers in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Lawyers in Saudi Arabia?. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Lawyers%20in%20Saudi%20Arabia%3F&subtitle=Saudi%20lawyers%20score%2046.7/100%20for%20AI%20automation%20risk%20%28rank%2097%20of%20237%2C%20augmentatio",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=L%27IA%20va-t-elle%20remplacer%20les%20avocats%20en%20Arabie%20saoudite%20%3F&subtitle=Les%20avocats%20saoudiens%20obtiennent%2046%2C7/100%20au%20risque%20d%27automatisation%20IA%20%2897%E1%B5%89%20sur",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D9%85%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F&subtitle=%D9%8A%D8%AD%D8%B5%D9%84%20%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D9%85%D9%88%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D8%B9%D9%84%D9%89%2046.7/100%20%D9%84%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%20%D8%A7%D9%84%D8%A3%D8%AA%D9%85%D8%AA%D8%A9%20%D8%A8%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%28%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A9"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Lawyers in Saudi Arabia?",
+        "description": "Saudi lawyers score 46.7/100 on AI automation risk — augmentation, not replacement. See the salary, Nitaqat status, and reskilling data.",
+        "lede": "Lawyers in Saudi Arabia score 46.7 out of 100 on the KSA Shift Observatory's AI automation risk index — placing the profession 97th of 237 occupations and firmly in the 'augmentation' band, not the replacement one. In practice, that means AI is set to reshape legal work rather than erase it. The score blends three research signals: an Eloundou task-exposure reading of 0.85, a Frey-Osborne automation probability of 3.5%, and a 'high' Felten exposure rating. Pay remains solid and tax-free: entry-level lawyers earn about SAR 7,000 a month, the median sits at SAR 13,000, and senior counsel reach SAR 23,000 (Astr 2026). With an estimated 34,000 people in the role and 'very high' KSA relevance, the near-term risk is not unemployment but a change in what a lawyer's day involves — drafting, research, and review shifting toward AI-assisted workflows.",
+        "h2_sections": [
+          {
+            "q": "What does a 46.7 AI risk score actually mean for lawyers?",
+            "body": "The composite score of 46.7/100 ranks lawyers 97th out of 237 occupations scored by the KSA Shift Observatory, and classifies the role as 'augmentation' rather than substitution. That label matters: it signals that AI is more likely to take over parts of the work — first-draft contracts, document review, precedent search — than to remove the professional judgment a case turns on. The figure is a weighted blend of three published research inputs: Eloundou task exposure (0.85), the Frey-Osborne automation probability (3.5%), and a Felten exposure rating of 'high'. You can see where lawyers sit against all 237 roles on the [AI Job Risk Dashboard](/career), or compare a specific profession such as [accountants](/job/accountants)."
+          },
+          {
+            "q": "How much do lawyers earn in Saudi Arabia?",
+            "body": "Salaries are tax-free. According to Astr 2026 data, entry-level lawyers earn around SAR 7,000 per month, the median is SAR 13,000, and senior practitioners reach SAR 23,000. That spread — roughly a 3.3x gap between entry and senior — reflects how much value experience and specialisation still add in a role the Observatory classes as augmentation rather than replacement. To translate those SAR figures into real disposable income after rent and daily costs, run the numbers through the [Cost of Living & Relocation Calculator](/relocate)."
+          },
+          {
+            "q": "Does Nitaqat protect legal jobs in Saudi Arabia?",
+            "body": "This is the KSA-specific factor most global AI-risk lists miss. In the Observatory dataset, lawyers carry a Nitaqat status of 'sector_quota' with a 'high' Nitaqat risk rating and 'very high' KSA relevance. Saudization pressure is therefore a real force on hiring in this profession — one that operates independently of the AI trend. The dataset does not quantify how the two interact, and we will not estimate it here. What the two signals do jointly suggest: for the legal role in the Kingdom, local labour policy is at least as consequential as automation exposure."
+          },
+          {
+            "q": "How does Saudi Arabia compare with France and Europe?",
+            "body": "A useful anchor: the OECD (2023) estimates that about 27% of jobs across member states sit at high risk of automation, with clerical and administrative tasks in the highest-exposure band. Lawyers do not fall in that top band — the Observatory places them in augmentation, and the WEF Future of Jobs trend for the role is 'stable'. The Saudi picture adds a layer Europe's figures don't: the Nitaqat quota system. So while the automation exposure looks comparable to advanced-economy legal markets, the hiring dynamics around it are distinctly local."
+          },
+          {
+            "q": "What reskilling support exists if the role changes?",
+            "body": "Saudi Arabia's Human Resources Development Fund (HRDF) offers two relevant tracks for lawyers adapting to AI-assisted practice. Professional Certificates Support reimburses up to SAR 1,350 per approved qualification — useful for legal-tech or data credentials. Employment Support (Taqat) provides a wage subsidy of 30–50% of salary, up to SAR 3,000 per month for 24 months. Before committing, it is worth checking which certifications and documents apply to your situation on the [Pre-Departure Checklist](/prepare), and gauging your own exposure with the [Personal AI Risk Profile](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "How many lawyers work in Saudi Arabia?",
+            "a": "The Observatory estimates roughly 34,000 people in the role, within the Professional, Scientific & Technical sector."
+          },
+          {
+            "q": "Is demand for lawyers rising or falling?",
+            "a": "The WEF Future of Jobs trend for the profession is 'stable'. A 2024 demand rank is not available in this dataset (n/d)."
+          },
+          {
+            "q": "Does the 46.7 score predict actual job losses?",
+            "a": "No. Nationally, 4,450,778 jobs are weighted by AI exposure, but the Observatory notes this is AI-weighted exposure — not predicted losses. Actual displacement is expected to be lower, since augmentation outweighs substitution for many roles, including law."
+          },
+          {
+            "q": "Does the dataset break down which legal tasks are most exposed?",
+            "a": "No. The 46.7/100 score is assigned to the occupation as a whole; a task-by-task breakdown is not published in this dataset."
+          }
+        ],
+        "key_takeaway": "Saudi lawyers score 46.7/100 for AI automation risk (rank 97 of 237, augmentation) — the near-term change is AI-assisted workflows and Nitaqat hiring pressure, not replacement.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json (237 occupations scored)",
+            "url": "/career"
+          },
+          {
+            "label": "Salary data: Astr 2026 (SAR/month, tax-free)",
+            "url": ""
+          },
+          {
+            "label": "OECD 2023 — automation risk across member states",
+            "url": ""
+          },
+          {
+            "label": "WEF Future of Jobs — occupation trend",
+            "url": ""
+          },
+          {
+            "label": "HRDF — reskilling and wage-subsidy tracks",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "L'IA va-t-elle remplacer les avocats en Arabie saoudite ?",
+        "description": "Les avocats saoudiens obtiennent 46,7/100 au risque d'automatisation IA — augmentation, pas remplacement. Salaire, statut Nitaqat et reconversion.",
+        "lede": "Les avocats en Arabie saoudite obtiennent 46,7 sur 100 à l'indice de risque d'automatisation par l'IA de l'Observatoire KSA Shift — ce qui place la profession au 97ᵉ rang sur 237 métiers et fermement dans la bande « augmentation », pas celle du remplacement. Concrètement, cela signifie que l'IA va remodeler le travail juridique plutôt que l'effacer. Le score combine trois signaux de recherche : une exposition des tâches Eloundou de 0,85, une probabilité d'automatisation Frey-Osborne de 3,5 % et une exposition Felten jugée « élevée ». La rémunération reste solide et non imposable : un avocat débutant gagne environ 7 000 SAR par mois, la médiane s'établit à 13 000 SAR et un juriste senior atteint 23 000 SAR (Astr 2026). Avec environ 34 000 personnes exerçant ce métier et une pertinence « très élevée » pour le Royaume, le risque à court terme n'est pas le chômage mais un changement de ce que recouvre la journée d'un avocat — rédaction, recherche et relecture basculant vers des flux de travail assistés par l'IA.",
+        "h2_sections": [
+          {
+            "q": "Que signifie réellement un score de risque IA de 46,7 pour les avocats ?",
+            "body": "Le score composite de 46,7/100 classe les avocats au 97ᵉ rang sur les 237 métiers évalués par l'Observatoire KSA Shift, et range le métier dans la catégorie « augmentation » plutôt que substitution. Ce label compte : il signale que l'IA a plus de chances de prendre en charge des parties du travail — premières versions de contrats, revue de documents, recherche de précédents — que de supprimer le jugement professionnel dont dépend une affaire. Le chiffre est une combinaison pondérée de trois données de recherche publiées : l'exposition des tâches Eloundou (0,85), la probabilité d'automatisation Frey-Osborne (3,5 %) et une exposition Felten jugée « élevée ». Vous pouvez voir où se situent les avocats parmi les 237 métiers sur le [tableau de bord du risque IA par métier](/career), ou comparer une profession précise comme les [comptables](/job/accountants)."
+          },
+          {
+            "q": "Combien gagnent les avocats en Arabie saoudite ?",
+            "body": "Les salaires sont non imposables. Selon les données Astr 2026, un avocat débutant gagne environ 7 000 SAR par mois, la médiane est de 13 000 SAR, et les praticiens seniors atteignent 23 000 SAR. Cet écart — un rapport d'environ 3,3x entre le débutant et le senior — reflète tout ce que l'expérience et la spécialisation apportent encore dans un métier que l'Observatoire classe en augmentation plutôt qu'en remplacement. Pour traduire ces montants en SAR en revenu disponible réel après le loyer et les dépenses quotidiennes, passez les chiffres dans le [calculateur du coût de la vie et de la relocalisation](/relocate)."
+          },
+          {
+            "q": "Le Nitaqat protège-t-il les emplois juridiques en Arabie saoudite ?",
+            "body": "C'est le facteur propre au Royaume que la plupart des classements mondiaux du risque IA ignorent. Dans le jeu de données de l'Observatoire, les avocats portent un statut Nitaqat « sector_quota » avec un niveau de risque Nitaqat « élevé » et une pertinence pour le Royaume « très élevée ». La pression de saoudisation est donc une force réelle sur le recrutement dans cette profession — une force qui agit indépendamment de la tendance IA. Le jeu de données ne quantifie pas la façon dont les deux interagissent, et nous ne l'estimerons pas ici. Ce que les deux signaux suggèrent conjointement : pour le métier d'avocat dans le Royaume, la politique locale de l'emploi pèse au moins autant que l'exposition à l'automatisation."
+          },
+          {
+            "q": "Comment l'Arabie saoudite se compare-t-elle à la France et à l'Europe ?",
+            "body": "Un repère utile : l'OCDE (2023) estime qu'environ 27 % des emplois dans les États membres présentent un risque élevé d'automatisation, les tâches administratives et de bureau se situant dans la tranche la plus exposée. Les avocats ne relèvent pas de cette tranche supérieure — l'Observatoire les place en augmentation, et la tendance du Future of Jobs du WEF pour ce métier est « stable ». Le tableau saoudien ajoute une couche que les chiffres européens n'ont pas : le système de quotas Nitaqat. Ainsi, si l'exposition à l'automatisation semble comparable à celle des marchés juridiques des économies avancées, la dynamique de recrutement qui l'entoure est nettement locale."
+          },
+          {
+            "q": "Quel soutien à la reconversion existe si le métier évolue ?",
+            "body": "Le Fonds saoudien de développement des ressources humaines (HRDF) propose deux dispositifs pertinents pour les avocats qui s'adaptent à une pratique assistée par l'IA. Le soutien aux certificats professionnels rembourse jusqu'à 1 350 SAR par qualification approuvée — utile pour des diplômes en legal-tech ou en données. Le soutien à l'emploi (Taqat) offre une subvention salariale de 30 à 50 % du salaire, jusqu'à 3 000 SAR par mois pendant 24 mois. Avant de vous engager, il vaut la peine de vérifier quelles certifications et quels documents s'appliquent à votre situation sur la [checklist avant le départ](/prepare), et d'évaluer votre propre exposition avec le [profil de risque IA personnel](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Combien d'avocats travaillent en Arabie saoudite ?",
+            "a": "L'Observatoire estime à environ 34 000 le nombre de personnes exerçant ce métier, au sein du secteur des activités professionnelles, scientifiques et techniques."
+          },
+          {
+            "q": "La demande d'avocats augmente-t-elle ou diminue-t-elle ?",
+            "a": "La tendance du Future of Jobs du WEF pour cette profession est « stable ». Un classement de la demande pour 2024 n'est pas disponible dans ce jeu de données (n/d)."
+          },
+          {
+            "q": "Le score de 46,7 prédit-il des pertes d'emplois réelles ?",
+            "a": "Non. À l'échelle nationale, 4 450 778 emplois sont pondérés par l'exposition à l'IA, mais l'Observatoire précise qu'il s'agit d'une exposition pondérée par l'IA — pas de pertes prédites. Les destructions réelles devraient être moindres, car l'augmentation l'emporte sur la substitution pour de nombreux métiers, dont le droit."
+          },
+          {
+            "q": "Le jeu de données détaille-t-il quelles tâches juridiques sont les plus exposées ?",
+            "a": "Non. Le score de 46,7/100 est attribué au métier dans son ensemble ; une ventilation tâche par tâche n'est pas publiée dans ce jeu de données."
+          }
+        ],
+        "key_takeaway": "Les avocats saoudiens obtiennent 46,7/100 au risque d'automatisation IA (97ᵉ sur 237, augmentation) — le changement à court terme, ce sont des flux de travail assistés par l'IA et la pression au recrutement Nitaqat, pas le remplacement.",
+        "sources": [
+          {
+            "label": "Observatoire KSA Shift — master.json (237 métiers évalués)",
+            "url": "/career"
+          },
+          {
+            "label": "Données salariales : Astr 2026 (SAR/mois, non imposables)",
+            "url": ""
+          },
+          {
+            "label": "OCDE 2023 — risque d'automatisation dans les États membres",
+            "url": ""
+          },
+          {
+            "label": "WEF Future of Jobs — tendance par métier",
+            "url": ""
+          },
+          {
+            "label": "HRDF — dispositifs de reconversion et de subvention salariale",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل يحل الذكاء الاصطناعي محل المحامين في السعودية؟",
+        "description": "يحصل المحامون في السعودية على 46.7/100 في مخاطر الأتمتة بالذكاء الاصطناعي — تعزيز لا استبدال. تعرّف على الراتب وحالة نطاقات وبيانات إعادة التأهيل.",
+        "lede": "يحصل المحامون في السعودية على 46.7 من أصل 100 على مؤشر مخاطر الأتمتة بالذكاء الاصطناعي الصادر عن مرصد التحول السعودي، ما يضع المهنة في المرتبة 97 من أصل 237 مهنة، وضمن نطاق 'التعزيز' بوضوح لا نطاق الاستبدال. عملياً، هذا يعني أن الذكاء الاصطناعي سيعيد تشكيل العمل القانوني بدلاً من محوه. تمزج الدرجة ثلاث إشارات بحثية: قراءة تعرّض المهام لدى إيلوندو بقيمة 0.85، واحتمال أتمتة فراي-أوزبورن بنسبة 3.5%، وتقييم تعرّض فِلتِن 'مرتفع'. يبقى الأجر جيداً ومعفى من الضرائب: يكسب المحامون المبتدئون نحو 7,000 ريال شهرياً، ويبلغ الوسيط 13,000 ريال، ويصل كبار المستشارين إلى 23,000 ريال (Astr 2026). ومع نحو 34,000 شخص يشغلون الدور وأهمية 'مرتفعة جداً' للسوق السعودية، فإن المخاطرة القريبة ليست البطالة بل تغيّر ما يتضمنه يوم المحامي — إذ تتحول الصياغة والبحث والمراجعة نحو تدفقات عمل مدعومة بالذكاء الاصطناعي.",
+        "h2_sections": [
+          {
+            "q": "ماذا تعني درجة مخاطر 46.7 فعلياً بالنسبة للمحامين؟",
+            "body": "الدرجة المركبة 46.7/100 تضع المحامين في المرتبة 97 من أصل 237 مهنة قيّمها مرصد التحول السعودي، وتصنّف الدور ضمن 'التعزيز' لا الاستبدال. هذا التصنيف مهم: فهو يشير إلى أن الذكاء الاصطناعي أكثر احتمالاً لتولّي أجزاء من العمل — العقود بمسوّدتها الأولى، ومراجعة المستندات، والبحث عن السوابق — من أن يزيل الحكم المهني الذي تدور حوله القضية. الرقم مزيج مرجّح من ثلاثة مدخلات بحثية منشورة: تعرّض المهام لدى إيلوندو (0.85)، واحتمال أتمتة فراي-أوزبورن (3.5%)، وتقييم تعرّض فِلتِن 'مرتفع'. يمكنك رؤية موقع المحامين مقارنةً بالأدوار الـ237 كافة على [لوحة مخاطر الوظائف بالذكاء الاصطناعي](/career)، أو مقارنة مهنة بعينها مثل [المحاسبين](/job/accountants)."
+          },
+          {
+            "q": "كم يكسب المحامون في السعودية؟",
+            "body": "الرواتب معفاة من الضرائب. وفقاً لبيانات Astr 2026، يكسب المحامون المبتدئون نحو 7,000 ريال شهرياً، والوسيط 13,000 ريال، ويصل الممارسون كبار الخبرة إلى 23,000 ريال. هذا الفارق — نحو 3.3 أضعاف بين المبتدئ والخبير — يعكس مقدار القيمة التي لا تزال تضيفها الخبرة والتخصص في دور يصنّفه المرصد ضمن التعزيز لا الاستبدال. ولترجمة أرقام الريال هذه إلى دخل متاح فعلي بعد الإيجار والتكاليف اليومية، أدخِل الأرقام في [حاسبة تكلفة المعيشة والانتقال](/relocate)."
+          },
+          {
+            "q": "هل تحمي نطاقات الوظائف القانونية في السعودية؟",
+            "body": "هذا هو العامل الخاص بالسعودية الذي تغفله معظم قوائم مخاطر الذكاء الاصطناعي العالمية. في بيانات المرصد، يحمل المحامون حالة نطاقات 'حصة قطاعية' (sector_quota) مع تقييم مخاطر نطاقات 'مرتفع' وأهمية 'مرتفعة جداً' للسوق السعودية. لذا فإن ضغط السعودة قوة حقيقية على التوظيف في هذه المهنة — قوة تعمل باستقلال عن اتجاه الذكاء الاصطناعي. لا تقيس البيانات كيف يتفاعل العاملان معاً، ولن نقدّر ذلك هنا. لكن ما توحي به الإشارتان معاً: بالنسبة للدور القانوني في المملكة، فإن سياسة العمل المحلية لا تقل أهمية عن التعرّض للأتمتة."
+          },
+          {
+            "q": "كيف تقارن السعودية بفرنسا وأوروبا؟",
+            "body": "مرجع مفيد: تقدّر منظمة التعاون الاقتصادي والتنمية (2023) أن نحو 27% من الوظائف في الدول الأعضاء تقع ضمن مخاطر أتمتة مرتفعة، مع كون المهام الكتابية والإدارية في النطاق الأعلى تعرّضاً. المحامون لا يقعون في ذلك النطاق الأعلى — إذ يضعهم المرصد ضمن التعزيز، واتجاه مستقبل الوظائف لدى المنتدى الاقتصادي العالمي للدور 'مستقر'. تضيف الصورة السعودية طبقة لا تتضمنها أرقام أوروبا: نظام حصص نطاقات. لذا، ففي حين يبدو التعرّض للأتمتة مماثلاً للأسواق القانونية في الاقتصادات المتقدمة، فإن ديناميكيات التوظيف المحيطة به محلية على نحو مميز."
+          },
+          {
+            "q": "ما دعم إعادة التأهيل المتاح إذا تغيّر الدور؟",
+            "body": "يقدّم صندوق تنمية الموارد البشرية السعودي (هدف) مسارين ذوي صلة للمحامين المتكيّفين مع الممارسة المدعومة بالذكاء الاصطناعي. دعم الشهادات المهنية يعوّض حتى 1,350 ريال عن كل مؤهل معتمد — مفيد لاعتمادات التقنية القانونية أو البيانات. ودعم التوظيف (طاقات) يوفّر إعانة أجر بنسبة 30–50% من الراتب، حتى 3,000 ريال شهرياً لمدة 24 شهراً. وقبل الالتزام، يجدر التحقق من الشهادات والمستندات التي تنطبق على وضعك عبر [قائمة ما قبل المغادرة](/prepare)، وقياس تعرّضك الشخصي عبر [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "كم عدد المحامين العاملين في السعودية؟",
+            "a": "يقدّر المرصد نحو 34,000 شخص في الدور، ضمن قطاع المهن العلمية والتقنية والاختصاصية."
+          },
+          {
+            "q": "هل الطلب على المحامين في ارتفاع أم انخفاض؟",
+            "a": "اتجاه مستقبل الوظائف لدى المنتدى الاقتصادي العالمي للمهنة 'مستقر'. ترتيب طلب لعام 2024 غير متوفر في هذه البيانات (غير متوفر)."
+          },
+          {
+            "q": "هل تتنبأ درجة 46.7 بفقدان وظائف فعلي؟",
+            "a": "لا. على المستوى الوطني، تُرجّح 4,450,778 وظيفة بحسب التعرّض للذكاء الاصطناعي، لكن المرصد يشير إلى أن هذا تعرّض مرجّح بالذكاء الاصطناعي — لا خسائر متوقعة. ويُتوقع أن يكون الإزاحة الفعلية أقل، لأن التعزيز يفوق الاستبدال في كثير من الأدوار، بما فيها القانون."
+          },
+          {
+            "q": "هل تفصّل البيانات أي المهام القانونية الأكثر تعرّضاً؟",
+            "a": "لا. تُسنَد درجة 46.7/100 إلى المهنة ككل؛ ولا يُنشر تفصيل مهمة بمهمة في هذه البيانات."
+          }
+        ],
+        "key_takeaway": "يحصل المحامون في السعودية على 46.7/100 لمخاطر الأتمتة بالذكاء الاصطناعي (المرتبة 97 من 237، تعزيز) — التغيّر القريب هو تدفقات عمل مدعومة بالذكاء الاصطناعي وضغط توظيف نطاقات، لا الاستبدال.",
+        "sources": [
+          {
+            "label": "مرصد التحول السعودي — master.json (237 مهنة مقيّمة)",
+            "url": "/career"
+          },
+          {
+            "label": "بيانات الرواتب: Astr 2026 (ريال/شهر، معفاة من الضرائب)",
+            "url": ""
+          },
+          {
+            "label": "منظمة التعاون الاقتصادي والتنمية 2023 — مخاطر الأتمتة في الدول الأعضاء",
+            "url": ""
+          },
+          {
+            "label": "المنتدى الاقتصادي العالمي مستقبل الوظائف — اتجاه المهنة",
+            "url": ""
+          },
+          {
+            "label": "صندوق تنمية الموارد البشرية (هدف) — مسارات إعادة التأهيل وإعانة الأجر",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]

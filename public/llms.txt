@@ -83,6 +83,7 @@ Built by Samy Aloulou (independent), based in Saudi Arabia. The dataset and meth
 ## Insights & Pulse
 
 - [Riyadh Salary to Match Paris: SAR 7,000 Is the Floor](https://www.ksashiftobservatory.online/en/insights/riyadh-salary-needed-to-match-paris-cost-of-living): Need just SAR 7,000/month tax-free to match Paris purchasing power below €4,000 gross. See the full Riyadh break-even salary table by income.
+- [Will AI Replace Lawyers in Saudi Arabia?](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-lawyers-in-saudi-arabia): Saudi lawyers score 46.7/100 on AI automation risk — augmentation, not replacement. See the salary, Nitaqat status, and reskilling data.
 - [Will AI Replace Registered Nurses in Saudi Arabia?](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-registered-nurses-in-saudi-arabia): Registered nurses score 13.6/100 on AI automation risk in Saudi Arabia — rank 9 of 237. See the salary in SAR, Nitaqat status and reskilling tracks.
 - [Will AI Replace Accountants in Saudi Arabia?](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-accountants-in-saudi-arabia): Accounting scores 88.2/100 for AI risk in Saudi Arabia — 7th of 237 jobs. But Nitaqat quotas and tax-free pay change what that means.
 - [AI Layoffs: 14,000 Cut This Week, None in the Gulf](https://www.ksashiftobservatory.online/en/pulse/2026-06-21): U.S. tech firms cut 14,000 jobs this week to fund AI, while the Gulf logged zero AI-layoff events. What the global signal means for Saudi workers.
