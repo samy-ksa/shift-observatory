@@ -1354,5 +1354,229 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-translators-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-08-05",
+    "published_at": "2026-08-05T09:14:06",
+    "keyword": "will AI replace translators in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Translators in Saudi Arabia?. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Translators%20in%20Saudi%20Arabia%3F&subtitle=Saudi%20translators%20score%2073.5/100%20on%20AI%20automation%20risk%20%28rank%2022%20of%20237%29%2C%20a%20reser",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=L%27IA%20va-t-elle%20remplacer%20les%20traducteurs%20en%20Arabie%20saoudite%20%3F&subtitle=Les%20traducteurs%20saoudiens%20obtiennent%2073.5/100%20au%20risque%20d%27automatisation%20IA%20%28ran",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D8%B3%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D8%A7%D9%84%D9%85%D8%AA%D8%B1%D8%AC%D9%85%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F&subtitle=%D9%8A%D8%B3%D8%AC%D9%91%D9%84%20%D8%A7%D9%84%D9%85%D8%AA%D8%B1%D8%AC%D9%85%D9%88%D9%86%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%88%D9%86%2073.5/100%20%D9%81%D9%8A%20%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%20%D8%A7%D9%84%D8%A3%D8%AA%D9%85%D8%AA%D8%A9%20%D8%A8%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%28%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A9%202"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Translators in Saudi Arabia?",
+        "description": "Saudi translators score 73.5/100 on AI automation risk (rank 22 of 237 KSA occupations). See salary bands, Nitaqat status, and reskilling support.",
+        "lede": "Saudi Arabia's translator occupation carries a composite AI automation risk score of 73.5 out of 100, ranking 22nd most exposed among 237 occupations tracked by the KSA Shift Observatory. That places translation in the substitution category — work AI systems can increasingly perform outright rather than merely assist with. The score combines three established automation-risk methodologies: Eloundou et al. (0.95 exposure), Frey-Osborne (38% automation probability), and Felten (rated \"very high\"). Around 12,500 people work as translators nationally, in a role reserved for Saudi nationals under Nitaqat, where Saudization risk is rated low. Pay ranges from SAR 6,000 a month for entry-level translators to SAR 15,000 for senior roles, with a SAR 9,000 median — all tax-free. A high risk score signals rising exposure to automation, not a guaranteed job loss; national reskilling programs already target this shift. The sections below break down what the number means and what support exists.",
+        "h2_sections": [
+          {
+            "q": "Will AI replace translators in Saudi Arabia?",
+            "body": "Not automatically, but the exposure is real and above average. Translation scores 73.5/100 on the [AI Job Risk Dashboard](/career), placing it in the substitution category rather than augmentation — meaning AI tools are positioned to perform the core task, not just support it. The score is built from three independent methodologies that agree on direction: Eloundou et al. put exposure at 0.95, Frey-Osborne estimate a 38% automation probability, and Felten rates the occupation \"very high\" risk. Nationally, the KSA Shift Observatory's methodology note is explicit that AI-weighted exposure (4,450,778 of 12,420,050 GOSI-registered workers) measures how much of the workforce touches AI-exposed tasks, not how many jobs will actually disappear — augmentation is expected to outpace outright substitution for many roles. Translators sit closer to the substitution end of that spectrum than most occupations, which is why the rank is high. Check your own exposure on the [Personal AI Risk Profile](/profile) for a role-specific read."
+          },
+          {
+            "q": "How exposed are translators compared to other Saudi occupations?",
+            "body": "Rank 22 of 237 places translators in the top 10% of the most AI-exposed occupations the Observatory tracks. That ranking reflects the composite score of 73.5/100, driven largely by the Eloundou and Felten inputs, which both flag translation as heavily language-model-addressable work. The dataset does not name which specific occupations sit immediately above or below translators in the ranking, so a direct occupation-by-occupation comparison isn't possible here — the full ranked list is browsable on the [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "What does this mean for translator salaries and demand in KSA?",
+            "body": "Salaries currently span a wide range: SAR 6,000/month at entry level, a SAR 9,000 median, and SAR 15,000 for senior translators, all tax-free (Talent.com, 2025). Roughly 12,500 people are employed as translators nationally, within the Professional, Scientific & Technical sector. The World Economic Forum's Future of Jobs trend for this occupation is listed as decline, though the Observatory's dataset does not include a 2024 demand rank or hiring-volume figures for translators, so near-term hiring momentum isn't quantifiable from this material. Anyone weighing a move for this role can size up living costs with the [Cost of Living & Relocation Calculator](/relocate)."
+          },
+          {
+            "q": "Is the translator role protected by Saudization (Nitaqat) rules?",
+            "body": "Partially, and in a specific way. Translation is classified reserved_saudi_only under Nitaqat, with Nitaqat risk rated low and overall KSA relevance rated moderate. That protects who is allowed to hold the job — non-Saudi nationals are largely excluded from competing for these positions — but Nitaqat governs labor-market access, not technological displacement. A reserved occupation with rising AI exposure can still see task automation and wage pressure even while headcount eligibility rules stay unchanged."
+          },
+          {
+            "q": "How does Saudi Arabia's translator exposure compare to France and Europe?",
+            "body": "The OECD's 2023 estimate puts roughly 27% of jobs across member states at high risk of automation, with clerical and administrative tasks in the highest-exposure band across countries generally. Saudi translators' 73.5/100 composite score sits well above that broad EU high-risk threshold, though the two figures aren't directly comparable — the OECD number is a cross-country share of jobs at high risk, not an occupation-specific score for translators in France or elsewhere. No France- or Europe-specific translator risk score is available in this dataset, so the comparison here is directional (Saudi translation work scores meaningfully above the general high-risk band OECD describes for European clerical-adjacent work), not a like-for-like figure."
+          },
+          {
+            "q": "What reskilling support exists for Saudi translators facing this shift?",
+            "body": "Five HRDF-linked tracks apply. Doroob (E-Training) offers digital reskilling in AI, data, and cloud; SAMAI (AI Literacy) provides a free AI fundamentals certificate through SDAIA; Fuel (SDA) has run over 100,000 trainees through 40+ digital learning tracks; the Professional Certificates Support program reimburses up to SAR 1,350 per approved certification; and Employment Support (Taqat) offers a 30-50% salary subsidy, up to SAR 3,000/month for 24 months, for eligible placements. Anyone planning a transition should also review the [Pre-Departure Checklist](/prepare) for visa and certification steps tied to a role change."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What exactly does the 73.5/100 automation risk score measure?",
+            "a": "It's a composite built from three separate automation-exposure methodologies — Eloundou et al. (language-model task exposure), Frey-Osborne (computerization probability), and Felten (AI-occupational-impact rating) — combined into a single 0-100 score by the KSA Shift Observatory. It measures how exposed the tasks within the occupation are to AI capability, not a probability that the job itself vanishes."
+          },
+          {
+            "q": "Does a high risk score mean translator jobs will disappear?",
+            "a": "No. The Observatory's own methodology note states that AI-weighted exposure figures represent exposure, not predicted job losses, and that augmentation is expected to outpace outright substitution for many roles. This dataset also has no benchmarking of machine-translation error rates against certified human translators — for Khaliji dialect, Modern Standard Arabic, or specialist legal/medical terminology — so it cannot say where AI output currently falls short in practice."
+          },
+          {
+            "q": "How many people work as translators in Saudi Arabia today?",
+            "a": "An estimated 12,500 nationally, within the Professional, Scientific & Technical sector, per the KSA Shift Observatory dataset."
+          },
+          {
+            "q": "Is translation a Saudi-only reserved occupation under Nitaqat?",
+            "a": "Yes — it's classified reserved_saudi_only, with Nitaqat risk rated low, meaning the position is protected from open competition with non-Saudi workers even as AI exposure to the tasks themselves rises."
+          },
+          {
+            "q": "What is the entry-level vs senior salary range for translators in KSA?",
+            "a": "SAR 6,000/month at entry level rising to SAR 15,000/month for senior translators, with a SAR 9,000 median — all figures tax-free (Talent.com, 2025)."
+          }
+        ],
+        "key_takeaway": "Saudi translators score 73.5/100 on AI automation risk (rank 22 of 237), a reserved Nitaqat occupation with low Saudization risk but real task exposure — five HRDF-backed reskilling tracks, including a 30-50% wage subsidy, are already positioned to support the transition.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json dataset (237 occupations scored)",
+            "url": "/career"
+          },
+          {
+            "label": "Talent.com — Saudi Arabia translator salary data, 2025",
+            "url": "https://www.talent.com"
+          },
+          {
+            "label": "OECD — Employment Outlook 2023, automation risk by country",
+            "url": "https://www.oecd.org/employment/future-of-work"
+          }
+        ]
+      },
+      "fr": {
+        "title": "L'IA va-t-elle remplacer les traducteurs en Arabie saoudite ?",
+        "description": "Les traducteurs saoudiens obtiennent 73.5/100 au risque d'automatisation IA (rang 22 sur 237). Salaires, statut Nitaqat, dispositifs de reconversion.",
+        "lede": "Le métier de traducteur en Arabie saoudite affiche un score composite de risque d'automatisation par l'IA de 73.5 sur 100, le plaçant au 22e rang des métiers les plus exposés parmi les 237 suivis par le KSA Shift Observatory. Cela situe la traduction dans la catégorie substitution — un travail que les systèmes d'IA peuvent de plus en plus accomplir purement et simplement, plutôt que simplement assister. Ce score combine trois méthodologies reconnues d'évaluation du risque d'automatisation : Eloundou et al. (exposition de 0.95), Frey-Osborne (probabilité d'automatisation de 38%) et Felten (risque noté « très élevé »). Environ 12,500 personnes exercent comme traducteurs à l'échelle nationale, dans un métier réservé aux ressortissants saoudiens sous le régime Nitaqat, où le risque de Saoudisation est jugé faible. Les rémunérations vont de 6,000 SAR par mois pour un traducteur débutant à 15,000 SAR pour un poste senior, avec une médiane à 9,000 SAR — le tout net d'impôt. Un score de risque élevé signale une exposition croissante à l'automatisation, pas une perte d'emploi garantie ; des programmes nationaux de reconversion ciblent déjà cette transition. Les sections ci-dessous détaillent ce que signifie ce chiffre et les dispositifs de soutien existants.",
+        "h2_sections": [
+          {
+            "q": "L'IA va-t-elle remplacer les traducteurs en Arabie saoudite ?",
+            "body": "Pas automatiquement, mais l'exposition est réelle et supérieure à la moyenne. La traduction obtient 73.5/100 sur le [AI Job Risk Dashboard](/career), la plaçant dans la catégorie substitution plutôt qu'augmentation — ce qui signifie que les outils d'IA sont positionnés pour accomplir la tâche centrale, pas seulement la soutenir. Ce score est construit à partir de trois méthodologies indépendantes qui s'accordent sur la tendance : Eloundou et al. estiment l'exposition à 0.95, Frey-Osborne à une probabilité d'automatisation de 38%, et Felten note le métier à risque « très élevé ». À l'échelle nationale, la note méthodologique du KSA Shift Observatory précise explicitement que l'exposition pondérée par l'IA (4,450,778 sur 12,420,050 travailleurs enregistrés au GOSI) mesure quelle part de la main-d'œuvre touche à des tâches exposées à l'IA, pas combien d'emplois vont réellement disparaître — l'augmentation devrait dépasser la substitution pure pour de nombreux métiers. Les traducteurs se situent plus près de l'extrémité substitution de ce spectre que la plupart des métiers, ce qui explique ce rang élevé. Vérifiez votre propre exposition sur le [Personal AI Risk Profile](/profile) pour une lecture spécifique à votre métier."
+          },
+          {
+            "q": "Quelle est l'exposition des traducteurs comparée aux autres métiers saoudiens ?",
+            "body": "Le rang 22 sur 237 place les traducteurs dans le top 10% des métiers les plus exposés à l'IA suivis par l'Observatoire. Ce classement reflète le score composite de 73.5/100, largement porté par les composantes Eloundou et Felten, qui signalent toutes deux la traduction comme un travail fortement adressable par les modèles de langage. Le jeu de données ne précise pas quels métiers spécifiques se situent immédiatement au-dessus ou en dessous des traducteurs dans le classement ; une comparaison directe métier par métier n'est donc pas possible ici — la liste complète classée est consultable sur le [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "Qu'est-ce que cela signifie pour les salaires et la demande de traducteurs en Arabie saoudite ?",
+            "body": "Les salaires s'étendent actuellement sur une large fourchette : 6,000 SAR/mois en début de carrière, une médiane à 9,000 SAR, et 15,000 SAR pour les traducteurs seniors, le tout net d'impôt (Talent.com, 2025). Environ 12,500 personnes sont employées comme traducteurs à l'échelle nationale, dans le secteur Professionnel, Scientifique & Technique. La tendance du World Economic Forum Future of Jobs pour ce métier est répertoriée comme en déclin, bien que le jeu de données de l'Observatoire n'inclue ni rang de demande 2024 ni chiffres de volume de recrutement pour les traducteurs — la dynamique de recrutement à court terme n'est donc pas quantifiable à partir de ce matériel. Toute personne envisageant une mobilité pour ce métier peut évaluer le coût de la vie avec le [Cost of Living & Relocation Calculator](/relocate)."
+          },
+          {
+            "q": "Le métier de traducteur est-il protégé par les règles de Saoudisation (Nitaqat) ?",
+            "body": "Partiellement, et d'une manière spécifique. La traduction est classée reserved_saudi_only sous Nitaqat, avec un risque Nitaqat noté faible et une pertinence KSA globale notée modérée. Cela protège qui a le droit d'exercer ce métier — les ressortissants non-saoudiens sont largement exclus de la compétition pour ces postes — mais Nitaqat régit l'accès au marché du travail, pas le remplacement technologique. Un métier réservé avec une exposition croissante à l'IA peut malgré tout connaître une automatisation des tâches et une pression salariale, même si les règles d'éligibilité en effectifs restent inchangées."
+          },
+          {
+            "q": "Comment l'exposition des traducteurs saoudiens se compare-t-elle à la France et à l'Europe ?",
+            "body": "L'estimation 2023 de l'OCDE situe environ 27% des emplois des pays membres à haut risque d'automatisation, les tâches administratives et de bureau figurant généralement dans la tranche d'exposition la plus élevée dans tous les pays. Le score composite de 73.5/100 des traducteurs saoudiens se situe nettement au-dessus de ce seuil général de haut risque de l'UE, bien que les deux chiffres ne soient pas directement comparables — le chiffre de l'OCDE est une part transnationale d'emplois à haut risque, pas un score spécifique au métier de traducteur en France ou ailleurs. Aucun score de risque spécifique à la France ou à l'Europe pour les traducteurs n'est disponible dans ce jeu de données ; la comparaison ici est donc directionnelle (le travail de traduction saoudien obtient un score sensiblement supérieur à la tranche générale de haut risque que décrit l'OCDE pour le travail administratif européen apparenté), pas un chiffre strictement comparable."
+          },
+          {
+            "q": "Quels dispositifs de reconversion existent pour les traducteurs saoudiens face à cette transition ?",
+            "body": "Cinq dispositifs liés au HRDF s'appliquent. Doroob (E-Training) propose une reconversion numérique en IA, données et cloud ; SAMAI (AI Literacy) offre un certificat gratuit de fondamentaux en IA via la SDAIA ; Fuel (SDA) a fait passer plus de 100,000 stagiaires à travers 40+ parcours d'apprentissage numérique ; le programme Professional Certificates Support rembourse jusqu'à 1,350 SAR par certification approuvée ; et Employment Support (Taqat) offre une subvention salariale de 30-50%, jusqu'à 3,000 SAR/mois pendant 24 mois, pour les placements éligibles. Toute personne planifiant une transition devrait aussi consulter la [Pre-Departure Checklist](/prepare) pour les démarches de visa et de certification liées à un changement de métier."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Que mesure exactement le score de risque d'automatisation de 73.5/100 ?",
+            "a": "Il s'agit d'un composite construit à partir de trois méthodologies distinctes d'évaluation de l'exposition à l'automatisation — Eloundou et al. (exposition des tâches aux modèles de langage), Frey-Osborne (probabilité d'informatisation) et Felten (notation d'impact IA-métier) — combinées en un score unique de 0 à 100 par le KSA Shift Observatory. Il mesure à quel point les tâches du métier sont exposées aux capacités de l'IA, pas une probabilité que le métier lui-même disparaisse."
+          },
+          {
+            "q": "Un score de risque élevé signifie-t-il que les emplois de traducteur vont disparaître ?",
+            "a": "Non. La note méthodologique de l'Observatoire précise elle-même que les chiffres d'exposition pondérée par l'IA représentent une exposition, pas des pertes d'emploi prédites, et que l'augmentation devrait dépasser la substitution pure pour de nombreux métiers. Ce jeu de données ne comporte pas non plus d'évaluation comparative des taux d'erreur de traduction automatique face aux traducteurs humains certifiés — pour le dialecte khaliji, l'arabe standard moderne, ou la terminologie spécialisée juridique/médicale — il ne peut donc pas indiquer où la production de l'IA est actuellement insuffisante en pratique."
+          },
+          {
+            "q": "Combien de personnes travaillent aujourd'hui comme traducteurs en Arabie saoudite ?",
+            "a": "Une estimation de 12,500 personnes à l'échelle nationale, dans le secteur Professionnel, Scientifique & Technique, selon le jeu de données du KSA Shift Observatory."
+          },
+          {
+            "q": "La traduction est-elle un métier réservé aux Saoudiens sous Nitaqat ?",
+            "a": "Oui — elle est classée reserved_saudi_only, avec un risque Nitaqat noté faible, ce qui signifie que le poste est protégé de la concurrence ouverte avec les travailleurs non-saoudiens, même si l'exposition à l'IA des tâches elles-mêmes augmente."
+          },
+          {
+            "q": "Quelle est la fourchette de salaire entre un traducteur débutant et un traducteur senior en Arabie saoudite ?",
+            "a": "6,000 SAR/mois en début de carrière, jusqu'à 15,000 SAR/mois pour les traducteurs seniors, avec une médiane à 9,000 SAR — tous ces chiffres nets d'impôt (Talent.com, 2025)."
+          }
+        ],
+        "key_takeaway": "Les traducteurs saoudiens obtiennent 73.5/100 au risque d'automatisation IA (rang 22 sur 237), un métier réservé sous Nitaqat avec un risque de Saoudisation faible mais une exposition réelle des tâches — cinq dispositifs de reconversion adossés au HRDF, dont une subvention salariale de 30-50%, sont déjà positionnés pour accompagner la transition.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — jeu de données master.json (237 métiers évalués)",
+            "url": "/career"
+          },
+          {
+            "label": "Talent.com — données salariales des traducteurs en Arabie saoudite, 2025",
+            "url": "https://www.talent.com"
+          },
+          {
+            "label": "OCDE — Perspectives de l'emploi 2023, risque d'automatisation par pays",
+            "url": "https://www.oecd.org/employment/future-of-work"
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل سيحل الذكاء الاصطناعي محل المترجمين في السعودية؟",
+        "description": "يسجل المترجمون في السعودية 73.5 من 100 في مخاطر الأتمتة (المرتبة 22 من 237 مهنة). اطّلع على الرواتب ووضع النطاقات ودعم إعادة التأهيل.",
+        "lede": "تحمل مهنة الترجمة في السعودية درجة مخاطر أتمتة مركّبة تبلغ 73.5 من 100، وهو ما يضعها في المرتبة 22 الأكثر عرضة من بين 237 مهنة يتابعها مرصد Shift للسعودية. هذا يضع الترجمة في فئة \"الإحلال\" — أعمال يمكن لأنظمة الذكاء الاصطناعي أداءها بشكل متزايد بالكامل بدلاً من مجرد المساعدة فيها. تجمع الدرجة بين ثلاث منهجيات معتمدة لتقييم مخاطر الأتمتة: منهجية Eloundou وزملائه (تعرّض 0.95)، ومنهجية Frey-Osborne (احتمال أتمتة 38%)، وتقييم Felten (\"مرتفع جداً\"). يعمل نحو 12,500 شخص كمترجمين على المستوى الوطني، في مهنة مقصورة على المواطنين السعوديين بموجب نظام نطاقات، حيث تُصنَّف مخاطر السعودة بأنها منخفضة. تتراوح الرواتب بين 6,000 ريال سعودي شهرياً للمترجمين المبتدئين و15,000 ريال للمناصب العليا، بمتوسط قدره 9,000 ريال — وجميعها معفاة من الضريبة. ارتفاع درجة المخاطر يشير إلى تصاعد التعرض للأتمتة، لا إلى فقدان مؤكد للوظائف؛ إذ تستهدف برامج إعادة التأهيل الوطنية بالفعل هذا التحول. تستعرض الأقسام أدناه دلالة هذا الرقم والدعم المتاح.",
+        "h2_sections": [
+          {
+            "q": "هل سيحل الذكاء الاصطناعي محل المترجمين في السعودية؟",
+            "body": "ليس بشكل تلقائي، لكن التعرض حقيقي وأعلى من المتوسط. تسجّل الترجمة 73.5/100 على [لوحة مخاطر الوظائف من الذكاء الاصطناعي](/career)، ما يضعها في فئة الإحلال بدلاً من التعزيز — أي أن أدوات الذكاء الاصطناعي في موضع يؤهلها لأداء المهمة الأساسية، لا مجرد دعمها. تُبنى الدرجة من ثلاث منهجيات مستقلة تتفق في الاتجاه: يضع Eloundou وزملاؤه التعرض عند 0.95، ويقدّر Frey-Osborne احتمال أتمتة بنسبة 38%، ويصنّف Felten المهنة على أنها ذات مخاطر \"مرتفعة جداً\". على المستوى الوطني، توضح مذكرة منهجية مرصد Shift للسعودية صراحةً أن التعرض المرجَّح بالذكاء الاصطناعي (4,450,778 من أصل 12,420,050 عاملاً مسجلاً في التأمينات الاجتماعية) يقيس مدى ملامسة القوى العاملة لمهام معرّضة للذكاء الاصطناعي، لا عدد الوظائف التي ستختفي فعلياً — إذ يُتوقع أن يتفوق التعزيز على الإحلال الكامل في كثير من المهن. يقف المترجمون أقرب إلى طرف الإحلال في هذا الطيف مقارنة بمعظم المهن، ولهذا جاء ترتيبهم مرتفعاً. تحقق من درجة تعرضك الخاصة عبر [الملف الشخصي لمخاطر الذكاء الاصطناعي](/profile) للحصول على قراءة خاصة بمهنتك."
+          },
+          {
+            "q": "ما مدى تعرض المترجمين مقارنة بمهن سعودية أخرى؟",
+            "body": "يضع الترتيب 22 من أصل 237 المترجمين ضمن أعلى 10% من المهن الأكثر تعرضاً للذكاء الاصطناعي التي يتابعها المرصد. يعكس هذا الترتيب الدرجة المركّبة البالغة 73.5/100، المدفوعة إلى حد كبير بمُدخلَي Eloundou وFelten، اللذين يشيران كلاهما إلى أن الترجمة عمل قابل للتأثر بشدة بنماذج اللغة. لا يحدد مجموعة البيانات أسماء المهن التي تقع مباشرة فوق أو تحت المترجمين في الترتيب، لذا لا يمكن هنا إجراء مقارنة مباشرة بين مهنة وأخرى — يمكن تصفح القائمة الكاملة المرتّبة على [لوحة مخاطر الوظائف من الذكاء الاصطناعي](/career)."
+          },
+          {
+            "q": "ما الذي يعنيه هذا لرواتب المترجمين والطلب عليهم في السعودية؟",
+            "body": "تتراوح الرواتب حالياً ضمن نطاق واسع: 6,000 ريال شهرياً عند مستوى الدخول، ومتوسط قدره 9,000 ريال، و15,000 ريال لكبار المترجمين، وجميعها معفاة من الضريبة (Talent.com، 2025). يعمل نحو 12,500 شخص كمترجمين على المستوى الوطني، ضمن القطاع المهني والعلمي والتقني. يُصنَّف اتجاه هذه المهنة في تقرير مستقبل الوظائف الصادر عن المنتدى الاقتصادي العالمي بأنه \"تراجع\"، إلا أن بيانات المرصد لا تتضمن ترتيب طلب لعام 2024 أو أرقام حجم توظيف للمترجمين، لذا لا يمكن قياس زخم التوظيف في المدى القريب من هذه المادة. يمكن لمن يفكر في الانتقال لهذه المهنة تقدير تكاليف المعيشة عبر [حاسبة تكلفة المعيشة والانتقال](/relocate)."
+          },
+          {
+            "q": "هل مهنة الترجمة محمية بقواعد السعودة (نطاقات)؟",
+            "body": "جزئياً، وبطريقة محددة. تُصنَّف الترجمة ضمن فئة \"مقصورة على السعوديين\" بموجب نظام نطاقات، مع تصنيف مخاطر نطاقات بأنها منخفضة وأهمية إجمالية للسعودية بأنها متوسطة. يحمي هذا من يحق له شغل الوظيفة — إذ يُستبعد غير السعوديين إلى حد كبير من التنافس على هذه المناصب — لكن نطاقات ينظم الوصول إلى سوق العمل، لا الإحلال التكنولوجي. فمهنة محجوزة مع تصاعد التعرض للذكاء الاصطناعي قد تشهد مع ذلك أتمتة للمهام وضغطاً على الأجور حتى مع بقاء قواعد أهلية التوظيف دون تغيير."
+          },
+          {
+            "q": "كيف يقارَن تعرض المترجمين في السعودية بفرنسا وأوروبا؟",
+            "body": "يقدّر تقرير منظمة التعاون الاقتصادي والتنمية لعام 2023 أن نحو 27% من الوظائف عبر الدول الأعضاء معرّضة بشدة لخطر الأتمتة، مع وقوع المهام الكتابية والإدارية عموماً ضمن الفئة الأعلى تعرضاً في مختلف الدول. تقف درجة المترجمين السعوديين المركّبة البالغة 73.5/100 أعلى بوضوح من عتبة المخاطر المرتفعة العامة في الاتحاد الأوروبي، رغم أن الرقمين غير قابلين للمقارنة المباشرة — فرقم منظمة التعاون هو نسبة عبر الدول للوظائف عالية المخاطر، وليس درجة خاصة بمهنة الترجمة في فرنسا أو غيرها. لا تتوفر في هذه البيانات درجة مخاطر خاصة بالمترجمين في فرنسا أو أوروبا، لذا فإن المقارنة هنا اتجاهية فقط (تسجّل الترجمة السعودية أعلى بشكل ملموس من الفئة العامة عالية المخاطر التي تصفها منظمة التعاون للأعمال الكتابية الأوروبية المشابهة)، وليست رقماً مطابقاً للمقارنة المباشرة."
+          },
+          {
+            "q": "ما الدعم المتاح لإعادة تأهيل المترجمين السعوديين في مواجهة هذا التحول؟",
+            "body": "تنطبق خمسة مسارات مرتبطة بصندوق تنمية الموارد البشرية (هدف). يقدّم برنامج دروب (التدريب الإلكتروني) إعادة تأهيل رقمياً في الذكاء الاصطناعي والبيانات والحوسبة السحابية؛ ويوفر برنامج سامي (محو الأمية في الذكاء الاصطناعي) شهادة مجانية في أساسيات الذكاء الاصطناعي عبر سدايا؛ وقد أهّل برنامج وقود (الأكاديمية السعودية الرقمية) أكثر من 100,000 متدرب عبر أكثر من 40 مساراً تعليمياً رقمياً؛ ويعوّض برنامج دعم الشهادات المهنية حتى 1,350 ريال سعودي لكل شهادة معتمدة؛ ويقدّم برنامج دعم التوظيف (طاقات) دعماً للأجر بنسبة 30-50%، بحد أقصى 3,000 ريال شهرياً لمدة 24 شهراً، للتوظيفات المؤهلة. ينبغي أيضاً لكل من يخطط للانتقال مراجعة [قائمة التحقق قبل السفر](/prepare) لخطوات التأشيرة والشهادات المرتبطة بتغيير المهنة."
+          }
+        ],
+        "faq": [
+          {
+            "q": "ما الذي تقيسه بالضبط درجة مخاطر الأتمتة البالغة 73.5/100؟",
+            "a": "هي درجة مركّبة مبنية من ثلاث منهجيات منفصلة لتقييم التعرض للأتمتة — Eloundou وزملاؤه (تعرض المهام لنماذج اللغة)، وFrey-Osborne (احتمال الحوسبة)، وFelten (تقييم أثر الذكاء الاصطناعي على المهن) — تُدمج في درجة واحدة من 0 إلى 100 عبر مرصد Shift للسعودية. تقيس مدى تعرض المهام داخل المهنة لقدرات الذكاء الاصطناعي، لا احتمال اختفاء الوظيفة نفسها."
+          },
+          {
+            "q": "هل تعني درجة المخاطر المرتفعة أن وظائف المترجمين ستختفي؟",
+            "a": "لا. تنص مذكرة منهجية المرصد نفسها على أن أرقام التعرض المرجَّح بالذكاء الاصطناعي تمثّل تعرضاً، لا فقداناً متوقعاً للوظائف، وأن التعزيز يُتوقع أن يتفوق على الإحلال الكامل في كثير من المهن. كما لا تتضمن هذه البيانات أي مقارنة مرجعية لمعدلات خطأ الترجمة الآلية مقابل المترجمين البشريين المعتمدين — سواء للهجة الخليجية أو العربية الفصحى الحديثة أو المصطلحات القانونية والطبية المتخصصة — لذا لا يمكنها تحديد أين يقصر أداء الذكاء الاصطناعي حالياً في الممارسة العملية."
+          },
+          {
+            "q": "كم عدد العاملين كمترجمين في السعودية اليوم؟",
+            "a": "يُقدَّر العدد بنحو 12,500 شخص على المستوى الوطني، ضمن القطاع المهني والعلمي والتقني، وفق بيانات مرصد Shift للسعودية."
+          },
+          {
+            "q": "هل الترجمة مهنة مقصورة على السعوديين بموجب نظام نطاقات؟",
+            "a": "نعم — تُصنَّف ضمن فئة \"مقصورة على السعوديين\"، مع تصنيف مخاطر نطاقات بأنها منخفضة، ما يعني أن الوظيفة محمية من المنافسة المفتوحة مع العمالة غير السعودية حتى مع ارتفاع تعرض المهام نفسها للذكاء الاصطناعي."
+          },
+          {
+            "q": "ما نطاق الراتب بين المستوى المبتدئ والأعلى للمترجمين في السعودية؟",
+            "a": "6,000 ريال سعودي شهرياً عند مستوى الدخول، يرتفع إلى 15,000 ريال شهرياً لكبار المترجمين، بمتوسط قدره 9,000 ريال — وجميع الأرقام معفاة من الضريبة (Talent.com، 2025)."
+          }
+        ],
+        "key_takeaway": "يسجّل المترجمون السعوديون 73.5/100 في مخاطر الأتمتة بالذكاء الاصطناعي (المرتبة 22 من 237)، وهي مهنة محجوزة بموجب نطاقات بمخاطر سعودة منخفضة لكن بتعرض حقيقي للمهام — وتقف خمسة مسارات لإعادة التأهيل مدعومة من هدف، من بينها دعم أجر بنسبة 30-50%، جاهزة بالفعل لدعم هذا التحول.",
+        "sources": [
+          {
+            "label": "مرصد Shift للسعودية — مجموعة بيانات master.json (237 مهنة مُقيَّمة)",
+            "url": "/career"
+          },
+          {
+            "label": "Talent.com — بيانات رواتب المترجمين في السعودية، 2025",
+            "url": "https://www.talent.com"
+          },
+          {
+            "label": "منظمة التعاون الاقتصادي والتنمية (OECD) — تقرير آفاق التوظيف 2023، مخاطر الأتمتة حسب الدولة",
+            "url": "https://www.oecd.org/employment/future-of-work"
+          }
+        ]
+      }
+    }
   }
 ]
