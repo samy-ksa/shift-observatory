@@ -1130,5 +1130,229 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-graphic-designers-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-07-22",
+    "published_at": "2026-07-22T09:13:56",
+    "keyword": "will AI replace graphic designers in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Will AI Replace Graphic Designers in Saudi Arabia? 51.5/100. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Will%20AI%20Replace%20Graphic%20Designers%20in%20Saudi%20Arabia%3F%2051.5/100&subtitle=Graphic%20design%20in%20Saudi%20Arabia%20is%20a%20mid-table%20AI-risk%20occupation%20%E2%80%94%2051.5/100%2C%20ran",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=IA%20et%20graphistes%20en%20Arabie%20Saoudite%20%3A%20un%20risque%20de%2051.5/100&subtitle=Le%20design%20graphique%20en%20Arabie%20Saoudite%20est%20un%20m%C3%A9tier%20%C3%A0%20risque%20IA%20de%20milieu%20de%20ta",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%87%D9%84%20%D8%B3%D9%8A%D8%AD%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%AD%D9%84%20%D9%85%D8%B5%D9%85%D9%85%D9%8A%20%D8%A7%D9%84%D8%AC%D8%B1%D8%A7%D9%81%D9%8A%D9%83%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%D8%9F%2051.5/100&subtitle=%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D8%AC%D8%B1%D8%A7%D9%81%D9%8A%D9%83%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D9%85%D9%87%D9%86%D8%A9%20%D9%85%D8%AA%D9%88%D8%B3%D8%B7%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%E2%80%94%2051.5/"
+    },
+    "langs": {
+      "en": {
+        "title": "Will AI Replace Graphic Designers in Saudi Arabia? 51.5/100",
+        "description": "Graphic designers in Saudi Arabia score 51.5/100 for AI risk: tasks erode, jobs persist. Salaries in SAR, Nitaqat status, and HRDF funding to adapt.",
+        "lede": "Partially — and the measured version of that answer is 51.5 out of 100. That is the composite AI automation risk score for graphic designers in Saudi Arabia in the KSA Shift Observatory dataset: rank 91 of 237 occupations, in the \"partial substitution\" band. The realistic reading is task erosion rather than job elimination — AI absorbs a growing share of production work while the occupation itself persists in redefined form.\n\nThe stakes are concrete. An estimated 32,000 people hold the job nationally, at a median salary of SAR 9,000 per month, tax-free. The World Economic Forum rates the occupation's global trend as declining, and Saudi Arabia's HRDF already funds two retraining routes relevant to designers. What follows: the score decoded, salaries by seniority, the Nitaqat position, and how the exposure reads against the OECD's European benchmark.",
+        "h2_sections": [
+          {
+            "q": "What does a 51.5/100 AI risk score actually mean for designers?",
+            "body": "It means partial substitution, almost exactly at the dataset's midpoint: rank 91 of 237 occupations scored by the KSA Shift Observatory. In practice, AI tools take over a growing share of production tasks — layout variants, resizing, routine visuals — while brief interpretation, client judgement and art direction remain human for now.\n\nThe composite draws on three academic measures:\n\n- **Eloundou** (task-level LLM exposure): 0.85\n- **Frey–Osborne** (computerisation probability): 4.3%\n- **Felten** (AI occupational exposure): \"high\"\n\nNote the spread: Frey–Osborne's 4.3% alone would suggest near-immunity, while Eloundou's 0.85 signals heavy task exposure. The composite sits between them. All 237 occupation scores are browsable on the [AI Job Risk Dashboard](/career), where the dataset rates this occupation's KSA relevance as moderate."
+          },
+          {
+            "q": "What do graphic designers earn in Saudi Arabia?",
+            "body": "Per Astr 2026 data, monthly salaries in SAR — all tax-free, as Saudi Arabia levies no personal income tax on wages:\n\n- **Entry level:** SAR 5,000\n- **Median:** SAR 9,000\n- **Senior:** SAR 15,000\n\nWhat those figures buy depends heavily on housing and city; the [Cost of Living & Relocation Calculator](/relocate) converts an offer into an actual monthly budget. The dataset places the occupation in the Professional, Scientific & Technical sector, with an estimated 32,000 practitioners nationally."
+          },
+          {
+            "q": "Does Nitaqat protect graphic design jobs?",
+            "body": "Only indirectly. The occupation operates under a Nitaqat sector quota (Professional, Scientific & Technical), and the dataset rates its Nitaqat risk as low — Saudization quota pressure on this specific occupation is limited.\n\nThat changes where the risk actually sits. For a designer in the Kingdom, the pressure to watch is technological: a 51.5/100 automation score and a WEF-classified global decline in demand weigh more than regulatory quotas do. Nitaqat shapes who fills roles; AI is reshaping how many production roles exist."
+          },
+          {
+            "q": "How does the risk compare with France and Europe?",
+            "body": "At 51.5/100, Saudi-based graphic design sits in a middle band — outside the highest-exposure zone in both geographies. The OECD's 2023 estimate puts roughly 27% of jobs across member states at high risk of automation, with clerical and administrative tasks occupying the top exposure band; graphic design is not part of that band in either dataset.\n\nOne caveat on commensurability: the OECD counts jobs above a high-risk threshold, while the Observatory scores each occupation out of 100, so the comparison supports a relative reading only. At national scale, Saudi Arabia's AI-weighted exposure covers 4,450,778 of 12,420,050 GOSI-registered jobs — a figure the dataset explicitly frames as exposure, not predicted job losses, since augmentation will outweigh substitution for many roles."
+          },
+          {
+            "q": "What retraining support exists for designers in Saudi Arabia?",
+            "body": "Two funded routes, both run by the Human Resources Development Fund (HRDF):\n\n- **Professional Certificates Support** — reimburses up to SAR 1,350 per approved certification.\n- **Employment Support (Taqat)** — a wage subsidy covering 30–50% of salary, up to SAR 3,000/month, for 24 months.\n\nThe first funds an individual credential; the second lowers an employer's cost of staffing a role — including a redefined, AI-adjacent one. Designers planning a move should settle certification paperwork early ([Pre-Departure Checklist](/prepare) covers attestation), and the [Personal AI Risk Profile](/profile) maps which of your specific tasks carry the 51.5-score exposure — the practical starting point for choosing what to certify in."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Is AI already pushing designer salaries down in Saudi Arabia?",
+            "a": "Not measurably, on current data. The salary figures in the dataset (Astr 2026) are a single-point snapshot; no salary time series exists in the material, so no AI-driven pay trend can be read from it. The WEF's \"decline\" classification refers to global demand direction for the occupation, and does not measure Saudi pay levels."
+          },
+          {
+            "q": "How is the 51.5/100 score constructed?",
+            "a": "It is a composite of three published academic measures: Eloundou task-level LLM exposure (0.85), the Frey–Osborne computerisation probability (4.3%), and the Felten AI occupational exposure index (\"high\"). The dataset reports these inputs and the resulting composite for each of its 237 occupations."
+          },
+          {
+            "q": "Does the score cover freelance or AI-augmented design roles?",
+            "a": "The dataset scores the classic salaried occupation only; freelance work and hybrid roles are not separately scored. That is a real limit: the role most likely to emerge from this transition — designer as AI art director — has no score of its own yet."
+          },
+          {
+            "q": "Is local demand for graphic designers growing?",
+            "a": "The dataset's 2024 Saudi demand rank for the occupation is n/d — no local demand curve is available. What is known: an estimated 32,000 people currently work in the occupation nationally, and the WEF Future of Jobs trend classifies the occupation as globally declining."
+          }
+        ],
+        "key_takeaway": "Graphic design in Saudi Arabia is a mid-table AI-risk occupation — 51.5/100, rank 91 of 237. The job survives; its production tasks don't. With a tax-free median of SAR 9,000 and HRDF funding both certifications and 24-month wage-subsidised transitions, the rational response is repositioning toward the tasks AI can't own before the WEF-flagged decline compounds.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json, 237 occupations scored (composite AI-risk methodology)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — Saudi salary benchmarks for graphic designers (SAR/month)",
+            "url": "/job/graphic-designers"
+          },
+          {
+            "label": "OECD Employment Outlook 2023 — automation risk across member states",
+            "url": "https://www.oecd.org"
+          },
+          {
+            "label": "WEF Future of Jobs — occupation trend classification",
+            "url": "https://www.weforum.org"
+          },
+          {
+            "label": "HRDF — Professional Certificates Support & Employment Support (Taqat)",
+            "url": "https://www.hrdf.org.sa"
+          }
+        ]
+      },
+      "fr": {
+        "title": "IA et graphistes en Arabie Saoudite : un risque de 51.5/100",
+        "description": "Les graphistes en Arabie Saoudite affichent un risque IA de 51.5/100 : les tâches s'érodent, l'emploi persiste. Salaires en SAR, Nitaqat et aides HRDF.",
+        "lede": "Partiellement — et la version chiffrée de cette réponse est 51.5 sur 100. C'est le score composite de risque d'automatisation par l'IA des graphistes en Arabie Saoudite dans les données du KSA Shift Observatory : rang 91 sur 237 métiers, dans la bande « substitution partielle ». La lecture réaliste est une érosion des tâches plutôt qu'une suppression du métier — l'IA absorbe une part croissante du travail de production tandis que la profession elle-même persiste sous une forme redéfinie.\n\nLes enjeux sont concrets. Environ 32,000 personnes exercent ce métier à l'échelle nationale, pour un salaire médian de 9,000 SAR par mois, net d'impôt. Le Forum économique mondial classe la tendance mondiale du métier en déclin, et le HRDF saoudien finance déjà deux parcours de reconversion pertinents pour les designers. Au programme : le score décodé, les salaires par niveau d'expérience, la position Nitaqat, et la lecture de cette exposition face au référentiel européen de l'OCDE.",
+        "h2_sections": [
+          {
+            "q": "Que signifie concrètement un score de risque IA de 51.5/100 pour les graphistes ?",
+            "body": "Il signifie une substitution partielle, presque exactement au point médian du jeu de données : rang 91 sur 237 métiers évalués par le KSA Shift Observatory. En pratique, les outils d'IA prennent en charge une part croissante des tâches de production — déclinaisons de maquettes, redimensionnements, visuels de routine — tandis que l'interprétation du brief, le jugement client et la direction artistique restent humains pour l'instant.\n\nLe score composite s'appuie sur trois mesures académiques :\n\n- **Eloundou** (exposition aux LLM au niveau des tâches) : 0.85\n- **Frey–Osborne** (probabilité d'informatisation) : 4.3%\n- **Felten** (exposition professionnelle à l'IA) : « élevée »\n\nNotez l'écart : les 4.3% de Frey–Osborne suggéreraient à eux seuls une quasi-immunité, tandis que le 0.85 d'Eloundou signale une forte exposition des tâches. Le composite se situe entre les deux. Les scores des 237 métiers sont consultables sur le [tableau de bord du risque IA par métier](/career), où le jeu de données évalue la pertinence KSA de ce métier comme modérée."
+          },
+          {
+            "q": "Combien gagnent les graphistes en Arabie Saoudite ?",
+            "body": "Selon les données Astr 2026, salaires mensuels en SAR — tous nets d'impôt, l'Arabie Saoudite ne prélevant aucun impôt sur le revenu des salaires :\n\n- **Débutant :** SAR 5,000\n- **Médian :** SAR 9,000\n- **Senior :** SAR 15,000\n\nCe que ces montants permettent réellement dépend fortement du logement et de la ville ; le [calculateur de coût de la vie et de relocalisation](/relocate) convertit une offre en budget mensuel réel. Le jeu de données classe le métier dans le secteur Professionnel, Scientifique & Technique, avec environ 32,000 praticiens à l'échelle nationale."
+          },
+          {
+            "q": "Nitaqat protège-t-il les emplois du design graphique ?",
+            "body": "Seulement indirectement. Le métier relève d'un quota sectoriel Nitaqat (Professionnel, Scientifique & Technique), et le jeu de données évalue son risque Nitaqat comme faible — la pression des quotas de saoudisation sur ce métier précis est limitée.\n\nCela déplace l'endroit où se situe réellement le risque. Pour un designer dans le Royaume, la pression à surveiller est technologique : un score d'automatisation de 51.5/100 et un déclin mondial de la demande classé par le WEF pèsent davantage que les quotas réglementaires. Nitaqat détermine qui occupe les postes ; l'IA redéfinit combien de postes de production existent."
+          },
+          {
+            "q": "Comment le risque se compare-t-il à la France et à l'Europe ?",
+            "body": "À 51.5/100, le design graphique en Arabie Saoudite se situe dans une bande intermédiaire — hors de la zone d'exposition maximale dans les deux géographies. L'estimation 2023 de l'OCDE place environ 27% des emplois des États membres à haut risque d'automatisation, les tâches administratives et de bureau occupant la bande d'exposition la plus élevée ; le design graphique n'en fait partie dans aucun des deux jeux de données.\n\nUne réserve sur la comparabilité : l'OCDE compte les emplois au-delà d'un seuil de haut risque, tandis que l'Observatory note chaque métier sur 100 — la comparaison ne permet donc qu'une lecture relative. À l'échelle nationale, l'exposition pondérée par l'IA de l'Arabie Saoudite couvre 4,450,778 des 12,420,050 emplois enregistrés à la GOSI — un chiffre que le jeu de données présente explicitement comme une exposition, et non des pertes d'emplois prédites, l'augmentation l'emportant sur la substitution pour de nombreux rôles."
+          },
+          {
+            "q": "Quels dispositifs de reconversion existent pour les designers en Arabie Saoudite ?",
+            "body": "Deux parcours financés, tous deux gérés par le Human Resources Development Fund (HRDF) :\n\n- **Professional Certificates Support** — rembourse jusqu'à SAR 1,350 par certification approuvée.\n- **Employment Support (Taqat)** — une subvention salariale couvrant 30–50% du salaire, jusqu'à SAR 3,000/mois, pendant 24 mois.\n\nLe premier finance une certification individuelle ; le second réduit le coût, pour un employeur, de pourvoir un poste — y compris un poste redéfini, adjacent à l'IA. Les designers qui préparent leur installation ont intérêt à régler tôt les formalités de certification (la [check-list avant départ](/prepare) couvre l'attestation), et le [profil de risque IA personnalisé](/profile) cartographie lesquelles de vos tâches spécifiques portent l'exposition du score 51.5 — le point de départ pratique pour choisir dans quoi se certifier."
+          }
+        ],
+        "faq": [
+          {
+            "q": "L'IA fait-elle déjà baisser les salaires des designers en Arabie Saoudite ?",
+            "a": "Pas de façon mesurable, sur les données actuelles. Les chiffres de salaires du jeu de données (Astr 2026) sont un instantané ponctuel ; aucune série temporelle de salaires n'existe dans le matériau, donc aucune tendance salariale liée à l'IA ne peut en être déduite. Le classement « déclin » du WEF renvoie à la direction mondiale de la demande pour le métier et ne mesure pas les niveaux de rémunération saoudiens."
+          },
+          {
+            "q": "Comment le score de 51.5/100 est-il construit ?",
+            "a": "C'est un composite de trois mesures académiques publiées : l'exposition aux LLM au niveau des tâches d'Eloundou (0.85), la probabilité d'informatisation de Frey–Osborne (4.3%), et l'indice d'exposition professionnelle à l'IA de Felten (« élevée »). Le jeu de données publie ces entrées et le composite qui en résulte pour chacun de ses 237 métiers."
+          },
+          {
+            "q": "Le score couvre-t-il les rôles freelance ou augmentés par l'IA ?",
+            "a": "Le jeu de données ne note que le métier salarié classique ; le travail freelance et les rôles hybrides ne sont pas notés séparément. C'est une vraie limite : le rôle le plus susceptible d'émerger de cette transition — le designer comme directeur artistique de l'IA — n'a pas encore de score propre."
+          },
+          {
+            "q": "La demande locale de graphistes est-elle en croissance ?",
+            "a": "Le rang de demande saoudienne 2024 du métier dans le jeu de données est n/d — aucune courbe de demande locale n'est disponible. Ce qui est connu : environ 32,000 personnes exercent actuellement ce métier à l'échelle nationale, et la tendance WEF Future of Jobs classe le métier en déclin mondial."
+          }
+        ],
+        "key_takeaway": "Le design graphique en Arabie Saoudite est un métier à risque IA de milieu de tableau — 51.5/100, rang 91 sur 237. Le métier survit ; ses tâches de production, non. Avec un salaire médian net d'impôt de SAR 9,000 et le HRDF finançant à la fois les certifications et des transitions subventionnées sur 24 mois, la réponse rationnelle est un repositionnement vers les tâches que l'IA ne peut pas s'approprier, avant que le déclin signalé par le WEF ne s'accentue.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory — master.json, 237 métiers évalués (méthodologie composite du risque IA)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — référentiels salariaux saoudiens pour les graphistes (SAR/mois)",
+            "url": "/job/graphic-designers"
+          },
+          {
+            "label": "OECD Employment Outlook 2023 — risque d'automatisation dans les États membres",
+            "url": "https://www.oecd.org"
+          },
+          {
+            "label": "WEF Future of Jobs — classification des tendances par métier",
+            "url": "https://www.weforum.org"
+          },
+          {
+            "label": "HRDF — Professional Certificates Support & Employment Support (Taqat)",
+            "url": "https://www.hrdf.org.sa"
+          }
+        ]
+      },
+      "ar": {
+        "title": "هل سيحل الذكاء الاصطناعي محل مصممي الجرافيك في السعودية؟ 51.5/100",
+        "description": "مصممو الجرافيك في السعودية يسجلون 51.5/100 في مخاطر الذكاء الاصطناعي: المهام تتآكل والوظائف تبقى. الرواتب بالريال، وضع نطاقات، وتمويل هدف للتكيف.",
+        "lede": "جزئياً — والصيغة المقاسة لهذه الإجابة هي 51.5 من 100. هذه هي الدرجة المركّبة لمخاطر الأتمتة بالذكاء الاصطناعي لمصممي الجرافيك في المملكة العربية السعودية ضمن بيانات مرصد KSA Shift Observatory: المرتبة 91 من أصل 237 مهنة، ضمن نطاق «الإحلال الجزئي». القراءة الواقعية هي تآكل المهام لا إلغاء الوظيفة — إذ يستوعب الذكاء الاصطناعي حصة متزايدة من أعمال الإنتاج بينما تستمر المهنة نفسها بشكل معاد تعريفه.\n\nالرهانات ملموسة. يُقدَّر عدد العاملين في هذه المهنة بنحو 32,000 شخص على المستوى الوطني، براتب وسيط قدره 9,000 ريال سعودي شهرياً معفى من الضرائب. يصنّف المنتدى الاقتصادي العالمي الاتجاه العالمي للمهنة بأنه في تراجع، ويموّل صندوق تنمية الموارد البشرية (هدف) في السعودية بالفعل مسارين لإعادة التدريب يناسبان المصممين. فيما يلي: تفكيك الدرجة، والرواتب حسب الأقدمية، وموقع نطاقات، وكيف تُقرأ درجة التعرض مقارنة بالمعيار الأوروبي لمنظمة التعاون الاقتصادي والتنمية.",
+        "h2_sections": [
+          {
+            "q": "ماذا تعني درجة مخاطر 51.5/100 فعلياً للمصممين؟",
+            "body": "تعني إحلالاً جزئياً، عند منتصف مجموعة البيانات تقريباً: المرتبة 91 من أصل 237 مهنة قيّمها مرصد KSA Shift Observatory. عملياً، تتولى أدوات الذكاء الاصطناعي حصة متزايدة من مهام الإنتاج — نسخ التخطيط، وتغيير المقاسات، والمرئيات الروتينية — بينما يبقى تفسير الموجز الإبداعي والحكم مع العميل والإدارة الفنية بيد الإنسان حتى الآن.\n\nتستند الدرجة المركّبة إلى ثلاثة مقاييس أكاديمية:\n\n- **Eloundou** (التعرض لنماذج اللغة الكبيرة على مستوى المهام): 0.85\n- **Frey–Osborne** (احتمال الحوسبة): 4.3%\n- **Felten** (التعرض المهني للذكاء الاصطناعي): «مرتفع»\n\nلاحظ التباين: نسبة 4.3% لدى Frey–Osborne وحدها توحي بحصانة شبه كاملة، بينما تشير 0.85 لدى Eloundou إلى تعرض كثيف للمهام. وتقع الدرجة المركّبة بينهما. يمكن تصفح درجات المهن الـ237 كلها على [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career)، حيث تصنّف مجموعة البيانات صلة هذه المهنة بالسعودية بأنها متوسطة."
+          },
+          {
+            "q": "كم يتقاضى مصممو الجرافيك في السعودية؟",
+            "body": "وفق بيانات Astr 2026، الرواتب الشهرية بالريال السعودي — وكلها معفاة من الضرائب، إذ لا تفرض السعودية ضريبة دخل شخصية على الأجور:\n\n- **مستوى الدخول:** 5,000 ريال سعودي\n- **الوسيط:** 9,000 ريال سعودي\n- **المستوى المتقدم:** 15,000 ريال سعودي\n\nما تشتريه هذه الأرقام يعتمد كثيراً على السكن والمدينة؛ وتحوّل [حاسبة تكلفة المعيشة والانتقال](/relocate) العرض الوظيفي إلى ميزانية شهرية فعلية. وتضع مجموعة البيانات المهنة في قطاع الأنشطة المهنية والعلمية والتقنية، بعدد ممارسين يُقدَّر بنحو 32,000 على المستوى الوطني."
+          },
+          {
+            "q": "هل تحمي نطاقات وظائف تصميم الجرافيك؟",
+            "body": "بشكل غير مباشر فقط. تعمل المهنة ضمن حصة قطاعية في نطاقات (الأنشطة المهنية والعلمية والتقنية)، وتصنّف مجموعة البيانات مخاطر نطاقات لديها بأنها منخفضة — فضغط حصص السعودة على هذه المهنة تحديداً محدود.\n\nهذا يغيّر موضع الخطر الفعلي. فبالنسبة لمصمم في المملكة، الضغط الواجب مراقبته تقني: درجة أتمتة 51.5/100 وتراجع عالمي في الطلب بحسب تصنيف المنتدى الاقتصادي العالمي يزنان أكثر مما تزنه الحصص التنظيمية. نطاقات تحدد من يشغل الأدوار؛ بينما يعيد الذكاء الاصطناعي تشكيل عدد أدوار الإنتاج الموجودة أصلاً."
+          },
+          {
+            "q": "كيف تُقارن المخاطر مع فرنسا وأوروبا؟",
+            "body": "بدرجة 51.5/100، يقع تصميم الجرافيك في السعودية ضمن نطاق متوسط — خارج منطقة التعرض الأعلى في كلتا الجغرافيتين. فتقدير منظمة التعاون الاقتصادي والتنمية لعام 2023 يضع نحو 27% من الوظائف في الدول الأعضاء ضمن خطر مرتفع للأتمتة، مع احتلال المهام الكتابية والإدارية النطاق الأعلى تعرضاً؛ وتصميم الجرافيك ليس جزءاً من ذلك النطاق في أي من مجموعتي البيانات.\n\nتحفظ واحد بشأن قابلية المقارنة: تحصي المنظمة الوظائف التي تتجاوز عتبة الخطر المرتفع، بينما يمنح المرصد كل مهنة درجة من 100، لذا لا تدعم المقارنة سوى قراءة نسبية. وعلى المستوى الوطني، يغطي التعرض المرجّح بالذكاء الاصطناعي في السعودية 4,450,778 وظيفة من أصل 12,420,050 وظيفة مسجلة لدى التأمينات الاجتماعية (GOSI) — وهو رقم تؤطره مجموعة البيانات صراحةً بوصفه تعرضاً لا خسائر وظائف متوقعة، إذ سيرجح التعزيز على الإحلال في كثير من الأدوار."
+          },
+          {
+            "q": "ما دعم إعادة التدريب المتاح للمصممين في السعودية؟",
+            "body": "مساران ممولان، يديرهما كلاهما صندوق تنمية الموارد البشرية (هدف):\n\n- **دعم الشهادات المهنية** — يعوّض حتى 1,350 ريالاً سعودياً عن كل شهادة معتمدة.\n- **دعم التوظيف (طاقات)** — إعانة أجور تغطي 30–50% من الراتب، بحد أقصى 3,000 ريال سعودي شهرياً، لمدة 24 شهراً.\n\nالأول يموّل اعتماداً فردياً؛ والثاني يخفّض على صاحب العمل كلفة شغل دور ما — بما في ذلك دور معاد تعريفه ملاصق للذكاء الاصطناعي. وعلى المصممين الذين يخططون للانتقال تسوية أوراق الشهادات مبكراً (تغطي [قائمة ما قبل المغادرة](/prepare) التصديق)، بينما يحدد [ملف المخاطر الشخصي للذكاء الاصطناعي](/profile) أيّ مهامك تحديداً تحمل التعرض ذا الدرجة 51.5 — وهي نقطة البداية العملية لاختيار مجال الشهادة."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل بدأ الذكاء الاصطناعي فعلاً بخفض رواتب المصممين في السعودية؟",
+            "a": "ليس بشكل قابل للقياس وفق البيانات الحالية. فأرقام الرواتب في مجموعة البيانات (Astr 2026) لقطة عند نقطة واحدة؛ ولا توجد سلسلة زمنية للرواتب في المادة، فلا يمكن استخلاص اتجاه أجور مدفوع بالذكاء الاصطناعي منها. وتصنيف «التراجع» لدى المنتدى الاقتصادي العالمي يشير إلى اتجاه الطلب العالمي على المهنة، ولا يقيس مستويات الأجور السعودية."
+          },
+          {
+            "q": "كيف تُبنى درجة 51.5/100؟",
+            "a": "هي مركّب من ثلاثة مقاييس أكاديمية منشورة: تعرض Eloundou لنماذج اللغة الكبيرة على مستوى المهام (0.85)، واحتمال الحوسبة لدى Frey–Osborne‏ (4.3%)، ومؤشر Felten للتعرض المهني للذكاء الاصطناعي («مرتفع»). وتورد مجموعة البيانات هذه المدخلات والدرجة المركّبة الناتجة لكل مهنة من مهنها الـ237."
+          },
+          {
+            "q": "هل تغطي الدرجة أدوار التصميم الحر أو المعززة بالذكاء الاصطناعي؟",
+            "a": "تقيّم مجموعة البيانات المهنة الكلاسيكية بأجر فقط؛ فالعمل الحر والأدوار الهجينة لا تُقيَّم على حدة. وهذا حد حقيقي: الدور الأرجح ظهوراً من هذا التحول — المصمم بوصفه مديراً فنياً للذكاء الاصطناعي — لا يملك درجة خاصة به بعد."
+          },
+          {
+            "q": "هل الطلب المحلي على مصممي الجرافيك في نمو؟",
+            "a": "ترتيب الطلب السعودي على المهنة لعام 2024 في مجموعة البيانات غير متوفر — فلا يوجد منحنى طلب محلي متاح. المعروف: نحو 32,000 شخص يعملون حالياً في المهنة على المستوى الوطني، ويصنّف اتجاه «مستقبل الوظائف» لدى المنتدى الاقتصادي العالمي المهنة بأنها في تراجع عالمياً."
+          }
+        ],
+        "key_takeaway": "تصميم الجرافيك في السعودية مهنة متوسطة الترتيب في مخاطر الذكاء الاصطناعي — 51.5/100، المرتبة 91 من أصل 237. الوظيفة تبقى؛ أما مهامها الإنتاجية فلا. ومع راتب وسيط معفى من الضرائب قدره 9,000 ريال سعودي وتمويل «هدف» للشهادات وللانتقالات المدعومة الأجر لمدة 24 شهراً، فإن الاستجابة العقلانية هي إعادة التموضع نحو المهام التي لا يستطيع الذكاء الاصطناعي امتلاكها قبل أن يتفاقم التراجع الذي رصده المنتدى الاقتصادي العالمي.",
+        "sources": [
+          {
+            "label": "مرصد KSA Shift Observatory — ملف master.json، تقييم 237 مهنة (منهجية درجة مخاطر مركّبة للذكاء الاصطناعي)",
+            "url": "/career"
+          },
+          {
+            "label": "Astr 2026 — معايير الرواتب السعودية لمصممي الجرافيك (ريال سعودي/شهر)",
+            "url": "/job/graphic-designers"
+          },
+          {
+            "label": "توقعات التوظيف لمنظمة التعاون الاقتصادي والتنمية 2023 — مخاطر الأتمتة في الدول الأعضاء",
+            "url": "https://www.oecd.org"
+          },
+          {
+            "label": "مستقبل الوظائف — المنتدى الاقتصادي العالمي — تصنيف اتجاهات المهن",
+            "url": "https://www.weforum.org"
+          },
+          {
+            "label": "هدف — دعم الشهادات المهنية ودعم التوظيف (طاقات)",
+            "url": "https://www.hrdf.org.sa"
+          }
+        ]
+      }
+    }
   }
 ]
