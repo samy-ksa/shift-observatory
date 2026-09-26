@@ -58,6 +58,21 @@ conclure.
 Vérifier les mots-clés de `improvement-log.json` avec `nextReviewDate <=
 aujourd'hui`.
 
+**D'abord vérifier que Google a revu la page depuis l'amélioration.** Sur ce
+site, Google ne recrawle une page que tous les 1 à 2 mois (mesuré le 26/09 :
+aucune des 3 pages modifiées les 10, 17 et 24/09 n'avait été recrawlée). Juger
+avant le recrawl revient à mesurer l'ANCIENNE version de la page :
+
+```
+node .claude/skills/seo-rank-watch/scripts/check_crawl.mjs --repo <REPO_PATH> --since <date de l'action> <targetPath>
+```
+
+- `recrawled: false` → **ne pas juger**. Laisser le status `observing`,
+  repousser `nextReviewDate` de 7 jours et noter « pas encore recrawlée
+  (dernier crawl : <date>) » dans le rapport. Ne pas compter la semaine comme
+  « aucun effet ».
+- `recrawled: true` → juger avec les jours GSC postérieurs au crawl.
+
 Pour évaluer l'effet d'une amélioration, utiliser les 7 derniers jours GSC
 (pas la moyenne 28 jours) :
 

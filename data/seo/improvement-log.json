@@ -2,7 +2,7 @@
   {
     "keyword": "cloud engineer salary in saudi arabia",
     "targetPath": "/en/job/cloud-engineer",
-    "status": "active",
+    "status": "observing",
     "actions": [
       {
         "date": "2026-09-10",
@@ -15,14 +15,16 @@
           "position": 7.96,
           "impressions": 94,
           "judgment": "Aucun effet mesurable — position a régressé (6.35 → 7.96 sur les 7 derniers jours, vs 7.05 en moyenne 28 jours) au lieu de s'améliorer. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher l'onglet salaire (déjà statique) ; explorer plutôt le title/description de la page (actuellement 'Cloud Engineer: AI Risk NN/100 · Salary Guide...' place le risque IA avant le salaire dans le tag <title>, contrairement aux pages concurrentes qui mènent par 'Salary'), ou l'intro au-dessus du gauge de risque."
-        }
+        },
+        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-07-13, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing."
       }
-    ]
+    ],
+    "nextReviewDate": "2026-10-01"
   },
   {
     "keyword": "investment banker salary in saudi arabia",
     "targetPath": "/en/job/investment-banker",
-    "status": "active",
+    "status": "observing",
     "actions": [
       {
         "date": "2026-09-17",
@@ -35,9 +37,11 @@
           "position": null,
           "impressions": 0,
           "judgment": "Aucun effet mesurable — la requête exacte n'a généré ni impression ni position sur les 7 derniers jours (fenêtre 2026-09-14 → 2026-09-21), contre position 4.75 / 4 impressions le 2026-09-17. Volume déjà très faible avant l'action (7 puis 4 impressions/semaine), donc compatible avec une simple variance de requête à faible volume plutôt qu'une régression confirmée. Vérifié via WebSearch : la page ksashiftobservatory.online n'apparaît pas dans les 10 premiers résultats pour 'investment banker salary in saudi arabia' (résultats dominés par Levels.fyi, WallStreetMojo, Glassdoor, GrabJobs, ERI, PayScale), cohérent avec l'absence d'impressions GSC — pas un problème d'indexation. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher le <title> (déjà aligné sur la requête) ; le gap probable est dans le contenu de la page elle-même (intro/description) plutôt que dans le titre, à vérifier à la prochaine analyse de besoin de recherche."
-        }
+        },
+        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-09-06, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing."
       }
-    ]
+    ],
+    "nextReviewDate": "2026-10-01"
   },
   {
     "keyword": "petroleum engineering salary in saudi arabia",
