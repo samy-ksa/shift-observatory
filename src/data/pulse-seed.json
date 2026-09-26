@@ -1,411 +1,105 @@
 {
-  "report_date": "2026-04-02",
+  "report_date": "2026-09-26",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Meta",
+      "company": "Oracle",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 15800,
+      "jobs_cut": 21000,
       "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Planning sweeping layoffs affecting 20% of 79,000 workforce to offset AI infrastructure spending. CEO Zuckerberg says projects that used to require big teams now accomplished by a single person.",
-      "source": "Reuters / CNBC",
-      "date": "2026-03-14"
+      "ai_role": "contributing",
+      "description": "Oracle's global workforce was reported to be approximately 21,000 lower year over year as the company pursued restructuring and an expensive AI data-center buildout, with the company attributing part of the decline to AI deployment.",
+      "source": "Oracle regulatory filing coverage via Yahoo Finance",
+      "date": "2026-09-14"
     },
     {
-      "company": "Amazon",
+      "company": "Apple",
       "country": "US",
-      "sector": "E-commerce / Cloud",
-      "jobs_cut": 16000,
+      "sector": "Tech",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "suspected",
+      "description": "Apple reportedly cut roles in its Intelligent Systems Experience group, which works on AI systems used in Apple devices, but no reliable public figure for the number of affected employees was reported.",
+      "source": "Bloomberg coverage summarized by Yahoo Tech",
+      "date": "2026-09-23"
+    },
+    {
+      "company": "Uber",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 3300,
       "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Confirmed 16,000 job cuts, nearly 10% of workforce, flattening management layers and bolstering AI infrastructure.",
+      "ai_role": "contributing",
+      "description": "Uber announced approximately 3,300 job cuts, or 10% of its workforce, in a restructuring linked to efficiency pressures and the rising threat of robotaxis, while AI-related efficiency investments were also reported as a factor in the broader cost program.",
       "source": "Reuters",
-      "date": "2026-01-15"
+      "date": "2026-09-02"
     },
     {
-      "company": "Block (Square)",
-      "country": "US",
-      "sector": "FinTech",
-      "jobs_cut": 4000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "CEO Dorsey cut company from 10,000 to under 6,000. First S&P 500 company to explicitly halve workforce for AI: 'Intelligence tools have changed what it means to build a company.'",
-      "source": "Bloomberg",
-      "date": "2026-02-10"
-    },
-    {
-      "company": "WiseTech Global",
-      "country": "AU",
-      "sector": "Logistics Software",
-      "jobs_cut": 2000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "AI-driven restructuring of logistics platforms. Executives stated traditional approaches to writing code are becoming obsolete.",
-      "source": "RationalFX",
-      "date": "2026-03-01"
-    },
-    {
-      "company": "Ericsson",
-      "country": "SE",
-      "sector": "Telecom",
-      "jobs_cut": 1900,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Restructuring across European operations as AI reshapes telecom equipment sector.",
-      "source": "RationalFX",
-      "date": "2026-02-15"
-    },
-    {
-      "company": "ASML",
-      "country": "NL",
-      "sector": "Semiconductors",
-      "jobs_cut": 1700,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Workforce reduction at semiconductor equipment leader amid industry restructuring.",
-      "source": "RationalFX",
-      "date": "2026-02-20"
-    },
-    {
-      "company": "Meta (Reality Labs)",
+      "company": "Oracle America Cloud Infrastructure",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 1500,
+      "jobs_cut": 546,
       "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "1,500 Reality Labs jobs cut as Meta pivots from metaverse to AI research. CTO Bosworth calls it initiative to simplify operations.",
-      "source": "Programs.com",
-      "date": "2026-02-15"
-    },
-    {
-      "company": "Indeed / Glassdoor",
-      "country": "US",
-      "sector": "Recruitment",
-      "jobs_cut": 1300,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "CEO stated 'AI is changing the world' forcing 6% global workforce reduction across both platforms.",
-      "source": "Programs.com",
-      "date": "2025-07-15"
-    },
-    {
-      "company": "Livspace",
-      "country": "SG",
-      "sector": "PropTech",
-      "jobs_cut": 1000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Singapore home design platform cut 1,000 jobs to accelerate AI adoption across its digital interior-design marketplace.",
-      "source": "TechNode Global",
-      "date": "2026-03-01"
-    },
-    {
-      "company": "Ocado",
-      "country": "GB",
-      "sector": "E-commerce / Grocery",
-      "jobs_cut": 1000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Online grocery company cutting 1,000 roles from 20,000 workforce as AI reshapes fulfillment operations.",
-      "source": "Programs.com",
-      "date": "2026-03-10"
-    },
-    {
-      "company": "eBay",
-      "country": "US",
-      "sector": "E-commerce",
-      "jobs_cut": 800,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "800 jobs cut as company shifts to AI-powered listings and automated seller tools.",
-      "source": "RationalFX",
-      "date": "2026-02-25"
-    },
-    {
-      "company": "Pinterest",
-      "country": "US",
-      "sector": "Social Media",
-      "jobs_cut": 675,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Cut 15% of workforce to prioritize AI-focused teams and products while streamlining sales structure.",
-      "source": "RationalFX",
-      "date": "2026-01-20"
-    },
-    {
-      "company": "ANGI Homeservices",
-      "country": "US",
-      "sector": "Tech / Services",
-      "jobs_cut": 350,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Workforce reduction as AI automates home services matching and customer interactions.",
-      "source": "RationalFX",
-      "date": "2026-02-15"
-    },
-    {
-      "company": "Oracle",
-      "country": "US",
-      "sector": "Enterprise Software",
-      "jobs_cut": 254,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Job cuts as company restructures around cloud AI services.",
-      "source": "RationalFX",
-      "date": "2026-03-05"
-    },
-    {
-      "company": "MercadoLibre",
-      "country": "AR",
-      "sector": "E-commerce",
-      "jobs_cut": 119,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Latin America's largest e-commerce company cuts roles as AI automates logistics and seller operations.",
-      "source": "RationalFX",
-      "date": "2026-03-01"
-    },
-    {
-      "company": "Oracle",
-      "country": "US",
-      "sector": "Enterprise Software / Cloud",
-      "jobs_cut": 30000,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Largest layoff in Oracle's 48-year history. 20,000–30,000 employees terminated via email with no notice. Cuts fund $156B AI infrastructure buildout. TD Cowen: expected to free $8–10B cash flow. AI coding tools cited by co-CEO Sicilia: 'smaller engineering teams deliver more complete solutions'.",
-      "source": "Bloomberg / CNBC / TNW",
-      "date": "2026-03-31"
-    },
-    {
-      "company": "Atlassian",
-      "country": "AU",
-      "sector": "Developer Tools / SaaS",
-      "jobs_cut": 1600,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "10% of global workforce. CEO Cannon-Brookes: cuts needed to 'self-fund AI investment and enterprise sales in the AI era'.",
-      "source": "TechCrunch",
-      "date": "2026-03-16"
-    },
-    {
-      "company": "Meta",
-      "country": "US",
-      "sector": "Tech / Social Media",
-      "jobs_cut": 700,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Reality Labs, social media and recruiting teams affected. Part of ongoing AI-driven efficiency push alongside $135B AI capex planned for 2026.",
-      "source": "New York Times",
-      "date": "2026-03-25"
-    },
-    {
-      "company": "Broadcom",
-      "country": "US",
-      "sector": "Semiconductors",
-      "jobs_cut": 1200,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Post-VMware integration cuts in sales and support. Company pivoting resources toward AI networking portfolio.",
-      "source": "Layoffs.fyi",
-      "date": "2026-03-29"
-    },
-    {
-      "company": "Eidos Montréal",
-      "country": "CA",
-      "sector": "Gaming",
-      "jobs_cut": 124,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Deus Ex studio restructuring. Part of broader gaming industry consolidation amid AI content generation pressure.",
-      "source": "IGN",
-      "date": "2026-03-30"
+      "ai_role": "suspected",
+      "description": "Oracle eliminated 546 positions in its America Cloud Infrastructure business, with data-center maintenance and servicing roles most affected during the company's AI-driven infrastructure expansion.",
+      "source": "InformationWeek",
+      "date": "2026-09-14"
     }
   ],
-  "gulf_mena_automation": [
-    {
-      "company": "Saudi Cabinet",
-      "country": "SA",
-      "sector": "Government",
-      "event_type": "policy",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "Saudi Arabia officially designates 2026 as the Year of Artificial Intelligence. Cabinet decision under MBS as SDAIA chair.",
-      "source": "Arab News / SPA",
-      "date": "2026-03-10"
-    },
-    {
-      "company": "SDAIA",
-      "country": "SA",
-      "sector": "Government / AI",
-      "event_type": "ai_deployment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "Applied AI Bootcamp launched in Riyadh providing intensive hands-on AI and data science training for Saudi nationals.",
-      "source": "Saudi Times",
-      "date": "2026-03-15"
-    },
-    {
-      "company": "Hexagon Data Center",
-      "country": "SA",
-      "sector": "Infrastructure",
-      "event_type": "infrastructure",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "World's largest government data center (480MW, 30M+ sqft, Tier IV) under construction in Riyadh. $2.7B contract awarded to Albawani.",
-      "source": "Gulf News",
-      "date": "2026-01-15"
-    },
-    {
-      "company": "Microsoft Saudi Arabia",
-      "country": "SA",
-      "sector": "Tech",
-      "event_type": "ai_deployment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "Microsoft commits to helping 3 million people in Saudi Arabia acquire AI skills by 2030.",
-      "source": "Microsoft EMEA",
-      "date": "2026-02-15"
-    },
-    {
-      "company": "PIF / HUMAIN",
-      "country": "SA",
-      "sector": "Sovereign Wealth / AI",
-      "event_type": "investment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "PIF finalizing revised 2026-2030 strategy with ~15% capex reduction but accelerating AI infrastructure investment through HUMAIN.",
-      "source": "Middle East Briefing",
-      "date": "2026-03-18"
-    },
-    {
-      "company": "Tuwaiq Academy",
-      "country": "SA",
-      "sector": "Education / AI",
-      "event_type": "ai_deployment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "Saudi student Al-Jawhara Al-Qahtani wins global Grand Prize at Geneva Inventions Exhibition for AI medical platform PulMind.",
-      "source": "SPA",
-      "date": "2026-03-17"
-    },
-    {
-      "company": "Desert Technologies",
-      "country": "SA",
-      "sector": "Infrastructure / Energy",
-      "event_type": "infrastructure",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "Developing advanced data centers in KSA through partnerships with global companies for AI technology localization.",
-      "source": "Zawya",
-      "date": "2026-03-15"
-    },
-    {
-      "company": "King Salman Park",
-      "country": "SA",
-      "sector": "Real Estate / Giga-Projects",
-      "event_type": "investment",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": false,
-      "description": "5th investment package worth SAR 11B awarded at MIPIM 2026. Total private sector investment in the park now exceeds SAR 20B.",
-      "source": "SPA",
-      "date": "2026-03-17"
-    }
-  ],
-  "saudi_policy_updates": [
-    {
-      "type": "sdaia",
-      "title": "2026 Designated Year of AI",
-      "description": "Saudi Cabinet officially designates 2026 as Year of Artificial Intelligence. Policy umbrella for new incentives, regulatory fast-tracks, and AI procurement preferences across government.",
-      "effective_date": "2026-03-10",
-      "source": "Arab News",
-      "date_announced": "2026-03-10"
-    },
-    {
-      "type": "sdaia",
-      "title": "AI Sector Growth: $9.1B Funding",
-      "description": "664 companies now operating in Saudi data and AI space. Government AI spending up 56.25% in 2024 vs 2023. $9.1B secured across 70 investment deals.",
-      "effective_date": "2026-03-15",
-      "source": "Zawya",
-      "date_announced": "2026-03-15"
-    },
-    {
-      "type": "sdaia",
-      "title": "Shaheen III Supercomputer & Hexagon",
-      "description": "Launch of Shaheen III supercomputer and 480MW Hexagon Data Center. Kingdom targeting 3-6 GW of AI computing capacity.",
-      "effective_date": "2026-03-12",
-      "source": "The Legal Wire",
-      "date_announced": "2026-03-12"
-    },
-    {
-      "type": "sdaia",
-      "title": "GPAI Membership & ICAIRE Center",
-      "description": "Saudi Arabia joins Global Partnership on AI and hosts UNESCO's International Center for AI Research and Ethics in Riyadh.",
-      "effective_date": "2026-03-10",
-      "source": "Arab News",
-      "date_announced": "2026-03-10"
-    },
-    {
-      "type": "other",
-      "title": "PIF Strategy Recalibration 2026-2030",
-      "description": "PIF finalizing revised strategy with ~15% capex reduction. Construction contract awards fell 60% to below $30B. AI infrastructure is fastest-growing segment.",
-      "effective_date": "2026-03-18",
-      "source": "Middle East Briefing",
-      "date_announced": "2026-03-18"
-    }
-  ],
+  "gulf_mena_automation": [],
+  "saudi_policy_updates": [],
   "ai_workforce_signals": [
     {
-      "headline": "20% of 2026 Tech Layoffs Explicitly AI-Driven",
-      "description": "RationalFX analysis shows 9,238 of 45,363 tech layoffs in 2026 are directly linked to AI and automation. Block, WiseTech Global, and Livspace lead the AI-attributed cuts.",
-      "relevance_to_ksa": "contextual",
-      "source": "TechNode Global / RationalFX",
-      "date": "2026-03-09"
-    },
-    {
-      "headline": "Meta Planning 20% Workforce Cut (~15,800 Jobs)",
-      "description": "Reuters reports Meta planning sweeping layoffs to offset $600B AI data center investment while preparing for AI-assisted worker efficiency. Would be largest cuts since 2022-2023.",
-      "relevance_to_ksa": "indirect",
-      "source": "Reuters / CNBC",
-      "date": "2026-03-14"
-    },
-    {
-      "headline": "Young Workers Hit Hardest by AI Displacement",
-      "description": "Anthropic research finds job-finding rates for workers aged 22-25 in AI-exposed occupations fell 14% since ChatGPT launch. US workers in 20s in AI-exposed jobs saw unemployment rise 3%.",
-      "relevance_to_ksa": "contextual",
-      "source": "The Conversation / Anthropic",
-      "date": "2026-03-16"
-    },
-    {
-      "headline": "Saudi Arabia Ranks 14th Global AI Index, 1st in Arab World",
-      "description": "Kingdom ranks 14th globally in 2025 AI Index, 3rd in OECD AI Policy Observatory, 1st in Arab world for AI model development per Stanford indicators. Over 11,000 specialists trained.",
+      "headline": "Autonomous AI work expected to double by 2027",
+      "description": "An ISG study reported that less than 7% of AI-enabled work is currently performed autonomously, while companies expect the share to approach 13% by the end of 2027. The study also found that 48% of organizations classified as AI value realizers had reduced their workforce and 65% were redesigning roles.",
       "relevance_to_ksa": "direct",
-      "source": "Arab News / SDAIA",
-      "date": "2026-03-10"
+      "source": "ISG study via Business Wire",
+      "date": "2026-09-23"
     },
     {
-      "headline": "Microsoft to Train 3 Million Saudis in AI by 2030",
-      "description": "Microsoft commits to AI skills training for 3 million people in Saudi Arabia, part of broader EMEA initiative aligned with Year of AI designation.",
-      "relevance_to_ksa": "direct",
-      "source": "Microsoft EMEA",
-      "date": "2026-02-15"
+      "headline": "AI cited in one-third of 2026 tech layoff events",
+      "description": "Crunchbase reported that AI was cited in 33% of technology layoff events in 2026, compared with 1% in 2024. Its tracker attributed 92,913 global layoffs, or 72% of the year's total, to AI, although these figures depend on the methodology used to classify AI involvement.",
+      "relevance_to_ksa": "contextual",
+      "source": "Crunchbase News",
+      "date": "2026-09-25"
     },
     {
-      "headline": "Morgan Stanley: AI Could Eliminate 200,000 European Banking Jobs",
-      "description": "Morgan Stanley report warns European banks may cut 200,000 roles via AI automation over 5 years, freeing €15B in cost savings. Gulf banking sector watches closely: GCC banks, including Saudi lenders, face comparable efficiency pressure as SAMA accelerates fintech licensing.",
+      "headline": "IBM CHRO research highlights workforce redesign",
+      "description": "IBM research reported that only 26% of organizations clearly define work as human-led, AI-assisted, or AI-executed. The study also found that 60% of employees worry AI is eroding their skills, while critical thinking and human judgment are increasingly valued by HR leaders.",
       "relevance_to_ksa": "indirect",
-      "source": "Morgan Stanley Research / Bloomberg",
-      "date": "2026-03-20"
+      "source": "SiliconANGLE reporting on IBM Institute for Business Value research",
+      "date": "2026-09-23"
+    },
+    {
+      "headline": "Gartner projects rehiring of some AI-displaced workers",
+      "description": "Gartner projected that 30% of employees laid off because of AI replacement may need to be rehired by 2029, potentially at higher cost. The forecast indicates that workforce reductions based solely on assumed AI substitution may create capability gaps.",
+      "relevance_to_ksa": "contextual",
+      "source": "CIO coverage of Gartner research via HCAMag",
+      "date": "2026-09-16"
+    },
+    {
+      "headline": "Texas job postings show measurable exposure effect",
+      "description": "A Dallas Fed analysis reported that firms with greater exposure to generative-AI automation had reduced job postings by roughly 5% to 6% by mid-2024 and 8% to 9% by early 2026. The analysis estimated that automation exposure lowered total Texas job postings by approximately 1.8% in 2024 and 2.6% in 2025.",
+      "relevance_to_ksa": "contextual",
+      "source": "Dallas Fed analysis summarized by Quasa",
+      "date": "2026-09-12"
+    },
+    {
+      "headline": "AI workforce impact remains limited in Deloitte survey",
+      "description": "Deloitte's 2026 State of AI in the Enterprise report identified the AI skills gap as the largest barrier to integration and found that education, rather than role or workflow redesign, was the leading workforce response. The result suggests that reskilling remains more common than direct job elimination in surveyed organizations.",
+      "relevance_to_ksa": "indirect",
+      "source": "Deloitte",
+      "date": "2026-09-24"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 78987,
-    "total_ai_cited_this_week": 42862,
-    "total_gulf_events_this_week": 9,
-    "ytd_global_tech_layoffs": 78987,
-    "ytd_ai_cited_us": 42862,
-    "trend_vs_last_week": "up",
-    "notable_trend": "Q1 2026 closes with 79,000+ tech layoffs, led by Oracle's 30,000-job cut — largest in its 48-year history. AI explicitly cited in 54% of cuts. Atlassian (1,600), Broadcom (1,200) and Meta (700) add to the wave. Morgan Stanley warns 200,000 European banking jobs at risk from AI."
+    "total_global_layoffs_this_week": 0,
+    "total_ai_cited_this_week": 0,
+    "total_gulf_events_this_week": 0,
+    "ytd_global_tech_layoffs": 122796,
+    "ytd_ai_cited_us": 0,
+    "trend_vs_last_week": "stable",
+    "notable_trend": "AI-related workforce reporting is increasingly focused on role redesign and autonomous-work adoption, while the most substantial documented cuts in the available coverage remain broader restructuring programs rather than layoffs explicitly attributed solely to AI."
   }
 }

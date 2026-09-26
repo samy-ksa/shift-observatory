@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import seedData from "@/data/pulse-seed.json";
+import historyData from "@/data/pulse-history.json";
 
 const AIRTABLE_BASE = "appyqLmjVv9KLEnIR";
 const AIRTABLE_TABLE = "tbl8gxM7A3X4xhpZQ"; // Pulse Snapshots
@@ -47,6 +49,8 @@ function safeParse<T>(raw: unknown): T | null {
 
 export async function GET() {
   const pat = process.env.AIRTABLE_PAT;
+  const seed = seedData as Record<string, unknown>;
+  const repoHistory = historyData as { date: string; stats: Record<string, unknown> }[];
 
   if (pat) {
     try {
@@ -57,7 +61,11 @@ export async function GET() {
           latestRec.fields[FIELD_PAYLOAD],
         );
 
-        if (latest) {
+        // Airtable plus ancien que le Pulse du repo (généré le lundi sur le Mac) :
+        // on sert le repo. Cas du 26/09 : Airtable figé (quota) → Pulse d'avril.
+        const repoDate = (seed.report_date as string) ?? "";
+        const airDate = (latestRec.fields[FIELD_DATE] as string) ?? "";
+        if (latest && airDate >= repoDate) {
           const history = rest
             .map((r) => ({
               date: r.fields[FIELD_DATE] as string,
@@ -78,10 +86,10 @@ export async function GET() {
     }
   }
 
-  // Fallback: serve seed data (local dev, Airtable miss, or empty table)
-  const seed = await import("@/data/pulse-seed.json");
+  // Repo Pulse (src/data/pulse-seed.json, refreshed every Monday by the Mac job):
+  // served when Airtable is unavailable, empty, or older.
   return NextResponse.json(
-    { latest: seed.default, history: [] },
+    { latest: seed, history: repoHistory },
     { headers: { "Cache-Control": "public, max-age=3600" } },
   );
 }

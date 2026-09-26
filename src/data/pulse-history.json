@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-04-02",
+    "stats": {
+      "total_global_layoffs_this_week": 78987,
+      "total_ai_cited_this_week": 42862,
+      "total_gulf_events_this_week": 9,
+      "ytd_global_tech_layoffs": 78987,
+      "ytd_ai_cited_us": 42862,
+      "trend_vs_last_week": "up",
+      "notable_trend": "Q1 2026 closes with 79,000+ tech layoffs, led by Oracle's 30,000-job cut — largest in its 48-year history. AI explicitly cited in 54% of cuts. Atlassian (1,600), Broadcom (1,200) and Meta (700) add to the wave. Morgan Stanley warns 200,000 European banking jobs at risk from AI."
+    }
+  }
+]
