@@ -10,6 +10,7 @@ import type { Lang } from "@/lib/i18n/context";
 import { LangProvider } from "@/lib/i18n/context";
 import CookieConsent from "@/components/legal/CookieConsent";
 import BackToTop from "@/components/shared/BackToTop";
+import SiteExplore from "@/components/shared/SiteExplore";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { OCCUPATION_COUNT } from "@/lib/occupations";
 
@@ -240,6 +241,7 @@ export default async function LangLayout({
       <body className="antialiased bg-bg-primary text-text-primary min-h-screen">
         <LangProvider initialLang={lang}>
           {children}
+          <SiteExplore lang={lang} />
           <CookieConsent />
           <BackToTop />
         </LangProvider>

@@ -15,6 +15,15 @@ import JobAICitableLede from "@/components/job/JobAICitableLede";
 import { getScoreTrend } from "@/data/score-history";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import Link from "next/link";
+import { localizedHref } from "@/lib/i18n/links";
+import { getInsightsForJob, getLangContent } from "@/lib/insights";
+
+const RELATED_ANALYSIS: Record<Lang, string> = {
+  en: "Related analysis",
+  fr: "Analyse liée",
+  ar: "تحليل ذو صلة",
+};
 
 const LANGS: Lang[] = ["en", "fr", "ar"];
 
@@ -419,12 +428,14 @@ export default async function LangJobPage({
     },
   };
 
+  const relatedInsights = getInsightsForJob(slug);
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "SHIFT Observatory", item: `${SITE_URL}/${lang}` },
-      { "@type": "ListItem", position: 2, name: "Occupations", item: `${SITE_URL}/${lang}/career` },
+      { "@type": "ListItem", position: 2, name: "Occupations", item: `${SITE_URL}/${lang}/job` },
       { "@type": "ListItem", position: 3, name: occ.name_en, item: `${SITE_URL}/${lang}/job/${slug}` },
     ],
   };
@@ -442,6 +453,32 @@ export default async function LangJobPage({
         tawteen={tawteen}
         reserved={reserved}
       />
+      {relatedInsights.length > 0 && (
+        <section
+          dir={lang === "ar" ? "rtl" : "ltr"}
+          className="max-w-5xl mx-auto px-4 pb-6"
+          aria-label={RELATED_ANALYSIS[lang]}
+        >
+          <h2 className="text-lg font-semibold text-text-primary mb-3">{RELATED_ANALYSIS[lang]}</h2>
+          <ul className="space-y-2 text-sm">
+            {relatedInsights.map((a) => {
+              const c = getLangContent(a, lang);
+              if (!c) return null;
+              return (
+                <li key={a.slug}>
+                  <Link
+                    href={localizedHref(lang, `/insights/${a.slug}`)}
+                    className="text-accent-primary hover:underline"
+                  >
+                    {c.title}
+                  </Link>
+                  <p className="text-text-secondary mt-1">{c.description}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </>
   );
 }

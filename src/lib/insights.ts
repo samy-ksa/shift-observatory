@@ -91,3 +91,17 @@ export function hasInsights(): boolean {
 export function hasPulse(): boolean {
   return PULSE.length > 0;
 }
+
+/**
+ * Insights relevant to an occupation page. Engine articles follow the pattern
+ * "will-ai-replace-<occupation>-in-saudi-arabia"; the captured part matches the job
+ * slug exactly or as its first segment ("accountants" → "accountants-auditors").
+ * Used to link job pages to their article (orphan articles, GSC 26/09).
+ */
+export function getInsightsForJob(jobSlug: string): ArticleRecord[] {
+  return getAllInsights().filter((a) => {
+    const m = a.slug.match(/^will-ai-replace-(.+)-in-saudi-arabia$/);
+    if (!m) return false;
+    return jobSlug === m[1] || jobSlug.startsWith(m[1] + "-");
+  });
+}

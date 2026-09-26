@@ -82,6 +82,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // 26/09 (décision Samy) : 393 pages paires, ~35 % indexées, quasi 0 impression.
+    // Noindex pour concentrer le crawl sur les pages métier et le hub /relocate ;
+    // follow garde les liens. Retirées du sitemap. Réversible : supprimer cette ligne.
+    robots: { index: false, follow: true },
     keywords: [
       `cost of living ${origin.name_en} vs ${saudi.name_en}`,
       `relocate from ${origin.name_en} to ${saudi.name_en}`,
