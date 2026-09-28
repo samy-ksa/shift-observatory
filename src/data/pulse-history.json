@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-26",
+    "stats": {
+      "total_global_layoffs_this_week": 0,
+      "total_ai_cited_this_week": 0,
+      "total_gulf_events_this_week": 0,
+      "ytd_global_tech_layoffs": 122796,
+      "ytd_ai_cited_us": 0,
+      "trend_vs_last_week": "stable",
+      "notable_trend": "AI-related workforce reporting is increasingly focused on role redesign and autonomous-work adoption, while the most substantial documented cuts in the available coverage remain broader restructuring programs rather than layoffs explicitly attributed solely to AI."
+    }
+  },
+  {
     "date": "2026-04-02",
     "stats": {
       "total_global_layoffs_this_week": 78987,
