@@ -19,6 +19,7 @@ const LABELS: Record<Lang, { explore: string; analyses: string; hubs: [string, s
       ["/career", "Career paths"],
       ["/relocate", "Relocation calculator"],
       ["/prepare", "Prepare your move"],
+      ["/pulse", "Weekly Pulse archive"],
     ],
   },
   fr: {
@@ -29,6 +30,7 @@ const LABELS: Record<Lang, { explore: string; analyses: string; hubs: [string, s
       ["/career", "Parcours de carrière"],
       ["/relocate", "Calculateur d'expatriation"],
       ["/prepare", "Préparer son départ"],
+      ["/pulse", "Archive du Pulse hebdomadaire"],
     ],
   },
   ar: {
@@ -39,6 +41,7 @@ const LABELS: Record<Lang, { explore: string; analyses: string; hubs: [string, s
       ["/career", "المسارات المهنية"],
       ["/relocate", "حاسبة الانتقال"],
       ["/prepare", "الاستعداد للانتقال"],
+      ["/pulse", "أرشيف النبض الأسبوعي"],
     ],
   },
 };

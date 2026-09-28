@@ -15,7 +15,7 @@ const HREFLANG_REGIONS: Record<(typeof LANGS)[number], string[]> = {
 // lastmod honnête (GSC 26/09) : avant, chaque build déclarait les 1 161 URL modifiées
 // « maintenant », et Google ignore un lastmod qui ment. À mettre à jour quand le
 // gabarit des pages ou le jeu de données change réellement.
-const CONTENT_UPDATED = "2026-09-26";
+const CONTENT_UPDATED = "2026-09-28";
 
 // Dernière amélioration de la routine SEO Rank Watch par page (targetPath → date).
 function improvementDates(): Record<string, string> {
@@ -55,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths: Path[] = [
     { path: "/", changeFrequency: "weekly", priority: 1.0 },
     { path: "/job", changeFrequency: "weekly", priority: 0.8 },
+    { path: "/pulse", changeFrequency: "weekly", priority: 0.7 },
     { path: "/career", changeFrequency: "weekly", priority: 0.9 },
     { path: "/relocate", changeFrequency: "weekly", priority: 0.9 },
     { path: "/profile", changeFrequency: "monthly", priority: 0.8 },

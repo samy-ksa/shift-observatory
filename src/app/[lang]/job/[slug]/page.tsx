@@ -28,6 +28,25 @@ const RELATED_ANALYSIS: Record<Lang, string> = {
 
 const LANGS: Lang[] = ["en", "fr", "ar"];
 
+// 28/09 : cohorte de test (10 pages, plus fort volume d'impressions parmi les 25
+// pages composite<45/EN dont le 1er gabarit de <title> — "AI Risk" en tête — passait
+// sous 60 caractères et empêchait d'atteindre le gabarit "Salary" déjà ajouté pour
+// investment-banker le 17/09. Les requêtes réelles GSC pour ce bucket sont "<name>
+// salary in saudi arabia", pas "<name> AI risk". Groupe témoin (mêmes 25 pages, non
+// modifié) et détail du calcul : data/seo/agent-journal.json (28/09).
+const SALARY_FIRST_TITLE_COHORT = new Set([
+  "hotel-manager",
+  "security-guard",
+  "risk-manager",
+  "scaffolder",
+  "waiter-waitress",
+  "audiologist",
+  "private-chef",
+  "pharmacists",
+  "cleaner-janitor",
+  "quality-manager",
+]);
+
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
   return LANGS.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
@@ -130,14 +149,26 @@ export async function generateMetadata({
       );
       description = `${name} in Saudi Arabia: ${composite}/100 AI risk, ${entry}–${senior} SAR/mo (tax-free). Nitaqat status, expat eligibility & career transitions. Free.`;
     } else {
-      title = firstFit(
-        `${name}: AI Risk ${composite}/100 · Salary Guide, Saudi Arabia`,
-        `${name} Saudi Arabia: AI Risk ${composite}/100, Salary Guide`,
-        `${name} Salary in Saudi Arabia: AI Risk ${composite}/100`,
-        `${name}: AI Risk ${composite}/100 · Salary Guide KSA`,
-        `${name} — Saudi Arabia`,
-        `${name} — KSA`,
-      );
+      const aiRiskFirst = `${name}: AI Risk ${composite}/100 · Salary Guide, Saudi Arabia`;
+      const nameCountryFirst = `${name} Saudi Arabia: AI Risk ${composite}/100, Salary Guide`;
+      const salaryFirst = `${name} Salary in Saudi Arabia: AI Risk ${composite}/100`;
+      title = SALARY_FIRST_TITLE_COHORT.has(slug)
+        ? firstFit(
+            salaryFirst,
+            aiRiskFirst,
+            nameCountryFirst,
+            `${name}: AI Risk ${composite}/100 · Salary Guide KSA`,
+            `${name} — Saudi Arabia`,
+            `${name} — KSA`,
+          )
+        : firstFit(
+            aiRiskFirst,
+            nameCountryFirst,
+            salaryFirst,
+            `${name}: AI Risk ${composite}/100 · Salary Guide KSA`,
+            `${name} — Saudi Arabia`,
+            `${name} — KSA`,
+          );
       description = `${name} in Saudi Arabia earns ${entry}–${senior} SAR/mo (tax-free). Low AI risk (${composite}/100). Nitaqat status, expat visa guide & demand outlook. Free.`;
     }
   }

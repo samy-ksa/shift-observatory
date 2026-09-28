@@ -56,5 +56,19 @@
         "done": "1) src/app/job/[slug]/client.tsx : l'onglet 'Find this Job' (FindJobTab, qui contient le bloc réel 'Who's Hiring') est désormais toujours monté dans le HTML statique et seulement masqué en CSS (\"hidden\") quand l'onglet n'est pas actif, au lieu d'un rendu conditionnel React — même correctif que celui déjà appliqué à l'onglet salaire. 2) src/data/job-requirements.ts : ajout de la clé manquante 'mining_oil_gas': 'engineering' dans SECTOR_CATEGORY_MAP, pour que Petroleum Engineer (et Petroleum Geologist, même secteur) affichent les vrais employeurs Oil & Gas (Saudi Aramco, 73 311 employés) au lieu de la catégorie 'admin' par défaut. Vérifié après build : 'Saudi Aramco' apparaît désormais dans le HTML statique de /en/job/petroleum-engineer. tsc --noEmit et npm run build passent sans erreur (705+ pages générées)."
       }
     ]
+  },
+  {
+    "keyword": "hotel management salary in saudi arabia",
+    "targetPath": "/en/job/hotel-manager",
+    "status": "observing",
+    "nextReviewDate": "2026-10-05",
+    "actions": [
+      {
+        "date": "2026-09-28",
+        "rankAtAction": 7.78,
+        "needs": "Chercheurs veulent le salaire d'un Hotel Manager en Arabie Saoudite. Vérifié via WebSearch ('hotel manager salary in saudi arabia') : Glassdoor, GrabJobs, ERI/SalaryExpert, PayScale, WorldSalaries — toutes des pages salaire dédiées, titrées 'Hotel Manager Salary in Saudi Arabia (2026)' / 'Hotel Manager Salary Guide' quasi mot pour mot. Sur notre page, le <title> tombe dans le bucket 'AI Risk < 45' où le 1er gabarit ('Hotel Manager: AI Risk 30/100 · Salary Guide, Saudi Arabia', 58 car.) tient sous 60 caractères et est donc choisi avant le gabarit 'salaire en tête' ajouté le 17/09 pour Investment Banker (qui n'était choisi que pour les noms de métier longs, jamais atteint pour un nom court comme 'Hotel Manager') — décalage direct avec la requête réelle, alors même que /en/job/hotel-manager est la page à plus fort volume d'impressions (330/28j, position moy. 7.6) de tout le lot concerné.",
+        "done": "Calcul sur les 114 pages EN du bucket composite<45 : 25 pages ont un <title> 'AI Risk' en tête au lieu de 'Salary' en tête pour la même raison (nom court, 1er gabarit < 60 car.). Plutôt que de changer les 25 d'un coup (règle charte : cohorte + témoin pour un changement de gabarit), cohorte de test = les 10 pages à impressions non nulles (hotel-manager 330, security-guard 311, risk-manager 174, scaffolder 72, waiter-waitress 36, audiologist 36, private-chef 30, pharmacists 24, cleaner-janitor 23, quality-manager 19) : src/app/[lang]/job/[slug]/page.tsx, ajout d'un Set SALARY_FIRST_TITLE_COHORT qui, pour ces 10 slugs seulement, place le gabarit 'salaire en tête' en 1re priorité. Groupe témoin (non modifié, même bucket, 0 impression mesurée) : rpa-developer, podiatrist, dentists, photographer, hvac-technician, general-manager, tour-guide, nanny-au-pair, electricians, architect, event-planner, delivery-driver, estate-manager, surveyor-land, store-manager. Vérifié dans le HTML généré : cohorte → 'Hotel Manager Salary in Saudi Arabia: AI Risk 30/100' ; témoin (ex. Dentists) → titre inchangé ; pages en observation (cloud-engineer, investment-banker, petroleum-engineer) → titre inchangé, aucune interférence. tsc --noEmit et npm run build passent sans erreur."
+      }
+    ]
   }
 ]

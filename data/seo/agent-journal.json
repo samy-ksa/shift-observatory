@@ -8,5 +8,32 @@
     "why": "Juges du moteur d'articles (Pulse du 26/09, 89,2/100, non publié) : aucune page archive du Weekly Pulse, donc pas de lien vers l'édition précédente ni vers la série ; l'intention « suivi hebdo » n'est pas servie.",
     "done": "Rien encore. Piste pour l'agent : créer /[lang]/pulse (liste des éditions, lien depuis chaque édition vers la précédente et l'archive, ajout au sitemap et à SiteExplore).",
     "reviewAfter": "2026-10-05"
+  },
+  {
+    "date": "2026-09-28",
+    "lever": "decouverte-indexation",
+    "pages": ["/pulse"],
+    "why": "Suite de la piste notée le 26/09 : index-coverage du 26/09 montre en/fr/ar pulse à 0/1 indexé et gsc-snapshot (crawl) liste /pulse en 'URL is unknown to Google' — la page n'existait pas. Aucune action de gabarit ou de données sur les pages déjà en observation, page neuve.",
+    "done": "Création de /[lang]/pulse (liste des éditions, lien vers chaque édition triée par date). Ajout d'une nav précédente/suivante + retour à l'archive sur /[lang]/pulse/[date]. Ajout de /pulse au sitemap (src/app/sitemap.ts, priority 0.7) et à SiteExplore (lien statique sur toutes les pages, comme /job, /career, /relocate, /prepare). CONTENT_UPDATED du sitemap remonté à 2026-09-28 (gabarit modifié). tsc --noEmit et npm run build OK ; /en/pulse, /fr/pulse, /ar/pulse présents dans .next/server/app et dans sitemap.xml.",
+    "reviewAfter": "2026-10-12"
+  },
+  {
+    "date": "2026-09-28",
+    "lever": "seo-rank-watch",
+    "pages": [
+      "/en/job/hotel-manager",
+      "/en/job/security-guard",
+      "/en/job/risk-manager",
+      "/en/job/scaffolder",
+      "/en/job/waiter-waitress",
+      "/en/job/audiologist",
+      "/en/job/private-chef",
+      "/en/job/pharmacists",
+      "/en/job/cleaner-janitor",
+      "/en/job/quality-manager"
+    ],
+    "why": "Cycle seo-rank-watch : mot-clé choisi = 'hotel management salary in saudi arabia' (position 7.78, 27 impressions sur ce mot-clé ; /en/job/hotel-manager est la page à plus fort volume d'impressions — 330/28j — de tout le bucket composite<45/EN concerné par le même défaut de <title>). Détail complet de l'analyse (cohorte de 10 vs groupe témoin de 15) dans data/seo/improvement-log.json.",
+    "done": "Voir data/seo/improvement-log.json (entrée 'hotel management salary in saudi arabia') pour le détail. Résumé : <title> des 10 pages ci-dessus passe en priorité 'salaire en tête' au lieu de 'risque IA en tête' dans src/app/[lang]/job/[slug]/page.tsx (bucket composite<45, EN). Groupe témoin non modifié : /en/job/{rpa-developer, podiatrist, dentists, photographer, hvac-technician, general-manager, tour-guide, nanny-au-pair, electricians, architect, event-planner, delivery-driver, estate-manager, surveyor-land, store-manager}. Pages en observation (cloud-engineer, investment-banker, petroleum-engineer) vérifiées inchangées.",
+    "reviewAfter": "2026-10-05"
   }
 ]

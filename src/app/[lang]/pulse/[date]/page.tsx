@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, buildBreadcrumbLd, SITE_URL } from "@/lib/i18n/seo";
+import { localizedHref } from "@/lib/i18n/links";
 import { getAllPulse, getPulseByDate, getLangContent } from "@/lib/insights";
 import ArticleView from "@/components/article/ArticleView";
+
+const NAV: Record<Lang, { archive: string; older: string; newer: string }> = {
+  en: { archive: "All Pulse editions", older: "Older edition", newer: "Newer edition" },
+  fr: { archive: "Toutes les éditions du Pulse", older: "Édition précédente", newer: "Édition suivante" },
+  ar: { archive: "جميع إصدارات النبض", older: "الإصدار السابق", newer: "الإصدار التالي" },
+};
 
 const LANGS: Lang[] = ["en", "fr", "ar"];
 
@@ -95,6 +103,12 @@ export default async function PulsePage({
     { name: c.title, path: `/pulse/${date}` },
   ]);
 
+  const editions = getAllPulse(); // sorted newest first
+  const idx = editions.findIndex((a) => a.date === date);
+  const newer = idx > 0 ? editions[idx - 1] : null;
+  const older = idx >= 0 && idx < editions.length - 1 ? editions[idx + 1] : null;
+  const dir = lang === "ar" ? "rtl" : "ltr";
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
@@ -103,6 +117,36 @@ export default async function PulsePage({
       ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <ArticleView rec={rec} content={c} lang={lang} />
+      <nav
+        dir={dir}
+        aria-label={NAV[lang].archive}
+        className="max-w-3xl mx-auto px-4 pb-10 flex flex-wrap items-center justify-between gap-3 text-sm"
+      >
+        <Link
+          href={localizedHref(lang, "/pulse")}
+          className="text-text-secondary hover:text-text-primary underline"
+        >
+          {NAV[lang].archive}
+        </Link>
+        <div className="flex gap-4">
+          {older ? (
+            <Link
+              href={localizedHref(lang, `/pulse/${older.date}`)}
+              className="text-text-secondary hover:text-text-primary underline"
+            >
+              ← {NAV[lang].older}
+            </Link>
+          ) : null}
+          {newer ? (
+            <Link
+              href={localizedHref(lang, `/pulse/${newer.date}`)}
+              className="text-text-secondary hover:text-text-primary underline"
+            >
+              {NAV[lang].newer} →
+            </Link>
+          ) : null}
+        </div>
+      </nav>
     </>
   );
 }
