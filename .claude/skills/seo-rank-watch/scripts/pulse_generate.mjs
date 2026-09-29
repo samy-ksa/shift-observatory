@@ -2,7 +2,7 @@
 // Weekly Pulse generated on Samy's Mac, written into the repo (no Airtable).
 // Why (26/09): the Airtable workspace hit its monthly API limit (429), so the site
 // served the 02/04 fallback Pulse and the Monday article had no material.
-// Same prompt and model as /api/cron/pulse (src/lib/pulse-prompt.ts).
+// Prompt: src/lib/pulse-prompt.ts. The Vercel cron /api/cron/pulse is now only a Tuesday freshness watchdog.
 // Usage: PERPLEXITY_API_KEY=… node --experimental-strip-types pulse_generate.mjs --repo <REPO>
 // Writes src/data/pulse-seed.json (latest) and appends src/data/pulse-history.json.
 
