@@ -47,6 +47,16 @@ const SALARY_FIRST_TITLE_COHORT = new Set([
   "quality-manager",
 ]);
 
+// 01/10 : cycle seo-rank-watch pour "mlt salary in saudi arabia" — le nom "Medical
+// Laboratory Technician" est trop long pour que TOUT gabarit salaire/risque IA tienne
+// sous 60 car. (76 à 66 car.), donc la page retombait sur le titre nu "<name> — Saudi
+// Arabia" (aucune mention salaire/risque). 19 autres pages composite<45/EN ont le même
+// défaut (noms longs) mais ne sont pas touchées ici : une seule amélioration par
+// mot-clé ce cycle (data/seo/agent-journal.json, 01/10).
+const SHORT_NAME_OVERRIDES: Record<string, string> = {
+  "medical-laboratory-technician": "Medical Lab Technician",
+};
+
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
   return LANGS.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
@@ -152,8 +162,13 @@ export async function generateMetadata({
       const aiRiskFirst = `${name}: AI Risk ${composite}/100 · Salary Guide, Saudi Arabia`;
       const nameCountryFirst = `${name} Saudi Arabia: AI Risk ${composite}/100, Salary Guide`;
       const salaryFirst = `${name} Salary in Saudi Arabia: AI Risk ${composite}/100`;
+      const shortName = SHORT_NAME_OVERRIDES[slug];
+      const shortSalaryFirst = shortName
+        ? `${shortName} Salary in Saudi Arabia: AI Risk ${composite}`
+        : null;
       title = SALARY_FIRST_TITLE_COHORT.has(slug)
         ? firstFit(
+            ...(shortSalaryFirst ? [shortSalaryFirst] : []),
             salaryFirst,
             aiRiskFirst,
             nameCountryFirst,
@@ -162,6 +177,7 @@ export async function generateMetadata({
             `${name} — KSA`,
           )
         : firstFit(
+            ...(shortSalaryFirst ? [shortSalaryFirst] : []),
             aiRiskFirst,
             nameCountryFirst,
             salaryFirst,

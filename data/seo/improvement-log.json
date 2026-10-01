@@ -16,10 +16,11 @@
           "impressions": 94,
           "judgment": "Aucun effet mesurable — position a régressé (6.35 → 7.96 sur les 7 derniers jours, vs 7.05 en moyenne 28 jours) au lieu de s'améliorer. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher l'onglet salaire (déjà statique) ; explorer plutôt le title/description de la page (actuellement 'Cloud Engineer: AI Risk NN/100 · Salary Guide...' place le risque IA avant le salaire dans le tag <title>, contrairement aux pages concurrentes qui mènent par 'Salary'), ou l'intro au-dessus du gauge de risque."
         },
-        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-07-13, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing."
+        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-07-13, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing.",
+        "reviewPostponed": "01/10 : toujours pas recrawlée depuis l'action du 10/09 (dernier crawl GSC : 2026-07-13, gsc-snapshot.json). Ne pas juger. nextReviewDate repoussée de 7 jours."
       }
     ],
-    "nextReviewDate": "2026-10-01"
+    "nextReviewDate": "2026-10-08"
   },
   {
     "keyword": "investment banker salary in saudi arabia",
@@ -38,22 +39,24 @@
           "impressions": 0,
           "judgment": "Aucun effet mesurable — la requête exacte n'a généré ni impression ni position sur les 7 derniers jours (fenêtre 2026-09-14 → 2026-09-21), contre position 4.75 / 4 impressions le 2026-09-17. Volume déjà très faible avant l'action (7 puis 4 impressions/semaine), donc compatible avec une simple variance de requête à faible volume plutôt qu'une régression confirmée. Vérifié via WebSearch : la page ksashiftobservatory.online n'apparaît pas dans les 10 premiers résultats pour 'investment banker salary in saudi arabia' (résultats dominés par Levels.fyi, WallStreetMojo, Glassdoor, GrabJobs, ERI, PayScale), cohérent avec l'absence d'impressions GSC — pas un problème d'indexation. 1re place non atteinte. Repasse en 'active'. Prochaine tentative : ne pas retoucher le <title> (déjà aligné sur la requête) ; le gap probable est dans le contenu de la page elle-même (intro/description) plutôt que dans le titre, à vérifier à la prochaine analyse de besoin de recherche."
         },
-        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-09-06, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing."
+        "reviewInvalidated": "26/09 : jugement annulé, Google n'avait pas recrawlé la page depuis l'action (dernier crawl 2026-09-06, vérifié par URL Inspection). Le jugement mesurait l'ancienne version. Repassé en observing.",
+        "reviewPostponed": "01/10 : toujours pas recrawlée depuis l'action du 17/09 (dernier crawl GSC : 2026-09-06, gsc-snapshot.json). Ne pas juger. nextReviewDate repoussée de 7 jours."
       }
     ],
-    "nextReviewDate": "2026-10-01"
+    "nextReviewDate": "2026-10-08"
   },
   {
     "keyword": "petroleum engineering salary in saudi arabia",
     "targetPath": "/en/job/petroleum-engineer",
     "status": "observing",
-    "nextReviewDate": "2026-10-01",
+    "nextReviewDate": "2026-10-08",
     "actions": [
       {
         "date": "2026-09-24",
         "rankAtAction": 7.37,
         "needs": "Chercheurs veulent le salaire d'un Petroleum Engineer en Arabie Saoudite. Les pages en tête (Glassdoor, GrabJobs, ERI/SalaryExpert, WorldSalaries, PayScale) sont des pages salaire dédiées ; une page Glassdoor spécifique 'Saudi Aramco Petroleum Engineer Salaries' apparaît aussi dans le top 10, signe que les chercheurs veulent aussi savoir QUI recrute (Aramco domine le secteur pétrolier saoudien). Notre <title> ('Petroleum Engineer Salary in Saudi Arabia: AI Risk 24/100') correspond déjà bien à la requête. En creusant le contenu de la page, l'onglet 'Find this Job' (qui contient un bloc 'Who's Hiring' avec les employeurs réels du secteur, ex. Saudi Aramco) n'était jamais rendu dans le HTML statique (unmount React conditionnel au clic, même défaut déjà corrigé pour l'onglet salaire lors du cycle précédent). Pire : même une fois rendu, cet onglet affichait les mauvais employeurs pour ce métier, car le sector_id réel 'mining_oil_gas' (master.json) n'existait pas dans SECTOR_CATEGORY_MAP (qui ne connaissait que 'mining_quarrying'), donc la page retombait sur la catégorie par défaut 'admin' (employeurs génériques Conglomerate/Services/HR) au lieu du secteur pétrolier.",
-        "done": "1) src/app/job/[slug]/client.tsx : l'onglet 'Find this Job' (FindJobTab, qui contient le bloc réel 'Who's Hiring') est désormais toujours monté dans le HTML statique et seulement masqué en CSS (\"hidden\") quand l'onglet n'est pas actif, au lieu d'un rendu conditionnel React — même correctif que celui déjà appliqué à l'onglet salaire. 2) src/data/job-requirements.ts : ajout de la clé manquante 'mining_oil_gas': 'engineering' dans SECTOR_CATEGORY_MAP, pour que Petroleum Engineer (et Petroleum Geologist, même secteur) affichent les vrais employeurs Oil & Gas (Saudi Aramco, 73 311 employés) au lieu de la catégorie 'admin' par défaut. Vérifié après build : 'Saudi Aramco' apparaît désormais dans le HTML statique de /en/job/petroleum-engineer. tsc --noEmit et npm run build passent sans erreur (705+ pages générées)."
+        "done": "1) src/app/job/[slug]/client.tsx : l'onglet 'Find this Job' (FindJobTab, qui contient le bloc réel 'Who's Hiring') est désormais toujours monté dans le HTML statique et seulement masqué en CSS (\"hidden\") quand l'onglet n'est pas actif, au lieu d'un rendu conditionnel React — même correctif que celui déjà appliqué à l'onglet salaire. 2) src/data/job-requirements.ts : ajout de la clé manquante 'mining_oil_gas': 'engineering' dans SECTOR_CATEGORY_MAP, pour que Petroleum Engineer (et Petroleum Geologist, même secteur) affichent les vrais employeurs Oil & Gas (Saudi Aramco, 73 311 employés) au lieu de la catégorie 'admin' par défaut. Vérifié après build : 'Saudi Aramco' apparaît désormais dans le HTML statique de /en/job/petroleum-engineer. tsc --noEmit et npm run build passent sans erreur (705+ pages générées).",
+        "reviewPostponed": "01/10 : pas encore recrawlée depuis l'action du 24/09 (dernier crawl GSC : 2026-09-02, gsc-snapshot.json). Ne pas juger. nextReviewDate repoussée de 7 jours."
       }
     ]
   },
@@ -68,6 +71,20 @@
         "rankAtAction": 7.78,
         "needs": "Chercheurs veulent le salaire d'un Hotel Manager en Arabie Saoudite. Vérifié via WebSearch ('hotel manager salary in saudi arabia') : Glassdoor, GrabJobs, ERI/SalaryExpert, PayScale, WorldSalaries — toutes des pages salaire dédiées, titrées 'Hotel Manager Salary in Saudi Arabia (2026)' / 'Hotel Manager Salary Guide' quasi mot pour mot. Sur notre page, le <title> tombe dans le bucket 'AI Risk < 45' où le 1er gabarit ('Hotel Manager: AI Risk 30/100 · Salary Guide, Saudi Arabia', 58 car.) tient sous 60 caractères et est donc choisi avant le gabarit 'salaire en tête' ajouté le 17/09 pour Investment Banker (qui n'était choisi que pour les noms de métier longs, jamais atteint pour un nom court comme 'Hotel Manager') — décalage direct avec la requête réelle, alors même que /en/job/hotel-manager est la page à plus fort volume d'impressions (330/28j, position moy. 7.6) de tout le lot concerné.",
         "done": "Calcul sur les 114 pages EN du bucket composite<45 : 25 pages ont un <title> 'AI Risk' en tête au lieu de 'Salary' en tête pour la même raison (nom court, 1er gabarit < 60 car.). Plutôt que de changer les 25 d'un coup (règle charte : cohorte + témoin pour un changement de gabarit), cohorte de test = les 10 pages à impressions non nulles (hotel-manager 330, security-guard 311, risk-manager 174, scaffolder 72, waiter-waitress 36, audiologist 36, private-chef 30, pharmacists 24, cleaner-janitor 23, quality-manager 19) : src/app/[lang]/job/[slug]/page.tsx, ajout d'un Set SALARY_FIRST_TITLE_COHORT qui, pour ces 10 slugs seulement, place le gabarit 'salaire en tête' en 1re priorité. Groupe témoin (non modifié, même bucket, 0 impression mesurée) : rpa-developer, podiatrist, dentists, photographer, hvac-technician, general-manager, tour-guide, nanny-au-pair, electricians, architect, event-planner, delivery-driver, estate-manager, surveyor-land, store-manager. Vérifié dans le HTML généré : cohorte → 'Hotel Manager Salary in Saudi Arabia: AI Risk 30/100' ; témoin (ex. Dentists) → titre inchangé ; pages en observation (cloud-engineer, investment-banker, petroleum-engineer) → titre inchangé, aucune interférence. tsc --noEmit et npm run build passent sans erreur."
+      }
+    ]
+  },
+  {
+    "keyword": "mlt salary in saudi arabia",
+    "targetPath": "/en/job/medical-laboratory-technician",
+    "status": "observing",
+    "nextReviewDate": "2026-10-08",
+    "actions": [
+      {
+        "date": "2026-10-01",
+        "rankAtAction": 7.67,
+        "needs": "Chercheurs veulent le salaire d'un Medical Laboratory Technician (abrégé 'MLT') en Arabie Saoudite. Vérifié via WebSearch ('mlt salary in saudi arabia' et 'medical laboratory technician salary saudi arabia') : Glassdoor, Paylab, ERI/SalaryExpert, PayScale — pages salaire dédiées, titrées autour de 'Medical Laboratory Technician Salary in Saudi Arabia'. Notre page n'a pas de <title> salaire du tout : 'Medical Laboratory Technician' (30 car.) est trop long pour que les 4 gabarits 'salaire'/'AI Risk' du bucket composite<45 tiennent sous 60 caractères (76 à 66 car. calculés), donc le générateur retombait entièrement sur le titre nu '<name> — Saudi Arabia' sans salaire ni risque IA — même famille de défaut que celle déjà corrigée pour Investment Banker (17/09) et Hotel Manager (28/09), mais ici le nom est si long qu'aucun gabarit existant, même 'salaire en tête', ne passe sous 60 caractères.",
+        "done": "src/app/[lang]/job/[slug]/page.tsx : ajout d'une map SHORT_NAME_OVERRIDES (actuellement un seul slug, 'medical-laboratory-technician' → 'Medical Lab Technician') et d'un nouveau candidat de titre raccourci, inséré en tête de la liste firstFit uniquement pour ce slug. Titre généré : 'Medical Lab Technician Salary in Saudi Arabia: AI Risk 35.5' (59 car., contre 'Medical Laboratory Technician — Saudi Arabia' sans salaire avant). 19 autres pages composite<45/EN ont le même défaut de nom trop long (ex. Radiologist/Radiologic Technologist, Digital Transformation Consultant) mais ne sont pas touchées ce cycle : une seule amélioration par mot-clé (règle seo-rank-watch). Vérifié dans le HTML généré : medical-laboratory-technician → nouveau titre ; radiologist-radiologic-technologist (témoin, même défaut) → titre inchangé ; hotel-manager, cloud-engineer, investment-banker, petroleum-engineer, dentists → titres inchangés, aucune interférence. tsc --noEmit et npm run build passent sans erreur."
       }
     ]
   }

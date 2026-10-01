@@ -35,5 +35,27 @@
     "why": "Cycle seo-rank-watch : mot-clé choisi = 'hotel management salary in saudi arabia' (position 7.78, 27 impressions sur ce mot-clé ; /en/job/hotel-manager est la page à plus fort volume d'impressions — 330/28j — de tout le bucket composite<45/EN concerné par le même défaut de <title>). Détail complet de l'analyse (cohorte de 10 vs groupe témoin de 15) dans data/seo/improvement-log.json.",
     "done": "Voir data/seo/improvement-log.json (entrée 'hotel management salary in saudi arabia') pour le détail. Résumé : <title> des 10 pages ci-dessus passe en priorité 'salaire en tête' au lieu de 'risque IA en tête' dans src/app/[lang]/job/[slug]/page.tsx (bucket composite<45, EN). Groupe témoin non modifié : /en/job/{rpa-developer, podiatrist, dentists, photographer, hvac-technician, general-manager, tour-guide, nanny-au-pair, electricians, architect, event-planner, delivery-driver, estate-manager, surveyor-land, store-manager}. Pages en observation (cloud-engineer, investment-banker, petroleum-engineer) vérifiées inchangées.",
     "reviewAfter": "2026-10-05"
+  },
+  {
+    "date": "2026-10-01",
+    "lever": "mesure-jugement",
+    "pages": [
+      "/en/job/cloud-engineer",
+      "/en/job/investment-banker",
+      "/en/job/petroleum-engineer"
+    ],
+    "why": "nextReviewDate du 2026-10-01 atteinte pour ces 3 mots-clés en observation. gsc-snapshot.json (crawl, données du 28/09) : aucune des 3 pages n'a été recrawlée depuis son action (cloud-engineer action 10/09, dernier crawl 13/07 ; investment-banker action 17/09, dernier crawl 06/09 ; petroleum-engineer action 24/09, dernier crawl 02/09). Juger maintenant mesurerait l'ancienne version de chaque page.",
+    "done": "Aucun jugement cette fois (recrawl manquant). nextReviewDate des 3 repoussée au 2026-10-08 dans data/seo/improvement-log.json, avec le détail du dernier crawl connu. hotel-manager (nextReviewDate 2026-10-05) pas encore due, non touchée.",
+    "reviewAfter": "2026-10-08"
+  },
+  {
+    "date": "2026-10-01",
+    "lever": "seo-rank-watch",
+    "pages": [
+      "/en/job/medical-laboratory-technician"
+    ],
+    "why": "Cycle seo-rank-watch : parmi les mots-clés actifs (hors observing/achieved) en position 2-10 avec impressions, numbeo (7.33, 3 impr., priorité 'low', tendance 15→11→5→3 sur 4 semaines) est techniquement le plus proche de la 1re place mais son volume s'est effondré ; mlt salary in saudi arabia (7.67, 21 impr., priorité 'medium', volume stable ~20-30/semaine) offre un bien meilleur rendement attendu (volume × probabilité d'effet, règle du site-manager) pour la même position de départ. Choix : mlt salary in saudi arabia / /en/job/medical-laboratory-technician.",
+    "done": "Voir data/seo/improvement-log.json (entrée 'mlt salary in saudi arabia') pour l'analyse complète du besoin de recherche. Résumé : le nom 'Medical Laboratory Technician' est trop long pour tenir dans aucun des gabarits de <title> salaire/risque IA existants (composite<45, EN) sous 60 caractères, donc la page n'affichait ni salaire ni risque IA dans son titre. Ajout d'une map SHORT_NAME_OVERRIDES dans src/app/[lang]/job/[slug]/page.tsx (un seul slug pour l'instant) avec un gabarit de titre raccourci utilisant 'Medical Lab Technician'. 19 autres pages composite<45/EN ont le même défaut de nom trop long et ne sont pas touchées ce cycle (une seule amélioration par mot-clé, témoin naturel pour un futur cycle).",
+    "reviewAfter": "2026-10-08"
   }
 ]
