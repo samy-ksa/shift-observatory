@@ -161,7 +161,7 @@ export const FAQ: Record<Lang, Array<{ q: string; a: string }>> = {
     },
     {
       q: "What's the average rent in Riyadh in 2026?",
-      a: "A 1-bedroom apartment in Riyadh city center: ~SAR 4,400/month (rent freeze active since 2025). A 3-bedroom apartment: ~SAR 7,950/month. A 3-bedroom compound villa with pool, gym, and security: ~SAR 18,500/month. The compound premium is mostly paid by employer in expat packages.",
+      a: "A 1-bedroom apartment in Riyadh city center: ~SAR 4,400/month. A 3-bedroom apartment: ~SAR 7,950/month. A 3-bedroom compound villa with pool, gym, and security: ~SAR 18,500/month (compound premium mostly paid by employer in expat packages). Riyadh has been under a 5-year rent freeze since December 2025 (Real Estate Authority): landlords must give 365 days' notice before any non-renewal, and existing tenants keep their rent flat. Compound villas are largely exempt from the freeze — market rate applies. Jeddah and Dammam have no such cap: rents there are rising 3-6%/year (GASTAT, April 2026).",
     },
     {
       q: "How much do international schools cost in Saudi Arabia?",
@@ -191,7 +191,7 @@ export const FAQ: Record<Lang, Array<{ q: string; a: string }>> = {
     },
     {
       q: "Quel est le loyer moyen à Riyad en 2026 ?",
-      a: "Appartement 1 chambre centre-ville : ~4 400 SAR/mois (gel des loyers actif depuis 2025). Appartement 3 chambres : ~7 950 SAR/mois. Villa compound 3 chambres avec piscine et sécurité : ~18 500 SAR/mois.",
+      a: "Appartement 1 chambre centre-ville : ~4 400 SAR/mois. Appartement 3 chambres : ~7 950 SAR/mois. Villa compound 3 chambres avec piscine et sécurité : ~18 500 SAR/mois (prime souvent payée par l'employeur). Riyad est sous un gel des loyers de 5 ans depuis décembre 2025 (Autorité Immobilière) : préavis de 365 jours obligatoire avant tout non-renouvellement, loyer des locataires en place inchangé. Les villas compound sont largement exclues du gel (prix de marché). Djeddah et Dammam n'ont pas ce plafond : les loyers y augmentent de 3 à 6 % par an (GASTAT, avril 2026).",
     },
     {
       q: "Combien coûtent les écoles internationales en Arabie Saoudite ?",
@@ -221,7 +221,7 @@ export const FAQ: Record<Lang, Array<{ q: string; a: string }>> = {
     },
     {
       q: "ما متوسط الإيجار في الرياض في 2026؟",
-      a: "شقة بغرفة نوم واحدة في وسط الرياض: ~4,400 ريال/شهر (تجميد الإيجارات نشط منذ 2025). شقة 3 غرف نوم: ~7,950 ريال/شهر. فيلا كمباوند 3 غرف مع مسبح وأمن: ~18,500 ريال/شهر.",
+      a: "شقة بغرفة نوم واحدة في وسط الرياض: ~4,400 ريال/شهر. شقة 3 غرف نوم: ~7,950 ريال/شهر. فيلا كمباوند 3 غرف مع مسبح وأمن: ~18,500 ريال/شهر (غالباً يدفعها صاحب العمل). الرياض تخضع لتجميد إيجارات لمدة 5 سنوات منذ ديسمبر 2025 (الهيئة العقارية): يجب على الملاك تقديم إشعار 365 يوماً قبل عدم التجديد، ويبقى إيجار المستأجرين الحاليين ثابتاً. فيلل الكمباوند مستثناة إلى حد كبير من التجميد (سعر السوق). جدة والدمام بلا هذا السقف: ترتفع الإيجارات هناك 3-6% سنوياً (جستات، أبريل 2026).",
     },
     {
       q: "كم تكلف المدارس الدولية في المملكة العربية السعودية؟",
