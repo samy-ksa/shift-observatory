@@ -1,104 +1,98 @@
 {
-  "report_date": "2026-09-28",
+  "report_date": "2026-10-05",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Uber",
+      "company": "US employers (aggregate)",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 3300,
+      "jobs_cut": 10799,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Uber announced plans to cut approximately 3,300 global jobs, or about 10% of its workforce, as part of a restructuring and efficiency program in a period of increased AI investment.",
-      "source": "InformationWeek",
-      "date": "2026-09-02"
-    },
-    {
-      "company": "Intuit",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Intuit announced approximately 3,000 job cuts, representing about 17% of its workforce, while stating that it would streamline operations and focus on strategic areas including AI.",
-      "source": "India Today",
-      "date": "2026-09-23"
+      "description": "Technology employers announced 10,799 job cuts in September, while artificial intelligence was cited as the leading overall reason for US job cuts with 3,961 cuts attributed to AI.",
+      "source": "Challenger, Gray & Christmas",
+      "date": "2026-10-01"
     },
     {
       "company": "Oracle",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": false,
-      "ai_role": "suspected",
-      "description": "Oracle reportedly eliminated 546 positions in its America Cloud Infrastructure business amid continued cloud and AI infrastructure investment.",
-      "source": "InformationWeek",
-      "date": "2026-09-25"
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Oracle stated in its annual regulatory filing that adoption and deployment of AI technologies across its operations has resulted, and may continue to result, in workforce reductions, but the filing did not provide a separable AI-related headcount figure.",
+      "source": "Oracle annual regulatory filing, as reported by Tech Times",
+      "date": "2026-09-28"
     },
     {
-      "company": "Meta",
+      "company": "Block",
       "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 8000,
+      "sector": "FinTech",
+      "jobs_cut": 4000,
       "jobs_cut_estimated": true,
-      "ai_role": "suspected",
-      "description": "Meta reportedly began cutting approximately 10% of its workforce, or around 8,000 employees, during a broader technology-sector restructuring cycle linked to efficiency and AI investment.",
+      "ai_role": "direct",
+      "description": "Block announced a reduction of more than 4,000 employees in February to build smaller AI-enabled teams, according to reporting reviewed in the 2026 workforce data coverage.",
       "source": "Yahoo Finance",
-      "date": "2026-09-23"
+      "date": "2026-09-04"
+    },
+    {
+      "company": "Visa",
+      "country": "US",
+      "sector": "Financial Services",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Visa announced a 7% workforce reduction and attributed the efficiency push to AI reshaping work, although the reported source did not provide the corresponding headcount.",
+      "source": "Challenger, Gray & Christmas",
+      "date": "2026-07-31"
     }
   ],
   "gulf_mena_automation": [],
   "saudi_policy_updates": [],
   "ai_workforce_signals": [
     {
-      "headline": "AI adoption favors senior roles while junior employment declines",
-      "description": "A study covering companies in 41 countries found that organizations adopting AI increased senior employment by 6.7% over five years while junior employment declined by 3%. The findings indicate that AI adoption may reshape workforce composition even when total employment rises.",
-      "relevance_to_ksa": "direct",
-      "source": "Bloomberg",
-      "date": "2026-09-21"
-    },
-    {
-      "headline": "AI productivity gains are appearing through weaker wage growth",
-      "description": "Research covering 321 occupations found slower wage growth in occupations more exposed to AI, while overall employment levels remained broadly unchanged. The researchers concluded that employers may be capturing productivity gains through reduced wage growth rather than immediate headcount reductions.",
+      "headline": "AI remains the leading cited driver of US job cuts",
+      "description": "Challenger, Gray & Christmas reported that employers had attributed 120,136 US job cuts to artificial intelligence through September 2026. That represented about 21% of the 573,195 total announced cuts year to date.",
       "relevance_to_ksa": "indirect",
-      "source": "The New York Times",
-      "date": "2026-09-16"
+      "source": "Challenger, Gray & Christmas",
+      "date": "2026-10-01"
     },
     {
-      "headline": "Enterprise AI is driving workforce redesign",
-      "description": "TalentNeuron reported that organizations are moving from AI experimentation toward large-scale adoption and redesigning workforces around changing talent requirements. The development points to task and role reconfiguration as a major near-term labor-market effect.",
-      "relevance_to_ksa": "contextual",
-      "source": "PR Newswire",
-      "date": "2026-09-01"
-    },
-    {
-      "headline": "ServiceNow forecasts technology-sector job growth alongside AI adoption",
-      "description": "ServiceNow projected 432,000 additional UK technology, media and telecommunications jobs by 2031, a 28.2% increase from current levels. Its survey also found that 65% of respondents expected organizational headcount to increase over the following three years.",
-      "relevance_to_ksa": "contextual",
-      "source": "ITPro",
-      "date": "2026-09-23"
-    },
-    {
-      "headline": "Workers are acquiring AI skills faster than employers provide training",
-      "description": "iCIMS reported that workers are increasingly teaching themselves AI-related skills while employers struggle to keep pace with training demand. The most concentrated AI skill requirements include generative AI engineering, machine learning engineering, artificial intelligence engineering and data science.",
+      "headline": "September US job cuts declined while technology cuts increased",
+      "description": "US employers announced 43,281 cuts in September, down 18% from August, while the technology sector recorded 10,799 cuts, up 77% from August. The figures indicate that overall layoff intensity eased even as technology restructuring remained concentrated.",
       "relevance_to_ksa": "indirect",
-      "source": "PR Newswire",
-      "date": "2026-09-10"
+      "source": "Challenger, Gray & Christmas",
+      "date": "2026-10-01"
     },
     {
-      "headline": "AI adoption is shifting hiring toward data-center roles",
-      "description": "Recent workforce reporting indicated that demand for data-center jobs is rising alongside increased AI investment. This suggests that AI-related infrastructure is creating specialized employment even as automation pressures other occupational categories.",
+      "headline": "2026 technology layoffs surpassed 2025 levels",
+      "description": "A layoffs tracker cited in September reporting counted 225,122 technology workers displaced across 519 events by September 25, compared with 205,773 workers across 338 events during all of 2025. The reporting connected the trend to companies increasing AI investment and restructuring around it.",
       "relevance_to_ksa": "contextual",
-      "source": "LetsDataScience",
-      "date": "2026-09-21"
+      "source": "Tech Times",
+      "date": "2026-09-28"
+    },
+    {
+      "headline": "AI-linked layoffs remain a floor rather than a complete measure",
+      "description": "Analysis of Challenger data noted that the methodology counts cuts only when employers explicitly cite AI in public statements. Workforce reductions from unpublicized automation or broader restructuring may therefore be absent from the AI-attributed total.",
+      "relevance_to_ksa": "contextual",
+      "source": "Final Round AI",
+      "date": "2026-04-30"
+    },
+    {
+      "headline": "Evidence remains mixed on AI replacing workers economy-wide",
+      "description": "Reporting on 2026 labor data said overall US planned job cuts were down while hiring plans and retraining activity remained significant. The same coverage cited Block’s AI-enabled restructuring as a prominent example of targeted workforce reduction rather than economy-wide displacement.",
+      "relevance_to_ksa": "indirect",
+      "source": "Yahoo Finance",
+      "date": "2026-09-04"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 0,
-    "total_ai_cited_this_week": 0,
+    "total_global_layoffs_this_week": 10799,
+    "total_ai_cited_this_week": 3961,
     "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 128536,
-    "ytd_ai_cited_us": 0,
+    "ytd_global_tech_layoffs": 165925,
+    "ytd_ai_cited_us": 120136,
     "trend_vs_last_week": "stable",
-    "notable_trend": "AI adoption is increasingly reshaping workforce composition through fewer junior opportunities, slower wage growth and role redesign, while major announced cuts remain primarily broader restructuring events with AI cited as a contributing strategic factor rather than the sole cause."
+    "notable_trend": "AI remained the dominant explicitly cited driver of US job cuts through September, while overall layoffs declined and technology-sector reductions remained elevated, indicating selective AI-linked restructuring rather than a broad acceleration across the entire labor market."
   }
 }

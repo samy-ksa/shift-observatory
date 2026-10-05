@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-28",
+    "stats": {
+      "total_global_layoffs_this_week": 0,
+      "total_ai_cited_this_week": 0,
+      "total_gulf_events_this_week": 0,
+      "ytd_global_tech_layoffs": 128536,
+      "ytd_ai_cited_us": 0,
+      "trend_vs_last_week": "stable",
+      "notable_trend": "AI adoption is increasingly reshaping workforce composition through fewer junior opportunities, slower wage growth and role redesign, while major announced cuts remain primarily broader restructuring events with AI cited as a contributing strategic factor rather than the sole cause."
+    }
+  },
+  {
     "date": "2026-09-26",
     "stats": {
       "total_global_layoffs_this_week": 0,
