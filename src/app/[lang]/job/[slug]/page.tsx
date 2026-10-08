@@ -57,6 +57,13 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
   "medical-laboratory-technician": "Medical Lab Technician",
 };
 
+// 08/10 : cycle seo-rank-watch pour "investment banker salary in saudi arabia"
+// (jugement du 17/09 sans effet, <title> déjà aligné sur le salaire). Le lede IA-citable
+// (1er texte visible, JobAICitableLede) ouvrait par "Will AI replace X?" avant le
+// salaire — décalage avec une requête purement salariale. Variante "salaire en tête"
+// (mêmes données, réordonnées), un seul slug ce cycle. data/seo/improvement-log.json.
+const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker"]);
+
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
   return LANGS.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
@@ -481,7 +488,7 @@ export default async function LangJobPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <JobAICitableLede occupation={occ} lang={lang} />
+      <JobAICitableLede occupation={occ} lang={lang} salaryFirst={SALARY_FIRST_LEDE_COHORT.has(slug)} />
       <JobPageClient
         occupation={occ}
         related={related}

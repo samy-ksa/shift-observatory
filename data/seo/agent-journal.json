@@ -77,5 +77,28 @@
     "why": "Cycle seo-rank-watch : parmi les mots-clés hors observing/achieved, 'saudi arabia cost of living riyadh rent 2026' (/en/relocate) est le seul en position 2-10 avec impressions (8.18, 11 impr.) — les autres candidats actifs (hospital-administrator, aircraft-mechanic-ame, machine-learning-engineer, pharmacists, dentists, numbeo, 19000-riyal) n'ont aucune impression sur la fenêtre courante. Position stable autour de 7.4-8.2 depuis 4 semaines, impressions en baisse (36 → 11), 0 clic : stagnation.",
     "done": "Analyse du besoin (WebSearch 'saudi arabia cost of living riyadh rent 2026') : les pages concurrentes (ksaexpats.com, zetsim.com, analytix.sa) détaillent toutes le gel des loyers de Riyad (durée, préavis, exceptions) et le contraste avec Jeddah/Dammam — notre FAQ 'What's the average rent in Riyadh in 2026?' ne mentionnait le gel qu'en 4 mots ('rent freeze active since 2025'), sans ce détail, alors que src/data/relocation-costs.ts le contient déjà intégralement et sourcé (Real Estate Authority, déc. 2025 ; GASTAT, avril 2026). Mise à jour de la réponse FAQ (EN/FR/AR) dans src/components/relocate/CostOfLivingEditorial.tsx : gel de 5 ans depuis déc. 2025, préavis de 365 jours, villas compound exemptées, contraste Jeddah/Dammam (+3-6%/an, sans plafond). Aucun chiffre inventé : tout vient de src/data/relocation-costs.ts (rent_1br_center, rent_compound). Vérifié dans le HTML généré (.next/server/app/{en,fr,ar}/relocate.html) : texte visible et JSON-LD FAQPage mis à jour dans les 3 langues ; autres pages (job/*, pulse) non affectées. tsc --noEmit et npm run build OK.",
     "reviewAfter": "2026-10-12"
+  },
+  {
+    "date": "2026-10-08",
+    "lever": "mesure-jugement",
+    "pages": [
+      "/en/job/cloud-engineer",
+      "/en/job/petroleum-engineer",
+      "/en/job/medical-laboratory-technician",
+      "/en/job/investment-banker"
+    ],
+    "why": "nextReviewDate du 2026-10-08 atteinte pour ces 4 mots-clés en observation. Données déposées par le Mac datées du 2026-10-05 (identiques à celles de lundi, rien de plus récent cette fois — à moins de 5 jours, donc utilisées telles quelles). gsc-snapshot.json (crawl) : cloud-engineer (action 10/09, dernier crawl 2026-07-13), petroleum-engineer (action 24/09, dernier crawl 2026-09-02) et mlt (action 01/10, dernier crawl 2026-07-25) pas recrawlées depuis leur action — juger maintenant mesurerait l'ancienne version. investment-banker (action 17/09, dernier crawl 2026-09-28) recrawlée depuis l'action : jugement valide ce cycle.",
+    "done": "cloud-engineer, petroleum-engineer, mlt : aucun jugement, nextReviewDate repoussée au 2026-10-15 dans data/seo/improvement-log.json (détail du dernier crawl connu noté pour chacun). investment-banker : jugé sur la fenêtre GSC 28 j disponible (pas de détail jour par jour sans identifiants Google) — 0 impression pour la requête exacte (contre 8 sur la fenêtre précédente, position 6,9), page 39 → 2 impressions/28j. Aucun effet mesurable, 1re place non atteinte. Repasse 'active', détail complet dans data/seo/improvement-log.json. hotel-manager et /en/relocate (nextReviewDate 2026-10-12) pas encore dus, non touchés. Note générale : impressions totales du site en baisse constante sur les 3 dernières mesures (14 384 → 13 810 → 12 992 → 11 433 sur fenêtres 28j glissantes), surtout concentrée sur les pages /en/job/* (ex. petroleum-engineer 1049 → 9 impr/28j) ; aucune cause technique trouvée (pas de noindex, robots.txt inchangé, pas de régression de code identifiée) — à surveiller, détail dans le rapport hebdo.",
+    "reviewAfter": "2026-10-15"
+  },
+  {
+    "date": "2026-10-08",
+    "lever": "seo-rank-watch",
+    "pages": [
+      "/en/job/investment-banker"
+    ],
+    "why": "Cycle seo-rank-watch : investment-banker vient d'être rejugé 'aucun effet' ce cycle (priorité 3 du workflow : amélioration précédente sans effet). Aucun candidat de priorité 1/2 (position 2-10 ou 11-20 avec impressions mesurables sur la requête exacte) : hospital-administrator, aircraft-mechanic-ame, machine-learning-engineer, pharmacists, dentists, numbeo sont tous à position nulle / 0 impression sur la fenêtre courante. Piste laissée par le jugement du 24/09 (déjà invalidé puis confirmé aujourd'hui) : le <title> est déjà aligné sur la requête, le gap probable est dans le contenu visible de la page.",
+    "done": "WebSearch 'investment banker salary in saudi arabia' : pages en tête (PayScale, Life Indexed, GlobalCostData, Paylab) 100% salaire, chiffre dès la 1re phrase, aucune mention de risque IA. Constat sur notre page : le 1er texte visible (JobAICitableLede, paragraphe IA-citable server-rendered au-dessus du widget salaire) ouvre par 'Will AI replace Investment Banker in Saudi Arabia?' et ne mentionne le salaire qu'au milieu d'une longue phrase. Ajout d'une variante 'salaire en tête' (prop salaryFirst) dans src/components/job/JobAICitableLede.tsx — mêmes données (salaire, effectif, risque IA, Nitaqat), seulement réordonnées, aucune invention (fourchette 15 000-45 000 SAR/mois cohérente avec la fourchette observée ailleurs ~25 000-30 000 SAR/mois). src/app/[lang]/job/[slug]/page.tsx : nouveau Set SALARY_FIRST_LEDE_COHORT, un seul slug ('investment-banker') ce cycle. FR/AR non touchés (requête anglaise uniquement). Vérifié dans le HTML généré : /en/job/investment-banker → nouveau lede ; témoins /en/job/hotel-manager, /en/job/cloud-engineer, /en/job/dentists et /fr,/ar/job/investment-banker → lede inchangé. tsc --noEmit et npm run build OK.",
+    "reviewAfter": "2026-10-15"
   }
 ]

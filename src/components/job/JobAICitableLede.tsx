@@ -44,7 +44,7 @@ function nitaqatLabel(status: string | undefined, lang: Lang): string {
   return "open to expatriates under Nitaqat sector quotas";
 }
 
-function buildEnglish(occ: Occupation): string {
+function buildEnglish(occ: Occupation, salaryFirst: boolean): string {
   const { name_en, composite, employment_saudi_pct, nitaqat_status, category } = occ;
   const salary_entry_sar = occ.salary_entry_sar ?? 0;
   const salary_median_sar = occ.salary_median_sar ?? salary_entry_sar;
@@ -61,6 +61,14 @@ function buildEnglish(occ: Occupation): string {
   const action = occ.risk_action_en;
 
   const nit = nitaqatLabel(nitaqat_status, "en");
+
+  if (salaryFirst) {
+    // 08/10 : cycle seo-rank-watch pour "investment banker salary in saudi arabia" —
+    // la requête est purement salariale, mais ce lede (1er texte visible de la page)
+    // ouvrait par "Will AI replace X?" avant toute mention du salaire. Variante qui
+    // mène par le salaire, même données, sans invention. data/seo/improvement-log.json.
+    return `${name_en} in Saudi Arabia earn between SAR ${fmt(salary_entry_sar)} and SAR ${fmt(salary_senior_sar)} per month, with a median of SAR ${fmt(salary_median_sar ?? salary_entry_sar)} — all tax-free under Saudi Arabia's 0% personal income tax. Approximately ${fmt(employment_est)} workers hold this role nationally, with ${employment_saudi_pct}% being Saudi nationals. Will AI replace ${name_en} in Saudi Arabia? The composite AI automation risk score is ${composite}/100 — ${verdict}. SHIFT Observatory builds the score using the Frey-Osborne automation probability framework, Eloundou LLM exposure data, and Nitaqat regulatory pressure, classifying this occupation as "${category === "substitution" ? "AI substitution" : "AI augmentation"}". ${reasoning} The role is ${nit}. ${action}`;
+  }
 
   return `Will AI replace ${name_en} in Saudi Arabia? The composite AI automation risk score is ${composite}/100 — ${verdict}. SHIFT Observatory builds the score using the Frey-Osborne automation probability framework, Eloundou LLM exposure data, and Nitaqat regulatory pressure, classifying this occupation as "${category === "substitution" ? "AI substitution" : "AI augmentation"}". ${reasoning} ${name_en} in Saudi Arabia earn between SAR ${fmt(salary_entry_sar)} and SAR ${fmt(salary_senior_sar)} per month, with a median of SAR ${fmt(salary_median_sar ?? salary_entry_sar)} — all tax-free under Saudi Arabia's 0% personal income tax. Approximately ${fmt(employment_est)} workers hold this role nationally, with ${employment_saudi_pct}% being Saudi nationals. The role is ${nit}. ${action}`;
 }
@@ -112,9 +120,11 @@ function buildArabic(occ: Occupation): string {
 export default function JobAICitableLede({
   occupation,
   lang,
+  salaryFirst = false,
 }: {
   occupation: Occupation;
   lang: Lang;
+  salaryFirst?: boolean;
 }) {
   const dir = lang === "ar" ? "rtl" : "ltr";
   const paragraph =
@@ -122,7 +132,7 @@ export default function JobAICitableLede({
       ? buildFrench(occupation)
       : lang === "ar"
         ? buildArabic(occupation)
-        : buildEnglish(occupation);
+        : buildEnglish(occupation, salaryFirst);
 
   return (
     <section
