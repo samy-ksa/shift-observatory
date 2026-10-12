@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-10-05",
+    "stats": {
+      "total_global_layoffs_this_week": 10799,
+      "total_ai_cited_this_week": 3961,
+      "total_gulf_events_this_week": 0,
+      "ytd_global_tech_layoffs": 165925,
+      "ytd_ai_cited_us": 120136,
+      "trend_vs_last_week": "stable",
+      "notable_trend": "AI remained the dominant explicitly cited driver of US job cuts through September, while overall layoffs declined and technology-sector reductions remained elevated, indicating selective AI-linked restructuring rather than a broad acceleration across the entire labor market."
+    }
+  },
+  {
     "date": "2026-09-28",
     "stats": {
       "total_global_layoffs_this_week": 0,

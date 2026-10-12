@@ -1,98 +1,156 @@
 {
-  "report_date": "2026-10-05",
+  "report_date": "2026-10-12",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "US employers (aggregate)",
+      "company": "HubSpot",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 10799,
+      "jobs_cut": 660,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Technology employers announced 10,799 job cuts in September, while artificial intelligence was cited as the leading overall reason for US job cuts with 3,961 cuts attributed to AI.",
-      "source": "Challenger, Gray & Christmas",
-      "date": "2026-10-01"
+      "description": "HubSpot announced approximately 660 job reductions, representing about 7% of its workforce, as part of a restructuring around AI-driven customer outcomes.",
+      "source": "Yahoo Finance",
+      "date": "2026-10-06"
     },
     {
-      "company": "Oracle",
+      "company": "FICO",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 0,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Oracle stated in its annual regulatory filing that adoption and deployment of AI technologies across its operations has resulted, and may continue to result, in workforce reductions, but the filing did not provide a separable AI-related headcount figure.",
-      "source": "Oracle annual regulatory filing, as reported by Tech Times",
-      "date": "2026-09-28"
+      "jobs_cut": 570,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "FICO was reported as having announced approximately 570 job cuts in October 2026 amid an industry-wide shift toward AI-enabled efficiency.",
+      "source": "Killed by AI",
+      "date": "2026-10-08"
     },
     {
-      "company": "Block",
+      "company": "DNB",
+      "country": "NO",
+      "sector": "Banking",
+      "jobs_cut": 400,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "DNB was reported as planning approximately 400 job reductions in October 2026 as banking operations continue to shift toward automation and AI-enabled processes.",
+      "source": "Killed by AI",
+      "date": "2026-10-08"
+    },
+    {
+      "company": "PayPal",
       "country": "US",
       "sector": "FinTech",
-      "jobs_cut": 4000,
+      "jobs_cut": 4760,
       "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Block announced a reduction of more than 4,000 employees in February to build smaller AI-enabled teams, according to reporting reviewed in the 2026 workforce data coverage.",
-      "source": "Yahoo Finance",
-      "date": "2026-09-04"
+      "ai_role": "contributing",
+      "description": "Bloomberg reportedly said PayPal plans to reduce staff by about 20% over two to three years, equivalent to approximately 4,760 of its 23,800 employees, as it pursues efficiency and AI-related transformation.",
+      "source": "Bloomberg",
+      "date": "2026-10-10"
     },
     {
-      "company": "Visa",
+      "company": "Amazon",
       "country": "US",
-      "sector": "Financial Services",
-      "jobs_cut": 0,
+      "sector": "Tech",
+      "jobs_cut": 1000,
       "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "Visa announced a 7% workforce reduction and attributed the efficiency push to AI reshaping work, although the reported source did not provide the corresponding headcount.",
-      "source": "Challenger, Gray & Christmas",
-      "date": "2026-07-31"
+      "ai_role": "contributing",
+      "description": "Amazon reportedly cut fewer than 1,000 white-collar positions in its stores division during an ongoing corporate restructuring associated with efficiency and AI investment priorities.",
+      "source": "Yahoo Tech",
+      "date": "2026-10-09"
+    },
+    {
+      "company": "Workday",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 140,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "Workday was reported to be eliminating approximately 140 Bay Area positions while trimming its technology workforce amid a broader AI-focused operating transition.",
+      "source": "Yahoo Tech",
+      "date": "2026-10-09"
+    },
+    {
+      "company": "Meta",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 8000,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Meta began cutting approximately 10% of its workforce, or about 8,000 employees, as it balances substantial AI infrastructure spending against operating efficiency.",
+      "source": "Yahoo Tech",
+      "date": "2026-10-09"
+    },
+    {
+      "company": "Cloudflare",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 1100,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Cloudflare was listed among companies making AI-linked workforce reductions, with approximately 1,100 positions affected in 2026.",
+      "source": "Gravity Fast AI Layoffs Tracker",
+      "date": "2026-09-12"
     }
   ],
   "gulf_mena_automation": [],
   "saudi_policy_updates": [],
   "ai_workforce_signals": [
     {
-      "headline": "AI remains the leading cited driver of US job cuts",
-      "description": "Challenger, Gray & Christmas reported that employers had attributed 120,136 US job cuts to artificial intelligence through September 2026. That represented about 21% of the 573,195 total announced cuts year to date.",
-      "relevance_to_ksa": "indirect",
-      "source": "Challenger, Gray & Christmas",
+      "headline": "Workday report finds AI is more often augmenting than eliminating jobs",
+      "description": "Workday’s October 2026 workforce report found that 40% of business leaders expect AI to increase output from existing employees, while 28% expect it to reduce headcount. The report also found rising demand for hands-on AI engineering, workflow automation, and AI-tool-building skills.",
+      "relevance_to_ksa": "direct",
+      "source": "Workday Global Workforce Report via FT Markets",
+      "date": "2026-10-05"
+    },
+    {
+      "headline": "Reuters reports widespread excess staffing alongside limited AI scale-up",
+      "description": "A BearingPoint study reported that only 13% of companies were on track with their AI initiatives, while nearly two-thirds estimated excess staffing of at least 10%. Deep operational AI integration rose to 11% in 2026 from 7% in 2025.",
+      "relevance_to_ksa": "contextual",
+      "source": "Reuters",
       "date": "2026-10-01"
     },
     {
-      "headline": "September US job cuts declined while technology cuts increased",
-      "description": "US employers announced 43,281 cuts in September, down 18% from August, while the technology sector recorded 10,799 cuts, up 77% from August. The figures indicate that overall layoff intensity eased even as technology restructuring remained concentrated.",
+      "headline": "China launches employment initiative focused on AI-linked skills",
+      "description": "China announced an employment initiative intended to help workers adapt their skills to artificial-intelligence development. The move indicates that workforce transition policy is becoming a formal component of national AI strategies.",
       "relevance_to_ksa": "indirect",
-      "source": "Challenger, Gray & Christmas",
-      "date": "2026-10-01"
+      "source": "Bloomberg",
+      "date": "2026-10-10"
     },
     {
-      "headline": "2026 technology layoffs surpassed 2025 levels",
-      "description": "A layoffs tracker cited in September reporting counted 225,122 technology workers displaced across 519 events by September 25, compared with 205,773 workers across 338 events during all of 2025. The reporting connected the trend to companies increasing AI investment and restructuring around it.",
+      "headline": "AI-linked layoffs continue across technology and financial services",
+      "description": "Reuters reported that companies including Microsoft and FICO announced workforce reductions in 2026 as investment priorities shifted toward AI and as automation affected exposed roles. The cited reductions span technology, software, and credit-information businesses.",
       "relevance_to_ksa": "contextual",
-      "source": "Tech Times",
-      "date": "2026-09-28"
+      "source": "Reuters",
+      "date": "2026-10-06"
     },
     {
-      "headline": "AI-linked layoffs remain a floor rather than a complete measure",
-      "description": "Analysis of Challenger data noted that the methodology counts cuts only when employers explicitly cite AI in public statements. Workforce reductions from unpublicized automation or broader restructuring may therefore be absent from the AI-attributed total.",
+      "headline": "AI-related layoff tracking reaches new 2026 highs",
+      "description": "A public AI-layoff tracker recorded 48 layoffs through October 6, 2026, where companies themselves cited AI or automation as a reason, with 105,503 disclosed or targeted jobs across entries that included a reported number. This is a secondary compilation and should be treated as indicative rather than an official aggregate.",
       "relevance_to_ksa": "contextual",
-      "source": "Final Round AI",
-      "date": "2026-04-30"
+      "source": "Gravity Fast AI Layoffs Tracker",
+      "date": "2026-10-06"
     },
     {
-      "headline": "Evidence remains mixed on AI replacing workers economy-wide",
-      "description": "Reporting on 2026 labor data said overall US planned job cuts were down while hiring plans and retraining activity remained significant. The same coverage cited Block’s AI-enabled restructuring as a prominent example of targeted workforce reduction rather than economy-wide displacement.",
+      "headline": "AI-driven restructuring increasingly targets customer-facing and corporate roles",
+      "description": "HubSpot’s announced reduction of approximately 660 positions was tied to a restructuring around AI-powered customer outcomes, while other reported 2026 reductions affected corporate, support, and technology functions. The pattern suggests that automation exposure is expanding beyond narrowly technical roles.",
       "relevance_to_ksa": "indirect",
-      "source": "Yahoo Finance",
-      "date": "2026-09-04"
+      "source": "Yahoo Finance; CxToday",
+      "date": "2026-10-06"
+    },
+    {
+      "headline": "AI investment is being paired with leaner operating models",
+      "description": "Recent company reductions and industry reporting show firms reallocating spending toward AI infrastructure and automation while reducing selected corporate and operational headcount. The pattern is visible across software, online services, banking, and technology infrastructure.",
+      "relevance_to_ksa": "direct",
+      "source": "Reuters; Yahoo Tech; Gravity Fast AI Layoffs Tracker",
+      "date": "2026-10-09"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 10799,
-    "total_ai_cited_this_week": 3961,
+    "total_global_layoffs_this_week": 16830,
+    "total_ai_cited_this_week": 5,
     "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 165925,
-    "ytd_ai_cited_us": 120136,
-    "trend_vs_last_week": "stable",
-    "notable_trend": "AI remained the dominant explicitly cited driver of US job cuts through September, while overall layoffs declined and technology-sector reductions remained elevated, indicating selective AI-linked restructuring rather than a broad acceleration across the entire labor market."
+    "ytd_global_tech_layoffs": 131382,
+    "ytd_ai_cited_us": 0,
+    "trend_vs_last_week": "up",
+    "notable_trend": "AI-linked workforce restructuring is broadening from software and support functions into financial services and corporate operations, while companies increasingly pair large AI-capital investments with targeted headcount reductions rather than immediate enterprise-wide replacement."
   }
 }
