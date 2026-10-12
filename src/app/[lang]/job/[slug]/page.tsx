@@ -55,6 +55,14 @@ const SALARY_FIRST_TITLE_COHORT = new Set([
 // mot-clé ce cycle (data/seo/agent-journal.json, 01/10).
 const SHORT_NAME_OVERRIDES: Record<string, string> = {
   "medical-laboratory-technician": "Medical Lab Technician",
+  // 12/10 : cycle seo-rank-watch pour "hospital administrator salary in saudi
+  // arabia" — le nom "Hospital Administrator" n'est pas trop long en soi, mais
+  // le gabarit salaire complet ("... Salary in Saudi Arabia: AI Risk 40/100",
+  // 61 car.) dépasse la limite de 60 d'une poignée de caractères, donc la page
+  // retombait sur le gabarit dégradé "AI Risk ... KSA" (requête réelle = salaire,
+  // pas "AI risk"/"KSA"). Pas d'abréviation ici : le nom complet passe sous 60
+  // car. une fois combiné au gabarit sans "/100" déjà utilisé pour mlt.
+  "hospital-administrator": "Hospital Administrator",
 };
 
 // 08/10 : cycle seo-rank-watch pour "investment banker salary in saudi arabia"

@@ -70,14 +70,14 @@
     "keyword": "hotel management salary in saudi arabia",
     "targetPath": "/en/job/hotel-manager",
     "status": "observing",
-    "nextReviewDate": "2026-10-12",
+    "nextReviewDate": "2026-10-19",
     "actions": [
       {
         "date": "2026-09-28",
         "rankAtAction": 7.78,
         "needs": "Chercheurs veulent le salaire d'un Hotel Manager en Arabie Saoudite. Vérifié via WebSearch ('hotel manager salary in saudi arabia') : Glassdoor, GrabJobs, ERI/SalaryExpert, PayScale, WorldSalaries — toutes des pages salaire dédiées, titrées 'Hotel Manager Salary in Saudi Arabia (2026)' / 'Hotel Manager Salary Guide' quasi mot pour mot. Sur notre page, le <title> tombe dans le bucket 'AI Risk < 45' où le 1er gabarit ('Hotel Manager: AI Risk 30/100 · Salary Guide, Saudi Arabia', 58 car.) tient sous 60 caractères et est donc choisi avant le gabarit 'salaire en tête' ajouté le 17/09 pour Investment Banker (qui n'était choisi que pour les noms de métier longs, jamais atteint pour un nom court comme 'Hotel Manager') — décalage direct avec la requête réelle, alors même que /en/job/hotel-manager est la page à plus fort volume d'impressions (330/28j, position moy. 7.6) de tout le lot concerné.",
         "done": "Calcul sur les 114 pages EN du bucket composite<45 : 25 pages ont un <title> 'AI Risk' en tête au lieu de 'Salary' en tête pour la même raison (nom court, 1er gabarit < 60 car.). Plutôt que de changer les 25 d'un coup (règle charte : cohorte + témoin pour un changement de gabarit), cohorte de test = les 10 pages à impressions non nulles (hotel-manager 330, security-guard 311, risk-manager 174, scaffolder 72, waiter-waitress 36, audiologist 36, private-chef 30, pharmacists 24, cleaner-janitor 23, quality-manager 19) : src/app/[lang]/job/[slug]/page.tsx, ajout d'un Set SALARY_FIRST_TITLE_COHORT qui, pour ces 10 slugs seulement, place le gabarit 'salaire en tête' en 1re priorité. Groupe témoin (non modifié, même bucket, 0 impression mesurée) : rpa-developer, podiatrist, dentists, photographer, hvac-technician, general-manager, tour-guide, nanny-au-pair, electricians, architect, event-planner, delivery-driver, estate-manager, surveyor-land, store-manager. Vérifié dans le HTML généré : cohorte → 'Hotel Manager Salary in Saudi Arabia: AI Risk 30/100' ; témoin (ex. Dentists) → titre inchangé ; pages en observation (cloud-engineer, investment-banker, petroleum-engineer) → titre inchangé, aucune interférence. tsc --noEmit et npm run build passent sans erreur.",
-        "reviewPostponed": "05/10 : toujours pas recrawlée depuis l'action du 28/09 (dernier crawl GSC : 2026-08-01, gsc-snapshot.json). Ne pas juger. nextReviewDate repoussée de 7 jours."
+        "reviewPostponed": "05/10 : toujours pas recrawlée depuis l'action du 28/09 (dernier crawl GSC : 2026-08-01, gsc-snapshot.json). Ne pas juger. nextReviewDate repoussée de 7 jours. 12/10 : toujours pas recrawlée (dernier crawl GSC : 2026-08-01, inchangé). Ne pas juger. nextReviewDate repoussée au 2026-10-19."
       }
     ]
   },
@@ -100,13 +100,28 @@
     "keyword": "saudi arabia cost of living riyadh rent 2026",
     "targetPath": "/en/relocate",
     "status": "observing",
-    "nextReviewDate": "2026-10-12",
+    "nextReviewDate": "2026-10-19",
     "actions": [
       {
         "date": "2026-10-05",
         "rankAtAction": 8.18,
         "needs": "Chercheurs veulent le coût de la vie et le loyer à Riyad en 2026. Vérifié via WebSearch ('saudi arabia cost of living riyadh rent 2026') : ksaexpats.com, zetsim.com, analytix.sa, blog.wego.com — toutes détaillent le gel des loyers de Riyad (durée, préavis, exceptions) et le contraste avec Jeddah/Dammam, en plus des montants de loyer par ville/quartier. Notre page (/en/relocate) a déjà un <title> et une intro alignés sur le cluster ('Cost of Living Saudi Arabia 2026') et une FAQ 'What's the average rent in Riyadh in 2026?' avec les bons montants (1BR 4 400 SAR, 3BR 7 950 SAR, compound 18 500 SAR), mais le gel des loyers n'y était mentionné qu'en 4 mots ('rent freeze active since 2025'), sans aucun détail — alors que src/data/relocation-costs.ts contient déjà l'information complète et sourcée (Autorité Immobilière, déc. 2025 ; GASTAT, avril 2026), jamais remontée dans le texte. Position stable 7,4-8,2 depuis 4 semaines, impressions en baisse (36 → 11), 0 clic : signe que la page répond en partie mais pas complètement à l'intention 'rent'.",
-        "done": "src/components/relocate/CostOfLivingEditorial.tsx : réponse FAQ 'What's the average rent in Riyadh in 2026?' (EN/FR/AR) complétée avec le détail du gel (5 ans depuis déc. 2025, Autorité Immobilière, préavis de 365 jours, villas compound exemptées, prix de marché) et le contraste Jeddah/Dammam (+3-6%/an, pas de plafond, GASTAT avril 2026). Aucun chiffre inventé : tout vient de src/data/relocation-costs.ts (rent_1br_center, rent_compound), déjà présent mais non surfacé. Vérifié dans .next/server/app/{en,fr,ar}/relocate.html : texte visible et JSON-LD FAQPage mis à jour dans les 3 langues ; pages job/* et pulse non affectées. tsc --noEmit et npm run build passent sans erreur."
+        "done": "src/components/relocate/CostOfLivingEditorial.tsx : réponse FAQ 'What's the average rent in Riyadh in 2026?' (EN/FR/AR) complétée avec le détail du gel (5 ans depuis déc. 2025, Autorité Immobilière, préavis de 365 jours, villas compound exemptées, prix de marché) et le contraste Jeddah/Dammam (+3-6%/an, pas de plafond, GASTAT avril 2026). Aucun chiffre inventé : tout vient de src/data/relocation-costs.ts (rent_1br_center, rent_compound), déjà présent mais non surfacé. Vérifié dans .next/server/app/{en,fr,ar}/relocate.html : texte visible et JSON-LD FAQPage mis à jour dans les 3 langues ; pages job/* et pulse non affectées. tsc --noEmit et npm run build passent sans erreur.",
+        "reviewPostponed": "12/10 : pas encore recrawlée depuis l'action du 05/10 (dernier crawl GSC : 2026-09-15, gsc-snapshot.json, antérieur à l'action). Ne pas juger. nextReviewDate repoussée au 2026-10-19."
+      }
+    ]
+  },
+  {
+    "keyword": "hospital administration salary in saudi arabia",
+    "targetPath": "/en/job/hospital-administrator",
+    "status": "observing",
+    "nextReviewDate": "2026-10-19",
+    "actions": [
+      {
+        "date": "2026-10-12",
+        "rankAtAction": 5.9,
+        "needs": "Chercheurs veulent le salaire d'un Hospital Administrator en Arabie Saoudite. Vérifié via WebSearch ('hospital administrator salary in saudi arabia') : PayScale, Paylab, ZenHR — pages/guides salaire, fourchette ~20 000-50 000 SAR/mois, médiane ~30 000 SAR, cohérent avec notre donnée (src/data/master.json : entry 12 000, médiane 20 000, senior 35 000 SAR/mois, source GulfTalent 2025 — aucun chiffre à changer). Sur notre page, le <title> généré ('Hospital Administrator: AI Risk 40/100 · Salary Guide KSA', 57 car.) tombe dans le bucket 'AI Risk < 45' où les 3 gabarits 'salaire' dépassent tous 60 caractères pour ce nom (salaryFirst 61, nameCountryFirst 65, aiRiskFirst 67), donc retombée sur le gabarit dégradé 'AI Risk ... KSA' — décalage direct avec la requête réelle ('hospital administrator salary'), alors que la page a 118 impressions/28j et déjà 2 clics (position moy. 6,7).",
+        "done": "src/app/[lang]/job/[slug]/page.tsx : ajout de 'hospital-administrator': 'Hospital Administrator' (nom identique, pas d'abréviation) dans la map SHORT_NAME_OVERRIDES. Ce gabarit omet le '/100' du composite ('{name} Salary in Saudi Arabia: AI Risk {composite}', sans dénominateur), déjà utilisé pour Medical Lab Technician le 01/10 mais avec un nom abrégé ; ici le nom complet suffit (57 car. au lieu de 61 avec '/100'). Nouveau titre EN : 'Hospital Administrator Salary in Saudi Arabia: AI Risk 40'. FR/AR non touchés (requête anglaise uniquement ; SHORT_NAME_OVERRIDES n'est lu que dans la branche EN du générateur de titre). Vérifié dans le HTML généré : /en/job/hospital-administrator → nouveau titre ; témoins /en/job/{cloud-engineer, investment-banker, hotel-manager, medical-laboratory-technician, petroleum-engineer, dentists} → titres inchangés ; /fr,/ar/job/hospital-administrator → titres inchangés. tsc --noEmit et npm run build passent sans erreur."
       }
     ]
   }
