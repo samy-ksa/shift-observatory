@@ -64,6 +64,23 @@ if (total === 0) {
 }
 pulse.report_date = today;
 
+// 12/10: the model's own weekly totals did not match its list (16,830 announced, 16,630 listed,
+// 15,530 within the week, plus a 12 Sept backfill item). The Monday article then spent a
+// paragraph reconciling three totals and failed the judges. Code counts, the model reports:
+// totals are recomputed from the dated list, within the 7-day window only.
+const since = iso(7);
+const inWeek = (pulse.global_layoffs ?? []).filter((e) => String(e.date ?? '') >= since);
+const stats = (pulse.weekly_stats ??= {});
+stats.model_reported = {
+  total_global_layoffs_this_week: stats.total_global_layoffs_this_week,
+  total_ai_cited_this_week: stats.total_ai_cited_this_week,
+};
+stats.total_global_layoffs_this_week = inWeek.reduce((n, e) => n + (Number(e.jobs_cut) || 0), 0);
+stats.total_ai_cited_this_week = inWeek.filter((e) => ['direct', 'contributing'].includes(e.ai_role)).length;
+stats.events_this_week = inWeek.length;
+stats.backfill_events_older_than_week = (pulse.global_layoffs?.length ?? 0) - inWeek.length;
+stats.totals_computed_from_list = true;
+
 const seedPath = path.join(repo, 'src/data/pulse-seed.json');
 const histPath = path.join(repo, 'src/data/pulse-history.json');
 const previous = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
