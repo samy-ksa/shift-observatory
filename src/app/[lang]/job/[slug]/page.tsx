@@ -63,6 +63,14 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
   // pas "AI risk"/"KSA"). Pas d'abréviation ici : le nom complet passe sous 60
   // car. une fois combiné au gabarit sans "/100" déjà utilisé pour mlt.
   "hospital-administrator": "Hospital Administrator",
+  // 15/10 : cycle seo-rank-watch pour "aircraft mechanic salary in saudi arabia" —
+  // même défaut : les 3 gabarits salaire ("...AI Risk 35/100 · Salary Guide, Saudi
+  // Arabia" 68 car., "...Saudi Arabia: AI Risk 35/100, Salary Guide" 66 car.,
+  // "...Salary in Saudi Arabia: AI Risk 35/100" 62 car.) dépassent 60 caractères
+  // pour "Aircraft Mechanic / AME", retombée sur le gabarit dégradé "AI Risk ...
+  // KSA". Nom identique (pas d'abréviation) : le gabarit sans "/100" (déjà utilisé
+  // pour mlt et hospital-administrator) tient à 58 car.
+  "aircraft-mechanic-ame": "Aircraft Mechanic / AME",
 };
 
 // 08/10 : cycle seo-rank-watch pour "investment banker salary in saudi arabia"
