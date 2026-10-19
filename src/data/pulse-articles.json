@@ -446,5 +446,241 @@
         ]
       }
     }
+  },
+  {
+    "slug": "week-of-2026-10-19",
+    "kind": "pulse",
+    "date": "2026-10-19",
+    "published_at": "2026-10-19T09:12:59",
+    "keyword": "AI layoffs and Saudi workforce — week of 2026-10-19",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: 55,867 layoffs, AI cited in 5: Saudi Pulse, Oct 19. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=55%2C867%20layoffs%2C%20AI%20cited%20in%205%3A%20Saudi%20Pulse%2C%20Oct%2019&subtitle=55%2C867%20job%20cuts%20were%20reported%20between%2012%20and%2018%20October%202026.%20Only%20Intuit%27s%203%2C00",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=55%2C867%20licenciements%2C%20l%27IA%20cit%C3%A9e%20par%205%20%3A%20Saudi%20Pulse%2C%2019%20oct.&subtitle=55%2C867%20suppressions%20de%20postes%20ont%20%C3%A9t%C3%A9%20annonc%C3%A9es%20entre%20le%2012%20et%20le%2018%20octobre%20202",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=55%2C867%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%A7%20%D9%885%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%D8%AA%D8%B0%D9%83%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%3A%20%D9%86%D8%A8%D8%B6%2019%20%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1&subtitle=%D8%A3%D9%8F%D8%B9%D9%84%D9%86%20%D8%B9%D9%86%20%D8%A5%D9%84%D8%BA%D8%A7%D8%A1%2055%2C867%20%D9%88%D8%B8%D9%8A%D9%81%D8%A9%20%D8%A8%D9%8A%D9%86%2012%20%D9%8818%20%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1%202026%D8%8C%20%D9%88%D9%84%D9%85%20%D8%AA%D9%86%D8%B3%D8%A8%20%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9%20%D8%B5%D8%B1%D8%A7%D8%AD%D8%A9%D9%8B%20%D8%A5%D9%84%D9%89%20%D8%A7"
+    },
+    "langs": {
+      "en": {
+        "title": "55,867 layoffs, AI cited in 5: Saudi Pulse, Oct 19",
+        "description": "Weekly tracker: 55,867 layoffs at six firms; only Intuit (3,000) names AI as the direct cause. What it means for Saudi ICT and retail jobs.",
+        "lede": "Six companies reported 55,867 job cuts between 12 and 18 October 2026, and only 3,000 of them, at Intuit, were explicitly attributed to AI by the company itself. Oracle, Amazon, Meta and Kroger cited AI among other factors. Dell's 11,000 cuts carry our 'suspected' label: automation is the evident driver, but the company has not said so.\n\nThe headlines skip that gap. Oracle (21,000) and Amazon (17,267) account for most of the week's volume, yet neither named AI as the direct cause. The week's cuts fall in technology and, through Kroger, in retail. Our tracker rates the trend as up on the previous week.\n\nNo Gulf automation event or Saudi policy update was reported this week. For Saudi readers, the question is exposure. In our sector data, the closest counterparts are ICT and Wholesale & Retail Trade. Both are among the five most AI-exposed of the 20 sectors we track, and both face high Nitaqat (Saudization quota) pressure. You can follow the series across [all Pulse editions](/pulse).",
+        "h2_sections": [
+          {
+            "q": "Which companies cut jobs this week, and how did each describe AI's role?",
+            "body": "Intuit's 17% workforce reduction is the week's only case labelled 'direct': the company tied it to a deeper investment in AI (The Daily Star, 17 October). Oracle's reduction was described as part of a restructuring partly driven by AI adoption across its operations (The Daily Star, 18 October).\n\n| Company | Country | Jobs cut | AI role | Date | Source |\n|---|---|---|---|---|---|\n| Oracle | US | 21,000 | contributing | 18 Oct | The Daily Star |\n| Intuit | US | 3,000 | direct | 17 Oct | The Daily Star |\n| Meta | US | 600 | contributing | 17 Oct | Reuters via Capital.com |\n| Kroger | US | 3,000 | contributing | 12 Oct | Reuters via Capital.com |\n| Amazon | US | 17,267 | contributing | 12 Oct | Free Press Journal |\n| Dell | US | 11,000 | suspected | 12 Oct | Free Press Journal |\n| **Total** | | **55,867** | | | |\n\nThe total counts announced cuts. It does not count jobs replaced by AI."
+          },
+          {
+            "q": "Is AI taking a larger share of tech layoffs in 2026?",
+            "body": "Yes. Layoffs.fyi attributes 36% of tracked 2026 technology layoffs to AI, against 16% in 2025 (reported 18 October). By its count, more than 119,800 technology employees have been laid off across 196 firms in 2026 (The Daily Star). Our own year-to-date count of global tech layoffs is 127,180. The two are separate counts.\n\nTreat every AI-attribution figure as a floor. A Token Runner compilation counted 93,116 employees affected by AI-attributed layoffs through 14 September 2026. That figure reflects the reasons companies reported, not the total number of jobs AI has replaced."
+          },
+          {
+            "q": "How exposed is the Saudi workforce to this kind of restructuring?",
+            "body": "Saudi nationals make up 24% of the 12,420,050 GOSI (social-insurance) registered employees in the Kingdom. Of that total, 4,450,778 hold jobs with significant risk-weighted AI exposure, including 1,137,184 Saudis (SHIFT Observatory dataset, updated 21 March 2026). This measures exposure. It is not a forecast of job losses.\n\nThe five most AI-exposed sectors, out of the 20 we track:\n\n| Sector | AI risk /100 | Employees | Saudi share | Nitaqat pressure |\n|---|---|---|---|---|\n| Administrative & Support Services | 72 | 1,420,733 | 17.4% | moderate |\n| Financial & Insurance Activities | 62 | 106,727 | 82.5% | very high |\n| Wholesale & Retail Trade | 55 | 1,827,205 | 22.3% | high |\n| Professional, Scientific & Technical | 52 | 291,530 | 47.2% | moderate |\n| Information & Communication (ICT) | 45 | 176,619 | 56.5% | high |\n\nWholesale & Retail Trade has the largest workforce of the five and the largest number of Saudi employees, about 407,467. In our reading, Administrative & Support Services is the sector closest to the work our 'suspected' label covers (back-office, IT support, basic operations). That is the label applied to Dell's cuts this week."
+          },
+          {
+            "q": "Retail cuts abroad and HSBC's earlier bank cut: what do they mean for Saudi sectors under Nitaqat pressure?",
+            "body": "Banking appears in this edition only through an older case. HSBC announced 20,000 cuts on 19 September, which are outside this week's total. Reuters lists them alongside Kroger's as AI-linked or AI-associated reductions (17 October). Kroger is the week's only retail case.\n\nIn Saudi Arabia, Financial & Insurance Activities has the highest Saudi share of the five exposed sectors and very high Nitaqat pressure. Any AI-led restructuring there would therefore fall mostly on Saudi nationals. Wholesale & Retail Trade has the opposite profile: most of its workforce is non-Saudi, and it still faces high Nitaqat pressure.\n\nReuters coverage dated 12 October also describes companies moving spending from labour to AI capabilities and operational efficiency. In that coverage, AI is part of restructuring decisions, not only a product-development project. For sectors under high or very high Nitaqat pressure, we will track whether that shift in spending appears in the coming editions."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does 'AI cited' mean AI replaced those jobs?",
+            "a": "Not necessarily. The Pulse uses three labels. 'Direct' means the company said explicitly that AI caused the cuts. 'Contributing' means AI is cited alongside other factors such as revenue, a change of strategy or a merger integration. 'Suspected' means automation is the evident driver, typically in back-office, IT support or basic operations, but the company has not said so officially."
+          },
+          {
+            "q": "What is Nitaqat?",
+            "a": "Nitaqat Mutawar is Saudi Arabia's Saudization quota programme, set by Ministerial Decision No. 182495 of 23 May 2021. It places employers in bands: Red, Low Green, Medium Green, High Green and Platinum. Our sector data rates Nitaqat pressure from moderate to very high across the five most AI-exposed sectors."
+          },
+          {
+            "q": "What is the unemployment rate among Saudi nationals?",
+            "a": "Unemployment among Saudi nationals stands at 7%, and at 14.8% for young Saudis. The figures come from the GASTAT Labour Force Survey (Q4 2024), Jadwa Investment's 2024 update and the NLO (May 2024)."
+          },
+          {
+            "q": "How can I check the AI risk of a specific job in Saudi Arabia?",
+            "a": "Our [AI Job Risk Dashboard](/career) scores 237 occupations, and each one has its own page, for example [accountants](/job/accountants). To apply those scores to your own situation, use the [Personal AI Risk Profile](/profile)."
+          }
+        ],
+        "key_takeaway": "55,867 job cuts were reported between 12 and 18 October 2026. Only Intuit's 3,000 were attributed directly to AI by the company. The week's cuts fall in technology and retail (Kroger). Banking appears only through HSBC's September cut, which is outside the weekly total. In Saudi Arabia, the closest exposed counterparts are ICT and Wholesale & Retail Trade, both under high Nitaqat pressure.",
+        "sources": [
+          {
+            "label": "Layoffs.fyi: share of 2026 tech layoffs attributed to AI (36% vs 16% in 2025)",
+            "url": "https://layoffs.fyi/"
+          },
+          {
+            "label": "The Daily Star: Oracle (21,000) and Intuit (3,000) cuts; 119,800 tech layoffs across 196 firms in 2026",
+            "url": ""
+          },
+          {
+            "label": "Reuters via Capital.com: Meta, Kroger and HSBC cuts; AI as a stated rationale for efficiency programmes",
+            "url": ""
+          },
+          {
+            "label": "Free Press Journal: Amazon (17,267) and Dell (11,000) cuts",
+            "url": ""
+          },
+          {
+            "label": "Token Runner: AI-attributed layoffs compilation (93,116 through 14 September 2026)",
+            "url": ""
+          },
+          {
+            "label": "SHIFT Observatory sector and occupation dataset (updated 21 March 2026)",
+            "url": "/career"
+          },
+          {
+            "label": "GASTAT Labour Force Survey Q4 2024, Jadwa Investment 2024 Update, NLO May 2024",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "55,867 licenciements, l'IA citée par 5 : Saudi Pulse, 19 oct.",
+        "description": "Suivi hebdo : 55,867 licenciements dans six entreprises ; seul Intuit (3,000) cite l'IA comme cause directe. Enjeux pour les TIC et le commerce saoudiens.",
+        "lede": "Six entreprises ont annoncé 55,867 suppressions de postes du 12 au 18 octobre 2026, dont seulement 3,000, chez Intuit, explicitement imputées à l'IA par l'entreprise. Oracle, Amazon, Meta et Kroger citent l'IA parmi d'autres facteurs. Les 11,000 suppressions de Dell sont classées « suspecté » : l'automatisation en est clairement le moteur, sans confirmation de l'entreprise.\n\nLes titres occultent cet écart. Oracle (21,000) et Amazon (17,267) pèsent l'essentiel du volume hebdomadaire, sans désigner l'IA comme cause directe. Les suppressions touchent la technologie et, via Kroger, la distribution. Notre suivi juge la tendance en hausse d'une semaine à l'autre.\n\nAucun événement d'automatisation dans le Golfe ni changement de politique saoudienne n'est signalé cette semaine. Pour le lecteur saoudien, l'enjeu est l'exposition. Dans nos données sectorielles, les plus proches équivalents sont les TIC et le commerce (gros et détail). Tous deux comptent parmi les cinq secteurs les plus exposés à l'IA sur 20 suivis, sous forte pression Nitaqat (quotas de saoudisation). Retrouvez [toutes les éditions du Pulse](/pulse).",
+        "h2_sections": [
+          {
+            "q": "Quelles entreprises ont supprimé des postes cette semaine, et quel rôle chacune attribue-t-elle à l'IA ?",
+            "body": "La réduction de 17% des effectifs d'Intuit est le seul cas de la semaine classé « direct » : l'entreprise l'a liée à un investissement accru dans l'IA (The Daily Star, 17 octobre). La réduction d'Oracle a été présentée comme relevant d'une restructuration motivée en partie par l'adoption de l'IA dans l'ensemble de ses activités (The Daily Star, 18 octobre).\n\n| Entreprise | Pays | Postes supprimés | Rôle de l'IA | Date | Source |\n|---|---|---|---|---|---|\n| Oracle | États-Unis | 21,000 | contributif | 18 oct. | The Daily Star |\n| Intuit | États-Unis | 3,000 | direct | 17 oct. | The Daily Star |\n| Meta | États-Unis | 600 | contributif | 17 oct. | Reuters via Capital.com |\n| Kroger | États-Unis | 3,000 | contributif | 12 oct. | Reuters via Capital.com |\n| Amazon | États-Unis | 17,267 | contributif | 12 oct. | Free Press Journal |\n| Dell | États-Unis | 11,000 | suspecté | 12 oct. | Free Press Journal |\n| **Total** | | **55,867** | | | |\n\nLe total recense les suppressions annoncées. Il ne compte pas les emplois remplacés par l'IA."
+          },
+          {
+            "q": "L'IA pèse-t-elle davantage dans les licenciements tech en 2026 ?",
+            "body": "Oui. Layoffs.fyi attribue à l'IA 36% des licenciements technologiques recensés en 2026, contre 16% en 2025 (chiffres publiés le 18 octobre). Selon son décompte, plus de 119,800 salariés de la tech ont été licenciés dans 196 entreprises en 2026 (The Daily Star). Notre propre décompte des licenciements tech mondiaux depuis le début de l'année s'élève à 127,180. Il s'agit de deux décomptes distincts.\n\nConsidérez chaque chiffre d'attribution à l'IA comme un plancher. Une compilation de Token Runner a recensé 93,116 salariés touchés par des licenciements attribués à l'IA jusqu'au 14 septembre 2026. Ce chiffre reflète les motifs déclarés par les entreprises, et non le nombre total d'emplois que l'IA a remplacés."
+          },
+          {
+            "q": "Quelle est l'exposition de la main-d'œuvre saoudienne à ce type de restructuration ?",
+            "body": "Les ressortissants saoudiens représentent 24% des 12,420,050 salariés affiliés à la GOSI (assurance sociale) dans le Royaume. Sur ce total, 4,450,778 occupent des emplois présentant une exposition significative à l'IA pondérée par le risque, dont 1,137,184 Saoudiens (jeu de données de l'Observatoire SHIFT, mis à jour le 21 mars 2026). Il s'agit d'une mesure d'exposition, pas d'une prévision de pertes d'emplois.\n\nLes cinq secteurs les plus exposés à l'IA, sur les 20 que nous suivons :\n\n| Secteur | Risque IA /100 | Salariés | Part saoudienne | Pression Nitaqat |\n|---|---|---|---|---|\n| Services administratifs et de soutien | 72 | 1,420,733 | 17.4% | modérée |\n| Activités financières et d'assurance | 62 | 106,727 | 82.5% | très forte |\n| Commerce de gros et de détail | 55 | 1,827,205 | 22.3% | forte |\n| Activités professionnelles, scientifiques et techniques | 52 | 291,530 | 47.2% | modérée |\n| Information et communication (TIC) | 45 | 176,619 | 56.5% | forte |\n\nLe commerce de gros et de détail compte le plus grand effectif des cinq et le plus grand nombre de salariés saoudiens, environ 407,467. Selon notre lecture, les services administratifs et de soutien constituent le secteur le plus proche du travail couvert par notre étiquette « suspecté » (back-office, support informatique, opérations de base). C'est l'étiquette appliquée cette semaine aux suppressions de Dell."
+          },
+          {
+            "q": "Coupes dans la distribution à l'étranger et suppressions antérieures chez HSBC : quelles conséquences pour les secteurs saoudiens sous pression Nitaqat ?",
+            "body": "La banque n'apparaît dans cette édition qu'à travers un cas plus ancien. HSBC a annoncé 20,000 suppressions le 19 septembre, qui ne figurent pas dans le total de la semaine. Reuters les cite aux côtés de celles de Kroger parmi les réductions liées ou associées à l'IA (17 octobre). Kroger est le seul cas de la semaine dans la distribution.\n\nEn Arabie saoudite, les activités financières et d'assurance affichent la plus forte part saoudienne des cinq secteurs exposés et une pression Nitaqat très forte. Toute restructuration pilotée par l'IA y pèserait donc surtout sur les ressortissants saoudiens. Le commerce de gros et de détail présente le profil inverse : l'essentiel de ses effectifs n'est pas saoudien, et il subit malgré tout une forte pression Nitaqat.\n\nUne couverture de Reuters datée du 12 octobre décrit aussi des entreprises qui réorientent leurs dépenses de la main-d'œuvre vers les capacités d'IA et l'efficacité opérationnelle. Dans cette couverture, l'IA intervient dans les décisions de restructuration, et pas seulement comme projet de développement produit. Pour les secteurs sous pression Nitaqat forte ou très forte, nous vérifierons dans les prochaines éditions si ce déplacement des dépenses se manifeste."
+          }
+        ],
+        "faq": [
+          {
+            "q": "« IA citée » signifie-t-il que l'IA a remplacé ces emplois ?",
+            "a": "Pas nécessairement. Le Pulse utilise trois étiquettes. « Direct » signifie que l'entreprise a déclaré explicitement que l'IA était à l'origine des suppressions. « Contributif » signifie que l'IA est citée parmi d'autres facteurs, comme le chiffre d'affaires, un changement de stratégie ou l'intégration d'une fusion. « Suspecté » signifie que l'automatisation est manifestement le moteur, généralement dans le back-office, le support informatique ou les opérations de base, mais que l'entreprise ne l'a pas dit officiellement."
+          },
+          {
+            "q": "Qu'est-ce que Nitaqat ?",
+            "a": "Nitaqat Mutawar est le programme saoudien de quotas de saoudisation, instauré par la décision ministérielle n° 182495 du 23 mai 2021. Il classe les employeurs par catégories : Rouge, Vert bas, Vert moyen, Vert haut et Platine. Nos données sectorielles évaluent la pression Nitaqat de modérée à très forte dans les cinq secteurs les plus exposés à l'IA."
+          },
+          {
+            "q": "Quel est le taux de chômage des ressortissants saoudiens ?",
+            "a": "Le chômage des ressortissants saoudiens s'établit à 7%, et à 14.8% chez les jeunes Saoudiens. Ces chiffres proviennent de l'enquête sur la population active de la GASTAT (T4 2024), de la mise à jour 2024 de Jadwa Investment et du NLO (mai 2024)."
+          },
+          {
+            "q": "Comment vérifier le risque IA d'un métier précis en Arabie saoudite ?",
+            "a": "Notre [tableau de bord du risque IA par métier](/career) note 237 professions, chacune dotée de sa propre page, par exemple [comptables](/job/accountants). Pour appliquer ces scores à votre propre situation, utilisez le [profil personnel de risque IA](/profile)."
+          }
+        ],
+        "key_takeaway": "55,867 suppressions de postes ont été annoncées entre le 12 et le 18 octobre 2026. Seules les 3,000 d'Intuit ont été directement attribuées à l'IA par l'entreprise. Les suppressions de la semaine touchent la technologie et la distribution (Kroger). La banque n'apparaît qu'à travers les suppressions de septembre chez HSBC, hors du total hebdomadaire. En Arabie saoudite, les équivalents exposés les plus proches sont les TIC et le commerce de gros et de détail, tous deux sous forte pression Nitaqat.",
+        "sources": [
+          {
+            "label": "Layoffs.fyi : part des licenciements tech 2026 attribués à l'IA (36% contre 16% en 2025)",
+            "url": "https://layoffs.fyi/"
+          },
+          {
+            "label": "The Daily Star : suppressions chez Oracle (21,000) et Intuit (3,000) ; 119,800 licenciements tech dans 196 entreprises en 2026",
+            "url": ""
+          },
+          {
+            "label": "Reuters via Capital.com : suppressions chez Meta, Kroger et HSBC ; l'IA comme justification déclarée des programmes d'efficacité",
+            "url": ""
+          },
+          {
+            "label": "Free Press Journal : suppressions chez Amazon (17,267) et Dell (11,000)",
+            "url": ""
+          },
+          {
+            "label": "Token Runner : compilation des licenciements attribués à l'IA (93,116 jusqu'au 14 septembre 2026)",
+            "url": ""
+          },
+          {
+            "label": "Observatoire SHIFT : jeu de données par secteur et par métier (mis à jour le 21 mars 2026)",
+            "url": "/career"
+          },
+          {
+            "label": "GASTAT, enquête sur la population active T4 2024 ; Jadwa Investment, mise à jour 2024 ; NLO, mai 2024",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "55,867 تسريحا و5 شركات تذكر الذكاء الاصطناعي: نبض 19 أكتوبر",
+        "description": "متتبع أسبوعي: 55,867 تسريحًا في 6 شركات، وإنتويت وحدها (3,000) تسمّي الذكاء الاصطناعي سببًا مباشرًا. ماذا يعني ذلك لوظائف الاتصالات والتجزئة في السعودية؟",
+        "lede": "أعلنت ست شركات عن إلغاء 55,867 وظيفة بين 12 و18 أكتوبر 2026، ولم تنسب الشركة نفسها صراحةً إلى الذكاء الاصطناعي سوى 3,000 منها، وذلك في إنتويت. أما أوراكل وأمازون وميتا وكروغر فذكرت الذكاء الاصطناعي إلى جانب عوامل أخرى. وتحمل تخفيضات ديل البالغة 11,000 وظيفة تصنيف «مشتبه به» لدينا: فالأتمتة هي المحرك الواضح، لكن الشركة لم تصرّح بذلك.\n\nالعناوين الإخبارية تتجاوز هذه الفجوة. إذ تستحوذ أوراكل (21,000) وأمازون (17,267) على معظم حجم الأسبوع، ومع ذلك لم تسمِّ أيٌّ منهما الذكاء الاصطناعي سببًا مباشرًا. وتتركز تخفيضات الأسبوع في قطاع التكنولوجيا، وفي قطاع التجزئة من خلال كروغر. ويصنّف متتبعنا الاتجاه بأنه في صعود مقارنة بالأسبوع السابق.\n\nلم يُرصد هذا الأسبوع أي حدث أتمتة في الخليج ولا أي تحديث في السياسات السعودية. وبالنسبة إلى القارئ السعودي، يبقى السؤال هو مدى التعرّض. ففي بياناتنا القطاعية، أقرب القطاعات المقابلة هما المعلومات والاتصالات وتجارة الجملة والتجزئة. وكلاهما من بين أكثر خمسة قطاعات تعرّضًا للذكاء الاصطناعي من أصل 20 قطاعًا نتتبعها، وكلاهما يواجه ضغطًا مرتفعًا من نطاقات (نسب التوطين). ويمكنك متابعة السلسلة عبر [جميع إصدارات النبض](/pulse).",
+        "h2_sections": [
+          {
+            "q": "ما الشركات التي سرّحت موظفين هذا الأسبوع، وكيف وصفت كل منها دور الذكاء الاصطناعي؟",
+            "body": "يُعد خفض إنتويت لقوتها العاملة بنسبة 17% الحالة الوحيدة هذا الأسبوع المصنّفة «مباشرة»: فقد ربطته الشركة بتعميق استثمارها في الذكاء الاصطناعي (ذا ديلي ستار، 17 أكتوبر). ووُصف خفض أوراكل بأنه جزء من إعادة هيكلة يحركها جزئيًا اعتماد الذكاء الاصطناعي في عملياتها (ذا ديلي ستار، 18 أكتوبر).\n\n| الشركة | الدولة | الوظائف الملغاة | دور الذكاء الاصطناعي | التاريخ | المصدر |\n|---|---|---|---|---|---|\n| أوراكل | الولايات المتحدة | 21,000 | مساهم | 18 أكتوبر | ذا ديلي ستار |\n| إنتويت | الولايات المتحدة | 3,000 | مباشر | 17 أكتوبر | ذا ديلي ستار |\n| ميتا | الولايات المتحدة | 600 | مساهم | 17 أكتوبر | رويترز عبر Capital.com |\n| كروغر | الولايات المتحدة | 3,000 | مساهم | 12 أكتوبر | رويترز عبر Capital.com |\n| أمازون | الولايات المتحدة | 17,267 | مساهم | 12 أكتوبر | فري برس جورنال |\n| ديل | الولايات المتحدة | 11,000 | مشتبه به | 12 أكتوبر | فري برس جورنال |\n| **الإجمالي** | | **55,867** | | | |\n\nيحتسب الإجمالي التخفيضات المعلنة، ولا يحتسب الوظائف التي حلّ الذكاء الاصطناعي محلها."
+          },
+          {
+            "q": "هل يستحوذ الذكاء الاصطناعي على حصة أكبر من تسريحات التكنولوجيا في 2026؟",
+            "body": "نعم. ينسب موقع Layoffs.fyi نسبة 36% من تسريحات التكنولوجيا المرصودة في 2026 إلى الذكاء الاصطناعي، مقابل 16% في 2025 (بحسب ما نُشر في 18 أكتوبر). ووفق إحصائه، سُرّح أكثر من 119,800 موظف في قطاع التكنولوجيا في 196 شركة خلال 2026 (ذا ديلي ستار). أما إحصاؤنا الخاص لتسريحات التكنولوجيا عالميًا منذ بداية العام فيبلغ 127,180. والرقمان إحصاءان منفصلان.\n\nتعامَل مع كل رقم يُنسب إلى الذكاء الاصطناعي على أنه حدّ أدنى. فقد أحصت مجموعة بيانات جمعتها Token Runner نحو 93,116 موظفًا تأثروا بتسريحات منسوبة إلى الذكاء الاصطناعي حتى 14 سبتمبر 2026. ويعكس هذا الرقم الأسباب التي أعلنتها الشركات، لا العدد الإجمالي للوظائف التي حلّ الذكاء الاصطناعي محلها."
+          },
+          {
+            "q": "ما مدى تعرّض القوى العاملة السعودية لهذا النوع من إعادة الهيكلة؟",
+            "body": "يشكّل المواطنون السعوديون 24% من الموظفين المسجلين في المؤسسة العامة للتأمينات الاجتماعية (GOSI) في المملكة، والبالغ عددهم 12,420,050. ومن هذا المجموع، يشغل 4,450,778 وظائف ذات تعرّض كبير للذكاء الاصطناعي بعد ترجيح المخاطر، من بينهم 1,137,184 سعوديًا (مجموعة بيانات مرصد SHIFT، المحدّثة في 21 مارس 2026). وهذا مقياس للتعرّض، وليس توقعًا لفقدان الوظائف.\n\nالقطاعات الخمسة الأكثر تعرّضًا للذكاء الاصطناعي من أصل 20 قطاعًا نتتبعها:\n\n| القطاع | مخاطر الذكاء الاصطناعي /100 | الموظفون | نسبة السعوديين | ضغط نطاقات |\n|---|---|---|---|---|\n| الخدمات الإدارية وخدمات الدعم | 72 | 1,420,733 | 17.4% | متوسط |\n| الأنشطة المالية وأنشطة التأمين | 62 | 106,727 | 82.5% | مرتفع جدًا |\n| تجارة الجملة والتجزئة | 55 | 1,827,205 | 22.3% | مرتفع |\n| الأنشطة المهنية والعلمية والتقنية | 52 | 291,530 | 47.2% | متوسط |\n| المعلومات والاتصالات | 45 | 176,619 | 56.5% | مرتفع |\n\nيضم قطاع تجارة الجملة والتجزئة أكبر قوة عاملة بين القطاعات الخمسة وأكبر عدد من الموظفين السعوديين، نحو 407,467. وفي قراءتنا، يُعد قطاع الخدمات الإدارية وخدمات الدعم الأقرب إلى نوع العمل الذي يغطيه تصنيف «مشتبه به» لدينا (المكاتب الخلفية، والدعم التقني، والعمليات الأساسية). وهو التصنيف الذي طُبّق على تخفيضات ديل هذا الأسبوع."
+          },
+          {
+            "q": "تخفيضات التجزئة في الخارج وخفض HSBC المصرفي السابق: ماذا تعني للقطاعات السعودية الخاضعة لضغط نطاقات؟",
+            "body": "لا يظهر القطاع المصرفي في هذا الإصدار إلا من خلال حالة أقدم. فقد أعلن HSBC عن 20,000 وظيفة ملغاة في 19 سبتمبر، وهي خارج إجمالي هذا الأسبوع. وتدرجها رويترز إلى جانب تخفيضات كروغر ضمن التخفيضات المرتبطة أو المقترنة بالذكاء الاصطناعي (17 أكتوبر). وكروغر هي حالة التجزئة الوحيدة هذا الأسبوع.\n\nفي السعودية، تسجّل الأنشطة المالية وأنشطة التأمين أعلى نسبة للسعوديين بين القطاعات الخمسة المعرّضة، مع ضغط مرتفع جدًا من نطاقات. لذا فإن أي إعادة هيكلة يقودها الذكاء الاصطناعي في هذا القطاع ستقع في معظمها على المواطنين السعوديين. أما تجارة الجملة والتجزئة فلها ملف معاكس: فمعظم قوتها العاملة من غير السعوديين، ومع ذلك تواجه ضغطًا مرتفعًا من نطاقات.\n\nكما تصف تغطية رويترز المؤرخة في 12 أكتوبر شركات تنقل إنفاقها من العمالة إلى قدرات الذكاء الاصطناعي والكفاءة التشغيلية. وفي تلك التغطية، يُعد الذكاء الاصطناعي جزءًا من قرارات إعادة الهيكلة، لا مجرد مشروع لتطوير المنتجات. وبالنسبة إلى القطاعات الخاضعة لضغط مرتفع أو مرتفع جدًا من نطاقات، سنتابع ما إذا كان هذا التحول في الإنفاق سيظهر في الإصدارات المقبلة."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل يعني «ذِكر الذكاء الاصطناعي» أنه حلّ محل تلك الوظائف؟",
+            "a": "ليس بالضرورة. يستخدم النبض ثلاثة تصنيفات. «مباشر» يعني أن الشركة صرّحت بوضوح بأن الذكاء الاصطناعي سبب التخفيضات. و«مساهم» يعني أن الذكاء الاصطناعي ذُكر إلى جانب عوامل أخرى مثل الإيرادات أو تغيير الاستراتيجية أو دمج عقب استحواذ. و«مشتبه به» يعني أن الأتمتة هي المحرك الواضح، عادةً في المكاتب الخلفية أو الدعم التقني أو العمليات الأساسية، لكن الشركة لم تصرّح بذلك رسميًا."
+          },
+          {
+            "q": "ما هو برنامج نطاقات؟",
+            "a": "نطاقات المطوّر هو برنامج نسب التوطين في المملكة العربية السعودية، الصادر بالقرار الوزاري رقم 182495 بتاريخ 23 مايو 2021. ويصنّف أصحاب العمل في نطاقات: الأحمر، والأخضر المنخفض، والأخضر المتوسط، والأخضر المرتفع، والبلاتيني. وتصنّف بياناتنا القطاعية ضغط نطاقات بين متوسط ومرتفع جدًا في القطاعات الخمسة الأكثر تعرّضًا للذكاء الاصطناعي."
+          },
+          {
+            "q": "ما معدل البطالة بين المواطنين السعوديين؟",
+            "a": "يبلغ معدل البطالة بين المواطنين السعوديين 7%، ويصل إلى 14.8% بين الشباب السعوديين. وتستند هذه الأرقام إلى مسح القوى العاملة الصادر عن الهيئة العامة للإحصاء (الربع الرابع 2024)، وتحديث جدوى للاستثمار لعام 2024، والمرصد الوطني للعمل (مايو 2024)."
+          },
+          {
+            "q": "كيف أتحقق من مخاطر الذكاء الاصطناعي على وظيفة محددة في السعودية؟",
+            "a": "تقيّم [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career) لدينا 237 مهنة، ولكل منها صفحة خاصة، مثل [المحاسبين](/job/accountants). ولتطبيق هذه التقييمات على وضعك الشخصي، استخدم [الملف الشخصي لمخاطر الذكاء الاصطناعي](/profile)."
+          }
+        ],
+        "key_takeaway": "أُعلن عن إلغاء 55,867 وظيفة بين 12 و18 أكتوبر 2026، ولم تنسب الشركة صراحةً إلى الذكاء الاصطناعي سوى 3,000 منها لدى إنتويت. وتتركز تخفيضات الأسبوع في التكنولوجيا والتجزئة (كروغر). ولا يظهر القطاع المصرفي إلا عبر خفض HSBC في سبتمبر، وهو خارج الإجمالي الأسبوعي. وفي السعودية، أقرب القطاعات المعرّضة المقابلة هما المعلومات والاتصالات وتجارة الجملة والتجزئة، وكلاهما تحت ضغط مرتفع من نطاقات.",
+        "sources": [
+          {
+            "label": "Layoffs.fyi: حصة تسريحات التكنولوجيا في 2026 المنسوبة إلى الذكاء الاصطناعي (36% مقابل 16% في 2025)",
+            "url": "https://layoffs.fyi/"
+          },
+          {
+            "label": "ذا ديلي ستار: تخفيضات أوراكل (21,000) وإنتويت (3,000)؛ 119,800 تسريح في التكنولوجيا في 196 شركة خلال 2026",
+            "url": ""
+          },
+          {
+            "label": "رويترز عبر Capital.com: تخفيضات ميتا وكروغر وHSBC؛ الذكاء الاصطناعي مبررًا معلنًا لبرامج الكفاءة",
+            "url": ""
+          },
+          {
+            "label": "فري برس جورنال: تخفيضات أمازون (17,267) وديل (11,000)",
+            "url": ""
+          },
+          {
+            "label": "Token Runner: مجموعة بيانات التسريحات المنسوبة إلى الذكاء الاصطناعي (93,116 حتى 14 سبتمبر 2026)",
+            "url": ""
+          },
+          {
+            "label": "مجموعة بيانات القطاعات والمهن لمرصد SHIFT (المحدّثة في 21 مارس 2026)",
+            "url": "/career"
+          },
+          {
+            "label": "مسح القوى العاملة للهيئة العامة للإحصاء الربع الرابع 2024، وتحديث جدوى للاستثمار 2024، والمرصد الوطني للعمل مايو 2024",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]

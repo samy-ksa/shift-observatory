@@ -82,6 +82,7 @@ Built by Samy Aloulou (independent), based in Saudi Arabia. The dataset and meth
 
 ## Insights & Pulse
 
+- [55,867 layoffs, AI cited in 5: Saudi Pulse, Oct 19](https://www.ksashiftobservatory.online/en/pulse/2026-10-19): Weekly tracker: 55,867 layoffs at six firms; only Intuit (3,000) names AI as the direct cause. What it means for Saudi ICT and retail jobs.
 - [15,530 layoffs, AI cited in 4: Saudi impact, Oct 12](https://www.ksashiftobservatory.online/en/pulse/2026-10-12): Meta, PayPal, Amazon among 7 layoffs (15,530 jobs), AI cited in 4. No confirmed Saudi cuts: what it means for Nitaqat and KSA sectors.
 - [Riyadh Salary to Match Paris: SAR 7,000 Is the Floor](https://www.ksashiftobservatory.online/en/insights/riyadh-salary-needed-to-match-paris-cost-of-living): Need just SAR 7,000/month tax-free to match Paris purchasing power below €4,000 gross. See the full Riyadh break-even salary table by income.
 - [Will AI Replace Translators in Saudi Arabia?](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-translators-in-saudi-arabia): Saudi translators score 73.5/100 on AI automation risk (rank 22 of 237 KSA occupations). See salary bands, Nitaqat status, and reskilling support.
