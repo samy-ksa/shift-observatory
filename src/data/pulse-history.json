@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-10-12",
+    "stats": {
+      "total_global_layoffs_this_week": 15530,
+      "total_ai_cited_this_week": 4,
+      "total_gulf_events_this_week": 0,
+      "ytd_global_tech_layoffs": 131382,
+      "ytd_ai_cited_us": 0,
+      "trend_vs_last_week": "up",
+      "notable_trend": "AI-linked workforce restructuring is broadening from software and support functions into financial services and corporate operations, while companies increasingly pair large AI-capital investments with targeted headcount reductions rather than immediate enterprise-wide replacement.",
+      "model_reported": {
+        "total_global_layoffs_this_week": 16830,
+        "total_ai_cited_this_week": 5
+      },
+      "events_this_week": 7,
+      "backfill_events_older_than_week": 1,
+      "totals_computed_from_list": true
+    }
+  },
+  {
     "date": "2026-10-05",
     "stats": {
       "total_global_layoffs_this_week": 10799,
