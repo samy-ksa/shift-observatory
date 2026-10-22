@@ -45,6 +45,15 @@ const SALARY_FIRST_TITLE_COHORT = new Set([
   "pharmacists",
   "cleaner-janitor",
   "quality-manager",
+  // 22/10 : cycle seo-rank-watch pour "cloud engineer salary in saudi arabia"
+  // (jugement du 10/09 sans effet, l'onglet salaire était déjà rendu statique).
+  // <title> actuel = "Cloud Engineer Saudi Arabia: AI Risk 40.5/100, Salary
+  // Guide" (59 car.) : le 1er gabarit "AI Risk en tête" (61 car.) dépasse 60 et
+  // le titre retombe dessus car le 2e gabarit tient de justesse, alors que la
+  // requête réelle GSC est "cloud engineer salary in saudi arabia", pas "AI
+  // risk". Avec cette cohorte, le gabarit "Salary in Saudi Arabia" (55 car.)
+  // tient et passe en premier : data/seo/improvement-log.json.
+  "cloud-engineer",
 ]);
 
 // 01/10 : cycle seo-rank-watch pour "mlt salary in saudi arabia" — le nom "Medical
