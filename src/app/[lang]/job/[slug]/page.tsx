@@ -86,8 +86,11 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
 // (jugement du 17/09 sans effet, <title> déjà aligné sur le salaire). Le lede IA-citable
 // (1er texte visible, JobAICitableLede) ouvrait par "Will AI replace X?" avant le
 // salaire — décalage avec une requête purement salariale. Variante "salaire en tête"
-// (mêmes données, réordonnées), un seul slug ce cycle. data/seo/improvement-log.json.
-const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker"]);
+// (mêmes données, réordonnées).
+// 26/10 : même défaut identifié pour "petroleum engineering salary in saudi arabia"
+// (<title> déjà salaire-en-tête depuis le 24/09, mais le lede ouvre toujours par
+// "Will AI replace Petroleum Engineer?"). data/seo/improvement-log.json.
+const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker", "petroleum-engineer"]);
 
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
