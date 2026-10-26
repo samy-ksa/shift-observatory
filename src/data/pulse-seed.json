@@ -1,163 +1,183 @@
 {
-  "report_date": "2026-10-19",
+  "report_date": "2026-10-26",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Oracle",
+      "company": "eBay",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 21000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Oracle reduced its global workforce by approximately 21,000 employees during fiscal 2026 as part of restructuring partly attributed to AI adoption.",
-      "source": "The Daily Star",
-      "date": "2026-10-18"
-    },
-    {
-      "company": "Intuit",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Intuit announced plans to eliminate approximately 3,000 jobs, or 17% of its workforce, while accelerating its artificial-intelligence strategy.",
-      "source": "The Daily Star",
-      "date": "2026-10-17"
-    },
-    {
-      "company": "Meta",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 600,
+      "jobs_cut": 1000,
       "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "Meta reportedly downsized approximately 600 roles in its artificial-intelligence division during an organizational reshuffle.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-17"
+      "description": "eBay reportedly plans to eliminate about 9% of its workforce, or approximately 1,000 roles, in a second 2026 reduction aimed at streamlining operations amid technology investment.",
+      "source": "Bloomberg",
+      "date": "2026-10-21"
+    },
+    {
+      "company": "Barclays",
+      "country": "UK",
+      "sector": "Banking",
+      "jobs_cut": 5000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Barclays disclosed plans to cut about 5,000 jobs, citing organisational simplification and technology-change efficiency driven by AI, with roughly 60% of reductions in support functions.",
+      "source": "U.S. News",
+      "date": "2026-10-23"
     },
     {
       "company": "Kroger",
       "country": "US",
       "sector": "Retail",
       "jobs_cut": 3000,
-      "jobs_cut_estimated": true,
+      "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Kroger reportedly planned approximately 3,000 corporate job cuts as part of an AI- and efficiency-driven overhaul.",
+      "description": "Kroger plans to eliminate about 3,000 corporate roles over three years while expanding artificial-intelligence use across the grocery business.",
+      "source": "U.S. News",
+      "date": "2026-10-16"
+    },
+    {
+      "company": "Meta",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": false,
+      "ai_role": "contributing",
+      "description": "Meta announced a workforce reduction of about 10% as it increases AI infrastructure spending and hires specialised AI talent.",
+      "source": "U.S. News",
+      "date": "2026-10-09"
+    },
+    {
+      "company": "FICO",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": false,
+      "ai_role": "contributing",
+      "description": "FICO planned to eliminate approximately 15% of its workforce while simplifying its operating structure and expanding AI workflows in product development.",
+      "source": "Reuters via Capital.com",
+      "date": "2026-10-12"
+    },
+    {
+      "company": "DNB",
+      "country": "NO",
+      "sector": "Banking",
+      "jobs_cut": true,
+      "ai_role": "contributing",
+      "description": "DNB reportedly planned a reduction of about 400 positions as it redirects spending toward AI and operational efficiency.",
       "source": "Reuters via Capital.com",
       "date": "2026-10-12"
     },
     {
       "company": "HSBC",
-      "country": "GB",
+      "country": "UK",
       "sector": "Banking",
-      "jobs_cut": 20000,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "HSBC was reported to be weighing approximately 20,000 job cuts as its AI transformation and operating-model overhaul progressed.",
+      "jobs_cut": false,
+      "ai_role": "direct",
+      "description": "HSBC announced plans to remove about 20,000 roles, or roughly 10% of its workforce, as part of an AI overhaul.",
       "source": "Reuters via Capital.com",
-      "date": "2026-09-19"
-    },
-    {
-      "company": "Microsoft",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 4800,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Microsoft announced reductions affecting approximately 4,800 employees across commercial and Xbox businesses amid a broader AI investment shift.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-07-01"
+      "date": "2026-03-01"
     },
     {
       "company": "Amazon",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 17267,
-      "jobs_cut_estimated": false,
+      "jobs_cut": false,
       "ai_role": "contributing",
-      "description": "Amazon was identified among the largest 2026 technology workforce reducers as the sector redirected resources toward AI and efficiency.",
-      "source": "Free Press Journal",
-      "date": "2026-10-12"
+      "description": "Amazon announced 16,000 corporate job cuts in an AI- and efficiency-driven restructuring.",
+      "source": "Reuters via Capital.com",
+      "date": "2026-01-01"
+    }
+  ],
+  "gulf_mena_automation": [
+    {
+      "company": "Al-Futtaim",
+      "country": "AE",
+      "sector": "Other",
+      "event_type": "automation_deployment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": true,
+      "description": "A company study found that 82% of surveyed GCC consumer-economy professionals use AI daily or weekly, highlighting rapid workplace adoption but limited confidence in effective use.",
+      "source": "Khaleej Times",
+      "date": "2026-10-22"
     },
     {
-      "company": "Dell",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 11000,
-      "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "Dell was identified among major 2026 technology employers reducing headcount amid sector-wide operational efficiency and AI investment changes.",
-      "source": "Free Press Journal",
+      "company": "Unnamed GCC employers",
+      "country": "AE",
+      "sector": "Other",
+      "event_type": "restructuring",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": true,
+      "description": "A regional workforce study reported that 22% of GCC respondents had already combined roles because of AI and 41% were exploring further consolidation across technical, administrative and customer-service functions.",
+      "source": "EnterpriseAM",
       "date": "2026-10-12"
     }
   ],
-  "gulf_mena_automation": [],
-  "saudi_policy_updates": [],
+  "saudi_policy_updates": [
+    {
+      "type": "tawteen",
+      "title": "Localization of supporting administrative professions",
+      "description": "Saudi Arabia brought a decision requiring 100% localization of supporting administrative professions in the private sector into force.",
+      "effective_date": "2026-10-04",
+      "source": "Saudi Ministry of Human Resources and Social Development",
+      "date_announced": "2026-10-07"
+    }
+  ],
   "ai_workforce_signals": [
     {
-      "headline": "AI-linked layoffs reach a larger share of technology workforce reductions",
-      "description": "Layoffs.fyi reported that 36% of tracked 2026 technology layoffs were attributed to AI, compared with 16% in 2025. The data indicates a substantial year-over-year increase in the share of cuts associated with AI adoption or AI-led restructuring.",
-      "relevance_to_ksa": "contextual",
-      "source": "Layoffs.fyi via X",
-      "date": "2026-10-18"
-    },
-    {
-      "headline": "Technology layoffs surpass 119,800 in 2026",
-      "description": "Layoffs.fyi tracking cited more than 119,800 technology employees laid off across 196 firms in 2026. The count reflects a workforce reset combining AI disruption, cost reduction, and strategic repositioning.",
-      "relevance_to_ksa": "contextual",
-      "source": "The Daily Star",
-      "date": "2026-10-18"
-    },
-    {
-      "headline": "Oracle links workforce reduction to AI overhaul",
-      "description": "Oracle’s reported 21,000-job reduction was described as part of a restructuring partly driven by AI adoption across operations. The event is a significant example of AI investment coinciding with broad corporate headcount reduction.",
-      "relevance_to_ksa": "indirect",
-      "source": "The Daily Star",
-      "date": "2026-10-18"
-    },
-    {
-      "headline": "Intuit accelerates AI pivot while cutting 3,000 roles",
-      "description": "Intuit announced a 17% workforce reduction while deepening its investment in artificial intelligence. The case illustrates how software companies are reallocating labor and capital toward AI-enabled products and operations.",
-      "relevance_to_ksa": "indirect",
-      "source": "The Daily Star",
-      "date": "2026-10-17"
-    },
-    {
-      "headline": "AI restructuring spreads beyond pure technology companies",
-      "description": "Reuters reporting identified AI-linked or AI-associated reductions at companies including Kroger and HSBC, showing that workforce effects are extending into retail and banking. These developments are relevant to sectors undergoing automation and shared-services consolidation in Saudi Arabia.",
+      "headline": "GCC AI use is widespread but workforce confidence lags",
+      "description": "An Al-Futtaim study found that 82% of surveyed GCC consumer-economy professionals use AI daily or weekly, while only 39% feel very or extremely confident using it. The gap points to substantial near-term demand for AI training and workflow redesign in Gulf employers.",
       "relevance_to_ksa": "direct",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-17"
+      "source": "Khaleej Times",
+      "date": "2026-10-22"
     },
     {
-      "headline": "AI investment becomes a stated rationale for enterprise efficiency programs",
-      "description": "Coverage of 2026 layoffs described companies redirecting spending from labor toward AI capabilities and operational efficiency. The pattern suggests that AI adoption is increasingly being embedded in restructuring decisions rather than treated solely as a product-development initiative.",
+      "headline": "GCC employers shift from job elimination to role consolidation",
+      "description": "A regional study reported that 22% of respondents had already combined roles because of AI and 41% were actively exploring consolidation. Technical testing, code-cleanup, reporting, finance processing and customer-service tasks were among the functions most exposed.",
       "relevance_to_ksa": "direct",
+      "source": "EnterpriseAM",
+      "date": "2026-10-12"
+    },
+    {
+      "headline": "Barclays links workforce reduction to AI efficiency",
+      "description": "Barclays said planned cuts of about 5,000 jobs were tied partly to organisational simplification and technology-change efficiency driven by AI. Support functions, including development roles, account for most of the planned reductions.",
+      "relevance_to_ksa": "indirect",
+      "source": "U.S. News",
+      "date": "2026-10-23"
+    },
+    {
+      "headline": "eBay announces second workforce reduction of 2026",
+      "description": "eBay reportedly plans to remove about 1,000 positions, equivalent to 9% of its workforce. The reduction reflects continuing operational streamlining as large technology companies redirect resources toward automation and AI-enabled productivity.",
+      "relevance_to_ksa": "contextual",
+      "source": "Bloomberg",
+      "date": "2026-10-21"
+    },
+    {
+      "headline": "AI-linked layoffs extend across banking and retail",
+      "description": "A Reuters factbox identified AI-linked workforce reductions across banks, retailers, technology companies and industrial firms, including HSBC, Amazon, Standard Chartered, Microsoft and Kroger. The spread indicates that AI-related restructuring is no longer confined to software companies.",
+      "relevance_to_ksa": "contextual",
       "source": "Reuters via Capital.com",
       "date": "2026-10-12"
     },
     {
-      "headline": "AI workforce disruption estimates remain a floor, not a complete measure",
-      "description": "A compilation of AI-attributed layoffs counted 93,116 affected employees through September 14, 2026, while noting that the figure captures reported attribution rather than the total number of jobs replaced by AI. This distinction is important for interpreting company announcements and labor-market data.",
+      "headline": "Meta trades non-AI roles for AI infrastructure and talent",
+      "description": "Meta’s reported reduction of roughly 8,000 roles coincides with increased spending on AI infrastructure and recruitment of specialised AI employees. The pattern reflects a shift from broad headcount growth toward targeted AI capability investment.",
       "relevance_to_ksa": "contextual",
-      "source": "Token Runner",
-      "date": "2026-10-03"
+      "source": "U.S. News",
+      "date": "2026-10-09"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 55867,
-    "total_ai_cited_this_week": 5,
-    "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 127180,
+    "total_global_layoffs_this_week": 6000,
+    "total_ai_cited_this_week": 2,
+    "total_gulf_events_this_week": 2,
+    "ytd_global_tech_layoffs": 0,
     "ytd_ai_cited_us": 0,
     "trend_vs_last_week": "up",
-    "notable_trend": "AI-linked restructuring is intensifying across software, cloud, retail, and banking as companies redirect labor and capital toward AI capabilities, with the largest newly reported cuts concentrated at Oracle and Intuit.",
+    "notable_trend": "AI-related workforce restructuring is broadening beyond technology into banking, retail and administrative functions, while GCC employers increasingly consolidate roles and face a pronounced gap between frequent AI use and employee confidence.",
     "model_reported": {
-      "total_global_layoffs_this_week": 27600,
-      "total_ai_cited_this_week": 5
+      "total_global_layoffs_this_week": 2,
+      "total_ai_cited_this_week": 2
     },
-    "events_this_week": 6,
-    "backfill_events_older_than_week": 2,
+    "events_this_week": 2,
+    "backfill_events_older_than_week": 6,
     "totals_computed_from_list": true
   }
 }
