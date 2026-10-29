@@ -90,7 +90,11 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
 // 26/10 : même défaut identifié pour "petroleum engineering salary in saudi arabia"
 // (<title> déjà salaire-en-tête depuis le 24/09, mais le lede ouvre toujours par
 // "Will AI replace Petroleum Engineer?"). data/seo/improvement-log.json.
-const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker", "petroleum-engineer"]);
+// 29/10 : même défaut pour "hotel management salary in saudi arabia" — le <title>
+// est déjà salaire-en-tête depuis le 28/09 (SALARY_FIRST_TITLE_COHORT), mais le
+// lede ouvre toujours par "Will AI replace Hotel Manager?". Méthode différente de
+// l'action du 28/09 (titre, déjà testée et jugée sans effet le 26/10).
+const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker", "petroleum-engineer", "hotel-manager"]);
 
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
