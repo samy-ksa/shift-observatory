@@ -1,183 +1,117 @@
 {
-  "report_date": "2026-10-26",
+  "report_date": "2026-11-02",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "eBay",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 1000,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "eBay reportedly plans to eliminate about 9% of its workforce, or approximately 1,000 roles, in a second 2026 reduction aimed at streamlining operations amid technology investment.",
-      "source": "Bloomberg",
-      "date": "2026-10-21"
-    },
-    {
       "company": "Barclays",
-      "country": "UK",
+      "country": "GB",
       "sector": "Banking",
       "jobs_cut": 5000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Barclays disclosed plans to cut about 5,000 jobs, citing organisational simplification and technology-change efficiency driven by AI, with roughly 60% of reductions in support functions.",
-      "source": "U.S. News",
-      "date": "2026-10-23"
+      "jobs_cut_estimated": true,
+      "ai_role": "contributing",
+      "description": "Barclays announced approximately 5,000 support-function job cuts in October 2026 as banks increased investment in AI and operational streamlining.",
+      "source": "Reuters",
+      "date": "2026-10-22"
     },
     {
       "company": "Kroger",
       "country": "US",
       "sector": "Retail",
       "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
+      "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "Kroger plans to eliminate about 3,000 corporate roles over three years while expanding artificial-intelligence use across the grocery business.",
-      "source": "U.S. News",
-      "date": "2026-10-16"
+      "description": "Kroger announced approximately 3,000 corporate job cuts as part of an efficiency and AI-related operating overhaul.",
+      "source": "Reuters",
+      "date": "2026-10-22"
     },
     {
-      "company": "Meta",
+      "company": "Fair Isaac",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": false,
+      "jobs_cut": 570,
+      "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "Meta announced a workforce reduction of about 10% as it increases AI infrastructure spending and hires specialised AI talent.",
-      "source": "U.S. News",
-      "date": "2026-10-09"
-    },
-    {
-      "company": "FICO",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": false,
-      "ai_role": "contributing",
-      "description": "FICO planned to eliminate approximately 15% of its workforce while simplifying its operating structure and expanding AI workflows in product development.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-12"
+      "description": "Fair Isaac announced reductions affecting about 15% of its workforce, or approximately 570 roles, while simplifying operations and expanding AI workflows in product development.",
+      "source": "Reuters",
+      "date": "2026-10-22"
     },
     {
       "company": "DNB",
       "country": "NO",
       "sector": "Banking",
-      "jobs_cut": true,
+      "jobs_cut": 400,
+      "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "DNB reportedly planned a reduction of about 400 positions as it redirects spending toward AI and operational efficiency.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-12"
-    },
-    {
-      "company": "HSBC",
-      "country": "UK",
-      "sector": "Banking",
-      "jobs_cut": false,
-      "ai_role": "direct",
-      "description": "HSBC announced plans to remove about 20,000 roles, or roughly 10% of its workforce, as part of an AI overhaul.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-03-01"
-    },
-    {
-      "company": "Amazon",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": false,
-      "ai_role": "contributing",
-      "description": "Amazon announced 16,000 corporate job cuts in an AI- and efficiency-driven restructuring.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-01-01"
+      "description": "DNB announced approximately 400 job reductions linked to increased AI investment and operating changes.",
+      "source": "Reuters",
+      "date": "2026-10-22"
     }
   ],
   "gulf_mena_automation": [
     {
-      "company": "Al-Futtaim",
+      "company": "UAE Federal Government",
       "country": "AE",
-      "sector": "Other",
+      "sector": "Government",
       "event_type": "automation_deployment",
-      "jobs_affected": 0,
+      "jobs_affected": 80000,
       "jobs_affected_estimated": true,
-      "description": "A company study found that 82% of surveyed GCC consumer-economy professionals use AI daily or weekly, highlighting rapid workplace adoption but limited confidence in effective use.",
-      "source": "Khaleej Times",
-      "date": "2026-10-22"
-    },
-    {
-      "company": "Unnamed GCC employers",
-      "country": "AE",
-      "sector": "Other",
-      "event_type": "restructuring",
-      "jobs_affected": 0,
-      "jobs_affected_estimated": true,
-      "description": "A regional workforce study reported that 22% of GCC respondents had already combined roles because of AI and 41% were exploring further consolidation across technical, administrative and customer-service functions.",
-      "source": "EnterpriseAM",
-      "date": "2026-10-12"
+      "description": "The UAE approved an AI capability program for 80,000 federal employees and began deploying agents for procurement, tax auditing, customer service and technical support.",
+      "source": "Consultancy-ME",
+      "date": "2026-10-21"
     }
   ],
-  "saudi_policy_updates": [
-    {
-      "type": "tawteen",
-      "title": "Localization of supporting administrative professions",
-      "description": "Saudi Arabia brought a decision requiring 100% localization of supporting administrative professions in the private sector into force.",
-      "effective_date": "2026-10-04",
-      "source": "Saudi Ministry of Human Resources and Social Development",
-      "date_announced": "2026-10-07"
-    }
-  ],
+  "saudi_policy_updates": [],
   "ai_workforce_signals": [
     {
-      "headline": "GCC AI use is widespread but workforce confidence lags",
-      "description": "An Al-Futtaim study found that 82% of surveyed GCC consumer-economy professionals use AI daily or weekly, while only 39% feel very or extremely confident using it. The gap points to substantial near-term demand for AI training and workflow redesign in Gulf employers.",
+      "headline": "UAE expands agentic AI program across federal government",
+      "description": "The UAE set a two-year objective to move half of government sectors, services and operations toward agentic AI. A capability program covers 80,000 federal employees, indicating workforce redesign and reskilling rather than an announced headcount reduction.",
       "relevance_to_ksa": "direct",
-      "source": "Khaleej Times",
-      "date": "2026-10-22"
-    },
-    {
-      "headline": "GCC employers shift from job elimination to role consolidation",
-      "description": "A regional study reported that 22% of respondents had already combined roles because of AI and 41% were actively exploring consolidation. Technical testing, code-cleanup, reporting, finance processing and customer-service tasks were among the functions most exposed.",
-      "relevance_to_ksa": "direct",
-      "source": "EnterpriseAM",
-      "date": "2026-10-12"
-    },
-    {
-      "headline": "Barclays links workforce reduction to AI efficiency",
-      "description": "Barclays said planned cuts of about 5,000 jobs were tied partly to organisational simplification and technology-change efficiency driven by AI. Support functions, including development roles, account for most of the planned reductions.",
-      "relevance_to_ksa": "indirect",
-      "source": "U.S. News",
-      "date": "2026-10-23"
-    },
-    {
-      "headline": "eBay announces second workforce reduction of 2026",
-      "description": "eBay reportedly plans to remove about 1,000 positions, equivalent to 9% of its workforce. The reduction reflects continuing operational streamlining as large technology companies redirect resources toward automation and AI-enabled productivity.",
-      "relevance_to_ksa": "contextual",
-      "source": "Bloomberg",
+      "source": "Consultancy-ME",
       "date": "2026-10-21"
     },
     {
-      "headline": "AI-linked layoffs extend across banking and retail",
-      "description": "A Reuters factbox identified AI-linked workforce reductions across banks, retailers, technology companies and industrial firms, including HSBC, Amazon, Standard Chartered, Microsoft and Kroger. The spread indicates that AI-related restructuring is no longer confined to software companies.",
-      "relevance_to_ksa": "contextual",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-12"
+      "headline": "Saudi organizations accelerate AI workforce preparation",
+      "description": "A Saudi-focused SAP survey reported that 54% of organizations are upskilling or reskilling employees at scale, 52% are providing role-specific training and 53% are hiring AI-related talent. The findings point to simultaneous displacement risk and workforce redeployment.",
+      "relevance_to_ksa": "direct",
+      "source": "SAP News",
+      "date": "2026-10-04"
     },
     {
-      "headline": "Meta trades non-AI roles for AI infrastructure and talent",
-      "description": "Meta’s reported reduction of roughly 8,000 roles coincides with increased spending on AI infrastructure and recruitment of specialised AI employees. The pattern reflects a shift from broad headcount growth toward targeted AI capability investment.",
+      "headline": "Gulf frontline workers face information gaps during AI adoption",
+      "description": "A regional workplace study highlighted operational risks when frontline employees lack timely information during AI transformation. Reported workplace AI use in Saudi Arabia, the UAE, Qatar and Kuwait was high relative to the global average.",
+      "relevance_to_ksa": "direct",
+      "source": "Economic Times HRME",
+      "date": "2026-10-30"
+    },
+    {
+      "headline": "AI-linked layoffs spread beyond technology",
+      "description": "Reuters reported that AI-linked reductions now span banking, retail, manufacturing, consumer goods and technology. The cited examples include Barclays, Kroger, Fair Isaac and DNB, reflecting broader exposure of support and back-office roles.",
+      "relevance_to_ksa": "indirect",
+      "source": "Reuters",
+      "date": "2026-10-22"
+    },
+    {
+      "headline": "Global AI-linked job cuts pass 100,000 in tracked announcements",
+      "description": "A Reuters factbox reported roughly 102,800 announced roles tied to AI across more than 30 companies since October 2025. The total includes major reductions at HSBC, Amazon, Standard Chartered and other large employers.",
       "relevance_to_ksa": "contextual",
-      "source": "U.S. News",
-      "date": "2026-10-09"
+      "source": "Reuters",
+      "date": "2026-10-22"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 6000,
-    "total_ai_cited_this_week": 2,
-    "total_gulf_events_this_week": 2,
+    "total_global_layoffs_this_week": 0,
+    "total_ai_cited_this_week": 0,
+    "total_gulf_events_this_week": 1,
     "ytd_global_tech_layoffs": 0,
-    "ytd_ai_cited_us": 0,
-    "trend_vs_last_week": "up",
-    "notable_trend": "AI-related workforce restructuring is broadening beyond technology into banking, retail and administrative functions, while GCC employers increasingly consolidate roles and face a pronounced gap between frequent AI use and employee confidence.",
+    "ytd_ai_cited_us": 3000,
+    "trend_vs_last_week": "stable",
+    "notable_trend": "AI-linked workforce restructuring is broadening from technology into banking and retail, while Gulf governments emphasize large-scale agent deployment and employee reskilling rather than announced AI-specific redundancies.",
     "model_reported": {
-      "total_global_layoffs_this_week": 2,
-      "total_ai_cited_this_week": 2
+      "total_global_layoffs_this_week": 8970,
+      "total_ai_cited_this_week": 8970
     },
-    "events_this_week": 2,
-    "backfill_events_older_than_week": 6,
+    "events_this_week": 0,
+    "backfill_events_older_than_week": 4,
     "totals_computed_from_list": true
   }
 }
