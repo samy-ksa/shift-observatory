@@ -94,7 +94,14 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
 // est déjà salaire-en-tête depuis le 28/09 (SALARY_FIRST_TITLE_COHORT), mais le
 // lede ouvre toujours par "Will AI replace Hotel Manager?". Méthode différente de
 // l'action du 28/09 (titre, déjà testée et jugée sans effet le 26/10).
-const SALARY_FIRST_LEDE_COHORT = new Set(["investment-banker", "petroleum-engineer", "hotel-manager"]);
+// 02/11 : même méthode pour hospital-administrator — <title> déjà aligné salaire
+// depuis le 12/10 (jugé sans effet le 26/10), lede encore "Will AI replace...".
+const SALARY_FIRST_LEDE_COHORT = new Set([
+  "investment-banker",
+  "petroleum-engineer",
+  "hotel-manager",
+  "hospital-administrator",
+]);
 
 export async function generateStaticParams() {
   const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
