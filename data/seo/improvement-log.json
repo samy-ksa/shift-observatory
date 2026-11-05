@@ -24,10 +24,10 @@
         "rankAtAction": 8.92,
         "needs": "Même requête, jugement 'aucun effet' confirmé ci-dessus pour l'action du 10/09 (onglet salaire rendu statique). WebSearch non refait ce cycle (déjà fait le 10/09 : Glassdoor/ERI/Paylab mènent par le salaire). Constat sur notre page : <title> tombe sur le gabarit dégradé 'Cloud Engineer Saudi Arabia: AI Risk 40.5/100, Salary Guide' (59 car., AI Risk en tête) car le 1er gabarit salaire-en-tête ('...AI Risk 40.5/100 · Salary Guide, Saudi Arabia', 61 car.) dépasse 60 caractères pour ce nom, alors que la requête réelle GSC est 'cloud engineer salary in saudi arabia'.",
         "done": "src/app/[lang]/job/[slug]/page.tsx : ajout de 'cloud-engineer' à SALARY_FIRST_TITLE_COHORT (même mécanisme déjà utilisé pour hotel-manager et les 9 autres pages du cycle du 28/09). Nouveau <title> EN : 'Cloud Engineer Salary in Saudi Arabia: AI Risk 40.5/100' (55 car.), qui reprend la formulation de la requête. FR/AR non touchés (cohorte lue uniquement dans la branche EN du générateur de titre, vérifié dans le code). Pas de nouvelle donnée : composite 40.5 identique, source src/data/master.json inchangée. Vérifié dans .next/server/app/en/job/cloud-engineer.html (nouveau <title>) ; témoins .next/server/app/en/job/{hotel-manager,dentists}.html et .next/server/app/fr/job/cloud-engineer.html inchangés. tsc --noEmit et npm run build OK.",
-        "reviewPostponed": "29/10 : pas encore recrawlée depuis l'action du 22/10 (dernier crawl GSC : 2026-10-21, gsc-snapshot.json, antérieur à l'action). Ne pas juger. nextReviewDate repoussée au 2026-11-05."
+        "reviewPostponed": "29/10 : pas encore recrawlée depuis l'action du 22/10 (dernier crawl GSC : 2026-10-21, gsc-snapshot.json, antérieur à l'action). Ne pas juger. nextReviewDate repoussée au 2026-11-05. 05/11 : toujours pas recrawlée (dernier crawl GSC : 2026-10-21, inchangé). Ne pas juger. nextReviewDate repoussée au 2026-11-12."
       }
     ],
-    "nextReviewDate": "2026-11-05"
+    "nextReviewDate": "2026-11-12"
   },
   {
     "keyword": "investment banker salary in saudi arabia",
@@ -92,7 +92,7 @@
     "keyword": "hotel management salary in saudi arabia",
     "targetPath": "/en/job/hotel-manager",
     "status": "observing",
-    "nextReviewDate": "2026-11-05",
+    "nextReviewDate": "2026-11-12",
     "actions": [
       {
         "date": "2026-09-28",
@@ -112,7 +112,8 @@
         "date": "2026-10-29",
         "rankAtAction": 8.87,
         "needs": "Même requête, jugement 'aucun effet' confirmé ci-dessus pour l'action du 28/09 (<title> réordonné). WebSearch 'hotel manager salary in saudi arabia' (29/10) : Paylab, PayScale — pages salaire dédiées, fourchette ~3 700-24 200 SAR/mois (Paylab) à ~8 000-20 000 SAR/mois pour les postes intermédiaires selon les annonces, cohérent avec notre donnée (src/data/master.json : entry 8 000, médiane 14 000, senior 25 000 SAR/mois, source GulfTalent 2025, aucun chiffre à changer). Constat sur notre page : le <title> est déjà aligné sur le salaire depuis le 28/09, mais le lede IA-citable (1er texte visible, JobAICitableLede) ouvre toujours par 'Will AI replace Hotel Manager in Saudi Arabia?' avant toute mention du salaire — même défaut déjà corrigé pour investment-banker (08/10) et petroleum-engineer (26/10), jamais appliqué à hotel-manager. hotel-manager reste le seul candidat de priorité 1 du workflow seo-rank-watch ce cycle (position 8,87 en 2-10, 22 impressions/28j), les autres mots-clés actifs (cost-of-living, hospital-administrator, aircraft-mechanic-ame, numbeo, 19000-riyal, ai-ml-engineer, pharmacists, dentists) étant tous à 0 impression sur la requête exacte ce cycle.",
-        "done": "src/app/[lang]/job/[slug]/page.tsx : ajout de 'hotel-manager' au Set SALARY_FIRST_LEDE_COHORT (même mécanisme que investment-banker et petroleum-engineer). Le lede EN passe de 'Will AI replace Hotel Manager in Saudi Arabia? ...' à 'Hotel Manager in Saudi Arabia earn between SAR 8,000 and SAR 25,000 per month, with a median of SAR 14,000 ...' suivi du risque IA. Mêmes données (aucune invention), FR/AR non touchés (SALARY_FIRST_LEDE_COHORT lu uniquement dans buildEnglish). Vérifié dans le HTML généré : .next/server/app/en/job/hotel-manager.html → nouveau lede salaire en tête ; témoins .next/server/app/en/job/investment-banker.html (déjà salaryFirst, inchangé) et .next/server/app/en/job/dentists.html (jamais touché) → lede inchangé ; .next/server/app/fr/job/hotel-manager.html → lede FR inchangé. tsc --noEmit et npm run build passent sans erreur."
+        "done": "src/app/[lang]/job/[slug]/page.tsx : ajout de 'hotel-manager' au Set SALARY_FIRST_LEDE_COHORT (même mécanisme que investment-banker et petroleum-engineer). Le lede EN passe de 'Will AI replace Hotel Manager in Saudi Arabia? ...' à 'Hotel Manager in Saudi Arabia earn between SAR 8,000 and SAR 25,000 per month, with a median of SAR 14,000 ...' suivi du risque IA. Mêmes données (aucune invention), FR/AR non touchés (SALARY_FIRST_LEDE_COHORT lu uniquement dans buildEnglish). Vérifié dans le HTML généré : .next/server/app/en/job/hotel-manager.html → nouveau lede salaire en tête ; témoins .next/server/app/en/job/investment-banker.html (déjà salaryFirst, inchangé) et .next/server/app/en/job/dentists.html (jamais touché) → lede inchangé ; .next/server/app/fr/job/hotel-manager.html → lede FR inchangé. tsc --noEmit et npm run build passent sans erreur.",
+        "reviewPostponed": "05/11 : pas encore recrawlée depuis l'action du 29/10 (dernier crawl GSC : 2026-10-23, gsc-snapshot.json, antérieur à l'action). Ne pas juger. nextReviewDate repoussée au 2026-11-12."
       }
     ]
   },
@@ -170,6 +171,21 @@
           "impressions": 0,
           "judgment": "Recrawl confirmé le 2026-10-23 (après l'action du 15/10) : jugement valide. Toujours 0 impression mesurée pour la requête exacte (inchangé depuis l'action, rankAtAction déjà nul). Aucun effet mesurable, mais aussi aucune donnée pour juger un éventuel effet négatif -- requête à très faible volume. Repasse en 'active'."
         }
+      }
+    ]
+  },
+  {
+    "keyword": "ai ml engineer salary in saudi arabia",
+    "targetPath": "/en/job/machine-learning-engineer",
+    "status": "observing",
+    "nextReviewDate": "2026-11-12",
+    "actions": [
+      {
+        "date": "2026-11-05",
+        "rankAtAction": 7,
+        "needs": "Chercheurs veulent le salaire d'un Machine Learning Engineer / AI-ML Engineer en Arabie Saoudite. Vérifié via WebSearch ('machine learning engineer salary in saudi arabia') : Naukrigulf, ZeroTax Jobs, Hijri Calendars — toutes des pages/guides salaire dédiées, fourchettes variables selon la source (SAR 7 000-27 000/mois selon expérience et employeur), cohérent avec notre donnée (src/data/master.json : entry 15 000, médiane 25 000, senior 42 000 SAR/mois, source LinkedIn KSA 2025, aucun chiffre à changer). Sur notre page, requête proche 'machine learning engineer salary in saudi arabia' à la position 7 (3 impressions/28j, queryPage gsc-snapshot.json) ; page elle-même à 12 impressions/28j, position 5,1. Seul candidat de priorité 1 du workflow seo-rank-watch (position 2-10 + impressions présentes) ce cycle parmi les mots-clés hors observing/achieved : hospital-administrator (jugé sans effet le 26/10, nouvelle action le 02/11) est désormais en observation, cost-of-living et aircraft-mechanic-ame sont à 0 impression sur leur requête exacte. Constat sur notre page : le <title> généré ('Machine Learning Engineer: AI Risk 18/100 · Salary Guide KSA', 60 car.) tombe dans le bucket 'AI Risk < 45' où les 3 gabarits 'salaire' dépassent tous 60 caractères pour ce nom (70, 68, 64 car.), donc retombée sur le gabarit dégradé 'AI Risk ... KSA' — même défaut déjà corrigé pour hotel-manager, mlt, investment-banker, hospital-administrator et aircraft-mechanic-ame, décalage direct avec la requête réelle (salaire, 'Saudi Arabia').",
+        "done": "src/app/[lang]/job/[slug]/page.tsx : ajout de 'machine-learning-engineer': 'Machine Learning Engineer' (nom identique, pas d'abréviation) dans la map SHORT_NAME_OVERRIDES. Ce gabarit omet le '/100' du composite ('{name} Salary in Saudi Arabia: AI Risk {composite}', sans dénominateur), déjà utilisé pour mlt, hospital-administrator et aircraft-mechanic-ame ; ici le nom complet tient exactement à 60 car. Nouveau titre EN : 'Machine Learning Engineer Salary in Saudi Arabia: AI Risk 18'. FR/AR non touchés (requête anglaise uniquement ; SHORT_NAME_OVERRIDES n'est lu que dans la branche EN du générateur de titre). Aucun chiffre inventé (composite 18 identique, source src/data/master.json inchangée). Vérifié dans le HTML généré : /en/job/machine-learning-engineer → nouveau titre ; témoins /en/job/{dentists, aircraft-mechanic-ame} → titres inchangés ; /fr,/ar/job/machine-learning-engineer → titres inchangés. tsc --noEmit et npm run build passent sans erreur.",
+        "review": null
       }
     ]
   },

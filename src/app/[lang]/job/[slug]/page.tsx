@@ -80,6 +80,15 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
   // KSA". Nom identique (pas d'abréviation) : le gabarit sans "/100" (déjà utilisé
   // pour mlt et hospital-administrator) tient à 58 car.
   "aircraft-mechanic-ame": "Aircraft Mechanic / AME",
+  // 05/11 : cycle seo-rank-watch pour "ai ml engineer salary in saudi arabia" —
+  // même défaut : les gabarits salaire complets ("...AI Risk 18/100 · Salary
+  // Guide, Saudi Arabia" 70 car., "...Saudi Arabia: AI Risk 18/100, Salary
+  // Guide" 68 car., "...Salary in Saudi Arabia: AI Risk 18/100" 64 car.)
+  // dépassent 60 caractères pour "Machine Learning Engineer", retombée sur le
+  // gabarit dégradé "AI Risk ... KSA" (60 car., tient de justesse). Nom
+  // identique (pas d'abréviation) : le gabarit sans "/100" (déjà utilisé pour
+  // mlt, hospital-administrator, aircraft-mechanic-ame) tient à 60 car.
+  "machine-learning-engineer": "Machine Learning Engineer",
 };
 
 // 08/10 : cycle seo-rank-watch pour "investment banker salary in saudi arabia"
