@@ -105,11 +105,14 @@ const SHORT_NAME_OVERRIDES: Record<string, string> = {
 // l'action du 28/09 (titre, déjà testée et jugée sans effet le 26/10).
 // 02/11 : même méthode pour hospital-administrator — <title> déjà aligné salaire
 // depuis le 12/10 (jugé sans effet le 26/10), lede encore "Will AI replace...".
+// 09/11 : même méthode pour medical-laboratory-technician — <title> déjà aligné
+// salaire depuis le 01/10 (jugé sans effet le 09/11), lede encore "Will AI replace...".
 const SALARY_FIRST_LEDE_COHORT = new Set([
   "investment-banker",
   "petroleum-engineer",
   "hotel-manager",
   "hospital-administrator",
+  "medical-laboratory-technician",
 ]);
 
 export async function generateStaticParams() {
