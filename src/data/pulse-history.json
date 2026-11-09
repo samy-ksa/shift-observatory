@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-11-02",
+    "stats": {
+      "total_global_layoffs_this_week": 0,
+      "total_ai_cited_this_week": 0,
+      "total_gulf_events_this_week": 1,
+      "ytd_global_tech_layoffs": 0,
+      "ytd_ai_cited_us": 3000,
+      "trend_vs_last_week": "stable",
+      "notable_trend": "AI-linked workforce restructuring is broadening from technology into banking and retail, while Gulf governments emphasize large-scale agent deployment and employee reskilling rather than announced AI-specific redundancies.",
+      "model_reported": {
+        "total_global_layoffs_this_week": 8970,
+        "total_ai_cited_this_week": 8970
+      },
+      "events_this_week": 0,
+      "backfill_events_older_than_week": 4,
+      "totals_computed_from_list": true
+    }
+  },
+  {
     "date": "2026-10-26",
     "stats": {
       "total_global_layoffs_this_week": 6000,

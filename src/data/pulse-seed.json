@@ -1,117 +1,163 @@
 {
-  "report_date": "2026-11-02",
+  "report_date": "2026-11-09",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Barclays",
-      "country": "GB",
-      "sector": "Banking",
-      "jobs_cut": 5000,
+      "company": "Unspecified companies",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 0,
       "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "Barclays announced approximately 5,000 support-function job cuts in October 2026 as banks increased investment in AI and operational streamlining.",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "description": "Bloomberg reported that companies announced thousands of job cuts during earnings season as executives responded to AI adoption and cost pressures, but the available report did not identify company-level figures sufficient for attribution.",
+      "source": "Bloomberg",
+      "date": "2026-11-03"
+    },
+    {
+      "company": "Intuit",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 3000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Intuit announced a workforce reduction explicitly tied to increased investment in artificial intelligence.",
+      "source": "The Daily Star",
+      "date": "2026-10-17"
+    },
+    {
+      "company": "Oracle",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "contributing",
+      "description": "Oracle announced restructuring in which AI adoption across operations was identified as one contributing factor, but the available source did not provide a verifiable company-level job-cut figure.",
+      "source": "The Daily Star",
+      "date": "2026-10-18"
+    },
+    {
+      "company": "Meta",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 600,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Meta announced approximately 600 job cuts in a broader efficiency and strategic adjustment context in which AI investment was cited as a factor.",
+      "source": "Reuters via Capital.com",
+      "date": "2026-10-17"
     },
     {
       "company": "Kroger",
       "country": "US",
       "sector": "Retail",
       "jobs_cut": 3000,
-      "jobs_cut_estimated": true,
+      "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Kroger announced approximately 3,000 corporate job cuts as part of an efficiency and AI-related operating overhaul.",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "description": "Kroger announced 3,000 job cuts while AI and broader operational factors were cited in coverage of the reduction.",
+      "source": "Reuters via Capital.com",
+      "date": "2026-10-12"
     },
     {
-      "company": "Fair Isaac",
+      "company": "Amazon",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 570,
-      "jobs_cut_estimated": true,
+      "jobs_cut": 17267,
+      "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Fair Isaac announced reductions affecting about 15% of its workforce, or approximately 570 roles, while simplifying operations and expanding AI workflows in product development.",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "description": "Amazon announced 17,267 job cuts amid a shift toward AI-related investment and operating efficiencies.",
+      "source": "Free Press Journal",
+      "date": "2026-10-12"
     },
     {
-      "company": "DNB",
-      "country": "NO",
-      "sector": "Banking",
-      "jobs_cut": 400,
+      "company": "Dell",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 11000,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "Dell announced 11,000 job cuts, with automation and AI investment identified as likely drivers although the company did not formally attribute the reductions to AI.",
+      "source": "Free Press Journal",
+      "date": "2026-10-12"
+    },
+    {
+      "company": "HubSpot",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 660,
       "jobs_cut_estimated": true,
       "ai_role": "contributing",
-      "description": "DNB announced approximately 400 job reductions linked to increased AI investment and operating changes.",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "description": "HubSpot reduced approximately 660 positions as part of restructuring around AI-powered customer outcomes.",
+      "source": "Yahoo Finance; CxToday",
+      "date": "2026-10-10"
     }
   ],
-  "gulf_mena_automation": [
-    {
-      "company": "UAE Federal Government",
-      "country": "AE",
-      "sector": "Government",
-      "event_type": "automation_deployment",
-      "jobs_affected": 80000,
-      "jobs_affected_estimated": true,
-      "description": "The UAE approved an AI capability program for 80,000 federal employees and began deploying agents for procurement, tax auditing, customer service and technical support.",
-      "source": "Consultancy-ME",
-      "date": "2026-10-21"
-    }
-  ],
+  "gulf_mena_automation": [],
   "saudi_policy_updates": [],
   "ai_workforce_signals": [
     {
-      "headline": "UAE expands agentic AI program across federal government",
-      "description": "The UAE set a two-year objective to move half of government sectors, services and operations toward agentic AI. A capability program covers 80,000 federal employees, indicating workforce redesign and reskilling rather than an announced headcount reduction.",
-      "relevance_to_ksa": "direct",
-      "source": "Consultancy-ME",
-      "date": "2026-10-21"
-    },
-    {
-      "headline": "Saudi organizations accelerate AI workforce preparation",
-      "description": "A Saudi-focused SAP survey reported that 54% of organizations are upskilling or reskilling employees at scale, 52% are providing role-specific training and 53% are hiring AI-related talent. The findings point to simultaneous displacement risk and workforce redeployment.",
-      "relevance_to_ksa": "direct",
-      "source": "SAP News",
-      "date": "2026-10-04"
-    },
-    {
-      "headline": "Gulf frontline workers face information gaps during AI adoption",
-      "description": "A regional workplace study highlighted operational risks when frontline employees lack timely information during AI transformation. Reported workplace AI use in Saudi Arabia, the UAE, Qatar and Kuwait was high relative to the global average.",
-      "relevance_to_ksa": "direct",
-      "source": "Economic Times HRME",
-      "date": "2026-10-30"
-    },
-    {
-      "headline": "AI-linked layoffs spread beyond technology",
-      "description": "Reuters reported that AI-linked reductions now span banking, retail, manufacturing, consumer goods and technology. The cited examples include Barclays, Kroger, Fair Isaac and DNB, reflecting broader exposure of support and back-office roles.",
+      "headline": "AI-linked job cuts rise during earnings season",
+      "description": "Bloomberg reported that references to job cuts and firings increased during October earnings coverage as executives balanced AI adoption with cost reduction. The trend indicates that AI investment is increasingly appearing alongside workforce restructuring rather than only in standalone technology announcements.",
       "relevance_to_ksa": "indirect",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "source": "Bloomberg",
+      "date": "2026-11-03"
     },
     {
-      "headline": "Global AI-linked job cuts pass 100,000 in tracked announcements",
-      "description": "A Reuters factbox reported roughly 102,800 announced roles tied to AI across more than 30 companies since October 2025. The total includes major reductions at HSBC, Amazon, Standard Chartered and other large employers.",
+      "headline": "AI cited in 36% of tracked 2026 technology layoffs",
+      "description": "Layoffs.fyi data cited by the SHIFT Observatory attributed 36% of tracked 2026 technology layoffs to AI, compared with 16% in 2025. The cited dataset recorded more than 119,800 technology layoffs across 196 companies in 2026 at the time of reporting.",
       "relevance_to_ksa": "contextual",
-      "source": "Reuters",
-      "date": "2026-10-22"
+      "source": "SHIFT Observatory",
+      "date": "2026-10-19"
+    },
+    {
+      "headline": "Intuit links workforce reduction to AI investment",
+      "description": "Intuit’s workforce reduction was described as directly connected to deeper investment in AI. The event is a clear example of headcount being reduced while resources are redirected toward AI capabilities.",
+      "relevance_to_ksa": "indirect",
+      "source": "The Daily Star",
+      "date": "2026-10-17"
+    },
+    {
+      "headline": "Enterprise restructuring combines AI adoption with cost control",
+      "description": "Coverage of Oracle’s restructuring identified AI adoption across operations as one factor alongside broader restructuring. This reflects a mixed-driver model in which automation contributes to workforce reductions without being the sole stated cause.",
+      "relevance_to_ksa": "indirect",
+      "source": "The Daily Star",
+      "date": "2026-10-18"
+    },
+    {
+      "headline": "Large employers redirect spending toward AI infrastructure",
+      "description": "Reporting on Amazon and Dell described substantial reductions occurring alongside shifts toward AI infrastructure, automation, and efficiency programs. The pattern suggests that AI capital expenditure is increasingly competing with selected corporate and operational headcount.",
+      "relevance_to_ksa": "contextual",
+      "source": "Free Press Journal",
+      "date": "2026-10-12"
+    },
+    {
+      "headline": "AI-powered customer outcomes reshape software staffing",
+      "description": "HubSpot’s restructuring was tied to AI-powered customer outcomes and affected approximately 660 positions. Customer-support and software-service functions remain among the workforce areas most exposed to enterprise AI deployment.",
+      "relevance_to_ksa": "indirect",
+      "source": "Yahoo Finance; CxToday",
+      "date": "2026-10-10"
+    },
+    {
+      "headline": "Saudi labor-market materials emphasize updated employment protections",
+      "description": "Saudi Arabia’s Ministry of Human Resources and Social Development published and updated labor-law and labor-culture materials in late October and early November. The available materials discuss restructuring and contract-termination provisions but do not report a new AI-specific workforce policy in the period.",
+      "relevance_to_ksa": "direct",
+      "source": "Saudi Ministry of Human Resources and Social Development",
+      "date": "2026-11-06"
     }
   ],
   "weekly_stats": {
     "total_global_layoffs_this_week": 0,
-    "total_ai_cited_this_week": 0,
-    "total_gulf_events_this_week": 1,
-    "ytd_global_tech_layoffs": 0,
-    "ytd_ai_cited_us": 3000,
+    "total_ai_cited_this_week": 1,
+    "total_gulf_events_this_week": 0,
+    "ytd_global_tech_layoffs": 119800,
+    "ytd_ai_cited_us": 0,
     "trend_vs_last_week": "stable",
-    "notable_trend": "AI-linked workforce restructuring is broadening from technology into banking and retail, while Gulf governments emphasize large-scale agent deployment and employee reskilling rather than announced AI-specific redundancies.",
+    "notable_trend": "Available reporting shows AI increasingly functioning as a capital-allocation and restructuring driver in major technology and consumer companies, while no verifiable Gulf automation event or new Saudi AI-labor policy was identified for the primary seven-day window.",
     "model_reported": {
-      "total_global_layoffs_this_week": 8970,
-      "total_ai_cited_this_week": 8970
+      "total_global_layoffs_this_week": 0,
+      "total_ai_cited_this_week": 0
     },
-    "events_this_week": 0,
-    "backfill_events_older_than_week": 4,
+    "events_this_week": 1,
+    "backfill_events_older_than_week": 7,
     "totals_computed_from_list": true
   }
 }
