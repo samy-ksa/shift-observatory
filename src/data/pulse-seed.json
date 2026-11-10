@@ -1,163 +1,172 @@
 {
-  "report_date": "2026-11-09",
+  "report_date": "2026-11-10",
   "period": "last 7 days",
   "global_layoffs": [
-    {
-      "company": "Unspecified companies",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 0,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "Bloomberg reported that companies announced thousands of job cuts during earnings season as executives responded to AI adoption and cost pressures, but the available report did not identify company-level figures sufficient for attribution.",
-      "source": "Bloomberg",
-      "date": "2026-11-03"
-    },
-    {
-      "company": "Intuit",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
-      "ai_role": "direct",
-      "description": "Intuit announced a workforce reduction explicitly tied to increased investment in artificial intelligence.",
-      "source": "The Daily Star",
-      "date": "2026-10-17"
-    },
-    {
-      "company": "Oracle",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 0,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "Oracle announced restructuring in which AI adoption across operations was identified as one contributing factor, but the available source did not provide a verifiable company-level job-cut figure.",
-      "source": "The Daily Star",
-      "date": "2026-10-18"
-    },
     {
       "company": "Meta",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 600,
+      "jobs_cut": 8000,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Meta announced approximately 600 job cuts in a broader efficiency and strategic adjustment context in which AI investment was cited as a factor.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-17"
+      "description": "Meta eliminated about 8,000 positions and canceled 6,000 planned hires while reorganizing around major artificial-intelligence infrastructure spending and shifting staff toward AI-related roles.",
+      "source": "Yahoo Finance",
+      "date": "2026-11-09"
     },
     {
-      "company": "Kroger",
+      "company": "Canva",
+      "country": "AU",
+      "sector": "Tech",
+      "jobs_cut": 1271,
+      "jobs_cut_estimated": false,
+      "ai_role": "suspected",
+      "description": "Canva cut 1,271 employees, or about 22% of its workforce, while flattening its organization and citing changing technology and product expectations.",
+      "source": "Computerworld",
+      "date": "2026-11-03"
+    },
+    {
+      "company": "SUSE",
+      "country": "DE",
+      "sector": "Tech",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "SUSE announced a workforce reduction of approximately 10%, with its chief executive stating that automation and AI are fundamentally changing how software companies operate.",
+      "source": "The Pivot Wave",
+      "date": "2026-11-07"
+    },
+    {
+      "company": "NICE",
+      "country": "IL",
+      "sector": "Tech",
+      "jobs_cut": 500,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "NICE cut about 500 jobs while changing how it organizes and invests to serve customers deploying AI-driven contact-center technology.",
+      "source": "The Pivot Wave",
+      "date": "2026-11-07"
+    },
+    {
+      "company": "Fiserv",
       "country": "US",
-      "sector": "Retail",
+      "sector": "Financial Services Technology",
       "jobs_cut": 3000,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Kroger announced 3,000 job cuts while AI and broader operational factors were cited in coverage of the reduction.",
-      "source": "Reuters via Capital.com",
-      "date": "2026-10-12"
+      "description": "Fiserv disclosed that 3,000 employee and contractor positions had been eliminated since June and linked continued simplification to an AI-everywhere operating model.",
+      "source": "The Pivot Wave",
+      "date": "2026-11-07"
+    },
+    {
+      "company": "Block",
+      "country": "US",
+      "sector": "Financial Services Technology",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "contributing",
+      "description": "Block announced a second 2026 workforce reduction and said improved tools would allow employees to handle more routine work, without disclosing a job count.",
+      "source": "The Pivot Wave",
+      "date": "2026-11-05"
+    },
+    {
+      "company": "PayPal",
+      "country": "US",
+      "sector": "Financial Services Technology",
+      "jobs_cut": 2000,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "PayPal said it was pursuing approximately $700 million in run-rate savings through cuts affecting more than 2,000 jobs while adopting AI tools including customer-service chat agents.",
+      "source": "FourWeekMBA",
+      "date": "2026-11-03"
     },
     {
       "company": "Amazon",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 17267,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Amazon announced 17,267 job cuts amid a shift toward AI-related investment and operating efficiencies.",
-      "source": "Free Press Journal",
-      "date": "2026-10-12"
-    },
-    {
-      "company": "Dell",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 11000,
+      "jobs_cut": 250,
       "jobs_cut_estimated": false,
       "ai_role": "suspected",
-      "description": "Dell announced 11,000 job cuts, with automation and AI investment identified as likely drivers although the company did not formally attribute the reductions to AI.",
-      "source": "Free Press Journal",
-      "date": "2026-10-12"
-    },
-    {
-      "company": "HubSpot",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 660,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "HubSpot reduced approximately 660 positions as part of restructuring around AI-powered customer outcomes.",
-      "source": "Yahoo Finance; CxToday",
-      "date": "2026-10-10"
+      "description": "Amazon cut about 250 jobs in its devices and services unit as it sought to operate more efficiently and align staffing with its product roadmap.",
+      "source": "FourWeekMBA",
+      "date": "2026-11-03"
     }
   ],
   "gulf_mena_automation": [],
-  "saudi_policy_updates": [],
+  "saudi_policy_updates": [
+    {
+      "type": "nitaqat",
+      "title": "Phased increase of the Nitaqat full-worker salary threshold to SAR 5,000 then SAR 6,000",
+      "description": "The minimum monthly salary for a Saudi employee to count as one full worker toward Saudization rates rises from SAR 4,000 to SAR 5,000 on 2027-04-25 and to SAR 6,000 on 2028-04-25; HRDF Employment Support aligns its minimum supported wage on the same two steps. It is a counting threshold, not a general minimum wage.",
+      "effective_date": "2027-04-25",
+      "source": "Saudi Press Agency via Saudi Gazette; EY Tax News (https://taxnews.ey.com/news/2026-2304-saudi-arabia-raises-minimum-nitaqat-salary-threshold-for-saudi-employees)",
+      "date_announced": "2026-10-25"
+    }
+  ],
   "ai_workforce_signals": [
     {
-      "headline": "AI-linked job cuts rise during earnings season",
-      "description": "Bloomberg reported that references to job cuts and firings increased during October earnings coverage as executives balanced AI adoption with cost reduction. The trend indicates that AI investment is increasingly appearing alongside workforce restructuring rather than only in standalone technology announcements.",
+      "headline": "Meta shifts workforce toward AI infrastructure",
+      "description": "Meta eliminated about 8,000 positions, canceled 6,000 planned hires, and increased its focus on AI infrastructure. The restructuring is also moving thousands of employees into AI-related roles while reducing staffing elsewhere.",
       "relevance_to_ksa": "indirect",
-      "source": "Bloomberg",
+      "source": "Yahoo Finance",
+      "date": "2026-11-09"
+    },
+    {
+      "headline": "AI-linked technology layoffs exceed 90,000 in 2026",
+      "description": "Layoffs.fyi data cited in November reporting attributed more than 93,000 technology-sector job cuts to AI during 2026. The broader tracker recorded more than 135,000 technology layoffs across 334 companies by late October.",
+      "relevance_to_ksa": "contextual",
+      "source": "Onmanorama",
+      "date": "2026-11-05"
+    },
+    {
+      "headline": "Enterprise AI adoption reshapes software staffing",
+      "description": "SUSE said automation and AI are fundamentally changing software-company operations as it announced a workforce reduction of approximately 10%. The development illustrates pressure on software firms to redirect headcount toward AI capabilities and higher-value roles.",
+      "relevance_to_ksa": "indirect",
+      "source": "The Pivot Wave",
+      "date": "2026-11-07"
+    },
+    {
+      "headline": "AI contact-center deployment drives operating redesign",
+      "description": "NICE cut about 500 jobs while reorganizing investment around enterprise customers deploying AI contact-center systems. The shift signals continued consolidation of traditional customer-service work around AI-agent platforms.",
+      "relevance_to_ksa": "indirect",
+      "source": "The Pivot Wave",
+      "date": "2026-11-07"
+    },
+    {
+      "headline": "Financial-services firms pair cost reduction with AI adoption",
+      "description": "PayPal linked more than 2,000 job cuts and cost savings to operational simplification while adopting AI customer-service agents. Fiserv separately connected thousands of reductions to an AI-everywhere operating model.",
+      "relevance_to_ksa": "indirect",
+      "source": "FourWeekMBA",
       "date": "2026-11-03"
     },
     {
-      "headline": "AI cited in 36% of tracked 2026 technology layoffs",
-      "description": "Layoffs.fyi data cited by the SHIFT Observatory attributed 36% of tracked 2026 technology layoffs to AI, compared with 16% in 2025. The cited dataset recorded more than 119,800 technology layoffs across 196 companies in 2026 at the time of reporting.",
+      "headline": "Canva restructures amid generative-technology pressure",
+      "description": "Canva eliminated 1,271 roles, about 22% of its workforce, while flattening its organization. Its leadership cited technology-driven changes in what users create and expect, although it did not explicitly identify AI as the cause of the reductions.",
       "relevance_to_ksa": "contextual",
-      "source": "SHIFT Observatory",
-      "date": "2026-10-19"
+      "source": "Computerworld",
+      "date": "2026-11-03"
     },
     {
-      "headline": "Intuit links workforce reduction to AI investment",
-      "description": "Intuit’s workforce reduction was described as directly connected to deeper investment in AI. The event is a clear example of headcount being reduced while resources are redirected toward AI capabilities.",
-      "relevance_to_ksa": "indirect",
-      "source": "The Daily Star",
-      "date": "2026-10-17"
-    },
-    {
-      "headline": "Enterprise restructuring combines AI adoption with cost control",
-      "description": "Coverage of Oracle’s restructuring identified AI adoption across operations as one factor alongside broader restructuring. This reflects a mixed-driver model in which automation contributes to workforce reductions without being the sole stated cause.",
-      "relevance_to_ksa": "indirect",
-      "source": "The Daily Star",
-      "date": "2026-10-18"
-    },
-    {
-      "headline": "Large employers redirect spending toward AI infrastructure",
-      "description": "Reporting on Amazon and Dell described substantial reductions occurring alongside shifts toward AI infrastructure, automation, and efficiency programs. The pattern suggests that AI capital expenditure is increasingly competing with selected corporate and operational headcount.",
+      "headline": "AI remains mixed with broader restructuring motives",
+      "description": "Analysis of 2026 layoff announcements found that many companies mentioning AI also cited cost control, organizational simplification, changing strategy, or slower growth. The evidence supports treating AI as a contributing factor in many cases rather than assuming direct substitution.",
       "relevance_to_ksa": "contextual",
-      "source": "Free Press Journal",
-      "date": "2026-10-12"
-    },
-    {
-      "headline": "AI-powered customer outcomes reshape software staffing",
-      "description": "HubSpot’s restructuring was tied to AI-powered customer outcomes and affected approximately 660 positions. Customer-support and software-service functions remain among the workforce areas most exposed to enterprise AI deployment.",
-      "relevance_to_ksa": "indirect",
-      "source": "Yahoo Finance; CxToday",
-      "date": "2026-10-10"
-    },
-    {
-      "headline": "Saudi labor-market materials emphasize updated employment protections",
-      "description": "Saudi Arabia’s Ministry of Human Resources and Social Development published and updated labor-law and labor-culture materials in late October and early November. The available materials discuss restructuring and contract-termination provisions but do not report a new AI-specific workforce policy in the period.",
-      "relevance_to_ksa": "direct",
-      "source": "Saudi Ministry of Human Resources and Social Development",
-      "date": "2026-11-06"
+      "source": "Ryan Doser Research",
+      "date": "2026-11-05"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 0,
-    "total_ai_cited_this_week": 1,
+    "total_global_layoffs_this_week": 15021,
+    "total_ai_cited_this_week": 6,
     "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 119800,
-    "ytd_ai_cited_us": 0,
-    "trend_vs_last_week": "stable",
-    "notable_trend": "Available reporting shows AI increasingly functioning as a capital-allocation and restructuring driver in major technology and consumer companies, while no verifiable Gulf automation event or new Saudi AI-labor policy was identified for the primary seven-day window.",
+    "ytd_global_tech_layoffs": 135446,
+    "ytd_ai_cited_us": 93217,
+    "trend_vs_last_week": "up",
+    "notable_trend": "AI-related restructuring is increasingly combining headcount reductions with redeployment toward infrastructure, software automation, and customer-service agents, while companies continue to present AI alongside broader efficiency and organizational simplification goals.",
     "model_reported": {
-      "total_global_layoffs_this_week": 0,
-      "total_ai_cited_this_week": 0
+      "total_global_layoffs_this_week": 15021,
+      "total_ai_cited_this_week": 5
     },
-    "events_this_week": 1,
-    "backfill_events_older_than_week": 7,
+    "events_this_week": 8,
+    "backfill_events_older_than_week": 0,
     "totals_computed_from_list": true
   }
 }
