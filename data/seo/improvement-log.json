@@ -244,5 +244,19 @@
         "reviewPostponed": "2026-11-09 : pas encore recrawlée depuis l'action du 02/11 (dernier crawl GSC : 2026-10-23, antérieur à l'action ; snapshot du 05/11, aucune donnée plus récente disponible). Ne pas juger. nextReviewDate repoussée au 2026-11-16."
       }
     ]
+  },
+  {
+    "keyword": "cost of living in saudi arabia",
+    "targetPath": "/en/relocate",
+    "status": "observing",
+    "nextReviewDate": "2026-11-19",
+    "actions": [
+      {
+        "date": "2026-11-12",
+        "rankAtAction": 5.7,
+        "needs": "Chercheurs veulent une reponse chiffree directe au cout de la vie en Arabie Saoudite (budget mensuel par profil). gsc-snapshot.json (12/11) : requete 'cost of living in saudi arabia' sur /en/relocate est passee de ~5-7k a 15 977 impressions/28j, position 5,7 (page 1), mais 0 clic / 0% CTR -- la page totale (18 596 impressions, 9 clics/28j, contre 5 827/18 clics la fenetre precedente) montre le meme effondrement de CTR malgre la hausse massive de volume. WebSearch 'cost of living in saudi arabia' : Wise, International Insurance, Wego, Expatica -- toutes des pages de synthese qui annoncent un chiffre de budget mensuel des le titre ou le snippet (ex. Wise ~$1 364/mois). Constat sur notre page : <title> et <meta description> ('Free calculator comparing your city to Riyadh, Jeddah, Dammam. 65 prices, required salary...') ne contiennent aucun chiffre de cout -- seulement la promesse d'un outil -- alors que le LEDE et les sections (CostOfLivingEditorial.tsx, deja en place) ont deja les budgets reels sources (Single Riyadh 6 500-9 000 SAR, couple 11 000-15 000, famille de 4 22 000-28 000 SAR). Decalage direct entre ce que le snippet promet (un calculateur) et ce que le chercheur veut voir immediatement (un chiffre), nouvelle cible non enregistree auparavant (priorite 5 du workflow seo-rank-watch : requete prometteuse trouvee via GSC, aucun meilleur candidat ce cycle parmi les mots-cles actifs existants -- investment-banker, cost-of-living ancien mot-cle 'saudi arabia cost of living riyadh rent 2026' et aircraft-mechanic-ame tous a 0 impression exacte).",
+        "done": "src/app/[lang]/relocate/page.tsx : DESCRIPTIONS.en remplacee pour ouvrir sur les chiffres reels deja publies dans CostOfLivingEditorial.tsx (SECTIONS en, 1re section) au lieu de seulement 'Free calculator' -- nouveau texte : 'Single expat budget: SAR 6,500-9,000/month in Saudi Arabia (couple 11,000-15,000, family of 4 22,000-28,000). Free calculator vs Riyadh, Jeddah, Dammam.' (152 car., sous la limite d'affichage). Aucun chiffre invente (donnees identiques, deja sourcees et publiees sur la page). <title> inchange (deja aligne sur 'Cost of Living Saudi Arabia 2026'). FR/AR non touches (requete anglaise uniquement). Ajoute aux mots-cles suivis (data/seo/watchwords.json, priorite high). Verifie dans .next/server/app/en/relocate.html (nouvelle meta description) ; .next/server/app/fr/relocate.html et pages job/* temoins inchanges. tsc --noEmit et npm run build passent sans erreur."
+      }
+    ]
   }
 ]

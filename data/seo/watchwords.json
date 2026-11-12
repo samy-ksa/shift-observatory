@@ -63,5 +63,10 @@
     "keyword": "dentist salary saudi arabia",
     "targetPath": "/en/job/dentists",
     "priority": "low"
+  },
+  {
+    "keyword": "cost of living in saudi arabia",
+    "targetPath": "/en/relocate",
+    "priority": "high"
   }
 ]

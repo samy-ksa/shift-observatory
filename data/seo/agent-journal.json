@@ -293,5 +293,27 @@
     "why": "Cycle seo-rank-watch : parmi les mots-clés hors observing/achieved après les jugements du jour (cost-of-living, aircraft-mechanic-ame, investment-banker, mlt), seul mlt a des impressions mesurables sur sa requête exacte ce cycle (position 8,14, 14 impressions/28j, rank-history.json) -- les trois autres sont a 0 impression sur leur requête exacte. Priorité 1 du workflow (position 2-10 + impressions présentes) : mlt est le seul candidat qualifié.",
     "done": "Voir data/seo/improvement-log.json (entrée 'mlt salary in saudi arabia', action du 09/11) pour l'analyse complète. Résumé : WebSearch 'mlt salary in saudi arabia' (09/11) confirme des pages salaire dédiées en tête (Paylab ~5 576-10 978 SAR/mois, PayScale), cohérent avec notre donnée (src/data/master.json : entry 6 000, médiane 9 000, senior 14 000 SAR/mois, source Talent.com 2025, aucun chiffre à changer). Le <title> est déjà aligné salaire depuis le 01/10 (jugé sans effet ce cycle), mais le lede IA-citable ouvrait toujours par 'Will AI replace Medical Laboratory Technician in Saudi Arabia?' -- même défaut déjà corrigé pour investment-banker, petroleum-engineer, hotel-manager et hospital-administrator, jamais appliqué à mlt. src/app/[lang]/job/[slug]/page.tsx : ajout de 'medical-laboratory-technician' au Set SALARY_FIRST_LEDE_COHORT. Nouveau lede EN : 'Medical Laboratory Technician in Saudi Arabia earn between SAR 6,000 and SAR 14,000 per month, with a median of SAR 9,000 ...' puis le risque IA. FR/AR non touchés. Vérifié dans le HTML généré : /en/job/medical-laboratory-technician -> nouveau lede salaire en tête ; témoins /en/job/dentists et /en/job/aircraft-mechanic-ame (jamais touchés) -> lede inchangé ; /fr/job/medical-laboratory-technician -> lede FR inchangé. tsc --noEmit et npm run build passent sans erreur. Enregistré dans data/seo/improvement-log.json (statut 'observing', nextReviewDate 2026-11-16).",
     "reviewAfter": "2026-11-16"
+  },
+  {
+    "date": "2026-11-12",
+    "lever": "mesure-jugement",
+    "pages": [
+      "/en/job/cloud-engineer",
+      "/en/job/hotel-manager",
+      "/en/job/machine-learning-engineer"
+    ],
+    "why": "nextReviewDate du 2026-11-12 atteinte pour 3 mots-clés en observation (cloud-engineer action 22/10, hotel-manager action 29/10, machine-learning-engineer action 05/11). gsc-snapshot.json (crawl, données du 12/11) : cloud-engineer dernier crawl 2026-10-21 (antérieur à l'action du 22/10), hotel-manager dernier crawl 2026-10-23 (antérieur à l'action du 29/10), machine-learning-engineer dernier crawl 2026-10-25 (antérieur à l'action du 05/11) -- aucune des trois pages recrawlée depuis sa dernière action. Juger maintenant mesurerait l'ancienne version.",
+    "done": "Aucun jugement ce cycle (recrawl manquant pour les trois). nextReviewDate repoussée au 2026-11-19 pour les trois dans data/seo/improvement-log.json, dernier crawl connu noté. petroleum-engineer, mlt et hospital-administrator (nextReviewDate 2026-11-16) pas encore dus, non touchés. Note générale : totaux GSC 28j glissants en forte hausse (clics 33 -> 21, impressions 7 642 -> 20 703), mais quasi intégralement portée par /en/relocate (impressions 5 827 -> 18 596, clics 18 -> 9) sur la requête large 'cost of living in saudi arabia' (impressions 15 977, position 5,7, 0 clic, 0% CTR) -- hausse de volume massive mais effondrement du CTR sur cette page, piste traitée ce cycle (voir action seo-rank-watch du jour). Hors /en/relocate, le reste du site reste sur la tendance de baisse déjà notée les cycles précédents.",
+    "reviewAfter": "2026-11-19"
+  },
+  {
+    "date": "2026-11-12",
+    "lever": "seo-rank-watch",
+    "pages": [
+      "/en/relocate"
+    ],
+    "why": "Cycle seo-rank-watch : parmi les mots-clés actifs existants hors observing/achieved (investment-banker, 'saudi arabia cost of living riyadh rent 2026', aircraft-mechanic-ame), tous à 0 impression sur leur requête exacte ce cycle. Mais gsc-snapshot.json (queryPage, 12/11) révèle une requête à très fort volume non encore enregistrée : 'cost of living in saudi arabia' sur /en/relocate, position 5,7, 15 977 impressions/28j (contre ~5-7k les cycles précédents) -- priorité 5 du workflow (requête prometteuse trouvée via GSC) et de loin le meilleur rendement attendu (volume × probabilité d'effet) de tout le site ce cycle, malgré 0 clic / 0% CTR sur cette requête précise.",
+    "done": "Voir data/seo/improvement-log.json (nouvelle entrée 'cost of living in saudi arabia') pour l'analyse complète. Résumé : WebSearch confirme que les pages concurrentes (Wise, International Insurance, Wego, Expatica) annoncent un chiffre de budget dès le titre/snippet, alors que notre <meta description> ne promettait qu'un calculateur, sans aucun chiffre, décalage direct avec l'intention (chercher le chiffre). src/app/[lang]/relocate/page.tsx : DESCRIPTIONS.en remplacée pour ouvrir sur les budgets déjà publiés et sourcés dans CostOfLivingEditorial.tsx (aucun chiffre inventé). <title> inchangé, FR/AR non touchés (requête anglaise uniquement). Ajouté à data/seo/watchwords.json (priorité high). Vérifié dans .next/server/app/en/relocate.html (nouvelle meta description) ; .next/server/app/fr/relocate.html et pages job/* témoins inchangés. tsc --noEmit et npm run build OK. Enregistré dans data/seo/improvement-log.json (statut 'observing', nextReviewDate 2026-11-19).",
+    "reviewAfter": "2026-11-19"
   }
 ]

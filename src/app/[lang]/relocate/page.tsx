@@ -18,8 +18,12 @@ const TITLES: Record<Lang, string> = {
 };
 
 const DESCRIPTIONS: Record<Lang, string> = {
-  // Add data-source trust signal ("Numbeo + GASTAT") absent from competitors.
-  en: "Free calculator comparing your city to Riyadh, Jeddah, Dammam. 65 prices, required salary, downloadable PDF. Numbeo + GASTAT data. No signup.",
+  // EN: lead with the actual budget figures (from CostOfLivingEditorial LEDE,
+  // no new numbers) instead of only "free calculator" — "cost of living in
+  // saudi arabia" went from ~5-7k to ~16k impressions/28j at position 5.7
+  // (gsc-snapshot.json, 12/11) with 0% CTR on that exact query: the snippet
+  // never answers the query itself, it only promises a tool.
+  en: "Single expat budget: SAR 6,500-9,000/month in Saudi Arabia (couple 11,000-15,000, family of 4 22,000-28,000). Free calculator vs Riyadh, Jeddah, Dammam.",
   fr: "Calculateur gratuit comparant votre ville à Riyad, Djeddah, Dammam. 65 prix, salaire nécessaire, PDF téléchargeable. Sources Numbeo + GASTAT. Sans inscription.",
   ar: "حاسبة مجانية تقارن مدينتك بالرياض وجدة والدمام. 65 سعراً، الراتب المطلوب، تقرير PDF. مصادر Numbeo + GASTAT. بدون تسجيل.",
 };
