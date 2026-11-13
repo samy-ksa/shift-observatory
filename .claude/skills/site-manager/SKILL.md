@@ -49,6 +49,13 @@ Jalons : 10/10 articles indexés ≥ 50 % · 24/10 pages métier EN ≥ 60 % · 
    précédents, dernier crawl des pages en observation), `index-coverage.jsonl`,
    `llm-visibility.jsonl`, `rank-history.json`. Vérifie la date du snapshot.
    Lis aussi `data/seo/agent-journal.json` (tes actions passées).
+   **Rafales (13/11/2026).** Le snapshot marque `bruit: 'rafale'` les requêtes dont les impressions sont apparues d'un coup
+   (au moins 200, zéro clic, au moins 10 fois la période précédente) : c'est le plus souvent un suivi automatique de
+   classements, pas des lecteurs (le 27/10, « cost of living in saudi arabia » : 14 365 impressions sur ordinateur aux
+   États-Unis, zéro clic, alors que le site n'apparaît pas dans Google pour cette requête). Pour juger et prioriser,
+   utilise `current.totalsHorsRafale` et `impressionsUtiles` des pages, jamais les lignes marquées. Cite les rafales du
+   snapshot (`current.rafales`) dans ton rapport hebdomadaire. Si `rafalesErreur` est présent, dis que le contrôle n'a
+   pas pu tourner et ne juge aucune hausse d'impressions.
 2. **Juger ce qui a été fait.** Pour chaque action passée encore en observation, regarde
    `crawl` dans `gsc-snapshot.json` : page pas recrawlée depuis l'action = on ne juge pas.
    Les pages listées dans `reviewAfter`/`targetPath` du journal y sont inspectées.
