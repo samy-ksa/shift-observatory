@@ -682,5 +682,301 @@
         ]
       }
     }
+  },
+  {
+    "slug": "week-of-2026-11-10",
+    "kind": "pulse",
+    "date": "2026-11-10",
+    "published_at": "2026-11-14T12:40:14",
+    "keyword": "AI layoffs and Saudi workforce — week of 2026-11-10",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: 15,021 layoffs, AI cited in 6: Saudi impact, Nov 10. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": "/pulse/week-of-2026-11-10.png",
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=15%2C021%20layoffs%2C%20AI%20cited%20in%206%3A%20Saudi%20impact%2C%20Nov%2010&subtitle=15%2C021%20layoffs%20were%20logged%20this%20week%20and%20AI%20is%20cited%20in%206%2C%20up%20on%20last%20week%2C%20but%20",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=15%20021%20licenciements%2C%20IA%20cit%C3%A9e%20dans%206%20%3A%20impact%20saoudien%2C%2010%20nov.&subtitle=15%20021%20licenciements%20ont%20%C3%A9t%C3%A9%20recens%C3%A9s%20cette%20semaine%20et%20l%27IA%20est%20cit%C3%A9e%20dans%206%2C%20en",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=15%2C021%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D9%8B%D8%A7%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%81%D9%8A%206%3A%20%D8%A7%D9%84%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%8C%2010%20%D9%86%D9%88%D9%81%D9%85%D8%A8%D8%B1&subtitle=%D8%B3%D9%8F%D8%AC%D9%91%D9%84%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%2015%2C021%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D9%8B%D8%A7%20%D9%88%D8%B0%D9%8F%D9%83%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%81%D9%8A%206%20%D9%85%D9%86%D9%87%D8%A7%D8%8C%20%D8%A8%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84"
+    },
+    "langs": {
+      "en": {
+        "title": "15,021 layoffs, AI cited in 6: Saudi impact, Nov 10",
+        "description": "Weekly tracker: 15,021 layoffs logged, AI cited in 6. See who drove the total, what it means for Saudi sectors and Nitaqat's SAR 5,000 step.",
+        "lede": "15,021 layoffs logged this week, AI cited in 6. The six are one event where the company named AI as the cause (SUSE) and five where AI is one factor among several. Two further cases, Canva and Amazon, are only suspected and are not counted. The week covers eight company events dated 3 to 9 November 2026, and the total is up on the previous week.\n\nNo Gulf automation event was logged. The standing Saudi measure matters more: 4,450,778 of 12,420,050 GOSI-registered jobs carry significant AI exposure, an exposure measure, not a forecast of losses.\n\nOur own finding: the total is carried by Meta, Fiserv and PayPal, all labelled \"contributing\", while the only \"direct\" case, SUSE, has no published headcount. So none of the 15,021 can be directly attributed to AI. Past weeks are in [all Pulse editions](/pulse).",
+        "h2_sections": [
+          {
+            "q": "Which companies drove the 15,021 layoffs, and how much of it was AI?",
+            "body": "Eight events add up to 15,021 jobs, and Meta's 8,000 is 53% of that total. By AI label, the week holds 1 direct case, 5 contributing and 2 suspected.\n\n- Meta (US): 8,000 jobs, 9 Nov, contributing\n- Fiserv (US): 3,000 jobs, 7 Nov, contributing\n- PayPal (US): 2,000 jobs, 3 Nov, contributing\n- Canva (AU): 1,271 jobs, 3 Nov, suspected\n- NICE (IL): 500 jobs, 7 Nov, contributing\n- Amazon (US): 250 jobs, 3 Nov, suspected\n- SUSE (DE): no published count, 7 Nov, direct\n- Block (US): no published count, 5 Nov, contributing\n\nSUSE announced a reduction of approximately 10% of its workforce without a headcount, and Block has no published figure. Both are counted at zero in the total. \"Direct\" means the company said AI caused the cuts. \"Contributing\" means AI is cited among other factors. \"Suspected\" means automation is the obvious driver but is not officially stated. Sources: Yahoo Finance, Computerworld, The Pivot Wave, FourWeekMBA."
+          },
+          {
+            "q": "Is AI actually replacing these workers, or is it a label?",
+            "body": "For most of this week's events, AI is a stated factor, not a demonstrated cause. An analysis of 2026 layoff announcements by Ryan Doser Research found that many companies mentioning AI also cited cost control, organizational simplification, a change of strategy or slower growth. The evidence supports treating AI as a contributing factor in many cases, not as direct substitution.\n\nCanva shows the limit of the label. It eliminated about 22% of its workforce and flattened its organization. Its leadership pointed to technology-driven changes in what users create and expect, and did not name AI as the cause of the cuts.\n\nOur reading: the \"AI cited\" count measures what companies say, not what machines replaced. A headline total tells you a sector is restructuring. It does not tell you how many of those roles an AI system now performs."
+          },
+          {
+            "q": "Where is the headcount going instead?",
+            "body": "Part of it is being moved, not removed. Meta cancelled 6,000 planned hires and is shifting thousands of employees into AI-related roles while reducing staffing elsewhere, with the stated focus on AI infrastructure.\n\nThe same logic appears in three other sectors:\n\n- Software: SUSE says automation and AI are changing how software companies operate, and pairs its cut with a push toward AI capabilities and higher-value roles.\n- Customer service: NICE reorganized investment around enterprise customers deploying AI contact-center systems. PayPal tied its cuts to operational simplification while adopting AI customer-service agents.\n- Financial services: Fiserv linked its reductions to an AI-everywhere operating model.\n\nThe direction of travel is infrastructure, software automation and customer-service agents. Companies present this alongside efficiency goals, which is why the AI label and the cost-cutting label so often appear together (Yahoo Finance, The Pivot Wave, FourWeekMBA)."
+          },
+          {
+            "q": "How exposed are Saudi jobs to AI, and which sectors stand out?",
+            "body": "Saudis hold 1,137,184 of the exposed jobs, in a labour market where Saudi unemployment is 7% and youth unemployment among Saudis is 14.8% (GASTAT LFS Q4-2024, Jadwa Investment 2024 Update, NLO May 2024). Exposure is weighted by risk and describes where tasks could be automated, not how many jobs will be lost. Saudis are 24% of GOSI-registered employees.\n\nThe five most exposed sectors among the 20 we track (SHIFT Observatory dataset, updated 2026-03-21). These are the only five covered here, so nothing follows about the other fifteen:\n\n- Administrative & Support Services: risk 72/100, 1,420,733 employees, 17.4% Saudi, Nitaqat pressure moderate\n- Financial & Insurance Activities: risk 62, 106,727 employees, 82.5% Saudi, Nitaqat pressure very high\n- Wholesale & Retail Trade: risk 55, 1,827,205 employees, 22.3% Saudi, Nitaqat pressure high\n- Professional, Scientific & Technical: risk 52, 291,530 employees, 47.2% Saudi, Nitaqat pressure moderate\n- Information & Communication (ICT): risk 45, 176,619 employees, 56.5% Saudi, Nitaqat pressure high\n\nAmong these five, Wholesale & Retail Trade has the largest workforce and the most Saudis (about 407,467, workforce times Saudi share). Financial & Insurance Activities has the highest Saudi share. Our reading of this week: PayPal and Fiserv sit closest to Financial & Insurance, and NICE's contact-center work closest to Administrative & Support. None of these companies is shown to have Saudi operations in our data. Occupation-level scores for 237 jobs are on the [AI Job Risk Dashboard](/career), and you can check your own exposure with the [Personal AI Risk Profile](/profile)."
+          },
+          {
+            "q": "What changed for Saudization and Nitaqat this week?",
+            "body": "The minimum monthly salary for a Saudi employee to count as one full worker rises from SAR 4,000 to SAR 5,000 on 2027-04-25, then to SAR 6,000 on 2028-04-25. The measure was announced on 2026-10-25, so it predates this week's events (Saudi Press Agency via Saudi Gazette; EY Tax News). HRDF Employment Support aligns its minimum supported wage on the same two steps.\n\nIt is a counting threshold for Saudization rates, not a general minimum wage. Nothing in the sources links it to AI.\n\nOur reading, flagged as interpretation: a higher threshold raises the salary at which a Saudi hire counts fully toward Nitaqat, a factor employers in the high-pressure sectors above may weigh when they plan staffing. The programme is Nitaqat Mutawar (Ministerial Decision No. 182495, 23 May 2021), with bands Red, Low Green, Medium Green, High Green and Platinum. If you are planning a move, the [Pre-Departure Checklist](/prepare) covers visa and certification steps."
+          },
+          {
+            "q": "How does this week fit into the 2026 year-to-date picture?",
+            "body": "Our Pulse series stands at 135,446 global tech layoffs year to date, of which 93,217 are AI-cited in the US. Reporting based on Layoffs.fyi data gives a similar picture: more than 135,000 tech layoffs across 334 companies by late October, and more than 93,000 of them attributed to AI during 2026 (Onmanorama). We quote the Pulse figures as our series and use the Layoffs.fyi-based report only as an outside cross-check.\n\nThis week's 15,021 is not a slice of that tech count. It includes fintech and software firms alongside others, so the two should not be subtracted from one another."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does the Nitaqat salary threshold change the Saudi minimum wage?",
+            "a": "No. The SAR 5,000 and SAR 6,000 steps set the monthly salary at which a Saudi employee counts as one full worker toward Saudization rates. It is not a general minimum wage. HRDF Employment Support aligns its minimum supported wage on the same dates, 2027-04-25 and 2028-04-25."
+          },
+          {
+            "q": "Why does the exposure figure cover only five sectors?",
+            "a": "We track 20 Saudi sectors and list the five with the highest AI risk scores above. Nothing in this edition should be read about the other fifteen. The sector scores come from the SHIFT Observatory dataset, last updated 2026-03-21."
+          },
+          {
+            "q": "Why was no Gulf event logged this week?",
+            "a": "Our Pulse recorded no Gulf or MENA automation events in this edition. We say so plainly and do not fill the gap: the Saudi section relies on the standing dataset and the Nitaqat announcement of 25 October, not on a new event."
+          },
+          {
+            "q": "Where can I see how my own occupation scores?",
+            "a": "The [AI Job Risk Dashboard](/career) scores 237 occupations, each with its own page. The [Personal AI Risk Profile](/profile) adapts the reading to your situation, and the [Weekly AI Layoffs Pulse](/pulse) archive tracks each week's layoffs and Gulf workforce moves."
+          }
+        ],
+        "key_takeaway": "15,021 layoffs were logged this week and AI is cited in 6, up on last week, but the only \"direct\" case has no published headcount. In Saudi Arabia, 4,450,778 of 12,420,050 GOSI-registered jobs carry significant AI exposure, an exposure measure, not a forecast of losses. No Gulf event was logged, and the Nitaqat full-worker salary threshold steps to SAR 5,000 on 2027-04-25.",
+        "sources": [
+          {
+            "label": "Yahoo Finance",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Computerworld",
+            "url": "https://www.computerworld.com"
+          },
+          {
+            "label": "The Pivot Wave",
+            "url": "https://thepivotwave.com"
+          },
+          {
+            "label": "FourWeekMBA",
+            "url": "https://fourweekmba.com"
+          },
+          {
+            "label": "Onmanorama",
+            "url": "https://www.onmanorama.com"
+          },
+          {
+            "label": "Ryan Doser Research",
+            "url": "https://ryandoser.com"
+          },
+          {
+            "label": "Saudi Press Agency via Saudi Gazette",
+            "url": "https://saudigazette.com.sa"
+          },
+          {
+            "label": "EY Tax News: Saudi Arabia raises minimum Nitaqat salary threshold for Saudi employees",
+            "url": "https://taxnews.ey.com/news/2026-2304-saudi-arabia-raises-minimum-nitaqat-salary-threshold-for-saudi-employees"
+          },
+          {
+            "label": "SHIFT Observatory dataset (master.json, updated 2026-03-21)",
+            "url": "/career"
+          },
+          {
+            "label": "SHIFT Observatory Weekly Pulse",
+            "url": "/pulse"
+          }
+        ]
+      },
+      "fr": {
+        "title": "15 021 licenciements, IA citée dans 6 : impact saoudien, 10 nov.",
+        "description": "Suivi hebdo : 15 021 licenciements recensés, IA citée dans 6. Qui pèse dans le total, l'effet sur les secteurs saoudiens et le palier Nitaqat à 5 000 SAR.",
+        "lede": "15 021 licenciements recensés cette semaine, l'IA citée dans 6. Les six se répartissent en un événement où l'entreprise désigne l'IA comme cause (SUSE) et cinq où l'IA n'est qu'un facteur parmi d'autres. Deux autres cas, Canva et Amazon, ne sont que soupçonnés et ne sont pas comptés. La semaine couvre huit événements d'entreprise datés du 3 au 9 novembre 2026, et le total est en hausse par rapport à la semaine précédente.\n\nAucun événement d'automatisation n'a été recensé dans le Golfe. La mesure permanente saoudienne compte davantage : 4 450 778 des 12 420 050 emplois enregistrés à la GOSI présentent une exposition significative à l'IA, une mesure d'exposition, pas une prévision de pertes.\n\nNotre propre constat : le total est porté par Meta, Fiserv et PayPal, tous étiquetés « contributing » (facteur contributif), tandis que le seul cas « direct », SUSE, n'a aucun effectif publié. Aucun des 15 021 ne peut donc être attribué directement à l'IA. Les semaines passées figurent dans [toutes les éditions du Pulse](/pulse).",
+        "h2_sections": [
+          {
+            "q": "Quelles entreprises ont tiré les 15 021 licenciements, et quelle part vient de l'IA ?",
+            "body": "Huit événements totalisent 15 021 postes, et les 8 000 de Meta représentent 53 % de ce total. Par étiquette IA, la semaine compte 1 cas direct, 5 contributifs et 2 soupçonnés.\n\n- Meta (US) : 8 000 postes, 9 nov., contributif\n- Fiserv (US) : 3 000 postes, 7 nov., contributif\n- PayPal (US) : 2 000 postes, 3 nov., contributif\n- Canva (AU) : 1 271 postes, 3 nov., soupçonné\n- NICE (IL) : 500 postes, 7 nov., contributif\n- Amazon (US) : 250 postes, 3 nov., soupçonné\n- SUSE (DE) : effectif non publié, 7 nov., direct\n- Block (US) : effectif non publié, 5 nov., contributif\n\nSUSE a annoncé une réduction d'environ 10 % de ses effectifs sans donner de chiffre, et Block n'a publié aucun chiffre. Les deux sont comptés pour zéro dans le total. « Direct » signifie que l'entreprise a déclaré que l'IA était à l'origine des suppressions. « Contributif » signifie que l'IA est citée parmi d'autres facteurs. « Soupçonné » signifie que l'automatisation est le moteur évident mais n'est pas officiellement déclarée. Sources : Yahoo Finance, Computerworld, The Pivot Wave, FourWeekMBA."
+          },
+          {
+            "q": "L'IA remplace-t-elle vraiment ces salariés, ou n'est-ce qu'une étiquette ?",
+            "body": "Pour la plupart des événements de la semaine, l'IA est un facteur déclaré, pas une cause démontrée. Une analyse des annonces de licenciements de 2026 par Ryan Doser Research a montré que beaucoup d'entreprises mentionnant l'IA invoquaient aussi la maîtrise des coûts, la simplification de l'organisation, un changement de stratégie ou une croissance ralentie. Les données justifient de traiter l'IA comme un facteur contributif dans de nombreux cas, non comme une substitution directe.\n\nCanva montre la limite de l'étiquette. L'entreprise a supprimé environ 22 % de ses effectifs et aplati son organisation. Sa direction a évoqué des changements portés par la technologie dans ce que les utilisateurs créent et attendent, sans désigner l'IA comme cause des suppressions.\n\nNotre lecture : le décompte « IA citée » mesure ce que disent les entreprises, pas ce que les machines ont remplacé. Un total global indique qu'un secteur se restructure. Il ne dit pas combien de ces postes un système d'IA exécute désormais."
+          },
+          {
+            "q": "Où les effectifs vont-ils à la place ?",
+            "body": "Une partie est déplacée, pas supprimée. Meta a annulé 6 000 embauches prévues et réoriente des milliers de salariés vers des postes liés à l'IA tout en réduisant les effectifs ailleurs, avec pour priorité affichée l'infrastructure d'IA.\n\nLa même logique apparaît dans trois autres secteurs :\n\n- Logiciel : SUSE affirme que l'automatisation et l'IA changent le fonctionnement des éditeurs de logiciels, et associe sa réduction à une poussée vers les capacités d'IA et des postes à plus forte valeur.\n- Service client : NICE a réorganisé ses investissements autour des clients entreprises qui déploient des systèmes d'IA pour centres de contact. PayPal a lié ses suppressions à la simplification opérationnelle, parallèlement à l'adoption d'agents d'IA pour le service client.\n- Services financiers : Fiserv a rattaché ses réductions à un modèle opérationnel « IA partout ».\n\nLa tendance va vers l'infrastructure, l'automatisation logicielle et les agents de service client. Les entreprises présentent cela avec des objectifs d'efficacité, ce qui explique que l'étiquette IA et celle de la réduction des coûts apparaissent si souvent ensemble (Yahoo Finance, The Pivot Wave, FourWeekMBA)."
+          },
+          {
+            "q": "Quelle est l'exposition des emplois saoudiens à l'IA, et quels secteurs ressortent ?",
+            "body": "Les Saoudiens occupent 1 137 184 des emplois exposés, sur un marché du travail où le chômage des Saoudiens est de 7 % et celui des jeunes Saoudiens de 14,8 % (GASTAT LFS T4-2024, Jadwa Investment 2024 Update, NLO mai 2024). L'exposition est pondérée par le risque et décrit où des tâches pourraient être automatisées, pas combien d'emplois seront perdus. Les Saoudiens représentent 24 % des salariés enregistrés à la GOSI.\n\nLes cinq secteurs les plus exposés parmi les 20 que nous suivons (jeu de données SHIFT Observatory, mis à jour le 2026-03-21). Ce sont les seuls cinq traités ici, donc rien n'en découle pour les quinze autres :\n\n- Administrative & Support Services : risque 72/100, 1 420 733 salariés, 17,4 % de Saoudiens, pression Nitaqat modérée\n- Financial & Insurance Activities : risque 62, 106 727 salariés, 82,5 % de Saoudiens, pression Nitaqat très élevée\n- Wholesale & Retail Trade : risque 55, 1 827 205 salariés, 22,3 % de Saoudiens, pression Nitaqat élevée\n- Professional, Scientific & Technical : risque 52, 291 530 salariés, 47,2 % de Saoudiens, pression Nitaqat modérée\n- Information & Communication (ICT) : risque 45, 176 619 salariés, 56,5 % de Saoudiens, pression Nitaqat élevée\n\nParmi ces cinq, Wholesale & Retail Trade a les effectifs les plus nombreux et le plus de Saoudiens (environ 407 467, effectif multiplié par la part de Saoudiens). Financial & Insurance Activities a la plus forte part de Saoudiens. Notre lecture de la semaine : PayPal et Fiserv sont les plus proches de Financial & Insurance, et l'activité de centres de contact de NICE de Administrative & Support. Rien dans nos données ne montre que ces entreprises aient des activités en Arabie saoudite. Les scores par métier pour 237 emplois figurent sur le [tableau de bord du risque IA par métier](/career), et vous pouvez vérifier votre propre exposition avec le [profil de risque IA personnel](/profile)."
+          },
+          {
+            "q": "Qu'est-ce qui a changé cette semaine pour la saoudisation et Nitaqat ?",
+            "body": "Le salaire mensuel minimum pour qu'un salarié saoudien compte comme un travailleur à part entière passe de 4 000 SAR à 5 000 SAR le 2027-04-25, puis à 6 000 SAR le 2028-04-25. La mesure a été annoncée le 2026-10-25, donc avant les événements de cette semaine (Saudi Press Agency via Saudi Gazette ; EY Tax News). Le soutien à l'emploi du HRDF aligne son salaire minimum soutenu sur les deux mêmes paliers.\n\nIl s'agit d'un seuil de comptage pour les taux de saoudisation, pas d'un salaire minimum général. Rien dans les sources ne le relie à l'IA.\n\nNotre lecture, signalée comme interprétation : un seuil plus élevé relève le salaire à partir duquel une embauche saoudienne compte pleinement pour Nitaqat, un facteur que les employeurs des secteurs à forte pression ci-dessus peuvent peser dans leur planification des effectifs. Le programme est Nitaqat Mutawar (décision ministérielle n° 182495, 23 mai 2021), avec les bandes Rouge, Vert bas, Vert moyen, Vert haut et Platine. Si vous préparez un départ, la [checklist avant départ](/prepare) couvre les étapes de visa et de certification."
+          },
+          {
+            "q": "Comment cette semaine s'inscrit-elle dans le bilan 2026 depuis le début de l'année ?",
+            "body": "Notre série Pulse affiche 135 446 licenciements tech mondiaux depuis le début de l'année, dont 93 217 attribués à l'IA aux États-Unis. Les reportages fondés sur les données de Layoffs.fyi donnent un tableau similaire : plus de 135 000 licenciements tech dans 334 entreprises fin octobre, dont plus de 93 000 attribués à l'IA en 2026 (Onmanorama). Nous citons les chiffres du Pulse comme notre série et n'utilisons le rapport fondé sur Layoffs.fyi que comme recoupement externe.\n\nLes 15 021 de cette semaine ne sont pas une fraction de ce décompte tech. Ils incluent des entreprises de fintech et de logiciel parmi d'autres, et les deux chiffres ne doivent donc pas être soustraits l'un de l'autre."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Le seuil de salaire Nitaqat change-t-il le salaire minimum saoudien ?",
+            "a": "Non. Les paliers de 5 000 et 6 000 SAR fixent le salaire mensuel à partir duquel un salarié saoudien compte comme un travailleur à part entière dans les taux de saoudisation. Ce n'est pas un salaire minimum général. Le soutien à l'emploi du HRDF aligne son salaire minimum soutenu sur les mêmes dates, 2027-04-25 et 2028-04-25."
+          },
+          {
+            "q": "Pourquoi le chiffre d'exposition ne couvre-t-il que cinq secteurs ?",
+            "a": "Nous suivons 20 secteurs saoudiens et listons ci-dessus les cinq aux scores de risque IA les plus élevés. Rien dans cette édition ne doit être interprété pour les quinze autres. Les scores sectoriels proviennent du jeu de données SHIFT Observatory, mis à jour le 2026-03-21."
+          },
+          {
+            "q": "Pourquoi aucun événement dans le Golfe cette semaine ?",
+            "a": "Notre Pulse n'a enregistré aucun événement d'automatisation dans le Golfe ou la région MENA dans cette édition. Nous le disons clairement sans combler le vide : la section saoudienne s'appuie sur le jeu de données permanent et l'annonce Nitaqat du 25 octobre, pas sur un nouvel événement."
+          },
+          {
+            "q": "Où voir le score de mon propre métier ?",
+            "a": "Le [tableau de bord du risque IA par métier](/career) note 237 métiers, chacun avec sa propre page. Le [profil de risque IA personnel](/profile) adapte la lecture à votre situation, et l'archive du [Pulse hebdomadaire des licenciements IA](/pulse) suit chaque semaine les licenciements et les mouvements de main-d'œuvre dans le Golfe."
+          }
+        ],
+        "key_takeaway": "15 021 licenciements ont été recensés cette semaine et l'IA est citée dans 6, en hausse sur la semaine dernière, mais le seul cas « direct » n'a aucun effectif publié. En Arabie saoudite, 4 450 778 des 12 420 050 emplois enregistrés à la GOSI présentent une exposition significative à l'IA, une mesure d'exposition, pas une prévision de pertes. Aucun événement n'a été recensé dans le Golfe, et le seuil de salaire Nitaqat du travailleur à part entière passe à 5 000 SAR le 2027-04-25.",
+        "sources": [
+          {
+            "label": "Yahoo Finance",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Computerworld",
+            "url": "https://www.computerworld.com"
+          },
+          {
+            "label": "The Pivot Wave",
+            "url": "https://thepivotwave.com"
+          },
+          {
+            "label": "FourWeekMBA",
+            "url": "https://fourweekmba.com"
+          },
+          {
+            "label": "Onmanorama",
+            "url": "https://www.onmanorama.com"
+          },
+          {
+            "label": "Ryan Doser Research",
+            "url": "https://ryandoser.com"
+          },
+          {
+            "label": "Saudi Press Agency via Saudi Gazette",
+            "url": "https://saudigazette.com.sa"
+          },
+          {
+            "label": "EY Tax News: Saudi Arabia raises minimum Nitaqat salary threshold for Saudi employees",
+            "url": "https://taxnews.ey.com/news/2026-2304-saudi-arabia-raises-minimum-nitaqat-salary-threshold-for-saudi-employees"
+          },
+          {
+            "label": "SHIFT Observatory dataset (master.json, updated 2026-03-21)",
+            "url": "/career"
+          },
+          {
+            "label": "SHIFT Observatory Weekly Pulse",
+            "url": "/pulse"
+          }
+        ]
+      },
+      "ar": {
+        "title": "15,021 تسريحًا والذكاء الاصطناعي في 6: الأثر السعودي، 10 نوفمبر",
+        "description": "متتبّع أسبوعي: 15,021 تسريحًا، والذكاء الاصطناعي مذكور في 6. من قاد الإجمالي، وماذا يعني للقطاعات السعودية ولخطوة نطاقات إلى 5,000 ريال.",
+        "lede": "سُجّل هذا الأسبوع 15,021 تسريحًا، وذُكر الذكاء الاصطناعي في 6 منها. الحالات الست هي حدث واحد نسبت فيه الشركة القرار صراحةً إلى الذكاء الاصطناعي (SUSE)، وخمسة أحداث يمثّل فيها الذكاء الاصطناعي عاملًا واحدًا من عدة عوامل. وهناك حالتان إضافيتان، هما Canva وAmazon، مشتبه بهما فقط ولا تُحتسبان. يغطي الأسبوع ثمانية أحداث مؤرخة بين 3 و9 نوفمبر 2026، والإجمالي أعلى من الأسبوع السابق.\n\nلم يُسجَّل أي حدث أتمتة في الخليج. والأهم المقياس السعودي الثابت: 4,450,778 من أصل 12,420,050 وظيفة مسجّلة في التأمينات الاجتماعية (GOSI) في المملكة تتعرض بدرجة كبيرة للذكاء الاصطناعي، وهو مقياس تعرّض لا توقّع للخسائر.\n\nخلاصتنا الخاصة: الإجمالي تحمله Meta وFiserv وPayPal، وكلها مصنّفة «مساهِمة»، أما الحالة «المباشرة» الوحيدة، SUSE، فلا يوجد لها عدد منشور للموظفين. لذلك لا يمكن نسبة أي من الـ15,021 وظيفة مباشرةً إلى الذكاء الاصطناعي. الأسابيع السابقة في [جميع إصدارات Pulse](/pulse).",
+        "h2_sections": [
+          {
+            "q": "أي الشركات قادت الـ15,021 تسريحًا، وما حصة الذكاء الاصطناعي؟",
+            "body": "تُجمع ثمانية أحداث لتبلغ 15,021 وظيفة، وتمثّل 8,000 وظيفة في Meta نسبة 53% من هذا الإجمالي. بحسب وسم الذكاء الاصطناعي، يضم الأسبوع حالة واحدة مباشرة و5 مساهِمة و2 مشتبه بهما.\n\n- Meta (الولايات المتحدة): 8,000 وظيفة، 9 نوفمبر، مساهِم\n- Fiserv (الولايات المتحدة): 3,000 وظيفة، 7 نوفمبر، مساهِم\n- PayPal (الولايات المتحدة): 2,000 وظيفة، 3 نوفمبر، مساهِم\n- Canva (أستراليا): 1,271 وظيفة، 3 نوفمبر، مشتبه به\n- NICE (إسرائيل): 500 وظيفة، 7 نوفمبر، مساهِم\n- Amazon (الولايات المتحدة): 250 وظيفة، 3 نوفمبر، مشتبه به\n- SUSE (ألمانيا): لا يوجد عدد منشور، 7 نوفمبر، مباشر\n- Block (الولايات المتحدة): لا يوجد عدد منشور، 5 نوفمبر، مساهِم\n\nأعلنت SUSE خفضًا يقارب 10% من قوتها العاملة دون ذكر عدد، ولا توجد أرقام منشورة لدى Block. وتُحتسب الشركتان بصفر في الإجمالي. «مباشر» يعني أن الشركة صرّحت بأن الذكاء الاصطناعي سبب التخفيضات. «مساهِم» يعني أن الذكاء الاصطناعي مذكور بين عوامل أخرى. «مشتبه به» يعني أن الأتمتة هي المحرّك الظاهر لكنها غير معلنة رسميًا. المصادر: Yahoo Finance وComputerworld وThe Pivot Wave وFourWeekMBA."
+          },
+          {
+            "q": "هل يحلّ الذكاء الاصطناعي فعلًا محل هؤلاء العاملين، أم أنه مجرد وسم؟",
+            "body": "في معظم أحداث هذا الأسبوع، الذكاء الاصطناعي عامل مُعلن وليس سببًا مثبتًا. وجد تحليل لإعلانات التسريح في 2026 أجرته Ryan Doser Research أن كثيرًا من الشركات التي تذكر الذكاء الاصطناعي ذكرت أيضًا ضبط التكاليف وتبسيط الهيكل التنظيمي وتغيير الاستراتيجية أو تباطؤ النمو. تدعم الأدلة اعتبار الذكاء الاصطناعي عاملًا مساهِمًا في حالات كثيرة، لا إحلالًا مباشرًا.\n\nتُظهر Canva حدود هذا الوسم. فقد أنهت نحو 22% من قوتها العاملة وسطّحت هيكلها التنظيمي. وأشارت إدارتها إلى تغيّرات تقودها التقنية في ما ينتجه المستخدمون وما يتوقعونه، ولم تسمِّ الذكاء الاصطناعي سببًا للتخفيضات.\n\nقراءتنا: عدد «الذكاء الاصطناعي مذكور» يقيس ما تقوله الشركات، لا ما حلّت الآلات محله. الإجمالي العام يخبرك أن قطاعًا ما يعيد هيكلته، لكنه لا يخبرك كم من تلك الوظائف يؤديها اليوم نظام ذكاء اصطناعي."
+          },
+          {
+            "q": "إلى أين تذهب الوظائف بدلًا من ذلك؟",
+            "body": "جزء منها يُنقل ولا يُلغى. ألغت Meta توظيف 6,000 شخص كان مخططًا له، وتنقل آلاف الموظفين إلى أدوار متصلة بالذكاء الاصطناعي مع خفض العمالة في مواضع أخرى، والتركيز المعلن على بنية الذكاء الاصطناعي التحتية.\n\nويظهر المنطق نفسه في ثلاثة قطاعات أخرى:\n\n- البرمجيات: تقول SUSE إن الأتمتة والذكاء الاصطناعي تغيّران طريقة عمل شركات البرمجيات، وتقرن تخفيضها بالتوجه نحو قدرات الذكاء الاصطناعي وأدوار أعلى قيمة.\n- خدمة العملاء: أعادت NICE توجيه استثماراتها نحو عملاء المؤسسات الذين ينشرون أنظمة مراكز اتصال بالذكاء الاصطناعي. وربطت PayPal تخفيضاتها بتبسيط العمليات مع اعتماد وكلاء ذكاء اصطناعي لخدمة العملاء.\n- الخدمات المالية: ربطت Fiserv تخفيضاتها بنموذج تشغيلي يعتمد الذكاء الاصطناعي في كل مكان.\n\nاتجاه الحركة هو البنية التحتية وأتمتة البرمجيات ووكلاء خدمة العملاء. وتعرض الشركات ذلك إلى جانب أهداف الكفاءة، ولهذا يظهر وسم الذكاء الاصطناعي ووسم خفض التكاليف معًا في كثير من الأحيان (Yahoo Finance وThe Pivot Wave وFourWeekMBA)."
+          },
+          {
+            "q": "ما مدى تعرّض الوظائف السعودية للذكاء الاصطناعي، وأي القطاعات تبرز؟",
+            "body": "يشغل السعوديون 1,137,184 من الوظائف المعرّضة، في سوق عمل تبلغ فيه البطالة بين السعوديين 7% وبطالة الشباب السعوديين 14.8% (مسح القوى العاملة GASTAT للربع الرابع 2024، وتحديث Jadwa Investment 2024، وNLO مايو 2024). التعرّض موزون بالمخاطر ويصف أين يمكن أتمتة المهام، لا عدد الوظائف التي ستُفقد. يمثّل السعوديون 24% من العاملين المسجلين في GOSI.\n\nأكثر خمسة قطاعات تعرّضًا بين الـ20 التي نتتبعها (بيانات SHIFT Observatory، آخر تحديث 2026-03-21). هذه هي القطاعات الخمسة الوحيدة المشمولة هنا، ولذلك لا نستنتج شيئًا عن القطاعات الخمسة عشر الأخرى:\n\n- الخدمات الإدارية وخدمات الدعم: المخاطر 72/100، 1,420,733 موظفًا، 17.4% سعوديون، ضغط نطاقات متوسط\n- الأنشطة المالية والتأمين: المخاطر 62، 106,727 موظفًا، 82.5% سعوديون، ضغط نطاقات مرتفع جدًا\n- تجارة الجملة والتجزئة: المخاطر 55، 1,827,205 موظفين، 22.3% سعوديون، ضغط نطاقات مرتفع\n- الأنشطة المهنية والعلمية والتقنية: المخاطر 52، 291,530 موظفًا، 47.2% سعوديون، ضغط نطاقات متوسط\n- المعلومات والاتصالات (ICT): المخاطر 45، 176,619 موظفًا، 56.5% سعوديون، ضغط نطاقات مرتفع\n\nمن بين هذه الخمسة، تملك تجارة الجملة والتجزئة أكبر قوة عاملة وأكبر عدد من السعوديين (نحو 407,467، أي القوة العاملة مضروبة في نسبة السعوديين). وتسجّل الأنشطة المالية والتأمين أعلى نسبة سعوديين. قراءتنا لهذا الأسبوع: تقع PayPal وFiserv الأقرب إلى الأنشطة المالية والتأمين، وعمل مراكز الاتصال في NICE الأقرب إلى الخدمات الإدارية وخدمات الدعم. ولا تُظهر بياناتنا أن لأي من هذه الشركات عمليات في السعودية. درجات المخاطر على مستوى المهن لـ237 وظيفة متاحة في [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career)، ويمكنك فحص تعرّضك الشخصي عبر [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile)."
+          },
+          {
+            "q": "ما الذي تغيّر في التوطين ونطاقات هذا الأسبوع؟",
+            "body": "يرتفع الحد الأدنى للراتب الشهري الذي يُحتسب بموجبه الموظف السعودي عاملًا كاملًا من 4,000 ريال إلى 5,000 ريال في 2027-04-25، ثم إلى 6,000 ريال في 2028-04-25. أُعلن القرار في 2026-10-25، أي قبل أحداث هذا الأسبوع (وكالة الأنباء السعودية عبر Saudi Gazette؛ EY Tax News). ويوائم دعم التوظيف من HRDF حدّه الأدنى للأجر المدعوم مع الخطوتين نفسيهما.\n\nهو حد للاحتساب في نسب التوطين، وليس حدًا أدنى عامًا للأجور. ولا شيء في المصادر يربطه بالذكاء الاصطناعي.\n\nقراءتنا، ونصنّفها تفسيرًا: رفع الحد يرفع الراتب الذي يُحتسب عنده التوظيف السعودي بالكامل ضمن نطاقات، وهو عامل قد تأخذه الجهات في القطاعات المرتفعة الضغط أعلاه في الحسبان عند تخطيط العمالة. البرنامج هو نطاقات المطوّر (القرار الوزاري رقم 182495، 23 مايو 2021)، بنطاقاته الأحمر والأخضر المنخفض والأخضر المتوسط والأخضر المرتفع والبلاتيني. وإن كنت تخطط للانتقال، فإن [قائمة ما قبل المغادرة](/prepare) تغطي خطوات التأشيرة والاعتماد."
+          },
+          {
+            "q": "كيف يندرج هذا الأسبوع في صورة 2026 منذ بداية العام؟",
+            "body": "تبلغ سلسلة Pulse لدينا 135,446 تسريحًا تقنيًا عالميًا منذ بداية العام، منها 93,217 مرتبطة بالذكاء الاصطناعي في الولايات المتحدة. وتعطي تقارير مبنية على بيانات Layoffs.fyi صورة مشابهة: أكثر من 135,000 تسريح تقني في 334 شركة بحلول أواخر أكتوبر، وأكثر من 93,000 منها عُزيت إلى الذكاء الاصطناعي خلال 2026 (Onmanorama). نعرض أرقام Pulse بوصفها سلسلتنا، ونستخدم التقرير المبني على Layoffs.fyi مرجعًا خارجيًا للمقارنة فقط.\n\nرقم 15,021 هذا الأسبوع ليس جزءًا من ذلك العدد التقني. فهو يشمل شركات التقنية المالية والبرمجيات إلى جانب غيرها، ولذلك لا ينبغي طرح أحد الرقمين من الآخر."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل يغيّر حد الراتب في نطاقات الحد الأدنى للأجور في السعودية؟",
+            "a": "لا. خطوتا 5,000 ريال و6,000 ريال تحددان الراتب الشهري الذي يُحتسب عنده الموظف السعودي عاملًا كاملًا ضمن نسب التوطين. وهو ليس حدًا أدنى عامًا للأجور. ويوائم دعم التوظيف من HRDF حدّه الأدنى للأجر المدعوم مع التاريخين نفسيهما، 2027-04-25 و2028-04-25."
+          },
+          {
+            "q": "لماذا يغطي مقياس التعرّض خمسة قطاعات فقط؟",
+            "a": "نتتبع 20 قطاعًا سعوديًا ونسرد أعلاها خمسة في درجات مخاطر الذكاء الاصطناعي أعلاه. ولا ينبغي قراءة أي شيء في هذا الإصدار عن القطاعات الخمسة عشر الأخرى. وتأتي درجات القطاعات من بيانات SHIFT Observatory، وآخر تحديث لها 2026-03-21."
+          },
+          {
+            "q": "لماذا لم يُسجَّل أي حدث خليجي هذا الأسبوع؟",
+            "a": "لم تسجّل Pulse لدينا أي أحداث أتمتة في الخليج أو منطقة الشرق الأوسط وشمال أفريقيا في هذا الإصدار. ونقول ذلك بوضوح ولا نملأ الفراغ: يعتمد القسم السعودي على البيانات الثابتة وعلى إعلان نطاقات في 25 أكتوبر، لا على حدث جديد."
+          },
+          {
+            "q": "أين أرى درجة مهنتي؟",
+            "a": "تقيّم [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career) 237 مهنة، ولكل منها صفحتها. ويكيّف [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile) القراءة بحسب وضعك، ويتتبع أرشيف [Pulse الأسبوعي لتسريحات الذكاء الاصطناعي](/pulse) تسريحات كل أسبوع وتحركات القوى العاملة في الخليج."
+          }
+        ],
+        "key_takeaway": "سُجّل هذا الأسبوع 15,021 تسريحًا وذُكر الذكاء الاصطناعي في 6 منها، بزيادة على الأسبوع الماضي، لكن الحالة «المباشرة» الوحيدة ليس لها عدد منشور للموظفين. وفي السعودية، تتعرض 4,450,778 من أصل 12,420,050 وظيفة مسجّلة في GOSI بدرجة كبيرة للذكاء الاصطناعي، وهو مقياس تعرّض لا توقّع للخسائر. لم يُسجَّل أي حدث خليجي، ويرتفع حد راتب العامل الكامل في نطاقات إلى 5,000 ريال في 2027-04-25.",
+        "sources": [
+          {
+            "label": "Yahoo Finance",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Computerworld",
+            "url": "https://www.computerworld.com"
+          },
+          {
+            "label": "The Pivot Wave",
+            "url": "https://thepivotwave.com"
+          },
+          {
+            "label": "FourWeekMBA",
+            "url": "https://fourweekmba.com"
+          },
+          {
+            "label": "Onmanorama",
+            "url": "https://www.onmanorama.com"
+          },
+          {
+            "label": "Ryan Doser Research",
+            "url": "https://ryandoser.com"
+          },
+          {
+            "label": "وكالة الأنباء السعودية عبر Saudi Gazette",
+            "url": "https://saudigazette.com.sa"
+          },
+          {
+            "label": "EY Tax News: Saudi Arabia raises minimum Nitaqat salary threshold for Saudi employees",
+            "url": "https://taxnews.ey.com/news/2026-2304-saudi-arabia-raises-minimum-nitaqat-salary-threshold-for-saudi-employees"
+          },
+          {
+            "label": "بيانات SHIFT Observatory (master.json، آخر تحديث 2026-03-21)",
+            "url": "/career"
+          },
+          {
+            "label": "Pulse الأسبوعي من SHIFT Observatory",
+            "url": "/pulse"
+          }
+        ]
+      }
+    }
   }
 ]
