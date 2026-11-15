@@ -172,8 +172,8 @@ export default function AIExposureTreemap() {
           {/* Source */}
           <p className="text-xs text-text-muted/50 mt-3">
             {lang === "ar"
-              ? "المصدر: الهيئة العامة للإحصاء / التأمينات الاجتماعية الربع الثالث 2025 · تقييم الذكاء الاصطناعي: Frey-Osborne, Eloundou, Felten"
-              : "Source: GASTAT / GOSI Q3 2025 · AI scores: Frey-Osborne, Eloundou, Felten"}
+              ? "المصدر: الهيئة العامة للإحصاء / التأمينات الاجتماعية الربع الرابع 2024 · تقييم الذكاء الاصطناعي: Frey-Osborne, Eloundou, Felten"
+              : "Source: GASTAT / GOSI Q4-2024 · AI scores: Frey-Osborne, Eloundou, Felten"}
           </p>
         </div>
       </div>

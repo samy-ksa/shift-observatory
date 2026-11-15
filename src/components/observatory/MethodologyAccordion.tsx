@@ -21,12 +21,12 @@ function getItems(panels: {
     {
       title: panels.data,
       content: `LABOR MARKET
-\u2022 GASTAT Register-based Labor Market Statistics (GOSI) Q3 2025
+\u2022 GASTAT Register-based Labor Market Statistics (GOSI) Q4-2024
   13 administrative regions, 20 ISIC Rev.4 sectors
   Source: General Authority for Statistics via GLMM
 
-\u2022 GASTAT Labor Force Survey Q3 2025
-  Total employment including non-GOSI workers (military, domestic, informal)
+\u2022 GASTAT Labor Force Survey Q2 2026 for Saudi unemployment
+  Earlier LFS workforce context is from Q4-2024; it includes non-GOSI workers (military, domestic, informal)
 
 AI EXPOSURE INDICES
 \u2022 Frey, C.B. & Osborne, M.A. (2017). "The Future of Employment: How Susceptible Are Jobs to Computerisation?" Oxford University.
@@ -42,12 +42,12 @@ AI EXPOSURE INDICES
 INDUSTRY REPORTS
 \u2022 McKinsey Global Institute (2024). "A New Future of Work."
 \u2022 World Economic Forum (2025). "Future of Jobs Report 2025."
-\u2022 PwC Middle East (2024). AI contribution to KSA GDP: $135.2B by 2030.
+\u2022 PwC (2018), "The potential impact of AI in the Middle East". AI contribution to KSA GDP: $135.2B by 2030 (2018 projection).
 \u2022 Oliver Wyman / SDAIA (2024). GenAI impact: $24B by 2030.
 
 LAYOFFS DATA
 \u2022 Layoffs.fyi via TechCrunch monthly compilations (2024\u20132025)
-\u2022 Challenger, Gray & Christmas (2025). AI-cited layoffs tracker (US).`,
+\u2022 Challenger, Gray & Christmas (monthly report to October 2026). AI-cited layoffs tracker (US).`,
     },
     {
       title: panels.scoring,
@@ -81,8 +81,7 @@ Weighted average of dominant sectors in each region.`,
       title: panels.limitations,
       content: `DATA GAPS
 \u2022 GOSI covers 12.42M workers vs LFS 18.54M total. Gap of ~6M includes military, domestic workers, and informal sector \u2014 not captured here.
-\u2022 Saudization rates available for only ~12 professions. Many show "n.d."
-\u2022 Salary data by occupation not available in structured form.
+\u2022 The dataset lists 100 reserved professions; dated Saudization decisions are tracked in the Saudization tracker.
 \u2022 Employer headcounts: several are LinkedIn estimates, not official reports.
 
 METHODOLOGICAL LIMITATIONS
@@ -108,22 +107,14 @@ Built with data. Not fear.`,
     },
     {
       title: panels.changelog,
-      content: `V1.0 (February 2026)
-\u2022 Initial release
-\u2022 20 ISIC sectors with GASTAT GOSI Q3 2025 data
-\u2022 49 occupations scored across 3 AI exposure indices
+      content: `V2.0 (March 21, 2026)
+\u2022 20 ISIC sectors with GASTAT GOSI Q4-2024 data
+\u2022 237 occupations scored across 3 AI exposure indices
 \u2022 13 administrative regions
 \u2022 24 months of global tech layoffs data
 \u2022 10 KSA/Gulf AI automation case studies
 \u2022 12 Vision 2030 sector employment targets
-\u2022 WEF Future of Jobs 2025 growth/decline rankings
-
-PLANNED FOR V1.1
-\u2022 Arabic language support
-\u2022 ISCO-08 occupation breakdown
-\u2022 Salary data by occupation/nationality
-\u2022 Gulf comparative benchmarks (UAE, Qatar, Bahrain)
-\u2022 Giga-projects detailed workforce data`,
+\u2022 WEF Future of Jobs 2025 growth/decline rankings`,
     },
   ];
 }

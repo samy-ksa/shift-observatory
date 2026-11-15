@@ -5,7 +5,7 @@
     "generated": "2026-02-27T18:43:59.735154",
     "description": "Master dataset for SHIFT AI Employment Impact Dashboard - Saudi Arabia",
     "sources": {
-      "labor_market": "GASTAT Register-based LMS (GOSI) Q3 2025 + Q1 2025 (regions)",
+      "labor_market": "GASTAT Register-based LMS (GOSI) Q4-2024 (sectors and regions); GASTAT LFS Q2 2026 (Saudi unemployment)",
       "ai_exposure": "Frey-Osborne 2017, Eloundou/OpenAI 2023, Felten/Raj/Seamans AIOE, Brynjolfsson SML, McKinsey 2024, WEF Future of Jobs 2025",
       "layoffs": "Layoffs.fyi via TechCrunch, Challenger Gray & Christmas",
       "vision_2030": "Official V2030 programs, sector authorities, PwC, OBG",
@@ -54,7 +54,8 @@
     "layoffs_global_2024": 151000,
     "layoffs_global_2025": 118500,
     "layoffs_ai_cited_us_2025": 54836,
-    "unemployment_saudi": 7.5,
+    "layoffs_ai_cited_us_2026_ytd": 121401,
+    "unemployment_saudi": 6.5,
     "unemployment_saudi_women": 12.1,
     "ai_gdp_impact_2030_usd": 135200000000,
     "ai_gdp_pct": 12.4
@@ -13578,12 +13579,12 @@
     }
   ],
   "labor_market": {
-    "source": "GASTAT LFS Q4-2024 + Jadwa Investment 2024 Update + NLO May 2024",
+    "source": "Saudi unemployment: GASTAT Labour Force Survey Q2 2026; other labor-market fields: GASTAT LFS Q4-2024 + Jadwa Investment 2024 Update + NLO May 2024",
     "total_private_sector_workers": 11572408,
     "saudi_private_sector": 2369828,
     "nonsaudi_private_sector": 9202580,
     "overall_unemployment_pct": 3.5,
-    "saudi_unemployment_pct": 7,
+    "saudi_unemployment_pct": 6.5,
     "saudi_youth_unemployment_pct": 14.8,
     "female_participation_pct": 36.3,
     "labor_force_participation_pct": 68.2,

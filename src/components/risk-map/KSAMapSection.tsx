@@ -13,6 +13,9 @@ import KSAMap from "./KSAMap";
 
 const regions = data.regions;
 type Region = (typeof regions)[number];
+const regionTotals = regions.map((region) => getGosi(region)?.total ?? region.total);
+const allRegionsTotal = regionTotals.reduce((sum, total) => sum + total, 0);
+const maxRegionTotal = Math.max(...regionTotals);
 
 // Sector risk lookup for detail panel
 const sectorRiskMap: Record<string, number> = {
@@ -352,7 +355,7 @@ export default function KSAMapSection() {
               <div
                 className="h-full rounded-full bg-accent-neon/60"
                 style={{
-                  width: `${Math.min(100, (totalWorkers / 6000000) * 100)}%`,
+                  width: `${Math.min(100, (totalWorkers / maxRegionTotal) * 100)}%`,
                   transition: "width 0.5s ease",
                 }}
               />
@@ -362,7 +365,7 @@ export default function KSAMapSection() {
               <span>
                 {selected.name_en === "Riyadh"
                   ? (lang === "ar" ? "أكبر منطقة" : "Largest region")
-                  : `${((totalWorkers / 11000000) * 100).toFixed(1)}% ${lang === "ar" ? "من الإجمالي" : "of total"}`}
+                  : `${((totalWorkers / allRegionsTotal) * 100).toFixed(1)}% ${lang === "ar" ? "من الإجمالي" : "of total"}`}
               </span>
             </div>
 

@@ -23,15 +23,19 @@ const taweenDecisions = (
     | undefined
 )?.tawteen_decisions_2024_2025 ?? [];
 
-// Build sets for grouping
-const highRiskNames = new Set(
-  (data.occupations.high_risk as Occupation[]).map((o) => o.name_en)
-);
-
-const allOccupations: Occupation[] = [
+const rankedOccupations: Occupation[] = [
   ...data.occupations.high_risk,
   ...data.occupations.low_risk,
 ].sort((a, b) => b.composite - a.composite) as Occupation[];
+const seenOccupationNames = new Set<string>();
+const allOccupations: Occupation[] = [
+  ...data.occupations.high_risk,
+  ...data.occupations.low_risk,
+].filter((occupation) => {
+  if (seenOccupationNames.has(occupation.name_en)) return false;
+  seenOccupationNames.add(occupation.name_en);
+  return true;
+}).sort((a, b) => b.composite - a.composite) as Occupation[];
 
 function categoryLabel(cat: string): string {
   const map: Record<string, string> = {
@@ -189,13 +193,13 @@ export default function RiskCalculator() {
     return fuzzyMatch(query, allOccupations);
   }, [query, selected]);
 
-  // Split filtered into high risk / low risk groups
+  // Group by the same score boundary used for the verdict and colour.
   const highRiskFiltered = useMemo(
-    () => filtered.filter((o) => highRiskNames.has(o.name_en)),
+    () => filtered.filter((o) => o.composite > 45),
     [filtered]
   );
   const lowRiskFiltered = useMemo(
-    () => filtered.filter((o) => !highRiskNames.has(o.name_en)),
+    () => filtered.filter((o) => o.composite <= 45),
     [filtered]
   );
 
@@ -216,9 +220,9 @@ export default function RiskCalculator() {
 
   // Dynamic verdict based on composite score
   function getVerdict(occ: Occupation): string {
-    if (occ.composite > 85) return t.riskTool.verdicts.severe;
-    if (occ.composite > 65) return t.riskTool.verdicts.significant;
-    if (occ.composite > 40) return t.riskTool.verdicts.moderate;
+    if (occ.composite > 70) return t.riskTool.verdicts.severe;
+    if (occ.composite > 45) return t.riskTool.verdicts.significant;
+    if (occ.composite > 25) return t.riskTool.verdicts.moderate;
     return t.riskTool.verdicts.protected;
   }
 
@@ -971,7 +975,7 @@ export default function RiskCalculator() {
                   {t.jobPage.viewFullAnalysis}
                 </Link>
                 <span className="text-xs text-text-muted">
-                  Rank #{selected.rank} {t.riskTool.rankOf} {allOccupations.length} {t.riskTool.occupationsCount}
+                  Rank #{rankedOccupations.indexOf(selected) + 1} {t.riskTool.rankOf} {rankedOccupations.length} {t.riskTool.occupationsCount}
                 </span>
               </div>
             </motion.div>

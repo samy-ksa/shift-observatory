@@ -23,27 +23,27 @@ export const en: Dictionary = {
       gosi: {
         label: "GOSI Workforce",
         tooltip:
-          "Total workers registered in Saudi Arabia's social insurance system (GOSI). Excludes military, domestic workers, and informal sector. Source: GASTAT Q3 2025.",
+          "Total workers registered in Saudi Arabia's social insurance system (GOSI). Excludes military, domestic workers, and informal sector. Source: GOSI Q4-2024.",
       },
       saudi: {
         label: "Saudi workers",
         tooltip:
-          "Percentage of Saudi nationals in GOSI-registered workforce. Saudization rate. Source: GASTAT Q3 2025.",
+          "Percentage of Saudi nationals in GOSI-registered workforce. Saudization rate. Source: GOSI Q4-2024.",
       },
       unemployment: {
         label: "Unemployment (Saudi)",
         tooltip:
-          "Official Saudi unemployment rate. Source: GASTAT Labor Force Survey Q3 2025.",
+          "Official Saudi unemployment rate: 6.5%. Source: GASTAT Labour Force Survey Q2 2026 (stats.gov.sa labor-market-statistics-q2-2026).",
       },
       gdp: {
         label: "AI GDP impact by 2030",
         tooltip:
-          "Projected AI contribution to Saudi GDP by 2030. Source: PwC Middle East AI report.",
+          "Projected AI contribution to Saudi GDP by 2030. Source: PwC, “The potential impact of AI in the Middle East” (2018 estimate, not updated since).",
       },
       layoffs: {
-        label: "AI-cited layoffs (US, 2025)",
+        label: "AI-cited layoffs (US, Jan-Oct 2026)",
         tooltip:
-          "Global job cuts where AI/automation was cited as a factor. Source: Challenger, Gray & Christmas 2025 YTD.",
+          "US job cuts announced Jan-Oct 2026 where AI was cited as a reason: 121,401 (about one in five), versus 54,836 in all of 2025. October 2026 alone: 1,265, the lowest of the year. Source: Challenger, Gray & Christmas.",
       },
       v2030: {
         label: "V2030 jobs target (net est.)",
@@ -257,11 +257,14 @@ export const en: Dictionary = {
     taweenCount: "Tawteen Decisions",
     sectorsWithParams: "Sectors with Parameters",
     bandsCount: "Bands",
-    recentDecisions: "Recent Tawteen Decisions (2024-2025)",
+    recentDecisions: "Latest Saudization decisions (2025-2028)",
     profession: "Profession",
     quota: "Quota",
     effective: "Effective",
     phase: "Phase",
+    measure: "New rate or measure",
+    authority: "Authority",
+    fullTimeline: "Full timeline / source list",
     redWarning: "Red entities cannot renew work permits or hire expats",
     platinumBenefit: "Platinum entities have full access to all visa services",
     bandName: "Band",
@@ -292,20 +295,20 @@ export const en: Dictionary = {
     },
   },
   email: {
-    title: "Quarterly AI Risk Report",
-    subtitle: "Get our Q1 2026 AI Risk Report — free PDF with risk scores, Saudization updates, and global AI layoff tracking.",
+    title: "AI Risk Report (Q1 2026 edition)",
+    subtitle: "Get our AI Risk Report (Q1 2026 edition) — free PDF with risk scores, Saudization updates, and global AI layoff tracking.",
     placeholder: "your.email@company.com",
     button: "Get the Report",
     success: "You're in!",
     downloadBtn: "Download Q1 2026 Report (PDF)",
     error: "Something went wrong. Try again.",
-    privacy: "Free. Quarterly. No spam.",
+    privacy: "Free. No spam.",
   },
   popup: {
-    title: "Quarterly AI Risk Report",
-    body: "Get our Q1 2026 AI Risk Report — free PDF with risk scores, Saudization updates, and global AI layoff tracking.",
+    title: "AI Risk Report (Q1 2026 edition)",
+    body: "Get our AI Risk Report (Q1 2026 edition) — free PDF with risk scores, Saudization updates, and global AI layoff tracking.",
     button: "Get the Report",
-    footer: "Free. Quarterly. No spam.",
+    footer: "Free. No spam.",
     success: "You're in!",
     downloadBtn: "Download Q1 2026 Report (PDF)",
   },
@@ -320,7 +323,7 @@ export const en: Dictionary = {
   },
   footer: {
     tagline: "Built with data. Not fear.",
-    version: "SHIFT Observatory V1.0 \u2014 Jun 2026",
+    version: "SHIFT Observatory V2.0 \u2014 Mar 2026",
   },
   profile: {
     title: "My AI Risk Profile",
@@ -340,7 +343,7 @@ export const en: Dictionary = {
     wefTrend: "WEF Trend Modifier",
     findings: "Key Findings",
     actions: "Recommended Actions",
-    emailCta: "Get the Quarterly AI Risk Report",
+    emailCta: "Get the AI Risk Report (Q1 2026 edition)",
     send: "Send Report",
     startOver: "Start over",
     next: "Next",
@@ -751,7 +754,7 @@ export const en: Dictionary = {
     exploreMore: "Explore More",
     relatedOccupations: "Related Occupations",
     relocationCalculator: "Relocation Calculator",
-    relocationCalcDesc: "Compare cost of living across 17 cities",
+    relocationCalcDesc: "Compare cost of living across 26 origin cities",
     checklistDepart: "Departure Checklist",
     checklistDesc: "Personalized pre-departure steps",
     careerRecommender: "Career Recommender",

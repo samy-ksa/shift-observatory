@@ -28,6 +28,7 @@ const monthly2025 = data.layoffs.monthly["2025"].map((m) => ({
   total: m.total,
   year: 2025,
 }));
+const layoffs2025Total = monthly2025.reduce((sum, month) => sum + month.total, 0);
 
 const monthly2026 = (data.layoffs.monthly as Record<string, Array<{ month: string; total: number; top3: string }>>)["2026"]?.map((m) => ({
   name: m.month + " '26",
@@ -251,7 +252,7 @@ export default function LayoffsSection() {
           {[
             {
               label: t.layoffs.kpiLabels.techLayoffs2025,
-              value: "245K",
+              value: formatNumber(layoffs2025Total, lang),
               color: "text-text-primary",
               tooltip:
                 "Total tech sector layoffs globally in 2025. Source: Layoffs.fyi.",
@@ -314,7 +315,7 @@ export default function LayoffsSection() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-2xl p-4 md:p-6 card-glow"
         >
-          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly AI-related layoffs from 2024 to 2026">
+          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly tech layoffs from 2024 to 2026">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}

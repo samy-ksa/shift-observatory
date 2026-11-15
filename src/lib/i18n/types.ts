@@ -138,6 +138,9 @@ export interface NitaqatSectionStrings {
   quota: string;
   effective: string;
   phase: string;
+  measure: string;
+  authority: string;
+  fullTimeline: string;
   redWarning: string;
   platinumBenefit: string;
   bandName: string;

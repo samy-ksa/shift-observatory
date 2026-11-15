@@ -24,7 +24,7 @@ export default function EmailCapture() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: "quarterly_report" }),
+        body: JSON.stringify({ email, source: "ai_risk_report_q1_2026" }),
       });
       if (res.ok) {
         setStatus("success");

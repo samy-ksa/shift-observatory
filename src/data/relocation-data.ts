@@ -122,7 +122,7 @@ export const SCHOOL_TIERS: SchoolTier[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Origin Cities (15)                                                   */
+/* Origin Cities (26)                                                   */
 /* ------------------------------------------------------------------ */
 
 export const ORIGIN_CITIES: OriginCity[] = [

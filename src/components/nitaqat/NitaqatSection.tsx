@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { useLang, formatNumber } from "@/lib/i18n/context";
+import { localizedHref } from "@/lib/i18n/links";
+import { decisions, localizedDecision } from "@/lib/saudization";
 import data from "@/data/master.json";
 
 /* ── Data extraction ────────────────────────────────────── */
@@ -38,9 +41,16 @@ const nitaqat = data.nitaqat as {
 };
 
 const reservedCount = nitaqat.reserved_professions_100.length;
-const taweenCount = nitaqat.tawteen_decisions_2024_2025.length;
+const taweenCount = decisions.length;
 const sectorCount = Object.keys(nitaqat.sector_parameters_2024).length;
 const bandCount = Object.keys(nitaqat.band_consequences).length;
+const today = new Date();
+const eighteenMonthsAhead = new Date(today);
+eighteenMonthsAhead.setMonth(eighteenMonthsAhead.getMonth() + 18);
+const latestDecisions = decisions
+  .filter((decision) => decision.effective && new Date(`${decision.effective}T00:00:00Z`) <= eighteenMonthsAhead)
+  .sort((a, b) => b.effective!.localeCompare(a.effective!))
+  .slice(0, 8);
 
 /* Band display order + colors */
 const BAND_ORDER = ["Platinum", "High Green", "Medium Green", "Low Green", "Red"] as const;
@@ -58,40 +68,6 @@ const BAND_AR: Record<string, string> = {
   "Medium Green": "أخضر متوسط",
   "Low Green": "أخضر منخفض",
   Red: "أحمر",
-};
-
-/* Tawteen profession AR mapping */
-const TAWTEEN_PROFESSION_AR: Record<string, string> = {
-  "Accountants": "المحاسبون",
-  "Admin clerks": "الكتبة الإداريون",
-  "HR specialists": "أخصائيو الموارد البشرية",
-  "Marketing managers": "مديرو التسويق",
-  "Sales representatives": "مندوبو المبيعات",
-  "IT support": "دعم تقنية المعلومات",
-  "Data entry operators": "مدخلو البيانات",
-  "Customer service": "خدمة العملاء",
-  "Procurement officers": "مسؤولو المشتريات",
-  "Project coordinators": "منسقو المشاريع",
-  "Warehouse supervisors": "مشرفو المستودعات",
-  "Logistics coordinators": "منسقو الخدمات اللوجستية",
-  "Receptionists": "موظفو الاستقبال",
-  "Cashiers": "أمناء الصندوق",
-  "Security guards": "حراس الأمن",
-  "Drivers (light vehicles)": "سائقو المركبات الخفيفة",
-  "Translators/Interpreters": "مترجمون",
-  "Legal assistants": "مساعدون قانونيون",
-  "Insurance agents": "وكلاء التأمين",
-  "Travel agents": "وكلاء السفر",
-};
-
-/* Phase AR mapping */
-const PHASE_AR: Record<string, string> = {
-  "Phase 1": "المرحلة 1",
-  "Phase 2": "المرحلة 2",
-  "Phase 1-2": "المرحلة 1-2",
-  "Current": "الحالي",
-  "Enforced": "مطبق",
-  "Regional": "إقليمي",
 };
 
 export default function NitaqatSection() {
@@ -151,41 +127,36 @@ export default function NitaqatSection() {
                       {t.nitaqatSection.profession}
                     </th>
                     <th className="text-start text-xs text-text-muted uppercase py-2 px-2">
-                      {t.nitaqatSection.quota}
+                      {t.nitaqatSection.measure}
                     </th>
-                    <th className="text-start text-xs text-text-muted uppercase py-2 px-2 hidden sm:table-cell">
+                    <th className="text-start text-xs text-text-muted uppercase py-2 px-2">
                       {t.nitaqatSection.effective}
                     </th>
-                    <th className="text-start text-xs text-text-muted uppercase py-2 px-2 hidden md:table-cell">
-                      {t.nitaqatSection.phase}
+                    <th className="text-start text-xs text-text-muted uppercase py-2 px-2">
+                      {t.nitaqatSection.authority}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {nitaqat.tawteen_decisions_2024_2025.map((d, i) => (
+                  {latestDecisions.map((d) => (
                     <tr
-                      key={d.profession + i}
+                      key={d.id}
                       className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
                     >
-                      <td className="py-2.5 px-2 text-text-secondary">{lang === "ar" && TAWTEEN_PROFESSION_AR[d.profession] ? TAWTEEN_PROFESSION_AR[d.profession] : d.profession}</td>
-                      <td className="py-2.5 px-2">
-                        <span className="font-mono font-semibold text-amber-400">
-                          {d.quota_pct}%
-                        </span>
+                      <td className="py-2.5 px-2 text-text-secondary">{localizedDecision(d, lang).title}</td>
+                      <td className="py-2.5 px-2 text-amber-400">{localizedDecision(d, lang).summary}</td>
+                      <td className="py-2.5 px-2 text-text-muted">
+                        <time dateTime={d.effective!}>{d.effective}</time>
                       </td>
-                      <td className="py-2.5 px-2 text-text-muted hidden sm:table-cell">
-                        {d.effective}
-                      </td>
-                      <td className="py-2.5 px-2 hidden md:table-cell">
-                        <span className="text-xs px-2 py-0.5 bg-white/5 rounded-full text-text-muted">
-                          {lang === "ar" && PHASE_AR[d.phase] ? PHASE_AR[d.phase] : d.phase}
-                        </span>
-                      </td>
+                      <td className="py-2.5 px-2 text-xs text-text-muted">{d.authority}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+            <Link href={localizedHref(lang, "/saudization-tracker")} className="inline-block mt-4 text-sm text-cyan-400 hover:underline">
+              {t.nitaqatSection.fullTimeline} →
+            </Link>
           </motion.div>
 
           {/* ── Right: Band Consequences ───────────────── */}
