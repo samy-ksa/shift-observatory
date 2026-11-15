@@ -117,18 +117,20 @@ export default function HeroCounter() {
         {/* Main Counter — no entrance fade/delay: this is the LCP element,
             animating its visibility in directly inflates LCP (web.dev guidance) */}
         <div>
-          <div className="text-accent-neon text-glow-neon font-mono font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight">
-            <AnimatedNumber
-              key={saudiOnly ? "saudi" : "all"}
-              value={mainNumber}
-              duration={2000}
-            />
+          <div className="text-accent-neon text-glow-neon font-mono font-extrabold text-6xl sm:text-8xl md:text-9xl tracking-tight">
+            {saudiOnly ? t.hero.heroBigSaudi : t.hero.heroBigAll}
           </div>
-          <p className="text-text-primary text-lg md:text-2xl font-semibold mt-4 max-w-2xl mx-auto leading-snug">
-            {(saudiOnly ? t.hero.impactSaudi : t.hero.impactAll).replace("{pct}", String(impactPct)).replace("{n}", impactMillions)}
+          <p className="text-text-primary text-xl md:text-3xl font-semibold mt-3 max-w-2xl mx-auto leading-snug">
+            {saudiOnly ? t.hero.heroSubSaudi : t.hero.heroSubAll}
           </p>
-          <p className="text-text-secondary text-sm md:text-base mt-3 max-w-xl mx-auto">
-            {t.hero.impactNote}
+          <a
+            href="#calculator"
+            className="inline-block mt-6 px-6 py-3 rounded-full bg-accent-neon text-bg-primary font-semibold text-base md:text-lg hover:opacity-90 transition-opacity"
+          >
+            {t.hero.heroHook} ↓
+          </a>
+          <p className="text-text-muted text-xs md:text-sm mt-5 max-w-xl mx-auto">
+            {t.hero.heroNote.replace("{pct}", String(impactPct)).replace("{n}", impactMillions)}
           </p>
         </div>
 
