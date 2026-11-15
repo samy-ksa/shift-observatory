@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", changeFrequency: "weekly", priority: 1.0 },
     { path: "/job", changeFrequency: "weekly", priority: 0.8 },
     { path: "/saudization-tracker", lastModified: "2026-11-15", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/methodology", lastModified: "2026-11-15", changeFrequency: "monthly", priority: 0.8 },
     { path: "/pulse", changeFrequency: "weekly", priority: 0.7 },
     { path: "/career", changeFrequency: "weekly", priority: 0.9 },
     { path: "/relocate", changeFrequency: "weekly", priority: 0.9 },

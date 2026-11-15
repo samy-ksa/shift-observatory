@@ -32,7 +32,10 @@ export default function Footer() {
           {rankingLinks.map(([slug, labels]) => <Link key={slug} href={`/${lang}/rankings/${slug}`} className="text-text-muted text-xs hover:text-cyan-400">{labels[lang]}</Link>)}
         </nav>
 
-        <nav className="text-center mt-4"><Link href={`/${lang}/saudization-tracker`} className="text-text-muted text-xs hover:text-cyan-400">{{ en: "Saudization tracker", fr: "Suivi de la saoudisation", ar: "متتبع التوطين" }[lang]}</Link></nav>
+        <nav className="flex flex-wrap items-center justify-center gap-4 mt-4" aria-label={{ en: "About the observatory", fr: "À propos de l’observatoire", ar: "عن المرصد" }[lang]}>
+          <Link href={`/${lang}/saudization-tracker`} className="text-text-muted text-xs hover:text-cyan-400">{{ en: "Saudization tracker", fr: "Suivi de la saoudisation", ar: "متتبع التوطين" }[lang]}</Link>
+          <Link href={`/${lang}/methodology`} className="text-text-muted text-xs hover:text-cyan-400">{{ en: "Methodology & sources", fr: "Méthodologie et sources", ar: "المنهجية والمصادر" }[lang]}</Link>
+        </nav>
 
         {/* Legal links */}
         <div

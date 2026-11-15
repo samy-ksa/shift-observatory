@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
@@ -244,6 +245,7 @@ export default async function LangHome({
           {ABOUT_H2[lang]}
         </h2>
         <p className="text-xs text-gray-600 leading-relaxed mb-4">{ABOUT_BODY[lang]}</p>
+        <Link href={localizedHref(lang, "/methodology")} className="inline-block text-xs text-cyan-400 hover:underline mb-4">{{ en: "Read our methodology and sources", fr: "Lire notre méthodologie et nos sources", ar: "اطّلع على منهجيتنا ومصادر بياناتنا" }[lang]}</Link>
 
         <a href={localizedHref(lang, "/rankings/jobs-most-at-risk-from-ai-saudi-arabia")} className="inline-block text-xs text-gray-400 hover:text-cyan-400 mb-4">{TEXT[lang].headings["jobs-most-at-risk-from-ai-saudi-arabia"]}</a>
 

@@ -11,6 +11,7 @@
 
 ## Core Tools
 
+- [Methodology & sources](https://www.ksashiftobservatory.online/en/methodology): trilingual methods, data sources, limitations, update rhythm, corrections and citation guidance
 - [Saudization Tracker](https://www.ksashiftobservatory.online/en/saudization-tracker): 17 sourced Saudization and Nitaqat decisions, effective dates, source links, and open JSON/CSV data
 
 - [AI Job Risk Dashboard](https://www.ksashiftobservatory.online/en): scoring 237 Saudi occupations on a 0-100 composite scale
@@ -43,10 +44,10 @@ Available in English (`/en/`), French (`/fr/`), and Arabic (`/ar/`). Identical c
 
 ## Methodology
 
-Composite Score = Automation Probability (40%) + Salary Impact (20%) + Regulatory Pressure (20%) + Demand Signal (20%)
+Occupation exposure reference formula = Eloundou LLM exposure (35%) + Frey-Osborne automation probability (35%) + Felten AIOE (15%) + impact category (15%), followed by manual Saudi-context calibration. See the methodology page for limits.
 
 Sources:
-- GASTAT (Saudi General Authority for Statistics) — GOSI register-based labor market statistics, Q4 2024
+- GASTAT (Saudi General Authority for Statistics) — GOSI register-based labor market statistics, Q4 2025
 - WEF Future of Jobs Report 2025 — growth/decline rankings
 - Frey & Osborne (2013) — automation probability framework
 - Eloundou et al. (2023) — LLM exposure assessment
