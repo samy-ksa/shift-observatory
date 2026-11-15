@@ -98,6 +98,42 @@ export interface RiskToolStrings {
   demandRank: string;
   occupationsCount: string;
   rankOf: string;
+  details: {
+    aiScore: string;
+    vs: string;
+    stable: string;
+    aiImpact: string;
+    automation: string;
+    llm: string;
+    wefOutlook: string;
+    felten: string;
+    category: string;
+    wefTrend: string;
+    saudiContext: string;
+    ksaRelevance: string;
+    rank: string;
+    fullSub: string;
+    partialSub: string;
+    augmentation: string;
+    rapidDecline: string;
+    declining: string;
+    growing: string;
+    notAvailable: string;
+    veryHigh: string;
+    high: string;
+    moderate: string;
+    low: string;
+    contextVeryHighQuota: string;
+    contextVeryHighExpat: string;
+    contextHigh: string;
+    contextModerate: string;
+    contextOther: string;
+    expatSalary: string;
+    tooltipEloundou: string;
+    tooltipFrey: string;
+    tooltipFelten: string;
+    tooltipCategory: string;
+  };
 }
 
 export interface MapStrings {
@@ -248,6 +284,7 @@ export interface GigaProjectStrings {
 }
 
 export interface MethodologyStrings {
+  bodies: string[];
   title: string;
   subtitle: string;
   panels: {

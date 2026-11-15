@@ -4,6 +4,9 @@ import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
 import { TEXT } from "@/lib/rankings";
+import { toSlug } from "@/lib/occupations";
+import data from "@/data/master.json";
+import { ORIGIN_CITIES, SAUDI_CITIES } from "@/data/relocation-data";
 import {
   LazyLayoffsChart,
   LazyParadoxChart,
@@ -201,6 +204,7 @@ export default async function LangHome({
   params: Promise<{ lang: Lang }>;
 }) {
   const { lang } = await params;
+  const allOccupations = [...data.occupations.high_risk, ...data.occupations.low_risk];
   return (
     <main className="min-h-screen bg-bg-primary pb-20 md:pb-10">
       <LangToggle />
@@ -258,7 +262,7 @@ export default async function LangHome({
             { slug: "respiratory-therapist", label: "Respiratory Therapist" },
           ].map(({ slug, label }) => (
             <a key={slug} href={localizedHref(lang, `/job/${slug}`)} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
-              {label}
+              {lang === "ar" ? (allOccupations.find((o) => toSlug(o.name_en) === slug)?.name_ar || label) : lang === "fr" ? (allOccupations.find((o) => toSlug(o.name_en) === slug)?.name_fr || label) : label}
             </a>
           ))}
         </div>
@@ -278,7 +282,7 @@ export default async function LangHome({
             { pair: "mumbai-to-riyadh", label: "Mumbai → Riyadh" },
           ].map(({ pair, label }) => (
             <a key={pair} href={localizedHref(lang, `/relocate/${pair}`)} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
-              {label}
+              {(() => { const [originId, destinationId] = pair.split("-to-"); const origin = ORIGIN_CITIES.find((c) => c.id === originId); const destination = SAUDI_CITIES.find((c) => c.id === destinationId); return origin && destination ? `${lang === "ar" ? origin.name_ar : lang === "fr" ? origin.name_fr : origin.name_en} → ${lang === "ar" ? destination.name_ar : lang === "fr" ? destination.name_fr : destination.name_en}` : label; })()}
             </a>
           ))}
         </div>
@@ -308,7 +312,7 @@ export default async function LangHome({
             { slug: "lightcast", label: "Lightcast" },
           ].map(({ slug, label }) => (
             <a key={slug} href={localizedHref(lang, `/vs/${slug}`)} className="text-xs text-gray-400 hover:text-cyan-400 transition-colors">
-              vs {label}
+              {lang === "ar" ? "مقارنة مع" : lang === "fr" ? "Comparer avec" : "vs"} {label}
             </a>
           ))}
         </div>

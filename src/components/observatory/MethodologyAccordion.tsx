@@ -174,7 +174,7 @@ export default function MethodologyAccordion() {
   const { t } = useLang();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const items = getItems(t.methodology.panels);
+  const items = getItems(t.methodology.panels).map((item, index) => ({ ...item, content: t.methodology.bodies[index] || item.content }));
 
   return (
     <section className="py-20 px-4">

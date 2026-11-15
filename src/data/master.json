@@ -543,7 +543,10 @@
         "Info & Communication": 99579,
         "Finance & Insurance": 79613
       },
-      "v2030_priorities": "Financial services, HQ & business services, entertainment & sports (Qiddiya, Sports Boulevard, King Salman Park), digital economy/cloud & AI, logistics"
+      "v2030_priorities": "Financial services, HQ & business services, entertainment & sports (Qiddiya, Sports Boulevard, King Salman Park), digital economy/cloud & AI, logistics",
+      "name_fr": "Riyad",
+      "v2030_priorities_ar": "الخدمات المالية ومقار الشركات وخدمات الأعمال، والترفيه والرياضة (القدية، المسار الرياضي، حديقة الملك سلمان)، والاقتصاد الرقمي والحوسبة السحابية والذكاء الاصطناعي، والخدمات اللوجستية",
+      "v2030_priorities_fr": "Services financiers, sièges sociaux et services aux entreprises, loisirs et sports (Qiddiya, Sports Boulevard, King Salman Park), économie numérique, cloud et IA, logistique"
     },
     {
       "name_en": "Makkah",
@@ -579,7 +582,10 @@
         "Info & Communication": 11168,
         "Finance & Insurance": 11269
       },
-      "v2030_priorities": "Hajj/Umrah and religious tourism, broader tourism & culture (Jeddah Central, Historic Jeddah), logistics via Jeddah port, hospitality"
+      "v2030_priorities": "Hajj/Umrah and religious tourism, broader tourism & culture (Jeddah Central, Historic Jeddah), logistics via Jeddah port, hospitality",
+      "name_fr": "La Mecque",
+      "v2030_priorities_ar": "الحج والعمرة والسياحة الدينية، والسياحة والثقافة (جدة المركزية، جدة التاريخية)، والخدمات اللوجستية عبر ميناء جدة، والضيافة",
+      "v2030_priorities_fr": "Hajj, Omra et tourisme religieux, tourisme et culture (Jeddah Central, Djeddah historique), logistique via le port de Djeddah, hôtellerie"
     },
     {
       "name_en": "Eastern Province",
@@ -613,7 +619,10 @@
         "Info & Communication": 6335,
         "Finance & Insurance": 8018
       },
-      "v2030_priorities": "Energy services (King Salman Energy Park), petrochemicals, logistics and ports, downstream manufacturing, clean energy & mining"
+      "v2030_priorities": "Energy services (King Salman Energy Park), petrochemicals, logistics and ports, downstream manufacturing, clean energy & mining",
+      "name_fr": "Province orientale",
+      "v2030_priorities_ar": "خدمات الطاقة (مدينة الملك سلمان للطاقة)، والبتروكيماويات، والخدمات اللوجستية والموانئ، والصناعات التحويلية اللاحقة، والطاقة النظيفة والتعدين",
+      "v2030_priorities_fr": "Services énergétiques (King Salman Energy Park), pétrochimie, logistique et ports, industrie de transformation, énergie propre et mines"
     },
     {
       "name_en": "Madinah",
@@ -646,7 +655,10 @@
         "Accommodation & Food": 47010,
         "Human Health": 28082
       },
-      "v2030_priorities": "Religious tourism (Rua Al Madinah, Madinah Downtown), heritage & culture, hospitality, health/education clusters"
+      "v2030_priorities": "Religious tourism (Rua Al Madinah, Madinah Downtown), heritage & culture, hospitality, health/education clusters",
+      "name_fr": "Médine",
+      "v2030_priorities_ar": "السياحة الدينية (رؤى المدينة، وسط المدينة)، والتراث والثقافة، والضيافة، ومراكز الصحة والتعليم",
+      "v2030_priorities_fr": "Tourisme religieux (Rua Al Madinah, centre de Médine), patrimoine et culture, hôtellerie, pôles de santé et d’éducation"
     },
     {
       "name_en": "Asir",
@@ -678,7 +690,10 @@
         "Admin & Support": 31306,
         "Human Health": 19217
       },
-      "v2030_priorities": "Mountain and nature tourism (Soudah Peaks), culture & heritage, light industry and services"
+      "v2030_priorities": "Mountain and nature tourism (Soudah Peaks), culture & heritage, light industry and services",
+      "name_fr": "Asir",
+      "v2030_priorities_ar": "السياحة الجبلية والطبيعية (قمم السودة)، والثقافة والتراث، والصناعات الخفيفة والخدمات",
+      "v2030_priorities_fr": "Tourisme de montagne et de nature (Soudah Peaks), culture et patrimoine, industrie légère et services"
     },
     {
       "name_en": "Al Qassim",
@@ -710,7 +725,10 @@
         "Accommodation & Food": 25827,
         "Human Health": 19797
       },
-      "v2030_priorities": "Agri-business and food processing, logistics and light manufacturing, desert/agricultural heritage tourism"
+      "v2030_priorities": "Agri-business and food processing, logistics and light manufacturing, desert/agricultural heritage tourism",
+      "name_fr": "Al Qassim",
+      "v2030_priorities_ar": "الأعمال الزراعية وتصنيع الأغذية، والخدمات اللوجستية والصناعات الخفيفة، وسياحة التراث الصحراوي والزراعي",
+      "v2030_priorities_fr": "Agroalimentaire et transformation des aliments, logistique et industrie légère, tourisme du patrimoine désertique et agricole"
     },
     {
       "name_en": "Tabuk",
@@ -744,7 +762,10 @@
         "Manufacturing": 16271,
         "Human Health": 10290
       },
-      "v2030_priorities": "NEOM (THE LINE, Oxagon, Trojena), Red Sea tourism (AMAALA), renewables, advanced manufacturing & R&D"
+      "v2030_priorities": "NEOM (THE LINE, Oxagon, Trojena), Red Sea tourism (AMAALA), renewables, advanced manufacturing & R&D",
+      "name_fr": "Tabouk",
+      "v2030_priorities_ar": "نيوم (ذا لاين، أوكساجون، تروجينا)، وسياحة البحر الأحمر (أمالا)، والطاقة المتجددة، والتصنيع المتقدم والبحث والتطوير",
+      "v2030_priorities_fr": "NEOM (THE LINE, Oxagon, Trojena), tourisme de la mer Rouge (AMAALA), énergies renouvelables, industrie avancée et R&D"
     },
     {
       "name_en": "Ha'il",
@@ -775,7 +796,10 @@
         "Accommodation & Food": 11072,
         "Transport & Storage": 10663
       },
-      "v2030_priorities": "Logistics (central-northern crossroads), desert/adventure tourism (Hail Downtown), light industry"
+      "v2030_priorities": "Logistics (central-northern crossroads), desert/adventure tourism (Hail Downtown), light industry",
+      "name_fr": "Haïl",
+      "v2030_priorities_ar": "الخدمات اللوجستية عند مفترق الطرق الشمالية والوسطى، وسياحة الصحراء والمغامرات (وسط حائل)، والصناعات الخفيفة",
+      "v2030_priorities_fr": "Logistique (carrefour du centre et du nord), tourisme du désert et d’aventure (centre de Haïl), industrie légère"
     },
     {
       "name_en": "Jazan",
@@ -806,7 +830,10 @@
         "Manufacturing": 21326,
         "Human Health": 11320
       },
-      "v2030_priorities": "Jazan Special Economic Zone, heavy industry and port logistics, agro-processing, fisheries, Red Sea tourism"
+      "v2030_priorities": "Jazan Special Economic Zone, heavy industry and port logistics, agro-processing, fisheries, Red Sea tourism",
+      "name_fr": "Jizan",
+      "v2030_priorities_ar": "المنطقة الاقتصادية الخاصة بجازان، والصناعات الثقيلة والخدمات اللوجستية للميناء، وتصنيع المنتجات الزراعية، ومصايد الأسماك، وسياحة البحر الأحمر",
+      "v2030_priorities_fr": "Zone économique spéciale de Jazan, industrie lourde et logistique portuaire, transformation agricole, pêche, tourisme de la mer Rouge"
     },
     {
       "name_en": "Najran",
@@ -837,7 +864,10 @@
         "Manufacturing": 14057,
         "Transport & Storage": 11517
       },
-      "v2030_priorities": "Mining, logistics to Yemen/GCC, cultural tourism (heritage landscapes)"
+      "v2030_priorities": "Mining, logistics to Yemen/GCC, cultural tourism (heritage landscapes)",
+      "name_fr": "Najran",
+      "v2030_priorities_ar": "التعدين، والخدمات اللوجستية إلى اليمن ودول الخليج، والسياحة الثقافية (المواقع التراثية)",
+      "v2030_priorities_fr": "Mines, logistique vers le Yémen et les pays du Golfe, tourisme culturel (sites patrimoniaux)"
     },
     {
       "name_en": "Al Baha",
@@ -868,7 +898,10 @@
         "Manufacturing": 5368,
         "Public Admin": 2591
       },
-      "v2030_priorities": "Mountain tourism and eco-tourism (Al Bahah Downtown), small-scale services and agriculture"
+      "v2030_priorities": "Mountain tourism and eco-tourism (Al Bahah Downtown), small-scale services and agriculture",
+      "name_fr": "Al Baha",
+      "v2030_priorities_ar": "السياحة الجبلية والبيئية (وسط الباحة)، والخدمات الصغيرة والزراعة",
+      "v2030_priorities_fr": "Tourisme de montagne et écotourisme (centre d’Al Baha), petits services et agriculture"
     },
     {
       "name_en": "Northern Borders",
@@ -899,7 +932,10 @@
         "Manufacturing": 5329,
         "Admin & Support": 4345
       },
-      "v2030_priorities": "Mining and minerals, logistics, agriculture; mining/logistics corridor"
+      "v2030_priorities": "Mining and minerals, logistics, agriculture; mining/logistics corridor",
+      "name_fr": "Frontières du Nord",
+      "v2030_priorities_ar": "التعدين والمعادن، والخدمات اللوجستية، والزراعة؛ وممر التعدين والنقل",
+      "v2030_priorities_fr": "Mines et minerais, logistique, agriculture ; corridor minier et logistique"
     },
     {
       "name_en": "Al Jouf",
@@ -930,7 +966,10 @@
         "Accommodation & Food": 6541,
         "Public Admin": 4579
       },
-      "v2030_priorities": "Renewables (wind/solar around Sakaka/Dumat Al Jandal), agriculture, logistics"
+      "v2030_priorities": "Renewables (wind/solar around Sakaka/Dumat Al Jandal), agriculture, logistics",
+      "name_fr": "Al Jouf",
+      "v2030_priorities_ar": "الطاقة المتجددة (الرياح والطاقة الشمسية حول سكاكا ودومة الجندل)، والزراعة والخدمات اللوجستية",
+      "v2030_priorities_fr": "Énergies renouvelables (éolien et solaire autour de Sakaka et Dumat Al Jandal), agriculture, logistique"
     }
   ],
   "occupations": {
@@ -1113,7 +1152,9 @@
         "risk_reasoning_ar": "مخاطر الأتمتة على مُعِدّي الضرائب شديدة للغاية: درجة مركّبة 93.1 واحتمال فري–أوزبورن 99 يعنيان قابلية استبدال مرتفعة جدًا. تعرّض LLM عند 0.9 والتعرّض “مرتفع جدًا” لدى Felten يعكسان قدرة الذكاء الاصطناعي على إنجاز النماذج والحسابات في قطاع الأنشطة المالية والتأمينية الأعلى تعرّضًا للـGenAI.",
         "risk_action_en": "Prioritize transition into advisory, compliance strategy or client-relationship roles, leveraging HRDF programs and professional certificates to shift beyond routine tax form preparation.",
         "risk_action_fr": "Préparer une transition vers des fonctions de conseil, de conformité fiscale et de relation client, en mobilisant les programmes HRDF et les certifications professionnelles.",
-        "risk_action_ar": "الاستعداد للانتقال إلى أدوار استشارية وعلاقات عملاء والالتزام الضريبي، مع الاستفادة من برامج تنمية المهارات والشهادات المهنية المتاحة."
+        "risk_action_ar": "الاستعداد للانتقال إلى أدوار استشارية وعلاقات عملاء والالتزام الضريبي، مع الاستفادة من برامج تنمية المهارات والشهادات المهنية المتاحة.",
+        "salary_source_ar": "Astr 2026 (الزكاة والضرائب)",
+        "salary_source_fr": "Astr 2026 (zakat et fiscalité)"
       },
       {
         "rank": 4,
@@ -2858,7 +2899,9 @@
         "risk_reasoning_ar": "هذه المهنة تسجل احتمال أتمتة مرتفع وفق فري-أوزبورن (48) مع تعرّض شديد لأدوات النماذج اللغوية الكبرى بقيمة إلوندُو 1.0، ما يعكس كثافة مهام توليد الشيفرة. في قطاع تكنولوجيا المعلومات والاتصالات «المفارِق»، تعيد الذكاء الاصطناعي تشكيل البرمجة وتفتح أدوارًا جديدة في الذكاء الاصطناعي والبيانات ضمن اتجاه نمو. لذلك يجسّد المؤشر المركب (67.5) ضغط أتمتة قوي على أساس التعزيز لا الإحلال التام.",
         "risk_action_en": "Continuously integrate AI coding tools, deepen software architecture and AI/ML skills, and pursue HRDF-backed upskilling to stay complementary.",
         "risk_action_fr": "Intégrer les assistants de code IA, renforcer l’architecture et l’IA/ML, et utiliser les programmes HRDF pour se perfectionner.",
-        "risk_action_ar": "اعتمد أدوات البرمجة بالذكاء الاصطناعي، وعمّق مهاراتك في هندسة البرمجيات والذكاء الاصطناعي، واستفد من برامج تنمية المهارات المدعومة."
+        "risk_action_ar": "اعتمد أدوات البرمجة بالذكاء الاصطناعي، وعمّق مهاراتك في هندسة البرمجيات والذكاء الاصطناعي، واستفد من برامج تنمية المهارات المدعومة.",
+        "salary_source_ar": "Astr 2026 (تقنية المعلومات)",
+        "salary_source_fr": "Astr 2026 (informatique)"
       },
       {
         "name_en": "Internal Auditor",
@@ -3476,7 +3519,8 @@
         "risk_reasoning_ar": "الدرجة مرتفعة لأن احتمال الأتمتة شديد الارتفاع (86)، والتعرض لنماذج اللغة متوسط عند 0.5، والتعرض وفق Felten متوسط. كما أن تبرير القطاع يذكر PropTech ونماذج التقييم بالذكاء الاصطناعي والإعلانات المؤتمتة، لكن الثقة وتعقيد الصفقات يبقيان جزءًا بشريًا مهمًا.",
         "risk_action_en": "Prioritize training in AI-assisted valuation, client relationship management, and transaction oversight to shift toward higher-value advisory work.",
         "risk_action_fr": "Renforcer les compétences en évaluation assistée par IA, relation client et supervision des transactions pour évoluer vers un conseil à plus forte valeur.",
-        "risk_action_ar": "طوّر مهارات التقييم المدعوم بالذكاء الاصطناعي، وإدارة علاقة العميل، ومراجعة الصفقات للانتقال إلى دور استشاري أعلى قيمة."
+        "risk_action_ar": "طوّر مهارات التقييم المدعوم بالذكاء الاصطناعي، وإدارة علاقة العميل، ومراجعة الصفقات للانتقال إلى دور استشاري أعلى قيمة.",
+        "salary_source_ar": "Talent.com 2025 (+ عمولة)"
       },
       {
         "name_en": "Recruitment Specialist",
@@ -3598,7 +3642,8 @@
         "risk_reasoning_ar": "يمتلك ممثلو المبيعات درجة مخاطر تركيبية 61.8 متوسطة إلى مرتفعة، مدفوعة باحتمال أتمتة فري-أوزبورن مرتفع جدًا يبلغ 85 وتعرض عالٍ لنماذج اللغة عند 0.55. في تجارة الجملة والتجزئة، الأتمتة مثل الدفع الذاتي والتجارة الإلكترونية تستبدل المهام الروتينية، بينما يبقى دور مستشاري المبيعات في إطار التعزيز، ما يفسر تصنيفه ضمن فئة «زيادة» رغم قوة أتمتة المهام.",
         "risk_action_en": "Focus on consultative selling, product expertise, and using AI CRM and analytics tools to enhance customer relationships and advisory value.",
         "risk_action_fr": "Se spécialiser en vente conseil, maîtrise produit et utilisation d’outils IA (CRM, analytique) pour renforcer la relation client.",
-        "risk_action_ar": "تعزيز مهارات البيع الاستشاري وبناء الثقة، واستخدام أدوات الذكاء الاصطناعي في إدارة علاقات العملاء وتحليل البيانات لدعم القرارات."
+        "risk_action_ar": "تعزيز مهارات البيع الاستشاري وبناء الثقة، واستخدام أدوات الذكاء الاصطناعي في إدارة علاقات العملاء وتحليل البيانات لدعم القرارات.",
+        "salary_source_ar": "Astr 2026 (+ عمولة)"
       },
       {
         "name_en": "SEO/SEM Specialist",
@@ -4264,7 +4309,9 @@
         "risk_reasoning_ar": "لهذا العمل درجة مركبة مرتفعة 59.6 رغم احتمال أتمتة فري-أوزبورن المنخفض جدًا 3.8، لأن مهامه مكشوفة بالكامل تقريبًا لنماذج اللغة الكبيرة مع تعرّض عالٍ للذكاء الاصطناعي. في قطاع يرتكز على الأداء الحي، تصبح الكتابة الإبداعية منطقة أساسية لاستبدال جزئي عبر التوليد الآلي للنصوص.",
         "risk_action_en": "Prepare for partial transition by specializing in uniquely human, Saudi-specific voices and formats, and leveraging AI tools to increase output and diversify income streams.",
         "risk_action_fr": "Anticiper une substitution partielle en développant des styles ancrés dans la culture saoudienne et en utilisant l’IA pour augmenter productivité et revenus.",
-        "risk_action_ar": "الاستعداد لاستبدال جزئي عبر تطوير صوت سردي محلي مميز، واستغلال أدوات الذكاء الاصطناعي لزيادة الإنتاجية وتوسيع مصادر الدخل."
+        "risk_action_ar": "الاستعداد لاستبدال جزئي عبر تطوير صوت سردي محلي مميز، واستغلال أدوات الذكاء الاصطناعي لزيادة الإنتاجية وتوسيع مصادر الدخل.",
+        "salary_source_ar": "Astr 2026 (كاتب محتوى)",
+        "salary_source_fr": "Astr 2026 (rédacteur de contenu)"
       },
       {
         "name_en": "Freight Forwarder",
@@ -11718,91 +11765,106 @@
         "rank": 1,
         "name": "Big Data Specialists",
         "trend": "Very Rapid Growth",
-        "name_ar": "أخصائيو البيانات الضخمة"
+        "name_ar": "أخصائيو البيانات الضخمة",
+        "name_fr": "Spécialistes des mégadonnées"
       },
       {
         "rank": 2,
         "name": "FinTech Engineers",
         "trend": "Very Rapid Growth",
-        "name_ar": "مهندسو التقنية المالية"
+        "name_ar": "مهندسو التقنية المالية",
+        "name_fr": "Ingénieurs en technologie financière"
       },
       {
         "rank": 3,
         "name": "AI & ML Specialists",
         "trend": "Very Rapid Growth",
-        "name_ar": "أخصائيو الذكاء الاصطناعي والتعلم الآلي"
+        "name_ar": "أخصائيو الذكاء الاصطناعي والتعلم الآلي",
+        "name_fr": "Spécialistes de l’IA et de l’apprentissage automatique"
       },
       {
         "rank": 4,
         "name": "Renewable Energy Engineers",
         "trend": "Rapid Growth",
-        "name_ar": "مهندسو الطاقة المتجددة"
+        "name_ar": "مهندسو الطاقة المتجددة",
+        "name_fr": "Ingénieurs en énergies renouvelables"
       },
       {
         "rank": 5,
         "name": "Delivery Drivers",
         "trend": "Rapid Growth",
-        "name_ar": "سائقو التوصيل"
+        "name_ar": "سائقو التوصيل",
+        "name_fr": "Livreurs"
       },
       {
         "rank": 6,
         "name": "Nursing Professionals",
         "trend": "Rapid Growth",
-        "name_ar": "متخصصو التمريض"
+        "name_ar": "متخصصو التمريض",
+        "name_fr": "Professionnels des soins infirmiers"
       },
       {
         "rank": 7,
         "name": "Agricultural Workers",
         "trend": "Rapid Growth",
-        "name_ar": "العمال الزراعيون"
+        "name_ar": "العمال الزراعيون",
+        "name_fr": "Travailleurs agricoles"
       },
       {
         "rank": 8,
         "name": "Environmental Engineers",
         "trend": "Rapid Growth",
-        "name_ar": "المهندسون البيئيون"
+        "name_ar": "المهندسون البيئيون",
+        "name_fr": "Ingénieurs en environnement"
       },
       {
         "rank": 9,
         "name": "Software Developers",
         "trend": "Rapid Growth",
-        "name_ar": "مطورو البرمجيات"
+        "name_ar": "مطورو البرمجيات",
+        "name_fr": "Développeurs logiciels"
       },
       {
         "rank": 10,
         "name": "EV Specialists",
         "trend": "Rapid Growth",
-        "name_ar": "أخصائيو المركبات الكهربائية"
+        "name_ar": "أخصائيو المركبات الكهربائية",
+        "name_fr": "Spécialistes des véhicules électriques"
       },
       {
         "rank": 11,
         "name": "Construction Workers",
         "trend": "Rapid Growth",
-        "name_ar": "عمال البناء"
+        "name_ar": "عمال البناء",
+        "name_fr": "Ouvriers du bâtiment"
       },
       {
         "rank": 12,
         "name": "Shop Salespeople",
         "trend": "Rapid Growth",
-        "name_ar": "موظفو مبيعات المتاجر"
+        "name_ar": "موظفو مبيعات المتاجر",
+        "name_fr": "Vendeurs en magasin"
       },
       {
         "rank": 13,
         "name": "Food Processing Workers",
         "trend": "Rapid Growth",
-        "name_ar": "عمال تصنيع الأغذية"
+        "name_ar": "عمال تصنيع الأغذية",
+        "name_fr": "Ouvriers de la transformation alimentaire"
       },
       {
         "rank": 14,
         "name": "Cybersecurity Specialists",
         "trend": "Rapid Growth",
-        "name_ar": "أخصائيو الأمن السيبراني"
+        "name_ar": "أخصائيو الأمن السيبراني",
+        "name_fr": "Spécialistes de la cybersécurité"
       },
       {
         "rank": 15,
         "name": "Higher Education Teachers",
         "trend": "Rapid Growth",
-        "name_ar": "أساتذة التعليم العالي"
+        "name_ar": "أساتذة التعليم العالي",
+        "name_fr": "Enseignants du supérieur"
       }
     ],
     "decline": [
@@ -11810,61 +11872,71 @@
         "rank": 1,
         "name": "Postal Service Clerks",
         "decline_pct": -40,
-        "name_ar": "موظفو البريد"
+        "name_ar": "موظفو البريد",
+        "name_fr": "Employés des services postaux"
       },
       {
         "rank": 2,
         "name": "Bank Tellers",
         "decline_pct": -35,
-        "name_ar": "صرافو البنوك"
+        "name_ar": "صرافو البنوك",
+        "name_fr": "Guichetiers de banque"
       },
       {
         "rank": 3,
         "name": "Data Entry Clerks",
         "decline_pct": -34,
-        "name_ar": "مدخلو البيانات"
+        "name_ar": "مدخلو البيانات",
+        "name_fr": "Opérateurs de saisie"
       },
       {
         "rank": 4,
         "name": "Cashiers & Ticket Clerks",
         "decline_pct": -30,
-        "name_ar": "أمناء الصندوق وموظفو التذاكر"
+        "name_ar": "أمناء الصندوق وموظفو التذاكر",
+        "name_fr": "Caissiers et agents de billetterie"
       },
       {
         "rank": 5,
         "name": "Administrative Assistants",
         "decline_pct": -28,
-        "name_ar": "المساعدون الإداريون"
+        "name_ar": "المساعدون الإداريون",
+        "name_fr": "Assistants administratifs"
       },
       {
         "rank": 6,
         "name": "Printing Workers",
         "decline_pct": -26,
-        "name_ar": "عمال الطباعة"
+        "name_ar": "عمال الطباعة",
+        "name_fr": "Ouvriers de l’imprimerie"
       },
       {
         "rank": 7,
         "name": "Accounting Clerks",
         "decline_pct": -24,
-        "name_ar": "موظفو المحاسبة"
+        "name_ar": "موظفو المحاسبة",
+        "name_fr": "Commis comptables"
       },
       {
         "rank": 8,
         "name": "Material Recording Clerks",
         "decline_pct": -22,
-        "name_ar": "موظفو تسجيل المواد"
+        "name_ar": "موظفو تسجيل المواد",
+        "name_fr": "Employés de gestion des stocks"
       },
       {
         "rank": 9,
         "name": "Transport Attendants",
         "decline_pct": -21,
-        "name_ar": "مضيفو النقل"
+        "name_ar": "مضيفو النقل",
+        "name_fr": "Agents d’accompagnement dans les transports"
       },
       {
         "rank": 10,
         "name": "Door-to-Door Salespeople",
         "decline_pct": -20,
-        "name_ar": "الباعة المتجولون"
+        "name_ar": "الباعة المتجولون",
+        "name_fr": "Vendeurs à domicile"
       }
     ],
     "headline": "22% of all jobs structurally disrupted by 2030. Net +78M globally (170M created - 92M destroyed)."
@@ -11878,7 +11950,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "التشييد والبناء"
+      "sector_ar": "التشييد والبناء",
+      "name_ar": "مجموعة بن لادن السعودية",
+      "sector_fr": "BTP"
     },
     {
       "rank": 2,
@@ -11888,7 +11962,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Oil & Gas"
+      "sector_ar": "النفط والغاز",
+      "name_ar": "أرامكو السعودية",
+      "sector_fr": "Pétrole et gaz"
     },
     {
       "rank": 3,
@@ -11898,7 +11974,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": 23,
-      "sector_ar": "FMCG"
+      "sector_ar": "السلع الاستهلاكية سريعة التداول",
+      "name_ar": "المراعي",
+      "sector_fr": "Biens de grande consommation"
     },
     {
       "rank": 4,
@@ -11908,7 +11986,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Petrochemicals"
+      "sector_ar": "البتروكيماويات",
+      "name_ar": "سابك",
+      "sector_fr": "Pétrochimie"
     },
     {
       "rank": 5,
@@ -11918,7 +11998,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "التشييد والبناء"
+      "sector_ar": "التشييد والبناء",
+      "name_ar": "مجموعة نسما القابضة",
+      "sector_fr": "BTP"
     },
     {
       "rank": 6,
@@ -11928,7 +12010,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": 92,
-      "sector_ar": "Utilities"
+      "sector_ar": "المرافق العامة",
+      "name_ar": "الشركة السعودية للكهرباء",
+      "sector_fr": "Services publics"
     },
     {
       "rank": 7,
@@ -11938,7 +12022,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "Aviation"
+      "sector_ar": "الطيران",
+      "name_ar": "الخطوط السعودية",
+      "sector_fr": "Aviation"
     },
     {
       "rank": 8,
@@ -11948,7 +12034,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": 89,
-      "sector_ar": "الاتصالات"
+      "sector_ar": "الاتصالات",
+      "name_ar": "شركة الاتصالات السعودية stc",
+      "sector_fr": "Télécommunications"
     },
     {
       "rank": 9,
@@ -11958,7 +12046,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الخدمات المصرفية"
+      "sector_ar": "الخدمات المصرفية",
+      "name_ar": "مصرف الراجحي",
+      "sector_fr": "Banque"
     },
     {
       "rank": 10,
@@ -11968,7 +12058,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "أسواق العثيم",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 11,
@@ -11978,7 +12070,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الخدمات المصرفية"
+      "sector_ar": "الخدمات المصرفية",
+      "name_ar": "البنك الأهلي السعودي",
+      "sector_fr": "Banque"
     },
     {
       "rank": 12,
@@ -11988,7 +12082,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "FMCG/Retail"
+      "sector_ar": "السلع الاستهلاكية والتجزئة",
+      "name_ar": "صافولا / بنده",
+      "sector_fr": "Grande consommation / détail"
     },
     {
       "rank": 13,
@@ -11998,7 +12094,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "تكتل"
+      "sector_ar": "تكتل",
+      "name_ar": "مجموعة العليان",
+      "sector_fr": "Conglomérat"
     },
     {
       "rank": 14,
@@ -12008,7 +12106,8 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Medical Equipment"
+      "sector_ar": "الأجهزة الطبية",
+      "sector_fr": "Équipements médicaux"
     },
     {
       "rank": 15,
@@ -12018,7 +12117,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Fuel/Transport"
+      "sector_ar": "الوقود والنقل",
+      "name_ar": "الدريس",
+      "sector_fr": "Carburants et transport"
     },
     {
       "rank": 16,
@@ -12028,7 +12129,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Airport Services"
+      "sector_ar": "خدمات المطارات",
+      "name_ar": "الشركة السعودية للخدمات الأرضية",
+      "sector_fr": "Services aéroportuaires"
     },
     {
       "rank": 17,
@@ -12038,7 +12141,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "Manufacturing"
+      "sector_ar": "الصناعات التحويلية",
+      "name_ar": "الزامل للصناعة",
+      "sector_fr": "Industrie manufacturière"
     },
     {
       "rank": 18,
@@ -12048,7 +12153,9 @@
       "estimate": false,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "تكتل"
+      "sector_ar": "تكتل",
+      "name_ar": "عبد اللطيف جميل",
+      "sector_fr": "Conglomérat"
     },
     {
       "rank": 19,
@@ -12058,7 +12165,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "بن داود",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 20,
@@ -12068,7 +12177,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الرعاية الصحية"
+      "sector_ar": "الرعاية الصحية",
+      "name_ar": "مجموعة الدكتور سليمان الحبيب",
+      "sector_fr": "Santé"
     },
     {
       "rank": 21,
@@ -12078,7 +12189,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "بنده للتجزئة",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 22,
@@ -12088,7 +12201,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "مجموعة فواز الحكير",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 23,
@@ -12098,7 +12213,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "تكتل"
+      "sector_ar": "تكتل",
+      "name_ar": "مجموعة المهيدب",
+      "sector_fr": "Conglomérat"
     },
     {
       "rank": 24,
@@ -12108,7 +12225,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الرعاية الصحية"
+      "sector_ar": "الرعاية الصحية",
+      "name_ar": "دله الصحية",
+      "sector_fr": "Santé"
     },
     {
       "rank": 25,
@@ -12118,7 +12237,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التعدين"
+      "sector_ar": "التعدين",
+      "name_ar": "معادن",
+      "sector_fr": "Mines"
     },
     {
       "rank": 26,
@@ -12128,7 +12249,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "جرير للتسويق",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 27,
@@ -12138,7 +12261,9 @@
       "estimate": true,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "تكتل"
+      "sector_ar": "تكتل",
+      "name_ar": "مجموعة الزاهد",
+      "sector_fr": "Conglomérat"
     },
     {
       "rank": 28,
@@ -12148,7 +12273,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الخدمات المصرفية"
+      "sector_ar": "الخدمات المصرفية",
+      "name_ar": "بنك الرياض",
+      "sector_fr": "Banque"
     },
     {
       "rank": 29,
@@ -12158,7 +12285,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "النقل"
+      "sector_ar": "النقل",
+      "name_ar": "الشركة السعودية للنقل الجماعي",
+      "sector_fr": "Transport"
     },
     {
       "rank": 30,
@@ -12168,7 +12297,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التأمين"
+      "sector_ar": "التأمين",
+      "name_ar": "بوبا العربية",
+      "sector_fr": "Assurance"
     },
     {
       "rank": 31,
@@ -12178,7 +12309,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "المرافق"
+      "sector_ar": "المرافق",
+      "name_ar": "أكوا باور",
+      "sector_fr": "Services publics"
     },
     {
       "rank": 32,
@@ -12188,7 +12321,9 @@
       "estimate": false,
       "tadawul": false,
       "saudisation": null,
-      "sector_ar": "البتروكيماويات"
+      "sector_ar": "البتروكيماويات",
+      "name_ar": "صدارة للكيميائيات",
+      "sector_fr": "Pétrochimie"
     },
     {
       "rank": 33,
@@ -12198,7 +12333,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الخدمات المصرفية"
+      "sector_ar": "الخدمات المصرفية",
+      "name_ar": "البنك السعودي الفرنسي",
+      "sector_fr": "Banque"
     },
     {
       "rank": 34,
@@ -12208,7 +12345,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الاتصالات"
+      "sector_ar": "الاتصالات",
+      "name_ar": "موبايلي",
+      "sector_fr": "Télécommunications"
     },
     {
       "rank": 35,
@@ -12218,7 +12357,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "الشركة المتحدة للإلكترونيات (إكسترا)",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 36,
@@ -12228,7 +12369,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الطيران"
+      "sector_ar": "الطيران",
+      "name_ar": "طيران ناس",
+      "sector_fr": "Aviation"
     },
     {
       "rank": 37,
@@ -12238,7 +12381,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "السفر/السياحة"
+      "sector_ar": "السفر/السياحة",
+      "name_ar": "مجموعة سيرا",
+      "sector_fr": "Voyages et tourisme"
     },
     {
       "rank": 38,
@@ -12248,7 +12393,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "التجزئة"
+      "sector_ar": "التجزئة",
+      "name_ar": "ساكو",
+      "sector_fr": "Commerce de détail"
     },
     {
       "rank": 39,
@@ -12258,7 +12405,9 @@
       "estimate": true,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "السفر"
+      "sector_ar": "السفر",
+      "name_ar": "الطيار للسفر",
+      "sector_fr": "Voyages"
     },
     {
       "rank": 40,
@@ -12268,7 +12417,9 @@
       "estimate": false,
       "tadawul": true,
       "saudisation": null,
-      "sector_ar": "الاتصالات"
+      "sector_ar": "الاتصالات",
+      "name_ar": "زين السعودية",
+      "sector_fr": "Télécommunications"
     }
   ],
   "layoffs": {
@@ -12545,9 +12696,11 @@
       "year": 2021,
       "country": "KSA",
       "impact_fr": "35 processus automatisés, 100+ bots, 40K heures économisées, 2M+ requêtes traitées",
-      "impact_ar": "أتمتة 35 عملية، أكثر من 100 بوت، توفير 40 ألف ساعة، معالجة أكثر من 2 مليون طلب",
+      "impact_ar": "أتمتة 35 عملية عبر 100+ روبوت برمجي، وتوفير 40K ساعة، ومعالجة 2M+ طلب",
       "jobs_impact_fr": "Saisie de données back-office et conformité partiellement remplacées",
-      "jobs_impact_ar": "استبدال جزئي لإدخال البيانات والامتثال في المكاتب الخلفية"
+      "jobs_impact_ar": "استبدال جزئي لإدخال البيانات والامتثال في المكاتب الخلفية",
+      "entity_ar": "البنك العربي الوطني (ANB)",
+      "entity_fr": "Arab National Bank (ANB)"
     },
     {
       "entity": "Saudi Post (SPL)",
@@ -12559,7 +12712,9 @@
       "impact_fr": "200 robots de tri déployés, plus grand centre de tri robotisé du Moyen-Orient",
       "impact_ar": "نشر 200 روبوت فرز، أكبر مركز فرز آلي في الشرق الأوسط",
       "jobs_impact_fr": "Postes de tri manuel réduits",
-      "jobs_impact_ar": "تقليل وظائف الفرز اليدوي"
+      "jobs_impact_ar": "تقليل وظائف الفرز اليدوي",
+      "entity_ar": "البريد السعودي (سبل)",
+      "entity_fr": "Saudi Post (SPL)"
     },
     {
       "entity": "BinDawood (Danube)",
@@ -12571,7 +12726,9 @@
       "impact_fr": "Dark stores entièrement automatisés pour la préparation e-commerce",
       "impact_ar": "متاجر مظلمة آلية بالكامل لتنفيذ طلبات التجارة الإلكترونية",
       "jobs_impact_fr": "Postes de préparation/emballage en entrepôt automatisés",
-      "jobs_impact_ar": "أتمتة وظائف انتقاء وتغليف المستودعات"
+      "jobs_impact_ar": "أتمتة وظائف انتقاء وتغليف المستودعات",
+      "entity_ar": "بن داود (الدانوب)",
+      "entity_fr": "BinDawood (Danube)"
     },
     {
       "entity": "Absher Platform",
@@ -12580,10 +12737,12 @@
       "jobs_impact": "Government counter staff demand reduced via non-replacement",
       "year": 2023,
       "country": "KSA",
-      "impact_fr": "12M+ opérations au S1 2023, 17 milliards SAR d'économies annuelles",
-      "impact_ar": "أكثر من 12 مليون عملية في النصف الأول 2023، توفير 17 مليار ريال سنوياً",
+      "impact_fr": "12M+ opérations au H1 2023, 17B SAR d’économies annuelles",
+      "impact_ar": "تنفيذ 12M+ عملية في H1 2023، وتوفير 17B SAR سنوياً",
       "jobs_impact_fr": "Personnel de guichet gouvernemental réduit",
-      "jobs_impact_ar": "تقليل موظفي المكاتب الحكومية"
+      "jobs_impact_ar": "تقليل موظفي المكاتب الحكومية",
+      "entity_ar": "منصة أبشر",
+      "entity_fr": "Plateforme Absher"
     },
     {
       "entity": "ZATCA Customs",
@@ -12592,10 +12751,12 @@
       "jobs_impact": "Document processing clerks replaced by AI workflows",
       "year": 2024,
       "country": "KSA",
-      "impact_fr": "Opérations douanières automatisées, temps de dédouanement réduit de 50%",
-      "impact_ar": "أتمتة العمليات الجمركية، تقليص زمن التخليص بنسبة 50%",
+      "impact_fr": "50% des opérations douanières automatisées, délai de dédouanement réduit de 24h→5h",
+      "impact_ar": "أتمتة 50% من العمليات الجمركية، وتقليص وقت التخليص من 24h→5h",
       "jobs_impact_fr": "Postes d'inspecteurs et de saisie douanière réduits",
-      "jobs_impact_ar": "تقليل وظائف المفتشين وإدخال البيانات الجمركية"
+      "jobs_impact_ar": "تقليل وظائف المفتشين وإدخال البيانات الجمركية",
+      "entity_ar": "هيئة الزكاة والضريبة والجمارك",
+      "entity_fr": "Douanes ZATCA"
     },
     {
       "entity": "KFSHRC Hospital",
@@ -12605,9 +12766,11 @@
       "year": 2024,
       "country": "KSA",
       "impact_fr": "20+ applications IA, 170K interventions automatisées, +25% de précision diagnostique",
-      "impact_ar": "أكثر من 20 تطبيق ذكاء اصطناعي، 170 ألف تدخل آلي، تحسن الدقة التشخيصية بنسبة 25%",
+      "impact_ar": "20+ تطبيقاً للذكاء الاصطناعي، و170K تدخلاً آلياً، وتحسن دقة التشخيص بنسبة 25%",
       "jobs_impact_fr": "Travail administratif et techniques diagnostiques routinières réduits",
-      "jobs_impact_ar": "تقليل العمل الإداري والتقنيات التشخيصية الروتينية"
+      "jobs_impact_ar": "تقليل العمل الإداري والتقنيات التشخيصية الروتينية",
+      "entity_ar": "مستشفى الملك فيصل التخصصي ومركز الأبحاث",
+      "entity_fr": "Hôpital KFSHRC"
     },
     {
       "entity": "NEOM (The Line)",
@@ -12619,7 +12782,9 @@
       "impact_fr": "Transport autonome natif, maintenance prédictive, gestion urbaine IA-first",
       "impact_ar": "نقل ذاتي القيادة بالكامل، صيانة تنبؤية، إدارة حضرية تعتمد على الذكاء الاصطناعي",
       "jobs_impact_fr": "Postes traditionnels de transport, logistique, gestion immobilière éliminés",
-      "jobs_impact_ar": "إلغاء وظائف النقل واللوجستيات وإدارة العقارات التقليدية"
+      "jobs_impact_ar": "إلغاء وظائف النقل واللوجستيات وإدارة العقارات التقليدية",
+      "entity_ar": "نيوم (ذا لاين)",
+      "entity_fr": "NEOM (THE LINE)"
     },
     {
       "entity": "Carrefour City+ Dubai",
@@ -12631,7 +12796,9 @@
       "impact_fr": "Magasin entièrement sans caisse utilisant la vision IA et le paiement automatique",
       "impact_ar": "متجر بدون كاشير بالكامل يستخدم رؤية الذكاء الاصطناعي والدفع التلقائي",
       "jobs_impact_fr": "Postes de caissier et de surveillance entièrement supprimés",
-      "jobs_impact_ar": "إلغاء كامل لوظائف الكاشير والمراقبة"
+      "jobs_impact_ar": "إلغاء كامل لوظائف الكاشير والمراقبة",
+      "entity_ar": "كارفور سيتي+ دبي",
+      "entity_fr": "Carrefour City+ Dubaï"
     },
     {
       "entity": "Emirates NBD",
@@ -12643,7 +12810,9 @@
       "impact_fr": "800 postes supprimés (~10% des effectifs), accélérés par Covid + digitalisation",
       "impact_ar": "إلغاء 800 وظيفة (~10% من القوى العاملة)، بسبب كوفيد والتحول الرقمي",
       "jobs_impact_fr": "Fonctions support et back-office bancaire réduites",
-      "jobs_impact_ar": "تقليل وظائف الدعم والمكاتب الخلفية المصرفية"
+      "jobs_impact_ar": "تقليل وظائف الدعم والمكاتب الخلفية المصرفية",
+      "entity_ar": "بنك الإمارات دبي الوطني",
+      "entity_fr": "Emirates NBD"
     },
     {
       "entity": "Dubai/Abu Dhabi Autonomous Taxis",
@@ -12655,7 +12824,9 @@
       "impact_fr": "Programmes pilotes Cruise et TXAI pour taxis autonomes",
       "impact_ar": "برامج تجريبية لـ Cruise و TXAI للسيارات الذاتية القيادة",
       "jobs_impact_fr": "Postes de chauffeurs de taxi à risque sur 10 ans",
-      "jobs_impact_ar": "وظائف سائقي الأجرة في خطر خلال 10 سنوات"
+      "jobs_impact_ar": "وظائف سائقي الأجرة في خطر خلال 10 سنوات",
+      "entity_ar": "سيارات الأجرة ذاتية القيادة في دبي وأبوظبي",
+      "entity_fr": "Taxis autonomes de Dubaï et d’Abou Dhabi"
     }
   ],
   "v2030": {
@@ -13161,140 +13332,220 @@
         "quota_pct": 40,
         "phase": "Phase 2",
         "effective": "25 March 2024",
-        "note": "Financial, business, cybersecurity, project-management consulting"
+        "note": "Financial, business, cybersecurity, project-management consulting",
+        "note_ar": "استشارات مالية وتجارية وأمن سيبراني وإدارة مشاريع",
+        "note_fr": "Conseil financier, commercial, en cybersécurité et en gestion de projet",
+        "profession_ar": "المهن الاستشارية",
+        "profession_fr": "Métiers du conseil"
       },
       {
         "profession": "Project management professions",
         "quota_pct": 40,
         "phase": "Phase 2",
         "effective": "12 December 2024",
-        "note": "Min salary SAR 6,000 for Saudis; entities with 3-5+ PM staff"
+        "note": "Min salary SAR 6,000 for Saudis; entities with 3-5+ PM staff",
+        "note_ar": "الحد الأدنى لراتب السعوديين SAR 6,000؛ المنشآت التي تضم 3-5+ من موظفي إدارة المشاريع",
+        "note_fr": "Salaire minimum de SAR 6,000 pour les Saoudiens ; entités avec 3-5+ employés en gestion de projet",
+        "profession_ar": "مهن إدارة المشاريع",
+        "profession_fr": "Métiers de la gestion de projet"
       },
       {
         "profession": "Procurement professions",
         "quota_pct": 50,
         "phase": "Current",
         "effective": "2023",
-        "note": "Rising to 70% from 30 Nov 2025; entities with 3+ procurement staff"
+        "note": "Rising to 70% from 30 Nov 2025; entities with 3+ procurement staff",
+        "note_ar": "ترتفع إلى 70% اعتباراً من 30 نوفمبر 2025؛ المنشآت التي تضم 3+ من موظفي المشتريات",
+        "note_fr": "Passe à 70% à partir du 30 nov. 2025 ; entités avec 3+ employés aux achats",
+        "profession_ar": "مهن المشتريات",
+        "profession_fr": "Métiers des achats"
       },
       {
         "profession": "Sales professions",
         "quota_pct": 15,
         "phase": "Phase 1",
         "effective": "24 December 2023",
-        "note": "Entities with 5+ sales employees"
+        "note": "Entities with 5+ sales employees",
+        "note_ar": "المنشآت التي تضم 5+ من موظفي المبيعات",
+        "note_fr": "Entités avec 5+ employés commerciaux",
+        "profession_ar": "مهن المبيعات",
+        "profession_fr": "Métiers de la vente"
       },
       {
         "profession": "Engineering professions",
         "quota_pct": 25,
         "phase": "Phase 1",
         "effective": "21 July 2024",
-        "note": "Entities with 5+ engineers; rising to 30% by mid-2026"
+        "note": "Entities with 5+ engineers; rising to 30% by mid-2026",
+        "note_ar": "المنشآت التي تضم 5+ مهندسين؛ ترتفع إلى 30% بحلول منتصف 2026",
+        "note_fr": "Entités avec 5+ ingénieurs ; passe à 30% d’ici mi-2026",
+        "profession_ar": "المهن الهندسية",
+        "profession_fr": "Métiers de l’ingénierie"
       },
       {
         "profession": "Dentistry (private sector)",
         "quota_pct": 35,
         "phase": "Phase 1",
         "effective": "10 March 2024",
-        "note": "Joint HRSD-MoH decision"
+        "note": "Joint HRSD-MoH decision",
+        "note_ar": "قرار مشترك بين وزارة الموارد البشرية ووزارة الصحة",
+        "note_fr": "Décision conjointe des ministères des Ressources humaines et de la Santé",
+        "profession_ar": "طب الأسنان (القطاع الخاص)",
+        "profession_fr": "Dentisterie (secteur privé)"
       },
       {
         "profession": "Radiology (private healthcare)",
         "quota_pct": 65,
         "phase": "Phase 1-2",
         "effective": "17 April 2025",
-        "note": "Phase 2 from 17 Oct 2025 all facilities"
+        "note": "Phase 2 from 17 Oct 2025 all facilities",
+        "note_ar": "المرحلة 2 اعتباراً من 17 أكتوبر 2025 لجميع المنشآت",
+        "note_fr": "Phase 2 à partir du 17 oct. 2025 pour tous les établissements",
+        "profession_ar": "الأشعة (الرعاية الصحية الخاصة)",
+        "profession_fr": "Radiologie (santé privée)"
       },
       {
         "profession": "Medical laboratories",
         "quota_pct": 70,
         "phase": "Phase 1-2",
         "effective": "17 April 2025",
-        "note": "Phase 2 from 17 Oct 2025"
+        "note": "Phase 2 from 17 Oct 2025",
+        "note_ar": "المرحلة 2 اعتباراً من 17 أكتوبر 2025",
+        "note_fr": "Phase 2 à partir du 17 oct. 2025",
+        "profession_ar": "المختبرات الطبية",
+        "profession_fr": "Laboratoires médicaux"
       },
       {
         "profession": "Clinical nutrition",
         "quota_pct": 80,
         "phase": "Phase 1-2",
         "effective": "17 April 2025",
-        "note": "Phase 2 from 17 Oct 2025"
+        "note": "Phase 2 from 17 Oct 2025",
+        "note_ar": "المرحلة 2 اعتباراً من 17 أكتوبر 2025",
+        "note_fr": "Phase 2 à partir du 17 oct. 2025",
+        "profession_ar": "التغذية العلاجية",
+        "profession_fr": "Nutrition clinique"
       },
       {
         "profession": "Physiotherapy",
         "quota_pct": 80,
         "phase": "Phase 1-2",
         "effective": "17 April 2025",
-        "note": "Phase 2 from 17 Oct 2025"
+        "note": "Phase 2 from 17 Oct 2025",
+        "note_ar": "المرحلة 2 اعتباراً من 17 أكتوبر 2025",
+        "note_fr": "Phase 2 à partir du 17 oct. 2025",
+        "profession_ar": "العلاج الطبيعي",
+        "profession_fr": "Kinésithérapie"
       },
       {
         "profession": "Public education in private schools",
         "quota_pct": 50,
         "phase": "Phase 1",
         "effective": "Semester 1445 AH",
-        "note": "National identity subjects: religion, Arabic, social sciences"
+        "note": "National identity subjects: religion, Arabic, social sciences",
+        "note_ar": "مواد الهوية الوطنية: الدين والعربية والعلوم الاجتماعية",
+        "note_fr": "Matières liées à l’identité nationale : religion, arabe, sciences sociales",
+        "profession_ar": "التعليم العام في المدارس الخاصة",
+        "profession_fr": "Enseignement général dans les écoles privées"
       },
       {
         "profession": "HR professions",
         "quota_pct": 100,
         "phase": "Enforced",
         "effective": "Ongoing (reiterated March 2024)",
-        "note": "All HR roles reserved for Saudis"
+        "note": "All HR roles reserved for Saudis",
+        "note_ar": "جميع وظائف الموارد البشرية مقصورة على السعوديين",
+        "note_fr": "Tous les postes RH réservés aux Saoudiens",
+        "profession_ar": "مهن الموارد البشرية",
+        "profession_fr": "Métiers des ressources humaines"
       },
       {
         "profession": "ICT core professions",
         "quota_pct": 25,
         "phase": "Phase 1",
         "effective": "June 2021",
-        "note": "Entities with 5+ ICT staff; Ministerial Decree No. 28889"
+        "note": "Entities with 5+ ICT staff; Ministerial Decree No. 28889",
+        "note_ar": "المنشآت التي تضم 5+ من موظفي الاتصالات وتقنية المعلومات؛ القرار الوزاري رقم 28889",
+        "note_fr": "Entités avec 5+ salariés TIC ; décret ministériel n° 28889",
+        "profession_ar": "مهن الاتصالات وتقنية المعلومات الأساسية",
+        "profession_fr": "Métiers principaux des TIC"
       },
       {
         "profession": "Vehicle inspection outlets",
         "quota_pct": 100,
         "phase": "Phase 2",
         "effective": "31 May 2024",
-        "note": "11 professions in vehicle inspection stations"
+        "note": "11 professions in vehicle inspection stations",
+        "note_ar": "11 مهنة في محطات فحص المركبات",
+        "note_fr": "11 métiers dans les centres de contrôle technique",
+        "profession_ar": "منافذ فحص المركبات",
+        "profession_fr": "Centres de contrôle technique automobile"
       },
       {
         "profession": "Postal and parcel-delivery outlets",
         "quota_pct": 100,
         "phase": "Enforced",
         "effective": "17 December 2022",
-        "note": "14 activities in delivery services"
+        "note": "14 activities in delivery services",
+        "note_ar": "14 نشاطاً في خدمات التوصيل",
+        "note_fr": "14 activités dans les services de livraison",
+        "profession_ar": "منافذ البريد وتوصيل الطرود",
+        "profession_fr": "Points de vente postaux et de livraison de colis"
       },
       {
         "profession": "Entertainment centers in malls",
         "quota_pct": 100,
         "phase": "Enforced",
         "effective": "2022",
-        "note": "100% for entertainment in closed commercial complexes"
+        "note": "100% for entertainment in closed commercial complexes",
+        "note_ar": "100% للترفيه في المجمعات التجارية المغلقة",
+        "note_fr": "100% pour les loisirs dans les centres commerciaux fermés",
+        "profession_ar": "مراكز الترفيه في المجمعات التجارية",
+        "profession_fr": "Centres de loisirs dans les centres commerciaux"
       },
       {
         "profession": "Aviation - Airline Transport Pilot",
         "quota_pct": 70,
         "phase": "Phase 2",
         "effective": "4 March 2024",
-        "note": "Up from 60%"
+        "note": "Up from 60%",
+        "note_ar": "ارتفاعاً من 60%",
+        "note_fr": "Hausse par rapport à 60%",
+        "profession_ar": "الطيران - قائد طائرة نقل جوي",
+        "profession_fr": "Aviation - Pilote de ligne"
       },
       {
         "profession": "Aviation - Cabin Crew",
         "quota_pct": 60,
         "phase": "Phase 2",
         "effective": "4 March 2024",
-        "note": "Up from 50%"
+        "note": "Up from 50%",
+        "note_ar": "ارتفاعاً من 50%",
+        "note_fr": "Hausse par rapport à 50%",
+        "profession_ar": "الطيران - طاقم الضيافة الجوية",
+        "profession_fr": "Aviation - Personnel de cabine"
       },
       {
         "profession": "Medina Province - Restaurants",
         "quota_pct": 40,
         "phase": "Regional",
         "effective": "2023",
-        "note": "Excluding certain support roles; 4+ staff per shift"
+        "note": "Excluding certain support roles; 4+ staff per shift",
+        "note_ar": "باستثناء بعض وظائف الدعم؛ 4+ موظفين لكل وردية",
+        "note_fr": "Hors certains postes de soutien ; 4+ employés par quart",
+        "profession_ar": "منطقة المدينة المنورة - المطاعم",
+        "profession_fr": "Province de Médine - Restaurants"
       },
       {
         "profession": "Medina Province - Cafes",
         "quota_pct": 50,
         "phase": "Regional",
         "effective": "2023",
-        "note": "2+ staff per shift"
+        "note": "2+ staff per shift",
+        "note_ar": "2+ موظفين لكل وردية",
+        "note_fr": "2+ employés par quart",
+        "profession_ar": "منطقة المدينة المنورة - المقاهي",
+        "profession_fr": "Province de Médine - Cafés"
       }
     ],
     "other_100pct_localized": [
@@ -13534,7 +13785,8 @@
         "Trojena",
         "Sindalah"
       ],
-      "source": "CEO Nadhmi Al-Nasr (2024); consulting estimates"
+      "source": "CEO Nadhmi Al-Nasr (2024); consulting estimates",
+      "name_fr": "NEOM"
     },
     {
       "name": "Red Sea Project",
@@ -13542,7 +13794,8 @@
       "region": "Tabuk",
       "long_term_jobs": 70000,
       "note": "Direct + indirect + induced",
-      "source": "Red Sea Global official"
+      "source": "Red Sea Global official",
+      "name_fr": "Projet de la mer Rouge"
     },
     {
       "name": "AMAALA",
@@ -13550,7 +13803,8 @@
       "region": "Tabuk/Madinah",
       "long_term_jobs": 50000,
       "note": "Direct + indirect + induced for Saudis",
-      "source": "Vision 2030 official"
+      "source": "Vision 2030 official",
+      "name_fr": "AMAALA"
     },
     {
       "name": "Qiddiya",
@@ -13558,7 +13812,8 @@
       "region": "Riyadh",
       "long_term_jobs": 325000,
       "additional_seven": 22000,
-      "source": "Qiddiya Investment Company official"
+      "source": "Qiddiya Investment Company official",
+      "name_fr": "Qiddiya"
     },
     {
       "name": "Diriyah",
@@ -13567,7 +13822,8 @@
       "long_term_jobs": 55000,
       "current_staff": 2600,
       "staff_saudization": "80%",
-      "source": "DGDA leadership"
+      "source": "DGDA leadership",
+      "name_fr": "Diriyah"
     },
     {
       "name": "Jeddah Central",
@@ -13575,7 +13831,8 @@
       "region": "Makkah",
       "long_term_jobs": 25000,
       "note": "Direct + indirect; 2030 horizon",
-      "source": "Jeddah Central Development Co."
+      "source": "Jeddah Central Development Co.",
+      "name_fr": "Jeddah Central"
     }
   ],
   "labor_market": {

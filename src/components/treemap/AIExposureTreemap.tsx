@@ -147,7 +147,7 @@ export default function AIExposureTreemap() {
                       />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-text-primary truncate">
-                          {lang === "ar" ? occ.name_ar : occ.name_en}
+                          {lang === "ar" ? occ.name_ar : lang === "fr" ? occ.name_fr : occ.name_en}
                         </p>
                         <p className="text-xs text-text-muted font-mono">
                           {formatNumber(occ.employment, lang)} {t.treemap.workers.toLowerCase()} · {(occ.composite / 10).toFixed(1)}/10
@@ -173,7 +173,7 @@ export default function AIExposureTreemap() {
           <p className="text-xs text-text-muted/50 mt-3">
             {lang === "ar"
               ? "المصدر: الهيئة العامة للإحصاء / التأمينات الاجتماعية الربع الرابع 2024 · تقييم الذكاء الاصطناعي: Frey-Osborne, Eloundou, Felten"
-              : "Source: GASTAT / GOSI Q4-2024 · AI scores: Frey-Osborne, Eloundou, Felten"}
+              : lang === "fr" ? "Source : GASTAT / GOSI Q4-2024 · Scores IA : Frey-Osborne, Eloundou, Felten" : "Source: GASTAT / GOSI Q4-2024 · AI scores: Frey-Osborne, Eloundou, Felten"}
           </p>
         </div>
       </div>

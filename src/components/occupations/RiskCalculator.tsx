@@ -37,25 +37,18 @@ const allOccupations: Occupation[] = [
   return true;
 }).sort((a, b) => b.composite - a.composite) as Occupation[];
 
-function categoryLabel(cat: string): string {
+function categoryLabel(cat: string, labels: { fullSub: string; partialSub: string; augmentation: string }): string {
   const map: Record<string, string> = {
-    substitution: "Full Substitution",
-    substitution_partial: "Partial Substitution",
-    augmentation: "Augmentation (AI as co-pilot)",
+    substitution: labels.fullSub,
+    substitution_partial: labels.partialSub,
+    augmentation: labels.augmentation,
   };
   return map[cat] || cat;
 }
 
-const wefTrendLabels: Record<string, string> = {
-  decline_brutal: "Rapid Decline",
-  decline: "Declining",
-  stable: "Stable",
-  growth: "Growing",
-};
-
-function wefTrendLabel(trend?: string): string {
-  if (!trend) return "N/A";
-  return wefTrendLabels[trend] || trend.replace(/_/g, " ");
+function wefTrendLabel(trend: string | undefined, labels: { rapidDecline: string; declining: string; growing: string; notAvailable: string; stable: string }): string {
+  if (!trend) return labels.notAvailable;
+  return ({ decline_brutal: labels.rapidDecline, decline: labels.declining, stable: labels.stable, growth: labels.growing } as Record<string, string>)[trend] || trend.replace(/_/g, " ");
 }
 
 function wefTrendIcon(trend?: string): string {
@@ -175,6 +168,11 @@ const PHASE_AR: Record<string, string> = {
   "Regional": "إقليمي",
 };
 
+const PROGRAM_TYPE_AR: Record<string, string> = { "E-Training": "تدريب إلكتروني", "AI Literacy": "الإلمام بالذكاء الاصطناعي", "Digital Skills": "مهارات رقمية", Certification: "شهادة مهنية", "Wage Subsidy": "دعم الأجور", "On-the-job Training": "تدريب على رأس العمل", "Tech Training": "تدريب تقني", "On-the-Job Training": "تدريب على رأس العمل", "On-the-job": "على رأس العمل", "Sectoral Training": "تدريب قطاعي" };
+const PROGRAM_TYPE_FR: Record<string, string> = { "E-Training": "Formation en ligne", "AI Literacy": "Initiation à l’IA", "Digital Skills": "Compétences numériques", Certification: "Certification", "Wage Subsidy": "Subvention salariale", "On-the-job Training": "Formation en situation de travail", "Tech Training": "Formation technique", "On-the-Job Training": "Formation en situation de travail", "On-the-job": "En situation de travail", "Sectoral Training": "Formation sectorielle" };
+const PROGRAM_RELEVANCE_AR: Record<string, string> = { "Digital reskilling tracks (AI, data, cloud)": "مسارات إعادة التأهيل الرقمي (الذكاء الاصطناعي، البيانات، الحوسبة السحابية)", "Free AI fundamentals certificate (SDAIA)": "شهادة مجانية في أساسيات الذكاء الاصطناعي (سدايا)", "100K+ trainees across 40 digital learning tracks": "أكثر من 100K متدرب ضمن 40 مساراً للتعلم الرقمي", "HRDF reimburses up to SAR 1,350/cert for approved qualifications": "يعوض هدف حتى SAR 1,350 لكل شهادة مؤهلة", "30-50% salary subsidy up to SAR 3,000/month for 24 months": "دعم رواتب 30-50% حتى SAR 3,000 شهرياً لمدة 24 شهراً", "3-6 month placement; SAR 3,000/month stipend for graduates": "تدريب لمدة 3-6 أشهر؛ مكافأة SAR 3,000 شهرياً للخريجين", "Web dev, AI, cloud, game design programs": "برامج تطوير الويب والذكاء الاصطناعي والحوسبة السحابية وتصميم الألعاب", "Digital reskilling tracks": "مسارات إعادة التأهيل الرقمي", "On-the-job training for fresh graduates at top employers": "تدريب الخريجين الجدد على رأس العمل لدى كبار أصحاب العمل", "Mandatory for firms 50+ employees since 2024": "إلزامي للمنشآت التي تضم 50+ موظفاً منذ 2024", "34,299 tourism training beneficiaries in 2023": "استفاد 34,299 شخصاً من التدريب السياحي في 2023" };
+const PROGRAM_RELEVANCE_FR: Record<string, string> = { "Digital reskilling tracks (AI, data, cloud)": "Parcours de reconversion numérique (IA, données, cloud)", "Free AI fundamentals certificate (SDAIA)": "Certificat gratuit sur les bases de l’IA (SDAIA)", "100K+ trainees across 40 digital learning tracks": "Plus de 100K stagiaires dans 40 parcours numériques", "HRDF reimburses up to SAR 1,350/cert for approved qualifications": "Le HRDF rembourse jusqu’à SAR 1,350 par certification approuvée", "30-50% salary subsidy up to SAR 3,000/month for 24 months": "Subvention salariale de 30-50% jusqu’à SAR 3,000/mois pendant 24 mois", "3-6 month placement; SAR 3,000/month stipend for graduates": "Stage de 3-6 mois ; allocation de SAR 3,000/mois pour les diplômés", "Web dev, AI, cloud, game design programs": "Programmes de développement web, IA, cloud et conception de jeux", "Digital reskilling tracks": "Parcours de reconversion numérique", "On-the-job training for fresh graduates at top employers": "Formation en emploi pour jeunes diplômés chez de grands employeurs", "Mandatory for firms 50+ employees since 2024": "Obligatoire depuis 2024 pour les entreprises de 50+ salariés", "34,299 tourism training beneficiaries in 2023": "34,299 bénéficiaires de formations au tourisme en 2023" };
+
 type OccTab = "ai_risk" | "salary" | "nitaqat" | "reskilling";
 
 export default function RiskCalculator() {
@@ -185,7 +183,7 @@ export default function RiskCalculator() {
   const [activeTab, setActiveTab] = useState<OccTab>("ai_risk");
 
   const occName = (occ: Occupation) =>
-    lang === "ar" && occ.name_ar ? occ.name_ar : occ.name_en;
+    lang === "ar" && occ.name_ar ? occ.name_ar : lang === "fr" && occ.name_fr ? occ.name_fr : occ.name_en;
 
   const filtered = useMemo(() => {
     if (!query.trim()) return [];
@@ -228,15 +226,9 @@ export default function RiskCalculator() {
 
   // KSA context text
   function getKSAContext(occ: Occupation): string {
-    const contexts: Record<string, string> = {
-      very_high: `This occupation is highly relevant in the Saudi market. With ${occ.nitaqat_risk === "very_high" ? "aggressive Saudization targets" : "a large expatriate workforce"}, the double pressure of AI automation and Nitaqat compliance creates unique challenges.`,
-      high: `This occupation is significant in Saudi Arabia's economy, particularly in the context of Vision 2030 economic diversification.`,
-      moderate: `This role exists in the Saudi market but may have different dynamics compared to Western economies due to the Nitaqat system and Vision 2030 priorities.`,
-    };
-    return (
-      contexts[occ.ksa_relevance] ||
-      "This occupation is present in the Saudi labor market."
-    );
+    const d = t.riskTool.details;
+    if (occ.ksa_relevance === "very_high") return occ.nitaqat_risk === "very_high" ? d.contextVeryHighQuota : d.contextVeryHighExpat;
+    return ({ high: d.contextHigh, moderate: d.contextModerate } as Record<string, string>)[occ.ksa_relevance] || d.contextOther;
   }
 
   const tabClass = (tab: OccTab) =>
@@ -417,7 +409,7 @@ export default function RiskCalculator() {
                           m.occupation.composite > 40 ? "bg-amber-500" :
                           "bg-green-500"
                         }`} />
-                        <span>AI: {m.occupation.composite}/100</span>
+                        <span>{lang === "ar" ? "الذكاء الاصطناعي" : lang === "fr" ? "IA" : "AI"}: {m.occupation.composite}/100</span>
                         <span>|</span>
                         <span>{m.occupation.salary_entry_sar.toLocaleString()}-{m.occupation.salary_senior_sar.toLocaleString()} SAR</span>
                       </div>
@@ -463,7 +455,7 @@ export default function RiskCalculator() {
                   <div className="flex justify-between text-xs text-text-muted mb-1">
                     <span>{t.common.low}</span>
                     <span>
-                      AI Risk Score:{" "}
+                      {t.riskTool.details.aiScore}{" "}
                       <span className="text-text-primary font-mono">
                         {selected.composite.toFixed(1)}
                       </span>{" "}
@@ -471,12 +463,12 @@ export default function RiskCalculator() {
                       {(() => {
                         const trend = getScoreTrend(toSlug(selected.name_en), selected.composite);
                         if (trend.direction === "up") return (
-                          <span className="text-red-400 text-xs font-mono ml-2">&#9650; +{trend.delta} vs Q4-2025</span>
+                          <span className="text-red-400 text-xs font-mono ml-2">&#9650; +{trend.delta} {t.riskTool.details.vs} Q4-2025</span>
                         );
                         if (trend.direction === "down") return (
-                          <span className="text-green-400 text-xs font-mono ml-2">&#9660; {trend.delta} vs Q4-2025</span>
+                          <span className="text-green-400 text-xs font-mono ml-2">&#9660; {trend.delta} {t.riskTool.details.vs} Q4-2025</span>
                         );
-                        return <span className="text-text-muted text-xs font-mono ml-2">&#9473; stable</span>;
+                        return <span className="text-text-muted text-xs font-mono ml-2">&#9473; {t.riskTool.details.stable}</span>;
                       })()}
                     </span>
                     <span>{t.common.veryHigh}</span>
@@ -533,7 +525,7 @@ export default function RiskCalculator() {
                   {/* Verdict */}
                   <div className="bg-bg-secondary/50 rounded-lg p-4">
                     <h4 className="text-xs uppercase tracking-wider text-text-muted mb-2">
-                      AI Impact Assessment
+                      {t.riskTool.details.aiImpact}
                     </h4>
                     <p className="text-text-secondary leading-relaxed text-sm">
                       {getVerdict(selected)}
@@ -547,7 +539,7 @@ export default function RiskCalculator() {
                         {selected.frey_osborne}%
                       </p>
                       <p className="text-xs text-text-muted mt-1">
-                        Automation prob.
+                        {t.riskTool.details.automation}
                       </p>
                     </div>
                     <div className="bg-bg-secondary/30 rounded-lg p-3 text-center">
@@ -555,7 +547,7 @@ export default function RiskCalculator() {
                         {selected.eloundou.toFixed(2)}
                       </p>
                       <p className="text-xs text-text-muted mt-1">
-                        LLM exposure
+                        {t.riskTool.details.llm}
                       </p>
                     </div>
                     <div className="bg-bg-secondary/30 rounded-lg p-3 text-center">
@@ -569,10 +561,10 @@ export default function RiskCalculator() {
                         }`}
                       >
                         {wefTrendIcon(selected.wef_trend)}{" "}
-                        {wefTrendLabel(selected.wef_trend)}
+                        {wefTrendLabel(selected.wef_trend, t.riskTool.details)}
                       </span>
                       <p className="text-xs text-text-muted mt-1">
-                        WEF 2030 outlook
+                        {t.riskTool.details.wefOutlook}
                       </p>
                     </div>
                   </div>
@@ -582,7 +574,7 @@ export default function RiskCalculator() {
                     <div className="bg-bg-secondary rounded-lg p-4">
                       <p className="text-xs text-text-muted mb-1">
                         Eloundou/OpenAI
-                        <InfoTooltip text="Measures what percentage of an occupation's tasks could be significantly impacted by Large Language Models (like ChatGPT). 0 = no impact, 1 = all tasks affected. Source: OpenAI/UPenn 2023." />
+                        <InfoTooltip text={t.riskTool.details.tooltipEloundou} />
                       </p>
                       <p className="font-mono font-bold text-2xl text-text-primary">
                         {selected.eloundou.toFixed(2)}{" "}
@@ -602,7 +594,7 @@ export default function RiskCalculator() {
                     <div className="bg-bg-secondary rounded-lg p-4">
                       <p className="text-xs text-text-muted mb-1">
                         Frey-Osborne
-                        <InfoTooltip text="Probability that this occupation will be automated within the next 10-20 years, based on the original Oxford University study of 702 occupations. Published in 2017, before the GenAI revolution." />
+                        <InfoTooltip text={t.riskTool.details.tooltipFrey} />
                       </p>
                       <p className="font-mono font-bold text-2xl text-text-primary">
                         {selected.frey_osborne}%
@@ -618,20 +610,20 @@ export default function RiskCalculator() {
                     </div>
                     <div className="bg-bg-secondary rounded-lg p-4">
                       <p className="text-xs text-text-muted mb-1">
-                        Felten AIOE
-                        <InfoTooltip text="AI Occupational Exposure Index: measures how well current AI capabilities (language, vision, reasoning) map to the tasks required by this occupation. Updated annually." />
+                        {t.riskTool.details.felten}
+                        <InfoTooltip text={t.riskTool.details.tooltipFelten} />
                       </p>
                       <p className="font-semibold text-lg capitalize text-text-primary">
-                        {riskLabel(selected.felten)}
+                        {({ very_high: t.riskTool.details.veryHigh, high: t.riskTool.details.high, moderate: t.riskTool.details.moderate, low: t.riskTool.details.low, very_low: t.common.veryLow } as Record<string, string>)[selected.felten] || riskLabel(selected.felten)}
                       </p>
                     </div>
                     <div className="bg-bg-secondary rounded-lg p-4">
                       <p className="text-xs text-text-muted mb-1">
-                        Category
-                        <InfoTooltip text="Substitution = AI replaces the worker entirely. Partial Substitution = some tasks automated, others remain. Augmentation = AI makes the worker more productive but doesn't replace them." />
+                        {t.riskTool.details.category}
+                        <InfoTooltip text={t.riskTool.details.tooltipCategory} />
                       </p>
                       <p className="font-semibold text-sm text-text-primary">
-                        {categoryLabel(selected.category)}
+                        {categoryLabel(selected.category, t.riskTool.details)}
                       </p>
                     </div>
                   </div>
@@ -640,7 +632,7 @@ export default function RiskCalculator() {
                   {selected.wef_trend && (
                     <div className="bg-bg-secondary rounded-lg p-4 flex items-center gap-3">
                       <span className="text-sm font-semibold text-text-secondary">
-                        WEF 2030 Trend:
+                        {t.riskTool.details.wefTrend}
                       </span>
                       <span
                         className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold ${
@@ -652,7 +644,7 @@ export default function RiskCalculator() {
                         }`}
                       >
                         {wefTrendIcon(selected.wef_trend)}{" "}
-                        {wefTrendLabel(selected.wef_trend)}
+                        {wefTrendLabel(selected.wef_trend, t.riskTool.details)}
                       </span>
                     </div>
                   )}
@@ -660,17 +652,17 @@ export default function RiskCalculator() {
                   {/* Saudi context */}
                   <div className="bg-bg-secondary/50 rounded-lg p-4">
                     <h4 className="text-xs uppercase tracking-wider text-text-muted mb-2">
-                      Saudi Arabia Context
+                      {t.riskTool.details.saudiContext}
                     </h4>
                     <p className="text-text-secondary text-sm leading-relaxed">
                       {getKSAContext(selected)}
                     </p>
                     <div className="mt-2 text-sm text-text-muted">
                       <span className="font-semibold text-text-secondary">
-                        KSA Relevance:
+                        {t.riskTool.details.ksaRelevance}
                       </span>{" "}
                       <span className="capitalize">
-                        {selected.ksa_relevance.replace(/_/g, " ")}
+                        {({ very_high: t.riskTool.details.veryHigh, high: t.riskTool.details.high, moderate: t.riskTool.details.moderate, low: t.riskTool.details.low } as Record<string, string>)[selected.ksa_relevance] || selected.ksa_relevance.replace(/_/g, " ")}
                       </span>
                     </div>
                   </div>
@@ -755,16 +747,14 @@ export default function RiskCalculator() {
                       className="bg-accent-primary/10 border border-accent-primary/20 rounded-lg p-3"
                     >
                       <p className="text-xs text-text-secondary">
-                        {lang === "ar"
-                          ? "رواتب الوافدين عادةً أقل بنسبة 40-60% من المواطنين السعوديين لنفس الأدوار"
-                          : "Expat salaries are typically 40-60% lower than Saudi nationals for equivalent roles"}
+                        {t.riskTool.details.expatSalary}
                       </p>
                     </motion.div>
                   )}
 
                   {/* Source & disclaimer */}
                   <div className="mt-3 pt-3 border-t border-white/10 text-xs text-text-muted">
-                    <span>{t.salary.source}: {selected.salary_source}</span>
+                    <span>{t.salary.source}: {lang === "ar" ? selected.salary_source_ar || selected.salary_source : lang === "fr" ? selected.salary_source_fr || selected.salary_source : selected.salary_source}</span>
                   </div>
                   <p className="text-xs text-text-muted/60">{t.salary.note}</p>
                 </div>
@@ -865,7 +855,7 @@ export default function RiskCalculator() {
                             >
                               <div className="flex items-center justify-between mb-2">
                                 <span className="text-sm font-semibold text-text-primary">
-                                  {lang === "ar" && TAWTEEN_PROFESSION_AR[d.profession] ? TAWTEEN_PROFESSION_AR[d.profession] : d.profession}
+                                  {lang === "ar" ? d.profession_ar || TAWTEEN_PROFESSION_AR[d.profession] || d.profession : lang === "fr" ? d.profession_fr || d.profession : d.profession}
                                 </span>
                                 <span className="font-mono text-sm text-accent-gold font-bold">
                                   {d.quota_pct}%{" "}
@@ -876,7 +866,7 @@ export default function RiskCalculator() {
                               </div>
                               <div className="flex flex-wrap gap-2 text-xs text-text-muted">
                                 <span className="bg-white/5 px-2 py-0.5 rounded">
-                                  {lang === "ar" && PHASE_AR[d.phase] ? PHASE_AR[d.phase] : d.phase}
+                                  {lang === "ar" ? PHASE_AR[d.phase] || d.phase : lang === "fr" ? ({ "Phase 1": "Phase 1", "Phase 2": "Phase 2", "Phase 1-2": "Phases 1-2", Current: "En vigueur", Enforced: "Appliqué", Regional: "Régional" } as Record<string, string>)[d.phase] || d.phase : d.phase}
                                 </span>
                                 <span className="bg-white/5 px-2 py-0.5 rounded">
                                   {d.effective}
@@ -884,7 +874,7 @@ export default function RiskCalculator() {
                               </div>
                               {d.note && (
                                 <p className="text-xs text-text-muted mt-2">
-                                  {d.note}
+                                  {lang === "ar" ? d.note_ar || d.note : lang === "fr" ? d.note_fr || d.note : d.note}
                                 </p>
                               )}
                             </div>
@@ -939,13 +929,13 @@ export default function RiskCalculator() {
                                 <span className="font-semibold text-text-secondary">
                                   {t.riskTool.reskilling.type}:
                                 </span>{" "}
-                                {prog.type}
+                                {lang === "ar" ? PROGRAM_TYPE_AR[prog.type] || prog.type : lang === "fr" ? PROGRAM_TYPE_FR[prog.type] || prog.type : prog.type}
                               </span>
                               <span className="text-text-muted">
                                 <span className="font-semibold text-text-secondary">
                                   {t.riskTool.reskilling.relevance}:
                                 </span>{" "}
-                                {prog.relevance}
+                                {lang === "ar" ? PROGRAM_RELEVANCE_AR[prog.relevance] || prog.relevance : lang === "fr" ? PROGRAM_RELEVANCE_FR[prog.relevance] || prog.relevance : prog.relevance}
                               </span>
                             </div>
                           </div>
@@ -975,7 +965,7 @@ export default function RiskCalculator() {
                   {t.jobPage.viewFullAnalysis}
                 </Link>
                 <span className="text-xs text-text-muted">
-                  Rank #{rankedOccupations.indexOf(selected) + 1} {t.riskTool.rankOf} {rankedOccupations.length} {t.riskTool.occupationsCount}
+                  {t.riskTool.details.rank}{rankedOccupations.indexOf(selected) + 1} {t.riskTool.rankOf} {rankedOccupations.length} {t.riskTool.occupationsCount}
                 </span>
               </div>
             </motion.div>

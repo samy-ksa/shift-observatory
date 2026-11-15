@@ -31,14 +31,14 @@ export default function LayoffsTicker() {
             {[...items, ...items].map((c, i) => (
               <span key={i} className="inline-flex items-center gap-2 mx-6">
                 <span className="text-text-primary font-medium text-sm">
-                  {c.company}
+                  {lang === "ar" ? c.company.replace("(Ads)", "(الإعلانات)").replace("(UX)", "(تجربة المستخدم)") : lang === "fr" ? c.company.replace("(Ads)", "(publicité)").replace("(UX)", "(expérience utilisateur)") : c.company}
                 </span>
                 <span className="text-risk-very-high font-mono font-bold text-sm">
                   -{formatNumber(c.jobs!, lang)}
                 </span>
-                <span className="text-text-muted text-xs">{lang === "ar" ? "وظيفة" : "jobs"}</span>
+                <span className="text-text-muted text-xs">{lang === "ar" ? "وظيفة" : lang === "fr" ? "emplois" : "jobs"}</span>
                 <span className="bg-risk-very-high/20 text-risk-very-high text-xs px-1.5 py-0.5 rounded font-medium">
-                  AI
+                  {lang === "ar" ? "ذكاء اصطناعي" : lang === "fr" ? "IA" : "AI"}
                 </span>
               </span>
             ))}

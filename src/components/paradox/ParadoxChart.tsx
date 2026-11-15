@@ -106,7 +106,7 @@ export default function ParadoxChart() {
         </p>
         {item && (
           <p className="text-xs text-text-muted mt-1">
-            {t.v2030.confidence}: {item.confidence}
+            {t.v2030.confidence}: {lang === "ar" ? ({ high: "مرتفع", medium: "متوسط", low: "منخفض" } as Record<string, string>)[item.confidence] || item.confidence : lang === "fr" ? ({ high: "élevée", medium: "moyenne", low: "faible" } as Record<string, string>)[item.confidence] || item.confidence : item.confidence}
           </p>
         )}
       </div>

@@ -8,6 +8,7 @@ import data from "@/data/master.json";
 interface GigaProject {
   name: string;
   name_ar: string;
+  name_fr?: string;
   region: string;
   current_workforce?: number;
   projected_2025?: number;
@@ -30,6 +31,9 @@ const REGION_AR: Record<string, string> = {
   Makkah: "مكة المكرمة",
   "Tabuk/Madinah": "تبوك/المدينة",
 };
+
+const REGION_FR: Record<string, string> = { Tabuk: "Tabouk", Riyadh: "Riyad", Makkah: "La Mecque", "Tabuk/Madinah": "Tabouk/Médine" };
+const COMPONENT_AR: Record<string, string> = { "THE LINE": "ذا لاين", Oxagon: "أوكساجون", Trojena: "تروجينا", Sindalah: "سندالة" };
 
 /* Color palette for cards */
 const CARD_COLORS = [
@@ -72,10 +76,10 @@ export default function GigaProjectsSection() {
 
                 {/* Name */}
                 <h3 className={`text-lg font-bold ${colors.text} mb-1`}>
-                  {lang === "ar" ? project.name_ar : project.name}
+                  {lang === "ar" ? project.name_ar : lang === "fr" ? project.name_fr || project.name : project.name}
                 </h3>
                 <p className="text-xs text-text-muted mb-4">
-                  {t.gigaProjects.region}: {lang === "ar" && REGION_AR[project.region] ? REGION_AR[project.region] : project.region}
+                  {t.gigaProjects.region}: {lang === "ar" && REGION_AR[project.region] ? REGION_AR[project.region] : lang === "fr" ? REGION_FR[project.region] || project.region : project.region}
                 </p>
 
                 {/* Projected jobs */}
@@ -110,7 +114,7 @@ export default function GigaProjectsSection() {
                           key={c}
                           className="text-[10px] px-2 py-0.5 bg-white/5 rounded-full text-text-muted border border-white/5"
                         >
-                          {c}
+                          {lang === "ar" ? COMPONENT_AR[c] || c : c}
                         </span>
                       ))}
                     </div>
@@ -130,7 +134,7 @@ export default function GigaProjectsSection() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-text-muted">
-            {lang === "ar" ? "إجمالي الوظائف المتوقعة" : "Total projected jobs across all giga-projects"}:{" "}
+            {lang === "ar" ? "إجمالي الوظائف المتوقعة" : lang === "fr" ? "Total des emplois prévus dans les mégaprojets" : "Total projected jobs across all giga-projects"}:{" "}
             <span className="font-mono font-bold text-accent-gold text-lg">
               {formatNumber(projects.reduce((sum, p) => sum + p.long_term_jobs, 0), lang)}
             </span>

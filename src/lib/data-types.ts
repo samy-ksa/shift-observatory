@@ -24,6 +24,8 @@ export interface Occupation {
   salary_median_sar?: number;
   salary_senior_sar?: number;
   salary_source?: string;
+  salary_source_ar?: string;
+  salary_source_fr?: string;
   nitaqat_status?: "reserved_saudi_only" | "sector_quota";
   demand_rank_2024?: number;
   hrdf_programs?: HRDFProgram[];
@@ -43,10 +45,14 @@ export interface Occupation {
 
 export interface TaweenDecision {
   profession: string;
+  profession_ar?: string;
+  profession_fr?: string;
   quota_pct: number;
   phase: string;
   effective: string;
   note: string;
+  note_ar?: string;
+  note_fr?: string;
 }
 
 export interface SalaryContext {

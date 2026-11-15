@@ -237,10 +237,10 @@ export default function EmployerTable() {
     </span>
   );
 
-  const empSector = (emp: { sector: string; sector_ar?: string }) =>
+  const empSector = (emp: { sector: string; sector_ar?: string; sector_fr?: string }) =>
     lang === "ar"
       ? (emp.sector_ar || EMPLOYER_SECTOR_AR[emp.sector] || emp.sector)
-      : emp.sector;
+      : lang === "fr" ? (emp.sector_fr || emp.sector) : emp.sector;
 
   return (
     <section className="py-20 px-4">
@@ -254,7 +254,7 @@ export default function EmployerTable() {
         {/* Filter */}
         <div className="flex flex-wrap items-center gap-4 mb-6">
           <label htmlFor="employer-sector-filter" className="sr-only">
-            Filter by sector
+            {lang === "ar" ? "تصفية حسب القطاع" : lang === "fr" ? "Filtrer par secteur" : "Filter by sector"}
           </label>
           <select
             id="employer-sector-filter"
@@ -265,7 +265,7 @@ export default function EmployerTable() {
             <option value="all">{t.employers.allSectors}</option>
             {allSectors.map((s) => (
               <option key={s} value={s}>
-                {lang === "ar" && EMPLOYER_SECTOR_AR[s] ? EMPLOYER_SECTOR_AR[s] : s}
+                {lang === "ar" ? employers.find((e) => e.sector === s)?.sector_ar || s : lang === "fr" ? employers.find((e) => e.sector === s)?.sector_fr || s : s}
               </option>
             ))}
           </select>
@@ -346,7 +346,7 @@ export default function EmployerTable() {
                           <EmployerLogo name={emp.name} sector={emp.sector} />
                           <div className="flex items-center gap-2">
                             <span className="font-semibold text-text-primary">
-                              {emp.name}
+                              {lang === "ar" && "name_ar" in emp ? emp.name_ar : emp.name}
                             </span>
                             {emp.tadawul && (
                               <span
@@ -368,7 +368,7 @@ export default function EmployerTable() {
                         </div>
                       </td>
                       <td className="px-4 py-3 text-text-secondary text-xs">
-                        {empSector(emp as { sector: string; sector_ar?: string })}
+                        {empSector(emp as { sector: string; sector_ar?: string; sector_fr?: string })}
                       </td>
                       <td className="px-4 py-3 font-mono font-semibold text-text-primary">
                         {formatNumber(emp.employees, lang)}

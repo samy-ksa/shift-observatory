@@ -99,6 +99,7 @@ function formatNum(n: number): string {
 interface RegionData {
   name_en: string;
   name_ar?: string;
+  name_fr?: string;
   total: number;
   pct_saudi: number;
   ai_risk_score: number;
@@ -142,7 +143,7 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
         className="w-full h-auto"
         style={{ maxHeight: "550px" }}
         role="img"
-        aria-label="Interactive map of Saudi Arabia showing AI automation risk by region"
+        aria-label={lang === "ar" ? "خريطة تفاعلية للسعودية تعرض مخاطر الأتمتة بالذكاء الاصطناعي حسب المنطقة" : lang === "fr" ? "Carte interactive de l’Arabie saoudite montrant le risque d’automatisation par l’IA selon la région" : "Interactive map of Saudi Arabia showing AI automation risk by region"}
       >
         {/* Dark background */}
         <rect width="730" height="600" fill="transparent" />
@@ -195,7 +196,7 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
                   letterSpacing: "0.02em",
                 }}
               >
-                {lang === "ar" && data.name_ar ? data.name_ar : name}
+                {lang === "ar" && data.name_ar ? data.name_ar : lang === "fr" && data.name_fr ? data.name_fr : name}
               </text>
               {isLarge && (
                 <text
@@ -257,20 +258,20 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
               minWidth: "200px",
             }}
           >
-            <div className="font-bold text-white text-sm">{lang === "ar" && data.name_ar ? data.name_ar : data.name_en}</div>
-            <div className="text-text-muted text-xs">{lang === "ar" ? data.name_en : data.name_ar}</div>
+            <div className="font-bold text-white text-sm">{lang === "ar" && data.name_ar ? data.name_ar : lang === "fr" && data.name_fr ? data.name_fr : data.name_en}</div>
+            <div className="text-text-muted text-xs">{lang === "ar" || lang === "fr" ? "" : data.name_ar}</div>
             <div className="mt-2 flex justify-between text-xs">
-              <span className="text-gray-400">{lang === "ar" ? "العمال" : "Workers"}</span>
+              <span className="text-gray-400">{lang === "ar" ? "العمال" : lang === "fr" ? "Travailleurs" : "Workers"}</span>
               <span className="text-cyan-400 font-mono font-bold">
                 {formatNum(data.total)}
               </span>
             </div>
             <div className="flex justify-between text-xs">
-              <span className="text-gray-400">{lang === "ar" ? "% سعوديون" : "Saudi %"}</span>
+              <span className="text-gray-400">{lang === "ar" ? "% سعوديون" : lang === "fr" ? "% Saoudiens" : "Saudi %"}</span>
               <span className="text-white font-mono">{data.pct_saudi}%</span>
             </div>
             <div className="flex justify-between text-xs mt-1">
-              <span className="text-gray-400">{lang === "ar" ? "مخاطر الذكاء الاصطناعي" : "AI Risk"}</span>
+              <span className="text-gray-400">{lang === "ar" ? "مخاطر الذكاء الاصطناعي" : lang === "fr" ? "Risque IA" : "AI Risk"}</span>
               <span
                 className="font-mono font-bold"
                 style={{ color: getRiskColor(data.ai_risk_score) }}
@@ -282,7 +283,7 @@ export default function KSAMap({ regions, selectedRegion, onSelectRegion, lang =
               </span>
             </div>
             <div className="text-[10px] text-gray-600 mt-2 text-center">
-              {lang === "ar" ? "انقر للتفاصيل" : "Click for details"}
+              {lang === "ar" ? "انقر للتفاصيل" : lang === "fr" ? "Cliquer pour les détails" : "Click for details"}
             </div>
           </div>
         );

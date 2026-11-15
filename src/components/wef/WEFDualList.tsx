@@ -10,8 +10,8 @@ const wef = data.wef;
 export default function WEFDualList() {
   const { t, lang } = useLang();
 
-  const itemName = (item: { name: string; name_ar?: string }) =>
-    lang === "ar" && item.name_ar ? item.name_ar : item.name;
+  const itemName = (item: { name: string; name_ar?: string; name_fr?: string }) =>
+    lang === "ar" && item.name_ar ? item.name_ar : lang === "fr" && item.name_fr ? item.name_fr : item.name;
 
   return (
     <section className="py-20 px-4">
@@ -46,7 +46,7 @@ export default function WEFDualList() {
                   </span>
                   <div className="flex-1">
                     <span className="text-sm font-medium text-text-primary">
-                      {itemName(item as { name: string; name_ar?: string })}
+                      {itemName(item as { name: string; name_ar?: string; name_fr?: string })}
                     </span>
                   </div>
                   <span className="text-xs text-risk-very-low/70 whitespace-nowrap">
@@ -84,7 +84,7 @@ export default function WEFDualList() {
                   </span>
                   <div className="flex-1">
                     <span className="text-sm font-medium text-text-primary">
-                      {itemName(item as { name: string; name_ar?: string })}
+                      {itemName(item as { name: string; name_ar?: string; name_fr?: string })}
                     </span>
                   </div>
                   <span className="text-xs font-mono font-bold text-risk-very-high">

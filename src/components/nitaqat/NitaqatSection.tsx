@@ -70,6 +70,8 @@ const BAND_AR: Record<string, string> = {
   Red: "أحمر",
 };
 
+const BAND_FR: Record<string, string> = { Platinum: "Platine", "High Green": "Vert élevé", "Medium Green": "Vert moyen", "Low Green": "Vert faible", Red: "Rouge" };
+
 export default function NitaqatSection() {
   const { t, lang } = useLang();
 
@@ -118,7 +120,7 @@ export default function NitaqatSection() {
               {t.nitaqatSection.recentDecisions}
             </h3>
 
-            <span className="text-[10px] text-text-muted mb-1 block md:hidden">Scroll →</span>
+            <span className="text-[10px] text-text-muted mb-1 block md:hidden">{lang === "ar" ? "مرّر ←" : lang === "fr" ? "Défiler →" : "Scroll →"}</span>
             <div className="overflow-x-auto mobile-scroll">
               <table className="w-full text-sm">
                 <thead>
@@ -171,7 +173,7 @@ export default function NitaqatSection() {
             </h3>
 
             {/* Band consequences grid */}
-            <span className="text-[10px] text-text-muted mb-1 block md:hidden">Scroll →</span>
+            <span className="text-[10px] text-text-muted mb-1 block md:hidden">{lang === "ar" ? "مرّر ←" : lang === "fr" ? "Défiler →" : "Scroll →"}</span>
             <div className="overflow-x-auto mobile-scroll">
               <table className="w-full text-sm">
                 <thead>
@@ -207,7 +209,7 @@ export default function NitaqatSection() {
                           <span
                             className={`text-xs px-2.5 py-1 rounded-full font-medium border whitespace-nowrap ${colors.bg} ${colors.text} ${colors.border}`}
                           >
-                            {lang === "ar" ? BAND_AR[band] : band}
+                            {lang === "ar" ? BAND_AR[band] : lang === "fr" ? BAND_FR[band] : band}
                           </span>
                         </td>
                         <td className="py-2.5 px-1 text-center">

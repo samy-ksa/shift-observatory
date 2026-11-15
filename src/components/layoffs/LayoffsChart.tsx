@@ -63,7 +63,7 @@ function buildGulfCases(lang: "en" | "fr" | "ar"): CaseItem[] {
           ? (c as { impact_ar?: string }).impact_ar || c.impact
           : c.impact;
     return {
-      entity: c.entity,
+      entity: lang === "ar" ? c.entity_ar : lang === "fr" ? c.entity_fr : c.entity,
       jobs: typeof c.jobs_impact === "number" ? c.jobs_impact : null,
       reason: localizedImpact,
       date: "",
@@ -135,8 +135,8 @@ const INTL_CASE_AR: Record<string, string> = {
   // 2026 H1
   "10% workforce cut, Trust & Safety AI moderation replaced humans": "تخفيض 10% من القوى العاملة، الإشراف بالذكاء الاصطناعي يحل محل البشر",
   "AI capex pivot, buyouts + cuts as payroll converts to GPU spend": "تحول استثمارات الذكاء الاصطناعي، استبدال الرواتب بإنفاق GPU",
-  "Largest layoff in 49-yr history, Cerner/OCI/ERP cut to fund $50B AI infra (Stargate)": "أكبر تسريح في تاريخ أوراكل، تخفيض Cerner/OCI/ERP لتمويل 50 مليار دولار للبنية التحتية للذكاء الاصطناعي",
-  "Q1 2026 restructuring, AI-first product strategy": "إعادة هيكلة الربع الأول 2026، استراتيجية المنتج المعتمدة على الذكاء الاصطناعي أولاً",
+  "Largest layoff in 49-yr history, Cerner/OCI/ERP cut to fund $50B AI infra (Stargate)": "أكبر تسريح في تاريخ أوراكل الممتد 49 عاماً، تخفيض Cerner/OCI/ERP لتمويل بنية الذكاء الاصطناعي بقيمة $50B",
+  "Q1 2026 restructuring, AI-first product strategy": "إعادة هيكلة Q1 2026، استراتيجية المنتج المعتمدة على الذكاء الاصطناعي أولاً",
   "Post-acquisition consolidation, AI workflow automation": "دمج ما بعد الاستحواذ، أتمتة سير العمل بالذكاء الاصطناعي",
   "Customer support cut, Benioff: 'I need less heads' — Agentforce AI": "تخفيض دعم العملاء، Benioff: «أحتاج عدد أقل من الموظفين» — Agentforce AI",
   "Corporate roles cut, AI-driven workflow consolidation": "تخفيض الأدوار المؤسسية، دمج سير العمل بالذكاء الاصطناعي",
@@ -144,7 +144,7 @@ const INTL_CASE_AR: Record<string, string> = {
   "AI-powered ad products replacing account management": "منتجات الإعلانات بالذكاء الاصطناعي تحل محل إدارة الحسابات",
   "ChatGPT destroying homework help demand": "ChatGPT يقضي على الطلب على مساعدة الواجبات",
   "AI assistant replaced 700 FTE equivalent": "مساعد ذكاء اصطناعي حل محل 700 موظف بدوام كامل",
-  "10K of 55K cuts AI/automation by 2030": "10 آلاف من 55 ألف تخفيض بسبب الأتمتة بحلول 2030",
+  "10K of 55K cuts AI/automation by 2030": "10K من أصل 55K وظيفة خُفضت بسبب الذكاء الاصطناعي والأتمتة بحلول 2030",
   "Hiring freeze on AI-replaceable back-office": "تجميد توظيف الوظائف المكتبية القابلة للاستبدال بالذكاء الاصطناعي",
   "Developers switching to AI assistants": "المطورون يتحولون إلى مساعدي الذكاء الاصطناعي",
   "10% contractors replaced by GPT-4 translation": "10% من المتعاقدين استُبدلوا بترجمة GPT-4",
@@ -171,6 +171,49 @@ const INTL_CASE_AR: Record<string, string> = {
   "AI-driven HR tech reducing own HR operations": "تقنية الموارد البشرية الذكية تقلل عمليات الشركة",
   "AI customer service tools consolidating teams": "أدوات خدمة عملاء ذكية تدمج الفرق",
 };
+
+const INTL_CASE_FR: Record<string, string> = {
+  "10% workforce cut, Trust & Safety AI moderation replaced humans": "Réduction de 10% des effectifs ; la modération IA de Trust & Safety remplace des humains",
+  "AI capex pivot, buyouts + cuts as payroll converts to GPU spend": "Réorientation des investissements vers l’IA ; rachats et suppressions de postes au profit des dépenses GPU",
+  "Largest layoff in 49-yr history, Cerner/OCI/ERP cut to fund $50B AI infra (Stargate)": "Plus grand licenciement en 49 ans ; Cerner/OCI/ERP réduits pour financer $50B d’infrastructure IA (Stargate)",
+  "Q1 2026 restructuring, AI-first product strategy": "Restructuration Q1 2026 ; stratégie produit centrée sur l’IA",
+  "Post-acquisition consolidation, AI workflow automation": "Regroupement après acquisition et automatisation des flux par l’IA",
+  "Customer support cut, Benioff: 'I need less heads' — Agentforce AI": "Réduction du support client ; Benioff : « J’ai besoin de moins de personnel » — Agentforce AI",
+  "Corporate roles cut, AI-driven workflow consolidation": "Suppression de postes administratifs ; regroupement des flux de travail grâce à l’IA",
+  "AI-powered ad products replacing account management": "Les produits publicitaires IA remplacent la gestion des comptes",
+  "ChatGPT destroying homework help demand": "ChatGPT réduit la demande d’aide aux devoirs",
+  "AI assistant replaced 700 FTE equivalent": "Un assistant IA a remplacé l’équivalent de 700 emplois à temps plein",
+  "10K of 55K cuts AI/automation by 2030": "10K des 55K suppressions dues à l’IA ou à l’automatisation d’ici 2030",
+  "Hiring freeze on AI-replaceable back-office": "Gel du recrutement pour les postes administratifs remplaçables par l’IA",
+  "Developers switching to AI assistants": "Les développeurs passent aux assistants IA",
+  "10% contractors replaced by GPT-4 translation": "10% des contractuels remplacés par la traduction GPT-4",
+  "Back-office automation, 8% workforce": "Automatisation administrative ; 8% des effectifs",
+  "AI platform NEXA replaced security analysts": "La plateforme IA NEXA remplace des analystes de sécurité",
+  "AI-powered job matching replacing manual R&D": "La mise en relation IA remplace la R&D manuelle",
+  "Customer service and sales admin automated": "Automatisation du service client et de l’administration des ventes",
+  "Restructuring to focus on AI, largest layoff wave": "Restructuration axée sur l’IA ; plus grande vague de licenciements",
+  "AI automation vendor restructuring own workforce": "Un fournisseur d’automatisation IA restructure ses propres effectifs",
+  "AI-first strategy replacing core product teams": "La stratégie centrée sur l’IA remplace des équipes produit",
+  "Shifting resources to AI and cybersecurity": "Ressources transférées vers l’IA et la cybersécurité",
+  "AI strategy pivot, foundry restructuring": "Réorientation vers l’IA et restructuration des fonderies",
+  "AI-driven efficiency and sales restructuring": "Efficacité par l’IA et restructuration des ventes",
+  "Automation and AI integration across operations": "Automatisation et intégration de l’IA dans les opérations",
+  "Gaming division restructuring post-Activision": "Restructuration de la division jeux après Activision",
+  "AI pivot, Alexa division restructured for LLMs": "Réorientation IA ; division Alexa restructurée pour les modèles linguistiques",
+  "Efficiency drive, AI content tools reducing headcount": "Recherche d’efficacité ; les outils de contenu IA réduisent les effectifs",
+  "AI tooling reducing need for manual content teams": "Les outils IA réduisent le besoin d’équipes de contenu manuel",
+  "Restructuring amid AI-driven ad competition": "Restructuration face à la concurrence publicitaire portée par l’IA",
+  "AI-powered seller tools reducing support staff": "Les outils IA pour vendeurs réduisent le personnel de support",
+  "AI and automation transforming print operations": "L’IA et l’automatisation transforment les opérations d’impression",
+  "AI contract analysis reducing manual review teams": "L’analyse IA des contrats réduit les équipes de vérification manuelle",
+  "AI matching algorithms reducing curation teams": "Les algorithmes IA de mise en relation réduisent les équipes de sélection",
+  "AI-driven HR tech reducing own HR operations": "La technologie RH fondée sur l’IA réduit les opérations RH internes",
+  "AI customer service tools consolidating teams": "Les outils IA de service client regroupent les équipes",
+};
+
+const MONTHS_AR: Record<string, string> = { Jan: "يناير", Feb: "فبراير", Mar: "مارس", Apr: "أبريل", May: "مايو", Jun: "يونيو", Jul: "يوليو", Aug: "أغسطس", Sep: "سبتمبر", Oct: "أكتوبر", Nov: "نوفمبر", Dec: "ديسمبر" };
+const MONTHS_FR: Record<string, string> = { Jan: "janv.", Feb: "févr.", Mar: "mars", Apr: "avr.", May: "mai", Jun: "juin", Jul: "juil.", Aug: "août", Sep: "sept.", Oct: "oct.", Nov: "nov.", Dec: "déc." };
+function localizeDate(date: string, lang: "ar" | "fr") { return date.replace(/Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/g, (m) => (lang === "ar" ? MONTHS_AR : MONTHS_FR)[m]); }
 
 type CaseTab = "gulf" | "international" | "all";
 
@@ -255,42 +298,42 @@ export default function LayoffsSection() {
               value: formatNumber(layoffs2025Total, lang),
               color: "text-text-primary",
               tooltip:
-                "Total tech sector layoffs globally in 2025. Source: Layoffs.fyi.",
+                lang === "ar" ? "إجمالي التسريحات في قطاع التقنية عالمياً خلال 2025. المصدر: Layoffs.fyi." : lang === "fr" ? "Total des licenciements mondiaux dans la tech en 2025. Source : Layoffs.fyi." : "Total tech sector layoffs globally in 2025. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.techLayoffs2026Ytd,
               value: "125K",
               color: "text-text-primary",
               tooltip:
-                "Total tech sector layoffs globally in 2026 year-to-date (Jan–May). Source: Layoffs.fyi / TrueUp tracker (May 2026).",
+                lang === "ar" ? "إجمالي تسريحات التقنية عالمياً منذ بداية 2026 (يناير–مايو). المصدر: متتبعا Layoffs.fyi / TrueUp (مايو 2026)." : lang === "fr" ? "Total des licenciements mondiaux dans la tech depuis le début de 2026 (janv.–mai). Source : suivis Layoffs.fyi / TrueUp (mai 2026)." : "Total tech sector layoffs globally in 2026 year-to-date (Jan–May). Source: Layoffs.fyi / TrueUp tracker (May 2026).",
             },
             {
               label: t.layoffs.kpiLabels.oracleMega,
               value: "30K",
               color: "text-risk-very-high",
               tooltip:
-                "Oracle's March 31, 2026 layoff — 30,000 jobs cut, the largest in Oracle's 49-year history. Cerner/OCI/ERP teams hit hardest to fund the $50B Stargate AI infrastructure buildout. Source: CNBC, Time, TechTimes.",
+                lang === "ar" ? "تسريحات Oracle في 31 مارس 2026 — إلغاء 30,000 وظيفة، وهو الأكبر في تاريخ Oracle الممتد 49 عاماً. تضررت فرق Cerner/OCI/ERP أكثر من غيرها لتمويل بنية Stargate للذكاء الاصطناعي بقيمة $50B. المصدر: CNBC, Time, TechTimes." : lang === "fr" ? "Licenciements d’Oracle le 31 mars 2026 — 30,000 postes supprimés, un record dans ses 49 ans d’histoire. Les équipes Cerner/OCI/ERP sont les plus touchées pour financer l’infrastructure IA Stargate de $50B. Source : CNBC, Time, TechTimes." : "Oracle's March 31, 2026 layoff — 30,000 jobs cut, the largest in Oracle's 49-year history. Cerner/OCI/ERP teams hit hardest to fund the $50B Stargate AI infrastructure buildout. Source: CNBC, Time, TechTimes.",
             },
             {
               label: t.layoffs.kpiLabels.aiCited,
               value: formatNumber(challenger["2026_ytd_ai_cited"], lang),
               color: "text-risk-high",
               tooltip:
-                "Number of US layoffs in 2026 YTD where AI was explicitly cited as cause. Up from 54,836 in all of 2025. Source: Challenger, Gray & Christmas (April 2026 report).",
+                lang === "ar" ? "عدد التسريحات في الولايات المتحدة منذ بداية 2026 التي ذُكر فيها الذكاء الاصطناعي سبباً صريحاً، بعد 54,836 في عام 2025 كله. المصدر: Challenger, Gray & Christmas (تقرير أبريل 2026)." : lang === "fr" ? "Nombre de licenciements aux États-Unis depuis le début de 2026 attribués explicitement à l’IA, contre 54,836 sur toute l’année 2025. Source : Challenger, Gray & Christmas (rapport d’avril 2026)." : "Number of US layoffs in 2026 YTD where AI was explicitly cited as cause. Up from 54,836 in all of 2025. Source: Challenger, Gray & Christmas (April 2026 report).",
             },
             {
               label: t.layoffs.kpiLabels.aiPct2026,
               value: challenger["2026_ytd_ai_pct"] + "%",
               color: "text-risk-high",
               tooltip:
-                "Share of all US layoffs in 2026 YTD that explicitly cited AI as cause — up from 4.6% in 2025. AI is now the #1 stated reason for cuts in March and April 2026. Source: Challenger, Gray & Christmas.",
+                lang === "ar" ? "نسبة التسريحات الأمريكية منذ بداية 2026 التي ذُكر فيها الذكاء الاصطناعي سبباً صريحاً، مقارنةً بـ 4.6% في 2025. أصبح الذكاء الاصطناعي السبب المعلن #1 للتسريحات في مارس وأبريل 2026. المصدر: Challenger, Gray & Christmas." : lang === "fr" ? "Part des licenciements américains depuis le début de 2026 citant explicitement l’IA, contre 4.6% en 2025. L’IA est la raison déclarée n° 1 des suppressions en mars et avril 2026. Source : Challenger, Gray & Christmas." : "Share of all US layoffs in 2026 YTD that explicitly cited AI as cause — up from 4.6% in 2025. AI is now the #1 stated reason for cuts in March and April 2026. Source: Challenger, Gray & Christmas.",
             },
             {
               label: t.layoffs.kpiLabels.peakAi,
               value: challenger.peak_month.ai_pct + "%",
               color: "text-risk-very-high",
               tooltip:
-                "In April 2026, 26% of all US layoffs explicitly mentioned AI as cause — highest monthly share ever. AI led all reasons for 2 consecutive months (Mar–Apr 2026). Source: Challenger, Gray & Christmas.",
+                lang === "ar" ? "في أبريل 2026، ذُكر الذكاء الاصطناعي سبباً صريحاً في 26% من جميع التسريحات الأمريكية، وهي أعلى نسبة شهرية مسجلة. تصدر الأسباب لشهرين متتاليين (مارس–أبريل 2026). المصدر: Challenger, Gray & Christmas." : lang === "fr" ? "En avril 2026, 26% des licenciements américains citaient explicitement l’IA, part mensuelle record. L’IA a dominé les raisons pendant 2 mois consécutifs (mars–avr. 2026). Source : Challenger, Gray & Christmas." : "In April 2026, 26% of all US layoffs explicitly mentioned AI as cause — highest monthly share ever. AI led all reasons for 2 consecutive months (Mar–Apr 2026). Source: Challenger, Gray & Christmas.",
             },
           ].map((stat) => (
             <div
@@ -315,7 +358,7 @@ export default function LayoffsSection() {
           viewport={{ once: true }}
           className="bg-bg-card rounded-2xl p-4 md:p-6 card-glow"
         >
-          <div className="h-[350px] md:h-[400px]" role="img" aria-label="Bar chart showing monthly tech layoffs from 2024 to 2026">
+          <div className="h-[350px] md:h-[400px]" role="img" aria-label={lang === "ar" ? "مخطط أعمدة للتسريحات الشهرية في قطاع التقنية من 2024 إلى 2026" : lang === "fr" ? "Histogramme des licenciements mensuels dans la tech de 2024 à 2026" : "Bar chart showing monthly tech layoffs from 2024 to 2026"}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}
@@ -424,16 +467,16 @@ export default function LayoffsSection() {
                 </div>
                 {c.jobs && (
                   <p className="text-risk-high font-mono text-lg font-bold mb-2">
-                    -{formatNumber(c.jobs, lang)} {lang === "ar" ? "وظيفة" : "jobs"}
+                    -{formatNumber(c.jobs, lang)} {lang === "ar" ? "وظيفة" : lang === "fr" ? "emplois" : "jobs"}
                   </p>
                 )}
                 <p className="text-sm text-text-secondary mb-2">
                   {lang === "ar"
                     ? (GULF_CASE_AR[c.reason] || INTL_CASE_AR[c.reason] || c.reason)
-                    : c.reason}
+                    : lang === "fr" ? (INTL_CASE_FR[c.reason] || c.reason) : c.reason}
                 </p>
                 {c.date && (
-                  <p className="text-xs text-text-muted">{c.date}</p>
+                  <p className="text-xs text-text-muted">{lang === "ar" ? localizeDate(c.date, "ar") : lang === "fr" ? localizeDate(c.date, "fr") : c.date}</p>
                 )}
               </motion.div>
             ))}

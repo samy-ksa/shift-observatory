@@ -50,6 +50,8 @@ const sectorRiskMap: Record<string, number> = {
 };
 
 // Extended English → Arabic sector name map for V2 sector_employment keys
+const SECTOR_FR: Record<string, string> = { Construction: "Construction", "Admin & Support": "Services administratifs", Manufacturing: "Industrie manufacturière", "Wholesale & Retail": "Commerce de gros et de détail", "Transport & Storage": "Transport et entreposage", "Human Health": "Santé", "Accommodation & Food": "Hébergement et restauration", "Info & Communication": "Information et communication", "Finance & Insurance": "Finance et assurance", "Public Admin": "Administration publique", Agriculture: "Agriculture", "Mining & Quarrying": "Mines et carrières", Education: "Éducation", "Professional Services": "Services professionnels", "Real Estate": "Immobilier", "Water & Waste": "Eau et déchets", "Other Services": "Autres services", "Domestic Workers": "Travailleurs domestiques" };
+const PROJECT_AR: Record<string, string> = { Qiddiya: "القدية", Diriyah: "الدرعية", "New Murabba": "المربع الجديد", "King Salman Park": "حديقة الملك سلمان", "Jeddah Central": "جدة المركزية", AMAALA: "أمالا", NEOM: "نيوم", "Red Sea (partial)": "البحر الأحمر (جزئياً)" };
 const SECTOR_AR: Record<string, string> = {
   "Construction": "البناء والتشييد",
   "Admin & Support": "الخدمات الإدارية",
@@ -75,23 +77,7 @@ const SECTOR_AR: Record<string, string> = {
   "Accommodation/food": "الإقامة والطعام",
 };
 
-/* V2030 priorities AR mapping for all 13 regions */
-const V2030_PRIORITIES_AR: Record<string, string> = {
-  "Riyadh": "المركز المالي والتقني؛ مقر نيوم المالي، مدينة الملك عبدالله المالية، مراكز الابتكار والذكاء الاصطناعي",
-  "Makkah": "السياحة الدينية والخدمات؛ توسعة الحرم المكي، استضافة الحجاج والمعتمرين، التحول الرقمي في خدمات الضيافة",
-  "Madinah": "السياحة الدينية والثقافية؛ توسعة المسجد النبوي، مشاريع التراث الثقافي، حدائق الملك سلمان",
-  "Eastern Province": "مركز الطاقة والصناعات البتروكيماوية؛ تنويع أرامكو، مدن صناعية، مركز الابتكار في الظهران",
-  "Aseer": "السياحة البيئية والزراعة؛ منتجعات جبلية، تطوير السياحة الطبيعية، مشاريع زراعية مستدامة",
-  "Tabuk": "مشروع نيوم الضخم؛ ذا لاين، تروجينا، أوكساجون، سندالة",
-  "Hail": "التعدين والزراعة؛ مركز الثروة المعدنية، زراعة القمح والزيتون، مشاريع الطاقة المتجددة",
-  "Northern Borders": "التعدين واللوجستيات؛ مركز حدودي تجاري، مشاريع البنية التحتية",
-  "Jazan": "الصناعة والزراعة؛ مدينة جازان للصناعات الأساسية، ميناء جازان، مشاريع زراعية",
-  "Najran": "التراث والسياحة الثقافية؛ مواقع تاريخية، تطوير المنطقة الحدودية",
-  "Al-Baha": "السياحة والزراعة؛ منتجعات جبلية، تطوير المنتزهات الطبيعية",
-  "Al-Jouf": "الزراعة وزيت الزيتون؛ أكبر مزارع زيتون في الشرق الأوسط، مشاريع الطاقة الشمسية",
-  "Qassim": "الزراعة والتجارة؛ مركز التمور، أسواق البريدة، مشاريع لوجستية",
-};
-
+/* Legacy priorities mapping retained for reference; localized data comes from master.json. */
 function getSectorRisk(sectorName: string): number {
   const lower = sectorName.toLowerCase();
   for (const [key, val] of Object.entries(sectorRiskMap)) {
@@ -187,10 +173,10 @@ export default function KSAMapSection() {
           >
             {/* Header */}
             <h3 className="text-2xl font-bold text-text-primary">
-              {lang === "ar" ? selected.name_ar : selected.name_en}
+              {lang === "ar" ? selected.name_ar : lang === "fr" ? selected.name_fr : selected.name_en}
             </h3>
             <p className="text-sm text-text-muted">
-              {lang === "ar" ? selected.name_en : selected.name_ar}
+              {lang === "ar" ? "" : lang === "fr" ? "" : selected.name_ar}
             </p>
 
             {/* Metrics grid */}
@@ -233,7 +219,7 @@ export default function KSAMapSection() {
               <div>
                 <p className="text-xs text-text-muted uppercase tracking-wider">
                   {t.map.detail.riskScore}
-                  <InfoTooltip text="Weighted average of AI risk scores for the dominant economic sectors in this region. Score 0-100 where higher = more tasks automatable." />
+                  <InfoTooltip text={lang === "ar" ? "المتوسط المرجح لدرجات مخاطر الذكاء الاصطناعي في القطاعات الرئيسية بالمنطقة. الدرجة من 0 إلى 100؛ والأعلى يعني مهام أكثر قابلية للأتمتة." : lang === "fr" ? "Moyenne pondérée des scores de risque IA des principaux secteurs de la région. Score de 0 à 100 ; plus il est élevé, plus les tâches sont automatisables." : "Weighted average of AI risk scores for the dominant economic sectors in this region. Score 0-100 where higher = more tasks automatable."} />
                 </p>
                 <div className="flex items-center gap-2 mt-0.5">
                   <span
@@ -280,7 +266,7 @@ export default function KSAMapSection() {
                     <div key={s.name}>
                       <div className="flex items-center justify-between mb-0.5">
                         <span className="text-sm text-text-secondary truncate flex-1">
-                          {lang === "ar" && SECTOR_AR[s.name] ? SECTOR_AR[s.name] : s.name}
+                          {lang === "ar" ? SECTOR_AR[s.name] || s.name : lang === "fr" ? SECTOR_FR[s.name] || s.name : s.name}
                         </span>
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <span className="text-xs font-mono text-text-muted">
@@ -316,7 +302,7 @@ export default function KSAMapSection() {
                 <hr className="border-white/5 my-5" />
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-3">
                   {t.map.detail.gigaProjects}
-                  <InfoTooltip text="Major infrastructure projects funded by PIF as part of Vision 2030. These create significant construction employment now and permanent jobs at completion." />
+                  <InfoTooltip text={lang === "ar" ? "مشاريع بنية تحتية كبرى يمولها صندوق الاستثمارات العامة ضمن رؤية 2030. توفر فرص عمل كبيرة في البناء الآن، ووظائف دائمة عند اكتمالها." : lang === "fr" ? "Grands projets d’infrastructure financés par le PIF dans le cadre de la Vision 2030. Ils créent des emplois dans le BTP dès maintenant, puis des postes permanents à leur achèvement." : "Major infrastructure projects funded by PIF as part of Vision 2030. These create significant construction employment now and permanent jobs at completion."} />
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {selected.giga_projects.map((p) => (
@@ -324,7 +310,7 @@ export default function KSAMapSection() {
                       key={p}
                       className="text-xs px-2.5 py-1 bg-accent-gold/15 text-accent-gold rounded-full font-medium border border-accent-gold/20"
                     >
-                      {p}
+                      {lang === "ar" ? PROJECT_AR[p] || p : p}
                     </span>
                   ))}
                 </div>
@@ -339,9 +325,7 @@ export default function KSAMapSection() {
                   {t.map.detail.v2030Focus}
                 </p>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  {lang === "ar" && V2030_PRIORITIES_AR[selected.name_en]
-                    ? V2030_PRIORITIES_AR[selected.name_en]
-                    : v2030Priorities}
+                  {lang === "ar" ? selected.v2030_priorities_ar : lang === "fr" ? selected.v2030_priorities_fr : v2030Priorities}
                 </p>
               </>
             )}
@@ -361,11 +345,11 @@ export default function KSAMapSection() {
               />
             </div>
             <div className="flex justify-between text-xs text-text-muted mt-1">
-              <span>{formatCompact(totalWorkers)} {lang === "ar" ? "عامل" : "workers"}</span>
+              <span>{formatCompact(totalWorkers)} {lang === "ar" ? "عامل" : lang === "fr" ? "travailleurs" : "workers"}</span>
               <span>
                 {selected.name_en === "Riyadh"
-                  ? (lang === "ar" ? "أكبر منطقة" : "Largest region")
-                  : `${((totalWorkers / allRegionsTotal) * 100).toFixed(1)}% ${lang === "ar" ? "من الإجمالي" : "of total"}`}
+                  ? (lang === "ar" ? "أكبر منطقة" : lang === "fr" ? "Plus grande région" : "Largest region")
+                  : `${((totalWorkers / allRegionsTotal) * 100).toFixed(1)}% ${lang === "ar" ? "من الإجمالي" : lang === "fr" ? "du total" : "of total"}`}
               </span>
             </div>
 
@@ -381,10 +365,10 @@ export default function KSAMapSection() {
           <BottomSheet
             open={sheetOpen}
             onClose={() => setSheetOpen(false)}
-            title={lang === "ar" ? selected.name_ar : selected.name_en}
+            title={lang === "ar" ? selected.name_ar : lang === "fr" ? selected.name_fr : selected.name_en}
           >
             <p className="text-sm text-text-muted mb-4">
-              {lang === "ar" ? selected.name_en : selected.name_ar}
+              {lang === "ar" ? "" : lang === "fr" ? "" : selected.name_ar}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -431,7 +415,7 @@ export default function KSAMapSection() {
                     <div key={s.name}>
                       <div className="flex items-center justify-between mb-0.5">
                         <span className="text-sm text-text-secondary truncate flex-1">
-                          {lang === "ar" && SECTOR_AR[s.name] ? SECTOR_AR[s.name] : s.name}
+                          {lang === "ar" ? SECTOR_AR[s.name] || s.name : lang === "fr" ? SECTOR_FR[s.name] || s.name : s.name}
                         </span>
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <span className="text-xs font-mono text-text-muted">{formatCompact(s.count)}</span>
@@ -461,7 +445,7 @@ export default function KSAMapSection() {
                 <div className="flex flex-wrap gap-2">
                   {selected.giga_projects.map((p) => (
                     <span key={p} className="text-xs px-2.5 py-1 bg-accent-gold/15 text-accent-gold rounded-full font-medium border border-accent-gold/20">
-                      {p}
+                      {lang === "ar" ? PROJECT_AR[p] || p : p}
                     </span>
                   ))}
                 </div>
@@ -473,9 +457,7 @@ export default function KSAMapSection() {
                 <hr className="border-white/5 my-5" />
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2">{t.map.detail.v2030Focus}</p>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  {lang === "ar" && V2030_PRIORITIES_AR[selected.name_en]
-                    ? V2030_PRIORITIES_AR[selected.name_en]
-                    : v2030Priorities}
+                  {lang === "ar" ? selected.v2030_priorities_ar : lang === "fr" ? selected.v2030_priorities_fr : v2030Priorities}
                 </p>
               </>
             )}
