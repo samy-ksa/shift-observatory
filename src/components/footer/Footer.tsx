@@ -6,6 +6,12 @@ import { useLang } from "@/lib/i18n/context";
 export default function Footer() {
   const { t, lang } = useLang();
   const isAr = lang === "ar";
+  const rankingLinks = [
+    ["jobs-most-at-risk-from-ai-saudi-arabia", { en: "Jobs most at risk from AI", fr: "Métiers les plus exposés à l’IA", ar: "المهن الأكثر عرضة للذكاء الاصطناعي" }],
+    ["jobs-safest-from-ai-saudi-arabia", { en: "Jobs safest from AI", fr: "Métiers les moins exposés à l’IA", ar: "المهن الأقل عرضة للذكاء الاصطناعي" }],
+    ["jobs-reserved-for-saudis", { en: "Jobs reserved for Saudis", fr: "Métiers réservés aux Saoudiens", ar: "المهن المحصورة على السعوديين" }],
+    ["highest-paid-jobs-saudi-arabia-ai-risk", { en: "Highest-paid jobs and AI risk", fr: "Métiers les mieux rémunérés et risque IA", ar: "أعلى المهن أجراً ومخاطر الذكاء الاصطناعي" }],
+  ] as const;
 
   const legalLinks = [
     { href: "/privacy", label: isAr ? "\u0633\u064A\u0627\u0633\u0629 \u0627\u0644\u062E\u0635\u0648\u0635\u064A\u0629" : lang === "fr" ? "Politique de confidentialit\u00e9" : "Privacy Policy" },
@@ -21,6 +27,10 @@ export default function Footer() {
 
         {/* Version */}
         <p className="text-text-muted/50 text-xs text-center mt-2">{t.footer.version}</p>
+
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-5" aria-label={{ en: "Rankings", fr: "Classements", ar: "التصنيفات" }[lang]}>
+          {rankingLinks.map(([slug, labels]) => <Link key={slug} href={`/${lang}/rankings/${slug}`} className="text-text-muted text-xs hover:text-cyan-400">{labels[lang]}</Link>)}
+        </nav>
 
         {/* Legal links */}
         <div

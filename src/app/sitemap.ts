@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllOccupations, toSlug } from "@/lib/occupations";
 import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllInsights, getAllPulse } from "@/lib/insights";
+import { RANKING_SLUGS, SECTORS } from "@/lib/rankings";
 import improvementLog from "../../data/seo/improvement-log.json";
 
 const BASE = "https://www.ksashiftobservatory.online";
@@ -94,12 +95,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const rankingPaths: Path[] = RANKING_SLUGS.map((slug) => ({
+    path: `/rankings/${slug}`, lastModified: "2026-11-15", changeFrequency: "monthly", priority: 0.9,
+  }));
+  const sectorPaths: Path[] = SECTORS.filter((sector) => getAllOccupations().filter((o) => o.sector_id === sector.id).length >= 5).map((sector) => ({
+    path: `/sector/${sector.id}`, lastModified: "2026-11-15", changeFrequency: "monthly", priority: 0.8,
+  }));
+
   const allPaths = [
     ...staticPaths,
     ...jobPaths,
     ...vsPaths,
     ...insightPaths,
     ...pulsePaths,
+    ...rankingPaths,
+    ...sectorPaths,
   ];
 
   // Emit 3 URL entries per path (one per lang), each with full hreflang alternates.

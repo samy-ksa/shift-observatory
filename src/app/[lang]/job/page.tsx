@@ -5,6 +5,7 @@ import { buildBreadcrumbLd, buildLanguageAlternates } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
 import { getAllOccupations, getSector, toSlug, riskColor, fmt } from "@/lib/occupations";
 import OccupationDirectory from "@/components/OccupationDirectory";
+import { RANKING_SLUGS, SECTORS, TEXT, sectorName as localizedSectorName } from "@/lib/rankings";
 
 const TITLES: Record<Lang, string> = {
   en: "Jobs in Saudi Arabia for Foreigners: 237 Roles Scored",
@@ -166,6 +167,13 @@ export default async function JobIndexPage({
           {INTRO[lang]}
         </p>
 
+        <nav className="my-8 rounded-lg border border-white/10 p-5" aria-label={TEXT[lang].rankings}>
+          <h2 className="text-lg font-semibold mb-3">{TEXT[lang].rankings}</h2>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {RANKING_SLUGS.map((slug) => <li key={slug}><Link className="text-cyan-400 hover:underline text-sm" href={localizedHref(lang, `/rankings/${slug}`)}>{TEXT[lang].headings[slug]}</Link></li>)}
+          </ul>
+        </nav>
+
         <div className="-mx-4">
           <OccupationDirectory />
         </div>
@@ -196,6 +204,13 @@ export default async function JobIndexPage({
             </section>
           ))}
         </div>
+
+        <nav className="mt-12 pt-6 border-t border-white/10" aria-label={TEXT[lang].sectors}>
+          <h2 className="text-lg font-semibold text-text-primary mb-3">{TEXT[lang].sectors}</h2>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            {SECTORS.map((sector) => <li key={sector.id}><Link className="text-sm text-cyan-400 hover:underline" href={localizedHref(lang, `/sector/${sector.id}`)}>{localizedSectorName(sector, lang)}</Link></li>)}
+          </ul>
+        </nav>
 
         <section className="mt-14 pt-10 border-t border-white/10" aria-label={FAQ_HEADING[lang]}>
           <h2 className="text-lg font-semibold text-text-primary mb-4">

@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
+import { TEXT } from "@/lib/rankings";
 import {
   LazyLayoffsChart,
   LazyParadoxChart,
@@ -238,6 +239,8 @@ export default async function LangHome({
           {ABOUT_H2[lang]}
         </h2>
         <p className="text-xs text-gray-600 leading-relaxed mb-4">{ABOUT_BODY[lang]}</p>
+
+        <a href={localizedHref(lang, "/rankings/jobs-most-at-risk-from-ai-saudi-arabia")} className="inline-block text-xs text-gray-400 hover:text-cyan-400 mb-4">{TEXT[lang].headings["jobs-most-at-risk-from-ai-saudi-arabia"]}</a>
 
         <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           {POPULAR_H3[lang]}
