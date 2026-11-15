@@ -11,6 +11,8 @@
 
 ## Core Tools
 
+- [Saudization Tracker](https://www.ksashiftobservatory.online/en/saudization-tracker): 17 sourced Saudization and Nitaqat decisions, effective dates, source links, and open JSON/CSV data
+
 - [AI Job Risk Dashboard](https://www.ksashiftobservatory.online/en): scoring 237 Saudi occupations on a 0-100 composite scale
 - [Cost of Living Calculator](https://www.ksashiftobservatory.online/en/relocate): 65 cost items compared between Riyadh / Jeddah / Dammam / Makkah / Madinah and 26 origin cities
 - [Career Transition Recommender](https://www.ksashiftobservatory.online/en/career): personalized pivot suggestions toward AI-safer occupations

@@ -174,6 +174,8 @@ export default async function JobIndexPage({
           </ul>
         </nav>
 
+        <p className="mb-8 text-sm text-text-secondary"><Link href={localizedHref(lang, "/saudization-tracker")} className="text-cyan-400 hover:underline">{{ en: "Follow official Saudization and Nitaqat decisions", fr: "Suivre les décisions de saoudisation et Nitaqat", ar: "تابع قرارات التوطين ونطاقات" }[lang]}</Link></p>
+
         <div className="-mx-4">
           <OccupationDirectory />
         </div>

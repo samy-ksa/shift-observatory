@@ -220,6 +220,7 @@ export default async function LangHome({
       <AIExposureTreemap />
       <div className="section-divider" />
       <NitaqatSection />
+      <p className="max-w-5xl mx-auto px-4 mt-3 mb-8 text-sm"><a href={localizedHref(lang, "/saudization-tracker")} className="text-cyan-400 hover:underline">{{ en: "Explore the 2026 Saudization decisions timeline", fr: "Explorer la chronologie 2026 des décisions de saoudisation", ar: "استكشف الجدول الزمني لقرارات التوطين في 2026" }[lang]}</a></p>
       <div className="section-divider" />
       <EmployerTable />
       <div className="section-divider" />

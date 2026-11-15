@@ -32,6 +32,8 @@ export default function Footer() {
           {rankingLinks.map(([slug, labels]) => <Link key={slug} href={`/${lang}/rankings/${slug}`} className="text-text-muted text-xs hover:text-cyan-400">{labels[lang]}</Link>)}
         </nav>
 
+        <nav className="text-center mt-4"><Link href={`/${lang}/saudization-tracker`} className="text-text-muted text-xs hover:text-cyan-400">{{ en: "Saudization tracker", fr: "Suivi de la saoudisation", ar: "متتبع التوطين" }[lang]}</Link></nav>
+
         {/* Legal links */}
         <div
           className={`flex items-center justify-center gap-4 mt-5 flex-wrap ${isAr ? "flex-row-reverse" : ""}`}
