@@ -37,15 +37,15 @@ interface SectorDetail {
   nitaqat_pressure: string;
   salary_saudi_avg?: number;
   salary_nonsaudi_avg?: number;
-  gosi_q4_2024?: GosiQ4;
+  gosi_q4_2025?: GosiQ4;
 }
 
-/** Use GOSI Q4-2024 data when available, otherwise fallback to existing fields */
+/** Use GOSI Q4 2025 data when available, otherwise fallback to existing fields */
 function getTotal(s: SectorDetail): number {
-  return s.gosi_q4_2024?.total ?? s.total;
+  return s.gosi_q4_2025?.total ?? s.total;
 }
 function getPctSaudi(s: SectorDetail): number {
-  return s.gosi_q4_2024?.pct_saudi ?? s.pct_saudi;
+  return s.gosi_q4_2025?.pct_saudi ?? s.pct_saudi;
 }
 
 export default function SectorGrid() {
@@ -267,9 +267,9 @@ export default function SectorGrid() {
                   )}
 
                   {/* GOSI source note */}
-                  {selected.gosi_q4_2024 && (
+                  {selected.gosi_q4_2025 && (
                     <p className="text-[10px] text-text-muted/40 mt-3">
-                      {selected.gosi_q4_2024.source}
+                      {selected.gosi_q4_2025.source}
                     </p>
                   )}
                 </div>

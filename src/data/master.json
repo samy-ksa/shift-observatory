@@ -39,15 +39,15 @@
   },
   "hero": {
     "total_workforce_lfs": 18540000,
-    "total_workforce_gosi": 12420050,
-    "total_saudi_gosi": 2975359,
-    "total_nonsaudi_gosi": 9444691,
-    "pct_saudi_gosi": 24,
-    "jobs_ai_exposure_weighted": 4450778,
-    "jobs_ai_exposure_saudi": 1137184,
-    "jobs_ai_exposure_nonsaudi": 3313594,
-    "jobs_in_high_risk_sectors": 3646195,
-    "headline_number": 4450778,
+    "total_workforce_gosi": 12508036,
+    "total_saudi_gosi": 3018891,
+    "total_nonsaudi_gosi": 9489145,
+    "pct_saudi_gosi": 24.1,
+    "jobs_ai_exposure_weighted": 4491136,
+    "jobs_ai_exposure_saudi": 1154168,
+    "jobs_ai_exposure_nonsaudi": 3336968,
+    "jobs_in_high_risk_sectors": 3679836,
+    "headline_number": 4491136,
     "headline_label": "jobs with significant AI exposure (risk-weighted)",
     "methodology_note": "Calculated as SUM(sector_employees × sector_ai_risk_score/100). This represents AI-weighted exposure, not predicted job losses. Actual displacement will be lower (augmentation > substitution for many roles).",
     "v2030_jobs_target_net": 2304400,
@@ -58,7 +58,8 @@
     "unemployment_saudi": 6.5,
     "unemployment_saudi_women": 12.1,
     "ai_gdp_impact_2030_usd": 135200000000,
-    "ai_gdp_pct": 12.4
+    "ai_gdp_pct": 12.4,
+    "total_workforce_gosi_registered": 13665115
   },
   "sectors": [
     {
@@ -67,9 +68,9 @@
       "name_fr": "Agriculture, sylviculture & pêche",
       "isic": "A",
       "total": 253180,
-      "saudi": 20824,
-      "non_saudi": 232356,
-      "pct_saudi": 8.2,
+      "saudi": 21188,
+      "non_saudi": 231992,
+      "pct_saudi": 8.4,
       "ai_risk_score": 18,
       "ai_risk_category": "low",
       "ai_risk_rationale": "Physical outdoor work, non-structured environments. Precision agriculture emerging but low GenAI impact. Robotics limited by terrain variability.",
@@ -79,17 +80,24 @@
       "nitaqat_pressure": "low",
       "name_ar": "الزراعة والحراجة وصيد الأسماك",
       "salary_saudi_avg": 7200,
-      "salary_nonsaudi_avg": 2800
+      "salary_nonsaudi_avg": 2800,
+      "gosi_q4_2025": {
+        "total": 253180,
+        "saudi": 21188,
+        "non_saudi": 231992,
+        "pct_saudi": 8.4,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "mining_oil_gas",
       "name_en": "Mining & Quarrying (incl. Oil & Gas)",
       "name_fr": "Industries extractives (incl. pétrole & gaz)",
       "isic": "B",
-      "total": 203902,
-      "saudi": 115280,
-      "non_saudi": 88622,
-      "pct_saudi": 56.5,
+      "total": 204932,
+      "saudi": 116489,
+      "non_saudi": 88443,
+      "pct_saudi": 56.8,
       "ai_risk_score": 35,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "AI augments exploration, predictive maintenance, process optimization. But physical extraction, safety, on-site ops remain human. Aramco already heavy AI adopter for efficiency, not headcount reduction.",
@@ -99,17 +107,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "التعدين واستغلال المحاجر (بما فيها النفط والغاز)",
       "salary_saudi_avg": 16500,
-      "salary_nonsaudi_avg": 8500
+      "salary_nonsaudi_avg": 8500,
+      "gosi_q4_2025": {
+        "total": 204932,
+        "saudi": 116489,
+        "non_saudi": 88443,
+        "pct_saudi": 56.8,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "manufacturing",
       "name_en": "Manufacturing",
       "name_fr": "Industrie manufacturière",
       "isic": "C",
-      "total": 1482452,
-      "saudi": 347264,
-      "non_saudi": 1135188,
-      "pct_saudi": 23.4,
+      "total": 1495921,
+      "saudi": 351188,
+      "non_saudi": 1144733,
+      "pct_saudi": 23.5,
       "ai_risk_score": 42,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "Robotics and automation in assembly lines. But KSA manufacturing still scaling up (NIDLP). Net job creation expected despite automation of routine tasks. Quality control AI high impact.",
@@ -120,12 +135,12 @@
       "name_ar": "الصناعات التحويلية",
       "salary_saudi_avg": 9000,
       "salary_nonsaudi_avg": 4200,
-      "gosi_q4_2024": {
-        "saudi": 404875,
-        "non_saudi": 1110221,
-        "total": 1515096,
-        "pct_saudi": 26.7,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 1495921,
+        "saudi": 351188,
+        "non_saudi": 1144733,
+        "pct_saudi": 23.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -133,10 +148,10 @@
       "name_en": "Electricity, Gas, Steam & AC",
       "name_fr": "Électricité, gaz, vapeur & climatisation",
       "isic": "D",
-      "total": 42568,
-      "saudi": 33325,
-      "non_saudi": 9243,
-      "pct_saudi": 78.3,
+      "total": 43194,
+      "saudi": 33672,
+      "non_saudi": 9522,
+      "pct_saudi": 78.0,
       "ai_risk_score": 30,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "Smart grid management, predictive maintenance. But small sector, high Saudisation already. Renewables expansion will ADD jobs.",
@@ -146,17 +161,24 @@
       "nitaqat_pressure": "high",
       "name_ar": "الكهرباء والغاز والبخار وتكييف الهواء",
       "salary_saudi_avg": 14000,
-      "salary_nonsaudi_avg": 7000
+      "salary_nonsaudi_avg": 7000,
+      "gosi_q4_2025": {
+        "total": 43194,
+        "saudi": 33672,
+        "non_saudi": 9522,
+        "pct_saudi": 78.0,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "water_waste",
       "name_en": "Water Supply, Sewerage, Waste",
       "name_fr": "Eau, assainissement, déchets",
       "isic": "E",
-      "total": 96453,
-      "saudi": 22395,
-      "non_saudi": 74058,
-      "pct_saudi": 23.2,
+      "total": 96282,
+      "saudi": 22604,
+      "non_saudi": 73678,
+      "pct_saudi": 23.5,
       "ai_risk_score": 22,
       "ai_risk_category": "low",
       "ai_risk_rationale": "Physical infrastructure work. IoT monitoring augments but doesn't replace. Desalination expansion = more jobs.",
@@ -166,17 +188,24 @@
       "nitaqat_pressure": "low",
       "name_ar": "إمدادات المياه والصرف الصحي والنفايات",
       "salary_saudi_avg": 8500,
-      "salary_nonsaudi_avg": 3500
+      "salary_nonsaudi_avg": 3500,
+      "gosi_q4_2025": {
+        "total": 96282,
+        "saudi": 22604,
+        "non_saudi": 73678,
+        "pct_saudi": 23.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "construction",
       "name_en": "Construction",
       "name_fr": "Construction",
       "isic": "F",
-      "total": 3412388,
-      "saudi": 419541,
-      "non_saudi": 2992847,
-      "pct_saudi": 12.3,
+      "total": 3428230,
+      "saudi": 429111,
+      "non_saudi": 2999119,
+      "pct_saudi": 12.5,
       "ai_risk_score": 12,
       "ai_risk_category": "very_low",
       "ai_risk_rationale": "Largest sector. Physical, non-structured environments. Robotics decades away from replacing manual labor on chaotic construction sites. NEOM, Red Sea, Qiddiya, Diriyah = massive ongoing demand. WEF confirms BTP workers among fastest growing.",
@@ -187,12 +216,12 @@
       "name_ar": "التشييد والبناء",
       "salary_saudi_avg": 7500,
       "salary_nonsaudi_avg": 2500,
-      "gosi_q4_2024": {
-        "saudi": 426068,
-        "non_saudi": 2820589,
-        "total": 3246657,
-        "pct_saudi": 13.1,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 3428230,
+        "saudi": 429111,
+        "non_saudi": 2999119,
+        "pct_saudi": 12.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -200,9 +229,9 @@
       "name_en": "Wholesale & Retail Trade",
       "name_fr": "Commerce de gros et de détail",
       "isic": "G",
-      "total": 1827205,
-      "saudi": 406914,
-      "non_saudi": 1420291,
+      "total": 1823181,
+      "saudi": 406313,
+      "non_saudi": 1416868,
       "pct_saudi": 22.3,
       "ai_risk_score": 55,
       "ai_risk_category": "high",
@@ -214,12 +243,12 @@
       "name_ar": "تجارة الجملة والتجزئة",
       "salary_saudi_avg": 7800,
       "salary_nonsaudi_avg": 3200,
-      "gosi_q4_2024": {
-        "saudi": 395093,
-        "non_saudi": 1336936,
-        "total": 1732029,
-        "pct_saudi": 22.8,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 1823181,
+        "saudi": 406313,
+        "non_saudi": 1416868,
+        "pct_saudi": 22.3,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -227,10 +256,10 @@
       "name_en": "Transportation & Storage",
       "name_fr": "Transport et entreposage",
       "isic": "H",
-      "total": 827919,
-      "saudi": 165341,
-      "non_saudi": 662578,
-      "pct_saudi": 20,
+      "total": 837351,
+      "saudi": 170229,
+      "non_saudi": 667122,
+      "pct_saudi": 20.3,
       "ai_risk_score": 38,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "Autonomous vehicles Level 5 still distant. SPL deploying 200 sorting robots. Warehouse automation rising. But delivery drivers in strong GROWTH (WEF). Long-term risk medium, short-term growth.",
@@ -240,17 +269,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "النقل والتخزين",
       "salary_saudi_avg": 8500,
-      "salary_nonsaudi_avg": 3800
+      "salary_nonsaudi_avg": 3800,
+      "gosi_q4_2025": {
+        "total": 837351,
+        "saudi": 170229,
+        "non_saudi": 667122,
+        "pct_saudi": 20.3,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "accommodation_food",
       "name_en": "Accommodation & Food Service",
       "name_fr": "Hébergement et restauration",
       "isic": "I",
-      "total": 730292,
-      "saudi": 141903,
-      "non_saudi": 588389,
-      "pct_saudi": 19.4,
+      "total": 724033,
+      "saudi": 141224,
+      "non_saudi": 582809,
+      "pct_saudi": 19.5,
       "ai_risk_score": 28,
       "ai_risk_category": "low",
       "ai_risk_rationale": "Hospitality requires human warmth, physical service. Self-ordering kiosks reduce some roles. But tourism boom (150M visitors target) = massive NET job creation. Foodics optimizes staffing but doesn't eliminate it.",
@@ -260,17 +296,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "خدمات الإقامة والطعام",
       "salary_saudi_avg": 6500,
-      "salary_nonsaudi_avg": 2800
+      "salary_nonsaudi_avg": 2800,
+      "gosi_q4_2025": {
+        "total": 724033,
+        "saudi": 141224,
+        "non_saudi": 582809,
+        "pct_saudi": 19.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "ict",
       "name_en": "Information & Communication (ICT)",
       "name_fr": "Technologies de l'information et communication",
       "isic": "J",
-      "total": 176619,
-      "saudi": 99766,
-      "non_saudi": 76853,
-      "pct_saudi": 56.5,
+      "total": 178594,
+      "saudi": 102237,
+      "non_saudi": 76357,
+      "pct_saudi": 57.2,
       "ai_risk_score": 45,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "PARADOX SECTOR. AI transforms ICT jobs (GitHub Copilot for coders) but also creates massive new roles (AI/ML specialists, data engineers). Net effect: strong growth with internal restructuring. Eloundou score 1.0 for programmers but category = augmentation, not substitution.",
@@ -281,12 +324,12 @@
       "name_ar": "المعلومات والاتصالات (تقنية المعلومات)",
       "salary_saudi_avg": 15000,
       "salary_nonsaudi_avg": 10000,
-      "gosi_q4_2024": {
-        "saudi": 65718,
-        "non_saudi": 54671,
-        "total": 120389,
-        "pct_saudi": 54.6,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 178594,
+        "saudi": 102237,
+        "non_saudi": 76357,
+        "pct_saudi": 57.2,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -294,10 +337,10 @@
       "name_en": "Financial & Insurance Activities",
       "name_fr": "Activités financières et d'assurance",
       "isic": "K",
-      "total": 106727,
-      "saudi": 88018,
-      "non_saudi": 18709,
-      "pct_saudi": 82.5,
+      "total": 107430,
+      "saudi": 88532,
+      "non_saudi": 18898,
+      "pct_saudi": 82.4,
       "ai_risk_score": 62,
       "ai_risk_category": "high",
       "ai_risk_rationale": "HIGHEST GenAI exposure. ANB automated 35 processes, 40K hours saved. Bank tellers -35% (WEF). Accounting 94% Frey-Osborne. But advisory/relationship roles grow. Small sector with very high Saudisation = mainly Saudi jobs at risk of transformation.",
@@ -308,12 +351,12 @@
       "name_ar": "الأنشطة المالية والتأمين",
       "salary_saudi_avg": 16000,
       "salary_nonsaudi_avg": 12000,
-      "gosi_q4_2024": {
-        "saudi": 82952,
-        "non_saudi": 17163,
-        "total": 100115,
-        "pct_saudi": 82.9,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 107430,
+        "saudi": 88532,
+        "non_saudi": 18898,
+        "pct_saudi": 82.4,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -321,10 +364,10 @@
       "name_en": "Real Estate Activities",
       "name_fr": "Activités immobilières",
       "isic": "L",
-      "total": 75887,
-      "saudi": 29011,
-      "non_saudi": 46876,
-      "pct_saudi": 38.2,
+      "total": 77479,
+      "saudi": 29879,
+      "non_saudi": 47600,
+      "pct_saudi": 38.6,
       "ai_risk_score": 40,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "PropTech, AI valuation models, automated listings. But transaction complexity and trust require humans. Small sector.",
@@ -334,17 +377,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "الأنشطة العقارية",
       "salary_saudi_avg": 10000,
-      "salary_nonsaudi_avg": 5500
+      "salary_nonsaudi_avg": 5500,
+      "gosi_q4_2025": {
+        "total": 77479,
+        "saudi": 29879,
+        "non_saudi": 47600,
+        "pct_saudi": 38.6,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "professional_scientific",
       "name_en": "Professional, Scientific & Technical",
       "name_fr": "Activités spécialisées, scientifiques et techniques",
       "isic": "M",
-      "total": 291530,
-      "saudi": 137664,
-      "non_saudi": 153866,
-      "pct_saudi": 47.2,
+      "total": 294579,
+      "saudi": 138730,
+      "non_saudi": 155849,
+      "pct_saudi": 47.1,
       "ai_risk_score": 52,
       "ai_risk_category": "high",
       "ai_risk_rationale": "Lawyers, consultants, accountants, architects - all heavily exposed to GenAI. But overwhelmingly augmentation not substitution. The accountant who uses AI replaces the one who doesn't. High-skill sector with transformation, not destruction.",
@@ -354,17 +404,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "الأنشطة المهنية والعلمية والتقنية",
       "salary_saudi_avg": 13000,
-      "salary_nonsaudi_avg": 8000
+      "salary_nonsaudi_avg": 8000,
+      "gosi_q4_2025": {
+        "total": 294579,
+        "saudi": 138730,
+        "non_saudi": 155849,
+        "pct_saudi": 47.1,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "admin_support",
       "name_en": "Administrative & Support Services",
       "name_fr": "Activités de services administratifs et de soutien",
       "isic": "N",
-      "total": 1420733,
-      "saudi": 246605,
-      "non_saudi": 1174128,
-      "pct_saudi": 17.4,
+      "total": 1454646,
+      "saudi": 255793,
+      "non_saudi": 1198853,
+      "pct_saudi": 17.6,
       "ai_risk_score": 72,
       "ai_risk_category": "very_high",
       "ai_risk_rationale": "HIGHEST RISK SECTOR BY VOLUME. Data entry (99% Frey-Osborne), admin assistants (90%+), back-office processing. 1.4M workers, 83% expat. This is where AI hits hardest: repetitive cognitive tasks at scale. BPO, facilities mgmt partially protected but office admin decimated.",
@@ -374,17 +431,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "الخدمات الإدارية وخدمات الدعم",
       "salary_saudi_avg": 7000,
-      "salary_nonsaudi_avg": 2800
+      "salary_nonsaudi_avg": 2800,
+      "gosi_q4_2025": {
+        "total": 1454646,
+        "saudi": 255793,
+        "non_saudi": 1198853,
+        "pct_saudi": 17.6,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "public_admin",
       "name_en": "Public Administration & Defense",
       "name_fr": "Administration publique et défense",
       "isic": "O",
-      "total": 300829,
-      "saudi": 241538,
-      "non_saudi": 59291,
-      "pct_saudi": 80.3,
+      "total": 306306,
+      "saudi": 247013,
+      "non_saudi": 59293,
+      "pct_saudi": 80.6,
       "ai_risk_score": 45,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "Absher automated 12M+ operations. ZATCA 50% customs automated. Digital Government saving billions. But no DOGE-style mass layoffs - gradual non-replacement and upskilling. Protected by political will.",
@@ -394,17 +458,24 @@
       "nitaqat_pressure": "very_high",
       "name_ar": "الإدارة العامة والدفاع",
       "salary_saudi_avg": 12000,
-      "salary_nonsaudi_avg": 7000
+      "salary_nonsaudi_avg": 7000,
+      "gosi_q4_2025": {
+        "total": 306306,
+        "saudi": 247013,
+        "non_saudi": 59293,
+        "pct_saudi": 80.6,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "education",
       "name_en": "Education",
       "name_fr": "Enseignement",
       "isic": "P",
-      "total": 321900,
-      "saudi": 140402,
-      "non_saudi": 181498,
-      "pct_saudi": 43.6,
+      "total": 323194,
+      "saudi": 138781,
+      "non_saudi": 184413,
+      "pct_saudi": 42.9,
       "ai_risk_score": 20,
       "ai_risk_category": "low",
       "ai_risk_rationale": "Teachers among most protected (0.74% Frey-Osborne). Emotional intelligence, character formation irreplaceable. AI augments (adaptive learning) but demand GROWS (WEF: higher education teachers top 15). Admin roles within education at risk though.",
@@ -415,12 +486,12 @@
       "name_ar": "التعليم",
       "salary_saudi_avg": 11000,
       "salary_nonsaudi_avg": 7500,
-      "gosi_q4_2024": {
-        "saudi": 113818,
-        "non_saudi": 180909,
-        "total": 294727,
-        "pct_saudi": 38.6,
-        "source": "GASTAT GOSI Q4-2024 Table 3-8"
+      "gosi_q4_2025": {
+        "total": 323194,
+        "saudi": 138781,
+        "non_saudi": 184413,
+        "pct_saudi": 42.9,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
       }
     },
     {
@@ -428,10 +499,10 @@
       "name_en": "Human Health & Social Work",
       "name_fr": "Santé humaine et action sociale",
       "isic": "Q",
-      "total": 495426,
-      "saudi": 256974,
-      "non_saudi": 238452,
-      "pct_saudi": 51.9,
+      "total": 502129,
+      "saudi": 261774,
+      "non_saudi": 240355,
+      "pct_saudi": 52.1,
       "ai_risk_score": 15,
       "ai_risk_category": "very_low",
       "ai_risk_rationale": "Fortress of human employment. Doctors 0.42%, nurses 0.90% Frey-Osborne. Legal liability, empathy, physical care = irreplaceable. AI as diagnostic co-pilot only. 175K additional professionals NEEDED by 2030. KFSHRC shows augmentation model.",
@@ -441,17 +512,24 @@
       "nitaqat_pressure": "moderate",
       "name_ar": "الصحة والعمل الاجتماعي",
       "salary_saudi_avg": 13500,
-      "salary_nonsaudi_avg": 8000
+      "salary_nonsaudi_avg": 8000,
+      "gosi_q4_2025": {
+        "total": 502129,
+        "saudi": 261774,
+        "non_saudi": 240355,
+        "pct_saudi": 52.1,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "arts_entertainment",
       "name_en": "Arts, Entertainment & Recreation",
       "name_fr": "Arts, spectacles et activités récréatives",
       "isic": "R",
-      "total": 47940,
-      "saudi": 18194,
-      "non_saudi": 29746,
-      "pct_saudi": 38,
+      "total": 48683,
+      "saudi": 18681,
+      "non_saudi": 30002,
+      "pct_saudi": 38.4,
       "ai_risk_score": 25,
       "ai_risk_category": "low",
       "ai_risk_rationale": "Physical performance, live events, theme parks = human-centric. AI generative for content creation but live entertainment booming. GEA + Qiddiya + Seasons = massive growth. Graphic designers at risk but performers protected.",
@@ -461,17 +539,24 @@
       "nitaqat_pressure": "low",
       "name_ar": "الفنون والترفيه والتسلية",
       "salary_saudi_avg": 8500,
-      "salary_nonsaudi_avg": 4500
+      "salary_nonsaudi_avg": 4500,
+      "gosi_q4_2025": {
+        "total": 48683,
+        "saudi": 18681,
+        "non_saudi": 30002,
+        "pct_saudi": 38.4,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "other_services",
       "name_en": "Other Service Activities",
       "name_fr": "Autres activités de services",
       "isic": "S",
-      "total": 305985,
-      "saudi": 44348,
-      "non_saudi": 261637,
-      "pct_saudi": 14.5,
+      "total": 308193,
+      "saudi": 45117,
+      "non_saudi": 263076,
+      "pct_saudi": 14.6,
       "ai_risk_score": 35,
       "ai_risk_category": "moderate",
       "ai_risk_rationale": "Mixed bag: personal services, repair, laundry. Many physical/manual tasks protected. Some admin functions at risk.",
@@ -481,17 +566,24 @@
       "nitaqat_pressure": "low",
       "name_ar": "أنشطة الخدمات الأخرى",
       "salary_saudi_avg": 7500,
-      "salary_nonsaudi_avg": 3000
+      "salary_nonsaudi_avg": 3000,
+      "gosi_q4_2025": {
+        "total": 308193,
+        "saudi": 45117,
+        "non_saudi": 263076,
+        "pct_saudi": 14.6,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "id": "households_extraterritorial",
       "name_en": "Households & Extraterritorial",
       "name_fr": "Ménages employeurs et organismes extraterritoriaux",
       "isic": "T-U",
-      "total": 115,
-      "saudi": 52,
-      "non_saudi": 63,
-      "pct_saudi": 45.2,
+      "total": 499,
+      "saudi": 336,
+      "non_saudi": 163,
+      "pct_saudi": 67.3,
       "ai_risk_score": 5,
       "ai_risk_category": "very_low",
       "ai_risk_rationale": "Negligible sector in GOSI data. Domestic workers largely outside GOSI coverage.",
@@ -501,17 +593,24 @@
       "nitaqat_pressure": "low",
       "name_ar": "الأسر المعيشية والمنظمات خارج الإقليم",
       "salary_saudi_avg": 6000,
-      "salary_nonsaudi_avg": 2200
+      "salary_nonsaudi_avg": 2200,
+      "gosi_q4_2025": {
+        "total": 499,
+        "saudi": 336,
+        "non_saudi": 163,
+        "pct_saudi": 67.3,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     }
   ],
   "regions": [
     {
       "name_en": "Riyadh",
       "name_ar": "الرياض",
-      "total": 6096447,
-      "saudi": 1385207,
-      "non_saudi": 4711240,
-      "pct_saudi": 22.7,
+      "total": 6858913,
+      "saudi": 1504639,
+      "non_saudi": 5354274,
+      "pct_saudi": 21.9,
       "top3_sectors": [
         "Construction",
         "Admin & support",
@@ -525,13 +624,6 @@
         "New Murabba",
         "King Salman Park"
       ],
-      "gosi_q4_2024": {
-        "total": 5906951,
-        "saudi": 1369137,
-        "non_saudi": 4537814,
-        "pct_saudi": 23.2,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 1366829,
         "Admin & Support": 724675,
@@ -546,15 +638,22 @@
       "v2030_priorities": "Financial services, HQ & business services, entertainment & sports (Qiddiya, Sports Boulevard, King Salman Park), digital economy/cloud & AI, logistics",
       "name_fr": "Riyad",
       "v2030_priorities_ar": "الخدمات المالية ومقار الشركات وخدمات الأعمال، والترفيه والرياضة (القدية، المسار الرياضي، حديقة الملك سلمان)، والاقتصاد الرقمي والحوسبة السحابية والذكاء الاصطناعي، والخدمات اللوجستية",
-      "v2030_priorities_fr": "Services financiers, sièges sociaux et services aux entreprises, loisirs et sports (Qiddiya, Sports Boulevard, King Salman Park), économie numérique, cloud et IA, logistique"
+      "v2030_priorities_fr": "Services financiers, sièges sociaux et services aux entreprises, loisirs et sports (Qiddiya, Sports Boulevard, King Salman Park), économie numérique, cloud et IA, logistique",
+      "gosi_q4_2025": {
+        "total": 6858913,
+        "saudi": 1504639,
+        "non_saudi": 5354274,
+        "pct_saudi": 21.9,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Makkah",
       "name_ar": "مكة المكرمة",
-      "total": 2188375,
-      "saudi": 525816,
-      "non_saudi": 1662559,
-      "pct_saudi": 24,
+      "total": 2203699,
+      "saudi": 535466,
+      "non_saudi": 1668233,
+      "pct_saudi": 24.3,
       "top3_sectors": [
         "Construction",
         "Wholesale/retail",
@@ -565,13 +664,6 @@
       "giga_projects": [
         "Jeddah Central"
       ],
-      "gosi_q4_2024": {
-        "total": 2147743,
-        "saudi": 524405,
-        "non_saudi": 1623338,
-        "pct_saudi": 24.4,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 523337,
         "Wholesale & Retail": 450177,
@@ -585,15 +677,22 @@
       "v2030_priorities": "Hajj/Umrah and religious tourism, broader tourism & culture (Jeddah Central, Historic Jeddah), logistics via Jeddah port, hospitality",
       "name_fr": "La Mecque",
       "v2030_priorities_ar": "الحج والعمرة والسياحة الدينية، والسياحة والثقافة (جدة المركزية، جدة التاريخية)، والخدمات اللوجستية عبر ميناء جدة، والضيافة",
-      "v2030_priorities_fr": "Hajj, Omra et tourisme religieux, tourisme et culture (Jeddah Central, Djeddah historique), logistique via le port de Djeddah, hôtellerie"
+      "v2030_priorities_fr": "Hajj, Omra et tourisme religieux, tourisme et culture (Jeddah Central, Djeddah historique), logistique via le port de Djeddah, hôtellerie",
+      "gosi_q4_2025": {
+        "total": 2203699,
+        "saudi": 535466,
+        "non_saudi": 1668233,
+        "pct_saudi": 24.3,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Eastern Province",
       "name_ar": "المنطقة الشرقية",
-      "total": 2401120,
-      "saudi": 625550,
-      "non_saudi": 1775570,
-      "pct_saudi": 26,
+      "total": 2467540,
+      "saudi": 646439,
+      "non_saudi": 1821101,
+      "pct_saudi": 26.2,
       "top3_sectors": [
         "Construction",
         "Manufacturing",
@@ -602,13 +701,6 @@
       "ai_risk_score": 36,
       "pib_share": 22.5,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 2340106,
-        "saudi": 619400,
-        "non_saudi": 1720706,
-        "pct_saudi": 26.5,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 869559,
         "Manufacturing": 313685,
@@ -622,15 +714,22 @@
       "v2030_priorities": "Energy services (King Salman Energy Park), petrochemicals, logistics and ports, downstream manufacturing, clean energy & mining",
       "name_fr": "Province orientale",
       "v2030_priorities_ar": "خدمات الطاقة (مدينة الملك سلمان للطاقة)، والبتروكيماويات، والخدمات اللوجستية والموانئ، والصناعات التحويلية اللاحقة، والطاقة النظيفة والتعدين",
-      "v2030_priorities_fr": "Services énergétiques (King Salman Energy Park), pétrochimie, logistique et ports, industrie de transformation, énergie propre et mines"
+      "v2030_priorities_fr": "Services énergétiques (King Salman Energy Park), pétrochimie, logistique et ports, industrie de transformation, énergie propre et mines",
+      "gosi_q4_2025": {
+        "total": 2467540,
+        "saudi": 646439,
+        "non_saudi": 1821101,
+        "pct_saudi": 26.2,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Madinah",
       "name_ar": "المدينة المنورة",
-      "total": 412236,
-      "saudi": 94330,
-      "non_saudi": 317906,
-      "pct_saudi": 22.9,
+      "total": 416086,
+      "saudi": 96485,
+      "non_saudi": 319601,
+      "pct_saudi": 23.2,
       "top3_sectors": [
         "Construction",
         "Wholesale/retail",
@@ -641,13 +740,6 @@
       "giga_projects": [
         "AMAALA"
       ],
-      "gosi_q4_2024": {
-        "total": 401998,
-        "saudi": 93583,
-        "non_saudi": 308415,
-        "pct_saudi": 23.3,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 103666,
         "Wholesale & Retail": 83071,
@@ -658,15 +750,22 @@
       "v2030_priorities": "Religious tourism (Rua Al Madinah, Madinah Downtown), heritage & culture, hospitality, health/education clusters",
       "name_fr": "Médine",
       "v2030_priorities_ar": "السياحة الدينية (رؤى المدينة، وسط المدينة)، والتراث والثقافة، والضيافة، ومراكز الصحة والتعليم",
-      "v2030_priorities_fr": "Tourisme religieux (Rua Al Madinah, centre de Médine), patrimoine et culture, hôtellerie, pôles de santé et d’éducation"
+      "v2030_priorities_fr": "Tourisme religieux (Rua Al Madinah, centre de Médine), patrimoine et culture, hôtellerie, pôles de santé et d’éducation",
+      "gosi_q4_2025": {
+        "total": 416086,
+        "saudi": 96485,
+        "non_saudi": 319601,
+        "pct_saudi": 23.2,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Asir",
       "name_ar": "عسير",
-      "total": 379687,
-      "saudi": 71501,
-      "non_saudi": 308186,
-      "pct_saudi": 18.8,
+      "total": 380570,
+      "saudi": 72120,
+      "non_saudi": 308450,
+      "pct_saudi": 19.0,
       "top3_sectors": [
         "Wholesale/retail",
         "Construction",
@@ -675,13 +774,6 @@
       "ai_risk_score": 37,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 367968,
-        "saudi": 72007,
-        "non_saudi": 295961,
-        "pct_saudi": 19.6,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Wholesale & Retail": 77421,
         "Construction": 73827,
@@ -693,15 +785,22 @@
       "v2030_priorities": "Mountain and nature tourism (Soudah Peaks), culture & heritage, light industry and services",
       "name_fr": "Asir",
       "v2030_priorities_ar": "السياحة الجبلية والطبيعية (قمم السودة)، والثقافة والتراث، والصناعات الخفيفة والخدمات",
-      "v2030_priorities_fr": "Tourisme de montagne et de nature (Soudah Peaks), culture et patrimoine, industrie légère et services"
+      "v2030_priorities_fr": "Tourisme de montagne et de nature (Soudah Peaks), culture et patrimoine, industrie légère et services",
+      "gosi_q4_2025": {
+        "total": 380570,
+        "saudi": 72120,
+        "non_saudi": 308450,
+        "pct_saudi": 19.0,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Al Qassim",
       "name_ar": "القصيم",
-      "total": 467777,
-      "saudi": 69199,
-      "non_saudi": 398578,
-      "pct_saudi": 14.8,
+      "total": 466071,
+      "saudi": 71870,
+      "non_saudi": 394201,
+      "pct_saudi": 15.4,
       "top3_sectors": [
         "Construction",
         "Manufacturing",
@@ -710,13 +809,6 @@
       "ai_risk_score": 34,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 449602,
-        "saudi": 68837,
-        "non_saudi": 380765,
-        "pct_saudi": 15.3,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 130486,
         "Manufacturing": 66488,
@@ -728,14 +820,21 @@
       "v2030_priorities": "Agri-business and food processing, logistics and light manufacturing, desert/agricultural heritage tourism",
       "name_fr": "Al Qassim",
       "v2030_priorities_ar": "الأعمال الزراعية وتصنيع الأغذية، والخدمات اللوجستية والصناعات الخفيفة، وسياحة التراث الصحراوي والزراعي",
-      "v2030_priorities_fr": "Agroalimentaire et transformation des aliments, logistique et industrie légère, tourisme du patrimoine désertique et agricole"
+      "v2030_priorities_fr": "Agroalimentaire et transformation des aliments, logistique et industrie légère, tourisme du patrimoine désertique et agricole",
+      "gosi_q4_2025": {
+        "total": 466071,
+        "saudi": 71870,
+        "non_saudi": 394201,
+        "pct_saudi": 15.4,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Tabuk",
       "name_ar": "تبوك",
-      "total": 147937,
-      "saudi": 29114,
-      "non_saudi": 118823,
+      "total": 148443,
+      "saudi": 29317,
+      "non_saudi": 119126,
       "pct_saudi": 19.7,
       "top3_sectors": [
         "Wholesale/retail",
@@ -748,13 +847,6 @@
         "NEOM",
         "Red Sea (partial)"
       ],
-      "gosi_q4_2024": {
-        "total": 143478,
-        "saudi": 29237,
-        "non_saudi": 114241,
-        "pct_saudi": 20.4,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Wholesale & Retail": 30621,
         "Construction": 28950,
@@ -765,15 +857,22 @@
       "v2030_priorities": "NEOM (THE LINE, Oxagon, Trojena), Red Sea tourism (AMAALA), renewables, advanced manufacturing & R&D",
       "name_fr": "Tabouk",
       "v2030_priorities_ar": "نيوم (ذا لاين، أوكساجون، تروجينا)، وسياحة البحر الأحمر (أمالا)، والطاقة المتجددة، والتصنيع المتقدم والبحث والتطوير",
-      "v2030_priorities_fr": "NEOM (THE LINE, Oxagon, Trojena), tourisme de la mer Rouge (AMAALA), énergies renouvelables, industrie avancée et R&D"
+      "v2030_priorities_fr": "NEOM (THE LINE, Oxagon, Trojena), tourisme de la mer Rouge (AMAALA), énergies renouvelables, industrie avancée et R&D",
+      "gosi_q4_2025": {
+        "total": 148443,
+        "saudi": 29317,
+        "non_saudi": 119126,
+        "pct_saudi": 19.7,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Ha'il",
       "name_ar": "حائل",
-      "total": 173102,
-      "saudi": 23380,
-      "non_saudi": 149722,
-      "pct_saudi": 13.5,
+      "total": 176157,
+      "saudi": 24973,
+      "non_saudi": 151184,
+      "pct_saudi": 14.2,
       "top3_sectors": [
         "Construction",
         "Wholesale/retail",
@@ -782,13 +881,6 @@
       "ai_risk_score": 33,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 164288,
-        "saudi": 23681,
-        "non_saudi": 140607,
-        "pct_saudi": 14.4,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 34993,
         "Wholesale & Retail": 27283,
@@ -799,15 +891,22 @@
       "v2030_priorities": "Logistics (central-northern crossroads), desert/adventure tourism (Hail Downtown), light industry",
       "name_fr": "Haïl",
       "v2030_priorities_ar": "الخدمات اللوجستية عند مفترق الطرق الشمالية والوسطى، وسياحة الصحراء والمغامرات (وسط حائل)، والصناعات الخفيفة",
-      "v2030_priorities_fr": "Logistique (carrefour du centre et du nord), tourisme du désert et d’aventure (centre de Haïl), industrie légère"
+      "v2030_priorities_fr": "Logistique (carrefour du centre et du nord), tourisme du désert et d’aventure (centre de Haïl), industrie légère",
+      "gosi_q4_2025": {
+        "total": 176157,
+        "saudi": 24973,
+        "non_saudi": 151184,
+        "pct_saudi": 14.2,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Jazan",
       "name_ar": "جازان",
-      "total": 190523,
-      "saudi": 32954,
-      "non_saudi": 157569,
-      "pct_saudi": 17.3,
+      "total": 191286,
+      "saudi": 33550,
+      "non_saudi": 157736,
+      "pct_saudi": 17.5,
       "top3_sectors": [
         "Wholesale/retail",
         "Construction",
@@ -816,13 +915,6 @@
       "ai_risk_score": 35,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 185202,
-        "saudi": 33810,
-        "non_saudi": 151392,
-        "pct_saudi": 18.3,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Wholesale & Retail": 49254,
         "Construction": 35994,
@@ -833,15 +925,22 @@
       "v2030_priorities": "Jazan Special Economic Zone, heavy industry and port logistics, agro-processing, fisheries, Red Sea tourism",
       "name_fr": "Jizan",
       "v2030_priorities_ar": "المنطقة الاقتصادية الخاصة بجازان، والصناعات الثقيلة والخدمات اللوجستية للميناء، وتصنيع المنتجات الزراعية، ومصايد الأسماك، وسياحة البحر الأحمر",
-      "v2030_priorities_fr": "Zone économique spéciale de Jazan, industrie lourde et logistique portuaire, transformation agricole, pêche, tourisme de la mer Rouge"
+      "v2030_priorities_fr": "Zone économique spéciale de Jazan, industrie lourde et logistique portuaire, transformation agricole, pêche, tourisme de la mer Rouge",
+      "gosi_q4_2025": {
+        "total": 191286,
+        "saudi": 33550,
+        "non_saudi": 157736,
+        "pct_saudi": 17.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Najran",
       "name_ar": "نجران",
-      "total": 163306,
-      "saudi": 25014,
-      "non_saudi": 138292,
-      "pct_saudi": 15.3,
+      "total": 170501,
+      "saudi": 26199,
+      "non_saudi": 144302,
+      "pct_saudi": 15.4,
       "top3_sectors": [
         "Construction",
         "Wholesale/retail",
@@ -850,13 +949,6 @@
       "ai_risk_score": 33,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 155108,
-        "saudi": 25343,
-        "non_saudi": 129765,
-        "pct_saudi": 16.3,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 43132,
         "Wholesale & Retail": 19312,
@@ -867,15 +959,22 @@
       "v2030_priorities": "Mining, logistics to Yemen/GCC, cultural tourism (heritage landscapes)",
       "name_fr": "Najran",
       "v2030_priorities_ar": "التعدين، والخدمات اللوجستية إلى اليمن ودول الخليج، والسياحة الثقافية (المواقع التراثية)",
-      "v2030_priorities_fr": "Mines, logistique vers le Yémen et les pays du Golfe, tourisme culturel (sites patrimoniaux)"
+      "v2030_priorities_fr": "Mines, logistique vers le Yémen et les pays du Golfe, tourisme culturel (sites patrimoniaux)",
+      "gosi_q4_2025": {
+        "total": 170501,
+        "saudi": 26199,
+        "non_saudi": 144302,
+        "pct_saudi": 15.4,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Al Baha",
       "name_ar": "الباحة",
-      "total": 45992,
-      "saudi": 9242,
-      "non_saudi": 36750,
-      "pct_saudi": 20.1,
+      "total": 44691,
+      "saudi": 9162,
+      "non_saudi": 35529,
+      "pct_saudi": 20.5,
       "top3_sectors": [
         "Wholesale/retail",
         "Construction",
@@ -884,13 +983,6 @@
       "ai_risk_score": 36,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 45765,
-        "saudi": 9357,
-        "non_saudi": 36408,
-        "pct_saudi": 20.4,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Wholesale & Retail": 11146,
         "Construction": 9414,
@@ -901,14 +993,21 @@
       "v2030_priorities": "Mountain tourism and eco-tourism (Al Bahah Downtown), small-scale services and agriculture",
       "name_fr": "Al Baha",
       "v2030_priorities_ar": "السياحة الجبلية والبيئية (وسط الباحة)، والخدمات الصغيرة والزراعة",
-      "v2030_priorities_fr": "Tourisme de montagne et écotourisme (centre d’Al Baha), petits services et agriculture"
+      "v2030_priorities_fr": "Tourisme de montagne et écotourisme (centre d’Al Baha), petits services et agriculture",
+      "gosi_q4_2025": {
+        "total": 44691,
+        "saudi": 9162,
+        "non_saudi": 35529,
+        "pct_saudi": 20.5,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Northern Borders",
       "name_ar": "الحدود الشمالية",
-      "total": 58169,
-      "saudi": 9758,
-      "non_saudi": 48411,
+      "total": 57832,
+      "saudi": 9721,
+      "non_saudi": 48111,
       "pct_saudi": 16.8,
       "top3_sectors": [
         "Construction",
@@ -918,13 +1017,6 @@
       "ai_risk_score": 32,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 56826,
-        "saudi": 9933,
-        "non_saudi": 46893,
-        "pct_saudi": 17.5,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Construction": 14182,
         "Wholesale & Retail": 11547,
@@ -935,15 +1027,22 @@
       "v2030_priorities": "Mining and minerals, logistics, agriculture; mining/logistics corridor",
       "name_fr": "Frontières du Nord",
       "v2030_priorities_ar": "التعدين والمعادن، والخدمات اللوجستية، والزراعة؛ وممر التعدين والنقل",
-      "v2030_priorities_fr": "Mines et minerais, logistique, agriculture ; corridor minier et logistique"
+      "v2030_priorities_fr": "Mines et minerais, logistique, agriculture ; corridor minier et logistique",
+      "gosi_q4_2025": {
+        "total": 57832,
+        "saudi": 9721,
+        "non_saudi": 48111,
+        "pct_saudi": 16.8,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     },
     {
       "name_en": "Al Jouf",
       "name_ar": "الجوف",
-      "total": 74116,
-      "saudi": 14835,
-      "non_saudi": 59281,
-      "pct_saudi": 20,
+      "total": 83326,
+      "saudi": 15608,
+      "non_saudi": 67718,
+      "pct_saudi": 18.7,
       "top3_sectors": [
         "Wholesale/retail",
         "Construction",
@@ -952,13 +1051,6 @@
       "ai_risk_score": 34,
       "pib_share": null,
       "giga_projects": [],
-      "gosi_q4_2024": {
-        "total": 73450,
-        "saudi": 15042,
-        "non_saudi": 58408,
-        "pct_saudi": 20.5,
-        "source": "GASTAT Register-based Labour Market Statistics Q4-2024"
-      },
       "sector_employment": {
         "Wholesale & Retail": 18094,
         "Construction": 12288,
@@ -969,7 +1061,14 @@
       "v2030_priorities": "Renewables (wind/solar around Sakaka/Dumat Al Jandal), agriculture, logistics",
       "name_fr": "Al Jouf",
       "v2030_priorities_ar": "الطاقة المتجددة (الرياح والطاقة الشمسية حول سكاكا ودومة الجندل)، والزراعة والخدمات اللوجستية",
-      "v2030_priorities_fr": "Énergies renouvelables (éolien et solaire autour de Sakaka et Dumat Al Jandal), agriculture, logistique"
+      "v2030_priorities_fr": "Énergies renouvelables (éolien et solaire autour de Sakaka et Dumat Al Jandal), agriculture, logistique",
+      "gosi_q4_2025": {
+        "total": 83326,
+        "saudi": 15608,
+        "non_saudi": 67718,
+        "pct_saudi": 18.7,
+        "source": "GASTAT Register-based Labour Market Statistics, Q4 2025"
+      }
     }
   ],
   "occupations": {

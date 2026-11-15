@@ -396,7 +396,7 @@ function renderDefaultMode(lang: Lang, fontFamily: string) {
 
       <div style={{ display: "flex", gap: "32px", marginTop: "44px" }}>
         {[
-          { value: "12.4M", label: labels.workers },
+          { value: "13.7M", label: labels.workers },
           { value: "4.5M", label: labels.atRisk },
           { value: "20", label: labels.sectors },
           { value: "13", label: labels.regions },

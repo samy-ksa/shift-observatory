@@ -23,12 +23,12 @@ export const en: Dictionary = {
       gosi: {
         label: "GOSI Workforce",
         tooltip:
-          "Total workers registered in Saudi Arabia's social insurance system (GOSI). Excludes military, domestic workers, and informal sector. Source: GOSI Q4-2024.",
+          "Total workers registered in Saudi Arabia's social insurance system (GOSI). Excludes military, domestic workers, and informal sector. Source: GOSI Q4 2025.",
       },
       saudi: {
         label: "Saudi workers",
         tooltip:
-          "Percentage of Saudi nationals in GOSI-registered workforce. Saudization rate. Source: GOSI Q4-2024.",
+          "Percentage of Saudi nationals in GOSI-registered workforce. Saudization rate. Source: GOSI Q4 2025.",
       },
       unemployment: {
         label: "Unemployment (Saudi)",
@@ -172,7 +172,7 @@ export const en: Dictionary = {
       topSectors: "TOP SECTORS BY EMPLOYMENT",
       gigaProjects: "VISION 2030 GIGA-PROJECTS",
       v2030Focus: "V2030 PRIORITIES",
-      gosiSource: "Source: GASTAT GOSI Q4-2024",
+      gosiSource: "Source: GASTAT GOSI Q4 2025",
     },
   },
   sectors: {

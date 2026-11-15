@@ -21,7 +21,7 @@ function getItems(panels: {
     {
       title: panels.data,
       content: `LABOR MARKET
-\u2022 GASTAT Register-based Labor Market Statistics (GOSI) Q4-2024
+\u2022 GASTAT Register-based Labor Market Statistics (GOSI) Q4 2025
   13 administrative regions, 20 ISIC Rev.4 sectors
   Source: General Authority for Statistics via GLMM
 
@@ -80,7 +80,7 @@ Weighted average of dominant sectors in each region.`,
     {
       title: panels.limitations,
       content: `DATA GAPS
-\u2022 GOSI covers 12.42M workers vs LFS 18.54M total. Gap of ~6M includes military, domestic workers, and informal sector \u2014 not captured here.
+\u2022 GOSI registers 13.67M workers (12.51M classified by sector) vs LFS 18.54M total. Gap of ~5M includes military, domestic workers, and informal sector \u2014 not captured here.
 \u2022 The dataset lists 100 reserved professions; dated Saudization decisions are tracked in the Saudization tracker.
 \u2022 Employer headcounts: several are LinkedIn estimates, not official reports.
 
@@ -108,7 +108,7 @@ Built with data. Not fear.`,
     {
       title: panels.changelog,
       content: `V2.0 (March 21, 2026)
-\u2022 20 ISIC sectors with GASTAT GOSI Q4-2024 data
+\u2022 20 ISIC sectors with GASTAT GOSI Q4 2025 data
 \u2022 237 occupations scored across 3 AI exposure indices
 \u2022 13 administrative regions
 \u2022 24 months of global tech layoffs data

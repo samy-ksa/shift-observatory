@@ -98,9 +98,9 @@ function getTopSectors(region: Region, n = 5): { name: string; count: number }[]
     .map(([name, count]) => ({ name, count }));
 }
 
-/** Get GOSI Q4-2024 data if available */
+/** Get GOSI Q4 2025 data if available */
 function getGosi(region: Region) {
-  return (region as Record<string, unknown>).gosi_q4_2024 as
+  return (region as Record<string, unknown>).gosi_q4_2025 as
     | { total: number; saudi: number; non_saudi: number; pct_saudi: number; source: string }
     | undefined;
 }
@@ -121,7 +121,7 @@ export default function KSAMapSection() {
   const topSectors = getTopSectors(selected, 5);
   const v2030Priorities = getV2030Priorities(selected);
 
-  // Use GOSI Q4-2024 data when available, fallback to V1 fields
+  // Use GOSI Q4 2025 data when available, fallback to V1 fields
   const totalWorkers = gosi?.total ?? selected.total;
   const saudiPct = gosi?.pct_saudi ?? selected.pct_saudi;
   const nonSaudiCount = gosi?.non_saudi ?? (selected.total - Math.round(selected.total * selected.pct_saudi / 100));
