@@ -1,5 +1,5 @@
 {
-  "report_date": "2026-11-10",
+  "report_date": "2026-11-15",
   "period": "last 7 days",
   "global_layoffs": [
     {
@@ -14,85 +14,83 @@
       "date": "2026-11-09"
     },
     {
-      "company": "Canva",
-      "country": "AU",
-      "sector": "Tech",
-      "jobs_cut": 1271,
-      "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "Canva cut 1,271 employees, or about 22% of its workforce, while flattening its organization and citing changing technology and product expectations.",
-      "source": "Computerworld",
-      "date": "2026-11-03"
-    },
-    {
-      "company": "SUSE",
+      "company": "Vodafone Germany",
       "country": "DE",
-      "sector": "Tech",
-      "jobs_cut": 0,
-      "jobs_cut_estimated": true,
-      "ai_role": "direct",
-      "description": "SUSE announced a workforce reduction of approximately 10%, with its chief executive stating that automation and AI are fundamentally changing how software companies operate.",
-      "source": "The Pivot Wave",
-      "date": "2026-11-07"
+      "sector": "Telecom",
+      "jobs_cut": 2300,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Vodafone Germany announced a restructuring of about 2,300 roles (including relocations), citing simpler structures, more AI and stronger competitiveness.",
+      "source": "Vodafone Germany newsroom (https://unternehmen.vodafone.de/newsroom/beschleunigter-umbau-durch-einfachere-strukturen-mehr-ki-staerkere-wettbewerbsfaehigkeit)",
+      "date": "2026-11-09"
     },
     {
-      "company": "NICE",
+      "company": "Qantas",
+      "country": "AU",
+      "sector": "Aviation",
+      "jobs_cut": 850,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Qantas will cut about 850 jobs in an overhaul that includes AI-driven automation of back-office work.",
+      "source": "Information Age (https://ia.acs.org.au/article/2026/qantas-to-axe-850-jobs-in-ai-overhaul.html)",
+      "date": "2026-11-09"
+    },
+    {
+      "company": "Umicore",
+      "country": "BE",
+      "sector": "Materials",
+      "jobs_cut": 350,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Umicore announced about 350 job reductions in Belgium and cited AI among its reasons, alongside a EUR 450 million growth investment plan.",
+      "source": "Umicore newsroom (https://www.umicore.com/en/media/newsroom/umicore-to-invest-450-million-euros-for-growth/)",
+      "date": "2026-11-12"
+    },
+    {
+      "company": "Gainsight",
+      "country": "US",
+      "sector": "Tech",
+      "jobs_cut": 270,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Gainsight cut about 270 jobs, with its CEO citing the changing future of SaaS and customer success in the age of AI.",
+      "source": "LinkedIn, Gainsight CEO (https://www.linkedin.com/posts/chuckganapathi_the-future-of-saas-and-customer-success-is-activity-7526507431997136896-0wKr)",
+      "date": "2026-11-12"
+    },
+    {
+      "company": "Axonius",
       "country": "IL",
       "sector": "Tech",
-      "jobs_cut": 500,
+      "jobs_cut": 66,
       "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "NICE cut about 500 jobs while changing how it organizes and invests to serve customers deploying AI-driven contact-center technology.",
-      "source": "The Pivot Wave",
-      "date": "2026-11-07"
-    },
-    {
-      "company": "Fiserv",
-      "country": "US",
-      "sector": "Financial Services Technology",
-      "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Fiserv disclosed that 3,000 employee and contractor positions had been eliminated since June and linked continued simplification to an AI-everywhere operating model.",
-      "source": "The Pivot Wave",
-      "date": "2026-11-07"
-    },
-    {
-      "company": "Block",
-      "country": "US",
-      "sector": "Financial Services Technology",
-      "jobs_cut": 0,
-      "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "Block announced a second 2026 workforce reduction and said improved tools would allow employees to handle more routine work, without disclosing a job count.",
-      "source": "The Pivot Wave",
-      "date": "2026-11-05"
-    },
-    {
-      "company": "PayPal",
-      "country": "US",
-      "sector": "Financial Services Technology",
-      "jobs_cut": 2000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "PayPal said it was pursuing approximately $700 million in run-rate savings through cuts affecting more than 2,000 jobs while adopting AI tools including customer-service chat agents.",
-      "source": "FourWeekMBA",
-      "date": "2026-11-03"
-    },
-    {
-      "company": "Amazon",
-      "country": "US",
-      "sector": "Tech",
-      "jobs_cut": 250,
-      "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "Amazon cut about 250 jobs in its devices and services unit as it sought to operate more efficiently and align staffing with its product roadmap.",
-      "source": "FourWeekMBA",
-      "date": "2026-11-03"
+      "ai_role": "direct",
+      "description": "Axonius plans to cut 66 jobs globally, including 46 in Israel, and declared the cuts AI-related.",
+      "source": "Calcalist (https://www.calcalistech.com/ctechnews/article/9upwifo24)",
+      "date": "2026-11-09"
     }
   ],
-  "gulf_mena_automation": [],
+  "gulf_mena_automation": [
+    {
+      "company": "Emirates NBD",
+      "country": "AE",
+      "sector": "Banking",
+      "event_type": "automation_deployment",
+      "jobs_affected": 0,
+      "jobs_affected_estimated": true,
+      "description": "Emirates NBD became the first MENA bank to deploy OpenAI GPT models on in-country infrastructure, for customer experience, risk, financial-crime prevention, process automation and staff productivity; no job figures disclosed.",
+      "source": "Fortune (https://fortune.com/2026/11/11/inside-the-ai-revolution-reshaping-dubais-banking-sector)",
+      "date": "2026-11-11"
+    }
+  ],
   "saudi_policy_updates": [
+    {
+      "type": "nitaqat",
+      "title": "Saudization rate raised to 35% for 94 technical engineering professions",
+      "description": "HRSD and the Ministry of Municipalities and Housing raised the Saudization rate for 94 technical engineering professions from 30% to 35% in private establishments with five or more workers, effective 9 May 2027.",
+      "effective_date": "2027-05-09",
+      "source": "Saudi Gazette (https://saudigazette.com.sa/article/666085/saudi-arabia/saudization-rate-raises-to-35-for-94-technical-engineering-professions-effective-may-9-2027)",
+      "date_announced": "2026-11-08"
+    },
     {
       "type": "nitaqat",
       "title": "Phased increase of the Nitaqat full-worker salary threshold to SAR 5,000 then SAR 6,000",
@@ -111,62 +109,56 @@
       "date": "2026-11-09"
     },
     {
-      "headline": "AI-linked technology layoffs exceed 90,000 in 2026",
-      "description": "Layoffs.fyi data cited in November reporting attributed more than 93,000 technology-sector job cuts to AI during 2026. The broader tracker recorded more than 135,000 technology layoffs across 334 companies by late October.",
-      "relevance_to_ksa": "contextual",
-      "source": "Onmanorama",
+      "headline": "AI-attributed US job cuts reach 121,401 through October",
+      "description": "Challenger, Gray & Christmas counts 121,401 US job cuts attributed to AI from January to October 2026, more than double the 54,836 recorded for all of 2025, though AI's share of announced cuts has fallen since August.",
+      "relevance_to_ksa": "indirect",
+      "source": "Challenger, Gray & Christmas (https://www.challengergray.com/wp-content/uploads/2026/11/Challenger-Report-October-2026.pdf)",
       "date": "2026-11-05"
     },
     {
-      "headline": "Enterprise AI adoption reshapes software staffing",
-      "description": "SUSE said automation and AI are fundamentally changing software-company operations as it announced a workforce reduction of approximately 10%. The development illustrates pressure on software firms to redirect headcount toward AI capabilities and higher-value roles.",
+      "headline": "Tech layoffs pass 206,000 workers in 2026",
+      "description": "TrueUp's tracker records 206,817 tech workers affected across 712 layoff events through 13 November 2026, even as companies expand AI spending.",
       "relevance_to_ksa": "indirect",
-      "source": "The Pivot Wave",
-      "date": "2026-11-07"
+      "source": "Latin Times (https://www.latintimes.com/ai-cited-us-tech-layoffs-2026-601307)",
+      "date": "2026-11-13"
     },
     {
-      "headline": "AI contact-center deployment drives operating redesign",
-      "description": "NICE cut about 500 jobs while reorganizing investment around enterprise customers deploying AI contact-center systems. The shift signals continued consolidation of traditional customer-service work around AI-agent platforms.",
-      "relevance_to_ksa": "indirect",
-      "source": "The Pivot Wave",
-      "date": "2026-11-07"
+      "headline": "Saudi tech hiring slows, AI-management skills at a premium",
+      "description": "Enterprise reports hiring is slowing across Saudi Arabia's tech sector while demand stays highest for people who can manage AI (data engineers, cloud architects, cybersecurity), with some repetitive jobs handed to AI.",
+      "relevance_to_ksa": "direct",
+      "source": "Enterprise AI + Innovation (https://enterpriseam.com/ai/2026/11/10/saudi-hiring-is-slowing-but-ai-skills-are-at-a-premium/)",
+      "date": "2026-11-10"
     },
     {
-      "headline": "Financial-services firms pair cost reduction with AI adoption",
-      "description": "PayPal linked more than 2,000 job cuts and cost savings to operational simplification while adopting AI customer-service agents. Fiserv separately connected thousands of reductions to an AI-everywhere operating model.",
-      "relevance_to_ksa": "indirect",
-      "source": "FourWeekMBA",
-      "date": "2026-11-03"
+      "headline": "AI roles are 4% of Saudi job postings",
+      "description": "Alion's AI Hiring Index counts 5,774 live postings from 672 employers in Saudi Arabia and finds about 4% are AI roles (edition of 13 November 2026).",
+      "relevance_to_ksa": "direct",
+      "source": "Alion AI Hiring Index (https://alion.io/data/ai-hiring/saudi-arabia)",
+      "date": "2026-11-13"
     },
     {
-      "headline": "Canva restructures amid generative-technology pressure",
-      "description": "Canva eliminated 1,271 roles, about 22% of its workforce, while flattening its organization. Its leadership cited technology-driven changes in what users create and expect, although it did not explicitly identify AI as the cause of the reductions.",
-      "relevance_to_ksa": "contextual",
-      "source": "Computerworld",
-      "date": "2026-11-03"
-    },
-    {
-      "headline": "AI remains mixed with broader restructuring motives",
-      "description": "Analysis of 2026 layoff announcements found that many companies mentioning AI also cited cost control, organizational simplification, changing strategy, or slower growth. The evidence supports treating AI as a contributing factor in many cases rather than assuming direct substitution.",
-      "relevance_to_ksa": "contextual",
-      "source": "Ryan Doser Research",
-      "date": "2026-11-05"
+      "headline": "Saudi engineering Saudization quota rises to 35%",
+      "description": "The higher quota for 94 technical engineering professions from May 2027 adds a localization constraint on firms that plan to automate or restructure technician roles.",
+      "relevance_to_ksa": "direct",
+      "source": "Saudi Gazette (https://saudigazette.com.sa/article/666085/saudi-arabia/saudization-rate-raises-to-35-for-94-technical-engineering-professions-effective-may-9-2027)",
+      "date": "2026-11-08"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 15021,
+    "total_global_layoffs_this_week": 11836,
     "total_ai_cited_this_week": 6,
-    "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 135446,
-    "ytd_ai_cited_us": 93217,
-    "trend_vs_last_week": "up",
-    "notable_trend": "AI-related restructuring is increasingly combining headcount reductions with redeployment toward infrastructure, software automation, and customer-service agents, while companies continue to present AI alongside broader efficiency and organizational simplification goals.",
-    "model_reported": {
-      "total_global_layoffs_this_week": 15021,
-      "total_ai_cited_this_week": 5
-    },
-    "events_this_week": 8,
+    "total_gulf_events_this_week": 1,
+    "ytd_global_tech_layoffs": 206817,
+    "ytd_ai_cited_us": 121401,
+    "trend_vs_last_week": "down",
+    "notable_trend": "AI is increasingly named alongside restructuring in layoff announcements (Vodafone, Qantas, Umicore, Gainsight), yet Challenger data shows its share of stated US reasons has fallen since August; in Saudi Arabia the week's signal is regulatory (a 35% engineering Saudization quota from May 2027) and a slowing but AI-skill-hungry hiring market.",
+    "events_this_week": 6,
     "backfill_events_older_than_week": 0,
-    "totals_computed_from_list": true
+    "totals_computed_from_list": true,
+    "model_reported": {
+      "total_global_layoffs_this_week": null,
+      "total_ai_cited_this_week": null
+    },
+    "data_note": "Manual update 15 Nov 2026; YTD figures from TrueUp (tech layoffs) and Challenger (US AI-attributed cuts), different methodologies."
   }
 }
