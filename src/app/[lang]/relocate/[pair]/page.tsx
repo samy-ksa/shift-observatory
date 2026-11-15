@@ -12,21 +12,15 @@ import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
 
-const LANGS: Lang[] = ["en", "fr", "ar"];
 
+// Generated on first request and cached (ISR) instead of pre-rendered at each
+// deployment; invalid pairs return a real 404 (notFound) in the page body.
 export function generateStaticParams() {
-  const pairs: { lang: Lang; pair: string }[] = [];
-  for (const lang of LANGS) {
-    for (const o of ORIGIN_CITIES) {
-      for (const s of SAUDI_CITIES) {
-        pairs.push({ lang, pair: `${o.id}-to-${s.id}` });
-      }
-    }
-  }
-  return pairs;
+  return (["en", "fr", "ar"] as Lang[]).map((lang) => ({ lang, pair: "manila-to-riyadh" }));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 604800;
 
 function parsePair(pair: string) {
   const m = pair.match(/^(.+)-to-(.+)$/);

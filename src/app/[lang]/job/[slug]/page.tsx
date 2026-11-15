@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import {
-  getAllOccupations,
   findBySlug,
-  toSlug,
   getSector,
   getRelatedOccupations,
   getRelevantTawteen,
@@ -16,6 +14,7 @@ import { getScoreTrend } from "@/data/score-history";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { localizedHref } from "@/lib/i18n/links";
 import { getInsightsForJob, getLangContent } from "@/lib/insights";
 import { sarToEurFr } from "@/lib/currency";
@@ -26,7 +25,6 @@ const RELATED_ANALYSIS: Record<Lang, string> = {
   ar: "تحليل ذو صلة",
 };
 
-const LANGS: Lang[] = ["en", "fr", "ar"];
 
 // 28/09 : cohorte de test (10 pages, plus fort volume d'impressions parmi les 25
 // pages composite<45/EN dont le 1er gabarit de <title> — "AI Risk" en tête — passait
@@ -115,12 +113,18 @@ const SALARY_FIRST_LEDE_COHORT = new Set([
   "medical-laboratory-technician",
 ]);
 
+// Pages are generated on first request and then cached (ISR) instead of being
+// pre-rendered at every deployment: keeps each Vercel deployment small.
+// Unknown slugs return a real 404 via notFound() in the page body.
+const PREBUILT_LANGS: Lang[] = ["en", "fr", "ar"];
+const PREBUILT_SLUGS = ["petroleum-engineer", "hotel-manager", "cloud-engineer"];
+
 export async function generateStaticParams() {
-  const slugs = getAllOccupations().map((o) => toSlug(o.name_en));
-  return LANGS.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
+  return PREBUILT_LANGS.flatMap((lang) => PREBUILT_SLUGS.map((slug) => ({ lang, slug })));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 604800;
 
 export async function generateMetadata({
   params,
@@ -286,17 +290,7 @@ export default async function LangJobPage({
   const { lang, slug } = await params;
   const occ = findBySlug(slug);
 
-  if (!occ) {
-    return (
-      <JobPageClient
-        occupation={null}
-        related={[]}
-        sector={null}
-        tawteen={[]}
-        reserved={false}
-      />
-    );
-  }
+  if (!occ) notFound();
 
   const sector = getSector(occ.sector_id) ?? null;
   const related = getRelatedOccupations(occ, 5);

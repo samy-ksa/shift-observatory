@@ -5,6 +5,7 @@ import { DM_Sans, JetBrains_Mono, IBM_Plex_Sans_Arabic } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
+import { notFound } from "next/navigation";
 
 import type { Lang } from "@/lib/i18n/context";
 import { LangProvider } from "@/lib/i18n/context";
@@ -77,7 +78,9 @@ export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "fr" }, { lang: "ar" }];
 }
 
-export const dynamicParams = false;
+// dynamicParams stays true at layout level so job/[slug] and relocate/[pair] can be
+// generated on demand (ISR); the language is validated explicitly below.
+const VALID_LANGS = ["en", "fr", "ar"];
 
 export async function generateMetadata({
   params,
@@ -85,6 +88,7 @@ export async function generateMetadata({
   params: Promise<{ lang: Lang }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  if (!VALID_LANGS.includes(lang)) notFound();
   return {
     metadataBase: new URL(SITE),
     applicationName: "SHIFT Observatory",
@@ -152,6 +156,7 @@ export default async function LangLayout({
   params: Promise<{ lang: Lang }>;
 }) {
   const { lang } = await params;
+  if (!VALID_LANGS.includes(lang)) notFound();
   const dir = lang === "ar" ? "rtl" : "ltr";
 
   // Localized JSON-LD
