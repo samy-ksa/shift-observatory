@@ -11,7 +11,7 @@ import data from "@/data/master.json";
 const hero = data.hero;
 
 export default function HeroCounter() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [saudiOnly, setSaudiOnly] = useState(false);
 
   const mainNumber = saudiOnly
@@ -20,6 +20,8 @@ export default function HeroCounter() {
 
   const impactBase = saudiOnly ? hero.total_saudi_gosi : hero.total_workforce_gosi;
   const impactPct = Math.round((100 * mainNumber) / impactBase);
+  const impactMillionsRaw = (mainNumber / 1_000_000).toFixed(1);
+  const impactMillions = lang === "fr" ? impactMillionsRaw.replace(".", ",") : impactMillionsRaw;
 
   const kpis = [
     {
@@ -123,7 +125,7 @@ export default function HeroCounter() {
             />
           </div>
           <p className="text-text-primary text-lg md:text-2xl font-semibold mt-4 max-w-2xl mx-auto leading-snug">
-            {(saudiOnly ? t.hero.impactSaudi : t.hero.impactAll).replace("{pct}", String(impactPct))}
+            {(saudiOnly ? t.hero.impactSaudi : t.hero.impactAll).replace("{pct}", String(impactPct)).replace("{n}", impactMillions)}
           </p>
           <p className="text-text-secondary text-sm md:text-base mt-3 max-w-xl mx-auto">
             {t.hero.impactNote}
