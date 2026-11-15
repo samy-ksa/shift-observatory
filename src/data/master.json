@@ -51,8 +51,8 @@
     "headline_label": "jobs with significant AI exposure (risk-weighted)",
     "methodology_note": "Calculated as SUM(sector_employees × sector_ai_risk_score/100). This represents AI-weighted exposure, not predicted job losses. Actual displacement will be lower (augmentation > substitution for many roles).",
     "v2030_jobs_target_net": 2304400,
-    "layoffs_global_2024": 151000,
-    "layoffs_global_2025": 118500,
+    "layoffs_global_2024": 152900,
+    "layoffs_global_2025": 122600,
     "layoffs_ai_cited_us_2025": 54836,
     "layoffs_ai_cited_us_2026_ytd": 121401,
     "unemployment_saudi": 6.5,
@@ -1123,7 +1123,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 65000,
+        "employment_est": 66600,
         "sector_id": "admin_support",
         "employment_saudi_pct": 28,
         "risk_reasoning_en": "Data Entry Keyers show an extremely high composite risk of 94.9, aligned with a very high 99% Frey-Osborne automation probability and very high LLM exposure at 0.95. In Administrative & Support Services, repetitive cognitive tasks at scale are explicitly identified as where AI hits hardest, and data entry is cited as a core 99% automation role, explaining the brutal decline trend.",
@@ -1243,7 +1243,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 9200,
+        "employment_est": 9300,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Tax preparers face extremely high automation risk: composite score 93.1 and Frey-Osborne probability 99 indicate very high substitution potential. Very high LLM exposure at 0.9 and very high Felten exposure reflect that GenAI can handle tax forms, documentation and calculations in this Financial & Insurance Activities sector, already showing highest GenAI exposure and strong process automation trends.",
@@ -1366,7 +1366,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 5800,
+        "employment_est": 5900,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Legal secretaries show a very high composite automation risk (91.5), aligned with an almost certain Frey–Osborne probability of 98 and very high LLM exposure at 0.95. In a professional, scientific and technical sector where GenAI mainly augments lawyers and consultants, routine, document-heavy support roles are more directly substituted, especially amid a structural demand decline.",
@@ -1487,7 +1487,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 95000,
+        "employment_est": 95600,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The score is very high because both task-based measures point to near-complete automation pressure: eloundou_llm_exposure is 1 and Frey-Osborne automation probability is 94. The sector rationale also stresses the highest GenAI exposure, with 35 automated processes and 40K hours saved, while advisory work only softens, not offsets, substitution risk.",
@@ -1547,7 +1547,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 28000,
+        "employment_est": 28700,
         "sector_id": "admin_support",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Payroll Clerks sit in a sector described as the highest-risk by volume, where repetitive cognitive back-office work is already the main automation target. The job’s composite score of 87.7, Frey-Osborne probability of 97, and LLM exposure of 0.85 all fall in the very high range, matching a substitution profile rather than augmentation.",
@@ -1607,7 +1607,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 145000,
+        "employment_est": 148500,
         "sector_id": "admin_support",
         "employment_saudi_pct": 55,
         "risk_reasoning_en": "Administrative assistants sit in the highest-risk administrative sector, with a composite score of 85.2 and very high Frey-Osborne automation probability of 90. Very high LLM exposure (0.85) and high Felten AI exposure reflect heavy reliance on repetitive cognitive tasks and back-office processing, which sector data explicitly identifies as where AI hits hardest at scale.",
@@ -1668,7 +1668,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 42000,
+        "employment_est": 43000,
         "sector_id": "admin_support",
         "employment_saudi_pct": 75,
         "risk_reasoning_en": "The score is very high because all three indicators align: 0.85 LLM exposure, 80 Frey-Osborne automation probability, and very high Felten exposure. The sector rationale points to repetitive cognitive work at scale in Administrative & Support Services, where back-office and admin tasks are most exposed, and the decline trend reinforces substitution pressure.",
@@ -1728,7 +1728,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 38400,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Logistics clerks in Transportation & Storage show very high automation risk: composite score 84.5 and Frey-Osborne probability 98, both in the top band. High Felten exposure and Eloundou LLM exposure at 0.75 indicate that their routine, digital and rules-based tasks are highly compatible with AI. Sector data mentions growing warehouse automation and sorting robots, with overall WEF trend in decline, reinforcing substitution rather than augmentation.",
@@ -1849,7 +1849,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 8200,
+        "employment_est": 8300,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The score is very high because both automation indicators are extreme: 94 on Frey–Osborne and 0.85 LLM exposure, while Felten is high. The sector note says legal work is heavily exposed to GenAI, and the occupation profile is declining, which reinforces substitution pressure rather than mere augmentation.",
@@ -1915,7 +1915,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 14500,
+        "employment_est": 14700,
         "sector_id": "health",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Medical coders show a very high composite automation risk of 82.5, driven by a very high Frey-Osborne probability of 72 and extremely high LLM exposure at 0.85. In Human Health & Social Work, core clinical roles stay protected, but this back-office, fully digital, rule-based function is structurally different, with very high Felten exposure confirming intense vulnerability to AI substitution despite overall sector resilience.",
@@ -1975,7 +1975,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 9100,
+        "employment_est": 9200,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 55,
         "risk_reasoning_en": "Claims adjusters in Saudi Arabia face very high automation risk, with a composite score of 81 and a Frey-Osborne probability of 98, in a sector labeled highest GenAI exposure. Eloundou LLM exposure is high at 0.65, and Felten AI exposure is also high, in a financial and insurance sector already automating many processes and showing a decline trend, with mainly Saudi jobs affected.",
@@ -2035,7 +2035,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 85000,
+        "employment_est": 87000,
         "sector_id": "admin_support",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Receptionists score a very high 80.3 composite risk, driven by an extremely high 96% Frey-Osborne automation probability and high Felten AI exposure in a sector already identified as the highest-risk volume cluster for repetitive office admin. The 0.65 Eloundou LLM exposure confirms many tasks are structured, digital and cognitively routine, aligning with the sector rationale and WEF decline trend.",
@@ -2095,7 +2095,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 32000,
+        "employment_est": 32100,
         "sector_id": "construction",
         "employment_saudi_pct": 15,
         "risk_reasoning_en": "This role scores high because the composite score is 80, the LLM exposure is very high at 0.82, and the Frey-Osborne automation probability is exactly 70, placing it at the upper edge of the high-risk band. In construction, document control is process-heavy and information-based rather than site-physical, so its tasks align closely with automation.",
@@ -2161,7 +2161,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 12800,
+        "employment_est": 13000,
         "sector_id": "public_admin",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Budget analysts in Saudi public administration face a very high composite risk of 78.4, driven by a very high 94% Frey-Osborne automation probability and very high 0.85 LLM exposure. Sector evidence of large-scale digital government platforms and automated customs shows routine budget work being increasingly digitized, but political protection and gradual non-replacement mean more AI augmentation than abrupt displacement.",
@@ -2281,7 +2281,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 16500,
+        "employment_est": 16900,
         "sector_id": "admin_support",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "Travel agents in Administrative & Support Services sit in a sector described as where AI hits hardest, focused on repetitive cognitive processing at scale. A very high 99 Frey-Osborne probability and high 76.7 composite score signal near-complete automation risk. Elevated 0.6 LLM exposure and moderate Felten exposure confirm core planning, booking, and information tasks are structurally automatable.",
@@ -2341,7 +2341,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 38900,
         "sector_id": "admin_support",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "The score is high because the role sits in Administrative & Support Services, identified as the highest-risk sector by volume, where repetitive cognitive office work is heavily exposed. The job’s 0.8 LLM exposure and high Felten rating align with strong automation pressure, while the 60 Frey-Osborne probability and 75 composite indicate substantial but not total substitution.",
@@ -2401,7 +2401,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 12500,
+        "employment_est": 12600,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 55,
         "risk_reasoning_en": "Translators sit in a high-exposure corner of a professional, scientific and technical sector already deeply impacted by GenAI. A very high LLM exposure score of 0.95 and very high Felten AI exposure point to large parts of the workflow being technically replicable. The composite score of 73.5 therefore reflects a very high overall automation risk, even though the Frey-Osborne probability remains only moderate at 38.",
@@ -2461,7 +2461,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 18000,
+        "employment_est": 18100,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "Bank tellers show a very high 72.8/100 composite AI risk because Frey-Osborne automation probability is extremely high at 98, while LLM exposure is elevated at 0.5. In Financial & Insurance Activities, GenAI exposure is described as the highest, with bank tellers projected at -35% and a brutal decline trend, reinforcing substitution rather than augmentation in a highly Saudised, quota-constrained sector.",
@@ -2522,7 +2522,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 16500,
+        "employment_est": 16700,
         "sector_id": "ict",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "The score is high because LLM exposure is very high at 0.85, while Felten is also very high, indicating heavy task-level susceptibility. Frey-Osborne is only 32, so full automation is not the main mechanism; instead, the composite 72 reflects substitution pressure within ICT, a sector already reshaped by AI-related restructuring.",
@@ -2582,7 +2582,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 125000,
+        "employment_est": 124700,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Customer Service Reps in Saudi wholesale and retail have a very high composite risk of 71.2, consistent with their high LLM exposure of 0.8 and elevated Frey-Osborne probability of 55. Sector rationale highlights self-checkout, e-commerce and automated inventory driving substitution in frontline service roles, while shop salespeople grow, creating uneven impact and strong pressure on routine call-center style tasks.",
@@ -2642,7 +2642,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 15000,
+        "employment_est": 15100,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "Insurance agents sit in a sector with the highest GenAI exposure and already-automated financial processes, pushing a high composite score of 70. Their tasks show very high LLM exposure (0.78) and elevated Frey-Osborne automation probability (55), with Felten exposure marked high, confirming strong substitution pressure despite advisory roles remaining relevant.",
@@ -2670,7 +2670,7 @@
         "salary_senior_sar": 15000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -2804,7 +2804,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 8800,
+        "employment_est": 8900,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Credit Analysts face a composite automation risk of 68.5/100, reflecting an elevated substitution risk. This aligns with high Frey-Osborne probability (41) and very high LLM exposure (0.8). In Financial & Insurance Activities, GenAI is already automating many structured, rules-based credit tasks, while advisory elements remain more resilient, explaining a moderate decline rather than collapse in demand.",
@@ -2864,7 +2864,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 7200,
+        "employment_est": 7300,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Postal Service Clerks show a very high classic automation probability at 95, with only moderate LLM exposure at 0.4, meaning routine front-office tasks are easily codified and substituted. Sector data highlights growing sorting robotics and warehouse automation, while structural decline in postal services contrasts with short‑term delivery growth, driving a high composite score of 68.2 and a substitution risk profile.",
@@ -2930,7 +2930,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 15500,
+        "employment_est": 15700,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "Market Research Analysts have a composite score of 67.9, which sits in the high band, but the category is augmentation rather than substitution. That fits the very high LLM exposure of 0.88 and the high Felten exposure, while the Frey-Osborne probability of 61 also signals substantial task automation without full replacement. The sector rationale explicitly frames GenAI as transforming high-skill work, not destroying it.",
@@ -2990,7 +2990,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 45000,
+        "employment_est": 45500,
         "sector_id": "ict",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "This role shows an elevated classical automation probability (Frey-Osborne 48) but a very high LLM exposure (Eloundou 1.0), consistent with intensive code-generation tasks. In the ICT “paradox sector”, AI both reshapes programming work and drives new AI/data roles, with overall growth. Hence the composite score (67.5) reflects strong automation pressure, yet mainly as augmentation rather than outright substitution.",
@@ -3052,7 +3052,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 24000,
+        "employment_est": 24200,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "The 66.8 composite score is elevated because the job sits in Financial & Insurance Activities, a sector described as having the highest GenAI exposure and strong automation pressure. The role’s own sub-scores are also high: 0.75 LLM exposure and a 47 Frey-Osborne probability, with Felten marked high, indicating substantial task-level automation potential rather than full replacement.",
@@ -3112,7 +3112,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 42000,
+        "employment_est": 42400,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Marketing specialists show a high composite automation risk of 65.1, in line with a high Frey-Osborne probability of 61 and very high LLM exposure at 0.8. In the professional, scientific and technical sector, GenAI is transforming high-skill roles through augmentation rather than substitution, meaning AI-empowered marketers outcompete those who do not adopt these tools.",
@@ -3172,7 +3172,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 12500,
+        "employment_est": 12600,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "For customs brokers, the composite score of 65 reflects elevated substitution risk: Frey-Osborne automation probability is high at 52, and Eloundou LLM exposure is also high at 0.7. In Transportation & Storage, growing warehouse and process automation contrasts with only medium long‑term sector risk. Moderate WEF decline and strong Saudi employment share increase policy sensitivity to automation impacts.",
@@ -3344,7 +3344,7 @@
         "salary_senior_sar": 30000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 800,
+        "employment_est": 809,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 30,
         "hrdf_programs": [
@@ -3386,7 +3386,7 @@
         "salary_senior_sar": 22000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "ict",
         "employment_saudi_pct": 30,
         "hrdf_programs": [
@@ -3610,7 +3610,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 38800,
         "sector_id": "real_estate",
         "employment_saudi_pct": 80,
         "risk_reasoning_en": "The score is high because the occupation combines very strong automation probability (86) with moderate LLM exposure (0.5) and moderate Felten exposure, while the sector rationale explicitly names PropTech, AI valuation models, and automated listings. Human trust and transaction complexity still preserve part of the role, which is why the composite score stays below the highest band.",
@@ -3672,7 +3672,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 28000,
+        "employment_est": 28700,
         "sector_id": "admin_support",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "The composite score of 62 reflects elevated substitution risk for Recruitment Specialists in an administrative support sector already identified as the highest automation-risk by volume, focused on repetitive cognitive tasks at scale. A high LLM exposure of 0.72 and high Felten AI exposure signal that core activities—screening, matching, and back-office processing—are highly amenable to AI, while only relationship-heavy tasks retain human importance.",
@@ -3733,7 +3733,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 195000,
+        "employment_est": 194600,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Sales representatives show a moderate to high composite risk of 61.8, driven mainly by a very high Frey-Osborne automation probability of 85 and elevated LLM exposure at 0.55. In wholesale and retail, self-checkout and e-commerce automate transactional tasks, while sector evidence suggests sales advisors are more augmented than replaced, aligning the role with an augmentation category despite strong task-level automation pressure.",
@@ -3794,7 +3794,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 7800,
+        "employment_est": 7900,
         "sector_id": "ict",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "The composite risk of 60 reflects a moderately high substitution risk: many SEO/SEM tasks are data-driven and pattern-based, aligning with high Felten exposure and elevated Eloundou LLM exposure at 0.75. In the ICT paradox sector, AI tools can directly take over campaign optimization and reporting, while broader sector dynamics remain stable, explaining a substitution rather than augmentation categorization.",
@@ -3854,7 +3854,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 5500,
+        "employment_est": 5600,
         "sector_id": "real_estate",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "The role of real estate appraiser sits in a high automation band, with a composite score of 60 and a Frey-Osborne probability of 48 (elevated). Strong LLM exposure (0.65) and high AI exposure reflect how PropTech and valuation models can replicate core analytical tasks in this small sector. However, transaction complexity, trust, and human judgment in pricing and risk temper the risk below “very high.”",
@@ -3930,7 +3930,7 @@
         "salary_senior_sar": 30000,
         "salary_source": "Cooper Fitch KSA 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -4020,7 +4020,7 @@
         "salary_senior_sar": 6500,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 20000,
+        "employment_est": 19800,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 30,
         "hrdf_programs": [
@@ -4062,7 +4062,7 @@
         "salary_senior_sar": 24000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "reserved_saudi_only",
-        "employment_est": 10000,
+        "employment_est": 10100,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 50,
         "hrdf_programs": [
@@ -4200,7 +4200,7 @@
         "salary_senior_sar": 28000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "reserved_saudi_only",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "ict",
         "employment_saudi_pct": 45,
         "hrdf_programs": [
@@ -4296,7 +4296,7 @@
         "salary_senior_sar": 28000,
         "salary_source": "Cooper Fitch KSA 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -4344,7 +4344,7 @@
         "salary_senior_sar": 15000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 10000,
+        "employment_est": 10100,
         "sector_id": "other_services",
         "employment_saudi_pct": 20,
         "hrdf_programs": [
@@ -4400,7 +4400,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 4200,
+        "employment_est": 4300,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 75,
         "risk_reasoning_en": "This role shows a high composite automation risk (59.6) despite a very low Frey-Osborne probability (3.8), because its tasks are almost fully exposed to LLMs (Eloundou score 1) and very high AI exposure. In a sector where live performance remains human-centric, text-based content creation is precisely where generative AI can substitute parts of the job, aligning with a partial substitution profile.",
@@ -4444,7 +4444,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 24000,
+        "employment_est": 24300,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 25,
         "risk_reasoning_en": "A freight forwarder in Transportation & Storage shows a composite 58, with Frey-Osborne risk elevated at 45 and Eloundou exposure high at 0.65. This reflects that many core tasks are codifiable, document-heavy and thus suitable for AI and workflow automation, while the sector rationale notes only medium long-term risk thanks to remaining physical and coordination constraints and current logistics growth dynamics.",
@@ -4492,7 +4492,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 26000,
+        "employment_est": 26300,
         "sector_id": "ict",
         "employment_saudi_pct": 80,
         "risk_reasoning_en": "The composite risk score of 58 reflects an elevated but not extreme automation threat for Social Media Managers in ICT. Eloundou exposure is high (0.72), meaning many text-based, routine tasks are directly touchable by LLMs. Frey-Osborne probability is only moderate (22), indicating full job replacement is less likely than task-level substitution. In a paradox sector with stable demand, AI mainly restructures roles.",
@@ -4535,7 +4535,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 450000,
+        "employment_est": 449000,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "The score is pulled upward by the very high Frey-Osborne automation probability of 92, which fits retail routines that can be standardized, and by the sector rationale naming self-checkout, e-commerce, and automated inventory. The composite remains partial because LLM exposure is only 0.3 and Felten is low, while WEF still shows growth for shop salespeople.",
@@ -4583,7 +4583,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 22500,
+        "employment_est": 22800,
         "sector_id": "ict",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Web developers sit in a paradox: LLM exposure is very high (0.95) and Felten exposure is high, yet Frey-Osborne automation risk stays moderate at 21. In ICT, AI copilots mainly reshape coding tasks rather than fully replacing programmers, and sector rationale explicitly frames this as augmentation with internal restructuring and continued growth.",
@@ -4625,7 +4625,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 62000,
+        "employment_est": 62700,
         "sector_id": "ict",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The score is moderate-to-elevated because the job sits in ICT, a paradox sector where AI reshapes support work rather than fully removing it. The 0.6 LLM exposure is high, while the Frey-Osborne probability remains only 35, so substitution pressure is real but not dominant. Felten is moderate, matching partial task change rather than total replacement.",
@@ -4875,7 +4875,7 @@
         "salary_senior_sar": 13000,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "health",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -4917,7 +4917,7 @@
         "salary_senior_sar": 6500,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "open",
-        "employment_est": 15000,
+        "employment_est": 15200,
         "sector_id": "health",
         "employment_saudi_pct": 8,
         "hrdf_programs": [
@@ -5139,7 +5139,7 @@
         "salary_senior_sar": 12000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -5181,7 +5181,7 @@
         "salary_senior_sar": 18000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "ict",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -5271,7 +5271,7 @@
         "salary_senior_sar": 25000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "ict",
         "employment_saudi_pct": 28,
         "hrdf_programs": [
@@ -5361,7 +5361,7 @@
         "salary_senior_sar": 25000,
         "salary_source": "Cooper Fitch KSA 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 8000,
+        "employment_est": 8100,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 65,
         "hrdf_programs": [
@@ -5507,7 +5507,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 900,
+        "employment_est": 906,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Actuaries show a clear augmentation profile: the Frey-Osborne automation probability is only 21, but the LLM exposure is very high at 0.9 and Felten exposure is high. That combination suggests AI will reshape tasks more than replace the role. The sector rationale also points to cognitive finance work being exposed while advisory work remains, matching a moderate composite score of 54.6.",
@@ -5549,7 +5549,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 155000,
+        "employment_est": 154700,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 90,
         "risk_reasoning_en": "Cashiers score very high on automation because the job is built around repetitive, rule-based transactions, matching the 97% Frey-Osborne probability and the very low 0.05 LLM exposure. The composite score of 53.7 stays in the moderate band because the sector rationale is mixed: strong substitution pressure for cashiers, but some offset from growing sales-advisor roles.",
@@ -5598,7 +5598,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 28000,
+        "employment_est": 28200,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Financial analysts sit in a highly exposed GenAI sector, with very high LLM task exposure at 0.85 and high Felten AI exposure. Yet the Frey-Osborne automation probability is only moderate at 23, and the composite risk score (53.5) is in the elevated band, pointing more to deep augmentation than full substitution, especially as advisory and relationship-heavy roles remain important in this sector.",
@@ -5641,7 +5641,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 11000,
+        "employment_est": 11100,
         "sector_id": "ict",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The score is moderate because the composite risk is 52.1 and the sector is explicitly a paradox: ICT is being reshaped by AI rather than simply replaced. That is consistent with high LLM exposure at 0.7 and high Felten exposure, while the low Frey-Osborne probability of 8.2 limits full automation. The sector rationale also points to augmentation, not substitution.",
@@ -5683,7 +5683,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 35000,
+        "employment_est": 35200,
         "sector_id": "construction",
         "employment_saudi_pct": 15,
         "risk_reasoning_en": "Quantity surveyors in construction show a moderate automation probability of 28 and high LLM exposure at 0.65, indicating many tasks can be digitally augmented rather than replaced. The composite score of 52 reflects growing use of AI for cost estimation and documentation, while physical, chaotic sites and strong project demand in major developments keep human oversight and contextual judgment essential.",
@@ -5731,7 +5731,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 65000,
+        "employment_est": 66600,
         "sector_id": "admin_support",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "The 52/100 composite score places Office Manager in the substitution range, but not in the highest-risk band. That fits the moderate Frey-Osborne probability of 36 and the relatively high LLM exposure of 0.6: routine coordination, reporting, and administrative processing are vulnerable, while the sector rationale says office admin is hit hardest even if some BPO and facilities tasks remain protected.",
@@ -5773,7 +5773,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 32000,
+        "employment_est": 32300,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Graphic designers in a high-skill professional services sector face a composite risk of 51.5/100, indicating moderate to high partial substitution. Very high LLM exposure (0.85) and high AI exposure scores mean many conceptual and drafting tasks can be AI-assisted, even though Frey-Osborne automation risk is very low (4.3), suggesting task reshaping more than full job disappearance.",
@@ -5816,7 +5816,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 14500,
+        "employment_est": 14700,
         "sector_id": "ict",
         "employment_saudi_pct": 25,
         "risk_reasoning_en": "The composite risk for ERP/SAP Consultants is moderate at 50.2, driven by high task-level AI exposure but very low full-job automation probability of 8. Eloundou LLM exposure is elevated at 0.7 and Felten indicates high AI exposure, aligning with an augmentation category in a paradox ICT sector where AI reshapes workflows yet supports stable demand and internal restructuring.",
@@ -5858,7 +5858,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 12800,
+        "employment_est": 12900,
         "sector_id": "ict",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Composite risk is moderate at 49.8 because the sector is paradoxical: ICT is being reshaped by AI, but the effect is augmentation rather than substitution. That fits the low Frey-Osborne automation probability of 9, while the 0.65 Eloundou exposure and high Felten exposure show substantial task-level AI contact. Stable demand and sector quotas support restructuring, not displacement.",
@@ -5907,7 +5907,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 72000,
+        "employment_est": 72800,
         "sector_id": "ict",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "Software developers in ICT face a paradox: the composite score of 48.5 indicates elevated but not extreme automation pressure within an augmentation scenario. Very low Frey-Osborne risk at 4.2 contrasts with high Felten exposure and very high Eloundou LLM score at 0.75, meaning AI tools will heavily reshape coding tasks rather than replace roles, in a rapidly growing sector undergoing internal restructuring.",
@@ -5956,7 +5956,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 26500,
+        "employment_est": 26800,
         "sector_id": "ict",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "Systems Analyst shows a moderate composite score of 48, reflecting high LLM exposure at 0.7 but very low automation probability of 6.5. In the ICT paradox sector, AI tools heavily touch analysis and documentation tasks yet mainly augment complex system design and integration work. High Felten exposure aligns with reshaping workflows rather than replacing roles, within a stable demand context.",
@@ -5998,7 +5998,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 38200,
         "sector_id": "education",
         "employment_saudi_pct": 25,
         "risk_reasoning_en": "Private Tutor shows only moderate overall risk because the composite score is 48, while Frey-Osborne automation probability is just 12, which stays in the very low band. Exposure is higher on the LLM side at 0.65 and Felten is moderate, so AI can support lesson preparation and routine explanations without fully replacing the role.",
@@ -6040,7 +6040,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 34000,
+        "employment_est": 34400,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 90,
         "risk_reasoning_en": "Lawyers show a composite automation risk of 46.7, in the elevated band, driven by very high LLM exposure at 0.85 and high Felten AI exposure. Yet Frey-Osborne probability is very low at 3.5, and sector rationale stresses GenAI as augmentation: AI-using professionals outcompete peers, but core legal judgment and advocacy remain intact.",
@@ -6124,7 +6124,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 24000,
+        "employment_est": 24300,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "The score is moderate because the occupation sits in a high-skill professional sector where GenAI mainly augments rather than replaces work, matching the sector rationale. That is consistent with the composite score of 45, the LLM exposure of 0.6, and the low Frey-Osborne automation probability of 18, which together indicate meaningful task change but limited full automation.",
@@ -6160,7 +6160,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 92000,
+        "employment_est": 94200,
         "sector_id": "admin_support",
         "employment_saudi_pct": 90,
         "risk_reasoning_en": "The score is moderate overall because LLM exposure is elevated at 0.6 and Felten AI exposure is moderate, but the Frey-Osborne automation probability is only 3.1, which places it in the very low band. That combination fits augmentation: AI can support repetitive HR work, yet current full automation risk remains limited.",
@@ -6198,7 +6198,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 42000,
+        "employment_est": 42300,
         "sector_id": "other_services",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "The score is very low because the role shows minimal modeled automation pressure: composite_score is 5, Frey-Osborne automation probability is 1, and LLM exposure is only 0.05. The sector rationale also points to personal-service and manual tasks being protected, with only some admin functions at risk, which fits augmentation rather than substitution.",
@@ -6226,7 +6226,7 @@
         "salary_senior_sar": 4500,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 35000,
+        "employment_est": 35200,
         "sector_id": "construction",
         "employment_saudi_pct": 3,
         "hrdf_programs": [
@@ -6268,7 +6268,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 26500,
+        "employment_est": 26900,
         "sector_id": "health",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Despite a very low Frey-Osborne automation probability of 0.9 and very low LLM exposure of 0.05, social workers still receive a low composite score of 11.8 because core tasks involve human empathy, complex judgment, and direct social care. In Human Health & Social Work, sector rationale highlights legal liability and irreplaceable physical and emotional support, positioning AI mainly as a co-pilot, not a substitute.",
@@ -6304,7 +6304,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 22000,
+        "employment_est": 22300,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The composite score of 12 indicates a very low automation risk for personal trainers, consistent with the very low Frey-Osborne probability of 5 and Eloundou exposure of 0.15. In this human-centric recreation sector, AI tools remain supportive, not substitutive, and sector rationale highlights strong growth in live, physical performance activities, shielding trainers from direct replacement.",
@@ -6352,7 +6352,7 @@
         "description_en": "Ensures AI systems comply with regulations, ethical standards, and Saudi/GCC frameworks. Critical as NCA and SDAIA issue AI governance rules.",
         "description_ar": "يضمن امتثال أنظمة الذكاء الاصطناعي للأنظمة والمعايير الأخلاقية",
         "rank": 5,
-        "employment_est": 450,
+        "employment_est": 455,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 65,
         "name_fr": "Spécialiste en éthique et gouvernance de l'IA",
@@ -6403,7 +6403,7 @@
         "description_en": "Installs and maintains solar/wind systems. V2030 targets 50% renewable energy by 2030. NEOM, Sakaka, Dumat Al Jandal projects.",
         "description_ar": "يركب ويصون أنظمة الطاقة الشمسية والرياح. هدف رؤية 2030: 50% طاقة متجددة",
         "rank": 6,
-        "employment_est": 6500,
+        "employment_est": 6600,
         "sector_id": "electricity_gas",
         "employment_saudi_pct": 35,
         "name_fr": "Technicien en énergies renouvelables",
@@ -6438,7 +6438,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 33751,
+        "employment_est": 34200,
         "sector_id": "health",
         "employment_saudi_pct": 58,
         "risk_reasoning_en": "Composite risk is low because the 13.4 score sits in the very low band, matching only 0.10 LLM exposure and a low Felten rating. Although Frey-Osborne is 0.44, the sector rationale stresses a fortress of human employment, where liability, empathy, and physical care keep dentists in augmentation rather than substitution.",
@@ -6473,7 +6473,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 244652,
+        "employment_est": 245600,
         "sector_id": "education",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Despite a very high Frey-Osborne automation probability of 74, the overall composite score is very low (13.5) because LLM exposure is very weak (0.1) and sector rationale stresses strong protection. In education, emotional intelligence, character building and in-person care dominate, while AI mainly enhances learning and reduces admin load, so demand for teachers still grows overall.",
@@ -6514,7 +6514,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 243336,
+        "employment_est": 246600,
         "sector_id": "health",
         "employment_saudi_pct": 44,
         "risk_reasoning_en": "Registered nurses show a very low composite automation risk of 13.6, consistent with the Frey-Osborne probability of 0.9 and very low Felten exposure. In Human Health & Social Work, liability, empathy and physical care strongly protect these roles, while Eloundou LLM exposure at 0.1 indicates minimal impact on core tasks. Sector data also stresses a growing shortage and AI positioned strictly as a diagnostic co-pilot.",
@@ -6563,7 +6563,7 @@
         "description_en": "Protects systems from cyber threats. NCA mandates drive massive demand in KSA. AI increases both threats and defense capabilities.",
         "description_ar": "يحمي الأنظمة من التهديدات السيبرانية. متطلبات الهيئة الوطنية للأمن السيبراني تدفع الطلب",
         "rank": 10,
-        "employment_est": 12500,
+        "employment_est": 12600,
         "sector_id": "ict",
         "employment_saudi_pct": 70,
         "name_fr": "Analyste en cybersécurité",
@@ -6600,7 +6600,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 14000,
+        "employment_est": 14100,
         "sector_id": "education",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "Driving instructors show a composite risk of 15, aligning with a very low overall automation concern despite a moderate Frey-Osborne probability of 20. Very low Felten exposure and very low Eloundou LLM exposure (0.15) reflect limited impact from current AI tools. In education, human teaching, safety supervision and emotional guidance remain central, so AI mainly supports training rather than replacing instructors.",
@@ -6642,7 +6642,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 18500,
+        "employment_est": 18700,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "The composite score of 15 signals very low overall automation risk for flight attendants in Transportation & Storage. This aligns with very low Felten exposure and very low LLM exposure at 0.15, indicating minimal direct impact from current AI tools. The Frey-Osborne probability is only 18, a moderate band, suggesting some task-level automation but limited full-role substitution. Sector rationale points to medium long-term risk but short-term growth, supporting an augmentation rather than replacement dynamic.",
@@ -6768,7 +6768,7 @@
         "salary_senior_sar": 5500,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 25000,
+        "employment_est": 25100,
         "sector_id": "construction",
         "employment_saudi_pct": 5,
         "hrdf_programs": [
@@ -6804,7 +6804,7 @@
         "salary_senior_sar": 6000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 20000,
+        "employment_est": 20100,
         "sector_id": "construction",
         "employment_saudi_pct": 5,
         "hrdf_programs": [
@@ -6846,7 +6846,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 129772,
+        "employment_est": 131500,
         "sector_id": "health",
         "employment_saudi_pct": 43,
         "risk_reasoning_en": "The score is low because the sector rationale frames healthcare as a fortress of human employment, where legal liability, empathy, and physical care keep surgeons and physicians essential. The low LLM exposure of 0.15 and only moderate Frey-Osborne automation probability of 0.42 point to augmentation, not substitution, while the sector note says AI is a diagnostic co-pilot.",
@@ -6896,7 +6896,7 @@
         "description_en": "Designs cloud infrastructure (AWS/Azure/GCP). Critical for Saudi cloud-first mandates and data localization.",
         "description_ar": "يصمم البنية التحتية السحابية. حيوي لمتطلبات الحوسبة السحابية في المملكة",
         "rank": 18,
-        "employment_est": 6200,
+        "employment_est": 6300,
         "sector_id": "ict",
         "employment_saudi_pct": 40,
         "name_fr": "Architecte de solutions cloud",
@@ -6939,7 +6939,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 115000,
+        "employment_est": 114000,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "With a composite score of 18, barista roles face low overall disruption, aligned with very low Felten exposure and very low LLM exposure (0.15). Frey-Osborne risk is only moderate at 25, suggesting partial task automation rather than job disappearance. In hospitality, human warmth and in-person service remain central despite kiosks and staffing optimization systems.",
@@ -6975,7 +6975,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 880000,
+        "employment_est": 901000,
         "sector_id": "admin_support",
         "employment_saudi_pct": 2,
         "risk_reasoning_en": "Despite being in a high-risk administrative support sector, Cleaner/Janitor shows only moderate Frey-Osborne automation probability at 35 and very low LLM exposure at 0.05, keeping the composite score low at 18. Limited cognitive content and hands-on physical tasks shield it from the extreme automation hitting back-office roles in this sector.",
@@ -7011,7 +7011,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 7200,
+        "employment_est": 7300,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The composite score of 18 indicates a low automation risk for commercial pilots, consistent with the very low Frey-Osborne probability of 6 and only moderate LLM exposure at 0.25. In Transportation & Storage, Level 5 autonomy remains distant and current AI mainly augments supervision and decision-making rather than replacing pilots, so near-term impact is more about assistance than substitution, with stable demand.",
@@ -7109,7 +7109,7 @@
         "description_en": "Maintains and calibrates autonomous vehicles and drones. Key for NEOM, smart cities, and logistics.",
         "description_ar": "يصون ويعاير المركبات ذاتية القيادة والطائرات المسيرة. مهم لنيوم والمدن الذكية",
         "rank": 23,
-        "employment_est": 950,
+        "employment_est": 961,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 30,
         "name_fr": "Technicien en véhicules autonomes",
@@ -7150,7 +7150,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 265000,
+        "employment_est": 267400,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 15,
         "risk_reasoning_en": "The composite score of 18.5 indicates a low overall automation risk for maintenance technicians in manufacturing. This aligns with the very low LLM exposure (0.1) and low Felten AI exposure, meaning few tasks are text- or software-driven. The Frey-Osborne probability at the threshold of moderate (15) reflects that only routine maintenance can be automated, while on-site diagnostics, safety oversight, and physical repair remain human-intensive.",
@@ -7234,7 +7234,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 195000,
+        "employment_est": 195900,
         "sector_id": "construction",
         "employment_saudi_pct": 12,
         "risk_reasoning_en": "With a composite score of 20 and very low Frey-Osborne automation probability of 8, core manual and on-site electrical tasks remain hard to fully automate. Moderate LLM exposure at 0.28 and low Felten AI exposure indicate AI will mainly assist with diagnostics, documentation and planning, not replace technicians, in a construction sector structurally constrained by chaotic physical environments and strong project demand.",
@@ -7319,7 +7319,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 72000,
+        "employment_est": 72300,
         "sector_id": "construction",
         "employment_saudi_pct": 5,
         "risk_reasoning_en": "The composite risk score of 20.5 reflects a low overall automation threat for crane operators in construction, consistent with a modest Frey-Osborne probability of 15 and moderate LLM exposure at 0.25. In Saudi Arabia’s largest construction sector, work occurs in chaotic, unstructured physical environments where robotics are described as decades away, while mega-projects cited in the rationale sustain demand and the WEF trend is stable.",
@@ -7360,7 +7360,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 35000,
+        "employment_est": 35500,
         "sector_id": "health",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Pharmacists sit in an augmentation profile because the provided composite score is 20.9, with very low Frey-Osborne automation probability at 12 and only moderate LLM exposure at 0.2. The sector rationale reinforces human-led work: legal liability, empathy, and physical care keep AI in a co-pilot role, while demand remains supported by workforce growth and an augmentation model.",
@@ -7402,7 +7402,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 155000,
+        "employment_est": 155700,
         "sector_id": "construction",
         "employment_saudi_pct": 8,
         "risk_reasoning_en": "The composite score of 22 reflects very low Frey-Osborne automation probability of 6, meaning core HVAC tasks remain hard to replace. Moderate LLM exposure at 0.3 and low Felten AI exposure indicate AI will mainly support diagnostics and documentation, not full substitution. In construction, physical, unstructured environments and ongoing mega-projects sustain manual demand, aligning with an augmentation profile.",
@@ -7444,7 +7444,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 21000,
+        "employment_est": 21100,
         "sector_id": "mining_oil_gas",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "The drilling engineer shows a very low Frey-Osborne automation probability (2.5) and a moderate Eloundou LLM exposure (0.35), consistent with low Felten AI exposure and an augmentation category. In Mining & Quarrying, AI mainly boosts exploration, predictive maintenance and optimization, while physical extraction and safety-critical on-site operations remain human-led, so overall automation risk stays low despite sector-level AI adoption.",
@@ -7480,7 +7480,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 34000,
+        "employment_est": 34100,
         "sector_id": "education",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "The composite score of 22 reflects very low automation probability (2) and moderate LLM exposure (0.35) in a sector where teachers are structurally protected. Emotional intelligence, leadership and character formation are central in education, while AI mainly supports administrative and adaptive learning functions. Overall, AI is expected to augment principals rather than replace them, in a generally stable, quota-protected sector.",
@@ -7517,7 +7517,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 13500,
+        "employment_est": 13600,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 98,
         "risk_reasoning_en": "The composite automation risk for Sharia Legal Advisors is low (22), combining very low Frey-Osborne automation probability (5) with moderate LLM exposure (0.3). In a high-skill professional services sector where GenAI mainly augments lawyers rather than substitutes them, Sharia-based advisory, judgment, and accountability remain human-led, keeping AI exposure focused on research and drafting support, not full role replacement.",
@@ -7559,7 +7559,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 125000,
+        "employment_est": 128000,
         "sector_id": "admin_support",
         "employment_saudi_pct": 55,
         "risk_reasoning_en": "Despite being in the highest-risk administrative sector, the General Manager role shows very low automation probability (2) and only moderate LLM exposure (0.35). Strategic leadership, complex judgment and external representation are hard to fully automate, which keeps the composite risk low at 22 despite sector-wide pressure on routine support functions.",
@@ -7651,7 +7651,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 26500,
+        "employment_est": 26600,
         "sector_id": "mining_oil_gas",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Composite risk is low at 24 because the very low Frey-Osborne score of 1.5 suggests little full-task automation, while Eloundou exposure at 0.4 is only moderate, pointing to partial LLM assistance rather than replacement. The sector rationale also stresses that AI supports exploration and optimization, but extraction and safety remain human-led.",
@@ -7694,7 +7694,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 62000,
+        "employment_est": 62600,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 30,
         "risk_reasoning_en": "The composite score of 24 reflects a low overall automation risk for Maintenance Engineers in manufacturing, despite robotics and automation in assembly lines. Their Frey-Osborne probability is very low at 4, indicating limited full-task substitution. Eloundou LLM exposure is moderate at 0.35, consistent with AI tools mainly supporting diagnostics, documentation, and quality control rather than replacing core hands-on maintenance and reliability work.",
@@ -7735,7 +7735,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 155000,
+        "employment_est": 155700,
         "sector_id": "construction",
         "employment_saudi_pct": 20,
         "risk_reasoning_en": "Civil and mechanical engineers in construction show a very low automation probability of 1.9%, with only moderate LLM exposure at 0.4. The composite risk score of 24.4 remains low because core tasks are tied to complex physical environments and project-specific judgment, while sector demand is reinforced by giga-projects and confirmed worker growth needs.",
@@ -7777,7 +7777,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 16500,
+        "employment_est": 16800,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "The composite score of 25 reflects a moderately low automation risk for tour guides, consistent with a Frey-Osborne probability just at the threshold of moderate (15) and a moderate LLM exposure (0.3). In a human-centric arts and recreation sector where live experiences and physical presence are core, AI mainly augments via content and information, fitting the “augmentation” category and low Felten exposure.",
@@ -7826,7 +7826,7 @@
         "description_en": "Helps organizations adopt AI, automation, and digital tools. Huge demand as Saudi firms race to digitize under V2030.",
         "description_ar": "يساعد المنظمات على تبني الذكاء الاصطناعي والأتمتة والأدوات الرقمية",
         "rank": 40,
-        "employment_est": 9200,
+        "employment_est": 9300,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 50,
         "name_fr": "Consultant en transformation numérique",
@@ -7855,7 +7855,7 @@
         "salary_senior_sar": 5500,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 50000,
+        "employment_est": 50400,
         "sector_id": "other_services",
         "employment_saudi_pct": 5,
         "hrdf_programs": [
@@ -7905,7 +7905,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 35000,
+        "employment_est": 35300,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "Chemical Engineer shows low classic automation risk because the Frey-Osborne probability is only 2 and the composite score is 26, both in the very low range. Exposure is still moderate at 0.42, and the sector rationale points to automation of routine tasks plus high AI impact in quality control, which supports augmentation rather than substitution.",
@@ -7939,7 +7939,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 2250000,
+        "employment_est": 2260400,
         "sector_id": "construction",
         "employment_saudi_pct": 3,
         "risk_reasoning_en": "Construction Workers show low automation risk because the composite score is 26.8, with Frey-Osborne at 5 and LLM exposure at 0, both in the very low band. The sector rationale emphasizes chaotic, physical environments and says robotics are decades away from replacing manual labor, while Saudi megaprojects sustain demand.",
@@ -7973,7 +7973,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 195000,
+        "employment_est": 199700,
         "sector_id": "admin_support",
         "employment_saudi_pct": 2,
         "risk_reasoning_en": "Despite being in a sector described as where AI hits hardest for repetitive cognitive work, landscaping workers combine manual outdoor tasks with very_low AI exposure scores. The Frey-Osborne automation probability is very low at 5, and Eloundou LLM exposure is effectively zero, which keeps the composite risk low at 26.8 despite the broader sector vulnerability.",
@@ -8007,7 +8007,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 24000,
+        "employment_est": 24400,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Fitness trainers show a very low Frey-Osborne automation probability of 8.5 and zero LLM exposure, indicating minimal direct AI substitution. In arts, entertainment and recreation, sector rationale stresses human-centric physical performance and booming live events, protecting roles that rely on in-person coaching. Composite risk remains low at 28, consistent with very limited task digitization and mostly face-to-face service delivery.",
@@ -8049,7 +8049,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 31000,
+        "employment_est": 31300,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The composite score of 28 reflects low overall automation risk, consistent with a very low Frey-Osborne probability of 3 in manufacturing. Moderate LLM exposure at 0.45 and low Felten AI exposure indicate mainly decision-support and optimisation, not full replacement. Sector trends highlight robotics and AI in quality control, but with net job creation as KSA manufacturing scales up.",
@@ -8091,7 +8091,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 72000,
+        "employment_est": 72700,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 30,
         "risk_reasoning_en": "The composite score of 28 indicates a moderately low overall automation risk for Production Supervisors in Saudi manufacturing. This aligns with a very low Frey-Osborne automation probability of 12, meaning routine replacement is limited. Eloundou LLM exposure is moderate at 0.35, and Felten exposure is low, reflecting mainly support, not substitution, as robotics and quality-control AI scale up in KSA manufacturing.",
@@ -8127,7 +8127,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 58000,
+        "employment_est": 59400,
         "sector_id": "admin_support",
         "employment_saudi_pct": 98,
         "risk_reasoning_en": "The composite score of 28 reflects low overall automation risk, despite being in a high‑volume, high‑risk administrative sector. A very low Frey‑Osborne probability of 10 indicates limited substitution by full automation. Moderate LLM exposure at 0.35 and low Felten exposure suggest AI will support, not replace, regulatory, compliance, and government‑facing tasks. Reserved Saudi roles further reinforce job stability.",
@@ -8163,7 +8163,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 195000,
+        "employment_est": 199700,
         "sector_id": "admin_support",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "The role of security guard shows a composite automation risk of 28, indicating moderately low overall vulnerability despite a high Frey-Osborne probability of 52. In Administrative & Support Services, AI mainly disrupts repetitive office tasks, while physical guarding and on-site presence are less exposed. Very low LLM and Felten exposure confirm minimal impact from generative AI, keeping this job partially shielded within a high-risk sector.",
@@ -8200,7 +8200,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 13500,
+        "employment_est": 13600,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "Environmental Specialists sit in a high‑skill professional and technical sector, where GenAI mainly augments experts rather than replaces them. A very low Frey-Osborne automation probability of 5 and low Felten exposure show limited full-task automation, while a moderate 0.4 LLM exposure reflects selective support on documentation, analysis, and reporting, yielding a low composite risk of 28.",
@@ -8236,7 +8236,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 18000,
+        "employment_est": 18300,
         "sector_id": "public_admin",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "With a composite score of 28 and Frey-Osborne probability of 12, full automation risk for Food Safety Inspectors remains very low. Moderate LLM exposure (0.35) and low Felten AI exposure indicate mainly support in documentation, reporting and risk analysis, not core judgment. In a politically protected public administration sector, automation will focus on digitalization and gradual upskilling rather than replacement.",
@@ -8279,7 +8279,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 92000,
+        "employment_est": 92400,
         "sector_id": "construction",
         "employment_saudi_pct": 35,
         "risk_reasoning_en": "The score stays low because the Frey–Osborne probability is only 5.5, far below the moderate band, and Felten exposure is low, even though Eloundou exposure is 0.4, which is only moderate. In Construction, the sector rationale highlights physical, non-structured sites and sustained demand, so AI pressure is mainly augmentation, not substitution.",
@@ -8313,7 +8313,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 225000,
+        "employment_est": 226000,
         "sector_id": "construction",
         "employment_saudi_pct": 5,
         "risk_reasoning_en": "The score is low because the occupation is anchored in manual work in non-structured construction sites, where the sector rationale says robotics are still decades away from replacing labor. That fits the 5% Frey-Osborne probability, zero LLM exposure, and low Felten exposure. The 29 composite score reflects augmentation rather than substitution, reinforced by ongoing megaproject demand and sector quota status.",
@@ -8347,7 +8347,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 245000,
+        "employment_est": 246100,
         "sector_id": "construction",
         "employment_saudi_pct": 8,
         "risk_reasoning_en": "Electricians in construction show a very low Frey-Osborne automation probability of 5 and zero LLM exposure, reflecting work dominated by manual tasks in non-structured physical environments. With a composite score of 29, overall risk remains moderate, buffered by massive, ongoing project demand and sector-wide confirmation that construction workers are among the fastest-growing roles.",
@@ -8396,7 +8396,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 15500,
+        "employment_est": 15400,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The composite score of 30 indicates moderately low overall automation risk for hotel managers, aligned with the very low Frey-Osborne probability of 8. The Eloundou LLM exposure is moderate at 0.4, consistent with growing use of tools like Foodics that optimize staffing rather than replace managerial roles. Sector rationale and rapid tourism-driven growth both support an augmentation, not substitution, trajectory.",
@@ -8438,7 +8438,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 410000,
+        "employment_est": 406500,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 18,
         "risk_reasoning_en": "The composite score of 30 reflects a moderate long-term automation risk in accommodation and food service, despite strong tourism-driven job growth. A Frey-Osborne probability of 35 indicates structured, partially automatable tasks, but not end-to-end replacement. Eloundou LLM exposure of 0.2 and low Felten AI exposure show limited impact of AI on core human-facing service, with tools mainly optimizing staffing instead of removing roles.",
@@ -8508,7 +8508,7 @@
         "salary_senior_sar": 28000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 500,
+        "employment_est": 506,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 70,
         "hrdf_programs": [
@@ -8550,7 +8550,7 @@
         "salary_senior_sar": 15000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 8000,
+        "employment_est": 8100,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -8592,7 +8592,7 @@
         "salary_senior_sar": 18000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 8000,
+        "employment_est": 8100,
         "sector_id": "other_services",
         "employment_saudi_pct": 8,
         "hrdf_programs": [
@@ -8649,7 +8649,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 48000,
+        "employment_est": 48200,
         "sector_id": "construction",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "The composite score is moderate because the low Frey-Osborne automation probability of 8.5 and low Felten exposure indicate limited end-to-end replaceability, while the 0.4 LLM exposure shows some task-level AI use. In Construction, the sector rationale points to chaotic, physical sites and strong ongoing demand, so AI is more likely to augment than substitute.",
@@ -8691,7 +8691,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 42000,
+        "employment_est": 42200,
         "sector_id": "construction",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "The score is moderate because the job has a relatively low Frey-Osborne automation probability of 1.8, but a higher LLM exposure of 0.52 and moderate Felten exposure. The construction sector rationale emphasizes physical, non-structured sites and continued megaproject demand, which limits full replacement and explains augmentation rather than substitution.",
@@ -8728,7 +8728,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 68000,
+        "employment_est": 68300,
         "sector_id": "education",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "University Professor has a low Frey-Osborne automation probability of 3.2, which keeps direct substitution weak, while the 0.5 LLM exposure and moderate Felten exposure show meaningful task augmentation potential. The sector rationale also says academics are relatively protected, especially through emotional and character-forming work, even as AI supports teaching and administration.",
@@ -8771,7 +8771,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 46000,
+        "employment_est": 46400,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The composite score of 32 indicates a moderately low automation risk in manufacturing, shaped by very low Frey-Osborne probability (2.1) and moderate LLM exposure (0.5). Sector rationale highlights robotics and AI in quality control, but also net job creation as KSA manufacturing scales, suggesting industrial engineers will be technology users and integrators rather than replaced roles.",
@@ -8813,7 +8813,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 21000,
+        "employment_est": 21500,
         "sector_id": "admin_support",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Event planners sit in an augmentation zone: the composite score of 32 and Frey-Osborne probability of 15 indicate only moderate overall automation pressure. LLM exposure is also moderate at 0.4, consistent with partial impact on planning, documentation and communication tasks. Within a very high‑risk administrative sector, this role benefits from more complex, non‑repetitive coordination and judgment tasks.",
@@ -8849,7 +8849,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 14500,
+        "employment_est": 14700,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "A composite score of 32 indicates a moderate overall automation risk in a high-skill Professional, Scientific & Technical context. With very low Frey–Osborne probability at 10, full task replacement is unlikely. Eloundou LLM exposure at 0.4 and moderate Felten exposure both point to task-level AI support in editing and workflow, consistent with an augmentation, not substitution, pattern for this sector.",
@@ -8892,7 +8892,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 105000,
+        "employment_est": 107500,
         "sector_id": "admin_support",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Composite risk is moderate at 34 because the occupation combines modest Frey-Osborne automation probability (7) with moderate LLM exposure (0.45) and only moderate Felten exposure. The Administrative & Support Services sector is structurally vulnerable, yet the low automation score keeps this in augmentation rather than substitution. Stable demand and a sector quota also point to task redesign, not disappearance.",
@@ -8928,7 +8928,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 385000,
+        "employment_est": 389400,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 15,
         "risk_reasoning_en": "The composite score of 35 reflects medium overall automation risk for delivery drivers in Transportation & Storage, despite rapid job growth. A high Frey-Osborne probability of 65 indicates elevated end-to-end automation potential, in line with rising warehouse and sorting robotics. However, Eloundou LLM exposure is very low at 0.1 and Felten AI exposure is very low, meaning core driving and physical tasks remain weakly affected by current AI, and sector rationale stresses Level 5 autonomy is still distant.",
@@ -9090,7 +9090,7 @@
         "salary_senior_sar": 55000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 800,
+        "employment_est": 804,
         "sector_id": "mining_oil_gas",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -9132,7 +9132,7 @@
         "salary_senior_sar": 30000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 12000,
+        "employment_est": 12100,
         "sector_id": "construction",
         "employment_saudi_pct": 22,
         "hrdf_programs": [
@@ -9216,7 +9216,7 @@
         "salary_senior_sar": 12000,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 800,
+        "employment_est": 811,
         "sector_id": "health",
         "employment_saudi_pct": 50,
         "hrdf_programs": [
@@ -9306,7 +9306,7 @@
         "salary_senior_sar": 20000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -9348,7 +9348,7 @@
         "salary_senior_sar": 14000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "open",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 12,
         "hrdf_programs": [
@@ -9390,7 +9390,7 @@
         "salary_senior_sar": 25000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 500,
+        "employment_est": 508,
         "sector_id": "arts_entertainment",
         "employment_saudi_pct": 20,
         "hrdf_programs": [
@@ -9537,7 +9537,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 52000,
+        "employment_est": 52700,
         "sector_id": "health",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Medical laboratory technicians sit in a fast‑growing health sector described as a “fortress of human employment”, with strong legal and safety constraints limiting full automation. With very low Frey‑Osborne probability (10) but moderate LLM exposure (0.45) and moderate Felten exposure, their composite risk stays modest at 35.5, pointing clearly to AI augmentation.",
@@ -9573,7 +9573,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 28000,
+        "employment_est": 28100,
         "sector_id": "construction",
         "employment_saudi_pct": 30,
         "risk_reasoning_en": "Land Surveyor sits in augmentation because the composite score is 36, with very low Frey-Osborne automation probability at 12 but moderate LLM exposure at 0.45 and moderate Felten exposure. The construction sector rationale emphasizes chaotic, physical sites where robotics remain far from replacing field work, while Saudi demand stays supported by major projects and a stable WEF trend.",
@@ -9609,7 +9609,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 19500,
+        "employment_est": 19700,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "Composite risk is moderate at 36 because the job is exposed to GenAI, but mainly for augmentation rather than replacement. Eloundou exposure is 0.55 and Felten is moderate, showing meaningful task impact, while Frey-Osborne automation is only 3.5, consistent with low substitution risk. The sector rationale explicitly says high-skill legal work is transformed, not destroyed.",
@@ -9651,7 +9651,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 38400,
         "sector_id": "ict",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "The composite score of 38 is moderate, driven by a very low Frey-Osborne automation probability of 6 and only moderate LLM exposure at 0.5. The ICT sector rationale points to augmentation, not substitution, because AI reshapes network work while creating new specialist roles. Stable WEF trends and sector quotas support continuity rather than displacement.",
@@ -9687,7 +9687,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 9200,
+        "employment_est": 9300,
         "sector_id": "health",
         "employment_saudi_pct": 45,
         "risk_reasoning_en": "Composite 38 and category augmentation indicate limited replacement pressure, and that matches the very low Frey-Osborne score of 8. Exposure is moderate at 0.5, so AI can support image interpretation without driving full automation. The sector rationale reinforces this: human health work is protected by liability and care needs, with AI framed as a diagnostic co-pilot.",
@@ -9729,7 +9729,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 18500,
+        "employment_est": 18900,
         "sector_id": "admin_support",
         "employment_saudi_pct": 80,
         "risk_reasoning_en": "The score is mixed: frey_osborne automation probability is only 8, so full substitution risk is very low, but eloundou exposure at 0.5 and moderate Felten exposure indicate meaningful task-level AI use. In Administrative & Support Services, repetitive cognitive work is heavily exposed, yet this role remains people-facing and strategic.",
@@ -9765,7 +9765,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 92000,
+        "employment_est": 92800,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 12,
         "risk_reasoning_en": "The score is moderate because the occupation combines routine machine operation with adjustment, inspection, and troubleshooting, which limits full automation. That fits the 48% Frey-Osborne probability and 0.3 LLM exposure, while Felten is low. In manufacturing, robotics and assembly-line automation raise substitution pressure, but Saudi manufacturing is still scaling up and is expected to create net jobs.",
@@ -9808,7 +9808,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 46000,
+        "employment_est": 46500,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "Composite risk is moderate because the role is mainly augmentation rather than substitution. The 0.5 LLM exposure and moderate Felten exposure show meaningful AI leverage, while Frey-Osborne automation probability is only 8, keeping full automation unlikely. The sector rationale also points to high-skill transformation where AI supports, not replaces, commercial work.",
@@ -9850,7 +9850,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 4800,
+        "employment_est": 4900,
         "sector_id": "health",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The score is mixed but moderate because the sector rationale emphasizes human employment, legal liability, and empathy, which keep full automation low. That matches the very low Frey-Osborne probability of 7, while the LLM exposure is higher at 0.55, making augmentation plausible rather than substitution. The composite 38.5 and moderate Felten exposure align with that profile.",
@@ -9893,7 +9893,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 9200,
+        "employment_est": 9400,
         "sector_id": "public_admin",
         "employment_saudi_pct": 95,
         "risk_reasoning_en": "A composite score of 38.8 signals moderate overall automation risk. Very low Frey-Osborne probability (5) means core tasks resist full automation, while Eloundou LLM exposure is high (0.55), indicating many workflows can be AI-augmented. In Public Administration & Defense, rapid digitization and automation are advancing, but political protection and upskilling policies favor role transformation over elimination.",
@@ -9929,7 +9929,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 19500,
+        "employment_est": 19800,
         "sector_id": "health",
         "employment_saudi_pct": 80,
         "risk_reasoning_en": "Hospital Administrator sits in augmentation rather than substitution because the sector rationale emphasizes human judgment, legal liability, and empathy, while AI remains a co-pilot. The score is moderated by low Frey-Osborne automation probability at 12, but pulled upward by 0.5 LLM exposure and moderate Felten exposure, making the composite 40.",
@@ -9972,7 +9972,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 135000,
+        "employment_est": 134700,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Composite risk is 40, which sits in the lower edge of the elevated band, while Frey-Osborne automation probability is only 18, a low level. LLM exposure at 0.45 and Felten’s moderate rating point to task augmentation rather than full substitution. The retail sector rationale is mixed: cashiers face automation, but sales and management work remains human-led.",
@@ -10015,7 +10015,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 48000,
+        "employment_est": 48500,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "This Transportation & Storage role shows moderate long-term restructuring, not disappearance. Composite 40 and Frey-Osborne 25 indicate only moderate automation risk, while Eloundou 0.45 and “moderate” Felten exposure suggest AI will mainly reshape planning, routing and process optimization. Sector rationale highlights rising warehouse automation but ongoing logistics growth, supporting an upskilling, not substitution, scenario.",
@@ -10058,7 +10058,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 42000,
+        "employment_est": 42400,
         "sector_id": "manufacturing",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "Composite 40 is moderate because the role sits between low frey_osborne automation probability at 10 and higher LLM exposure at 0.5, with Felten marked moderate. The manufacturing rationale adds pressure from robotics and quality-control AI, but KSA manufacturing is still scaling and net job creation is expected, so augmentation dominates.",
@@ -10170,7 +10170,7 @@
         "salary_senior_sar": 14000,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 4000,
+        "employment_est": 4100,
         "sector_id": "health",
         "employment_saudi_pct": 50,
         "hrdf_programs": [
@@ -10436,7 +10436,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 14000,
+        "employment_est": 14100,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 70,
         "risk_reasoning_en": "Composite 40.2 places this role in the elevated band, but the low Frey-Osborne automation probability of 6.5 keeps it from being substitution-heavy. The 0.6 LLM exposure and moderate Felten exposure fit augmentation: routine banking work is pressured, while advisory and relationship tasks remain central. The sector rationale reinforces transformation rather than replacement.",
@@ -10479,7 +10479,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 18500,
+        "employment_est": 18700,
         "sector_id": "ict",
         "employment_saudi_pct": 40,
         "risk_reasoning_en": "Cloud Engineer sits in augmentation because the composite score is 40.5, while eloundou exposure is 0.6 and felten is moderate, showing meaningful AI interaction but not full replacement. The very low Frey-Osborne probability of 3.5 and the ICT sector rationale point to restructuring and new roles, not substitution.",
@@ -10521,7 +10521,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 15500,
+        "employment_est": 15600,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "Risk Manager shows a composite score of 40.5, indicating moderately elevated transformation risk in a GenAI-intensive financial and insurance sector. Eloundou exposure is high at 0.55, and Felten flags moderate AI impact, but Frey-Osborne automation probability is very low at 9, reflecting augmentation of analytical and advisory work rather than full substitution.",
@@ -10557,7 +10557,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 35000,
+        "employment_est": 35800,
         "sector_id": "admin_support",
         "employment_saudi_pct": 85,
         "risk_reasoning_en": "The composite score of 42 places this role in the elevated band, but the very low Frey-Osborne automation probability of 12 keeps full substitution limited. LLM exposure at 0.55 and moderate Felten exposure show meaningful augmentation risk, especially in an administrative services sector where repetitive cognitive work is a known target.",
@@ -10600,7 +10600,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 31000,
+        "employment_est": 31400,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 55,
         "risk_reasoning_en": "The composite score of 42 reflects a high LLM exposure of 0.55 and moderate AI exposure, but very low full automation probability at 10. In Transportation & Storage, rising warehouse automation coexists with growing demand for delivery and logistics roles, keeping strategic coordination and exception management firmly human-led. Stable WEF trend and existing support programs also point toward upskilling rather than displacement.",
@@ -10636,7 +10636,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 16500,
+        "employment_est": 16700,
         "sector_id": "ict",
         "employment_saudi_pct": 60,
         "risk_reasoning_en": "The composite score of 42 indicates an elevated but not extreme automation risk, consistent with a Frey-Osborne probability at the low end of moderate (15) and an Eloundou LLM exposure that is high (0.55). In the ICT paradox sector, AI tools strongly augment creative and technical workflows rather than fully replacing video producers/editors, while moderate Felten exposure suggests many tasks remain human-led despite restructuring.",
@@ -10672,7 +10672,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 10500,
+        "employment_est": 10700,
         "sector_id": "public_admin",
         "employment_saudi_pct": 90,
         "risk_reasoning_en": "This role sits in augmentation because the composite score is 42, which falls in the elevated band, while frey_osborne automation probability is only 12, a very low direct-substitution signal. LLM exposure is 0.55 and Felten is moderate, so AI is more likely to support drafting, monitoring, and compliance coordination than replace judgment-heavy regulatory work.",
@@ -10714,7 +10714,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 38000,
+        "employment_est": 37900,
         "sector_id": "wholesale_retail",
         "employment_saudi_pct": 65,
         "risk_reasoning_en": "The risk is mainly one of augmentation, not substitution: the composite score is 42, which sits in the elevated band, while LLM exposure is moderate at 0.55 and Frey-Osborne automation probability is only 18, a low-to-moderate level. In wholesale and retail, the rationale points to mixed effects—automation in inventory and procurement, but continued value in supplier negotiation and coordination.",
@@ -10756,7 +10756,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 9200,
+        "employment_est": 9300,
         "sector_id": "finance_insurance",
         "employment_saudi_pct": 98,
         "risk_reasoning_en": "The composite score of 42.5 indicates moderately elevated transformation risk, driven by high GenAI exposure in Financial & Insurance Activities and growing automation of back-office banking processes. A Frey-Osborne probability of 14 suggests very low full substitution, while an Eloundou LLM exposure of 0.55 and moderate Felten exposure point to significant task reshaping, especially in advisory and coordination work within highly Saudised roles.",
@@ -10792,7 +10792,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 7800,
+        "employment_est": 7900,
         "sector_id": "ict",
         "employment_saudi_pct": 50,
         "risk_reasoning_en": "The composite score of 44.2 places Data Scientist in the elevated but not extreme automation-risk band, consistent with high Felten AI exposure and Eloundou LLM exposure of 0.65. In the ICT “paradox sector”, AI tools reshape workflows rather than replace roles, while the very low Frey-Osborne probability (4.5) points clearly to augmentation and strong net job growth, not substitution.",
@@ -10952,7 +10952,7 @@
         "salary_senior_sar": 12900,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 7000,
+        "employment_est": 7100,
         "sector_id": "health",
         "employment_saudi_pct": 45,
         "hrdf_programs": [
@@ -11042,7 +11042,7 @@
         "salary_senior_sar": 12000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 8000,
+        "employment_est": 7900,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 20,
         "hrdf_programs": [
@@ -11084,7 +11084,7 @@
         "salary_senior_sar": 9000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 10000,
+        "employment_est": 9900,
         "sector_id": "accommodation_food",
         "employment_saudi_pct": 20,
         "hrdf_programs": [
@@ -11216,7 +11216,7 @@
         "salary_senior_sar": 16000,
         "salary_source": "PayScale/WorldSalaries/Naukrigulf 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 20000,
+        "employment_est": 20100,
         "sector_id": "education",
         "employment_saudi_pct": 65,
         "hrdf_programs": [
@@ -11354,7 +11354,7 @@
         "salary_senior_sar": 40000,
         "salary_source": "Cooper Fitch KSA 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 5000,
+        "employment_est": 5100,
         "sector_id": "professional_scientific",
         "employment_saudi_pct": 25,
         "hrdf_programs": [
@@ -11492,7 +11492,7 @@
         "salary_senior_sar": 16000,
         "salary_source": "MOH/SCFHS 2025",
         "nitaqat_status": "sector_quota",
-        "employment_est": 6000,
+        "employment_est": 6100,
         "sector_id": "health",
         "employment_saudi_pct": 45,
         "hrdf_programs": [
@@ -11846,7 +11846,7 @@
             "relevance": "30-50% salary subsidy up to SAR 3,000/month for 24 months"
           }
         ],
-        "employment_est": 410000,
+        "employment_est": 414700,
         "sector_id": "transport_storage",
         "employment_saudi_pct": 8,
         "risk_reasoning_en": "Heavy Truck Drivers score high on Frey-Osborne automation probability (79), but the composite stays mid-range at 54.9 because LLM exposure is zero and Felten AI exposure is low. The sector rationale points to long-term medium risk only: Level 5 autonomous vehicles remain distant, while driver demand is still in strong growth.",
@@ -12526,152 +12526,182 @@
       "2024": [
         {
           "month": "Jan",
-          "total": 34107,
-          "top3": "SAP (8K), Xerox (3K), PayPal (2.5K)"
+          "total": 34137,
+          "top3": "SAP, Xerox, PayPal"
         },
         {
           "month": "Feb",
-          "total": 15639,
-          "top3": "Cisco (4.25K), Farfetch (2K), Expedia (1.5K)"
+          "total": 15729,
+          "top3": "Cisco, Farfetch, Expedia"
         },
         {
           "month": "Mar",
           "total": 7403,
-          "top3": "Dell (6K), ShopBack (195), Project Ronin (150)"
+          "top3": "Dell, ShopBack, Project Ronin"
         },
         {
           "month": "Apr",
           "total": 22423,
-          "top3": "Tesla (14K), Apple (614), Take-Two (579)"
+          "top3": "Tesla, Getir, Apple"
         },
         {
           "month": "May",
           "total": 11011,
-          "top3": "ND"
+          "top3": "Toshiba, TikTok, Indeed"
         },
         {
           "month": "Jun",
           "total": 10083,
-          "top3": "ND"
+          "top3": "Paytm, Copia, Revel"
         },
         {
           "month": "Jul",
           "total": 9051,
-          "top3": "ND"
+          "top3": "UKG, Intuit, OpenText"
         },
         {
           "month": "Aug",
-          "total": 26024,
-          "top3": "ND"
+          "total": 25944,
+          "top3": "Intel, Cisco, Infineon"
         },
         {
           "month": "Sep",
-          "total": 3765,
-          "top3": "ND"
+          "total": 4036,
+          "top3": "Northvolt, Microsoft, Udemy"
         },
         {
           "month": "Oct",
-          "total": 3659,
-          "top3": "ND"
+          "total": 3782,
+          "top3": "Dropbox, Bytedance, Eaze"
         },
         {
           "month": "Nov",
-          "total": 5925,
-          "top3": "ND"
+          "total": 6755,
+          "top3": "AMD, Freshworks, SolarEdge"
         },
         {
           "month": "Dec",
-          "total": 2268,
-          "top3": "ND"
+          "total": 2568,
+          "top3": "Lilium, Bench, GupShup"
         }
       ],
       "2025": [
         {
           "month": "Jan",
-          "total": 2403,
-          "top3": "ND"
+          "total": 2537,
+          "top3": "Wayfair, SolarEdge, Stripe"
         },
         {
           "month": "Feb",
-          "total": 16234,
-          "top3": "ND"
+          "total": 16474,
+          "top3": "Meta, HP, Workday"
         },
         {
           "month": "Mar",
-          "total": 8834,
-          "top3": "ND"
+          "total": 8914,
+          "top3": "Northvolt, Hewlett Packard Enterprise, Ola Electric"
         },
         {
           "month": "Apr",
-          "total": 24500,
-          "top3": "ND"
+          "total": 25220,
+          "top3": "Intel, NetApp, Zomato"
         },
         {
           "month": "May",
-          "total": 10397,
-          "top3": "ND"
+          "total": 10577,
+          "top3": "Microsoft, OpenText, CrowdStrike"
         },
         {
           "month": "Jun",
           "total": 1606,
-          "top3": "ND"
+          "top3": "Microsoft, TomTom, Bumble"
         },
         {
           "month": "Jul",
-          "total": 16327,
-          "top3": "ND"
+          "total": 16648,
+          "top3": "Microsoft, Intel, Indeed + Glassdoor"
         },
         {
           "month": "Aug",
-          "total": 6302,
-          "top3": "ND"
+          "total": 6452,
+          "top3": "Salesforce, Micron, Oracle"
         },
         {
           "month": "Sep",
-          "total": 4152,
-          "top3": "ND"
+          "total": 4454,
+          "top3": "xAI, Head Digital Works, Just Eat"
         },
         {
           "month": "Oct",
-          "total": 18510,
-          "top3": "ND"
+          "total": 19240,
+          "top3": "Amazon, Applied Material, Rivian"
         },
         {
           "month": "Nov",
           "total": 8932,
-          "top3": "ND"
+          "top3": "HP, Synopsys, Playtika"
         },
         {
           "month": "Dec",
-          "total": 300,
-          "top3": "ND"
+          "total": 1552,
+          "top3": "Sapiens, Mobileye, Teads"
         }
       ],
       "2026": [
         {
           "month": "Jan",
-          "total": 28500,
-          "top3": "Amazon, Salesforce, Workday"
+          "total": 25183,
+          "top3": "Amazon, ASML, Ericsson"
         },
         {
           "month": "Feb",
-          "total": 12800,
-          "top3": "ND"
+          "total": 11349,
+          "top3": "Block, WiseTech, Ocado"
         },
         {
           "month": "Mar",
-          "total": 50200,
-          "top3": "Oracle, Atlassian, Broadcom"
+          "total": 16698,
+          "top3": "Dell, Atlassian, Epic Games"
         },
         {
           "month": "Apr",
-          "total": 14600,
-          "top3": "Microsoft, Meta"
+          "total": 5085,
+          "top3": "Sama, Snap, UKG"
         },
         {
           "month": "May",
-          "total": 18900,
-          "top3": "Meta, Salesforce, IBM"
+          "total": 24242,
+          "top3": "Meta, Cisco, Intuit"
+        },
+        {
+          "month": "Jun",
+          "total": 26663,
+          "top3": "Oracle, Lucid Motors, Lastminute"
+        },
+        {
+          "month": "Jul",
+          "total": 11000,
+          "top3": "Microsoft, Amazon, CorroHealth"
+        },
+        {
+          "month": "Aug",
+          "total": 3555,
+          "top3": "Zillow, Even Healthcare, Rapid7"
+        },
+        {
+          "month": "Sep",
+          "total": 6947,
+          "top3": "Uber, The Trade Desk, Workday"
+        },
+        {
+          "month": "Oct",
+          "total": 6150,
+          "top3": "eBay, Netflix, Hubspot"
+        },
+        {
+          "month": "Nov",
+          "total": 7299,
+          "top3": "Fiserv, Qualcomm, Canva"
         }
       ]
     },
@@ -12778,11 +12808,11 @@
       "note": "AI is #1 cited cause of US layoffs in March and April 2026 (Challenger). YTD total cuts -50% YoY but AI share rising sharply (4.6% in 2025 → 16.3% YTD 2026)."
     },
     "totals": {
-      "tech_global_2024": 151000,
-      "tech_global_2025": 245000,
-      "tech_global_2026_ytd": 125000,
+      "tech_global_2024": 152922,
+      "tech_global_2025": 122606,
+      "tech_global_2026_ytd": 144171,
       "ai_cited_us_2025": 54836,
-      "ai_cited_us_2026_ytd": 49135,
+      "ai_cited_us_2026_ytd": 121401,
       "ai_cited_cumulative_2023_2026": 128584
     }
   },

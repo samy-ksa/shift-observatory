@@ -301,17 +301,17 @@ export default function LayoffsSection() {
             },
             {
               label: t.layoffs.kpiLabels.techLayoffs2026Ytd,
-              value: "139K",
+              value: "144K",
               color: "text-text-primary",
               tooltip:
-                lang === "ar" ? "إجمالي تسريحات التقنية عالمياً منذ بداية 2026 (حتى 4 نوفمبر). المصدر: Layoffs.fyi." : lang === "fr" ? "Total des licenciements mondiaux dans la tech depuis le début de 2026 (au 4 novembre). Source : Layoffs.fyi." : "Total tech sector layoffs globally in 2026 year-to-date as of 4 Nov. Source: Layoffs.fyi.",
+                lang === "ar" ? "إجمالي تسريحات التقنية عالمياً منذ بداية 2026 (حتى 11 نوفمبر). المصدر: Layoffs.fyi." : lang === "fr" ? "Total des licenciements mondiaux dans la tech depuis le début de 2026 (au 11 novembre). Source : Layoffs.fyi." : "Total tech sector layoffs globally in 2026 year-to-date as of 11 Nov. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.oracleMega,
-              value: "30K",
+              value: "21K",
               color: "text-risk-very-high",
               tooltip:
-                lang === "ar" ? "تسريحات Oracle في 31 مارس 2026 — إلغاء 30,000 وظيفة، وهو الأكبر في تاريخ Oracle الممتد 49 عاماً. تضررت فرق Cerner/OCI/ERP أكثر من غيرها لتمويل بنية Stargate للذكاء الاصطناعي بقيمة $50B. المصدر: CNBC, Time, TechTimes." : lang === "fr" ? "Licenciements d’Oracle le 31 mars 2026 — 30,000 postes supprimés, un record dans ses 49 ans d’histoire. Les équipes Cerner/OCI/ERP sont les plus touchées pour financer l’infrastructure IA Stargate de $50B. Source : CNBC, Time, TechTimes." : "Oracle's March 31, 2026 layoff — 30,000 jobs cut, the largest in Oracle's 49-year history. Cerner/OCI/ERP teams hit hardest to fund the $50B Stargate AI infrastructure buildout. Source: CNBC, Time, TechTimes.",
+                lang === "ar" ? "أوراكل: 21,000 وظيفة (13% من القوى العاملة) أُعلن عنها في 23 يونيو 2026، وهي أكبر عملية تسريح منفردة في قطاع التقنية خلال 2026 حتى الآن. المصدر: Layoffs.fyi." : lang === "fr" ? "Oracle : 21 000 postes (13 % des effectifs) annoncés le 23 juin 2026, la plus grande suppression unique du secteur tech en 2026 à ce jour. Source : Layoffs.fyi." : "Oracle: 21,000 jobs (13% of its workforce) announced 23 June 2026, the largest single tech layoff of 2026 so far. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.aiCited,
@@ -380,7 +380,7 @@ export default function LayoffsSection() {
                 />
                 <Tooltip content={<CustomTooltip lang={lang} jobsLabel={t.layoffs.jobsLabel} />} />
                 <ReferenceLine
-                  x="Mar '26"
+                  x="Jun '26"
                   stroke="#DC2626"
                   strokeDasharray="3 3"
                   label={{

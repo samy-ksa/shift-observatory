@@ -366,7 +366,7 @@ export default async function LangJobPage({
         name: `How many ${occ.name_en} work in Saudi Arabia?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `According to GOSI Q4-2024 data, approximately ${fmt(occ.employment_est)} ${occ.name_en} are employed in Saudi Arabia, with ${occ.employment_saudi_pct}% being Saudi nationals. This occupation is classified as '${occ.category}' by SHIFT Observatory, meaning AI is expected to ${occ.category === "substitution" ? "replace" : "augment"} workers in this role.`,
+          text: `According to GASTAT/GOSI Q4 2025 sector data (occupation-level estimate), approximately ${fmt(occ.employment_est)} ${occ.name_en} are employed in Saudi Arabia, with ${occ.employment_saudi_pct}% being Saudi nationals. This occupation is classified as '${occ.category}' by SHIFT Observatory, meaning AI is expected to ${occ.category === "substitution" ? "replace" : "augment"} workers in this role.`,
         },
       },
       (() => {
