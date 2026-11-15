@@ -28,7 +28,6 @@ const monthly2025 = data.layoffs.monthly["2025"].map((m) => ({
   total: m.total,
   year: 2025,
 }));
-const layoffs2025Total = monthly2025.reduce((sum, month) => sum + month.total, 0);
 
 const monthly2026 = (data.layoffs.monthly as Record<string, Array<{ month: string; total: number; top3: string }>>)["2026"]?.map((m) => ({
   name: m.month + " '26",
@@ -295,17 +294,17 @@ export default function LayoffsSection() {
           {[
             {
               label: t.layoffs.kpiLabels.techLayoffs2025,
-              value: formatNumber(layoffs2025Total, lang),
+              value: "122.6K",
               color: "text-text-primary",
               tooltip:
                 lang === "ar" ? "إجمالي التسريحات في قطاع التقنية عالمياً خلال 2025. المصدر: Layoffs.fyi." : lang === "fr" ? "Total des licenciements mondiaux dans la tech en 2025. Source : Layoffs.fyi." : "Total tech sector layoffs globally in 2025. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.techLayoffs2026Ytd,
-              value: "125K",
+              value: "139K",
               color: "text-text-primary",
               tooltip:
-                lang === "ar" ? "إجمالي تسريحات التقنية عالمياً منذ بداية 2026 (يناير–مايو). المصدر: متتبعا Layoffs.fyi / TrueUp (مايو 2026)." : lang === "fr" ? "Total des licenciements mondiaux dans la tech depuis le début de 2026 (janv.–mai). Source : suivis Layoffs.fyi / TrueUp (mai 2026)." : "Total tech sector layoffs globally in 2026 year-to-date (Jan–May). Source: Layoffs.fyi / TrueUp tracker (May 2026).",
+                lang === "ar" ? "إجمالي تسريحات التقنية عالمياً منذ بداية 2026 (حتى 4 نوفمبر). المصدر: Layoffs.fyi." : lang === "fr" ? "Total des licenciements mondiaux dans la tech depuis le début de 2026 (au 4 novembre). Source : Layoffs.fyi." : "Total tech sector layoffs globally in 2026 year-to-date as of 4 Nov. Source: Layoffs.fyi.",
             },
             {
               label: t.layoffs.kpiLabels.oracleMega,

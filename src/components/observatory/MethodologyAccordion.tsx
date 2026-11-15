@@ -59,8 +59,9 @@ Adjusted for:
   \u2022 V2030 growth trajectory (growing sectors penalized less)
 
 OCCUPATION SCORES (0\u2013100)
-Composite formula:
+Reference formula (starting point):
   Score = (Eloundou \u00D7 35%) + (Frey-Osborne \u00D7 35%) + (Felten \u00D7 15%) + (Category \u00D7 15%)
+  Published scores include a manual calibration for the Saudi context: for 140 of 237 occupations the final score differs from this formula by more than 1 point (up to 17.5 points).
 
 Where:
   \u2022 Eloundou (0\u20131) normalized to 0\u2013100
