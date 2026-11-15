@@ -18,6 +18,9 @@ export default function HeroCounter() {
     ? hero.jobs_ai_exposure_saudi
     : hero.jobs_ai_exposure_weighted;
 
+  const impactBase = saudiOnly ? hero.total_saudi_gosi : hero.total_workforce_gosi;
+  const impactPct = Math.round((100 * mainNumber) / impactBase);
+
   const kpis = [
     {
       key: "gosi",
@@ -119,8 +122,11 @@ export default function HeroCounter() {
               duration={2000}
             />
           </div>
-          <p className="text-text-secondary text-base md:text-xl mt-4 max-w-lg mx-auto">
-            {t.hero.subtitle}
+          <p className="text-text-primary text-lg md:text-2xl font-semibold mt-4 max-w-2xl mx-auto leading-snug">
+            {(saudiOnly ? t.hero.impactSaudi : t.hero.impactAll).replace("{pct}", String(impactPct))}
+          </p>
+          <p className="text-text-secondary text-sm md:text-base mt-3 max-w-xl mx-auto">
+            {t.hero.impactNote}
           </p>
         </div>
 

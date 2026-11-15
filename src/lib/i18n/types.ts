@@ -30,6 +30,9 @@ export interface HeroStrings {
   };
   toggleSaudi: string;
   toggleEveryone: string;
+  impactAll: string;
+  impactSaudi: string;
+  impactNote: string;
   occupationsUp: string;
   occupationsStable: string;
   occupationsDown: string;
