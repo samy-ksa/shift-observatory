@@ -89,6 +89,19 @@ Enregistrer le jugement dans `improvement-log.json`.
 
 ### 3. Choisir un mot-clé à améliorer aujourd'hui
 
+**Règle du 15/11/2026 (diagnostic Samy + Claude) :** ne choisir un mot-clé que si sa
+requête exacte a **au moins 100 impressions sur 28 jours** hors rafale de robots
+(requête dont les impressions viennent à plus de 90 % d'un seul pays sans aucun
+clic : ignorer, c'est du bruit, ex. « cost of living in saudi arabia »). Sous ce
+seuil, un effet n'est pas mesurable : ne rien modifier page par page. Le levier
+est ailleurs : indexation (Google ne lit pas ~50 % des pages métier), autorité
+(liens entrants) et pages « têtes de liste » (`/rankings/*`, `/sector/*`,
+`/saudization-tracker`). Les décisions d'efficacité se jugent par groupes de pages
+sur 4 semaines, pas page par page. Chaque semaine, ajouter au suivi de saoudisation
+(`src/data/saudization-decisions.json`, puis `node scripts/build-saudization-open-data.mjs`)
+toute nouvelle décision officielle trouvée dans le Pulse, avec source primaire et
+2e source, jamais sans.
+
 Exclure `observing` et `achieved`. Sélectionner **un seul** mot-clé, dans cet
 ordre de priorité :
 
