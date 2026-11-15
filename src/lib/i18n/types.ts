@@ -227,6 +227,8 @@ export interface LayoffStrings {
     all: string;
   };
   confirmed: string;
+  tickerBadge: string;
+  tickerIntro: string;
   probable: string;
   suspected: string;
   jobsLabel: string;

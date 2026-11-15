@@ -12,7 +12,11 @@ export default function LayoffsTicker() {
 
   if (!visible) return null;
 
-  const items = cases.filter((c) => c.jobs);
+  const items = cases
+    .filter((c) => c.jobs)
+    .sort((a, b) => ((b as { iso?: string }).iso ?? "").localeCompare((a as { iso?: string }).iso ?? ""));
+  const monthFmt = new Intl.DateTimeFormat(lang === "ar" ? "ar-u-ca-gregory-nu-latn" : lang, { month: "short", year: "numeric" });
+  const caseDate = (c: { iso?: string; date?: string }) => (c.iso ? monthFmt.format(new Date(c.iso)) : c.date ?? "");
 
   return (
     <div className="hidden md:block fixed bottom-0 left-0 right-0 z-50 bg-[#1A1F2E]/95 backdrop-blur-sm border-t border-white/10">
@@ -21,8 +25,11 @@ export default function LayoffsTicker() {
         <div className="bg-risk-very-high/90 px-4 h-full flex items-center gap-2 shrink-0">
           <span className="w-2 h-2 bg-white rounded-full animate-pulse-glow" />
           <span className="text-white font-bold text-xs tracking-wider">
-            {t.layoffs.title.length > 20 ? "AI" : t.layoffs.confirmed}
+            {t.layoffs.tickerBadge}
           </span>
+        </div>
+        <div className="px-3 h-full items-center shrink-0 text-text-muted text-xs border-e border-white/10 hidden lg:flex">
+          {t.layoffs.tickerIntro}
         </div>
 
         {/* Scrolling ticker */}
@@ -37,8 +44,8 @@ export default function LayoffsTicker() {
                   -{formatNumber(c.jobs!, lang)}
                 </span>
                 <span className="text-text-muted text-xs">{lang === "ar" ? "وظيفة" : lang === "fr" ? "emplois" : "jobs"}</span>
-                <span className="bg-risk-very-high/20 text-risk-very-high text-xs px-1.5 py-0.5 rounded font-medium">
-                  {lang === "ar" ? "ذكاء اصطناعي" : lang === "fr" ? "IA" : "AI"}
+                <span className="text-text-muted text-xs">
+                  · {caseDate(c as { iso?: string; date?: string })}
                 </span>
               </span>
             ))}
