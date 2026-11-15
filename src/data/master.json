@@ -13904,8 +13904,6 @@
       "name": "NEOM",
       "name_ar": "نيوم",
       "region": "Tabuk",
-      "current_workforce": 140000,
-      "projected_2025": 200000,
       "fulltime_staff": 5000,
       "long_term_jobs": 380000,
       "components": [
@@ -13915,7 +13913,34 @@
         "Sindalah"
       ],
       "source": "CEO Nadhmi Al-Nasr (2024); consulting estimates",
-      "name_fr": "NEOM"
+      "name_fr": "NEOM",
+      "status": "scaled_back",
+      "status_date": "2026-11-15",
+      "status_note_en": "Since 2025, NEOM has been recalibrated: construction of The Line was suspended in September 2025, the 2029 Asian Winter Games moved from Trojena to Almaty, and NEOM terminated contracts for the Trojena dams and The Bow and the high-speed connector. The PIF is prioritising Oxagon for industry, energy and data.",
+      "status_note_fr": "Depuis 2025, NEOM est révisé à la baisse : la construction de The Line a été suspendue en septembre 2025, les Jeux asiatiques d’hiver 2029 ont été transférés de Trojena à Almaty et NEOM a résilié les contrats des barrages de Trojena, de The Bow et de la liaison ferroviaire à grande vitesse. Le PIF privilégie Oxagon pour l’industrie, l’énergie et les données.",
+      "status_note_ar": "أُعيد تقييم مشروع نيوم منذ عام 2025؛ فتوقّف بناء ذا لاين في سبتمبر 2025، ونُقلت دورة الألعاب الآسيوية الشتوية 2029 من تروجينا إلى ألماتي، وأنهت نيوم عقود سدود تروجينا ومشروع «ذا بو» وخط الربط فائق السرعة. ويركّز صندوق الاستثمارات العامة على أوكساجون للصناعة والطاقة والبيانات.",
+      "status_sources": [
+        {
+          "label": "Reuters · Winter Games, Feb 2026",
+          "url": "https://www.reuters.com/sports/kazakhstan-replaces-saudi-arabia-host-2029-asian-winter-games-2026-02-05"
+        },
+        {
+          "label": "Webuild · Trojena, Mar 2026",
+          "url": "https://www.webuildgroup.com/en/media/press-releases/update-trojena-contract-saudi-arabia-neom/"
+        },
+        {
+          "label": "Reuters · connector, May 2026",
+          "url": "https://www.reuters.com/world/middle-east/webuild-says-neom-terminates-connector-high-speed-line-contract-saudi-arabia-2026-05-21"
+        },
+        {
+          "label": "Gulf Construction · Oxagon, Nov 2026",
+          "url": "https://gulfconstructiononline.com/Article/488955/mega-project-recalibrates-focus-shifts-to-oxagon"
+        },
+        {
+          "label": "The Times · scale-back, Aug 2026",
+          "url": "https://www.thetimes.com/business/companies-markets/article/saudi-wealth-fund-scales-back-fantastical-neom-dxkgxhhnh"
+        }
+      ]
     },
     {
       "name": "Red Sea Project",
@@ -13924,7 +13949,22 @@
       "long_term_jobs": 70000,
       "note": "Direct + indirect + induced",
       "source": "Red Sea Global official",
-      "name_fr": "Projet de la mer Rouge"
+      "name_fr": "Projet de la mer Rouge",
+      "status": "operating",
+      "status_date": "2026-11-15",
+      "status_note_en": "Phase one is being delivered: the first resorts are open while construction continues on the rest. The developer says regional tourism has been weighed down by the Iran conflict.",
+      "status_note_fr": "La première phase est en cours de livraison : les premiers complexes touristiques sont ouverts et la construction des autres se poursuit. Selon le promoteur, le conflit avec l’Iran pèse sur le tourisme régional.",
+      "status_note_ar": "يجري تسليم المرحلة الأولى؛ فقد افتُتحت المنتجعات الأولى، فيما يتواصل بناء بقية المرافق. وتقول الشركة المطوّرة إن الصراع مع إيران أثّر سلباً في السياحة بالمنطقة.",
+      "status_sources": [
+        {
+          "label": "Gulf Construction · Red Sea",
+          "url": "https://gulfconstructiononline.com/Article/387456/red-sea-bold-and-iconic"
+        },
+        {
+          "label": "AGBI · tourism, Aug 2026",
+          "url": "https://www.agbi.com/tourism/2026/08/saudi-arabia-opens-new-red-sea-resort-despite-tourism-downturn/"
+        }
+      ]
     },
     {
       "name": "AMAALA",
@@ -13933,7 +13973,22 @@
       "long_term_jobs": 50000,
       "note": "Direct + indirect + induced for Saudis",
       "source": "Vision 2030 official",
-      "name_fr": "AMAALA"
+      "name_fr": "AMAALA",
+      "status": "operating",
+      "status_date": "2026-11-15",
+      "status_note_en": "Red Sea Global has opened six hospitality and lifestyle properties at AMAALA, with a new luxury resort opening in August 2026.",
+      "status_note_fr": "Red Sea Global a ouvert six établissements d’hôtellerie et de loisirs à AMAALA, dont un nouveau complexe de luxe inauguré en août 2026.",
+      "status_note_ar": "افتتحت شركة البحر الأحمر الدولية ست منشآت للضيافة وأنماط الحياة في أمالا، بينها منتجع فاخر جديد افتُتح في أغسطس 2026.",
+      "status_sources": [
+        {
+          "label": "Gulf Construction · AMAALA, Oct–Nov 2026",
+          "url": "https://gulfconstructiononline.com/Article/488881/%E2%80%98early-integration%E2%80%99-the-key-to-delivering-amaala%E2%80%99s-first-wave"
+        },
+        {
+          "label": "AGBI · resort, Aug 2026",
+          "url": "https://www.agbi.com/tourism/2026/08/saudi-arabia-opens-new-red-sea-resort-despite-tourism-downturn/"
+        }
+      ]
     },
     {
       "name": "Qiddiya",
@@ -13942,7 +13997,22 @@
       "long_term_jobs": 325000,
       "additional_seven": 22000,
       "source": "Qiddiya Investment Company official",
-      "name_fr": "Qiddiya"
+      "name_fr": "Qiddiya",
+      "status": "operating",
+      "status_date": "2026-11-15",
+      "status_note_en": "Six Flags Qiddiya City, the first Six Flags park in the Middle East, opened on 31 December 2025; other attractions remain under construction.",
+      "status_note_fr": "Six Flags Qiddiya City, premier parc Six Flags au Moyen-Orient, a ouvert le 31 décembre 2025 ; d’autres attractions sont encore en construction.",
+      "status_note_ar": "افتُتحت مدينة ملاهي «سيكس فلاغز القدية»، الأولى من نوعها في الشرق الأوسط، في 31 ديسمبر 2025؛ ولا تزال مرافق ترفيهية أخرى قيد الإنشاء.",
+      "status_sources": [
+        {
+          "label": "Saudi Press Agency · opening, Dec 2025",
+          "url": "https://www.spa.gov.sa/en/N2478121"
+        },
+        {
+          "label": "EuroAmusement Professional · opening date",
+          "url": "https://www.eap-magazin.de/Article/Six-Flags-Qiddiya-City-to-Open-on-31-December.html"
+        }
+      ]
     },
     {
       "name": "Diriyah",
@@ -13952,7 +14022,18 @@
       "current_staff": 2600,
       "staff_saudization": "80%",
       "source": "DGDA leadership",
-      "name_fr": "Diriyah"
+      "name_fr": "Diriyah",
+      "status": "under_construction",
+      "status_date": "2026-11-15",
+      "status_note_en": "Among the most advanced giga-projects, Diriyah has awarded about SAR 120 billion of contracts for its SAR 236 billion masterplan. Full build-out is targeted for 2030.",
+      "status_note_fr": "Parmi les méga-projets les plus avancés, Diriyah a attribué environ 120 milliards de riyals de contrats pour un plan directeur de 236 milliards. L’achèvement est visé pour 2030.",
+      "status_note_ar": "الدرعية من أكثر المشاريع العملاقة تقدّماً؛ وقد أُرسيت عقود بنحو 120 مليار ريال ضمن مخطط رئيسي بقيمة 236 مليار ريال. ويستهدف المشروع اكتمال التطوير بحلول عام 2030.",
+      "status_sources": [
+        {
+          "label": "Gulf Construction · mega-projects update",
+          "url": "https://gc-worldwide.com/Article/461824/mega-projects-update"
+        }
+      ]
     },
     {
       "name": "Jeddah Central",
@@ -13961,7 +14042,18 @@
       "long_term_jobs": 25000,
       "note": "Direct + indirect; 2030 horizon",
       "source": "Jeddah Central Development Co.",
-      "name_fr": "Jeddah Central"
+      "name_fr": "Jeddah Central",
+      "status": "under_construction",
+      "status_date": "2026-11-15",
+      "status_note_en": "Construction has been under way since February 2024 in phases, with full build-out targeted for 2030.",
+      "status_note_fr": "Les travaux se déroulent par étapes depuis février 2024, avec un achèvement visé pour 2030.",
+      "status_note_ar": "بدأت أعمال البناء في فبراير 2024 وتُنفَّذ على مراحل، مع استهداف اكتمال المشروع بحلول عام 2030.",
+      "status_sources": [
+        {
+          "label": "Markets of Tomorrow · Jeddah Central",
+          "url": "https://www.oftmw.com/projects/jeddah-central/"
+        }
+      ]
     }
   ],
   "labor_market": {

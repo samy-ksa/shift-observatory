@@ -272,12 +272,17 @@ export interface V2030Strings {
   exposedSubtitle: string;
   confidence: string;
   gapLabel: string;
+  gigaTargetsFootnote: string;
 }
 
 export interface GigaProjectStrings {
   title: string;
   subtitle: string;
   projectedJobs: string;
+  totalTargets: string;
+  targetsCaveat: string;
+  sources: string;
+  status: Record<"scaled_back" | "operating" | "opening_soon" | "under_construction", string>;
   currentWorkforce: string;
   region: string;
   components: string;

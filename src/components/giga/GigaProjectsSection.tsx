@@ -11,7 +11,6 @@ interface GigaProject {
   name_fr?: string;
   region: string;
   current_workforce?: number;
-  projected_2025?: number;
   fulltime_staff?: number;
   long_term_jobs: number;
   components?: string[];
@@ -20,6 +19,12 @@ interface GigaProject {
   current_staff?: number;
   staff_saudization?: string;
   additional_seven?: number;
+  status: "scaled_back" | "operating" | "opening_soon" | "under_construction";
+  status_date: string;
+  status_note_en: string;
+  status_note_fr: string;
+  status_note_ar: string;
+  status_sources: { label: string; url: string }[];
 }
 
 const projects = data.giga_projects as GigaProject[];
@@ -44,6 +49,12 @@ const CARD_COLORS = [
   { accent: "from-rose-500/20 to-rose-500/5", border: "border-rose-500/30", text: "text-rose-400" },
   { accent: "from-blue-500/20 to-blue-500/5", border: "border-blue-500/30", text: "text-blue-400" },
 ];
+const STATUS_COLORS: Record<GigaProject["status"], string> = {
+  scaled_back: "bg-rose-500/15 text-rose-300 border-rose-500/30",
+  operating: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+  opening_soon: "bg-amber-500/15 text-amber-300 border-amber-500/30",
+  under_construction: "bg-blue-500/15 text-blue-300 border-blue-500/30",
+};
 
 export default function GigaProjectsSection() {
   const { t, lang } = useLang();
@@ -60,7 +71,7 @@ export default function GigaProjectsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => {
             const colors = CARD_COLORS[i % CARD_COLORS.length];
-            const currentWork = project.current_workforce ?? project.current_staff;
+            const currentWork = project.name === "NEOM" ? undefined : project.current_workforce ?? project.current_staff;
 
             return (
               <motion.div
@@ -81,8 +92,14 @@ export default function GigaProjectsSection() {
                 <p className="text-xs text-text-muted mb-4">
                   {t.gigaProjects.region}: {lang === "ar" && REGION_AR[project.region] ? REGION_AR[project.region] : lang === "fr" ? REGION_FR[project.region] || project.region : project.region}
                 </p>
+                <span className={`inline-flex rounded-full border px-2.5 py-1 text-xs font-medium mb-3 ${STATUS_COLORS[project.status]}`}>
+                  {t.gigaProjects.status[project.status]}
+                </span>
+                <p className="text-sm text-text-secondary mb-3" dir={lang === "ar" ? "rtl" : undefined}>
+                  {lang === "ar" ? project.status_note_ar : lang === "fr" ? project.status_note_fr : project.status_note_en}
+                </p>
 
-                {/* Projected jobs */}
+                {/* Original announced job target */}
                 <div className="mb-3">
                   <p className="text-xs text-text-muted uppercase tracking-wider">
                     {t.gigaProjects.projectedJobs}
@@ -120,12 +137,24 @@ export default function GigaProjectsSection() {
                     </div>
                   </div>
                 )}
+                <details className="mt-4 text-xs text-text-muted border-t border-white/10 pt-3">
+                  <summary className="cursor-pointer hover:text-text-primary">{t.gigaProjects.sources}</summary>
+                  <ul className="mt-2 space-y-1.5">
+                    {project.status_sources.map((source) => (
+                      <li key={source.url}>
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:underline">
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Total projected jobs */}
+        {/* Sum of original announced targets */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -134,10 +163,14 @@ export default function GigaProjectsSection() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-text-muted">
-            {lang === "ar" ? "إجمالي الوظائف المتوقعة" : lang === "fr" ? "Total des emplois prévus dans les mégaprojets" : "Total projected jobs across all giga-projects"}:{" "}
+            {t.gigaProjects.totalTargets}:{" "}
             <span className="font-mono font-bold text-accent-gold text-lg">
               {formatNumber(projects.reduce((sum, p) => sum + p.long_term_jobs, 0), lang)}
             </span>
+          </p>
+          <p className="text-xs text-text-muted mt-2 max-w-4xl mx-auto">
+            {t.gigaProjects.targetsCaveat}{" "}
+            <a href="https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/chaired-by-hrh-crown-prince-pif-board-of-directors-approves-pif-2026-2030-strategy/" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:underline">{t.gigaProjects.sources}</a>
           </p>
         </motion.div>
       </div>

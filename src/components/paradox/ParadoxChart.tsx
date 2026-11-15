@@ -312,6 +312,7 @@ export default function ParadoxChart() {
                 {t.v2030.created}
               </span>
             </div>
+            <p className="text-xs text-text-muted mt-3 text-center">{t.v2030.gigaTargetsFootnote}</p>
           </motion.div>
         ) : (
           <motion.div
