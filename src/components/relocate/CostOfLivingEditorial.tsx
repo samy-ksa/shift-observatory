@@ -97,6 +97,7 @@ const SECTIONS: Record<Lang, Section[]> = {
         "L'Arabie Saoudite est 30% moins chère que New York ou San Francisco, comparable à Paris ou Londres sur le logement mais moins chère sur restaurants et transport, et substantiellement plus chère que Mumbai, Manille ou Le Caire en absolu — mais l'absence d'IR rend souvent l'expatriation nette-positive depuis les marchés émergents.",
         "De Paris à Riyad : compound similaire (5 000-8 000 EUR vs 18 500 SAR ≈ 4 500 EUR), courses 20% moins chères, restaurants 40% moins. Avec 0% d'impôt, une famille de quatre gagne typiquement +1 500 EUR/mois.",
         "De Mumbai à Djeddah : les prix absolus bondissent 4-5x sur le loyer et 3x sur les courses, mais les salaires SAR sont 3-5x plus élevés, et 0% d'impôt amène le multiplicateur effectif à 6-8x. L'expatriation s'amortit en 18 mois pour la plupart des rôles cadres.",
+        "De New York à Riyad : le loyer baisse de 50-60%, les restaurants de 30%, les primes santé de 80% (prises en charge par l'employeur dans la plupart des packages expatriés). Une famille de quatre basée à New York qui économisait 1 500 USD/mois économise typiquement 4 000 à 6 000 USD/mois équivalent après l'expatriation.",
       ],
     },
     {
@@ -106,6 +107,7 @@ const SECTIONS: Record<Lang, Section[]> = {
         "Compound vs appartement. Un 3-pièces standalone à Riyad : 7 950 SAR/mois ; équivalent en compound avec piscine et sécurité : 18 500 SAR/mois — 130% de prime. La plupart des familles occidentales considèrent les compounds essentiels.",
         "Billets retour. La plupart des contrats incluent 1-2 billets éco/an/personne. À défaut, budgétez 3 000 SAR/personne pour l'Europe ou 5 000 SAR pour l'Amérique du Nord.",
         "EOSB (Indemnité de fin de service). Le gratuity en fin de contrat est défiscalisé : demi-mois/an les 5 premières années, puis mois plein. Pour un poste à 30 000 SAR/mois, 5 ans = 75 000 SAR ; 10 ans = 225 000 SAR.",
+        "Coût d'intégration. Meubler une villa compound : 25 000 à 50 000 SAR en une fois. Voiture (location ou achat) : 1 500 à 3 000 SAR/mois. Aide à domicile (ménage/chauffeur) : 2 000 à 4 000 SAR/mois. Aucun de ces postes n'apparaît dans les indices de coût de la vie classiques.",
       ],
     },
   ],
@@ -187,7 +189,7 @@ export const FAQ: Record<Lang, Array<{ q: string; a: string }>> = {
     },
     {
       q: "L'Arabie Saoudite est-elle chère pour les expatriés ?",
-      a: "Comparé à New York ou San Francisco, environ 30% moins cher. Comparé à Paris ou Londres, similaire sur le logement mais moins cher sur restaurants et transport. Comparé à Mumbai, Manille ou Le Caire, prix absolus 3-5× plus élevés — mais l'absence d'impôt sur le revenu rend l'expatriation nette-positive.",
+      a: "Comparé à New York ou San Francisco, environ 30% moins cher. Comparé à Paris ou Londres, similaire sur le logement mais moins cher sur restaurants et transport. Comparé à Mumbai, Manille ou Le Caire, prix absolus 3-5× plus élevés — mais l'absence d'impôt sur le revenu et une allocation logement typique de 25%+ rendent généralement l'expatriation nette-positive.",
     },
     {
       q: "Quel est le loyer moyen à Riyad en 2026 ?",
@@ -195,19 +197,19 @@ export const FAQ: Record<Lang, Array<{ q: string; a: string }>> = {
     },
     {
       q: "Combien coûtent les écoles internationales en Arabie Saoudite ?",
-      a: "Écoles américaines/britanniques à Riyad (lycée) : 65 000 à 115 000 SAR/an/enfant. Programmes indiens/pakistanais : 18 000 à 35 000 SAR/an. La plupart des packages expatriés incluent une allocation scolaire.",
+      a: "Écoles américaines/britanniques à Riyad (lycée) : 65 000 à 115 000 SAR/an/enfant. Programmes indiens/pakistanais : 18 000 à 35 000 SAR/an. La plupart des packages expatriés incluent une allocation scolaire — sans elle, deux enfants en école américaine dépassent 200 000 SAR/an.",
     },
     {
       q: "L'Arabie Saoudite est-elle vraiment sans impôt pour les expatriés ?",
-      a: "Oui. 0% d'impôt sur le revenu pour les résidents et expatriés. TVA de 15% sur la plupart des achats. L'EOSB en fin de contrat est défiscalisée.",
+      a: "Oui. 0% d'impôt sur le revenu pour les résidents et expatriés. TVA de 15% sur la plupart des achats. L'EOSB en fin de contrat est défiscalisée. Ce salaire net d'impôt est le principal argument financier de l'expatriation.",
     },
     {
       q: "Quelle ville d'Arabie Saoudite a le coût de la vie le plus bas ?",
-      a: "Parmi les 5 grandes villes (Riyad, Djeddah, Dammam, La Mecque, Médine), Médine est généralement la moins chère, suivie de La Mecque, Dammam, Djeddah, puis Riyad.",
+      a: "Parmi les 5 grandes villes (Riyad, Djeddah, Dammam, La Mecque, Médine), Médine est généralement la moins chère, suivie de La Mecque, Dammam, Djeddah, puis Riyad. Riyad coûte environ 15-20% plus cher que Djeddah sur le seul logement. Des villes plus petites comme Abha, Al-Khobar ou Yanbu peuvent être 30-40% moins chères que Riyad.",
     },
     {
       q: "Quel salaire pour vivre confortablement en Arabie Saoudite en famille ?",
-      a: "Famille de quatre à Riyad avec école internationale : viser 35 000 à 40 000 SAR/mois brut. À Djeddah ou Dammam : 28 000 à 35 000 SAR suffit.",
+      a: "Famille de quatre à Riyad avec école internationale : viser 35 000 à 40 000 SAR/mois brut. À Djeddah ou Dammam : 28 000 à 35 000 SAR suffit. Sans allocation scolaire, ajoutez 5 000 à 10 000 SAR/mois par enfant.",
     },
   ],
   ar: [
