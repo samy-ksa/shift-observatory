@@ -978,5 +978,253 @@
         ]
       }
     }
+  },
+  {
+    "slug": "week-of-2026-11-16",
+    "kind": "pulse",
+    "date": "2026-11-16",
+    "published_at": "2026-11-16T16:57:35",
+    "keyword": "AI layoffs and Saudi workforce — week of 2026-11-16",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: 10,300 layoffs, AI cited in 2: Saudi jobs 16 Nov. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": "/pulse/week-of-2026-11-16.png",
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=10%2C300%20layoffs%2C%20AI%20cited%20in%202%3A%20Saudi%20jobs%2016%20Nov&subtitle=AI%20is%20still%20cited%20in%20tech%20and%20fintech%20restructuring%2C%20but%20US%20AI-linked%20cuts%20fell%20",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=10%2C300%20licenciements%2C%20IA%20cit%C3%A9e%202%20fois%20%3A%20emplois%20saoudiens%2016%20nov&subtitle=L%27IA%20reste%20cit%C3%A9e%20dans%20les%20restructurations%20de%20la%20tech%20et%20de%20la%20fintech%2C%20mais%20les",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=10%2C300%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%8C%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%81%D9%8A%202%3A%20%D9%88%D8%B8%D8%A7%D8%A6%D9%81%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%2016%20%D9%86%D9%88%D9%81%D9%85%D8%A8%D8%B1&subtitle=%D9%84%D8%A7%20%D9%8A%D8%B2%D8%A7%D9%84%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%8A%D9%8F%D8%B0%D9%83%D8%B1%20%D9%81%D9%8A%20%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9%20%D9%87%D9%8A%D9%83%D9%84%D8%A9%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%D8%8C%20%D9%84%D9%83"
+    },
+    "langs": {
+      "en": {
+        "title": "10,300 layoffs, AI cited in 2: Saudi jobs 16 Nov",
+        "description": "10,300 layoffs announced, AI cited in 2. See what moderating US AI-linked cuts and 4.45M exposed Saudi jobs mean for your sector.",
+        "lede": "10,300 layoffs logged this week (week of 16 Nov 2026), AI cited in 2: Meta and Vodafone Germany. Meta cut 8,000 jobs and Vodafone Germany 2,300, both announced on 9 November 2026, and in each case AI is one contributing factor among others. The weekly total is up on the previous week.\n\nAI remains a prominent justification for technology and fintech restructuring, but US data shows its weight moderating. Challenger, Gray & Christmas figures show AI-linked announced US cuts fell to 1,265 in October, the lowest monthly level of 2026, as employers cite economic and market pressures more often.\n\nFor Saudi readers, 4,450,778 of 12,420,050 GOSI-registered jobs carry significant AI exposure, a measure of potential, not forecast job losses. SHIFT Observatory tracks both sides every week: global announcements and Saudi labour-market exposure. Follow the series in [all editions of the Pulse](/pulse).",
+        "h2_sections": [
+          {
+            "q": "Is AI still the main reason employers are cutting jobs?",
+            "body": "No: AI was cited in about 20% of announced US job cuts through October 2026, according to Challenger, Gray & Christmas data reported by Finwire. Over those ten months, US employers attributed 121,401 announced cuts to AI, more than double the comparable January-to-October 2025 total. Even so, economic and market conditions became a larger stated reason for cuts during the year, and in October AI-linked cuts were below 3% of all announced cuts.\n\nTwo cautions apply. Reporting cited by SHIFT Observatory warns that AI attribution may sometimes obscure broader restructuring or offshoring decisions. And Reuters reported that information and finance kept shedding jobs on a trend basis while employers broadly adopted AI tools, yet AI had not produced major displacement across the overall US economy. These figures measure what employers say about their cuts. They do not measure what the technology did."
+          },
+          {
+            "q": "Which companies linked cuts to AI, and what sits outside this week's total?",
+            "body": "Two announcements fall inside the week and make up the 10,300 total: Meta (8,000 jobs, 9 November) and Vodafone Germany (2,300, 9 November), both labelled AI as a contributing factor. Meta's figure comes from SHIFT Observatory tracking and Vodafone's from Finwire citing Reuters.\n\nSeven earlier announcements are kept out of the weekly total because they predate the week. Grouped by label:\n\n- **AI contributing:** Fiserv (3,000, 7 November), PayPal (2,000, 3 November), NICE (500, 7 November)\n- **AI suspected:** Canva (1,271, 3 November), Amazon (250, 3 November)\n- **No figure published:** SUSE (AI cited directly, 7 November), Block (AI contributing, 5 November)\n\n\"Contributing\" means AI is cited among other factors. \"Suspected\" means automation is the obvious driver but has not been stated officially."
+          },
+          {
+            "q": "What does the Vodafone Germany case mean for Saudi telecom operators?",
+            "body": "Vodafone Germany said its planned reduction or relocation of about 2,300 roles partly reflects wider AI use in customer service. The figure covers relocation as well as reduction, so it is not a pure headcount cut.\n\nFor Saudi telecom, it is the template to watch if an operator expands AI-assisted service and then trims customer-service staff. Nothing in this week's material shows a Saudi or Gulf operator doing so."
+          },
+          {
+            "q": "Which Saudi sectors are most exposed to AI, and where do Saudis dominate the workforce?",
+            "body": "Financial & Insurance Activities carries the highest Saudi share among the five most exposed sectors, at 82.4%, with a risk score of 62/100 and very high Nitaqat pressure. Fintech restructuring abroad, such as Fiserv, PayPal and Block this month, is therefore the signal closest to the sector where Saudis make up most of the workforce.\n\nThe five most exposed of the 20 sectors we track (risk score out of 100, from the SHIFT Observatory dataset updated 21 March 2026):\n\n- Administrative & Support Services: risk 72, 1,454,646 employees, 17.6% Saudi, Nitaqat pressure moderate\n- Financial & Insurance Activities: risk 62, 107,430 employees, 82.4% Saudi, Nitaqat pressure very high\n- Wholesale & Retail Trade: risk 55, 1,823,181 employees, 22.3% Saudi, Nitaqat pressure high\n- Professional, Scientific & Technical: risk 52, 294,579 employees, 47.1% Saudi, Nitaqat pressure moderate\n- Information & Communication (ICT): risk 45, 178,594 employees, 57.2% Saudi, Nitaqat pressure high\n\nAmong these five, Wholesale & Retail Trade has the largest workforce and the most Saudis, about 406,569 (headcount multiplied by Saudi share). Nothing should be concluded about the other 15 sectors from this list.\n\nSaudization quotas run under the Nitaqat Mutawar programme (Ministerial Decision No. 182495, 23 May 2021), with five bands: Red, Low Green, Medium Green, High Green and Platinum. For risk by occupation, see the [AI Job Risk Dashboard](/career), which scores 237 occupations."
+          },
+          {
+            "q": "Did Saudi Arabia announce anything on employment this week?",
+            "body": "Yes, one item. On 11 November 2026 the Ministry of Human Resources and Social Development published a Code of Conduct on Equal Opportunity and Equal Treatment, issued under the national policy encouraging equal opportunity and equal treatment in employment. The item we hold does not mention Nitaqat.\n\nNo Gulf or MENA automation event was recorded this week. To see how your own role compares with the exposure figures, use the [Personal AI Risk Profile](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What is Saudi unemployment right now?",
+            "a": "Unemployment among Saudis is 6.5%, from the GASTAT Labour Force Survey for Q2 2026. The 14.8% figure for young Saudis comes from earlier sources (GASTAT LFS Q4-2024, Jadwa Investment 2024 Update and NLO May 2024), so the two figures do not cover the same period."
+          },
+          {
+            "q": "How large is the year-to-date picture?",
+            "a": "SHIFT Observatory counts 171,501 global technology layoffs year to date, and Challenger data puts AI-attributed US announced cuts at 121,401 through October. The two figures have different scopes, so they should not be read as a ratio of one to the other."
+          },
+          {
+            "q": "How are the AI labels in the weekly tracker assigned?",
+            "a": "Three labels are used. \"Direct\" means the company explicitly said AI caused the cuts. \"Contributing\" means AI is cited among other factors such as revenue, refocusing or integration. \"Suspected\" means automation is the obvious driver, for example in back-office, IT support or core operations, but the company has not said so. Only announcements dated within the week enter the weekly total."
+          },
+          {
+            "q": "Where can I check the AI risk of a specific job?",
+            "a": "The [AI Job Risk Dashboard](/career) scores 237 occupations, and each scored occupation has its own page. The exposure measures in this article describe sectors and registered jobs, not individual roles."
+          }
+        ],
+        "key_takeaway": "AI is still cited in tech and fintech restructuring, but US AI-linked cuts fell to 1,265 in October as employers lean on economic reasons. In Saudi Arabia, 4,450,778 of 12,420,050 GOSI-registered jobs carry significant AI exposure: that is exposure, not a forecast of job losses.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory, Weekly Pulse of 16 November 2026",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas, as cited by Finwire",
+            "url": ""
+          },
+          {
+            "label": "Reuters, including as cited by Finwire",
+            "url": ""
+          },
+          {
+            "label": "Saudi Ministry of Human Resources and Social Development",
+            "url": ""
+          },
+          {
+            "label": "GASTAT Labour Force Survey Q2 2026 (Saudi unemployment)",
+            "url": ""
+          },
+          {
+            "label": "GASTAT LFS Q4-2024, Jadwa Investment 2024 Update, NLO May 2024 (youth unemployment and other labour-market fields)",
+            "url": ""
+          },
+          {
+            "label": "SHIFT Observatory master.json dataset, updated 21 March 2026",
+            "url": ""
+          }
+        ]
+      },
+      "fr": {
+        "title": "10,300 licenciements, IA citée 2 fois : emplois saoudiens 16 nov",
+        "description": "10,300 licenciements annoncés, l'IA citée dans 2. Ce que signifient le repli des coupes liées à l'IA aux États-Unis et 4.45M d'emplois saoudiens exposés.",
+        "lede": "10,300 licenciements recensés cette semaine (semaine du 16 nov 2026), l'IA citée dans 2 cas : Meta et Vodafone Allemagne. Meta a supprimé 8,000 postes et Vodafone Allemagne 2,300, deux annonces faites le 9 novembre 2026, et dans chaque cas l'IA est un facteur contributif parmi d'autres. Le total hebdomadaire est en hausse par rapport à la semaine précédente.\n\nL'IA reste une justification de premier plan pour les restructurations dans la tech et la fintech, mais les données américaines montrent que son poids s'atténue. Selon Challenger, Gray & Christmas, les suppressions de postes annoncées aux États-Unis et liées à l'IA sont tombées à 1,265 en octobre, le plus bas niveau mensuel de 2026, les employeurs invoquant plus souvent des pressions économiques et de marché.\n\nPour les lecteurs saoudiens, 4,450,778 des 12,420,050 emplois enregistrés auprès de la GOSI présentent une exposition significative à l'IA, une mesure de potentiel et non une prévision de pertes d'emplois. SHIFT Observatory suit chaque semaine les deux versants : les annonces mondiales et l'exposition du marché du travail saoudien. Suivez la série dans [toutes les éditions du Pulse](/pulse).",
+        "h2_sections": [
+          {
+            "q": "L'IA est-elle encore la principale raison des suppressions de postes ?",
+            "body": "Non : l'IA a été citée dans environ 20% des suppressions de postes annoncées aux États-Unis jusqu'en octobre 2026, selon les données de Challenger, Gray & Christmas rapportées par Finwire. Sur ces dix mois, les employeurs américains ont attribué 121,401 suppressions annoncées à l'IA, soit plus du double du total comparable de janvier à octobre 2025. Pourtant, la conjoncture économique et les conditions de marché sont devenues, au fil de l'année, une raison déclarée plus importante, et en octobre les suppressions liées à l'IA représentaient moins de 3% de l'ensemble des suppressions annoncées.\n\nDeux précautions s'imposent. Des analyses citées par SHIFT Observatory avertissent que l'attribution à l'IA peut parfois masquer des décisions plus larges de restructuration ou de délocalisation. Et Reuters a indiqué que l'information et la finance continuaient de perdre des emplois en tendance alors que les employeurs adoptaient largement les outils d'IA, sans que l'IA ait provoqué de déplacement massif dans l'ensemble de l'économie américaine. Ces chiffres mesurent ce que disent les employeurs de leurs suppressions. Ils ne mesurent pas ce que la technologie a réellement fait."
+          },
+          {
+            "q": "Quelles entreprises ont lié leurs suppressions à l'IA, et qu'est-ce qui sort du total de la semaine ?",
+            "body": "Deux annonces tombent dans la semaine et forment le total de 10,300 : Meta (8,000 postes, 9 novembre) et Vodafone Allemagne (2,300, 9 novembre), toutes deux étiquetées avec l'IA comme facteur contributif. Le chiffre de Meta provient du suivi de SHIFT Observatory et celui de Vodafone de Finwire citant Reuters.\n\nSept annonces antérieures sont exclues du total hebdomadaire parce qu'elles précèdent la semaine. Regroupées par étiquette :\n\n- **IA contributive :** Fiserv (3,000, 7 novembre), PayPal (2,000, 3 novembre), NICE (500, 7 novembre)\n- **IA soupçonnée :** Canva (1,271, 3 novembre), Amazon (250, 3 novembre)\n- **Aucun chiffre publié :** SUSE (IA citée directement, 7 novembre), Block (IA contributive, 5 novembre)\n\n« Contributive » signifie que l'IA est citée parmi d'autres facteurs. « Soupçonnée » signifie que l'automatisation est le moteur évident mais n'a pas été déclarée officiellement."
+          },
+          {
+            "q": "Que signifie le cas Vodafone Allemagne pour les opérateurs télécoms saoudiens ?",
+            "body": "Vodafone Allemagne a déclaré que sa réduction ou relocalisation prévue d'environ 2,300 postes reflète en partie un usage plus large de l'IA dans le service client. Le chiffre couvre la relocalisation comme la réduction : il ne s'agit donc pas d'une pure suppression d'effectifs.\n\nPour le secteur télécoms saoudien, c'est le modèle à surveiller si un opérateur étend un service assisté par l'IA puis réduit ses équipes de service client. Rien dans les éléments de cette semaine n'indique qu'un opérateur saoudien ou du Golfe le fasse."
+          },
+          {
+            "q": "Quels secteurs saoudiens sont les plus exposés à l'IA, et où les Saoudiens dominent-ils l'emploi ?",
+            "body": "Les activités financières et d'assurance affichent la part de Saoudiens la plus élevée parmi les cinq secteurs les plus exposés, à 82.4%, avec un score de risque de 62/100 et une pression Nitaqat très élevée. Les restructurations fintech à l'étranger, comme Fiserv, PayPal et Block ce mois-ci, sont donc le signal le plus proche du secteur où les Saoudiens forment l'essentiel des effectifs.\n\nLes cinq secteurs les plus exposés parmi les 20 que nous suivons (score de risque sur 100, d'après le jeu de données SHIFT Observatory mis à jour le 21 March 2026) :\n\n- Services administratifs et de soutien : risque 72, 1,454,646 salariés, 17.6% de Saoudiens, pression Nitaqat modérée\n- Activités financières et d'assurance : risque 62, 107,430 salariés, 82.4% de Saoudiens, pression Nitaqat très élevée\n- Commerce de gros et de détail : risque 55, 1,823,181 salariés, 22.3% de Saoudiens, pression Nitaqat élevée\n- Activités professionnelles, scientifiques et techniques : risque 52, 294,579 salariés, 47.1% de Saoudiens, pression Nitaqat modérée\n- Information et communication (TIC) : risque 45, 178,594 salariés, 57.2% de Saoudiens, pression Nitaqat élevée\n\nParmi ces cinq, le commerce de gros et de détail compte les effectifs les plus nombreux et le plus de Saoudiens, environ 406,569 (effectifs multipliés par la part de Saoudiens). Il ne faut tirer aucune conclusion sur les 15 autres secteurs à partir de cette liste.\n\nLes quotas de saoudisation relèvent du programme Nitaqat Mutawar (Décision ministérielle n° 182495, 23 May 2021), avec cinq bandes : Rouge, Vert bas, Vert moyen, Vert élevé et Platine. Pour le risque par profession, consultez le [tableau de bord du risque IA par métier](/career), qui évalue 237 professions."
+          },
+          {
+            "q": "L'Arabie saoudite a-t-elle annoncé quelque chose sur l'emploi cette semaine ?",
+            "body": "Oui, un élément. Le 11 November 2026, le ministère des Ressources humaines et du Développement social a publié un Code de conduite sur l'égalité des chances et l'égalité de traitement, émis en application de la politique nationale encourageant l'égalité des chances et de traitement dans l'emploi. L'élément dont nous disposons ne mentionne pas Nitaqat.\n\nAucun événement d'automatisation dans le Golfe ou la région MENA n'a été enregistré cette semaine. Pour situer votre propre poste par rapport aux chiffres d'exposition, utilisez le [profil personnel de risque IA](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Quel est le taux de chômage en Arabie saoudite actuellement ?",
+            "a": "Le chômage chez les Saoudiens est de 6.5%, selon l'Enquête sur la population active de la GASTAT pour le T2 2026. Le chiffre de 14.8% pour les jeunes Saoudiens provient de sources antérieures (GASTAT LFS T4-2024, Jadwa Investment 2024 Update et NLO mai 2024) : les deux chiffres ne couvrent donc pas la même période."
+          },
+          {
+            "q": "Quelle est l'ampleur du bilan depuis le début de l'année ?",
+            "a": "SHIFT Observatory recense 171,501 licenciements technologiques mondiaux depuis le début de l'année, et les données de Challenger chiffrent à 121,401 les suppressions annoncées aux États-Unis attribuées à l'IA jusqu'en octobre. Les deux chiffres n'ont pas le même périmètre : il ne faut pas les lire comme un ratio de l'un par rapport à l'autre."
+          },
+          {
+            "q": "Comment les étiquettes IA du suivi hebdomadaire sont-elles attribuées ?",
+            "a": "Trois étiquettes sont utilisées. « Directe » signifie que l'entreprise a explicitement dit que l'IA a causé les suppressions. « Contributive » signifie que l'IA est citée parmi d'autres facteurs tels que le chiffre d'affaires, le recentrage ou l'intégration. « Soupçonnée » signifie que l'automatisation est le moteur évident, par exemple dans le back-office, le support informatique ou les opérations cœur de métier, mais que l'entreprise ne l'a pas dit. Seules les annonces datées de la semaine entrent dans le total hebdomadaire."
+          },
+          {
+            "q": "Où vérifier le risque IA d'un métier précis ?",
+            "a": "Le [tableau de bord du risque IA par métier](/career) évalue 237 professions, et chaque profession évaluée a sa propre page. Les mesures d'exposition de cet article décrivent des secteurs et des emplois enregistrés, pas des postes individuels."
+          }
+        ],
+        "key_takeaway": "L'IA reste citée dans les restructurations de la tech et de la fintech, mais les suppressions américaines liées à l'IA sont tombées à 1,265 en octobre, les employeurs privilégiant des raisons économiques. En Arabie saoudite, 4,450,778 des 12,420,050 emplois enregistrés auprès de la GOSI présentent une exposition significative à l'IA : c'est une exposition, pas une prévision de pertes d'emplois.",
+        "sources": [
+          {
+            "label": "KSA Shift Observatory, Pulse hebdomadaire du 16 November 2026",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas, cité par Finwire",
+            "url": ""
+          },
+          {
+            "label": "Reuters, y compris cité par Finwire",
+            "url": ""
+          },
+          {
+            "label": "Ministère saoudien des Ressources humaines et du Développement social",
+            "url": ""
+          },
+          {
+            "label": "GASTAT, Enquête sur la population active T2 2026 (chômage saoudien)",
+            "url": ""
+          },
+          {
+            "label": "GASTAT LFS T4-2024, Jadwa Investment 2024 Update, NLO May 2024 (chômage des jeunes et autres indicateurs du marché du travail)",
+            "url": ""
+          },
+          {
+            "label": "Jeu de données SHIFT Observatory master.json, mis à jour le 21 March 2026",
+            "url": ""
+          }
+        ]
+      },
+      "ar": {
+        "title": "10,300 تسريح، والذكاء الاصطناعي في 2: وظائف السعودية 16 نوفمبر",
+        "description": "أُعلن عن 10,300 تسريح والذكاء الاصطناعي سبب في 2. اعرف أثر تراجع تسريحات أمريكا المرتبطة به و4.45 مليون وظيفة سعودية معرّضة على قطاعك.",
+        "lede": "سُجّل هذا الأسبوع (أسبوع 16 نوفمبر 2026) ما مجموعه 10,300 تسريح، وذُكر الذكاء الاصطناعي سبباً في حالتين: ميتا وفودافون ألمانيا. خفّضت ميتا 8,000 وظيفة وفودافون ألمانيا 2,300 وظيفة، وأُعلن عن الخفضين في 9 نوفمبر 2026، ويُعدّ الذكاء الاصطناعي في كل حالة عاملاً مساهماً من بين عوامل أخرى. وقد ارتفع المجموع الأسبوعي مقارنةً بالأسبوع السابق.\n\nلا يزال الذكاء الاصطناعي مبرراً بارزاً لإعادة هيكلة شركات التقنية والتقنية المالية، لكن البيانات الأمريكية تُظهر أن وزنه يتراجع. فبحسب أرقام شركة Challenger, Gray & Christmas، انخفضت التسريحات الأمريكية المعلنة والمرتبطة بالذكاء الاصطناعي إلى 1,265 في أكتوبر، وهو أدنى مستوى شهري في 2026، إذ يذكر أصحاب العمل الضغوط الاقتصادية وضغوط السوق بوتيرة أكبر.\n\nأما للقارئ السعودي، فإن 4,450,778 وظيفة من أصل 12,420,050 وظيفة مسجّلة في التأمينات الاجتماعية (GOSI) تتعرض بدرجة كبيرة للذكاء الاصطناعي، وهذا مقياس للإمكانات المحتملة وليس توقعاً لفقدان الوظائف. يتابع مرصد SHIFT الجانبين كل أسبوع: الإعلانات العالمية وتعرّض سوق العمل السعودي. تابعوا السلسلة في [جميع أعداد النبض الأسبوعي](/pulse).",
+        "h2_sections": [
+          {
+            "q": "هل لا يزال الذكاء الاصطناعي السبب الرئيسي لتسريح أصحاب العمل للموظفين؟",
+            "body": "لا: فقد ذُكر الذكاء الاصطناعي في نحو 20% من التسريحات الأمريكية المعلنة حتى أكتوبر 2026، وفق بيانات Challenger, Gray & Christmas كما نقلتها Finwire. وخلال تلك الأشهر العشرة، نسب أصحاب العمل الأمريكيون 121,401 تسريح معلن إلى الذكاء الاصطناعي، أي أكثر من ضعف إجمالي الفترة المماثلة من يناير إلى أكتوبر 2025. ومع ذلك، أصبحت الظروف الاقتصادية وظروف السوق سبباً معلناً أكبر للتسريحات خلال العام، وفي أكتوبر كانت التسريحات المرتبطة بالذكاء الاصطناعي أقل من 3% من إجمالي التسريحات المعلنة.\n\nويُنصح بحذرين اثنين. الأول أن تقارير استشهد بها مرصد SHIFT تحذّر من أن نسبة التسريح إلى الذكاء الاصطناعي قد تحجب أحياناً قرارات إعادة هيكلة أوسع أو نقل أعمال إلى الخارج. والثاني أن رويترز أفادت بأن قطاعي المعلومات والمالية واصلا التخلص من الوظائف وفق اتجاه مستمر بينما تبنّى أصحاب العمل أدوات الذكاء الاصطناعي على نطاق واسع، غير أن الذكاء الاصطناعي لم يتسبب في إزاحة كبيرة للعمالة في مجمل الاقتصاد الأمريكي. وهذه الأرقام تقيس ما يقوله أصحاب العمل عن تسريحاتهم، ولا تقيس ما فعلته التقنية."
+          },
+          {
+            "q": "أي الشركات ربطت التسريحات بالذكاء الاصطناعي، وما الذي يقع خارج مجموع هذا الأسبوع؟",
+            "body": "يقع إعلانان ضمن الأسبوع ويشكّلان المجموع 10,300: ميتا (8,000 وظيفة، 9 نوفمبر) وفودافون ألمانيا (2,300، 9 نوفمبر)، وكلتاهما صنّفتا الذكاء الاصطناعي عاملاً مساهماً. رقم ميتا مصدره متابعة مرصد SHIFT، ورقم فودافون مصدره Finwire نقلاً عن رويترز.\n\nوتوجد سبعة إعلانات أسبق استُبعدت من المجموع الأسبوعي لأنها سابقة للأسبوع. وهي مجمّعة بحسب التصنيف:\n\n- **الذكاء الاصطناعي عامل مساهم:** Fiserv (3,000، 7 نوفمبر)، PayPal (2,000، 3 نوفمبر)، NICE (500، 7 نوفمبر)\n- **الذكاء الاصطناعي مشتبه به:** Canva (1,271، 3 نوفمبر)، أمازون (250، 3 نوفمبر)\n- **بلا رقم منشور:** SUSE (ذُكر الذكاء الاصطناعي مباشرةً، 7 نوفمبر)، Block (الذكاء الاصطناعي عامل مساهم، 5 نوفمبر)\n\nيعني «مساهم» أن الذكاء الاصطناعي مذكور ضمن عوامل أخرى. ويعني «مشتبه به» أن الأتمتة هي المحرك الواضح لكنها لم تُذكر رسمياً."
+          },
+          {
+            "q": "ماذا تعني حالة فودافون ألمانيا لمشغّلي الاتصالات في السعودية؟",
+            "body": "قالت فودافون ألمانيا إن خطتها لخفض أو نقل نحو 2,300 وظيفة تعكس جزئياً توسّع استخدام الذكاء الاصطناعي في خدمة العملاء. ويشمل الرقم النقل إضافةً إلى الخفض، فهو ليس تخفيضاً صرفاً في عدد الموظفين.\n\nوبالنسبة لقطاع الاتصالات السعودي، هذا هو النموذج الذي ينبغي مراقبته إذا وسّع مشغّل ما خدمته المدعومة بالذكاء الاصطناعي ثم قلّص موظفي خدمة العملاء. ولا يوجد في مواد هذا الأسبوع ما يُظهر أن مشغّلاً سعودياً أو خليجياً يفعل ذلك."
+          },
+          {
+            "q": "ما القطاعات السعودية الأكثر تعرضاً للذكاء الاصطناعي، وأين يهيمن السعوديون على القوى العاملة؟",
+            "body": "تسجّل الأنشطة المالية والتأمين أعلى حصة سعودية بين القطاعات الخمسة الأكثر تعرضاً، بنسبة 82.4%، مع درجة مخاطر 62/100 وضغط نطاقات مرتفع جداً. ولذلك فإن إعادة هيكلة التقنية المالية في الخارج، مثل Fiserv وPayPal وBlock هذا الشهر، هي الإشارة الأقرب إلى القطاع الذي يشكّل فيه السعوديون غالبية القوى العاملة.\n\nالقطاعات الخمسة الأكثر تعرضاً من بين 20 قطاعاً نتابعها (درجة المخاطر من 100، من بيانات مرصد SHIFT المحدّثة في 21 مارس 2026):\n\n- الخدمات الإدارية وخدمات الدعم: المخاطر 72، 1,454,646 موظفاً، 17.6% سعوديون، ضغط النطاقات متوسط\n- الأنشطة المالية والتأمين: المخاطر 62، 107,430 موظفاً، 82.4% سعوديون، ضغط النطاقات مرتفع جداً\n- تجارة الجملة والتجزئة: المخاطر 55، 1,823,181 موظفاً، 22.3% سعوديون، ضغط النطاقات مرتفع\n- الأنشطة المهنية والعلمية والتقنية: المخاطر 52، 294,579 موظفاً، 47.1% سعوديون، ضغط النطاقات متوسط\n- المعلومات والاتصالات (تقنية المعلومات والاتصالات): المخاطر 45، 178,594 موظفاً، 57.2% سعوديون، ضغط النطاقات مرتفع\n\nمن بين هذه القطاعات الخمسة، تملك تجارة الجملة والتجزئة أكبر قوة عاملة وأكبر عدد من السعوديين، نحو 406,569 (عدد الموظفين مضروباً في حصة السعوديين). ولا ينبغي استنتاج شيء عن القطاعات الـ15 الأخرى من هذه القائمة.\n\nتُطبَّق حصص السعودة في إطار برنامج نطاقات المطوَّر (القرار الوزاري رقم 182495، 23 مايو 2021)، وله خمس فئات: الأحمر، الأخضر المنخفض، الأخضر المتوسط، الأخضر المرتفع، والبلاتيني. وللاطلاع على المخاطر بحسب المهنة، راجعوا [لوحة مخاطر الوظائف أمام الذكاء الاصطناعي](/career) التي تقيّم 237 مهنة."
+          },
+          {
+            "q": "هل أعلنت السعودية عن أي شيء بشأن التوظيف هذا الأسبوع؟",
+            "body": "نعم، بند واحد. ففي 11 نوفمبر 2026 نشرت وزارة الموارد البشرية والتنمية الاجتماعية مدونة قواعد السلوك لتكافؤ الفرص والمساواة في المعاملة، الصادرة بموجب السياسة الوطنية التي تشجع تكافؤ الفرص والمساواة في المعاملة في التوظيف. ولا يشير البند المتوفر لدينا إلى نطاقات.\n\nلم يُسجَّل هذا الأسبوع أي حدث أتمتة في الخليج أو منطقة الشرق الأوسط وشمال أفريقيا. ولمعرفة كيف يُقارن دورك الوظيفي بأرقام التعرض، استخدموا [الملف الشخصي لمخاطر الذكاء الاصطناعي](/profile)."
+          }
+        ],
+        "faq": [
+          {
+            "q": "ما نسبة البطالة في السعودية حالياً؟",
+            "a": "تبلغ البطالة بين السعوديين 6.5%، وفق مسح القوى العاملة الصادر عن الهيئة العامة للإحصاء (GASTAT) للربع الثاني من 2026. أما رقم 14.8% للشباب السعوديين فمصدره مصادر أسبق (مسح القوى العاملة GASTAT للربع الرابع من 2024، وتحديث جدوى للاستثمار 2024، والمرصد الوطني للعمل مايو 2024)، ولذلك لا يغطي الرقمان الفترة نفسها."
+          },
+          {
+            "q": "ما حجم الصورة منذ بداية العام؟",
+            "a": "يحصي مرصد SHIFT 171,501 تسريح في قطاع التقنية عالمياً منذ بداية العام، وتُظهر بيانات Challenger أن التسريحات الأمريكية المعلنة المنسوبة إلى الذكاء الاصطناعي بلغت 121,401 حتى أكتوبر. ولكل من الرقمين نطاق مختلف، ولذلك لا ينبغي قراءتهما كنسبة أحدهما إلى الآخر."
+          },
+          {
+            "q": "كيف تُحدَّد تصنيفات الذكاء الاصطناعي في المتتبّع الأسبوعي؟",
+            "a": "تُستخدم ثلاثة تصنيفات. «مباشر» يعني أن الشركة صرّحت صراحةً بأن الذكاء الاصطناعي سبب التسريحات. «مساهم» يعني أن الذكاء الاصطناعي مذكور ضمن عوامل أخرى مثل الإيرادات أو إعادة التركيز أو الدمج. «مشتبه به» يعني أن الأتمتة هي المحرك الواضح، كما في المهام الإدارية الخلفية أو دعم تقنية المعلومات أو العمليات الأساسية، لكن الشركة لم تصرّح بذلك. ولا تدخل في المجموع الأسبوعي إلا الإعلانات المؤرخة ضمن الأسبوع."
+          },
+          {
+            "q": "أين أتحقق من مخاطر الذكاء الاصطناعي على وظيفة محددة؟",
+            "a": "تقيّم [لوحة مخاطر الوظائف أمام الذكاء الاصطناعي](/career) 237 مهنة، ولكل مهنة مقيَّمة صفحتها الخاصة. أما مقاييس التعرض الواردة في هذه المقالة فتصف القطاعات والوظائف المسجّلة، وليس الأدوار الفردية."
+          }
+        ],
+        "key_takeaway": "لا يزال الذكاء الاصطناعي يُذكر في إعادة هيكلة شركات التقنية والتقنية المالية، لكن التسريحات الأمريكية المرتبطة به انخفضت إلى 1,265 في أكتوبر مع ميل أصحاب العمل إلى الأسباب الاقتصادية. وفي السعودية، تتعرض 4,450,778 وظيفة من أصل 12,420,050 وظيفة مسجّلة في التأمينات الاجتماعية (GOSI) للذكاء الاصطناعي بدرجة كبيرة: وهذا تعرّض وليس توقعاً لفقدان الوظائف.",
+        "sources": [
+          {
+            "label": "مرصد KSA SHIFT، النبض الأسبوعي بتاريخ 16 نوفمبر 2026",
+            "url": ""
+          },
+          {
+            "label": "Challenger, Gray & Christmas، كما نقلتها Finwire",
+            "url": ""
+          },
+          {
+            "label": "رويترز، بما في ذلك ما نقلته Finwire عنها",
+            "url": ""
+          },
+          {
+            "label": "وزارة الموارد البشرية والتنمية الاجتماعية السعودية",
+            "url": ""
+          },
+          {
+            "label": "مسح القوى العاملة GASTAT للربع الثاني من 2026 (البطالة في السعودية)",
+            "url": ""
+          },
+          {
+            "label": "مسح القوى العاملة GASTAT للربع الرابع من 2024، وتحديث جدوى للاستثمار 2024، والمرصد الوطني للعمل مايو 2024 (بطالة الشباب وحقول أخرى من سوق العمل)",
+            "url": ""
+          },
+          {
+            "label": "مجموعة بيانات master.json لمرصد SHIFT، محدّثة في 21 مارس 2026",
+            "url": ""
+          }
+        ]
+      }
+    }
   }
 ]
