@@ -1578,5 +1578,181 @@
         ]
       }
     }
+  },
+  {
+    "slug": "will-ai-replace-cloud-engineers-in-saudi-arabia",
+    "kind": "insights",
+    "date": "2026-11-18",
+    "published_at": "2026-11-18T12:02:19",
+    "keyword": "will AI replace cloud engineers in Saudi Arabia",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: Cloud Engineers in Saudi Arabia: AI Risk 40.5/100, SAR 17K. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=Cloud%20Engineers%20in%20Saudi%20Arabia%3A%20AI%20Risk%2040.5/100%2C%20SAR%2017K&subtitle=Cloud%20engineering%20in%20Saudi%20Arabia%20is%20an%20augmentation%20role%2C%20not%20a%20replacement%20tar",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=Ing%C3%A9nieurs%20cloud%20en%20Arabie%20saoudite%20%3A%20risque%20IA%2040%2C5/100&subtitle=L%27ing%C3%A9nierie%20cloud%20en%20Arabie%20saoudite%20est%20un%20m%C3%A9tier%20d%27augmentation%2C%20pas%20une%20cibl",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=%D9%85%D9%87%D9%86%D8%AF%D8%B3%D9%88%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%AE%D8%B7%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%2040.5/100&subtitle=%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D8%AF%D9%88%D8%B1%20%D9%8A%D8%B9%D8%AA%D9%85%D8%AF%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AA%D8%B9%D8%B2%D9%8A%D8%B2%D8%8C%20%D9%88%D9%84%D9%8A%D8%B3%20%D9%87%D8%AF%D9%81%D9%8B%D8%A7%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%A8%D8%AF%D8%A7%D9%84.%20%D9%88%D9%81%D9%8A%20%D9%82%D8%B1%D8%A7%D8%A1%D8%AA"
+    },
+    "langs": {
+      "en": {
+        "title": "Cloud Engineers in Saudi Arabia: AI Risk 40.5/100, SAR 17K",
+        "description": "Unlikely: Saudi cloud engineers score 40.5/100 for AI risk (rank 105/237), median pay SAR 17,000/month. Data, Nitaqat outlook and reskilling options.",
+        "lede": "Unlikely. SHIFT Observatory gives cloud engineers in Saudi Arabia an AI automation-risk score of 40.5/100 (0 = no exposure, 100 = fully automatable), ranking 105th of 237 scored occupations and classing the role as augmentation rather than replacement.\n\nThe score blends three exposure measures (Eloundou, Frey-Osborne, Felten), defined below. Pay is strong: SAR 17,000 a month at the median, tax-free (Astr 2026). The role sits in Information & Communication, with roughly 18,700 people employed nationally. The World Economic Forum trend is rapid growth, with 2024 demand ranked 10th. The score measures task exposure, not a forecast of job losses. Our reading: the pressure falls on junior task volume, not on the job itself. Read the [full cloud engineer AI-risk profile](/job/cloud-engineer) or compare roles on the [AI Job Risk Dashboard](/career).\n\nLast updated: 18 November 2026.",
+        "h2_sections": [
+          {
+            "q": "How exposed are cloud engineers' tasks to AI?",
+            "body": "Three inputs set the 40.5 score, and they measure different things:\n\n- **Eloundou, 0.6** (scale 0 to 1): the share of an occupation's tasks that a large language model could speed up.\n- **Frey-Osborne, 3.5%**: the estimated probability that the whole occupation is automated.\n- **Felten, \"moderate\"**: an AI-exposure index, banded by level; cloud engineering lands in the middle band.\n\nThe contrast between the first two is the useful part. A high share of accelerable tasks (0.6) next to a very low chance of full automation (3.5%) points to a role whose content changes while the role stays. This is our reading, not a finding of the dataset. If it holds, the realistic risk is the loss of junior or entry-level task volume, not the loss of the job. Our data has no task-level split, so we cannot say which specific tasks are most exposed."
+          },
+          {
+            "q": "Does Nitaqat protect cloud engineers from AI?",
+            "body": "Short answer: Nitaqat is a Saudization quota, not an AI shield. The role's Nitaqat risk is low (sector quota), but that reflects the quota framework and not protection from automation. The dataset classes the role as sector_quota and rates its relevance to the Saudi market as very high. Quota rules govern who employers must hire, not which tasks software performs, so the two questions should be read separately."
+          },
+          {
+            "q": "How much do cloud engineers earn as they progress in Saudi Arabia?",
+            "body": "Pay rises 2.8 times between entry level (SAR 10,000 a month) and senior level (SAR 28,000), per Astr 2026; figures are monthly and tax-free. Our reading: with a spread that wide, the career path matters more than the starting salary, and moving quickly beyond junior-level work is what the pay curve rewards."
+          },
+          {
+            "q": "How does the national AI-exposure picture compare with this role's score?",
+            "body": "Weighting each sector's employment by its AI-risk score gives 4,491,136 AI-exposed jobs out of 12,508,036 workers registered with GOSI, about 36%. The calculation is SUM(sector employees × sector AI-risk score / 100). It measures exposure, not predicted job losses, and actual displacement will be lower where augmentation outweighs substitution. The two figures answer different questions: the national total is a workforce-weighted sum across sectors, while 40.5 scores a single occupation. For a European reference point, the OECD (2023) puts about 27% of jobs in member states at high risk of automation, with clerical and administrative tasks in the most exposed band. The definitions differ, so the 27% and the 36% are not like-for-like."
+          },
+          {
+            "q": "What reskilling support exists for cloud engineers in Saudi Arabia?",
+            "body": "Two HRDF tracks apply. Employment Support (Taqat) is a wage subsidy of 30 to 50% of salary, up to SAR 3,000 a month for 24 months. The Saudi Digital Academy runs technology programs covering web development, AI, cloud and game design. Eligibility conditions are not detailed in our data, so check them with HRDF before planning around either. For certifications and visa steps if you are moving to the Kingdom, the [pre-departure checklist](/prepare) lists what to prepare."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does a low score mean a cloud engineer's job is safe?",
+            "a": "No. The score is a composite estimate of exposure, built from three published measures and our Saudi dataset. It gives no timeline and says nothing about an individual's skills or employer. You can test your own situation with the [Personal AI Risk Profile](/profile)."
+          },
+          {
+            "q": "Does the risk or pay differ between Saudi and non-Saudi cloud engineers?",
+            "a": "Our data does not split the occupation score or salaries by nationality. The only split available is at national level: 3,018,891 Saudi and 9,489,145 non-Saudi workers among the 12,508,036 registered with GOSI."
+          },
+          {
+            "q": "Where can I follow AI-linked layoffs in the Gulf?",
+            "a": "The [Weekly AI Layoffs Pulse](/pulse) tracks AI-linked layoffs and Gulf workforce moves. It is a news tracker, separate from the occupation scores on this page."
+          }
+        ],
+        "key_takeaway": "Cloud engineering in Saudi Arabia is an augmentation role, not a replacement target. In our reading, the exposure to watch is junior task volume.",
+        "sources": [
+          {
+            "label": "SHIFT Observatory, master dataset (237 occupations scored, salaries from Astr 2026, GOSI workforce data)",
+            "url": "https://ksashiftobservatory.online/career"
+          },
+          {
+            "label": "OECD Employment Outlook 2023",
+            "url": "https://www.oecd.org/employment-outlook/2023/"
+          }
+        ]
+      },
+      "fr": {
+        "title": "Ingénieurs cloud en Arabie saoudite : risque IA 40,5/100",
+        "description": "Improbable : ingénieurs cloud saoudiens obtiennent 40,5/100 en risque IA (rang 105/237), salaire médian 17 000 SAR/mois. Données, Nitaqat, reconversion.",
+        "lede": "Improbable. SHIFT Observatory attribue aux ingénieurs cloud en Arabie saoudite un score de risque d'automatisation par l'IA de 40,5/100 (0 = aucune exposition, 100 = entièrement automatisable), ce qui les place au 105e rang sur 237 métiers évalués et classe le poste dans l'augmentation plutôt que le remplacement.\n\nLe score combine trois mesures d'exposition (Eloundou, Frey-Osborne, Felten), définies ci-dessous. La rémunération est solide : 17 000 SAR par mois en médiane, sans impôt (Astr 2026). Le poste relève du secteur Information et Communication, avec environ 18 700 personnes en emploi à l'échelle nationale. La tendance du Forum économique mondial est à une croissance rapide, la demande 2024 se classant 10e. Le score mesure l'exposition des tâches, pas une prévision de suppressions d'emplois. Notre lecture : la pression pèse sur le volume de tâches juniors, pas sur le poste lui-même. Consultez le [profil complet du risque IA des ingénieurs cloud](/job/cloud-engineer) ou comparez les métiers sur le [tableau de bord du risque IA des métiers](/career).\n\nDernière mise à jour : 18 novembre 2026.",
+        "h2_sections": [
+          {
+            "q": "Dans quelle mesure les tâches des ingénieurs cloud sont-elles exposées à l'IA ?",
+            "body": "Trois indicateurs fixent le score de 40,5, et ils ne mesurent pas la même chose :\n\n- **Eloundou, 0,6** (échelle de 0 à 1) : la part des tâches d'un métier qu'un grand modèle de langage pourrait accélérer.\n- **Frey-Osborne, 3,5 %** : la probabilité estimée que le métier entier soit automatisé.\n- **Felten, « modéré »** : un indice d'exposition à l'IA, classé par niveaux ; l'ingénierie cloud se situe dans la tranche intermédiaire.\n\nLe contraste entre les deux premiers est ce qui compte. Une forte part de tâches accélérables (0,6) face à une très faible probabilité d'automatisation complète (3,5 %) désigne un poste dont le contenu change alors que le poste demeure. C'est notre lecture, pas une conclusion du jeu de données. Si elle se vérifie, le risque réaliste est la perte du volume de tâches juniors ou d'entrée de carrière, pas la perte du poste. Nos données n'offrent pas de découpage par tâche : nous ne pouvons donc pas dire quelles tâches précises sont les plus exposées."
+          },
+          {
+            "q": "Le Nitaqat protège-t-il les ingénieurs cloud face à l'IA ?",
+            "body": "En bref : le Nitaqat est un quota de saoudisation, pas un bouclier contre l'IA. Le risque Nitaqat du poste est faible (quota sectoriel), mais cela reflète le cadre des quotas et non une protection contre l'automatisation. Le jeu de données classe le poste en sector_quota et juge sa pertinence pour le marché saoudien très élevée. Les règles de quotas déterminent qui les employeurs doivent recruter, pas quelles tâches le logiciel exécute : les deux questions doivent donc être lues séparément."
+          },
+          {
+            "q": "Combien gagnent les ingénieurs cloud au fil de leur carrière en Arabie saoudite ?",
+            "body": "La rémunération est multipliée par 2,8 entre le niveau débutant (10 000 SAR par mois) et le niveau senior (28 000 SAR), selon Astr 2026 ; les montants sont mensuels et sans impôt. Notre lecture : avec un écart aussi large, le parcours de carrière compte davantage que le salaire de départ, et la courbe des salaires récompense celles et ceux qui dépassent vite le travail de niveau junior."
+          },
+          {
+            "q": "Comment l'exposition nationale à l'IA se compare-t-elle au score de ce métier ?",
+            "body": "En pondérant l'emploi de chaque secteur par son score de risque IA, on obtient 4 491 136 emplois exposés à l'IA sur 12 508 036 travailleurs enregistrés auprès de la GOSI, soit environ 36 %. Le calcul est SUM(salariés du secteur × score de risque IA du secteur / 100). Il mesure l'exposition, pas des suppressions d'emplois prévues, et le remplacement réel sera moindre là où l'augmentation l'emporte sur la substitution. Les deux chiffres répondent à des questions différentes : le total national est une somme pondérée par l'emploi sur l'ensemble des secteurs, tandis que 40,5 évalue un seul métier. Pour un repère européen, l'OCDE (2023) estime qu'environ 27 % des emplois des pays membres sont à haut risque d'automatisation, les tâches de bureau et administratives figurant dans la tranche la plus exposée. Les définitions diffèrent : les 27 % et les 36 % ne sont donc pas directement comparables."
+          },
+          {
+            "q": "Quels dispositifs de reconversion existent pour les ingénieurs cloud en Arabie saoudite ?",
+            "body": "Deux dispositifs du HRDF s'appliquent. Le soutien à l'emploi (Taqat) est une subvention salariale de 30 à 50 % du salaire, jusqu'à 3 000 SAR par mois pendant 24 mois. La Saudi Digital Academy propose des programmes technologiques couvrant le développement web, l'IA, le cloud et la conception de jeux. Nos données ne détaillent pas les conditions d'éligibilité : vérifiez-les auprès du HRDF avant de bâtir un plan sur l'un ou l'autre. Pour les certifications et les démarches de visa si vous venez vous installer dans le Royaume, la [liste de contrôle avant le départ](/prepare) recense ce qu'il faut préparer."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Un score faible signifie-t-il que le poste d'ingénieur cloud est sûr ?",
+            "a": "Non. Le score est une estimation composite de l'exposition, construite à partir de trois mesures publiées et de notre jeu de données saoudien. Il ne donne aucun calendrier et ne dit rien des compétences d'une personne ni de son employeur. Vous pouvez tester votre propre situation avec le [Profil personnel de risque IA](/profile)."
+          },
+          {
+            "q": "Le risque ou la rémunération diffèrent-ils entre ingénieurs cloud saoudiens et non saoudiens ?",
+            "a": "Nos données ne ventilent ni le score du métier ni les salaires par nationalité. Le seul découpage disponible est national : 3 018 891 travailleurs saoudiens et 9 489 145 non saoudiens parmi les 12 508 036 enregistrés auprès de la GOSI."
+          },
+          {
+            "q": "Où suivre les licenciements liés à l'IA dans le Golfe ?",
+            "a": "Le [Weekly AI Layoffs Pulse](/pulse) suit les licenciements liés à l'IA et les mouvements de main-d'œuvre dans le Golfe. C'est un suivi d'actualité, distinct des scores par métier de cette page."
+          }
+        ],
+        "key_takeaway": "L'ingénierie cloud en Arabie saoudite est un métier d'augmentation, pas une cible de remplacement. Selon notre lecture, l'exposition à surveiller est le volume de tâches juniors.",
+        "sources": [
+          {
+            "label": "SHIFT Observatory, master dataset (237 occupations scored, salaries from Astr 2026, GOSI workforce data)",
+            "url": "https://ksashiftobservatory.online/career"
+          },
+          {
+            "label": "OECD Employment Outlook 2023",
+            "url": "https://www.oecd.org/employment-outlook/2023/"
+          }
+        ]
+      },
+      "ar": {
+        "title": "مهندسو السحابة في السعودية: خطر الذكاء الاصطناعي 40.5/100",
+        "description": "غير مرجّح: يسجّل مهندسو السحابة في السعودية 40.5/100 لخطر الذكاء الاصطناعي (المرتبة 105 من 237)، والأجر الوسيط 17,000 ريال شهريًا. البيانات وآفاق نطاقات.",
+        "lede": "غير مرجّح. يمنح مرصد SHIFT مهندسي السحابة في السعودية درجة خطر أتمتة بالذكاء الاصطناعي قدرها 40.5/100 (0 = لا تعرّض، 100 = قابل للأتمتة بالكامل)، ليحتلوا المرتبة 105 من 237 مهنة مقيّمة، ويصنّف الدور ضمن التعزيز لا الاستبدال.\n\nتجمع الدرجة بين ثلاثة مقاييس للتعرّض (Eloundou وFrey-Osborne وFelten) نعرّفها أدناه. الأجر قوي: 17,000 ريال شهريًا عند الوسيط، معفى من الضريبة (Astr 2026). يقع الدور في قطاع المعلومات والاتصالات، ويعمل فيه نحو 18,700 شخص على المستوى الوطني في المملكة. أما اتجاه المنتدى الاقتصادي العالمي فهو نمو سريع، إذ جاء الطلب في 2024 في المرتبة 10. تقيس الدرجة تعرّض المهام، وليست توقعًا بفقدان الوظائف. قراءتنا: الضغط يقع على حجم مهام المبتدئين، لا على الوظيفة نفسها. اطّلع على [الملف الكامل لخطر الذكاء الاصطناعي على مهندس السحابة](/job/cloud-engineer) أو قارن المهن عبر [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career).\n\nآخر تحديث: 18 نوفمبر 2026.",
+        "h2_sections": [
+          {
+            "q": "ما مدى تعرّض مهام مهندسي السحابة للذكاء الاصطناعي؟",
+            "body": "ثلاثة مدخلات تحدد درجة 40.5، وهي تقيس أمورًا مختلفة:\n\n- **Eloundou، 0.6** (على مقياس من 0 إلى 1): حصة مهام المهنة التي يمكن لنموذج لغوي كبير أن يسرّعها.\n- **Frey-Osborne، 3.5%**: الاحتمال المقدَّر لأتمتة المهنة بأكملها.\n- **Felten، \"متوسط\"**: مؤشر لتعرّض المهن للذكاء الاصطناعي مصنّف في فئات حسب المستوى؛ وتقع هندسة السحابة في الفئة الوسطى.\n\nالمفيد هو التباين بين المقياسين الأولين. فحصة مرتفعة من المهام القابلة للتسريع (0.6) إلى جانب احتمال ضعيف جدًا للأتمتة الكاملة (3.5%) تشير إلى دور يتغيّر مضمونه بينما يبقى الدور نفسه. هذه قراءتنا، وليست نتيجة صادرة عن مجموعة البيانات. وإن صحّت، فإن الخطر الواقعي هو فقدان حجم مهام المبتدئين أو المستوى الأول، لا فقدان الوظيفة. لا تتضمن بياناتنا تقسيمًا على مستوى المهام، ولذلك لا نستطيع القول أي المهام بعينها هي الأكثر تعرّضًا."
+          },
+          {
+            "q": "هل يحمي نظام نطاقات مهندسي السحابة من الذكاء الاصطناعي؟",
+            "body": "الجواب المختصر: نطاقات حصة توطين، وليست درعًا ضد الذكاء الاصطناعي. خطر نطاقات على هذا الدور منخفض (حصة قطاعية)، لكن ذلك يعكس إطار الحصص وليس الحماية من الأتمتة. تصنّف مجموعة البيانات الدور ضمن sector_quota وتقيّم صلته بالسوق السعودية بأنها عالية جدًا. قواعد الحصص تحدد من يجب على أصحاب العمل توظيفه، لا المهام التي تنفذها البرمجيات، ولذلك ينبغي قراءة المسألتين كلًّا على حدة."
+          },
+          {
+            "q": "كم يتقاضى مهندسو السحابة مع تقدمهم المهني في السعودية؟",
+            "body": "يرتفع الأجر 2.8 مرة بين مستوى المبتدئ (10,000 ريال شهريًا) والمستوى الأقدم (28,000 ريال)، بحسب Astr 2026؛ والأرقام شهرية ومعفاة من الضريبة. قراءتنا: مع فارق بهذا الاتساع، يصبح المسار المهني أهم من الراتب الابتدائي، وتكافئ منحنى الأجور الانتقال السريع إلى ما يتجاوز أعمال المستوى الأول."
+          },
+          {
+            "q": "كيف تقارَن صورة التعرّض الوطنية للذكاء الاصطناعي بدرجة هذا الدور؟",
+            "body": "بترجيح عدد العاملين في كل قطاع بدرجة خطر الذكاء الاصطناعي فيه، نصل إلى 4,491,136 وظيفة معرّضة للذكاء الاصطناعي من أصل 12,508,036 عاملًا مسجلين في التأمينات الاجتماعية (GOSI)، أي نحو 36%. المعادلة: SUM(عدد موظفي القطاع × درجة خطر الذكاء الاصطناعي للقطاع / 100). هذا يقيس التعرّض لا خسائر الوظائف المتوقعة، وسيكون الإحلال الفعلي أقل حيث يغلب التعزيز على الاستبدال. والرقمان يجيبان عن سؤالين مختلفين: الإجمالي الوطني مجموع مرجّح بعدد العاملين عبر القطاعات، أما 40.5 فتقيّم مهنة واحدة. وكنقطة مرجعية أوروبية، تقدّر منظمة التعاون الاقتصادي والتنمية (OECD 2023) أن نحو 27% من الوظائف في الدول الأعضاء معرّضة لخطر مرتفع للأتمتة، مع وقوع المهام الكتابية والإدارية في الفئة الأكثر تعرّضًا. التعريفات مختلفة، فلا تصح المقارنة المباشرة بين 27% و36%."
+          },
+          {
+            "q": "ما الدعم المتاح لإعادة تأهيل مهندسي السحابة في السعودية؟",
+            "body": "ينطبق مساران من صندوق تنمية الموارد البشرية (HRDF). الأول دعم التوظيف (طاقات)، وهو دعم للأجور بنسبة 30 إلى 50% من الراتب، بحد أقصى 3,000 ريال شهريًا لمدة 24 شهرًا. والثاني الأكاديمية السعودية الرقمية التي تقدّم برامج تقنية تشمل تطوير الويب والذكاء الاصطناعي والحوسبة السحابية وتصميم الألعاب. شروط الأهلية غير مفصّلة في بياناتنا، فتحقق منها لدى HRDF قبل بناء خطتك على أيٍّ من المسارين. وللاطلاع على الشهادات وخطوات التأشيرة إن كنت تنتقل إلى المملكة، تعرض [قائمة ما قبل السفر](/prepare) ما ينبغي إعداده."
+          }
+        ],
+        "faq": [
+          {
+            "q": "هل تعني الدرجة المنخفضة أن وظيفة مهندس السحابة آمنة؟",
+            "a": "لا. الدرجة تقدير مركّب للتعرّض، مبني على ثلاثة مقاييس منشورة وعلى بياناتنا السعودية. وهي لا تعطي أي جدول زمني، ولا تقول شيئًا عن مهارات الفرد أو جهة عمله. يمكنك اختبار وضعك الخاص عبر [الملف الشخصي لخطر الذكاء الاصطناعي](/profile)."
+          },
+          {
+            "q": "هل يختلف الخطر أو الأجر بين مهندسي السحابة السعوديين وغير السعوديين؟",
+            "a": "لا تقسّم بياناتنا درجة المهنة أو الرواتب حسب الجنسية. التقسيم الوحيد المتاح على المستوى الوطني: 3,018,891 عاملًا سعوديًا و9,489,145 غير سعودي من بين 12,508,036 مسجلين في التأمينات الاجتماعية (GOSI)."
+          },
+          {
+            "q": "أين يمكنني متابعة تسريحات العمال المرتبطة بالذكاء الاصطناعي في الخليج؟",
+            "a": "يتتبع [نبض تسريحات الذكاء الاصطناعي الأسبوعي](/pulse) التسريحات المرتبطة بالذكاء الاصطناعي وتحركات القوى العاملة في الخليج. وهو متتبّع للأخبار، منفصل عن درجات المهن في هذه الصفحة."
+          }
+        ],
+        "key_takeaway": "هندسة السحابة في السعودية دور يعتمد على التعزيز، وليس هدفًا للاستبدال. وفي قراءتنا، التعرّض الذي يجب مراقبته هو حجم مهام المبتدئين.",
+        "sources": [
+          {
+            "label": "SHIFT Observatory, master dataset (237 occupations scored, salaries from Astr 2026, GOSI workforce data)",
+            "url": "https://ksashiftobservatory.online/career"
+          },
+          {
+            "label": "OECD Employment Outlook 2023",
+            "url": "https://www.oecd.org/employment-outlook/2023/"
+          }
+        ]
+      }
+    }
   }
 ]
