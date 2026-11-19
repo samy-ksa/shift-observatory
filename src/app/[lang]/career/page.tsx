@@ -1,8 +1,14 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { Lang } from "@/lib/i18n/context";
 import CareerRecommender from "@/components/career/CareerRecommender";
 import { buildBreadcrumbLd, buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
+import { localizedHref } from "@/lib/i18n/links";
+import { recommendTransitions } from "@/lib/utils";
+import { toSlug } from "@/lib/occupations";
+import masterData from "@/data/master.json";
+import type { Occupation } from "@/lib/data-types";
 
 const TITLES: Record<Lang, string> = {
   en: "Career Transition Recommender | SHIFT Observatory",
@@ -33,6 +39,67 @@ const BREADCRUMB_LABEL: Record<Lang, string> = {
   fr: "Recommandeur de transition de carrière",
   ar: "موصي الانتقال المهني",
 };
+
+// Static, server-rendered examples (26/11 : /career est quasi vide pour Google,
+// tout le contenu reel vient de CareerRecommender ("use client", rien avant
+// selection d'un metier) — notIndexed en EN/FR/AR dans index-coverage.jsonl.
+// Calcules avec le meme moteur (recommendTransitions) que l'outil interactif,
+// aucun chiffre invente.
+const EXAMPLES_HEADING: Record<Lang, string> = {
+  en: "Example transitions",
+  fr: "Exemples de transition",
+  ar: "أمثلة على الانتقال",
+};
+
+const EXAMPLES_INTRO: Record<Lang, string> = {
+  en: "Two of the highest AI-risk occupations tracked, and the top pivots the tool recommends for them. Select your own occupation above for a personalized result.",
+  fr: "Deux des métiers les plus exposés à l'IA suivis par l'observatoire, et les meilleures pistes de reconversion que l'outil recommande pour eux. Sélectionnez votre propre métier ci-dessus pour un résultat personnalisé.",
+  ar: "مهنتان من أعلى المهن تعرضاً لمخاطر الذكاء الاصطناعي، وأفضل مسارات التحول التي يوصي بها الأداة لهما. اختر مهنتك الخاصة أعلاه للحصول على نتيجة مخصصة.",
+};
+
+const SEE_FULL: Record<Lang, string> = {
+  en: "See the full analysis for",
+  fr: "Voir l'analyse complète pour",
+  ar: "عرض التحليل الكامل لمهنة",
+};
+
+const DIFFICULTY_LABEL: Record<Lang, Record<"easy" | "moderate" | "hard", string>> = {
+  en: { easy: "Easy", moderate: "Moderate", hard: "Hard" },
+  fr: { easy: "Facile", moderate: "Modérée", hard: "Difficile" },
+  ar: { easy: "سهل", moderate: "متوسط", hard: "صعب" },
+};
+
+const RISK_REDUCTION_LABEL: Record<Lang, (pts: number) => string> = {
+  en: (pts) => `-${pts.toFixed(0)} pts AI risk`,
+  fr: (pts) => `-${pts.toFixed(0)} pts de risque IA`,
+  ar: (pts) => `-${pts.toFixed(0)} نقطة من مخاطر الذكاء الاصطناعي`,
+};
+
+const SALARY_CHANGE_LABEL: Record<Lang, (pct: number) => string> = {
+  en: (pct) => (pct >= 0 ? `+${pct}% salary` : `${pct}% salary`),
+  fr: (pct) => (pct >= 0 ? `+${pct}% de salaire` : `${pct}% de salaire`),
+  ar: (pct) => (pct >= 0 ? `+${pct}% راتب` : `${pct}% راتب`),
+};
+
+function occupationName(o: Occupation, lang: Lang): string {
+  if (lang === "fr") return o.name_fr || o.name_en;
+  if (lang === "ar") return o.name_ar || o.name_en;
+  return o.name_en;
+}
+
+const EXAMPLE_SOURCES = ["Data Entry Keyers", "Technical Writers"];
+
+function buildExamples() {
+  const allOccupations: Occupation[] = [
+    ...(masterData.occupations.high_risk as Occupation[]),
+    ...(masterData.occupations.low_risk as Occupation[]),
+  ];
+  return EXAMPLE_SOURCES.map((name) => {
+    const source = allOccupations.find((o) => o.name_en === name)!;
+    const picks = recommendTransitions(source, allOccupations, false).slice(0, 2);
+    return { source, picks };
+  });
+}
 
 export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "fr" }, { lang: "ar" }];
@@ -72,6 +139,7 @@ export default async function LangCareerPage({
   const breadcrumbLd = buildBreadcrumbLd(lang, [
     { name: BREADCRUMB_LABEL[lang], path: "/career" },
   ]);
+  const examples = buildExamples();
   return (
     <>
       <script
@@ -81,6 +149,38 @@ export default async function LangCareerPage({
       <section className="sr-only">
         <h1>{SR_H1[lang]}</h1>
         <p>{SR_INTRO[lang]}</p>
+      </section>
+      <section className="max-w-3xl mx-auto px-4 pt-8" dir={lang === "ar" ? "rtl" : "ltr"}>
+        <h2 className="text-lg font-semibold text-text-primary mb-2">{EXAMPLES_HEADING[lang]}</h2>
+        <p className="text-sm text-text-secondary mb-5">{EXAMPLES_INTRO[lang]}</p>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {examples.map(({ source, picks }) => (
+            <div key={source.name_en} className="rounded-lg border border-white/10 p-4">
+              <Link
+                href={localizedHref(lang, `/job/${toSlug(source.name_en)}`)}
+                className="text-sm font-medium text-text-primary hover:underline"
+              >
+                {occupationName(source, lang)} ({source.composite}/100)
+              </Link>
+              <ul className="mt-3 space-y-3">
+                {picks.map((p) => (
+                  <li key={p.occupation.name_en} className="text-sm text-text-secondary">
+                    <span className="text-text-primary">{occupationName(p.occupation, lang)}</span>
+                    {" — "}
+                    {RISK_REDUCTION_LABEL[lang](p.risk_reduction)}, {SALARY_CHANGE_LABEL[lang](p.salary_change_pct)},{" "}
+                    {DIFFICULTY_LABEL[lang][p.transition_difficulty]}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href={localizedHref(lang, `/career?occ=${toSlug(source.name_en)}`)}
+                className="mt-3 inline-block text-sm text-cyan-400 hover:underline"
+              >
+                {SEE_FULL[lang]} {occupationName(source, lang)} →
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
       <Suspense
         fallback={
