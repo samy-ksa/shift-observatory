@@ -1,183 +1,172 @@
 {
-  "report_date": "2026-11-16",
+  "report_date": "2026-11-23",
   "period": "last 7 days",
   "global_layoffs": [
     {
-      "company": "Meta",
+      "company": "Barclays",
+      "country": "GB",
+      "sector": "Banking",
+      "jobs_cut": 5000,
+      "jobs_cut_estimated": false,
+      "ai_role": "direct",
+      "description": "Barclays announced that approximately 5,000 roles would be replaced by AI as part of workforce and operating-model changes.",
+      "source": "Yahoo Finance",
+      "date": "2026-10-23"
+    },
+    {
+      "company": "Virgin Media O2",
+      "country": "GB",
+      "sector": "Telecom",
+      "jobs_cut": 3000,
+      "jobs_cut_estimated": true,
+      "ai_role": "contributing",
+      "description": "Virgin Media O2 confirmed plans to cut thousands of jobs while pursuing substantial cost savings and technology-driven efficiency.",
+      "source": "Yahoo Finance",
+      "date": "2026-11-02"
+    },
+    {
+      "company": "Qantas",
+      "country": "AU",
+      "sector": "Transport",
+      "jobs_cut": 850,
+      "jobs_cut_estimated": false,
+      "ai_role": "contributing",
+      "description": "Qantas announced 850 job cuts under an Accenture agreement that moves work offshore and incorporates technology-enabled process changes.",
+      "source": "Phys.org",
+      "date": "2026-11-13"
+    },
+    {
+      "company": "Microsoft",
       "country": "US",
       "sector": "Tech",
-      "jobs_cut": 8000,
+      "jobs_cut": 60000,
       "jobs_cut_estimated": false,
       "ai_role": "contributing",
-      "description": "Meta announced approximately 8,000 job cuts in a cost-reduction effort linked in reporting to the expense of its AI investment.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-09"
+      "description": "Microsoft offered voluntary buyouts to approximately 60,000 eligible employees while controlling costs and funding increased artificial-intelligence investment.",
+      "source": "CBS Austin",
+      "date": "2026-10-01"
     },
     {
-      "company": "Fiserv",
+      "company": "Salesforce",
       "country": "US",
-      "sector": "Fintech",
-      "jobs_cut": 3000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Fiserv announced approximately 3,000 job cuts with AI and efficiency initiatives cited among the contributing factors.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-07"
-    },
-    {
-      "company": "PayPal",
-      "country": "US",
-      "sector": "Fintech",
-      "jobs_cut": 2000,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "PayPal announced approximately 2,000 job cuts in a restructuring that included technology and efficiency considerations.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-03"
-    },
-    {
-      "company": "Canva",
-      "country": "AU",
-      "sector": "Software",
-      "jobs_cut": 1271,
-      "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "Canva was reported to have cut approximately 1,271 jobs as part of an efficiency and operating-model adjustment associated with AI-enabled productivity expectations.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-03"
-    },
-    {
-      "company": "NICE",
-      "country": "IL",
-      "sector": "Software",
-      "jobs_cut": 500,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "NICE announced approximately 500 job cuts amid restructuring and expanded use of AI in customer-experience software.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-07"
-    },
-    {
-      "company": "Amazon",
-      "country": "US",
-      "sector": "Retail",
-      "jobs_cut": 250,
-      "jobs_cut_estimated": false,
-      "ai_role": "suspected",
-      "description": "Amazon was reported to have eliminated approximately 250 roles in a move associated with organizational efficiency and automation pressures.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-03"
+      "sector": "Tech",
+      "jobs_cut": 4000,
+      "jobs_cut_estimated": true,
+      "ai_role": "direct",
+      "description": "Salesforce reduced its customer-support workforce from about 9,000 to about 5,000 as its chief executive cited reduced headcount needs from AI.",
+      "source": "Digital Policy Alert",
+      "date": "2026-11-16"
     },
     {
       "company": "SUSE",
       "country": "DE",
-      "sector": "Software",
+      "sector": "Tech",
       "jobs_cut": 0,
       "jobs_cut_estimated": true,
       "ai_role": "direct",
-      "description": "SUSE announced workforce reductions while explicitly identifying artificial intelligence as a cause, without publishing a precise headcount.",
+      "description": "SUSE was identified in a November layoff compilation as an employer explicitly attributing a workforce reduction to AI, but the available report did not provide a reliable job count.",
       "source": "KSA Shift Observatory",
-      "date": "2026-11-07"
+      "date": "2026-11-10"
     },
     {
-      "company": "Block",
-      "country": "US",
-      "sector": "Fintech",
+      "company": "Bunnings",
+      "country": "AU",
+      "sector": "Retail",
       "jobs_cut": 0,
       "jobs_cut_estimated": true,
-      "ai_role": "contributing",
-      "description": "Block announced workforce reductions in a restructuring where AI and operating efficiency were reported as contributing factors, without a published count.",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-05"
+      "ai_role": "suspected",
+      "description": "Recent workforce reductions at Bunnings were linked in reporting to AI disruption and technological change, without a verified job count in the available source.",
+      "source": "Phys.org",
+      "date": "2026-11-20"
     },
     {
-      "company": "Vodafone Germany",
-      "country": "DE",
-      "sector": "Telecom",
-      "jobs_cut": 2300,
-      "jobs_cut_estimated": false,
-      "ai_role": "contributing",
-      "description": "Vodafone Germany said it would cut or relocate about 2,300 jobs over two years, partly through broader AI use in customer service.",
-      "source": "Finwire citing Reuters",
-      "date": "2026-11-09"
+      "company": "Canva",
+      "country": "AU",
+      "sector": "Tech",
+      "jobs_cut": 0,
+      "jobs_cut_estimated": true,
+      "ai_role": "suspected",
+      "description": "Canva was among Australian companies whose recent job cuts were associated in reporting with AI disruption and technological change, without a verified job count.",
+      "source": "Phys.org",
+      "date": "2026-11-20"
     }
   ],
   "gulf_mena_automation": [],
   "saudi_policy_updates": [
     {
-      "type": "labor_law",
-      "title": "Code of Conduct on Equal Opportunity and Equal Treatment",
-      "description": "Saudi Arabia’s Ministry of Human Resources and Social Development published a code of conduct issued under the national policy encouraging equal opportunity and equal treatment in employment.",
-      "effective_date": null,
-      "source": "Saudi Ministry of Human Resources and Social Development",
-      "date_announced": "2026-11-11"
+      "type": "nitaqat",
+      "title": "Higher Saudi worker counting thresholds under Nitaqat",
+      "description": "The minimum monthly salary for a Saudi employee to count as one full worker is scheduled to rise from SAR 4,000 to SAR 5,000 and later SAR 6,000.",
+      "effective_date": "2027-04-25",
+      "source": "KSA Shift Observatory",
+      "date_announced": "2026-11-19"
     }
   ],
   "ai_workforce_signals": [
     {
-      "headline": "AI-attributed US job cuts reached 121,401 through October",
-      "description": "Challenger, Gray & Christmas data cited in reporting shows US employers attributed 121,401 announced job cuts to artificial intelligence during the first ten months of 2026. The figure was more than double the comparable January-to-October 2025 total, although October’s AI-linked count fell to 1,265.",
-      "relevance_to_ksa": "direct",
-      "source": "Finwire citing Challenger, Gray & Christmas",
-      "date": "2026-11-12"
-    },
-    {
-      "headline": "AI became a major rationale in technology restructuring",
-      "description": "Large technology and fintech employers including Meta, Fiserv, PayPal, NICE, SUSE, Block and Amazon were linked to workforce reductions involving AI, efficiency or automation rationales. Reporting also cautioned that AI attribution may sometimes obscure broader restructuring or offshoring decisions.",
-      "relevance_to_ksa": "direct",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-10"
-    },
-    {
-      "headline": "AI cited in roughly one-fifth of US announced cuts",
-      "description": "Reporting based on Challenger data said AI accounted for about 20% of announced US job cuts through October 2026. Economic and market conditions nevertheless became a larger stated reason for cuts during the year.",
+      "headline": "Integrated AI adoption linked to planned headcount reductions",
+      "description": "A CIPD survey of more than 2,000 British employers found that 32% of firms with integrated AI planned workforce reductions, compared with 5% among firms that did not use AI. Nearly half of strategically adopting firms expected to cut staff.",
       "relevance_to_ksa": "indirect",
-      "source": "Finwire citing Challenger, Gray & Christmas",
-      "date": "2026-11-12"
+      "source": "Yahoo Finance",
+      "date": "2026-11-16"
     },
     {
-      "headline": "October AI-linked layoffs declined sharply",
-      "description": "AI-linked US layoffs fell to 1,265 in October, the lowest monthly level reported for 2026 and below 3% of all announced cuts. The decline suggests that employers increasingly framed workforce reductions around economic conditions rather than technology alone.",
+      "headline": "AI increasingly associated with lower headcount",
+      "description": "BSI research found that 54% of business leaders said AI was helping reduce headcount, up from 41% the previous year. The research also indicated that entry-level opportunities were being reduced.",
       "relevance_to_ksa": "indirect",
-      "source": "Finwire citing Challenger, Gray & Christmas",
-      "date": "2026-11-12"
+      "source": "ITPro",
+      "date": "2026-11-19"
     },
     {
-      "headline": "Customer-service automation is tied to telecom job reductions",
-      "description": "Vodafone Germany said its planned reduction or relocation of approximately 2,300 roles would partly reflect wider AI use in customer service. The development is a relevant benchmark for Gulf telecom operators expanding AI-assisted service operations.",
-      "relevance_to_ksa": "direct",
-      "source": "Finwire citing Reuters",
-      "date": "2026-11-12"
+      "headline": "AI displacement is appearing through weaker hiring",
+      "description": "Research summarized in an AI-and-work review found unemployment rising more among workers in occupations highly exposed to generative AI, with younger workers showing a larger differential. The evidence indicates reduced job-finding rates may precede large-scale layoffs.",
+      "relevance_to_ksa": "contextual",
+      "source": "AI Trading 67",
+      "date": "2026-11-13"
     },
     {
-      "headline": "Information and finance remain AI-exposed employment sectors",
-      "description": "Reuters reported that information and finance continued to shed jobs on a trend basis while employers broadly adopted AI tools. The same reporting noted that AI had not yet produced major displacement across the overall US economy.",
+      "headline": "Anthropic reports extensive AI-written code",
+      "description": "A policy report cited Anthropic as claiming that more than 90% of changes merged into its core codebase were written by Claude with human guidance. The development signals accelerating automation of software-production tasks.",
+      "relevance_to_ksa": "contextual",
+      "source": "Digital Policy Alert",
+      "date": "2026-11-16"
+    },
+    {
+      "headline": "China considers transition protections for AI deployment",
+      "description": "China’s State Council was reported to have called on firms to explore an unemployment-buffer period when deploying AI at scale. Proposed measures include advance notice and retraining programs.",
       "relevance_to_ksa": "indirect",
-      "source": "Reuters",
-      "date": "2026-11-06"
+      "source": "Digital Policy Alert",
+      "date": "2026-11-16"
     },
     {
-      "headline": "Saudi AI exposure measure covers 4.45 million registered jobs",
-      "description": "A Saudi labor-market assessment cited 4,450,778 of 12,420,050 GOSI-registered jobs as carrying significant AI exposure. The measure describes potential exposure rather than a forecast of job losses.",
+      "headline": "AI adoption is reducing entry-level opportunity",
+      "description": "BSI-related reporting said nearly half of surveyed business leaders believed AI had already reduced entry-level opportunities. This raises workforce-pipeline risks for employers implementing AI-led productivity programs.",
       "relevance_to_ksa": "direct",
-      "source": "KSA Shift Observatory",
-      "date": "2026-11-10"
+      "source": "TechRadar Pro",
+      "date": "2026-11-17"
+    },
+    {
+      "headline": "US payroll growth affected by AI exposure",
+      "description": "A reported estimate attributed approximately 16,000 fewer monthly US payroll additions over the prior year to artificial intelligence and linked the effect to a 0.1-percentage-point increase in unemployment. The estimate indicates labor-market effects may be visible in hiring before formal layoffs.",
+      "relevance_to_ksa": "contextual",
+      "source": "CBS Austin",
+      "date": "2026-11-13"
     }
   ],
   "weekly_stats": {
-    "total_global_layoffs_this_week": 10300,
-    "total_ai_cited_this_week": 2,
+    "total_global_layoffs_this_week": 4000,
+    "total_ai_cited_this_week": 1,
     "total_gulf_events_this_week": 0,
-    "ytd_global_tech_layoffs": 171501,
-    "ytd_ai_cited_us": 121401,
+    "ytd_global_tech_layoffs": 0,
+    "ytd_ai_cited_us": 0,
     "trend_vs_last_week": "up",
-    "notable_trend": "AI remains a prominent justification for technology and fintech restructuring, but the latest US data shows AI-linked layoff intensity moderating as employers increasingly cite broader economic and market pressures.",
+    "notable_trend": "AI-related workforce pressure is broadening from explicit technology-sector cuts into customer support, software production, and entry-level hiring, while Gulf-specific automation and Saudi policy activity remained limited in the available reporting.",
     "model_reported": {
-      "total_global_layoffs_this_week": 17321,
+      "total_global_layoffs_this_week": 64850,
       "total_ai_cited_this_week": 6
     },
-    "events_this_week": 2,
-    "backfill_events_older_than_week": 7,
+    "events_this_week": 3,
+    "backfill_events_older_than_week": 5,
     "totals_computed_from_list": true
   }
 }
