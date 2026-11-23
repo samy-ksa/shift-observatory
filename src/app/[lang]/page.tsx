@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import type { Lang } from "@/lib/i18n/context";
 import { buildLanguageAlternates, SITE_URL } from "@/lib/i18n/seo";
 import { localizedHref } from "@/lib/i18n/links";
-import { TEXT } from "@/lib/rankings";
+import { TEXT, RANKING_SLUGS } from "@/lib/rankings";
 import { toSlug } from "@/lib/occupations";
 import data from "@/data/master.json";
 import { ORIGIN_CITIES, SAUDI_CITIES } from "@/data/relocation-data";
@@ -225,7 +225,10 @@ export default async function LangHome({
       <AIExposureTreemap />
       <div className="section-divider" />
       <NitaqatSection />
-      <p className="max-w-5xl mx-auto px-4 mt-3 mb-8 text-sm"><a href={localizedHref(lang, "/saudization-tracker")} className="text-cyan-400 hover:underline">{{ en: "Explore the 2026 Saudization decisions timeline", fr: "Explorer la chronologie 2026 des décisions de saoudisation", ar: "استكشف الجدول الزمني لقرارات التوطين في 2026" }[lang]}</a></p>
+      <div className="max-w-5xl mx-auto px-4 mt-3 mb-8 text-sm flex flex-col gap-1">
+        <a href={localizedHref(lang, "/saudization-tracker")} className="text-cyan-400 hover:underline">{{ en: "Explore the 2026 Saudization decisions timeline", fr: "Explorer la chronologie 2026 des décisions de saoudisation", ar: "استكشف الجدول الزمني لقرارات التوطين في 2026" }[lang]}</a>
+        {RANKING_SLUGS.map((slug) => <a key={slug} href={localizedHref(lang, `/rankings/${slug}`)} className="text-cyan-400 hover:underline">{TEXT[lang].headings[slug]}</a>)}
+      </div>
       <div className="section-divider" />
       <EmployerTable />
       <div className="section-divider" />
@@ -247,7 +250,9 @@ export default async function LangHome({
         <p className="text-xs text-gray-600 leading-relaxed mb-4">{ABOUT_BODY[lang]}</p>
         <Link href={localizedHref(lang, "/methodology")} className="inline-block text-xs text-cyan-400 hover:underline mb-4">{{ en: "Read our methodology and sources", fr: "Lire notre méthodologie et nos sources", ar: "اطّلع على منهجيتنا ومصادر بياناتنا" }[lang]}</Link>
 
-        <a href={localizedHref(lang, "/rankings/jobs-most-at-risk-from-ai-saudi-arabia")} className="inline-block text-xs text-gray-400 hover:text-cyan-400 mb-4">{TEXT[lang].headings["jobs-most-at-risk-from-ai-saudi-arabia"]}</a>
+        <nav aria-label={TEXT[lang].rankings} className="flex flex-col gap-1 mb-4">
+          {RANKING_SLUGS.map((slug) => <a key={slug} href={localizedHref(lang, `/rankings/${slug}`)} className="inline-block text-xs text-gray-400 hover:text-cyan-400">{TEXT[lang].headings[slug]}</a>)}
+        </nav>
 
         <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           {POPULAR_H3[lang]}

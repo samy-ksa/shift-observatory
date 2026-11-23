@@ -30,3 +30,9 @@ Bonjour [prénom], je maintiens un suivi daté des décisions Saudization/Nitaqa
 ### Brouillon type (B, journaliste)
 Objet : Nitaqat 2026: 3 effective dates coming in the next 6 months
 Bonjour [prénom], suite à votre article sur [sujet], voici un calendrier sourcé des entrées en vigueur à venir (gymnases 18/11, gestion de projet 14/02/2027, seuil Nitaqat 5 000 SAR 25/04/2027, ingénierie 35 % 09/05/2027) : [lien tracker]. Données CSV libres pour vos graphiques.
+
+## Mesure du 23/11/2026 (J+8)
+- Nouvelles pages indexées : 4/15 (EN tracker, EN classement « most at risk », EN « highest-paid », FR « most at risk ») ; 3 « découverte, non indexée » (EN/FR « safest », AR « reserved »), 8 « inconnue de Google » (dont FR et AR tracker, 3 classements AR sur 4). Critère 8/15 à J+14 (29/11) : PAS atteint à ce jour.
+- Technique OK : HTTP 200, `index, follow`, canonical correct, présentes au sitemap (864 URL, 0 erreur, relu par Google le 23/11 05:18). Pages indexées explorées les 17-21/11 : Google avance, lentement. Liens internes : 5 depuis chaque hub /job, 2 depuis l'accueil, 0 lien externe.
+- Impressions des nouvelles pages depuis le 15/11 : 4 (tracker EN 3, classement FR 1), 1 clic. Total site 28 j : 17 clics, 22 445 impressions (rafale robots toujours là : Inde, Royaume-Uni, Brésil).
+- Diagnostic : cause = autorité et budget d'exploration (aucun lien externe), pas un défaut technique. Priorité AR (0/4 classements, tracker inconnu) car c'est la langue cible du site.
