@@ -85,6 +85,7 @@ Built by Samy Aloulou (independent), based in Saudi Arabia. The dataset and meth
 
 ## Insights & Pulse
 
+- [4,000 layoffs, AI cited in 1: Saudi jobs, Nov 23](https://www.ksashiftobservatory.online/en/pulse/2026-11-23): Weekly tracker: 4,000 layoffs logged, AI cited in 1. Plus entry-level hiring signals and 4,491,136 AI-exposed Saudi jobs, sector by sector.
 - [Cloud Engineers in Saudi Arabia: AI Risk 40.5/100, SAR 17K](https://www.ksashiftobservatory.online/en/insights/will-ai-replace-cloud-engineers-in-saudi-arabia): Unlikely: Saudi cloud engineers score 40.5/100 for AI risk (rank 105/237), median pay SAR 17,000/month. Data, Nitaqat outlook and reskilling options.
 - [10,300 layoffs, AI cited in 2: Saudi jobs, Nov 16](https://www.ksashiftobservatory.online/en/pulse/2026-11-16): Weekly tracker: 10,300 layoffs logged, AI cited in 2, no Gulf event. See which Saudi sectors carry AI exposure across 4,450,778 GOSI jobs.
 - [15,021 layoffs, AI cited in 6: Saudi impact, Nov 10](https://www.ksashiftobservatory.online/en/pulse/2026-11-10): Weekly tracker: 15,021 layoffs logged, AI cited in 6. See who drove the total, what it means for Saudi sectors and Nitaqat's SAR 5,000 step.

@@ -1202,5 +1202,265 @@
         ]
       }
     }
+  },
+  {
+    "slug": "week-of-2026-11-23",
+    "kind": "pulse",
+    "date": "2026-11-23",
+    "published_at": "2026-11-23T09:06:03",
+    "keyword": "AI layoffs and Saudi workforce — week of 2026-11-23",
+    "author": "Samy Aloulou",
+    "author_title": "analyste de l'observatoire",
+    "author_url": "https://www.ksashiftobservatory.online/en",
+    "primary_lang": "en",
+    "hero_prompt": "Editorial hero image for an analytical article. SUBJECT: 4,000 layoffs, AI cited in 1: Saudi jobs, Nov 23. STYLE: editorial data-journalism illustration for a Saudi labour-market observatory, restrained dark palette (deep navy #0A0E17, slate, a single teal/green accent), abstract data motifs (subtle charts, grids, workforce silhouettes), modern and sober, NO text, NO logos, NO flags. Composition: wide 16:9, uncluttered, suitable as a website hero banner. STRICT: no text, no letters, no numbers, no logos, no watermark, no human faces in close-up. Tasteful, factual, non-sensational.",
+    "hero_image": null,
+    "og": {
+      "en": "https://www.ksashiftobservatory.online/api/og?lang=en&title=4%2C000%20layoffs%2C%20AI%20cited%20in%201%3A%20Saudi%20jobs%2C%20Nov%2023&subtitle=This%20week%20logged%204%2C000%20layoffs%20with%20AI%20cited%20in%201%2C%20and%20the%20signal%20is%20moving%20into",
+      "fr": "https://www.ksashiftobservatory.online/api/og?lang=fr&title=4%20000%20licenciements%2C%20l%27IA%20cit%C3%A9e%201%20fois%20%3A%20emploi%20saoudien%2C%2023%20nov.&subtitle=Cette%20semaine%2C%204%20000%20licenciements%20ont%20%C3%A9t%C3%A9%20recens%C3%A9s%2C%20dont%201%20attribu%C3%A9%20%C3%A0%20l%27IA%2C%20et%20",
+      "ar": "https://www.ksashiftobservatory.online/api/og?lang=ar&title=4%2C000%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%8C%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%81%D9%8A%201%3A%20%D9%88%D8%B8%D8%A7%D8%A6%D9%81%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%2023%20%D9%86%D9%88%D9%81%D9%85%D8%A8%D8%B1&subtitle=%D8%B3%D8%AC%D9%91%D9%84%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%204%2C000%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%20%D9%85%D8%B9%20%D8%B0%D9%83%D8%B1%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%B3%D8%A8%D8%A8%D9%8B%D8%A7%20%D9%81%D9%8A%20%D8%AD%D8%A7%D9%84%D8%A9%20%D9%88%D8%A7%D8%AD%D8%AF%D8%A9%D8%8C%20%D9%88%D8%AA%D9%86%D8%AA%D9%82%D9%84"
+    },
+    "langs": {
+      "en": {
+        "title": "4,000 layoffs, AI cited in 1: Saudi jobs, Nov 23",
+        "description": "Weekly tracker: 4,000 layoffs logged, AI cited in 1. Plus entry-level hiring signals and 4,491,136 AI-exposed Saudi jobs, sector by sector.",
+        "lede": "4,000 layoffs logged this week, AI cited in 1: Salesforce, which cut 4,000 jobs on 16 November 2026 and attributed them directly to AI (Digital Policy Alert). The weekly total is up on last week.\n\nThe pressure is spreading beyond explicit technology cuts. Bunnings and Canva reported cuts on 20 November with automation suspected but no job count given. The same trend now reaches customer support, software production and entry-level hiring. Hiring is the quieter signal: research cited below suggests reduced job-finding rates may precede large-scale layoffs.\n\nFor Saudi Arabia, 4,491,136 of 12,508,036 GOSI-registered jobs carry significant AI exposure, weighted by risk. That is exposure, not a forecast of losses. Our data shows no Gulf automation event this week, and the one Saudi policy signal concerns Nitaqat salary thresholds. See [all Pulse editions](/pulse) for the series.",
+        "h2_sections": [
+          {
+            "q": "Which Saudi sectors are most exposed to AI?",
+            "body": "Saudi share of the workforce ranges from 17.6% in Administrative & Support Services to 82.4% in Financial & Insurance Activities, so exposure differs sharply by sector. Our data holds no Gulf automation event this week and no Saudi figures on entry-level hiring or on generative-AI exposure by occupation. The sector view below therefore comes from the SHIFT Observatory master dataset (updated 21 March 2026), not from this week's news.\n\n| Sector | AI risk /100 | Employees | Saudi share | Nitaqat pressure |\n|---|---|---|---|---|\n| Administrative & Support Services | 72 | 1,454,646 | 17.6% | moderate |\n| Financial & Insurance Activities | 62 | 107,430 | 82.4% | very high |\n| Wholesale & Retail Trade | 55 | 1,823,181 | 22.3% | high |\n| Professional, Scientific & Technical | 52 | 294,579 | 47.1% | moderate |\n| Information & Communication (ICT) | 45 | 178,594 | 57.2% | high |\n\nThese are the five highest-risk sectors out of 20 tracked; nothing can be concluded about the other 15. Wholesale & Retail Trade has the largest workforce and the largest number of Saudis (about 406,569, workforce times Saudi share). Occupation-level scores for 237 jobs are on the [AI Job Risk Dashboard](/career)."
+          },
+          {
+            "q": "What does the Nitaqat salary rise change for employers?",
+            "body": "The minimum monthly salary for a Saudi employee to count as one full worker under Nitaqat is scheduled to rise from SAR 4,000 to SAR 5,000, and later to SAR 6,000 (SHIFT Observatory, announced 19 November). The programme in force is Nitaqat Mutawar (Ministerial Decision No. 182495, 23 May 2021), with Red, Low Green, Medium Green, High Green and Platinum bands.\n\nNitaqat pressure is already rated very high in Financial & Insurance Activities and high in Wholesale & Retail Trade and ICT. Our data contains no source on how Saudi employers weigh Nitaqat targets against AI-driven savings, so we do not draw a conclusion on that trade-off."
+          },
+          {
+            "q": "Is hiring weakening before layoffs show up?",
+            "body": "BSI research found that 54% of business leaders say AI is helping reduce headcount, up from 41% the previous year (ITPro, 19 November). Nearly half of surveyed leaders believe AI has already reduced entry-level opportunities (TechRadar Pro, 17 November), which raises pipeline risks for employers running AI-led productivity programmes.\n\nA research review summarised on 13 November found unemployment rising more among workers in occupations highly exposed to generative AI, with a larger gap for younger workers. It indicates reduced job-finding rates may precede large-scale layoffs. A reported US estimate attributes about 16,000 fewer monthly payroll additions over the prior year to AI, linked to a 0.1-percentage-point rise in unemployment (CBS Austin).\n\nFor Saudi readers the nearest local reference is youth unemployment: 14.8% for young Saudis against 6.5% overall (GASTAT Labour Force Survey, Q2 2026 for the headline rate). Our data does not link these figures to AI. Check your own exposure with the [Personal AI Risk Profile](/profile)."
+          },
+          {
+            "q": "Is AI reaching software production?",
+            "body": "A policy report cites Anthropic as saying that more than 90% of changes merged into its core codebase were written by Claude with human guidance (Digital Policy Alert, 16 November). That is one company's claim about its own code, not a labour-market measure. It matters here because the same week's largest cut, Salesforce's 4,000 jobs, comes from the technology sector, where AI is attributed directly. Our data does not connect the two events."
+          },
+          {
+            "q": "How do UK and Chinese signals compare with Saudi ones?",
+            "body": "A CIPD survey of more than 2,000 British employers found that 32% of firms with integrated AI planned workforce reductions, against 5% among firms that did not use AI (Yahoo Finance, 16 November). Nearly half of firms adopting AI strategically expected to cut staff.\n\nOlder cuts sit outside this week's total: Barclays 5,000 (AI direct, 23 October), Virgin Media O2 3,000 (AI contributing, 2 November), Microsoft 60,000 (AI contributing, 1 October) and Qantas 850 (AI contributing, 13 November). SUSE (AI direct, 10 November) has no published job count.\n\nOn policy, China's State Council was reported to have asked firms to explore an unemployment-buffer period when deploying AI at scale, with advance notice and retraining (Digital Policy Alert, 16 November). Our data holds no equivalent Saudi AI-transition measure this week; the Saudi signal is the Nitaqat threshold change above."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What do the AI labels in the Pulse mean?",
+            "a": "Direct means the company said explicitly that AI caused the cuts. Contributing means AI is cited among other factors such as revenue, refocusing or integration. Suspected means automation is the evident driver but is not officially stated, typically in back-office, IT support or basic operations. Bunnings and Canva are rated suspected."
+          },
+          {
+            "q": "Why are Microsoft's 60,000 cuts not in the weekly total?",
+            "a": "The weekly total counts only events dated within the week. Microsoft's cuts are dated 1 October, so they appear as older context. The same rule applies to Barclays, Virgin Media O2, Qantas and SUSE."
+          },
+          {
+            "q": "Why do Bunnings and Canva show no job count?",
+            "a": "Our sources, dated 20 November, report the cuts without a published number, so we record zero and do not estimate one. They add to the event count but not to the 4,000 total."
+          },
+          {
+            "q": "Does the 4,491,136 figure mean Saudi jobs will be lost?",
+            "a": "No. It counts jobs with significant AI exposure, weighted by risk, among 12,508,036 GOSI employees. Of those exposed jobs, 1,154,168 are held by Saudis. Exposure describes task overlap with AI; it is not a prediction of job losses."
+          }
+        ],
+        "key_takeaway": "This week logged 4,000 layoffs with AI cited in 1, and the signal is moving into customer support, software production and entry-level hiring. In Saudi Arabia, 4,491,136 of 12,508,036 GOSI-registered jobs carry significant AI exposure. That is exposure, not a forecast of losses, and the Nitaqat salary threshold is rising from SAR 4,000 toward SAR 6,000.",
+        "sources": [
+          {
+            "label": "Digital Policy Alert",
+            "url": "https://digitalpolicyalert.org"
+          },
+          {
+            "label": "Yahoo Finance (CIPD survey, Barclays, Virgin Media O2)",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Phys.org (Bunnings, Canva, Qantas)",
+            "url": "https://phys.org"
+          },
+          {
+            "label": "ITPro (BSI research)",
+            "url": "https://www.itpro.com"
+          },
+          {
+            "label": "TechRadar Pro (BSI entry-level reporting)",
+            "url": "https://www.techradar.com"
+          },
+          {
+            "label": "CBS Austin (US payroll estimate, Microsoft)",
+            "url": "https://cbsaustin.com"
+          },
+          {
+            "label": "AI Trading 67 (AI-and-work review)",
+            "url": "/pulse"
+          },
+          {
+            "label": "SHIFT Observatory master dataset and Weekly Pulse, 23 November 2026",
+            "url": "/pulse"
+          }
+        ]
+      },
+      "fr": {
+        "title": "4 000 licenciements, l'IA citée 1 fois : emploi saoudien, 23 nov.",
+        "description": "Suivi hebdo : 4 000 licenciements recensés, IA citée dans 1. Signaux d'embauche débutants et 4 491 136 emplois saoudiens exposés à l'IA, par secteur.",
+        "lede": "4 000 licenciements recensés cette semaine, l'IA citée dans 1 cas : Salesforce, qui a supprimé 4 000 postes le 16 novembre 2026 en les attribuant directement à l'IA (Digital Policy Alert). Le total hebdomadaire est en hausse par rapport à la semaine dernière.\n\nLa pression dépasse les suppressions explicitement technologiques. Bunnings et Canva ont annoncé des coupes le 20 novembre, avec une automatisation soupçonnée mais sans nombre de postes communiqué. La même tendance touche désormais le support client, la production logicielle et l'embauche de débutants. L'embauche est le signal le plus discret : les recherches citées ci-dessous suggèrent qu'une baisse des taux de retour à l'emploi peut précéder les licenciements massifs.\n\nEn Arabie saoudite, 4 491 136 des 12 508 036 emplois enregistrés à la GOSI présentent une exposition significative à l'IA, pondérée par le risque. C'est une exposition, pas une prévision de pertes. Nos données ne montrent aucun événement d'automatisation dans le Golfe cette semaine, et le seul signal de politique saoudienne concerne les seuils de salaire du Nitaqat. Voir [toutes les éditions du Pulse](/pulse) pour la série.",
+        "h2_sections": [
+          {
+            "q": "Quels secteurs saoudiens sont les plus exposés à l'IA ?",
+            "body": "La part de Saoudiens dans l'effectif va de 17,6 % dans les Services administratifs et de soutien à 82,4 % dans les Activités financières et d'assurance : l'exposition diffère donc fortement selon le secteur. Nos données ne contiennent aucun événement d'automatisation dans le Golfe cette semaine, ni chiffres saoudiens sur l'embauche de débutants ou sur l'exposition à l'IA générative par métier. La vue sectorielle ci-dessous provient donc du jeu de données de référence du SHIFT Observatory (mis à jour le 21 mars 2026), et non de l'actualité de la semaine.\n\n| Secteur | Risque IA /100 | Salariés | Part de Saoudiens | Pression Nitaqat |\n|---|---|---|---|---|\n| Services administratifs et de soutien | 72 | 1,454,646 | 17.6% | modérée |\n| Activités financières et d'assurance | 62 | 107,430 | 82.4% | très élevée |\n| Commerce de gros et de détail | 55 | 1,823,181 | 22.3% | élevée |\n| Activités professionnelles, scientifiques et techniques | 52 | 294,579 | 47.1% | modérée |\n| Information et communication (TIC) | 45 | 178,594 | 57.2% | élevée |\n\nCe sont les cinq secteurs au risque le plus élevé sur les 20 suivis ; on ne peut rien conclure sur les 15 autres. Le commerce de gros et de détail a l'effectif le plus important et le plus grand nombre de Saoudiens (environ 406,569, effectif multiplié par la part de Saoudiens). Les scores par métier pour 237 professions figurent sur le [tableau de bord du risque IA par métier](/career)."
+          },
+          {
+            "q": "Que change la hausse du salaire Nitaqat pour les employeurs ?",
+            "body": "Le salaire mensuel minimum pour qu'un salarié saoudien compte comme un travailleur à part entière dans le Nitaqat doit passer de 4 000 SAR à 5 000 SAR, puis à 6 000 SAR (SHIFT Observatory, annoncé le 19 novembre). Le programme en vigueur est Nitaqat Mutawar (décision ministérielle n° 182495, 23 mai 2021), avec les bandes Rouge, Vert bas, Vert moyen, Vert haut et Platine.\n\nLa pression Nitaqat est déjà jugée très élevée dans les Activités financières et d'assurance, et élevée dans le Commerce de gros et de détail et les TIC. Nos données ne contiennent aucune source sur la manière dont les employeurs saoudiens arbitrent entre objectifs Nitaqat et économies liées à l'IA ; nous ne tirons donc aucune conclusion sur ce compromis."
+          },
+          {
+            "q": "L'embauche faiblit-elle avant que les licenciements n'apparaissent ?",
+            "body": "Une étude de BSI montre que 54 % des dirigeants estiment que l'IA aide à réduire les effectifs, contre 41 % l'année précédente (ITPro, 19 novembre). Près de la moitié des dirigeants interrogés pensent que l'IA a déjà réduit les opportunités pour les débutants (TechRadar Pro, 17 novembre), ce qui accroît les risques pour le vivier de talents des employeurs menant des programmes de productivité fondés sur l'IA.\n\nUne revue de recherches résumée le 13 novembre constate que le chômage augmente davantage chez les travailleurs de métiers fortement exposés à l'IA générative, avec un écart plus marqué pour les jeunes. Elle indique qu'une baisse des taux de retour à l'emploi peut précéder les licenciements massifs. Une estimation américaine rapportée attribue à l'IA environ 16 000 créations d'emplois salariés mensuelles en moins sur l'année écoulée, liées à une hausse de 0,1 point de pourcentage du chômage (CBS Austin).\n\nPour les lecteurs saoudiens, la référence locale la plus proche est le chômage des jeunes : 14,8 % pour les jeunes Saoudiens contre 6,5 % au total (enquête sur la population active de la GASTAT, T2 2026 pour le taux global). Nos données ne relient pas ces chiffres à l'IA. Évaluez votre propre exposition avec le [Profil personnel de risque IA](/profile)."
+          },
+          {
+            "q": "L'IA gagne-t-elle la production de logiciels ?",
+            "body": "Un rapport de politique publique cite Anthropic, selon lequel plus de 90 % des modifications fusionnées dans son code principal ont été écrites par Claude avec un encadrement humain (Digital Policy Alert, 16 novembre). C'est l'affirmation d'une entreprise sur son propre code, pas une mesure du marché du travail. Elle compte ici car la plus grosse suppression de la semaine, les 4 000 postes de Salesforce, vient du secteur technologique, où l'IA est directement invoquée. Nos données ne relient pas les deux événements."
+          },
+          {
+            "q": "Comment les signaux britanniques et chinois se comparent-ils aux signaux saoudiens ?",
+            "body": "Une enquête du CIPD auprès de plus de 2 000 employeurs britanniques révèle que 32 % des entreprises ayant intégré l'IA prévoyaient des réductions d'effectifs, contre 5 % parmi celles qui n'utilisaient pas l'IA (Yahoo Finance, 16 novembre). Près de la moitié des entreprises adoptant l'IA de façon stratégique s'attendaient à réduire leurs effectifs.\n\nLes suppressions plus anciennes sont exclues du total de la semaine : Barclays 5 000 (IA directe, 23 octobre), Virgin Media O2 3 000 (IA contributive, 2 novembre), Microsoft 60 000 (IA contributive, 1er octobre) et Qantas 850 (IA contributive, 13 novembre). SUSE (IA directe, 10 novembre) n'a pas de nombre de postes publié.\n\nCôté politique publique, le Conseil d'État chinois aurait demandé aux entreprises d'envisager une période tampon avant chômage lors d'un déploiement de l'IA à grande échelle, avec préavis et reconversion (Digital Policy Alert, 16 novembre). Nos données ne contiennent aucune mesure saoudienne équivalente de transition liée à l'IA cette semaine ; le signal saoudien est le changement du seuil Nitaqat évoqué plus haut."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Que signifient les étiquettes IA dans le Pulse ?",
+            "a": "« Directe » signifie que l'entreprise a déclaré explicitement que l'IA a causé les suppressions. « Contributive » signifie que l'IA est citée parmi d'autres facteurs comme le chiffre d'affaires, un recentrage ou une intégration. « Soupçonnée » signifie que l'automatisation est le moteur évident sans être officiellement déclarée, typiquement dans le back-office, le support informatique ou les opérations de base. Bunnings et Canva sont classés « soupçonnée »."
+          },
+          {
+            "q": "Pourquoi les 60 000 suppressions de Microsoft ne sont-elles pas dans le total hebdomadaire ?",
+            "a": "Le total hebdomadaire ne compte que les événements datés de la semaine. Les suppressions de Microsoft datent du 1er octobre : elles apparaissent donc comme contexte plus ancien. La même règle s'applique à Barclays, Virgin Media O2, Qantas et SUSE."
+          },
+          {
+            "q": "Pourquoi Bunnings et Canva n'ont-ils aucun nombre de postes ?",
+            "a": "Nos sources, datées du 20 novembre, rapportent les suppressions sans chiffre publié ; nous enregistrons donc zéro et n'en estimons aucun. Elles s'ajoutent au nombre d'événements, mais pas au total de 4 000."
+          },
+          {
+            "q": "Le chiffre de 4 491 136 signifie-t-il que des emplois saoudiens seront perdus ?",
+            "a": "Non. Il compte les emplois à exposition significative à l'IA, pondérée par le risque, parmi 12 508 036 salariés enregistrés à la GOSI. Parmi ces emplois exposés, 1 154 168 sont occupés par des Saoudiens. L'exposition décrit le recoupement des tâches avec l'IA ; ce n'est pas une prévision de pertes d'emplois."
+          }
+        ],
+        "key_takeaway": "Cette semaine, 4 000 licenciements ont été recensés, dont 1 attribué à l'IA, et le signal gagne le support client, la production logicielle et l'embauche de débutants. En Arabie saoudite, 4 491 136 des 12 508 036 emplois enregistrés à la GOSI présentent une exposition significative à l'IA. C'est une exposition, pas une prévision de pertes, et le seuil de salaire Nitaqat passe de 4 000 SAR vers 6 000 SAR.",
+        "sources": [
+          {
+            "label": "Digital Policy Alert",
+            "url": "https://digitalpolicyalert.org"
+          },
+          {
+            "label": "Yahoo Finance (enquête CIPD, Barclays, Virgin Media O2)",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Phys.org (Bunnings, Canva, Qantas)",
+            "url": "https://phys.org"
+          },
+          {
+            "label": "ITPro (étude BSI)",
+            "url": "https://www.itpro.com"
+          },
+          {
+            "label": "TechRadar Pro (étude BSI sur l'embauche de débutants)",
+            "url": "https://www.techradar.com"
+          },
+          {
+            "label": "CBS Austin (estimation de l'emploi salarié américain, Microsoft)",
+            "url": "https://cbsaustin.com"
+          },
+          {
+            "label": "AI Trading 67 (revue IA et travail)",
+            "url": "/pulse"
+          },
+          {
+            "label": "Jeu de données de référence du SHIFT Observatory et Pulse hebdomadaire, 23 novembre 2026",
+            "url": "/pulse"
+          }
+        ]
+      },
+      "ar": {
+        "title": "4,000 تسريح، الذكاء الاصطناعي في 1: وظائف السعودية 23 نوفمبر",
+        "description": "متتبع أسبوعي: 4,000 تسريح، والذكاء الاصطناعي سبب في 1. مع مؤشرات التوظيف للمبتدئين و4,491,136 وظيفة سعودية معرّضة للذكاء الاصطناعي حسب القطاع.",
+        "lede": "سُجّل هذا الأسبوع 4,000 تسريح، والذكاء الاصطناعي مذكور سببًا في حالة واحدة: شركة Salesforce التي خفّضت 4,000 وظيفة في 16 نوفمبر 2026 وعزت ذلك مباشرةً إلى الذكاء الاصطناعي (Digital Policy Alert). وقد ارتفع الإجمالي الأسبوعي مقارنةً بالأسبوع الماضي.\n\nلا يقتصر الضغط على التخفيضات التقنية المعلنة صراحةً. فقد أعلنت Bunnings وCanva عن تخفيضات في 20 نوفمبر يُشتبه في أن الأتمتة وراءها، دون ذكر عدد الوظائف. ويمتد الاتجاه نفسه اليوم إلى دعم العملاء وإنتاج البرمجيات والتوظيف للمبتدئين. ويُعدّ التوظيف الإشارة الأهدأ: إذ تشير الأبحاث المذكورة أدناه إلى أن تراجع معدلات إيجاد الوظائف قد يسبق التسريحات واسعة النطاق.\n\nوفي السعودية، تحمل 4,491,136 وظيفة من أصل 12,508,036 وظيفة مسجلة في التأمينات الاجتماعية (GOSI) انكشافًا كبيرًا على الذكاء الاصطناعي، موزونًا بحسب المخاطر. وهذا انكشاف وليس توقعًا للخسائر. وتُظهر بياناتنا أنه لا توجد حادثة أتمتة خليجية هذا الأسبوع، وأن الإشارة السياسية السعودية الوحيدة تتعلق بعتبات الرواتب في نطاقات. للاطلاع على السلسلة، راجع [جميع إصدارات النبض](/pulse).",
+        "h2_sections": [
+          {
+            "q": "ما القطاعات السعودية الأكثر انكشافًا على الذكاء الاصطناعي؟",
+            "body": "تتراوح حصة السعوديين من القوى العاملة بين 17.6% في الخدمات الإدارية وخدمات الدعم و82.4% في الأنشطة المالية والتأمين، ولذلك يختلف الانكشاف اختلافًا حادًا من قطاع إلى آخر. لا تتضمن بياناتنا هذا الأسبوع أي حادثة أتمتة خليجية، ولا أرقامًا سعودية عن التوظيف للمبتدئين أو عن الانكشاف على الذكاء الاصطناعي التوليدي بحسب المهنة. ولذلك تأتي النظرة القطاعية أدناه من مجموعة البيانات الرئيسية لمرصد SHIFT (آخر تحديث 21 مارس 2026)، لا من أخبار هذا الأسبوع.\n\n| القطاع | مخاطر الذكاء الاصطناعي /100 | الموظفون | حصة السعوديين | ضغط نطاقات |\n|---|---|---|---|---|\n| الخدمات الإدارية وخدمات الدعم | 72 | 1,454,646 | 17.6% | متوسط |\n| الأنشطة المالية والتأمين | 62 | 107,430 | 82.4% | مرتفع جدًا |\n| تجارة الجملة والتجزئة | 55 | 1,823,181 | 22.3% | مرتفع |\n| الأنشطة المهنية والعلمية والتقنية | 52 | 294,579 | 47.1% | متوسط |\n| المعلومات والاتصالات | 45 | 178,594 | 57.2% | مرتفع |\n\nهذه هي القطاعات الخمسة الأعلى خطرًا من بين 20 قطاعًا يجري تتبعها، ولا يمكن استخلاص أي استنتاج عن القطاعات الـ15 الأخرى. ولدى تجارة الجملة والتجزئة أكبر قوة عاملة وأكبر عدد من السعوديين (نحو 406,569، أي القوة العاملة مضروبة في حصة السعوديين). تتوفر درجات المخاطر على مستوى المهن لـ237 وظيفة في [لوحة مخاطر الذكاء الاصطناعي على الوظائف](/career)."
+          },
+          {
+            "q": "ماذا يغيّر رفع حد الراتب في نطاقات بالنسبة لأصحاب العمل؟",
+            "body": "من المقرر رفع الحد الأدنى للراتب الشهري الذي يُحتسب بموجبه الموظف السعودي عاملًا كاملًا في برنامج نطاقات من 4,000 ريال إلى 5,000 ريال، ثم لاحقًا إلى 6,000 ريال (مرصد SHIFT، إعلان 19 نوفمبر). والبرنامج المعمول به حاليًا هو نطاقات المطوَّر (القرار الوزاري رقم 182495 بتاريخ 23 مايو 2021)، بنطاقاته: الأحمر والأخضر المنخفض والأخضر المتوسط والأخضر المرتفع والبلاتيني.\n\nويُصنَّف ضغط نطاقات أصلًا مرتفعًا جدًا في الأنشطة المالية والتأمين، ومرتفعًا في تجارة الجملة والتجزئة وفي قطاع المعلومات والاتصالات. ولا تتضمن بياناتنا أي مصدر عن كيفية موازنة أصحاب العمل السعوديين بين مستهدفات نطاقات ووفورات الذكاء الاصطناعي، ولذلك لا نستخلص نتيجة بشأن هذه المفاضلة."
+          },
+          {
+            "q": "هل يضعف التوظيف قبل ظهور التسريحات؟",
+            "body": "وجد بحث لمعهد BSI أن 54% من قادة الأعمال يقولون إن الذكاء الاصطناعي يساعد على خفض عدد الموظفين، مقابل 41% في العام السابق (ITPro، 19 نوفمبر). ويعتقد قرابة نصف القادة المشمولين بالمسح أن الذكاء الاصطناعي قلّص بالفعل فرص المبتدئين (TechRadar Pro، 17 نوفمبر)، ما يزيد مخاطر خطوط الإمداد بالمواهب لدى أصحاب العمل الذين ينفذون برامج إنتاجية قائمة على الذكاء الاصطناعي.\n\nوخلصت مراجعة بحثية لُخّصت في 13 نوفمبر إلى أن البطالة ترتفع بدرجة أكبر بين العاملين في المهن شديدة الانكشاف على الذكاء الاصطناعي التوليدي، مع فجوة أوسع لدى العاملين الأصغر سنًا. وتشير إلى أن تراجع معدلات إيجاد الوظائف قد يسبق التسريحات واسعة النطاق. ويُنسب تقدير أمريكي مُتداوَل نحو 16,000 إضافة شهرية أقل في كشوف الرواتب خلال العام السابق إلى الذكاء الاصطناعي، مرتبطة بارتفاع قدره 0.1 نقطة مئوية في البطالة (CBS Austin).\n\nوبالنسبة للقراء في السعودية، أقرب مرجع محلي هو بطالة الشباب: 14.8% للشباب السعوديين مقابل 6.5% إجمالًا (مسح القوى العاملة للهيئة العامة للإحصاء، الربع الثاني 2026 للمعدل العام). ولا تربط بياناتنا هذه الأرقام بالذكاء الاصطناعي. تحقق من انكشافك الشخصي عبر [ملف مخاطر الذكاء الاصطناعي الشخصي](/profile)."
+          },
+          {
+            "q": "هل وصل الذكاء الاصطناعي إلى إنتاج البرمجيات؟",
+            "body": "يورد تقرير سياسات أن شركة Anthropic ذكرت أن أكثر من 90% من التغييرات المدمجة في قاعدتها البرمجية الأساسية كتبها Claude بتوجيه بشري (Digital Policy Alert، 16 نوفمبر). وهذا ادعاء شركة واحدة عن شيفرتها الخاصة، وليس مقياسًا لسوق العمل. وتأتي أهميته هنا لأن أكبر تخفيض في الأسبوع نفسه، وهو 4,000 وظيفة في Salesforce، صادر عن قطاع التقنية الذي يُنسب فيه التخفيض مباشرةً إلى الذكاء الاصطناعي. ولا تربط بياناتنا بين الحدثين."
+          },
+          {
+            "q": "كيف تقارَن المؤشرات البريطانية والصينية بالسعودية؟",
+            "body": "وجد مسح لمعهد CIPD شمل أكثر من 2,000 صاحب عمل بريطاني أن 32% من الشركات التي دمجت الذكاء الاصطناعي خططت لخفض القوى العاملة، مقابل 5% بين الشركات التي لا تستخدمه (Yahoo Finance، 16 نوفمبر). وتوقعت قرابة نصف الشركات التي تعتمد الذكاء الاصطناعي استراتيجيًا أن تخفّض عدد موظفيها.\n\nأما التخفيضات الأقدم فهي خارج إجمالي هذا الأسبوع: Barclays 5,000 (الذكاء الاصطناعي مباشر، 23 أكتوبر)، وVirgin Media O2 3,000 (الذكاء الاصطناعي مساهم، 2 نوفمبر)، وMicrosoft 60,000 (الذكاء الاصطناعي مساهم، 1 أكتوبر)، وQantas 850 (الذكاء الاصطناعي مساهم، 13 نوفمبر). أما SUSE (الذكاء الاصطناعي مباشر، 10 نوفمبر) فلم يُنشر عدد وظائفها.\n\nوعلى صعيد السياسات، أُفيد بأن مجلس الدولة الصيني طلب من الشركات استكشاف فترة عازلة للبطالة عند نشر الذكاء الاصطناعي على نطاق واسع، مع إشعار مسبق وإعادة تأهيل (Digital Policy Alert، 16 نوفمبر). ولا تتضمن بياناتنا إجراءً سعوديًا مماثلًا للانتقال إلى الذكاء الاصطناعي هذا الأسبوع؛ والإشارة السعودية هي تغيير عتبة الراتب في نطاقات المذكور أعلاه."
+          }
+        ],
+        "faq": [
+          {
+            "q": "ماذا تعني تصنيفات الذكاء الاصطناعي في النبض؟",
+            "a": "«مباشر» يعني أن الشركة صرّحت صراحةً بأن الذكاء الاصطناعي تسبب في التخفيضات. «مساهم» يعني أن الذكاء الاصطناعي مذكور ضمن عوامل أخرى مثل الإيرادات أو إعادة التركيز أو الدمج. «مشتبه به» يعني أن الأتمتة هي المحرك الواضح لكنها غير معلنة رسميًا، وعادةً في الأعمال المكتبية أو دعم تقنية المعلومات أو العمليات الأساسية. وقد صُنّفت Bunnings وCanva «مشتبه به»."
+          },
+          {
+            "q": "لماذا لا تدخل تخفيضات Microsoft البالغة 60,000 في الإجمالي الأسبوعي؟",
+            "a": "يحتسب الإجمالي الأسبوعي الأحداث المؤرخة ضمن الأسبوع فقط. وتخفيضات Microsoft مؤرخة في 1 أكتوبر، ولذلك تظهر سياقًا أقدم. وينطبق الأمر نفسه على Barclays وVirgin Media O2 وQantas وSUSE."
+          },
+          {
+            "q": "لماذا لا يظهر عدد وظائف لدى Bunnings وCanva؟",
+            "a": "تفيد مصادرنا المؤرخة في 20 نوفمبر بحدوث التخفيضات دون نشر رقم، ولذلك نسجّل صفرًا ولا نقدّر عددًا. وتضاف هذه الحالات إلى عدد الأحداث لكنها لا تدخل في إجمالي 4,000."
+          },
+          {
+            "q": "هل يعني الرقم 4,491,136 أن وظائف سعودية ستُفقد؟",
+            "a": "لا. فهو يحصي الوظائف ذات الانكشاف الكبير على الذكاء الاصطناعي، موزونةً بحسب المخاطر، من بين 12,508,036 موظفًا مسجلًا في التأمينات الاجتماعية. ومن هذه الوظائف المنكشفة يشغل السعوديون 1,154,168 وظيفة. والانكشاف يصف تداخل المهام مع الذكاء الاصطناعي، وليس تنبؤًا بفقدان الوظائف."
+          }
+        ],
+        "key_takeaway": "سجّل هذا الأسبوع 4,000 تسريح مع ذكر الذكاء الاصطناعي سببًا في حالة واحدة، وتنتقل الإشارة إلى دعم العملاء وإنتاج البرمجيات والتوظيف للمبتدئين. وفي السعودية تحمل 4,491,136 وظيفة من أصل 12,508,036 وظيفة مسجلة في التأمينات الاجتماعية انكشافًا كبيرًا على الذكاء الاصطناعي. وهذا انكشاف وليس توقعًا للخسائر، فيما ترتفع عتبة الراتب في نطاقات من 4,000 ريال نحو 6,000 ريال.",
+        "sources": [
+          {
+            "label": "Digital Policy Alert",
+            "url": "https://digitalpolicyalert.org"
+          },
+          {
+            "label": "Yahoo Finance (مسح CIPD، Barclays، Virgin Media O2)",
+            "url": "https://finance.yahoo.com"
+          },
+          {
+            "label": "Phys.org (Bunnings، Canva، Qantas)",
+            "url": "https://phys.org"
+          },
+          {
+            "label": "ITPro (بحث BSI)",
+            "url": "https://www.itpro.com"
+          },
+          {
+            "label": "TechRadar Pro (تقرير BSI عن توظيف المبتدئين)",
+            "url": "https://www.techradar.com"
+          },
+          {
+            "label": "CBS Austin (تقدير كشوف الرواتب الأمريكية، Microsoft)",
+            "url": "https://cbsaustin.com"
+          },
+          {
+            "label": "AI Trading 67 (مراجعة الذكاء الاصطناعي والعمل)",
+            "url": "/pulse"
+          },
+          {
+            "label": "مجموعة البيانات الرئيسية لمرصد SHIFT والنبض الأسبوعي، 23 نوفمبر 2026",
+            "url": "/pulse"
+          }
+        ]
+      }
+    }
   }
 ]
