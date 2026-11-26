@@ -43,9 +43,9 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' va.vercel-scripts.com vitals.vercel-insights.com",
-              "connect-src 'self' va.vercel-scripts.com vitals.vercel-insights.com",
-              "img-src 'self' data: blob: https://www.google.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' va.vercel-scripts.com vitals.vercel-insights.com https://www.googletagmanager.com",
+              "connect-src 'self' va.vercel-scripts.com vitals.vercel-insights.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+              "img-src 'self' data: blob: https://www.google.com https://www.googletagmanager.com https://*.google-analytics.com",
               "font-src 'self'",
               "style-src 'self' 'unsafe-inline'",
               "frame-ancestors 'self'",
