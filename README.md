@@ -72,3 +72,12 @@ samy@monitoringforcegulf.com
 
 ## License
 CC BY-SA 4.0
+
+
+## Analytics (Google Analytics 4)
+
+- Posé le 26/11/2026 : balise GA4 `gtag.js`, identifiant de mesure `G-5BPW6GVRLZ` (flux « My website », ID 16420153237), dans le `<head>` de `src/app/[lang]/layout.tsx` (en, fr, ar).
+- Le code `GTM-KKPJQMT8` (conteneur Tag Manager vide) a été essayé puis retiré : il ne mesurait rien. Ne pas le remettre : une seule balise Google par page.
+- La CSP (`next.config.mjs`) autorise googletagmanager.com et google-analytics.com.
+- La balise se charge sans attendre le bandeau de cookies (`CookieConsent`) : à brancher si Samy le demande.
+- Statut au 26/11/2026 : « data collection pending » (jusqu'à 48 h).
