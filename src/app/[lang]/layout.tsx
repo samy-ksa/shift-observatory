@@ -239,13 +239,14 @@ export default async function LangLayout({
       className={`${dmSans.variable} ${jetBrainsMono.variable} ${ibmPlexArabic.variable} scroll-smooth`}
     >
       <head>
-        {/* Google Analytics / Tag Manager */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KKPJQMT8" />
+        {/* Google Analytics (GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BPW6GVRLZ" />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());`,
+gtag('js', new Date());
+gtag('config', 'G-5BPW6GVRLZ');`,
           }}
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppLd) }} />
