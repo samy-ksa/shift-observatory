@@ -4,6 +4,7 @@ import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllInsights, getAllPulse } from "@/lib/insights";
 import { RANKING_SLUGS, SECTORS } from "@/lib/rankings";
 import improvementLog from "../../data/seo/improvement-log.json";
+import agentJournal from "../../data/seo/agent-journal.json";
 
 const BASE = "https://www.ksashiftobservatory.online";
 const LANGS = ["en", "fr", "ar"] as const;
@@ -25,6 +26,24 @@ function improvementDates(): Record<string, string> {
     for (const a of e.actions) {
       const path = e.targetPath.replace(/^\/(en|fr|ar)/, "");
       if (!out[path] || a.date > out[path]) out[path] = a.date;
+    }
+  }
+  return out;
+}
+
+// Actions catalogue site-manager qui changent une page sans passer par seo-rank-watch /
+// improvement-log.json (ex. decouverte-indexation, francais) : à inclure aussi dans le lastmod,
+// sinon Google ne voit jamais la date réelle du changement. Exclut "mesure-jugement" (pas de
+// changement de contenu) et "backlog" (piste notée, pas encore réalisée).
+const AGENT_LEVERS_WITH_CONTENT_CHANGE = new Set(["decouverte-indexation", "francais"]);
+
+function agentJournalDates(): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const e of agentJournal as { date: string; lever: string; pages: string[] }[]) {
+    if (!AGENT_LEVERS_WITH_CONTENT_CHANGE.has(e.lever)) continue;
+    for (const page of e.pages) {
+      const path = page.replace(/^\/(en|fr|ar)/, "") || "/";
+      if (!out[path] || e.date > out[path]) out[path] = e.date;
     }
   }
   return out;
@@ -117,12 +136,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Emit 3 URL entries per path (one per lang), each with full hreflang alternates.
   // Next.js renders `alternates.languages` as <xhtml:link rel="alternate" hreflang>.
   const improved = improvementDates();
+  const agentImproved = agentJournalDates();
   const entries: MetadataRoute.Sitemap = [];
   for (const lang of LANGS) {
     for (const p of allPaths) {
       entries.push({
         url: `${BASE}/${lang}${p.path === "/" ? "" : p.path}`,
-        lastModified: p.lastModified ?? maxDate(CONTENT_UPDATED, improved[p.path]),
+        lastModified: p.lastModified ?? maxDate(maxDate(CONTENT_UPDATED, improved[p.path]), agentImproved[p.path]),
         changeFrequency: p.changeFrequency,
         priority: p.priority,
         alternates: { languages: buildAlternates(p.path) },
